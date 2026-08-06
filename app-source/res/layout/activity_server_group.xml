@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="@dimen/padding_spacing_dp16" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textAppearance="@style/TextAppearance.AppCompat.Subhead" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/title_server" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding_spacing_dp16">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/server_lab_remarks" />
+            <EditText android:id="@id/et_remarks" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="text" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding_spacing_dp16">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/title_policy_group_type" />
+            <Spinner android:entries="@array/policy_group_type" android:id="@id/sp_policy_group_type" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding_spacing_dp8" android:layout_marginBottom="@dimen/padding_spacing_dp8" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding_spacing_dp16">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/title_policy_group_subscription_id" />
+            <Spinner android:entries="@array/policy_group_type" android:id="@id/sp_policy_group_sub_id" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding_spacing_dp8" android:layout_marginBottom="@dimen/padding_spacing_dp8" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding_spacing_dp16">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/title_policy_group_subscription_filter" />
+            <EditText android:id="@id/et_policy_group_filter" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="text" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

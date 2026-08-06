@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="config_backup_options">
+        <item>محلی</item>
+        <item>WebDAV</item>
+    </string-array>
+    <string-array name="mode_entries">
+        <item>VPN</item>
+        <item>فقط پروکسی</item>
+    </string-array>
+    <string-array name="mux_xudp_quic_entries">
+        <item>رد کردن</item>
+        <item>مجاز</item>
+        <item>پریدن</item>
+    </string-array>
+    <string-array name="outbound_domain_resolve_method">
+        <item>Do not resolve</item>
+        <item>Resolve and add to DNS Hosts</item>
+        <item>Resolve and replace domain</item>
+    </string-array>
+    <string-array name="policy_group_type">
+        <item>کمترین پینگ</item>
+        <item>کمترین بار(لود)</item>
+    </string-array>
+    <string-array name="preset_rulesets">
+        <item>لیست سفید چین ( دور زدن سرزمین اصلی )</item>
+        <item>لیست سیاه چین</item>
+        <item>جهانی(GLOBAL)</item>
+        <item>ایران</item>
+        <item>لیست سفید روسیه</item>
+    </string-array>
+    <string-array name="share_method">
+        <item>QRcode</item>
+        <item>خروجی گرفتن در کلیپ‌ بورد</item>
+        <item>خروجی گرفتن کانفیگ کامل در کلیپ بورد</item>
+    </string-array>
+    <string-array name="share_method_more">
+        <item>QRcode</item>
+        <item>صادر کردن به کلیپ بورد</item>
+        <item>صادر کردن پیکربندی کامل به کلیپ بورد</item>
+        <item>ویرایش کردن</item>
+        <item>حذف کردن</item>
+    </string-array>
+    <string-array name="share_sub_method">
+        <item>QRcode</item>
+        <item>خروجی گرفتن در کلیپ‌ بورد</item>
+    </string-array>
+    <string-array name="ui_mode_night">
+        <item>پیش فرض سیستم</item>
+        <item>روشن</item>
+        <item>تاریک</item>
+    </string-array>
+    <string-array name="vpn_bypass_lan">
+        <item>پیش فرض کانفیگ</item>
+        <item>دور زده شود</item>
+        <item>دور زده نشود</item>
+    </string-array>
+</resources>

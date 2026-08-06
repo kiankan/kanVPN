@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout android:id="@id/drawer_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" />
+        </com.google.android.material.appbar.AppBarLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/main_content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <com.google.android.material.progressindicator.LinearProgressIndicator android:id="@id/progress_bar" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:indeterminate="true" app:indicatorColor="@color/color_fab_active" />
+                    <com.google.android.material.tabs.TabLayout android:id="@id/tab_group" android:layout_width="fill_parent" android:layout_height="wrap_content" app:tabIndicatorFullWidth="false" app:tabMode="scrollable" app:tabTextAppearance="@style/TabLayoutTextStyle" />
+                    <androidx.viewpager2.widget.ViewPager2 android:id="@id/view_pager" android:scrollbars="vertical" android:nextFocusRight="@id/fab" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/layout_test" android:focusable="true" android:nextFocusLeft="@id/view_pager" android:nextFocusRight="@id/fab" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/view_height_dp64">
+                        <View android:background="@color/divider_color_light" android:layout_width="wrap_content" android:layout_height="1.0dip" />
+                        <TextView android:textAppearance="@style/TextAppearance.AppCompat.Small" android:gravity="start|center" android:id="@id/tv_test_state" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/connection_test_pending" android:maxLines="2" android:minLines="1" android:paddingStart="@dimen/padding_spacing_dp16" />
+                    </LinearLayout>
+                </LinearLayout>
+                <FrameLayout android:layout_gravity="end|bottom|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/padding_spacing_dp16">
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton android:layout_gravity="end|bottom|center" android:id="@id/fab" android:focusable="true" android:nextFocusLeft="@id/layout_test" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/view_height_dp36" android:src="@drawable/ic_play_24dp" android:contentDescription="@string/tasker_start_service" app:layout_anchorGravity="end|bottom|center" app:tint="@color/colorWhite" />
+                </FrameLayout>
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <com.google.android.material.navigation.NavigationView android:layout_gravity="start" android:id="@id/nav_view" android:layout_width="wrap_content" android:layout_height="fill_parent" app:headerLayout="@layout/nav_header" app:menu="@menu/menu_drawer" />
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,85 @@
+.class public final Lcom/v2ray/ang/ui/SubSettingRecyclerAdapter$MainViewHolder;
+.super Lcom/v2ray/ang/ui/SubSettingRecyclerAdapter$BaseViewHolder;
+.source "SubSettingRecyclerAdapter.kt"
+
+# interfaces
+.implements Lcom/v2ray/ang/helper/ItemTouchHelperViewHolder;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/v2ray/ang/ui/SubSettingRecyclerAdapter;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "MainViewHolder"
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0018\u00002\u00020\u00012\u00020\u0002B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u00a2\u0006\u0004\u0008\u0005\u0010\u0006R\u0011\u0010\u0003\u001a\u00020\u0004\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0007\u0010\u0008\u00a8\u0006\t"
+    }
+    d2 = {
+        "Lcom/v2ray/ang/ui/SubSettingRecyclerAdapter$MainViewHolder;",
+        "Lcom/v2ray/ang/ui/SubSettingRecyclerAdapter$BaseViewHolder;",
+        "Lcom/v2ray/ang/helper/ItemTouchHelperViewHolder;",
+        "itemSubSettingBinding",
+        "Lcom/v2ray/ang/databinding/ItemRecyclerSubSettingBinding;",
+        "<init>",
+        "(Lcom/v2ray/ang/databinding/ItemRecyclerSubSettingBinding;)V",
+        "getItemSubSettingBinding",
+        "()Lcom/v2ray/ang/databinding/ItemRecyclerSubSettingBinding;",
+        "app_playstoreRelease"
+    }
+    k = 0x1
+    mv = {
+        0x2,
+        0x3,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# instance fields
+.field private final itemSubSettingBinding:Lcom/v2ray/ang/databinding/ItemRecyclerSubSettingBinding;
+
+
+# direct methods
+.method public constructor <init>(Lcom/v2ray/ang/databinding/ItemRecyclerSubSettingBinding;)V
+    .locals 2
+
+    const-string v0, "itemSubSettingBinding"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 73
+    invoke-virtual {p1}, Lcom/v2ray/ang/databinding/ItemRecyclerSubSettingBinding;->getRoot()Landroid/widget/LinearLayout;
+
+    move-result-object v0
+
+    const-string v1, "getRoot(...)"
+
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast v0, Landroid/view/View;
+
+    .line 72
+    invoke-direct {p0, v0}, Lcom/v2ray/ang/ui/SubSettingRecyclerAdapter$BaseViewHolder;-><init>(Landroid/view/View;)V
+
+    iput-object p1, p0, Lcom/v2ray/ang/ui/SubSettingRecyclerAdapter$MainViewHolder;->itemSubSettingBinding:Lcom/v2ray/ang/databinding/ItemRecyclerSubSettingBinding;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getItemSubSettingBinding()Lcom/v2ray/ang/databinding/ItemRecyclerSubSettingBinding;
+    .locals 1
+
+    .line 72
+    iget-object v0, p0, Lcom/v2ray/ang/ui/SubSettingRecyclerAdapter$MainViewHolder;->itemSubSettingBinding:Lcom/v2ray/ang/databinding/ItemRecyclerSubSettingBinding;
+
+    return-object v0
+.end method
