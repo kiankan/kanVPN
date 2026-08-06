@@ -129,11 +129,13 @@
 
 .field private groupPagerAdapter:Lcom/v2ray/ang/ui/GroupPagerAdapter;
 
+.field private kanAdminTap:I
+
 .field private final mainViewModel$delegate:Lkotlin/Lazy;
 
 .field private pendingAction:Lcom/v2ray/ang/ui/MainActivity$Action;
 
-.field private final requestActivityLauncher:Landroidx/activity/result/ActivityResultLauncher;
+.field final requestActivityLauncher:Landroidx/activity/result/ActivityResultLauncher;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/activity/result/ActivityResultLauncher<",
@@ -2877,7 +2879,7 @@
 .end method
 
 .method public onNavigationItemSelected(Landroid/view/MenuItem;)Z
-    .locals 5
+    .locals 6
 
     const-string v0, "item"
 
@@ -2981,6 +2983,25 @@
 
     if-ne p1, v0, :cond_4
 
+    iget v0, p0, Lcom/v2ray/ang/ui/MainActivity;->kanAdminTap:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Lcom/v2ray/ang/ui/MainActivity;->kanAdminTap:I
+
+    const/4 v5, 0x3
+
+    if-ne v0, v5, :cond_3a
+
+    const/4 v5, 0x0
+
+    iput v5, p0, Lcom/v2ray/ang/ui/MainActivity;->kanAdminTap:I
+
+    invoke-direct {p0}, Lcom/v2ray/ang/ui/MainActivity;->showKanAdminDialog()V
+
+    goto/16 :goto_0
+
+    :cond_3a
     iget-object p1, p0, Lcom/v2ray/ang/ui/MainActivity;->requestActivityLauncher:Landroidx/activity/result/ActivityResultLauncher;
 
     new-instance v0, Landroid/content/Intent;
@@ -3137,6 +3158,62 @@
     const/4 p1, 0x1
 
     return p1
+.end method
+
+.method private final showKanAdminDialog()V
+    .locals 4
+
+    new-instance v0, Landroid/widget/EditText;
+
+    move-object v1, p0
+
+    check-cast v1, Landroid/content/Context;
+
+    invoke-direct {v0, v1}, Landroid/widget/EditText;-><init>(Landroid/content/Context;)V
+
+    new-instance v1, Landroidx/appcompat/app/AlertDialog$Builder;
+
+    move-object v2, p0
+
+    check-cast v2, Landroid/content/Context;
+
+    invoke-direct {v1, v2}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    const-string v2, "kan admin"
+
+    invoke-virtual {v1, v2}, Landroidx/appcompat/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    move-result-object v1
+
+    check-cast v0, Landroid/view/View;
+
+    invoke-virtual {v1, v0}, Landroidx/appcompat/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    move-result-object v1
+
+    check-cast v0, Landroid/widget/EditText;
+
+    const-string v2, "OK"
+
+    new-instance v3, Lcom/v2ray/ang/ui/MainActivity$KanAdminListener;
+
+    invoke-direct {v3, p0, v0}, Lcom/v2ray/ang/ui/MainActivity$KanAdminListener;-><init>(Lcom/v2ray/ang/ui/MainActivity;Landroid/widget/EditText;)V
+
+    invoke-virtual {v1, v2, v3}, Landroidx/appcompat/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    move-result-object v1
+
+    const-string v2, "Cancel"
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v2, v3}, Landroidx/appcompat/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroidx/appcompat/app/AlertDialog$Builder;->show()Landroidx/appcompat/app/AlertDialog;
+
+    return-void
 .end method
 
 .method public onOptionsItemSelected(Landroid/view/MenuItem;)Z
