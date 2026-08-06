@@ -595,9 +595,18 @@
 
     move-result v1
 
+    if-nez v1, :cond_4a
+
+    const-string v1, "kan://"
+
+    invoke-static {p1, v1, v3, v2, v4}, Lkotlin/text/StringsKt;->startsWith$default(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
+
+    move-result v1
+
     if-eqz v1, :cond_5
 
     .line 345
+    :cond_4a
     sget-object v1, Lcom/v2ray/ang/fmt/VlessFmt;->INSTANCE:Lcom/v2ray/ang/fmt/VlessFmt;
 
     invoke-virtual {v1, p1}, Lcom/v2ray/ang/fmt/VlessFmt;->parse(Ljava/lang/String;)Lcom/v2ray/ang/dto/ProfileItem;
