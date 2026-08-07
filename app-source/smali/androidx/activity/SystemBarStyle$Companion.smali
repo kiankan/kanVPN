@@ -39,7 +39,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -47,40 +47,10 @@
 
 
 # direct methods
-.method public static synthetic $r8$lambda$-DHmOxO09dMvcnR0D7W6U1r_6GY(Landroid/content/res/Resources;)Z
-    .locals 0
-
-    invoke-static {p0}, Landroidx/activity/SystemBarStyle$Companion;->auto$lambda$0(Landroid/content/res/Resources;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static synthetic $r8$lambda$c5ZuH01e8cSiKvRvj_RHuspalJQ(Landroid/content/res/Resources;)Z
-    .locals 0
-
-    invoke-static {p0}, Landroidx/activity/SystemBarStyle$Companion;->light$lambda$0(Landroid/content/res/Resources;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static synthetic $r8$lambda$ziobQyLM8yHaWA0oXjc6WazfbqA(Landroid/content/res/Resources;)Z
-    .locals 0
-
-    invoke-static {p0}, Landroidx/activity/SystemBarStyle$Companion;->dark$lambda$0(Landroid/content/res/Resources;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
 .method private constructor <init>()V
     .locals 0
 
-    .line 120
+    .line 140
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -101,12 +71,12 @@
 
     if-eqz p4, :cond_0
 
-    .line 147
+    .line 167
     new-instance p3, Landroidx/activity/SystemBarStyle$Companion$$ExternalSyntheticLambda2;
 
     invoke-direct {p3}, Landroidx/activity/SystemBarStyle$Companion$$ExternalSyntheticLambda2;-><init>()V
 
-    .line 144
+    .line 164
     :cond_0
     invoke-virtual {p0, p1, p2, p3}, Landroidx/activity/SystemBarStyle$Companion;->auto(IILkotlin/jvm/functions/Function1;)Landroidx/activity/SystemBarStyle;
 
@@ -115,14 +85,14 @@
     return-object p0
 .end method
 
-.method private static final auto$lambda$0(Landroid/content/res/Resources;)Z
+.method static final auto$lambda$0(Landroid/content/res/Resources;)Z
     .locals 1
 
-    const-string v0, "resources"
+    const-string/jumbo v0, "resources"
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 148
+    .line 168
     invoke-virtual {p0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object p0
@@ -145,7 +115,7 @@
     return p0
 .end method
 
-.method private static final dark$lambda$0(Landroid/content/res/Resources;)Z
+.method static final dark$lambda$0(Landroid/content/res/Resources;)Z
     .locals 1
 
     const-string v0, "<unused var>"
@@ -157,7 +127,7 @@
     return p0
 .end method
 
-.method private static final light$lambda$0(Landroid/content/res/Resources;)Z
+.method static final light$lambda$0(Landroid/content/res/Resources;)Z
     .locals 1
 
     const-string v0, "<unused var>"
@@ -190,13 +160,13 @@
 
     invoke-static/range {v0 .. v5}, Landroidx/activity/SystemBarStyle$Companion;->auto$default(Landroidx/activity/SystemBarStyle$Companion;IILkotlin/jvm/functions/Function1;ILjava/lang/Object;)Landroidx/activity/SystemBarStyle;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final auto(IILkotlin/jvm/functions/Function1;)Landroidx/activity/SystemBarStyle;
-    .locals 7
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(II",
@@ -212,26 +182,26 @@
     .annotation runtime Lkotlin/jvm/JvmStatic;
     .end annotation
 
-    const-string v0, "detectDarkMode"
+    const-string p0, "detectDarkMode"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 152
-    new-instance v1, Landroidx/activity/SystemBarStyle;
+    .line 172
+    new-instance v0, Landroidx/activity/SystemBarStyle;
 
-    const/4 v4, 0x0
+    const/4 v3, 0x0
 
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
-    move v2, p1
+    move v1, p1
 
-    move v3, p2
+    move v2, p2
 
-    move-object v5, p3
+    move-object v4, p3
 
-    invoke-direct/range {v1 .. v6}, Landroidx/activity/SystemBarStyle;-><init>(IIILkotlin/jvm/functions/Function1;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Landroidx/activity/SystemBarStyle;-><init>(IIILkotlin/jvm/functions/Function1;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    return-object v1
+    return-object v0
 .end method
 
 .method public final dark(I)Landroidx/activity/SystemBarStyle;
@@ -239,10 +209,10 @@
     .annotation runtime Lkotlin/jvm/JvmStatic;
     .end annotation
 
-    .line 169
+    .line 189
     new-instance v0, Landroidx/activity/SystemBarStyle;
 
-    .line 172
+    .line 192
     new-instance v4, Landroidx/activity/SystemBarStyle$Companion$$ExternalSyntheticLambda1;
 
     invoke-direct {v4}, Landroidx/activity/SystemBarStyle$Companion$$ExternalSyntheticLambda1;-><init>()V
@@ -255,7 +225,7 @@
 
     move v1, p1
 
-    .line 169
+    .line 189
     invoke-direct/range {v0 .. v5}, Landroidx/activity/SystemBarStyle;-><init>(IIILkotlin/jvm/functions/Function1;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v0
@@ -266,10 +236,10 @@
     .annotation runtime Lkotlin/jvm/JvmStatic;
     .end annotation
 
-    .line 188
+    .line 208
     new-instance v0, Landroidx/activity/SystemBarStyle;
 
-    .line 191
+    .line 211
     new-instance v4, Landroidx/activity/SystemBarStyle$Companion$$ExternalSyntheticLambda0;
 
     invoke-direct {v4}, Landroidx/activity/SystemBarStyle$Companion$$ExternalSyntheticLambda0;-><init>()V
@@ -282,7 +252,7 @@
 
     move v2, p2
 
-    .line 188
+    .line 208
     invoke-direct/range {v0 .. v5}, Landroidx/activity/SystemBarStyle;-><init>(IIILkotlin/jvm/functions/Function1;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v0

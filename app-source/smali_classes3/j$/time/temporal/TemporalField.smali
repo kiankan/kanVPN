@@ -24,3 +24,11 @@
 
 .method public abstract rangeRefinedBy(Lj$/time/temporal/TemporalAccessor;)Lj$/time/temporal/ValueRange;
 .end method
+
+.method public resolve(Ljava/util/Map;Lj$/time/temporal/TemporalAccessor;Lj$/time/format/ResolverStyle;)Lj$/time/temporal/TemporalAccessor;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method

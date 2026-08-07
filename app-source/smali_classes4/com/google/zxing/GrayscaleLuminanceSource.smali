@@ -75,13 +75,13 @@
 
     .line 52
     :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const-string p2, "Crop rectangle does not fit within image data."
+    const-string p1, "Crop rectangle does not fit within image data."
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 
@@ -102,9 +102,9 @@
 
     add-int/2addr v4, p1
 
-    iget p1, p0, Lcom/google/zxing/GrayscaleLuminanceSource;->top:I
+    iget p0, p0, Lcom/google/zxing/GrayscaleLuminanceSource;->top:I
 
-    add-int v5, p1, p2
+    add-int v5, p0, p2
 
     move v6, p3
 
@@ -138,9 +138,9 @@
     if-ne v1, v3, :cond_0
 
     .line 83
-    iget-object v0, p0, Lcom/google/zxing/GrayscaleLuminanceSource;->luminances:[B
+    iget-object p0, p0, Lcom/google/zxing/GrayscaleLuminanceSource;->luminances:[B
 
-    return-object v0
+    return-object p0
 
     :cond_0
     mul-int v3, v0, v1
@@ -162,9 +162,9 @@
     if-ne v0, v2, :cond_1
 
     .line 92
-    iget-object v0, p0, Lcom/google/zxing/GrayscaleLuminanceSource;->luminances:[B
+    iget-object p0, p0, Lcom/google/zxing/GrayscaleLuminanceSource;->luminances:[B
 
-    invoke-static {v0, v5, v4, v6, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-static {p0, v5, v4, v6, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     return-object v4
 
@@ -193,7 +193,7 @@
 .end method
 
 .method public getRow(I[B)[B
-    .locals 3
+    .locals 2
 
     if-ltz p1, :cond_2
 
@@ -235,49 +235,49 @@
     add-int/2addr p1, v1
 
     .line 71
-    iget-object v1, p0, Lcom/google/zxing/GrayscaleLuminanceSource;->luminances:[B
+    iget-object p0, p0, Lcom/google/zxing/GrayscaleLuminanceSource;->luminances:[B
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    invoke-static {v1, p1, p2, v2, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-static {p0, p1, p2, v1, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     return-object p2
 
     .line 64
     :cond_2
-    new-instance p2, Ljava/lang/IllegalArgumentException;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    const-string v1, "Requested row is outside the image: "
+    const-string v0, "Requested row is outside the image: "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p2
+    throw p0
 .end method
 
 .method public isCropSupported()Z
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 .end method
 
 .method public isRotateSupported()Z
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 .end method
 
 .method public rotateCounterClockwise()Lcom/google/zxing/LuminanceSource;

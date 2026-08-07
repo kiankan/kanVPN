@@ -44,7 +44,7 @@
 .method private static synthetic $values()[Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;
     .locals 7
 
-    .line 123
+    .line 126
     sget-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;->UNKNOWN:Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;
 
     sget-object v1, Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;->OFF:Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;
@@ -69,7 +69,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 124
+    .line 127
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;
 
     const-string v1, "UNKNOWN"
@@ -80,7 +80,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;->UNKNOWN:Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;
 
-    .line 125
+    .line 128
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;
 
     const-string v1, "OFF"
@@ -91,7 +91,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;->OFF:Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;
 
-    .line 126
+    .line 129
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;
 
     const-string v1, "ON"
@@ -102,7 +102,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;->ON:Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;
 
-    .line 127
+    .line 130
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;
 
     const-string v1, "ON_AUTO_FLASH"
@@ -113,7 +113,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;->ON_AUTO_FLASH:Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;
 
-    .line 128
+    .line 131
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;
 
     const-string v1, "ON_ALWAYS_FLASH"
@@ -124,7 +124,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;->ON_ALWAYS_FLASH:Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;
 
-    .line 129
+    .line 132
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;
 
     const-string v1, "ON_AUTO_FLASH_REDEYE"
@@ -135,7 +135,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;->ON_AUTO_FLASH_REDEYE:Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;
 
-    .line 130
+    .line 133
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;
 
     const-string v1, "ON_EXTERNAL_FLASH"
@@ -146,7 +146,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;->ON_EXTERNAL_FLASH:Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;
 
-    .line 123
+    .line 126
     invoke-static {}, Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;->$values()[Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;
 
     move-result-object v0
@@ -175,7 +175,7 @@
         }
     .end annotation
 
-    .line 123
+    .line 126
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -192,7 +192,7 @@
         }
     .end annotation
 
-    .line 123
+    .line 126
     const-class v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -207,7 +207,7 @@
 .method public static values()[Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;
     .locals 1
 
-    .line 123
+    .line 126
     sget-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;->$VALUES:[Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;
 
     invoke-virtual {v0}, [Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;->clone()Ljava/lang/Object;

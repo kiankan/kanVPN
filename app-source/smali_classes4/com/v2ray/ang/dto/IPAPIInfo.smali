@@ -12,7 +12,7 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000*\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008#\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0003\u0008\u0086\u0008\u0018\u00002\u00020\u0001:\u00015Bs\u0012\n\u0008\u0002\u0010\u0002\u001a\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010\u0007\u001a\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010\u0008\u001a\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010\t\u001a\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010\n\u001a\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010\u000b\u001a\u0004\u0018\u00010\u000c\u00a2\u0006\u0004\u0008\r\u0010\u000eJ\u000b\u0010%\u001a\u0004\u0018\u00010\u0003H\u00c6\u0003J\u000b\u0010&\u001a\u0004\u0018\u00010\u0003H\u00c6\u0003J\u000b\u0010\'\u001a\u0004\u0018\u00010\u0003H\u00c6\u0003J\u000b\u0010(\u001a\u0004\u0018\u00010\u0003H\u00c6\u0003J\u000b\u0010)\u001a\u0004\u0018\u00010\u0003H\u00c6\u0003J\u000b\u0010*\u001a\u0004\u0018\u00010\u0003H\u00c6\u0003J\u000b\u0010+\u001a\u0004\u0018\u00010\u0003H\u00c6\u0003J\u000b\u0010,\u001a\u0004\u0018\u00010\u0003H\u00c6\u0003J\u000b\u0010-\u001a\u0004\u0018\u00010\u000cH\u00c6\u0003Ju\u0010.\u001a\u00020\u00002\n\u0008\u0002\u0010\u0002\u001a\u0004\u0018\u00010\u00032\n\u0008\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u00032\n\u0008\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u00032\n\u0008\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u00032\n\u0008\u0002\u0010\u0007\u001a\u0004\u0018\u00010\u00032\n\u0008\u0002\u0010\u0008\u001a\u0004\u0018\u00010\u00032\n\u0008\u0002\u0010\t\u001a\u0004\u0018\u00010\u00032\n\u0008\u0002\u0010\n\u001a\u0004\u0018\u00010\u00032\n\u0008\u0002\u0010\u000b\u001a\u0004\u0018\u00010\u000cH\u00c6\u0001J\u0014\u0010/\u001a\u0002002\u0008\u00101\u001a\u0004\u0018\u00010\u0001H\u00d6\u0083\u0004J\n\u00102\u001a\u000203H\u00d6\u0081\u0004J\n\u00104\u001a\u00020\u0003H\u00d6\u0081\u0004R\u001c\u0010\u0002\u001a\u0004\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u000f\u0010\u0010\"\u0004\u0008\u0011\u0010\u0012R\u001c\u0010\u0004\u001a\u0004\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0013\u0010\u0010\"\u0004\u0008\u0014\u0010\u0012R\u001c\u0010\u0005\u001a\u0004\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0015\u0010\u0010\"\u0004\u0008\u0016\u0010\u0012R\u001c\u0010\u0006\u001a\u0004\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0017\u0010\u0010\"\u0004\u0008\u0018\u0010\u0012R\u001c\u0010\u0007\u001a\u0004\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0019\u0010\u0010\"\u0004\u0008\u001a\u0010\u0012R\u001c\u0010\u0008\u001a\u0004\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u001b\u0010\u0010\"\u0004\u0008\u001c\u0010\u0012R\u001c\u0010\t\u001a\u0004\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u001d\u0010\u0010\"\u0004\u0008\u001e\u0010\u0012R\u001c\u0010\n\u001a\u0004\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u001f\u0010\u0010\"\u0004\u0008 \u0010\u0012R\u001c\u0010\u000b\u001a\u0004\u0018\u00010\u000cX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008!\u0010\"\"\u0004\u0008#\u0010$\u00a8\u00066"
+        "\u00000\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008#\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\u0008\u0087\u0008\u0018\u00002\u00020\u0001:\u00015Bs\u0012\n\u0008\u0002\u0010\u0002\u001a\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010\u0007\u001a\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010\u0008\u001a\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010\t\u001a\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010\n\u001a\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010\u000b\u001a\u0004\u0018\u00010\u000c\u00a2\u0006\u0004\u0008\r\u0010\u000eJ\u000b\u0010%\u001a\u0004\u0018\u00010\u0003H\u00c6\u0003J\u000b\u0010&\u001a\u0004\u0018\u00010\u0003H\u00c6\u0003J\u000b\u0010\'\u001a\u0004\u0018\u00010\u0003H\u00c6\u0003J\u000b\u0010(\u001a\u0004\u0018\u00010\u0003H\u00c6\u0003J\u000b\u0010)\u001a\u0004\u0018\u00010\u0003H\u00c6\u0003J\u000b\u0010*\u001a\u0004\u0018\u00010\u0003H\u00c6\u0003J\u000b\u0010+\u001a\u0004\u0018\u00010\u0003H\u00c6\u0003J\u000b\u0010,\u001a\u0004\u0018\u00010\u0003H\u00c6\u0003J\u000b\u0010-\u001a\u0004\u0018\u00010\u000cH\u00c6\u0003Ju\u0010.\u001a\u00020\u00002\n\u0008\u0002\u0010\u0002\u001a\u0004\u0018\u00010\u00032\n\u0008\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u00032\n\u0008\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u00032\n\u0008\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u00032\n\u0008\u0002\u0010\u0007\u001a\u0004\u0018\u00010\u00032\n\u0008\u0002\u0010\u0008\u001a\u0004\u0018\u00010\u00032\n\u0008\u0002\u0010\t\u001a\u0004\u0018\u00010\u00032\n\u0008\u0002\u0010\n\u001a\u0004\u0018\u00010\u00032\n\u0008\u0002\u0010\u000b\u001a\u0004\u0018\u00010\u000cH\u00c6\u0001J\u0014\u0010/\u001a\u0002002\u0008\u00101\u001a\u0004\u0018\u00010\u0001H\u00d6\u0083\u0004J\n\u00102\u001a\u000203H\u00d6\u0081\u0004J\n\u00104\u001a\u00020\u0003H\u00d6\u0081\u0004R\u001c\u0010\u0002\u001a\u0004\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u000f\u0010\u0010\"\u0004\u0008\u0011\u0010\u0012R\u001c\u0010\u0004\u001a\u0004\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0013\u0010\u0010\"\u0004\u0008\u0014\u0010\u0012R\u001c\u0010\u0005\u001a\u0004\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0015\u0010\u0010\"\u0004\u0008\u0016\u0010\u0012R\u001c\u0010\u0006\u001a\u0004\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0017\u0010\u0010\"\u0004\u0008\u0018\u0010\u0012R\u001c\u0010\u0007\u001a\u0004\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0019\u0010\u0010\"\u0004\u0008\u001a\u0010\u0012R\u001c\u0010\u0008\u001a\u0004\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u001b\u0010\u0010\"\u0004\u0008\u001c\u0010\u0012R\u001c\u0010\t\u001a\u0004\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u001d\u0010\u0010\"\u0004\u0008\u001e\u0010\u0012R\u001c\u0010\n\u001a\u0004\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u001f\u0010\u0010\"\u0004\u0008 \u0010\u0012R\u001c\u0010\u000b\u001a\u0004\u0018\u00010\u000cX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008!\u0010\"\"\u0004\u0008#\u0010$\u00ca\u0001\u000c\u00087\u0012\u0008\u00088\u0012\u0004\u0008\u0003\u0010\u0000\u00a8\u00066"
     }
     d2 = {
         "Lcom/v2ray/ang/dto/IPAPIInfo;",
@@ -69,16 +69,22 @@
         "",
         "toString",
         "LocationBean",
-        "app_playstoreRelease"
+        "v2rayNG:app_playstoreRelease",
+        "Landroidx/compose/runtime/internal/StabilityInferred;",
+        "parameters"
     }
     k = 0x1
     mv = {
         0x2,
-        0x3,
+        0x4,
         0x0
     }
     xi = 0x30
 .end annotation
+
+
+# static fields
+.field public static final $stable:I = 0x8
 
 
 # instance fields
@@ -102,6 +108,12 @@
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 0
+
+    return-void
+.end method
+
 .method public constructor <init>()V
     .locals 12
 
@@ -235,34 +247,11 @@
 
     if-eqz p10, :cond_8
 
-    move-object p10, v0
-
-    goto :goto_0
-
-    :cond_8
-    move-object p10, p9
-
-    :goto_0
-    move-object p9, p8
-
-    move-object p8, p7
-
-    move-object p7, p6
-
-    move-object p6, p5
-
-    move-object p5, p4
-
-    move-object p4, p3
-
-    move-object p3, p2
-
-    move-object p2, p1
-
-    move-object p1, p0
+    move-object p9, v0
 
     .line 3
-    invoke-direct/range {p1 .. p10}, Lcom/v2ray/ang/dto/IPAPIInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/v2ray/ang/dto/IPAPIInfo$LocationBean;)V
+    :cond_8
+    invoke-direct/range {p0 .. p9}, Lcom/v2ray/ang/dto/IPAPIInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/v2ray/ang/dto/IPAPIInfo$LocationBean;)V
 
     return-void
 .end method
@@ -363,103 +352,85 @@
 
 # virtual methods
 .method public final component1()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->ip:Ljava/lang/String;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->ip:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component2()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->clientIp:Ljava/lang/String;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->clientIp:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component3()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->ip_addr:Ljava/lang/String;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->ip_addr:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component4()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->query:Ljava/lang/String;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->query:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component5()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->country:Ljava/lang/String;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->country:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component6()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->country_name:Ljava/lang/String;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->country_name:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component7()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->country_code:Ljava/lang/String;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->country_code:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component8()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->countryCode:Ljava/lang/String;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->countryCode:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component9()Lcom/v2ray/ang/dto/IPAPIInfo$LocationBean;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->location:Lcom/v2ray/ang/dto/IPAPIInfo$LocationBean;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->location:Lcom/v2ray/ang/dto/IPAPIInfo$LocationBean;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final copy(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/v2ray/ang/dto/IPAPIInfo$LocationBean;)Lcom/v2ray/ang/dto/IPAPIInfo;
-    .locals 10
+    .locals 0
 
-    new-instance v0, Lcom/v2ray/ang/dto/IPAPIInfo;
+    new-instance p0, Lcom/v2ray/ang/dto/IPAPIInfo;
 
-    move-object v1, p1
+    invoke-direct/range {p0 .. p9}, Lcom/v2ray/ang/dto/IPAPIInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/v2ray/ang/dto/IPAPIInfo$LocationBean;)V
 
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    move-object v5, p5
-
-    move-object/from16 v6, p6
-
-    move-object/from16 v7, p7
-
-    move-object/from16 v8, p8
-
-    move-object/from16 v9, p9
-
-    invoke-direct/range {v0 .. v9}, Lcom/v2ray/ang/dto/IPAPIInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/v2ray/ang/dto/IPAPIInfo$LocationBean;)V
-
-    return-object v0
+    return-object p0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -587,15 +558,15 @@
     return v2
 
     :cond_9
-    iget-object v1, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->location:Lcom/v2ray/ang/dto/IPAPIInfo$LocationBean;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->location:Lcom/v2ray/ang/dto/IPAPIInfo$LocationBean;
 
     iget-object p1, p1, Lcom/v2ray/ang/dto/IPAPIInfo;->location:Lcom/v2ray/ang/dto/IPAPIInfo$LocationBean;
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result p0
 
-    if-nez p1, :cond_a
+    if-nez p0, :cond_a
 
     return v2
 
@@ -604,84 +575,84 @@
 .end method
 
 .method public final getClientIp()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 5
-    iget-object v0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->clientIp:Ljava/lang/String;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->clientIp:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getCountry()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 8
-    iget-object v0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->country:Ljava/lang/String;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->country:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getCountryCode()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 11
-    iget-object v0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->countryCode:Ljava/lang/String;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->countryCode:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getCountry_code()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 10
-    iget-object v0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->country_code:Ljava/lang/String;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->country_code:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getCountry_name()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 9
-    iget-object v0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->country_name:Ljava/lang/String;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->country_name:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getIp()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 4
-    iget-object v0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->ip:Ljava/lang/String;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->ip:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getIp_addr()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 6
-    iget-object v0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->ip_addr:Ljava/lang/String;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->ip_addr:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getLocation()Lcom/v2ray/ang/dto/IPAPIInfo$LocationBean;
-    .locals 1
+    .locals 0
 
     .line 12
-    iget-object v0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->location:Lcom/v2ray/ang/dto/IPAPIInfo$LocationBean;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->location:Lcom/v2ray/ang/dto/IPAPIInfo$LocationBean;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getQuery()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 7
-    iget-object v0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->query:Ljava/lang/String;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->query:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public hashCode()I
@@ -831,14 +802,14 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->location:Lcom/v2ray/ang/dto/IPAPIInfo$LocationBean;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->location:Lcom/v2ray/ang/dto/IPAPIInfo$LocationBean;
 
-    if-nez v2, :cond_8
+    if-nez p0, :cond_8
 
     goto :goto_8
 
     :cond_8
-    invoke-virtual {v2}, Lcom/v2ray/ang/dto/IPAPIInfo$LocationBean;->hashCode()I
+    invoke-virtual {p0}, Lcom/v2ray/ang/dto/IPAPIInfo$LocationBean;->hashCode()I
 
     move-result v1
 
@@ -930,7 +901,7 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 11
+    .locals 10
 
     iget-object v0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->ip:Ljava/lang/String;
 
@@ -948,71 +919,71 @@
 
     iget-object v7, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->countryCode:Ljava/lang/String;
 
-    iget-object v8, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->location:Lcom/v2ray/ang/dto/IPAPIInfo$LocationBean;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/IPAPIInfo;->location:Lcom/v2ray/ang/dto/IPAPIInfo$LocationBean;
 
-    new-instance v9, Ljava/lang/StringBuilder;
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    const-string v10, "IPAPIInfo(ip="
+    const-string v9, "IPAPIInfo(ip="
 
-    invoke-direct {v9, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v0, ", clientIp="
 
-    invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v0, ", ip_addr="
 
-    invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v0, ", query="
 
-    invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v0, ", country="
 
-    invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v0, ", country_name="
 
-    invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v0, ", country_code="
 
-    invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v0, ", countryCode="
 
-    invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v0, ", location="
 
-    invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v0, ")"
+    const-string p0, ")"
 
-    invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

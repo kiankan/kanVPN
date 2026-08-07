@@ -14,9 +14,9 @@
 
 
 # static fields
-.field public static report_drawn:I = 0x7f0a0226
+.field public static report_drawn:I = 0x7f080054
 
-.field public static view_tree_on_back_pressed_dispatcher_owner:I = 0x7f0a02eb
+.field public static view_tree_on_back_pressed_dispatcher_owner:I = 0x7f08007a
 
 
 # direct methods

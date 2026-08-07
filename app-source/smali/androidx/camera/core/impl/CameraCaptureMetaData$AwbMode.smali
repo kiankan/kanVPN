@@ -50,7 +50,7 @@
 .method private static synthetic $values()[Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;
     .locals 10
 
-    .line 134
+    .line 137
     sget-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;->UNKNOWN:Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;
 
     sget-object v1, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;->OFF:Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;
@@ -81,7 +81,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 135
+    .line 138
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;
 
     const-string v1, "UNKNOWN"
@@ -92,7 +92,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;->UNKNOWN:Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;
 
-    .line 136
+    .line 139
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;
 
     const-string v1, "OFF"
@@ -103,7 +103,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;->OFF:Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;
 
-    .line 137
+    .line 140
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;
 
     const-string v1, "AUTO"
@@ -114,7 +114,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;->AUTO:Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;
 
-    .line 138
+    .line 141
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;
 
     const-string v1, "INCANDESCENT"
@@ -125,7 +125,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;->INCANDESCENT:Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;
 
-    .line 139
+    .line 142
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;
 
     const-string v1, "FLUORESCENT"
@@ -136,7 +136,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;->FLUORESCENT:Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;
 
-    .line 140
+    .line 143
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;
 
     const-string v1, "WARM_FLUORESCENT"
@@ -147,7 +147,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;->WARM_FLUORESCENT:Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;
 
-    .line 141
+    .line 144
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;
 
     const-string v1, "DAYLIGHT"
@@ -158,7 +158,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;->DAYLIGHT:Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;
 
-    .line 142
+    .line 145
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;
 
     const-string v1, "CLOUDY_DAYLIGHT"
@@ -169,7 +169,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;->CLOUDY_DAYLIGHT:Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;
 
-    .line 143
+    .line 146
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;
 
     const-string v1, "TWILIGHT"
@@ -180,7 +180,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;->TWILIGHT:Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;
 
-    .line 144
+    .line 147
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;
 
     const-string v1, "SHADE"
@@ -191,7 +191,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;->SHADE:Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;
 
-    .line 134
+    .line 137
     invoke-static {}, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;->$values()[Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;
 
     move-result-object v0
@@ -220,7 +220,7 @@
         }
     .end annotation
 
-    .line 134
+    .line 137
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -237,7 +237,7 @@
         }
     .end annotation
 
-    .line 134
+    .line 137
     const-class v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -252,7 +252,7 @@
 .method public static values()[Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;
     .locals 1
 
-    .line 134
+    .line 137
     sget-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;->$VALUES:[Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;
 
     invoke-virtual {v0}, [Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;->clone()Ljava/lang/Object;

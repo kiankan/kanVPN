@@ -3,7 +3,7 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/camera/core/impl/ImageReaderProxy$OnImageAvailableListener;
+.implements Landroidx/core/util/Consumer;
 
 
 # instance fields
@@ -24,13 +24,15 @@
 
 
 # virtual methods
-.method public final onImageAvailable(Landroidx/camera/core/impl/ImageReaderProxy;)V
-    .locals 1
+.method public final accept(Ljava/lang/Object;)V
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/CaptureNode$$ExternalSyntheticLambda3;->f$0:Landroidx/camera/core/imagecapture/CaptureNode;
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/CaptureNode$$ExternalSyntheticLambda3;->f$0:Landroidx/camera/core/imagecapture/CaptureNode;
 
-    invoke-virtual {v0, p1}, Landroidx/camera/core/imagecapture/CaptureNode;->lambda$transform$2$androidx-camera-core-imagecapture-CaptureNode(Landroidx/camera/core/impl/ImageReaderProxy;)V
+    check-cast p1, Landroidx/camera/core/imagecapture/TakePictureManager$CaptureError;
+
+    invoke-virtual {p0, p1}, Landroidx/camera/core/imagecapture/CaptureNode;->sendCaptureError(Landroidx/camera/core/imagecapture/TakePictureManager$CaptureError;)V
 
     return-void
 .end method

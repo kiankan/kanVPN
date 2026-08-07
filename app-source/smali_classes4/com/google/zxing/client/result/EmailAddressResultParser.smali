@@ -35,226 +35,226 @@
 
 # virtual methods
 .method public parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/EmailAddressParsedResult;
-    .locals 10
+    .locals 9
 
     .line 36
     invoke-static {p1}, Lcom/google/zxing/client/result/EmailAddressResultParser;->getMassagedText(Lcom/google/zxing/Result;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
     .line 37
-    const-string v0, "mailto:"
+    const-string p1, "mailto:"
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result p1
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    if-nez v0, :cond_2
+    if-nez p1, :cond_2
 
-    const-string v0, "MAILTO:"
+    const-string p1, "MAILTO:"
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result p1
 
-    if-eqz v0, :cond_0
+    if-eqz p1, :cond_0
 
     goto :goto_0
 
     .line 78
     :cond_0
-    invoke-static {p1}, Lcom/google/zxing/client/result/EmailDoCoMoResultParser;->isBasicallyValidEmailAddress(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/google/zxing/client/result/EmailDoCoMoResultParser;->isBasicallyValidEmailAddress(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result p1
 
-    if-nez v0, :cond_1
-
-    return-object v1
-
-    .line 81
-    :cond_1
-    new-instance v0, Lcom/google/zxing/client/result/EmailAddressParsedResult;
-
-    invoke-direct {v0, p1}, Lcom/google/zxing/client/result/EmailAddressParsedResult;-><init>(Ljava/lang/String;)V
+    if-nez p1, :cond_1
 
     return-object v0
 
+    .line 81
+    :cond_1
+    new-instance p1, Lcom/google/zxing/client/result/EmailAddressParsedResult;
+
+    invoke-direct {p1, p0}, Lcom/google/zxing/client/result/EmailAddressParsedResult;-><init>(Ljava/lang/String;)V
+
+    return-object p1
+
     :cond_2
     :goto_0
-    const/4 v0, 0x7
+    const/4 p1, 0x7
 
     .line 39
-    invoke-virtual {p1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p1
 
-    const/16 v2, 0x3f
+    const/16 v1, 0x3f
 
     .line 40
-    invoke-virtual {v0, v2}, Ljava/lang/String;->indexOf(I)I
+    invoke-virtual {p1, v1}, Ljava/lang/String;->indexOf(I)I
 
-    move-result v2
+    move-result v1
 
-    if-ltz v2, :cond_3
+    if-ltz v1, :cond_3
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
     .line 42
-    invoke-virtual {v0, v3, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    invoke-virtual {p1, v2, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p1
 
     .line 45
     :cond_3
     :try_start_0
-    invoke-static {v0}, Lcom/google/zxing/client/result/EmailAddressResultParser;->urlDecode(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/google/zxing/client/result/EmailAddressResultParser;->urlDecode(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p1
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 50
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+    invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
-    move-result v2
+    move-result v1
 
-    if-nez v2, :cond_4
+    if-nez v1, :cond_4
 
     .line 51
-    sget-object v2, Lcom/google/zxing/client/result/EmailAddressResultParser;->COMMA:Ljava/util/regex/Pattern;
+    sget-object v1, Lcom/google/zxing/client/result/EmailAddressResultParser;->COMMA:Ljava/util/regex/Pattern;
 
-    invoke-virtual {v2, v0}, Ljava/util/regex/Pattern;->split(Ljava/lang/CharSequence;)[Ljava/lang/String;
+    invoke-virtual {v1, p1}, Ljava/util/regex/Pattern;->split(Ljava/lang/CharSequence;)[Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p1
 
     goto :goto_1
 
     :cond_4
-    move-object v0, v1
+    move-object p1, v0
 
     .line 53
     :goto_1
-    invoke-static {p1}, Lcom/google/zxing/client/result/EmailAddressResultParser;->parseNameValuePairs(Ljava/lang/String;)Ljava/util/Map;
+    invoke-static {p0}, Lcom/google/zxing/client/result/EmailAddressResultParser;->parseNameValuePairs(Ljava/lang/String;)Ljava/util/Map;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_8
+
+    if-nez p1, :cond_5
+
+    .line 60
+    const-string v1, "to"
+
+    invoke-interface {p0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    if-eqz v1, :cond_5
+
+    .line 62
+    sget-object p1, Lcom/google/zxing/client/result/EmailAddressResultParser;->COMMA:Ljava/util/regex/Pattern;
+
+    invoke-virtual {p1, v1}, Ljava/util/regex/Pattern;->split(Ljava/lang/CharSequence;)[Ljava/lang/String;
 
     move-result-object p1
 
-    if-eqz p1, :cond_8
+    .line 65
+    :cond_5
+    const-string v1, "cc"
 
-    if-nez v0, :cond_5
+    invoke-interface {p0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 60
-    const-string v2, "to"
+    move-result-object v1
 
-    invoke-interface {p1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v1, Ljava/lang/String;
+
+    if-eqz v1, :cond_6
+
+    .line 67
+    sget-object v2, Lcom/google/zxing/client/result/EmailAddressResultParser;->COMMA:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v2, v1}, Ljava/util/regex/Pattern;->split(Ljava/lang/CharSequence;)[Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_2
+
+    :cond_6
+    move-object v1, v0
+
+    .line 69
+    :goto_2
+    const-string v2, "bcc"
+
+    invoke-interface {p0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
-    if-eqz v2, :cond_5
+    if-eqz v2, :cond_7
 
-    .line 62
+    .line 71
     sget-object v0, Lcom/google/zxing/client/result/EmailAddressResultParser;->COMMA:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, v2}, Ljava/util/regex/Pattern;->split(Ljava/lang/CharSequence;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 65
-    :cond_5
-    const-string v2, "cc"
+    .line 73
+    :cond_7
+    const-string v2, "subject"
 
-    invoke-interface {p1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
-    if-eqz v2, :cond_6
-
-    .line 67
-    sget-object v3, Lcom/google/zxing/client/result/EmailAddressResultParser;->COMMA:Ljava/util/regex/Pattern;
-
-    invoke-virtual {v3, v2}, Ljava/util/regex/Pattern;->split(Ljava/lang/CharSequence;)[Ljava/lang/String;
-
-    move-result-object v2
-
-    goto :goto_2
-
-    :cond_6
-    move-object v2, v1
-
-    .line 69
-    :goto_2
-    const-string v3, "bcc"
-
-    invoke-interface {p1, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
-
-    if-eqz v3, :cond_7
-
-    .line 71
-    sget-object v1, Lcom/google/zxing/client/result/EmailAddressResultParser;->COMMA:Ljava/util/regex/Pattern;
-
-    invoke-virtual {v1, v3}, Ljava/util/regex/Pattern;->split(Ljava/lang/CharSequence;)[Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 73
-    :cond_7
-    const-string v3, "subject"
-
-    invoke-interface {p1, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
-
     .line 74
-    const-string v4, "body"
+    const-string v3, "body"
 
-    invoke-interface {p1, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Ljava/lang/String;
+    check-cast p0, Ljava/lang/String;
 
-    move-object v9, p1
+    move-object v8, p0
 
-    move-object v7, v1
+    move-object v6, v0
 
-    move-object v6, v2
+    move-object v5, v1
 
-    move-object v8, v3
+    move-object v7, v2
 
     goto :goto_3
 
     :cond_8
-    move-object v6, v1
+    move-object v5, v0
+
+    move-object v6, v5
 
     move-object v7, v6
 
     move-object v8, v7
 
-    move-object v9, v8
-
     :goto_3
-    move-object v5, v0
+    move-object v4, p1
 
     .line 76
-    new-instance v4, Lcom/google/zxing/client/result/EmailAddressParsedResult;
+    new-instance v3, Lcom/google/zxing/client/result/EmailAddressParsedResult;
 
-    invoke-direct/range {v4 .. v9}, Lcom/google/zxing/client/result/EmailAddressParsedResult;-><init>([Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v3 .. v8}, Lcom/google/zxing/client/result/EmailAddressParsedResult;-><init>([Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    return-object v4
+    return-object v3
 
     :catch_0
-    return-object v1
+    return-object v0
 .end method
 
 .method public bridge synthetic parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/ParsedResult;
@@ -271,7 +271,7 @@
     .line 30
     invoke-virtual {p0, p1}, Lcom/google/zxing/client/result/EmailAddressResultParser;->parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/EmailAddressParsedResult;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

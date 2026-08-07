@@ -7,7 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 46
+    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +30,7 @@
 
     move v5, p5
 
-    .line 137
+    .line 133
     invoke-static/range {v0 .. v6}, Landroidx/camera/core/processing/util/OutConfig;->of(IILandroid/graphics/Rect;Landroid/util/Size;IZZ)Landroidx/camera/core/processing/util/OutConfig;
 
     move-result-object p0
@@ -41,7 +41,7 @@
 .method public static of(IILandroid/graphics/Rect;Landroid/util/Size;IZZ)Landroidx/camera/core/processing/util/OutConfig;
     .locals 9
 
-    .line 152
+    .line 147
     new-instance v0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;
 
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
@@ -70,22 +70,22 @@
 .method public static of(Landroidx/camera/core/processing/SurfaceEdge;)Landroidx/camera/core/processing/util/OutConfig;
     .locals 6
 
-    .line 117
+    .line 114
     invoke-virtual {p0}, Landroidx/camera/core/processing/SurfaceEdge;->getTargets()I
 
     move-result v0
 
-    .line 118
+    .line 115
     invoke-virtual {p0}, Landroidx/camera/core/processing/SurfaceEdge;->getFormat()I
 
     move-result v1
 
-    .line 119
+    .line 116
     invoke-virtual {p0}, Landroidx/camera/core/processing/SurfaceEdge;->getCropRect()Landroid/graphics/Rect;
 
     move-result-object v2
 
-    .line 120
+    .line 117
     invoke-virtual {p0}, Landroidx/camera/core/processing/SurfaceEdge;->getCropRect()Landroid/graphics/Rect;
 
     move-result-object v3
@@ -98,17 +98,17 @@
 
     move-result-object v3
 
-    .line 121
+    .line 118
     invoke-virtual {p0}, Landroidx/camera/core/processing/SurfaceEdge;->getRotationDegrees()I
 
     move-result v4
 
-    .line 122
+    .line 119
     invoke-virtual {p0}, Landroidx/camera/core/processing/SurfaceEdge;->isMirroring()Z
 
     move-result v5
 
-    .line 117
+    .line 114
     invoke-static/range {v0 .. v5}, Landroidx/camera/core/processing/util/OutConfig;->of(IILandroid/graphics/Rect;Landroid/util/Size;IZ)Landroidx/camera/core/processing/util/OutConfig;
 
     move-result-object p0

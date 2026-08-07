@@ -30,7 +30,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -41,7 +41,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 229
+    .line 249
     invoke-direct {p0}, Landroidx/activity/EdgeToEdgeBase;-><init>()V
 
     return-void
@@ -52,49 +52,49 @@
 .method public setUp(Landroidx/activity/SystemBarStyle;Landroidx/activity/SystemBarStyle;Landroid/view/Window;Landroid/view/View;ZZ)V
     .locals 0
 
-    const-string p6, "statusBarStyle"
+    const-string/jumbo p0, "statusBarStyle"
 
-    invoke-static {p1, p6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string p6, "navigationBarStyle"
+    const-string p0, "navigationBarStyle"
 
-    invoke-static {p2, p6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string p6, "window"
+    const-string/jumbo p0, "window"
 
-    invoke-static {p3, p6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string p6, "view"
+    const-string/jumbo p0, "view"
 
-    invoke-static {p4, p6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const/4 p6, 0x0
+    const/4 p0, 0x0
 
-    .line 241
-    invoke-static {p3, p6}, Landroidx/core/view/WindowCompat;->setDecorFitsSystemWindows(Landroid/view/Window;Z)V
+    .line 261
+    invoke-static {p3, p0}, Landroidx/core/view/WindowCompat;->setDecorFitsSystemWindows(Landroid/view/Window;Z)V
 
-    .line 242
+    .line 262
     invoke-virtual {p1, p5}, Landroidx/activity/SystemBarStyle;->getScrim$activity(Z)I
 
-    move-result p1
+    move-result p0
 
-    invoke-virtual {p3, p1}, Landroid/view/Window;->setStatusBarColor(I)V
+    invoke-virtual {p3, p0}, Landroid/view/Window;->setStatusBarColor(I)V
 
-    .line 243
+    .line 263
     invoke-virtual {p2}, Landroidx/activity/SystemBarStyle;->getDarkScrim$activity()I
 
-    move-result p1
+    move-result p0
 
-    invoke-virtual {p3, p1}, Landroid/view/Window;->setNavigationBarColor(I)V
+    invoke-virtual {p3, p0}, Landroid/view/Window;->setNavigationBarColor(I)V
 
-    .line 244
-    new-instance p1, Landroidx/core/view/WindowInsetsControllerCompat;
+    .line 264
+    new-instance p0, Landroidx/core/view/WindowInsetsControllerCompat;
 
-    invoke-direct {p1, p3, p4}, Landroidx/core/view/WindowInsetsControllerCompat;-><init>(Landroid/view/Window;Landroid/view/View;)V
+    invoke-direct {p0, p3, p4}, Landroidx/core/view/WindowInsetsControllerCompat;-><init>(Landroid/view/Window;Landroid/view/View;)V
 
-    xor-int/lit8 p2, p5, 0x1
+    xor-int/lit8 p1, p5, 0x1
 
-    invoke-virtual {p1, p2}, Landroidx/core/view/WindowInsetsControllerCompat;->setAppearanceLightStatusBars(Z)V
+    invoke-virtual {p0, p1}, Landroidx/core/view/WindowInsetsControllerCompat;->setAppearanceLightStatusBars(Z)V
 
     return-void
 .end method

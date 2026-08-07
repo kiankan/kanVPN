@@ -9,7 +9,6 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroid/support/v4/os/IResultReceiver2$_Parcel;,
         Landroid/support/v4/os/IResultReceiver2$Stub;,
         Landroid/support/v4/os/IResultReceiver2$Default;
     }
@@ -18,6 +17,8 @@
 
 # static fields
 .field public static final DESCRIPTOR:Ljava/lang/String;
+
+.field public static final VERSION:I = 0x1
 
 
 # direct methods
@@ -28,7 +29,7 @@
 
     const/16 v1, 0x2e
 
-    .line 112
+    .line 150
     const-string v2, "android$support$v4$os$IResultReceiver2"
 
     invoke-virtual {v2, v0, v1}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
@@ -42,6 +43,14 @@
 
 
 # virtual methods
+.method public abstract getInterfaceVersion()I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract send(ILandroid/os/Bundle;)V
     .annotation system Ldalvik/annotation/Throws;
         value = {

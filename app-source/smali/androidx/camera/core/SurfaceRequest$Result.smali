@@ -36,7 +36,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 805
+    .line 820
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +45,7 @@
 .method static of(ILandroid/view/Surface;)Landroidx/camera/core/SurfaceRequest$Result;
     .locals 1
 
-    .line 781
+    .line 797
     new-instance v0, Landroidx/camera/core/AutoValue_SurfaceRequest_Result;
 
     invoke-direct {v0, p0, p1}, Landroidx/camera/core/AutoValue_SurfaceRequest_Result;-><init>(ILandroid/view/Surface;)V

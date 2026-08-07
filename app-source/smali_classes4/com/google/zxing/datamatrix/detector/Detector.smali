@@ -199,16 +199,16 @@
     .line 229
     invoke-direct {p0, v3}, Lcom/google/zxing/datamatrix/detector/Detector;->isValid(Lcom/google/zxing/ResultPoint;)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_0
+    if-eqz p0, :cond_0
 
     goto :goto_1
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return-object p1
+    return-object p0
 
     .line 234
     :cond_1
@@ -239,9 +239,9 @@
 
     invoke-direct {p0, v4, v3}, Lcom/google/zxing/datamatrix/detector/Detector;->transitionsBetween(Lcom/google/zxing/ResultPoint;Lcom/google/zxing/ResultPoint;)I
 
-    move-result v1
+    move-result p0
 
-    add-int/2addr v0, v1
+    add-int/2addr v0, p0
 
     if-le p1, v0, :cond_3
 
@@ -254,7 +254,7 @@
 .end method
 
 .method private detectSolid1([Lcom/google/zxing/ResultPoint;)[Lcom/google/zxing/ResultPoint;
-    .locals 12
+    .locals 11
 
     const/4 v0, 0x0
 
@@ -294,34 +294,34 @@
     .line 129
     invoke-direct {p0, p1, v1}, Lcom/google/zxing/datamatrix/detector/Detector;->transitionsBetween(Lcom/google/zxing/ResultPoint;Lcom/google/zxing/ResultPoint;)I
 
-    move-result v10
+    move-result p0
 
-    const/4 v11, 0x4
+    const/4 v10, 0x4
 
     .line 135
-    new-array v11, v11, [Lcom/google/zxing/ResultPoint;
+    new-array v10, v10, [Lcom/google/zxing/ResultPoint;
 
-    aput-object p1, v11, v0
+    aput-object p1, v10, v0
 
-    aput-object v1, v11, v2
+    aput-object v1, v10, v2
 
-    aput-object v3, v11, v6
+    aput-object v3, v10, v6
 
-    aput-object v5, v11, v4
+    aput-object v5, v10, v4
 
     if-le v7, v8, :cond_0
 
     .line 138
-    aput-object v1, v11, v0
+    aput-object v1, v10, v0
 
     .line 139
-    aput-object v3, v11, v2
+    aput-object v3, v10, v2
 
     .line 140
-    aput-object v5, v11, v6
+    aput-object v5, v10, v6
 
     .line 141
-    aput-object p1, v11, v4
+    aput-object p1, v10, v4
 
     move v7, v8
 
@@ -329,16 +329,16 @@
     if-le v7, v9, :cond_1
 
     .line 145
-    aput-object v3, v11, v0
+    aput-object v3, v10, v0
 
     .line 146
-    aput-object v5, v11, v2
+    aput-object v5, v10, v2
 
     .line 147
-    aput-object p1, v11, v6
+    aput-object p1, v10, v6
 
     .line 148
-    aput-object v1, v11, v4
+    aput-object v1, v10, v4
 
     goto :goto_0
 
@@ -346,22 +346,22 @@
     move v9, v7
 
     :goto_0
-    if-le v9, v10, :cond_2
+    if-le v9, p0, :cond_2
 
     .line 151
-    aput-object v5, v11, v0
+    aput-object v5, v10, v0
 
     .line 152
-    aput-object p1, v11, v2
+    aput-object p1, v10, v2
 
     .line 153
-    aput-object v1, v11, v6
+    aput-object v1, v10, v6
 
     .line 154
-    aput-object v3, v11, v4
+    aput-object v3, v10, v4
 
     :cond_2
-    return-object v11
+    return-object v10
 .end method
 
 .method private detectSolid2([Lcom/google/zxing/ResultPoint;)[Lcom/google/zxing/ResultPoint;
@@ -414,9 +414,9 @@
     .line 178
     invoke-direct {p0, v8, v7}, Lcom/google/zxing/datamatrix/detector/Detector;->transitionsBetween(Lcom/google/zxing/ResultPoint;Lcom/google/zxing/ResultPoint;)I
 
-    move-result v8
+    move-result p0
 
-    if-ge v9, v8, :cond_0
+    if-ge v9, p0, :cond_0
 
     .line 185
     aput-object v1, p1, v0
@@ -494,26 +494,26 @@
 
     move-result p1
 
-    iget-object v0, p0, Lcom/google/zxing/datamatrix/detector/Detector;->image:Lcom/google/zxing/common/BitMatrix;
+    iget-object p0, p0, Lcom/google/zxing/datamatrix/detector/Detector;->image:Lcom/google/zxing/common/BitMatrix;
 
-    invoke-virtual {v0}, Lcom/google/zxing/common/BitMatrix;->getHeight()I
+    invoke-virtual {p0}, Lcom/google/zxing/common/BitMatrix;->getHeight()I
 
-    move-result v0
+    move-result p0
 
-    sub-int/2addr v0, v3
+    sub-int/2addr p0, v3
 
-    int-to-float v0, v0
+    int-to-float p0, p0
 
-    cmpg-float p1, p1, v0
+    cmpg-float p0, p1, p0
 
-    if-gtz p1, :cond_0
+    if-gtz p0, :cond_0
 
     return v3
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method private static moveAway(Lcom/google/zxing/ResultPoint;FF)Lcom/google/zxing/ResultPoint;
@@ -706,7 +706,7 @@
 .end method
 
 .method private shiftToModuleCenter([Lcom/google/zxing/ResultPoint;)[Lcom/google/zxing/ResultPoint;
-    .locals 14
+    .locals 13
 
     const/4 v0, 0x0
 
@@ -768,112 +768,112 @@
     .line 270
     invoke-direct {p0, v7, p1}, Lcom/google/zxing/datamatrix/detector/Detector;->transitionsBetween(Lcom/google/zxing/ResultPoint;Lcom/google/zxing/ResultPoint;)I
 
-    move-result v7
+    move-result p0
 
-    add-int/lit8 v11, v7, 0x1
+    add-int/lit8 v7, p0, 0x1
 
-    and-int/lit8 v12, v10, 0x1
+    and-int/lit8 v11, v10, 0x1
 
-    if-ne v12, v2, :cond_0
+    if-ne v11, v2, :cond_0
 
     add-int/lit8 v10, v8, 0x2
 
     :cond_0
-    and-int/lit8 v8, v11, 0x1
+    and-int/lit8 v8, v7, 0x1
 
     if-ne v8, v2, :cond_1
 
-    add-int/lit8 v11, v7, 0x2
+    add-int/lit8 v7, p0, 0x2
 
     .line 280
     :cond_1
     invoke-virtual {v1}, Lcom/google/zxing/ResultPoint;->getX()F
 
-    move-result v7
+    move-result p0
 
     invoke-virtual {v3}, Lcom/google/zxing/ResultPoint;->getX()F
 
     move-result v8
 
-    add-float/2addr v7, v8
+    add-float/2addr p0, v8
 
     invoke-virtual {v5}, Lcom/google/zxing/ResultPoint;->getX()F
 
     move-result v8
 
-    add-float/2addr v7, v8
+    add-float/2addr p0, v8
 
     invoke-virtual {p1}, Lcom/google/zxing/ResultPoint;->getX()F
 
     move-result v8
 
-    add-float/2addr v7, v8
+    add-float/2addr p0, v8
 
     const/high16 v8, 0x40800000    # 4.0f
 
-    div-float/2addr v7, v8
+    div-float/2addr p0, v8
 
     .line 281
     invoke-virtual {v1}, Lcom/google/zxing/ResultPoint;->getY()F
 
-    move-result v12
+    move-result v11
 
     invoke-virtual {v3}, Lcom/google/zxing/ResultPoint;->getY()F
 
-    move-result v13
+    move-result v12
 
-    add-float/2addr v12, v13
+    add-float/2addr v11, v12
 
     invoke-virtual {v5}, Lcom/google/zxing/ResultPoint;->getY()F
 
-    move-result v13
+    move-result v12
 
-    add-float/2addr v12, v13
+    add-float/2addr v11, v12
 
     invoke-virtual {p1}, Lcom/google/zxing/ResultPoint;->getY()F
 
-    move-result v13
+    move-result v12
 
-    add-float/2addr v12, v13
+    add-float/2addr v11, v12
 
-    div-float/2addr v12, v8
+    div-float/2addr v11, v8
 
     .line 282
-    invoke-static {v1, v7, v12}, Lcom/google/zxing/datamatrix/detector/Detector;->moveAway(Lcom/google/zxing/ResultPoint;FF)Lcom/google/zxing/ResultPoint;
+    invoke-static {v1, p0, v11}, Lcom/google/zxing/datamatrix/detector/Detector;->moveAway(Lcom/google/zxing/ResultPoint;FF)Lcom/google/zxing/ResultPoint;
 
     move-result-object v1
 
     .line 283
-    invoke-static {v3, v7, v12}, Lcom/google/zxing/datamatrix/detector/Detector;->moveAway(Lcom/google/zxing/ResultPoint;FF)Lcom/google/zxing/ResultPoint;
+    invoke-static {v3, p0, v11}, Lcom/google/zxing/datamatrix/detector/Detector;->moveAway(Lcom/google/zxing/ResultPoint;FF)Lcom/google/zxing/ResultPoint;
 
     move-result-object v3
 
     .line 284
-    invoke-static {v5, v7, v12}, Lcom/google/zxing/datamatrix/detector/Detector;->moveAway(Lcom/google/zxing/ResultPoint;FF)Lcom/google/zxing/ResultPoint;
+    invoke-static {v5, p0, v11}, Lcom/google/zxing/datamatrix/detector/Detector;->moveAway(Lcom/google/zxing/ResultPoint;FF)Lcom/google/zxing/ResultPoint;
 
     move-result-object v5
 
     .line 285
-    invoke-static {p1, v7, v12}, Lcom/google/zxing/datamatrix/detector/Detector;->moveAway(Lcom/google/zxing/ResultPoint;FF)Lcom/google/zxing/ResultPoint;
+    invoke-static {p1, p0, v11}, Lcom/google/zxing/datamatrix/detector/Detector;->moveAway(Lcom/google/zxing/ResultPoint;FF)Lcom/google/zxing/ResultPoint;
 
-    move-result-object p1
+    move-result-object p0
 
-    mul-int/2addr v11, v9
+    mul-int/2addr v7, v9
 
     .line 291
-    invoke-static {v1, v3, v11}, Lcom/google/zxing/datamatrix/detector/Detector;->shiftPoint(Lcom/google/zxing/ResultPoint;Lcom/google/zxing/ResultPoint;I)Lcom/google/zxing/ResultPoint;
+    invoke-static {v1, v3, v7}, Lcom/google/zxing/datamatrix/detector/Detector;->shiftPoint(Lcom/google/zxing/ResultPoint;Lcom/google/zxing/ResultPoint;I)Lcom/google/zxing/ResultPoint;
 
-    move-result-object v7
+    move-result-object p1
 
     mul-int/2addr v10, v9
 
     .line 292
-    invoke-static {v7, p1, v10}, Lcom/google/zxing/datamatrix/detector/Detector;->shiftPoint(Lcom/google/zxing/ResultPoint;Lcom/google/zxing/ResultPoint;I)Lcom/google/zxing/ResultPoint;
+    invoke-static {p1, p0, v10}, Lcom/google/zxing/datamatrix/detector/Detector;->shiftPoint(Lcom/google/zxing/ResultPoint;Lcom/google/zxing/ResultPoint;I)Lcom/google/zxing/ResultPoint;
 
-    move-result-object v7
+    move-result-object p1
 
     .line 293
-    invoke-static {v3, v1, v11}, Lcom/google/zxing/datamatrix/detector/Detector;->shiftPoint(Lcom/google/zxing/ResultPoint;Lcom/google/zxing/ResultPoint;I)Lcom/google/zxing/ResultPoint;
+    invoke-static {v3, v1, v7}, Lcom/google/zxing/datamatrix/detector/Detector;->shiftPoint(Lcom/google/zxing/ResultPoint;Lcom/google/zxing/ResultPoint;I)Lcom/google/zxing/ResultPoint;
 
     move-result-object v8
 
@@ -883,35 +883,35 @@
     move-result-object v8
 
     .line 295
-    invoke-static {v5, p1, v11}, Lcom/google/zxing/datamatrix/detector/Detector;->shiftPoint(Lcom/google/zxing/ResultPoint;Lcom/google/zxing/ResultPoint;I)Lcom/google/zxing/ResultPoint;
+    invoke-static {v5, p0, v7}, Lcom/google/zxing/datamatrix/detector/Detector;->shiftPoint(Lcom/google/zxing/ResultPoint;Lcom/google/zxing/ResultPoint;I)Lcom/google/zxing/ResultPoint;
 
-    move-result-object v12
+    move-result-object v11
 
     .line 296
-    invoke-static {v12, v3, v10}, Lcom/google/zxing/datamatrix/detector/Detector;->shiftPoint(Lcom/google/zxing/ResultPoint;Lcom/google/zxing/ResultPoint;I)Lcom/google/zxing/ResultPoint;
+    invoke-static {v11, v3, v10}, Lcom/google/zxing/datamatrix/detector/Detector;->shiftPoint(Lcom/google/zxing/ResultPoint;Lcom/google/zxing/ResultPoint;I)Lcom/google/zxing/ResultPoint;
 
     move-result-object v3
 
     .line 297
-    invoke-static {p1, v5, v11}, Lcom/google/zxing/datamatrix/detector/Detector;->shiftPoint(Lcom/google/zxing/ResultPoint;Lcom/google/zxing/ResultPoint;I)Lcom/google/zxing/ResultPoint;
+    invoke-static {p0, v5, v7}, Lcom/google/zxing/datamatrix/detector/Detector;->shiftPoint(Lcom/google/zxing/ResultPoint;Lcom/google/zxing/ResultPoint;I)Lcom/google/zxing/ResultPoint;
 
-    move-result-object p1
+    move-result-object p0
 
     .line 298
-    invoke-static {p1, v1, v10}, Lcom/google/zxing/datamatrix/detector/Detector;->shiftPoint(Lcom/google/zxing/ResultPoint;Lcom/google/zxing/ResultPoint;I)Lcom/google/zxing/ResultPoint;
+    invoke-static {p0, v1, v10}, Lcom/google/zxing/datamatrix/detector/Detector;->shiftPoint(Lcom/google/zxing/ResultPoint;Lcom/google/zxing/ResultPoint;I)Lcom/google/zxing/ResultPoint;
 
-    move-result-object p1
+    move-result-object p0
 
     .line 300
     new-array v1, v9, [Lcom/google/zxing/ResultPoint;
 
-    aput-object v7, v1, v0
+    aput-object p1, v1, v0
 
     aput-object v8, v1, v2
 
     aput-object v3, v1, v4
 
-    aput-object p1, v1, v6
+    aput-object p0, v1, v6
 
     return-object v1
 .end method
@@ -1249,32 +1249,32 @@
 
     invoke-static/range {v3 .. v9}, Lcom/google/zxing/datamatrix/detector/Detector;->sampleGrid(Lcom/google/zxing/common/BitMatrix;Lcom/google/zxing/ResultPoint;Lcom/google/zxing/ResultPoint;Lcom/google/zxing/ResultPoint;Lcom/google/zxing/ResultPoint;II)Lcom/google/zxing/common/BitMatrix;
 
-    move-result-object v0
+    move-result-object p0
 
     .line 87
-    new-instance v3, Lcom/google/zxing/common/DetectorResult;
+    new-instance v0, Lcom/google/zxing/common/DetectorResult;
 
-    const/4 v8, 0x4
+    const/4 v3, 0x4
 
-    new-array v8, v8, [Lcom/google/zxing/ResultPoint;
+    new-array v3, v3, [Lcom/google/zxing/ResultPoint;
 
-    aput-object v4, v8, v1
+    aput-object v4, v3, v1
 
-    aput-object v5, v8, v10
+    aput-object v5, v3, v10
 
-    aput-object v6, v8, v11
+    aput-object v6, v3, v11
 
-    aput-object v7, v8, v2
+    aput-object v7, v3, v2
 
-    invoke-direct {v3, v0, v8}, Lcom/google/zxing/common/DetectorResult;-><init>(Lcom/google/zxing/common/BitMatrix;[Lcom/google/zxing/ResultPoint;)V
+    invoke-direct {v0, p0, v3}, Lcom/google/zxing/common/DetectorResult;-><init>(Lcom/google/zxing/common/BitMatrix;[Lcom/google/zxing/ResultPoint;)V
 
-    return-object v3
+    return-object v0
 
     .line 56
     :cond_3
     invoke-static {}, Lcom/google/zxing/NotFoundException;->getNotFoundInstance()Lcom/google/zxing/NotFoundException;
 
-    move-result-object v0
+    move-result-object p0
 
-    throw v0
+    throw p0
 .end method

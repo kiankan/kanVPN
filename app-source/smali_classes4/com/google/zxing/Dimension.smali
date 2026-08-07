@@ -30,11 +30,11 @@
 
     .line 29
     :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
+    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
 
-    throw p1
+    throw p0
 .end method
 
 
@@ -59,49 +59,49 @@
 
     if-ne v0, v2, :cond_0
 
-    iget v0, p0, Lcom/google/zxing/Dimension;->height:I
+    iget p0, p0, Lcom/google/zxing/Dimension;->height:I
 
     iget p1, p1, Lcom/google/zxing/Dimension;->height:I
 
-    if-ne v0, p1, :cond_0
+    if-ne p0, p1, :cond_0
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_0
     return v1
 .end method
 
 .method public getHeight()I
-    .locals 1
+    .locals 0
 
     .line 40
-    iget v0, p0, Lcom/google/zxing/Dimension;->height:I
+    iget p0, p0, Lcom/google/zxing/Dimension;->height:I
 
-    return v0
+    return p0
 .end method
 
 .method public getWidth()I
-    .locals 1
+    .locals 0
 
     .line 36
-    iget v0, p0, Lcom/google/zxing/Dimension;->width:I
+    iget p0, p0, Lcom/google/zxing/Dimension;->width:I
 
-    return v0
+    return p0
 .end method
 
 .method public hashCode()I
-    .locals 2
+    .locals 1
 
     .line 54
     iget v0, p0, Lcom/google/zxing/Dimension;->width:I
 
     mul-int/lit16 v0, v0, 0x7fc9
 
-    iget v1, p0, Lcom/google/zxing/Dimension;->height:I
+    iget p0, p0, Lcom/google/zxing/Dimension;->height:I
 
-    add-int/2addr v0, v1
+    add-int/2addr v0, p0
 
     return v0
 .end method
@@ -118,17 +118,17 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v1, "x"
+    const-string/jumbo v1, "x"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lcom/google/zxing/Dimension;->height:I
+    iget p0, p0, Lcom/google/zxing/Dimension;->height:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

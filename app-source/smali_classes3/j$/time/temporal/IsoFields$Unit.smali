@@ -131,35 +131,35 @@
 
 # virtual methods
 .method public addTo(Lj$/time/temporal/Temporal;J)Lj$/time/temporal/Temporal;
-    .locals 5
+    .locals 4
 
     .line 701
     sget-object v0, Lj$/time/temporal/IsoFields$1;->$SwitchMap$java$time$temporal$IsoFields$Unit:[I
 
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
-    move-result v1
+    move-result p0
 
-    aget v0, v0, v1
+    aget p0, v0, p0
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    if-eq v0, v1, :cond_1
+    if-eq p0, v0, :cond_1
 
-    const/4 v1, 0x2
+    const/4 v0, 0x2
 
-    if-ne v0, v1, :cond_0
+    if-ne p0, v0, :cond_0
 
     const-wide/16 v0, 0x4
 
     .line 706
     div-long v2, p2, v0
 
-    sget-object v4, Lj$/time/temporal/ChronoUnit;->YEARS:Lj$/time/temporal/ChronoUnit;
+    sget-object p0, Lj$/time/temporal/ChronoUnit;->YEARS:Lj$/time/temporal/ChronoUnit;
 
-    invoke-interface {p1, v2, v3, v4}, Lj$/time/temporal/Temporal;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/temporal/Temporal;
+    invoke-interface {p1, v2, v3, p0}, Lj$/time/temporal/Temporal;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/temporal/Temporal;
 
-    move-result-object p1
+    move-result-object p0
 
     rem-long/2addr p2, v0
 
@@ -167,61 +167,70 @@
 
     mul-long/2addr p2, v0
 
-    sget-object v0, Lj$/time/temporal/ChronoUnit;->MONTHS:Lj$/time/temporal/ChronoUnit;
+    sget-object p1, Lj$/time/temporal/ChronoUnit;->MONTHS:Lj$/time/temporal/ChronoUnit;
 
     .line 707
-    invoke-interface {p1, p2, p3, v0}, Lj$/time/temporal/Temporal;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/temporal/Temporal;
+    invoke-interface {p0, p2, p3, p1}, Lj$/time/temporal/Temporal;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/temporal/Temporal;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 709
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    const-string p2, "Unreachable"
+    const-string p1, "Unreachable"
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
     .line 703
     :cond_1
-    sget-object v0, Lj$/time/temporal/IsoFields;->WEEK_BASED_YEAR:Lj$/time/temporal/TemporalField;
+    sget-object p0, Lj$/time/temporal/IsoFields;->WEEK_BASED_YEAR:Lj$/time/temporal/TemporalField;
 
     .line 704
-    invoke-interface {p1, v0}, Lj$/time/temporal/TemporalAccessor;->get(Lj$/time/temporal/TemporalField;)I
+    invoke-interface {p1, p0}, Lj$/time/temporal/TemporalAccessor;->get(Lj$/time/temporal/TemporalField;)I
 
-    move-result v1
+    move-result v0
 
-    int-to-long v1, v1
+    int-to-long v0, v0
 
-    invoke-static {v1, v2, p2, p3}, Ljava/lang/Math;->addExact(JJ)J
+    invoke-static {v0, v1, p2, p3}, Ljava/lang/Math;->addExact(JJ)J
 
     move-result-wide p2
 
     .line 703
-    invoke-interface {p1, v0, p2, p3}, Lj$/time/temporal/Temporal;->with(Lj$/time/temporal/TemporalField;J)Lj$/time/temporal/Temporal;
+    invoke-interface {p1, p0, p2, p3}, Lj$/time/temporal/Temporal;->with(Lj$/time/temporal/TemporalField;J)Lj$/time/temporal/Temporal;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
+.end method
+
+.method public getDuration()Lj$/time/Duration;
+    .locals 0
+
+    .line 675
+    iget-object p0, p0, Lj$/time/temporal/IsoFields$Unit;->duration:Lj$/time/Duration;
+
+    return-object p0
 .end method
 
 .method public isDateBased()Z
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 731
-    iget-object v0, p0, Lj$/time/temporal/IsoFields$Unit;->name:Ljava/lang/String;
+    iget-object p0, p0, Lj$/time/temporal/IsoFields$Unit;->name:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method

@@ -30,7 +30,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -41,7 +41,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 1051
+    .line 1063
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -58,26 +58,26 @@
 
 # virtual methods
 .method public final getMaxItems$activity()I
-    .locals 1
+    .locals 0
 
-    .line 1062
-    sget-object v0, Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia;->Companion:Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$Companion;
+    .line 1074
+    sget-object p0, Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia;->Companion:Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$Companion;
 
-    invoke-virtual {v0}, Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$Companion;->isSystemPickerAvailable$activity()Z
+    invoke-virtual {p0}, Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$Companion;->isSystemPickerAvailable$activity()Z
 
-    move-result v0
+    move-result p0
 
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
-    .line 1063
+    .line 1075
     invoke-static {}, Landroidx/activity/BackEventCompat$$ExternalSyntheticApiModelOutline0;->m()I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 
     :cond_0
-    const v0, 0x7fffffff
+    const p0, 0x7fffffff
 
-    return v0
+    return p0
 .end method

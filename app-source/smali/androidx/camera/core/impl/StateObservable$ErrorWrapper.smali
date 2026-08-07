@@ -27,7 +27,7 @@
 .method static wrap(Ljava/lang/Throwable;)Landroidx/camera/core/impl/StateObservable$ErrorWrapper;
     .locals 1
 
-    .line 296
+    .line 295
     new-instance v0, Landroidx/camera/core/impl/AutoValue_StateObservable_ErrorWrapper;
 
     invoke-direct {v0, p0}, Landroidx/camera/core/impl/AutoValue_StateObservable_ErrorWrapper;-><init>(Ljava/lang/Throwable;)V

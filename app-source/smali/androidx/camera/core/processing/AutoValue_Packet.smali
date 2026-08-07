@@ -97,53 +97,53 @@
 
     .line 61
     :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null cameraCaptureResult"
+    const-string p1, "Null cameraCaptureResult"
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
     .line 57
     :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null sensorToBufferTransform"
+    const-string p1, "Null sensorToBufferTransform"
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
     .line 52
     :cond_2
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null cropRect"
+    const-string p1, "Null cropRect"
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
     .line 48
     :cond_3
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null size"
+    const-string p1, "Null size"
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
     .line 42
     :cond_4
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null data"
+    const-string p1, "Null data"
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 
@@ -157,7 +157,7 @@
 
     return v0
 
-    .line 131
+    .line 125
     :cond_0
     instance-of v1, p1, Landroidx/camera/core/processing/Packet;
 
@@ -165,10 +165,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 132
+    .line 126
     check-cast p1, Landroidx/camera/core/processing/Packet;
 
-    .line 133
+    .line 127
     iget-object v1, p0, Landroidx/camera/core/processing/AutoValue_Packet;->data:Ljava/lang/Object;
 
     invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getData()Ljava/lang/Object;
@@ -185,7 +185,7 @@
 
     if-nez v1, :cond_1
 
-    .line 134
+    .line 128
     invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getExif()Landroidx/camera/core/impl/utils/Exif;
 
     move-result-object v1
@@ -208,7 +208,7 @@
     :goto_0
     iget v1, p0, Landroidx/camera/core/processing/AutoValue_Packet;->format:I
 
-    .line 135
+    .line 129
     invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getFormat()I
 
     move-result v3
@@ -217,7 +217,7 @@
 
     iget-object v1, p0, Landroidx/camera/core/processing/AutoValue_Packet;->size:Landroid/util/Size;
 
-    .line 136
+    .line 130
     invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getSize()Landroid/util/Size;
 
     move-result-object v3
@@ -230,7 +230,7 @@
 
     iget-object v1, p0, Landroidx/camera/core/processing/AutoValue_Packet;->cropRect:Landroid/graphics/Rect;
 
-    .line 137
+    .line 131
     invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getCropRect()Landroid/graphics/Rect;
 
     move-result-object v3
@@ -243,7 +243,7 @@
 
     iget v1, p0, Landroidx/camera/core/processing/AutoValue_Packet;->rotationDegrees:I
 
-    .line 138
+    .line 132
     invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getRotationDegrees()I
 
     move-result v3
@@ -252,7 +252,7 @@
 
     iget-object v1, p0, Landroidx/camera/core/processing/AutoValue_Packet;->sensorToBufferTransform:Landroid/graphics/Matrix;
 
-    .line 139
+    .line 133
     invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getSensorToBufferTransform()Landroid/graphics/Matrix;
 
     move-result-object v3
@@ -263,18 +263,18 @@
 
     if-eqz v1, :cond_2
 
-    iget-object v1, p0, Landroidx/camera/core/processing/AutoValue_Packet;->cameraCaptureResult:Landroidx/camera/core/impl/CameraCaptureResult;
+    iget-object p0, p0, Landroidx/camera/core/processing/AutoValue_Packet;->cameraCaptureResult:Landroidx/camera/core/impl/CameraCaptureResult;
 
-    .line 140
+    .line 134
     invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getCameraCaptureResult()Landroidx/camera/core/impl/CameraCaptureResult;
 
     move-result-object p1
 
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_2
+    if-eqz p0, :cond_2
 
     return v0
 
@@ -283,86 +283,86 @@
 .end method
 
 .method public getCameraCaptureResult()Landroidx/camera/core/impl/CameraCaptureResult;
-    .locals 1
+    .locals 0
 
-    .line 109
-    iget-object v0, p0, Landroidx/camera/core/processing/AutoValue_Packet;->cameraCaptureResult:Landroidx/camera/core/impl/CameraCaptureResult;
+    .line 103
+    iget-object p0, p0, Landroidx/camera/core/processing/AutoValue_Packet;->cameraCaptureResult:Landroidx/camera/core/impl/CameraCaptureResult;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getCropRect()Landroid/graphics/Rect;
-    .locals 1
+    .locals 0
 
-    .line 92
-    iget-object v0, p0, Landroidx/camera/core/processing/AutoValue_Packet;->cropRect:Landroid/graphics/Rect;
+    .line 88
+    iget-object p0, p0, Landroidx/camera/core/processing/AutoValue_Packet;->cropRect:Landroid/graphics/Rect;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getData()Ljava/lang/Object;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TT;"
         }
     .end annotation
 
-    .line 69
-    iget-object v0, p0, Landroidx/camera/core/processing/AutoValue_Packet;->data:Ljava/lang/Object;
+    .line 68
+    iget-object p0, p0, Landroidx/camera/core/processing/AutoValue_Packet;->data:Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getExif()Landroidx/camera/core/impl/utils/Exif;
-    .locals 1
+    .locals 0
 
-    .line 75
-    iget-object v0, p0, Landroidx/camera/core/processing/AutoValue_Packet;->exif:Landroidx/camera/core/impl/utils/Exif;
+    .line 73
+    iget-object p0, p0, Landroidx/camera/core/processing/AutoValue_Packet;->exif:Landroidx/camera/core/impl/utils/Exif;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getFormat()I
-    .locals 1
+    .locals 0
 
-    .line 80
-    iget v0, p0, Landroidx/camera/core/processing/AutoValue_Packet;->format:I
+    .line 78
+    iget p0, p0, Landroidx/camera/core/processing/AutoValue_Packet;->format:I
 
-    return v0
+    return p0
 .end method
 
 .method public getRotationDegrees()I
-    .locals 1
+    .locals 0
 
-    .line 97
-    iget v0, p0, Landroidx/camera/core/processing/AutoValue_Packet;->rotationDegrees:I
+    .line 93
+    iget p0, p0, Landroidx/camera/core/processing/AutoValue_Packet;->rotationDegrees:I
 
-    return v0
+    return p0
 .end method
 
 .method public getSensorToBufferTransform()Landroid/graphics/Matrix;
-    .locals 1
+    .locals 0
 
-    .line 103
-    iget-object v0, p0, Landroidx/camera/core/processing/AutoValue_Packet;->sensorToBufferTransform:Landroid/graphics/Matrix;
+    .line 98
+    iget-object p0, p0, Landroidx/camera/core/processing/AutoValue_Packet;->sensorToBufferTransform:Landroid/graphics/Matrix;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getSize()Landroid/util/Size;
-    .locals 1
+    .locals 0
 
-    .line 86
-    iget-object v0, p0, Landroidx/camera/core/processing/AutoValue_Packet;->size:Landroid/util/Size;
+    .line 83
+    iget-object p0, p0, Landroidx/camera/core/processing/AutoValue_Packet;->size:Landroid/util/Size;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public hashCode()I
     .locals 3
 
-    .line 149
+    .line 143
     iget-object v0, p0, Landroidx/camera/core/processing/AutoValue_Packet;->data:Ljava/lang/Object;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -375,7 +375,7 @@
 
     mul-int/2addr v0, v1
 
-    .line 151
+    .line 145
     iget-object v2, p0, Landroidx/camera/core/processing/AutoValue_Packet;->exif:Landroidx/camera/core/impl/utils/Exif;
 
     if-nez v2, :cond_0
@@ -394,14 +394,14 @@
 
     mul-int/2addr v0, v1
 
-    .line 153
+    .line 147
     iget v2, p0, Landroidx/camera/core/processing/AutoValue_Packet;->format:I
 
     xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
-    .line 155
+    .line 149
     iget-object v2, p0, Landroidx/camera/core/processing/AutoValue_Packet;->size:Landroid/util/Size;
 
     invoke-virtual {v2}, Landroid/util/Size;->hashCode()I
@@ -412,7 +412,7 @@
 
     mul-int/2addr v0, v1
 
-    .line 157
+    .line 151
     iget-object v2, p0, Landroidx/camera/core/processing/AutoValue_Packet;->cropRect:Landroid/graphics/Rect;
 
     invoke-virtual {v2}, Landroid/graphics/Rect;->hashCode()I
@@ -423,14 +423,14 @@
 
     mul-int/2addr v0, v1
 
-    .line 159
+    .line 153
     iget v2, p0, Landroidx/camera/core/processing/AutoValue_Packet;->rotationDegrees:I
 
     xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
-    .line 161
+    .line 155
     iget-object v2, p0, Landroidx/camera/core/processing/AutoValue_Packet;->sensorToBufferTransform:Landroid/graphics/Matrix;
 
     invoke-virtual {v2}, Landroid/graphics/Matrix;->hashCode()I
@@ -441,22 +441,22 @@
 
     mul-int/2addr v0, v1
 
-    .line 163
-    iget-object v1, p0, Landroidx/camera/core/processing/AutoValue_Packet;->cameraCaptureResult:Landroidx/camera/core/impl/CameraCaptureResult;
+    .line 157
+    iget-object p0, p0, Landroidx/camera/core/processing/AutoValue_Packet;->cameraCaptureResult:Landroidx/camera/core/impl/CameraCaptureResult;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
-    move-result v1
+    move-result p0
 
-    xor-int/2addr v0, v1
+    xor-int/2addr p0, v0
 
-    return v0
+    return p0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 114
+    .line 108
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "Packet{data="
@@ -519,17 +519,17 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Landroidx/camera/core/processing/AutoValue_Packet;->cameraCaptureResult:Landroidx/camera/core/impl/CameraCaptureResult;
+    iget-object p0, p0, Landroidx/camera/core/processing/AutoValue_Packet;->cameraCaptureResult:Landroidx/camera/core/impl/CameraCaptureResult;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, "}"
+    const-string/jumbo p0, "}"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

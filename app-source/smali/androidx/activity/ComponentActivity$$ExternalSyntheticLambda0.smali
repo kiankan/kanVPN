@@ -25,12 +25,12 @@
 
 # virtual methods
 .method public final run()V
-    .locals 1
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Landroidx/activity/ComponentActivity$$ExternalSyntheticLambda0;->f$0:Landroidx/activity/ComponentActivity;
+    iget-object p0, p0, Landroidx/activity/ComponentActivity$$ExternalSyntheticLambda0;->f$0:Landroidx/activity/ComponentActivity;
 
-    invoke-static {v0}, Landroidx/activity/ComponentActivity;->$r8$lambda$cI7dwLT0wnPzJ9a3oRpjgUF1USM(Landroidx/activity/ComponentActivity;)V
+    invoke-static {p0}, Landroidx/activity/ComponentActivity;->menuHostHelper$lambda$0(Landroidx/activity/ComponentActivity;)V
 
     return-void
 .end method

@@ -54,7 +54,7 @@
     k = 0x1
     mv = {
         0x1,
-        0x8,
+        0x9,
         0x0
     }
     xi = 0x30
@@ -140,7 +140,7 @@
         }
     .end annotation
 
-    const-string v0, "original"
+    const-string/jumbo v0, "original"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -208,18 +208,18 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 40
-    iget-object v0, p0, Landroidx/collection/internal/LruHashMap;->map:Ljava/util/LinkedHashMap;
+    .line 43
+    iget-object p0, p0, Landroidx/collection/internal/LruHashMap;->map:Ljava/util/LinkedHashMap;
 
-    invoke-virtual {v0, p1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final getEntries()Ljava/util/Set;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -229,31 +229,31 @@
         }
     .end annotation
 
-    .line 38
-    iget-object v0, p0, Landroidx/collection/internal/LruHashMap;->map:Ljava/util/LinkedHashMap;
+    .line 41
+    iget-object p0, p0, Landroidx/collection/internal/LruHashMap;->map:Ljava/util/LinkedHashMap;
 
-    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
+    invoke-virtual {p0}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
 
-    move-result-object v0
+    move-result-object p0
 
-    const-string v1, "map.entries"
+    const-string v0, "<get-entries>(...)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final isEmpty()Z
-    .locals 1
+    .locals 0
 
-    .line 37
-    iget-object v0, p0, Landroidx/collection/internal/LruHashMap;->map:Ljava/util/LinkedHashMap;
+    .line 38
+    iget-object p0, p0, Landroidx/collection/internal/LruHashMap;->map:Ljava/util/LinkedHashMap;
 
-    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->isEmpty()Z
+    invoke-virtual {p0}, Ljava/util/LinkedHashMap;->isEmpty()Z
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public final put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -268,18 +268,18 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "value"
+    const-string/jumbo v0, "value"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 42
-    iget-object v0, p0, Landroidx/collection/internal/LruHashMap;->map:Ljava/util/LinkedHashMap;
+    .line 45
+    iget-object p0, p0, Landroidx/collection/internal/LruHashMap;->map:Ljava/util/LinkedHashMap;
 
-    invoke-virtual {v0, p1, p2}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -294,12 +294,12 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 44
-    iget-object v0, p0, Landroidx/collection/internal/LruHashMap;->map:Ljava/util/LinkedHashMap;
+    .line 47
+    iget-object p0, p0, Landroidx/collection/internal/LruHashMap;->map:Ljava/util/LinkedHashMap;
 
-    invoke-virtual {v0, p1}, Ljava/util/LinkedHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Ljava/util/LinkedHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

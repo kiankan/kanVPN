@@ -30,18 +30,18 @@
 
 # virtual methods
 .method public queryFrom(Lj$/time/temporal/TemporalAccessor;)Lj$/time/ZoneId;
-    .locals 1
+    .locals 0
 
     .line 347
-    sget-object v0, Lj$/time/temporal/TemporalQueries;->ZONE_ID:Lj$/time/temporal/TemporalQuery;
+    sget-object p0, Lj$/time/temporal/TemporalQueries;->ZONE_ID:Lj$/time/temporal/TemporalQuery;
 
-    invoke-interface {p1, v0}, Lj$/time/temporal/TemporalAccessor;->query(Lj$/time/temporal/TemporalQuery;)Ljava/lang/Object;
+    invoke-interface {p1, p0}, Lj$/time/temporal/TemporalAccessor;->query(Lj$/time/temporal/TemporalQuery;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lj$/time/ZoneId;
+    check-cast p0, Lj$/time/ZoneId;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic queryFrom(Lj$/time/temporal/TemporalAccessor;)Ljava/lang/Object;
@@ -50,16 +50,16 @@
     .line 344
     invoke-virtual {p0, p1}, Lj$/time/temporal/TemporalQueries$1;->queryFrom(Lj$/time/temporal/TemporalAccessor;)Lj$/time/ZoneId;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 352
-    const-string v0, "ZoneId"
+    const-string p0, "ZoneId"
 
-    return-object v0
+    return-object p0
 .end method

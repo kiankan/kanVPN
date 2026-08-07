@@ -20,8 +20,8 @@
         value = {
             "Lkotlin/jvm/functions/Function3<",
             "Landroidx/camera/core/DynamicRange;",
-            "Landroidx/camera/core/LayoutSettings;",
-            "Landroidx/camera/core/LayoutSettings;",
+            "Landroidx/camera/core/CompositionSettings;",
+            "Landroidx/camera/core/CompositionSettings;",
             "Landroidx/camera/core/processing/SurfaceProcessorInternal;",
             ">;"
         }
@@ -33,7 +33,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 267
+    .line 269
     new-instance v0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor$Factory$$ExternalSyntheticLambda0;
 
     invoke-direct {v0}, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor$Factory$$ExternalSyntheticLambda0;-><init>()V
@@ -46,16 +46,16 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 263
+    .line 265
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static newInstance(Landroidx/camera/core/DynamicRange;Landroidx/camera/core/LayoutSettings;Landroidx/camera/core/LayoutSettings;)Landroidx/camera/core/processing/SurfaceProcessorInternal;
+.method public static newInstance(Landroidx/camera/core/DynamicRange;Landroidx/camera/core/CompositionSettings;Landroidx/camera/core/CompositionSettings;)Landroidx/camera/core/processing/SurfaceProcessorInternal;
     .locals 1
 
-    .line 277
+    .line 279
     sget-object v0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor$Factory;->sSupplier:Lkotlin/jvm/functions/Function3;
 
     invoke-interface {v0, p0, p1, p2}, Lkotlin/jvm/functions/Function3;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -74,14 +74,14 @@
             "(",
             "Lkotlin/jvm/functions/Function3<",
             "Landroidx/camera/core/DynamicRange;",
-            "Landroidx/camera/core/LayoutSettings;",
-            "Landroidx/camera/core/LayoutSettings;",
+            "Landroidx/camera/core/CompositionSettings;",
+            "Landroidx/camera/core/CompositionSettings;",
             "Landroidx/camera/core/processing/SurfaceProcessorInternal;",
             ">;)V"
         }
     .end annotation
 
-    .line 289
+    .line 292
     sput-object p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor$Factory;->sSupplier:Lkotlin/jvm/functions/Function3;
 
     return-void

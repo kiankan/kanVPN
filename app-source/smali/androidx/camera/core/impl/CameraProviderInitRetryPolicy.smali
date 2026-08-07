@@ -22,10 +22,10 @@
 .method public constructor <init>(J)V
     .locals 2
 
-    .line 38
+    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
+    .line 40
     new-instance v0, Landroidx/camera/core/impl/TimeoutRetryPolicy;
 
     new-instance v1, Landroidx/camera/core/impl/CameraProviderInitRetryPolicy$1;
@@ -42,23 +42,23 @@
 
 # virtual methods
 .method public copy(J)Landroidx/camera/core/RetryPolicy;
-    .locals 1
+    .locals 0
 
-    .line 71
-    new-instance v0, Landroidx/camera/core/impl/CameraProviderInitRetryPolicy;
+    .line 70
+    new-instance p0, Landroidx/camera/core/impl/CameraProviderInitRetryPolicy;
 
-    invoke-direct {v0, p1, p2}, Landroidx/camera/core/impl/CameraProviderInitRetryPolicy;-><init>(J)V
+    invoke-direct {p0, p1, p2}, Landroidx/camera/core/impl/CameraProviderInitRetryPolicy;-><init>(J)V
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getTimeoutInMillis()J
     .locals 2
 
     .line 65
-    iget-object v0, p0, Landroidx/camera/core/impl/CameraProviderInitRetryPolicy;->mDelegatePolicy:Landroidx/camera/core/RetryPolicy;
+    iget-object p0, p0, Landroidx/camera/core/impl/CameraProviderInitRetryPolicy;->mDelegatePolicy:Landroidx/camera/core/RetryPolicy;
 
-    invoke-interface {v0}, Landroidx/camera/core/RetryPolicy;->getTimeoutInMillis()J
+    invoke-interface {p0}, Landroidx/camera/core/RetryPolicy;->getTimeoutInMillis()J
 
     move-result-wide v0
 
@@ -66,14 +66,14 @@
 .end method
 
 .method public onRetryDecisionRequested(Landroidx/camera/core/RetryPolicy$ExecutionState;)Landroidx/camera/core/RetryPolicy$RetryConfig;
-    .locals 1
+    .locals 0
 
     .line 60
-    iget-object v0, p0, Landroidx/camera/core/impl/CameraProviderInitRetryPolicy;->mDelegatePolicy:Landroidx/camera/core/RetryPolicy;
+    iget-object p0, p0, Landroidx/camera/core/impl/CameraProviderInitRetryPolicy;->mDelegatePolicy:Landroidx/camera/core/RetryPolicy;
 
-    invoke-interface {v0, p1}, Landroidx/camera/core/RetryPolicy;->onRetryDecisionRequested(Landroidx/camera/core/RetryPolicy$ExecutionState;)Landroidx/camera/core/RetryPolicy$RetryConfig;
+    invoke-interface {p0, p1}, Landroidx/camera/core/RetryPolicy;->onRetryDecisionRequested(Landroidx/camera/core/RetryPolicy$ExecutionState;)Landroidx/camera/core/RetryPolicy$RetryConfig;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

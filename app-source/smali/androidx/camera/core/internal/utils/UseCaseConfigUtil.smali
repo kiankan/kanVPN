@@ -7,7 +7,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 31
+    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,7 +23,7 @@
         }
     .end annotation
 
-    .line 43
+    .line 44
     invoke-interface {p0}, Landroidx/camera/core/impl/UseCaseConfig$Builder;->getUseCaseConfig()Landroidx/camera/core/impl/UseCaseConfig;
 
     move-result-object v0
@@ -32,7 +32,7 @@
 
     const/4 v1, -0x1
 
-    .line 44
+    .line 45
     invoke-interface {v0, v1}, Landroidx/camera/core/impl/ImageOutputConfig;->getTargetRotation(I)I
 
     move-result v2
@@ -41,7 +41,7 @@
 
     if-eq v2, p1, :cond_1
 
-    .line 47
+    .line 48
     :cond_0
     move-object v3, p0
 
@@ -58,20 +58,20 @@
 
     goto :goto_0
 
-    .line 56
+    .line 57
     :cond_2
     invoke-static {v2}, Landroidx/camera/core/impl/utils/CameraOrientationUtil;->surfaceRotationToDegrees(I)I
 
     move-result v1
 
-    .line 57
+    .line 58
     invoke-static {p1}, Landroidx/camera/core/impl/utils/CameraOrientationUtil;->surfaceRotationToDegrees(I)I
 
     move-result p1
 
     sub-int/2addr p1, v1
 
-    .line 66
+    .line 67
     invoke-static {p1}, Ljava/lang/Math;->abs(I)I
 
     move-result p1
@@ -84,31 +84,31 @@
 
     const/4 p1, 0x0
 
-    .line 67
+    .line 68
     invoke-interface {v0, p1}, Landroidx/camera/core/impl/ImageOutputConfig;->getTargetResolution(Landroid/util/Size;)Landroid/util/Size;
 
     move-result-object p1
 
     if-eqz p1, :cond_3
 
-    .line 72
+    .line 73
     check-cast p0, Landroidx/camera/core/impl/ImageOutputConfig$Builder;
 
     new-instance v0, Landroid/util/Size;
 
-    .line 73
+    .line 74
     invoke-virtual {p1}, Landroid/util/Size;->getHeight()I
 
     move-result v1
 
-    .line 74
+    .line 75
     invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
 
     move-result p1
 
     invoke-direct {v0, v1, p1}, Landroid/util/Size;-><init>(II)V
 
-    .line 72
+    .line 73
     invoke-interface {p0, v0}, Landroidx/camera/core/impl/ImageOutputConfig$Builder;->setTargetResolution(Landroid/util/Size;)Ljava/lang/Object;
 
     :cond_3

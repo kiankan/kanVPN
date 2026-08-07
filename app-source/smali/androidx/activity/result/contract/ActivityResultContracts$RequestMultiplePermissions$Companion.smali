@@ -37,7 +37,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -65,28 +65,28 @@
 
 # virtual methods
 .method public final createIntent$activity([Ljava/lang/String;)Landroid/content/Intent;
-    .locals 2
+    .locals 1
 
-    const-string v0, "input"
+    const-string p0, "input"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 172
-    new-instance v0, Landroid/content/Intent;
+    .line 173
+    new-instance p0, Landroid/content/Intent;
 
-    const-string v1, "androidx.activity.result.contract.action.REQUEST_PERMISSIONS"
+    const-string v0, "androidx.activity.result.contract.action.REQUEST_PERMISSIONS"
 
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    const-string v1, "androidx.activity.result.contract.extra.PERMISSIONS"
+    const-string v0, "androidx.activity.result.contract.extra.PERMISSIONS"
 
-    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {p0, v0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
 
-    move-result-object p1
+    move-result-object p0
 
-    const-string v0, "putExtra(...)"
+    const-string/jumbo p1, "putExtra(...)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    return-object p1
+    return-object p0
 .end method

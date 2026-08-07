@@ -34,21 +34,21 @@
         }
     .end annotation
 
-    .line 42
+    .line 40
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 43
+    .line 41
     invoke-static {}, Landroidx/camera/core/impl/CameraCaptureCallbacks;->createNoOpCallback()Landroidx/camera/core/impl/CameraCaptureCallback;
 
     move-result-object p0
 
     return-object p0
 
-    .line 44
+    .line 42
     :cond_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -60,7 +60,7 @@
 
     const/4 v0, 0x0
 
-    .line 45
+    .line 43
     invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -69,7 +69,7 @@
 
     return-object p0
 
-    .line 47
+    .line 45
     :cond_1
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureCallbacks$ComboCameraCaptureCallback;
 
@@ -81,7 +81,7 @@
 .method public static varargs createComboCallback([Landroidx/camera/core/impl/CameraCaptureCallback;)Landroidx/camera/core/impl/CameraCaptureCallback;
     .locals 0
 
-    .line 54
+    .line 51
     invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
@@ -96,7 +96,7 @@
 .method public static createNoOpCallback()Landroidx/camera/core/impl/CameraCaptureCallback;
     .locals 1
 
-    .line 35
+    .line 34
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureCallbacks$NoOpCameraCaptureCallback;
 
     invoke-direct {v0}, Landroidx/camera/core/impl/CameraCaptureCallbacks$NoOpCameraCaptureCallback;-><init>()V

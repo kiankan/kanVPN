@@ -5,32 +5,38 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nIntList.kt\nKotlin\n*S Kotlin\n*F\n+ 1 IntList.kt\nandroidx/collection/IntListKt\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 3 IntList.kt\nandroidx/collection/MutableIntList\n*L\n1#1,969:1\n1#2:970\n713#3,2:971\n713#3,2:973\n713#3,2:975\n713#3,2:977\n713#3,2:979\n713#3,2:981\n*S KotlinDebug\n*F\n+ 1 IntList.kt\nandroidx/collection/IntListKt\n*L\n938#1:971,2\n947#1:973,2\n948#1:975,2\n958#1:977,2\n959#1:979,2\n960#1:981,2\n*E\n"
+    value = "SMAP\nIntList.kt\nKotlin\n*S Kotlin\n*F\n+ 1 IntList.kt\nandroidx/collection/IntListKt\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 3 IntList.kt\nandroidx/collection/MutableIntList\n*L\n1#1,968:1\n1#2:969\n672#3,2:970\n712#3,2:972\n712#3,2:974\n712#3,2:976\n712#3,2:978\n712#3,2:980\n712#3,2:982\n672#3,2:984\n*S KotlinDebug\n*F\n+ 1 IntList.kt\nandroidx/collection/IntListKt\n*L\n902#1:970,2\n910#1:972,2\n917#1:974,2\n918#1:976,2\n927#1:978,2\n928#1:980,2\n929#1:982,2\n935#1:984,2\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000\u001e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0010\u0015\n\u0000\n\u0002\u0018\u0002\n\u0000\u001a\u0006\u0010\u0002\u001a\u00020\u0001\u001a\u0006\u0010\u0003\u001a\u00020\u0001\u001a\u000e\u0010\u0003\u001a\u00020\u00012\u0006\u0010\u0004\u001a\u00020\u0005\u001a\u0016\u0010\u0003\u001a\u00020\u00012\u0006\u0010\u0004\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u0005\u001a\u001e\u0010\u0003\u001a\u00020\u00012\u0006\u0010\u0004\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u00052\u0006\u0010\u0007\u001a\u00020\u0005\u001a\u0012\u0010\u0003\u001a\u00020\u00012\n\u0010\u0008\u001a\u00020\t\"\u00020\u0005\u001a\t\u0010\n\u001a\u00020\u000bH\u0086\u0008\u001a\u000e\u0010\n\u001a\u00020\u000b2\u0006\u0010\u0004\u001a\u00020\u0005\u001a\u0016\u0010\n\u001a\u00020\u000b2\u0006\u0010\u0004\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u0005\u001a\u001e\u0010\n\u001a\u00020\u000b2\u0006\u0010\u0004\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u00052\u0006\u0010\u0007\u001a\u00020\u0005\u001a\u0015\u0010\n\u001a\u00020\u000b2\n\u0010\u0008\u001a\u00020\t\"\u00020\u0005H\u0086\u0008\"\u000e\u0010\u0000\u001a\u00020\u0001X\u0082\u0004\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u000c"
+        "\u0000,\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0006\n\u0002\u0010\u0015\n\u0002\u0008\u0002\u001a2\u0010\u0002\u001a\u00020\u00012\u0017\u0010\u0003\u001a\u0013\u0012\u0004\u0012\u00020\u0005\u0012\u0004\u0012\u00020\u00060\u0004\u00a2\u0006\u0002\u0008\u0007H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\n\n\u0008\u0008\u0001\u0012\u0002\u0010\u0001 \u0001\u001a:\u0010\u0002\u001a\u00020\u00012\u0006\u0010\u0008\u001a\u00020\t2\u0017\u0010\u0003\u001a\u0013\u0012\u0004\u0012\u00020\u0005\u0012\u0004\u0012\u00020\u00060\u0004\u00a2\u0006\u0002\u0008\u0007H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\n\n\u0008\u0008\u0001\u0012\u0002\u0010\u0002 \u0001\u001a\u0006\u0010\n\u001a\u00020\u0001\u001a\u0006\u0010\u000b\u001a\u00020\u0001\u001a\u000e\u0010\u000b\u001a\u00020\u00012\u0006\u0010\u000c\u001a\u00020\t\u001a\u0016\u0010\u000b\u001a\u00020\u00012\u0006\u0010\u000c\u001a\u00020\t2\u0006\u0010\r\u001a\u00020\t\u001a\u001e\u0010\u000b\u001a\u00020\u00012\u0006\u0010\u000c\u001a\u00020\t2\u0006\u0010\r\u001a\u00020\t2\u0006\u0010\u000e\u001a\u00020\t\u001a\u0012\u0010\u000b\u001a\u00020\u00012\n\u0010\u000f\u001a\u00020\u0010\"\u00020\t\u001a\t\u0010\u0011\u001a\u00020\u0005H\u0086\u0008\u001a\u000e\u0010\u0011\u001a\u00020\u00052\u0006\u0010\u000c\u001a\u00020\t\u001a\u0016\u0010\u0011\u001a\u00020\u00052\u0006\u0010\u000c\u001a\u00020\t2\u0006\u0010\r\u001a\u00020\t\u001a\u001e\u0010\u0011\u001a\u00020\u00052\u0006\u0010\u000c\u001a\u00020\t2\u0006\u0010\r\u001a\u00020\t2\u0006\u0010\u000e\u001a\u00020\t\u001a\u0015\u0010\u0011\u001a\u00020\u00052\n\u0010\u000f\u001a\u00020\u0010\"\u00020\tH\u0086\u0008\"\u000e\u0010\u0000\u001a\u00020\u0001X\u0082\u0004\u00a2\u0006\u0002\n\u0000\u0082\u0002\u0007\n\u0005\u0008\u009920\u0001\u00a8\u0006\u0012"
     }
     d2 = {
         "EmptyIntList",
         "Landroidx/collection/IntList;",
+        "buildIntList",
+        "builderAction",
+        "Lkotlin/Function1;",
+        "Landroidx/collection/MutableIntList;",
+        "",
+        "Lkotlin/ExtensionFunctionType;",
+        "initialCapacity",
+        "",
         "emptyIntList",
         "intListOf",
         "element1",
-        "",
         "element2",
         "element3",
         "elements",
         "",
         "mutableIntListOf",
-        "Landroidx/collection/MutableIntList;",
         "collection"
     }
     k = 0x2
     mv = {
         0x1,
-        0x8,
+        0x9,
         0x0
     }
     xi = 0x30
@@ -45,7 +51,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 892
+    .line 879
     new-instance v0, Landroidx/collection/MutableIntList;
 
     const/4 v1, 0x0
@@ -59,10 +65,76 @@
     return-void
 .end method
 
+.method public static final buildIntList(ILkotlin/jvm/functions/Function1;)Landroidx/collection/IntList;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Lkotlin/jvm/functions/Function1<",
+            "-",
+            "Landroidx/collection/MutableIntList;",
+            "Lkotlin/Unit;",
+            ">;)",
+            "Landroidx/collection/IntList;"
+        }
+    .end annotation
+
+    const-string v0, "builderAction"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 966
+    new-instance v0, Landroidx/collection/MutableIntList;
+
+    invoke-direct {v0, p0}, Landroidx/collection/MutableIntList;-><init>(I)V
+
+    invoke-interface {p1, v0}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    check-cast v0, Landroidx/collection/IntList;
+
+    return-object v0
+.end method
+
+.method public static final buildIntList(Lkotlin/jvm/functions/Function1;)Landroidx/collection/IntList;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlin/jvm/functions/Function1<",
+            "-",
+            "Landroidx/collection/MutableIntList;",
+            "Lkotlin/Unit;",
+            ">;)",
+            "Landroidx/collection/IntList;"
+        }
+    .end annotation
+
+    const-string v0, "builderAction"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 949
+    new-instance v0, Landroidx/collection/MutableIntList;
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v3, v1, v2}, Landroidx/collection/MutableIntList;-><init>(IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    invoke-interface {p0, v0}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    check-cast v0, Landroidx/collection/IntList;
+
+    return-object v0
+.end method
+
 .method public static final emptyIntList()Landroidx/collection/IntList;
     .locals 1
 
-    .line 897
+    .line 882
     sget-object v0, Landroidx/collection/IntListKt;->EmptyIntList:Landroidx/collection/IntList;
 
     return-object v0
@@ -71,7 +143,7 @@
 .method public static final intListOf()Landroidx/collection/IntList;
     .locals 1
 
-    .line 902
+    .line 885
     sget-object v0, Landroidx/collection/IntListKt;->EmptyIntList:Landroidx/collection/IntList;
 
     return-object v0
@@ -80,7 +152,7 @@
 .method public static final intListOf(I)Landroidx/collection/IntList;
     .locals 0
 
-    .line 907
+    .line 888
     invoke-static {p0}, Landroidx/collection/IntListKt;->mutableIntListOf(I)Landroidx/collection/MutableIntList;
 
     move-result-object p0
@@ -93,7 +165,7 @@
 .method public static final intListOf(II)Landroidx/collection/IntList;
     .locals 0
 
-    .line 913
+    .line 891
     invoke-static {p0, p1}, Landroidx/collection/IntListKt;->mutableIntListOf(II)Landroidx/collection/MutableIntList;
 
     move-result-object p0
@@ -106,7 +178,7 @@
 .method public static final intListOf(III)Landroidx/collection/IntList;
     .locals 0
 
-    .line 920
+    .line 898
     invoke-static {p0, p1, p2}, Landroidx/collection/IntListKt;->mutableIntListOf(III)Landroidx/collection/MutableIntList;
 
     move-result-object p0
@@ -123,15 +195,19 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 926
+    .line 902
     new-instance v0, Landroidx/collection/MutableIntList;
 
     array-length v1, p0
 
     invoke-direct {v0, v1}, Landroidx/collection/MutableIntList;-><init>(I)V
 
-    invoke-virtual {v0, p0}, Landroidx/collection/MutableIntList;->plusAssign([I)V
+    .line 970
+    iget v1, v0, Landroidx/collection/MutableIntList;->_size:I
 
+    invoke-virtual {v0, v1, p0}, Landroidx/collection/MutableIntList;->addAll(I[I)Z
+
+    .line 902
     check-cast v0, Landroidx/collection/IntList;
 
     return-object v0
@@ -140,7 +216,7 @@
 .method public static final mutableIntListOf()Landroidx/collection/MutableIntList;
     .locals 4
 
-    .line 931
+    .line 905
     new-instance v0, Landroidx/collection/MutableIntList;
 
     const/4 v1, 0x1
@@ -157,14 +233,14 @@
 .method public static final mutableIntListOf(I)Landroidx/collection/MutableIntList;
     .locals 2
 
-    .line 937
+    .line 909
     new-instance v0, Landroidx/collection/MutableIntList;
 
     const/4 v1, 0x1
 
     invoke-direct {v0, v1}, Landroidx/collection/MutableIntList;-><init>(I)V
 
-    .line 971
+    .line 972
     invoke-virtual {v0, p0}, Landroidx/collection/MutableIntList;->add(I)Z
 
     return-object v0
@@ -173,17 +249,17 @@
 .method public static final mutableIntListOf(II)Landroidx/collection/MutableIntList;
     .locals 2
 
-    .line 946
+    .line 916
     new-instance v0, Landroidx/collection/MutableIntList;
 
     const/4 v1, 0x2
 
     invoke-direct {v0, v1}, Landroidx/collection/MutableIntList;-><init>(I)V
 
-    .line 973
+    .line 974
     invoke-virtual {v0, p0}, Landroidx/collection/MutableIntList;->add(I)Z
 
-    .line 975
+    .line 976
     invoke-virtual {v0, p1}, Landroidx/collection/MutableIntList;->add(I)Z
 
     return-object v0
@@ -192,20 +268,20 @@
 .method public static final mutableIntListOf(III)Landroidx/collection/MutableIntList;
     .locals 2
 
-    .line 957
+    .line 926
     new-instance v0, Landroidx/collection/MutableIntList;
 
     const/4 v1, 0x3
 
     invoke-direct {v0, v1}, Landroidx/collection/MutableIntList;-><init>(I)V
 
-    .line 977
+    .line 978
     invoke-virtual {v0, p0}, Landroidx/collection/MutableIntList;->add(I)Z
 
-    .line 979
+    .line 980
     invoke-virtual {v0, p1}, Landroidx/collection/MutableIntList;->add(I)Z
 
-    .line 981
+    .line 982
     invoke-virtual {v0, p2}, Landroidx/collection/MutableIntList;->add(I)Z
 
     return-object v0
@@ -218,14 +294,17 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 968
+    .line 935
     new-instance v0, Landroidx/collection/MutableIntList;
 
     array-length v1, p0
 
     invoke-direct {v0, v1}, Landroidx/collection/MutableIntList;-><init>(I)V
 
-    invoke-virtual {v0, p0}, Landroidx/collection/MutableIntList;->plusAssign([I)V
+    .line 984
+    iget v1, v0, Landroidx/collection/MutableIntList;->_size:I
+
+    invoke-virtual {v0, v1, p0}, Landroidx/collection/MutableIntList;->addAll(I[I)Z
 
     return-object v0
 .end method

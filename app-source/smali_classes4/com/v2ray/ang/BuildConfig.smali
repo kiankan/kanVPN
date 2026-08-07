@@ -14,9 +14,9 @@
 
 .field public static final FLAVOR:Ljava/lang/String; = "playstore"
 
-.field public static final VERSION_CODE:I = 0x3d0bc2
+.field public static final VERSION_CODE:I = 0x3d0be6
 
-.field public static final VERSION_NAME:Ljava/lang/String; = "2.0.6"
+.field public static final VERSION_NAME:Ljava/lang/String; = "2.3.2"
 
 
 # direct methods

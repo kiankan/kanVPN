@@ -24,9 +24,9 @@
     .line 0
     check-cast p1, Lkotlin/Pair;
 
-    invoke-static {p1}, Lcom/v2ray/ang/fmt/FmtBase;->$r8$lambda$SXE7uNkjAXhKC8kLtG0AsSjrln8(Lkotlin/Pair;)Ljava/lang/CharSequence;
+    invoke-static {p1}, Lcom/v2ray/ang/fmt/FmtBase;->toUri$lambda$0(Lkotlin/Pair;)Ljava/lang/CharSequence;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

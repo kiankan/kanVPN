@@ -29,7 +29,7 @@
     .line 69
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
+    .line 40
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -38,10 +38,10 @@
 
     const/4 v0, 0x0
 
-    .line 41
+    .line 42
     iput v0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mOutstandingImages:I
 
-    .line 43
+    .line 44
     iput-boolean v0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mIsClosed:Z
 
     .line 55
@@ -69,29 +69,29 @@
 
     if-eqz p1, :cond_0
 
-    .line 112
+    .line 109
     iget v0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mOutstandingImages:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mOutstandingImages:I
 
-    .line 113
+    .line 110
     new-instance v0, Landroidx/camera/core/SingleCloseImageProxy;
 
     invoke-direct {v0, p1}, Landroidx/camera/core/SingleCloseImageProxy;-><init>(Landroidx/camera/core/ImageProxy;)V
 
-    .line 115
-    iget-object p1, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mImageCloseListener:Landroidx/camera/core/ForwardingImageProxy$OnImageCloseListener;
+    .line 112
+    iget-object p0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mImageCloseListener:Landroidx/camera/core/ForwardingImageProxy$OnImageCloseListener;
 
-    invoke-virtual {v0, p1}, Landroidx/camera/core/SingleCloseImageProxy;->addOnImageCloseListener(Landroidx/camera/core/ForwardingImageProxy$OnImageCloseListener;)V
+    invoke-virtual {v0, p0}, Landroidx/camera/core/SingleCloseImageProxy;->addOnImageCloseListener(Landroidx/camera/core/ForwardingImageProxy$OnImageCloseListener;)V
 
     return-object v0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return-object p1
+    return-object p0
 .end method
 
 
@@ -99,12 +99,12 @@
 .method public acquireLatestImage()Landroidx/camera/core/ImageProxy;
     .locals 2
 
-    .line 77
+    .line 76
     iget-object v0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 78
+    .line 77
     :try_start_0
     iget-object v1, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mImageReaderProxy:Landroidx/camera/core/impl/ImageReaderProxy;
 
@@ -114,32 +114,32 @@
 
     invoke-direct {p0, v1}, Landroidx/camera/core/SafeCloseImageReaderProxy;->wrapImageProxy(Landroidx/camera/core/ImageProxy;)Landroidx/camera/core/ImageProxy;
 
-    move-result-object v1
+    move-result-object p0
 
     monitor-exit v0
 
-    return-object v1
+    return-object p0
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
-    .line 79
+    .line 78
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v1
+    throw p0
 .end method
 
 .method public acquireNextImage()Landroidx/camera/core/ImageProxy;
     .locals 2
 
-    .line 85
+    .line 83
     iget-object v0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 86
+    .line 84
     :try_start_0
     iget-object v1, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mImageReaderProxy:Landroidx/camera/core/impl/ImageReaderProxy;
 
@@ -149,99 +149,99 @@
 
     invoke-direct {p0, v1}, Landroidx/camera/core/SafeCloseImageReaderProxy;->wrapImageProxy(Landroidx/camera/core/ImageProxy;)Landroidx/camera/core/ImageProxy;
 
-    move-result-object v1
+    move-result-object p0
 
     monitor-exit v0
 
-    return-object v1
+    return-object p0
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
-    .line 87
+    .line 85
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v1
+    throw p0
 .end method
 
 .method public clearOnImageAvailableListener()V
-    .locals 2
+    .locals 1
 
-    .line 217
+    .line 213
     iget-object v0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 218
+    .line 214
     :try_start_0
-    iget-object v1, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mImageReaderProxy:Landroidx/camera/core/impl/ImageReaderProxy;
+    iget-object p0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mImageReaderProxy:Landroidx/camera/core/impl/ImageReaderProxy;
 
-    invoke-interface {v1}, Landroidx/camera/core/impl/ImageReaderProxy;->clearOnImageAvailableListener()V
+    invoke-interface {p0}, Landroidx/camera/core/impl/ImageReaderProxy;->clearOnImageAvailableListener()V
 
-    .line 219
+    .line 215
     monitor-exit v0
 
     return-void
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v1
+    throw p0
 .end method
 
 .method public close()V
     .locals 2
 
-    .line 100
+    .line 98
     iget-object v0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 101
+    .line 99
     :try_start_0
     iget-object v1, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mSurface:Landroid/view/Surface;
 
     if-eqz v1, :cond_0
 
-    .line 102
+    .line 100
     invoke-virtual {v1}, Landroid/view/Surface;->release()V
 
-    .line 104
+    .line 102
     :cond_0
-    iget-object v1, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mImageReaderProxy:Landroidx/camera/core/impl/ImageReaderProxy;
+    iget-object p0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mImageReaderProxy:Landroidx/camera/core/impl/ImageReaderProxy;
 
-    invoke-interface {v1}, Landroidx/camera/core/impl/ImageReaderProxy;->close()V
+    invoke-interface {p0}, Landroidx/camera/core/impl/ImageReaderProxy;->close()V
 
-    .line 105
+    .line 103
     monitor-exit v0
 
     return-void
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v1
+    throw p0
 .end method
 
 .method public getCapacity()I
-    .locals 3
+    .locals 2
 
-    .line 154
+    .line 151
     iget-object v0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 155
+    .line 152
     :try_start_0
     iget-object v1, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mImageReaderProxy:Landroidx/camera/core/impl/ImageReaderProxy;
 
@@ -249,232 +249,232 @@
 
     move-result v1
 
-    iget v2, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mOutstandingImages:I
+    iget p0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mOutstandingImages:I
 
-    sub-int/2addr v1, v2
+    sub-int/2addr v1, p0
 
     monitor-exit v0
 
     return v1
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
-    .line 156
+    .line 153
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v1
+    throw p0
 .end method
 
 .method public getHeight()I
-    .locals 2
+    .locals 1
 
-    .line 172
+    .line 169
     iget-object v0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 173
+    .line 170
     :try_start_0
-    iget-object v1, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mImageReaderProxy:Landroidx/camera/core/impl/ImageReaderProxy;
+    iget-object p0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mImageReaderProxy:Landroidx/camera/core/impl/ImageReaderProxy;
 
-    invoke-interface {v1}, Landroidx/camera/core/impl/ImageReaderProxy;->getHeight()I
+    invoke-interface {p0}, Landroidx/camera/core/impl/ImageReaderProxy;->getHeight()I
 
-    move-result v1
+    move-result p0
 
     monitor-exit v0
 
-    return v1
+    return p0
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
-    .line 174
+    .line 171
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v1
+    throw p0
 .end method
 
 .method public getImageFormat()I
-    .locals 2
+    .locals 1
 
-    .line 186
+    .line 183
     iget-object v0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 187
+    .line 184
     :try_start_0
-    iget-object v1, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mImageReaderProxy:Landroidx/camera/core/impl/ImageReaderProxy;
+    iget-object p0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mImageReaderProxy:Landroidx/camera/core/impl/ImageReaderProxy;
 
-    invoke-interface {v1}, Landroidx/camera/core/impl/ImageReaderProxy;->getImageFormat()I
+    invoke-interface {p0}, Landroidx/camera/core/impl/ImageReaderProxy;->getImageFormat()I
 
-    move-result v1
+    move-result p0
 
     monitor-exit v0
 
-    return v1
+    return p0
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
-    .line 188
+    .line 185
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v1
+    throw p0
 .end method
 
 .method public getImageReaderProxy()Landroidx/camera/core/impl/ImageReaderProxy;
-    .locals 2
+    .locals 1
 
-    .line 228
+    .line 223
     iget-object v0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 229
+    .line 224
     :try_start_0
-    iget-object v1, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mImageReaderProxy:Landroidx/camera/core/impl/ImageReaderProxy;
+    iget-object p0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mImageReaderProxy:Landroidx/camera/core/impl/ImageReaderProxy;
 
     monitor-exit v0
 
-    return-object v1
+    return-object p0
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
-    .line 230
+    .line 225
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v1
+    throw p0
 .end method
 
 .method public getMaxImages()I
-    .locals 2
+    .locals 1
 
-    .line 193
+    .line 190
     iget-object v0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 194
+    .line 191
     :try_start_0
-    iget-object v1, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mImageReaderProxy:Landroidx/camera/core/impl/ImageReaderProxy;
+    iget-object p0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mImageReaderProxy:Landroidx/camera/core/impl/ImageReaderProxy;
 
-    invoke-interface {v1}, Landroidx/camera/core/impl/ImageReaderProxy;->getMaxImages()I
+    invoke-interface {p0}, Landroidx/camera/core/impl/ImageReaderProxy;->getMaxImages()I
 
-    move-result v1
+    move-result p0
 
     monitor-exit v0
 
-    return v1
+    return p0
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
-    .line 195
+    .line 192
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v1
+    throw p0
 .end method
 
 .method public getSurface()Landroid/view/Surface;
-    .locals 2
+    .locals 1
 
-    .line 201
+    .line 197
     iget-object v0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 202
+    .line 198
     :try_start_0
-    iget-object v1, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mImageReaderProxy:Landroidx/camera/core/impl/ImageReaderProxy;
+    iget-object p0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mImageReaderProxy:Landroidx/camera/core/impl/ImageReaderProxy;
 
-    invoke-interface {v1}, Landroidx/camera/core/impl/ImageReaderProxy;->getSurface()Landroid/view/Surface;
+    invoke-interface {p0}, Landroidx/camera/core/impl/ImageReaderProxy;->getSurface()Landroid/view/Surface;
 
-    move-result-object v1
+    move-result-object p0
 
     monitor-exit v0
 
-    return-object v1
+    return-object p0
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
-    .line 203
+    .line 199
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v1
+    throw p0
 .end method
 
 .method public getWidth()I
-    .locals 2
+    .locals 1
 
-    .line 179
+    .line 176
     iget-object v0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 180
+    .line 177
     :try_start_0
-    iget-object v1, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mImageReaderProxy:Landroidx/camera/core/impl/ImageReaderProxy;
+    iget-object p0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mImageReaderProxy:Landroidx/camera/core/impl/ImageReaderProxy;
 
-    invoke-interface {v1}, Landroidx/camera/core/impl/ImageReaderProxy;->getWidth()I
+    invoke-interface {p0}, Landroidx/camera/core/impl/ImageReaderProxy;->getWidth()I
 
-    move-result v1
+    move-result p0
 
     monitor-exit v0
 
-    return v1
+    return p0
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
-    .line 181
+    .line 178
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v1
+    throw p0
 .end method
 
 .method public isClosed()Z
-    .locals 2
+    .locals 1
 
-    .line 145
+    .line 142
     iget-object v0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 146
+    .line 143
     :try_start_0
-    iget-boolean v1, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mIsClosed:Z
+    iget-boolean p0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mIsClosed:Z
 
     monitor-exit v0
 
-    return v1
+    return p0
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
-    .line 147
+    .line 144
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v1
+    throw p0
 .end method
 
 .method synthetic lambda$new$0$androidx-camera-core-SafeCloseImageReaderProxy(Landroidx/camera/core/ImageProxy;)V
@@ -505,23 +505,23 @@
 
     .line 62
     :cond_0
-    iget-object v1, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mForwardingImageCloseListener:Landroidx/camera/core/ForwardingImageProxy$OnImageCloseListener;
+    iget-object p0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mForwardingImageCloseListener:Landroidx/camera/core/ForwardingImageProxy$OnImageCloseListener;
 
     .line 63
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-eqz v1, :cond_1
+    if-eqz p0, :cond_1
 
     .line 65
-    invoke-interface {v1, p1}, Landroidx/camera/core/ForwardingImageProxy$OnImageCloseListener;->onImageClose(Landroidx/camera/core/ImageProxy;)V
+    invoke-interface {p0, p1}, Landroidx/camera/core/ForwardingImageProxy$OnImageCloseListener;->onImageClose(Landroidx/camera/core/ImageProxy;)V
 
     :cond_1
     return-void
 
     :catchall_0
-    move-exception p1
+    move-exception p0
 
     .line 63
     :try_start_1
@@ -529,13 +529,13 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw p1
+    throw p0
 .end method
 
 .method synthetic lambda$setOnImageAvailableListener$1$androidx-camera-core-SafeCloseImageReaderProxy(Landroidx/camera/core/impl/ImageReaderProxy$OnImageAvailableListener;Landroidx/camera/core/impl/ImageReaderProxy;)V
     .locals 0
 
-    .line 211
+    .line 207
     invoke-interface {p1, p0}, Landroidx/camera/core/impl/ImageReaderProxy$OnImageAvailableListener;->onImageAvailable(Landroidx/camera/core/impl/ImageReaderProxy;)V
 
     return-void
@@ -544,55 +544,55 @@
 .method public safeClose()V
     .locals 2
 
-    .line 130
+    .line 127
     iget-object v0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
     const/4 v1, 0x1
 
-    .line 131
+    .line 128
     :try_start_0
     iput-boolean v1, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mIsClosed:Z
 
-    .line 132
+    .line 129
     iget-object v1, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mImageReaderProxy:Landroidx/camera/core/impl/ImageReaderProxy;
 
     invoke-interface {v1}, Landroidx/camera/core/impl/ImageReaderProxy;->clearOnImageAvailableListener()V
 
-    .line 134
+    .line 131
     iget v1, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mOutstandingImages:I
 
     if-nez v1, :cond_0
 
-    .line 135
+    .line 132
     invoke-virtual {p0}, Landroidx/camera/core/SafeCloseImageReaderProxy;->close()V
 
-    .line 137
+    .line 134
     :cond_0
     monitor-exit v0
 
     return-void
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v1
+    throw p0
 .end method
 
 .method public setOnImageAvailableListener(Landroidx/camera/core/impl/ImageReaderProxy$OnImageAvailableListener;Ljava/util/concurrent/Executor;)V
     .locals 3
 
-    .line 209
+    .line 205
     iget-object v0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 210
+    .line 206
     :try_start_0
     iget-object v1, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mImageReaderProxy:Landroidx/camera/core/impl/ImageReaderProxy;
 
@@ -602,44 +602,44 @@
 
     invoke-interface {v1, v2, p2}, Landroidx/camera/core/impl/ImageReaderProxy;->setOnImageAvailableListener(Landroidx/camera/core/impl/ImageReaderProxy$OnImageAvailableListener;Ljava/util/concurrent/Executor;)V
 
-    .line 212
+    .line 208
     monitor-exit v0
 
     return-void
 
     :catchall_0
-    move-exception p1
+    move-exception p0
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p1
+    throw p0
 .end method
 
 .method public setOnImageCloseListener(Landroidx/camera/core/ForwardingImageProxy$OnImageCloseListener;)V
     .locals 1
 
-    .line 165
+    .line 162
     iget-object v0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 166
+    .line 163
     :try_start_0
     iput-object p1, p0, Landroidx/camera/core/SafeCloseImageReaderProxy;->mForwardingImageCloseListener:Landroidx/camera/core/ForwardingImageProxy$OnImageCloseListener;
 
-    .line 167
+    .line 164
     monitor-exit v0
 
     return-void
 
     :catchall_0
-    move-exception p1
+    move-exception p0
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p1
+    throw p0
 .end method

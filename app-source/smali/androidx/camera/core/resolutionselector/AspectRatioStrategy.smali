@@ -42,7 +42,7 @@
 
     sput-object v0, Landroidx/camera/core/resolutionselector/AspectRatioStrategy;->RATIO_4_3_FALLBACK_AUTO_STRATEGY:Landroidx/camera/core/resolutionselector/AspectRatioStrategy;
 
-    .line 96
+    .line 95
     new-instance v0, Landroidx/camera/core/resolutionselector/AspectRatioStrategy;
 
     invoke-direct {v0, v2, v2}, Landroidx/camera/core/resolutionselector/AspectRatioStrategy;-><init>(II)V
@@ -55,13 +55,13 @@
 .method public constructor <init>(II)V
     .locals 0
 
-    .line 126
+    .line 128
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 127
+    .line 129
     iput p1, p0, Landroidx/camera/core/resolutionselector/AspectRatioStrategy;->mPreferredAspectRatio:I
 
-    .line 128
+    .line 130
     iput p2, p0, Landroidx/camera/core/resolutionselector/AspectRatioStrategy;->mFallbackRule:I
 
     return-void
@@ -70,19 +70,19 @@
 
 # virtual methods
 .method public getFallbackRule()I
-    .locals 1
+    .locals 0
 
-    .line 145
-    iget v0, p0, Landroidx/camera/core/resolutionselector/AspectRatioStrategy;->mFallbackRule:I
+    .line 147
+    iget p0, p0, Landroidx/camera/core/resolutionselector/AspectRatioStrategy;->mFallbackRule:I
 
-    return v0
+    return p0
 .end method
 
 .method public getPreferredAspectRatio()I
-    .locals 1
+    .locals 0
 
-    .line 136
-    iget v0, p0, Landroidx/camera/core/resolutionselector/AspectRatioStrategy;->mPreferredAspectRatio:I
+    .line 138
+    iget p0, p0, Landroidx/camera/core/resolutionselector/AspectRatioStrategy;->mPreferredAspectRatio:I
 
-    return v0
+    return p0
 .end method

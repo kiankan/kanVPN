@@ -20,22 +20,22 @@
 .end method
 
 .method public getFormat()I
-    .locals 1
+    .locals 0
 
-    const/16 v0, 0x22
+    const/16 p0, 0x22
 
-    return v0
+    return p0
 .end method
 
 .method public getSensorToBufferTransform()Landroid/graphics/Matrix;
-    .locals 1
+    .locals 0
 
-    .line 189
-    new-instance v0, Landroid/graphics/Matrix;
+    .line 187
+    new-instance p0, Landroid/graphics/Matrix;
 
-    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
+    invoke-direct {p0}, Landroid/graphics/Matrix;-><init>()V
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public abstract getSize()Landroid/util/Size;

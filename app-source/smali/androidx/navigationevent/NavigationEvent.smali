@@ -298,7 +298,7 @@
 
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
-    .locals 6
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -368,11 +368,11 @@
     :cond_2
     iget-wide v2, p0, Landroidx/navigationevent/NavigationEvent;->frameTimeMillis:J
 
-    iget-wide v4, p1, Landroidx/navigationevent/NavigationEvent;->frameTimeMillis:J
+    iget-wide p0, p1, Landroidx/navigationevent/NavigationEvent;->frameTimeMillis:J
 
-    cmp-long p1, v2, v4
+    cmp-long p0, v2, p0
 
-    if-eqz p1, :cond_3
+    if-eqz p0, :cond_3
 
     return v1
 
@@ -394,39 +394,39 @@
 .end method
 
 .method public final getProgress()F
-    .locals 1
+    .locals 0
 
     .line 56
-    iget v0, p0, Landroidx/navigationevent/NavigationEvent;->progress:F
+    iget p0, p0, Landroidx/navigationevent/NavigationEvent;->progress:F
 
-    return v0
+    return p0
 .end method
 
 .method public final getSwipeEdge()I
-    .locals 1
+    .locals 0
 
     .line 47
-    iget v0, p0, Landroidx/navigationevent/NavigationEvent;->swipeEdge:I
+    iget p0, p0, Landroidx/navigationevent/NavigationEvent;->swipeEdge:I
 
-    return v0
+    return p0
 .end method
 
 .method public final getTouchX()F
-    .locals 1
+    .locals 0
 
     .line 64
-    iget v0, p0, Landroidx/navigationevent/NavigationEvent;->touchX:F
+    iget p0, p0, Landroidx/navigationevent/NavigationEvent;->touchX:F
 
-    return v0
+    return p0
 .end method
 
 .method public final getTouchY()F
-    .locals 1
+    .locals 0
 
     .line 70
-    iget v0, p0, Landroidx/navigationevent/NavigationEvent;->touchY:F
+    iget p0, p0, Landroidx/navigationevent/NavigationEvent;->touchY:F
 
-    return v0
+    return p0
 .end method
 
 .method public hashCode()I
@@ -479,9 +479,9 @@
 
     invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
 
-    move-result v1
+    move-result p0
 
-    add-int/2addr v0, v1
+    add-int/2addr v0, p0
 
     return v0
 .end method
@@ -538,13 +538,13 @@
     .line 103
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const/16 v1, 0x29
+    const/16 p0, 0x29
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

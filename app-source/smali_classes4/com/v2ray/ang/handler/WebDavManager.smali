@@ -10,7 +10,7 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000<\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0008\u00c6\u0002\u0018\u00002\u00020\u0001B\t\u0008\u0002\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J\u000e\u0010\u0008\u001a\u00020\t2\u0006\u0010\n\u001a\u00020\u0005J\u001e\u0010\u000b\u001a\u00020\u000c2\u0006\u0010\r\u001a\u00020\u000e2\u0006\u0010\u000f\u001a\u00020\u0010H\u0086@\u00a2\u0006\u0002\u0010\u0011J\u001e\u0010\u0012\u001a\u00020\u000c2\u0006\u0010\u000f\u001a\u00020\u00102\u0006\u0010\u0013\u001a\u00020\u000eH\u0086@\u00a2\u0006\u0002\u0010\u0014J\u0010\u0010\u0015\u001a\u00020\u00102\u0006\u0010\u000f\u001a\u00020\u0010H\u0002J\u0010\u0010\u0016\u001a\u00020\u00172\u0006\u0010\u0018\u001a\u00020\u0017H\u0002J\u0010\u0010\u0019\u001a\u00020\t2\u0006\u0010\u001a\u001a\u00020\u0010H\u0002R\u0010\u0010\u0004\u001a\u0004\u0018\u00010\u0005X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0006\u001a\u0004\u0018\u00010\u0007X\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u001b"
+        "\u0000B\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\u0008\u00c7\u0002\u0018\u00002\u00020\u0001B\t\u0008\u0002\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J\u000e\u0010\u0008\u001a\u00020\t2\u0006\u0010\n\u001a\u00020\u0005J\u001e\u0010\u000b\u001a\u00020\u000c2\u0006\u0010\r\u001a\u00020\u000e2\u0006\u0010\u000f\u001a\u00020\u0010H\u0086@\u00a2\u0006\u0002\u0010\u0011J\u001e\u0010\u0012\u001a\u00020\u000c2\u0006\u0010\u000f\u001a\u00020\u00102\u0006\u0010\u0013\u001a\u00020\u000eH\u0086@\u00a2\u0006\u0002\u0010\u0014J\u0010\u0010\u0015\u001a\u00020\u00102\u0006\u0010\u000f\u001a\u00020\u0010H\u0002J\u0010\u0010\u0016\u001a\u00020\u00172\u0006\u0010\u0018\u001a\u00020\u0017H\u0002J\u0010\u0010\u0019\u001a\u00020\t2\u0006\u0010\u001a\u001a\u00020\u0010H\u0002R\u0010\u0010\u0004\u001a\u0004\u0018\u00010\u0005X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0006\u001a\u0004\u0018\u00010\u0007X\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00ca\u0001\u000c\u0008\u001c\u0012\u0008\u0008\u001d\u0012\u0004\u0008\u0003\u0010\u0002\u00a8\u0006\u001b"
     }
     d2 = {
         "Lcom/v2ray/ang/handler/WebDavManager;",
@@ -18,7 +18,7 @@
         "<init>",
         "()V",
         "cfg",
-        "Lcom/v2ray/ang/dto/WebDavConfig;",
+        "Lcom/v2ray/ang/dto/entities/WebDavConfig;",
         "client",
         "Lokhttp3/OkHttpClient;",
         "init",
@@ -40,12 +40,14 @@
         "builder",
         "ensureRemoteDirs",
         "dirUrl",
-        "app_playstoreRelease"
+        "v2rayNG:app_playstoreRelease",
+        "Landroidx/compose/runtime/internal/StabilityInferred;",
+        "parameters"
     }
     k = 0x1
     mv = {
         0x2,
-        0x3,
+        0x4,
         0x0
     }
     xi = 0x30
@@ -53,9 +55,11 @@
 
 
 # static fields
+.field public static final $stable:I
+
 .field public static final INSTANCE:Lcom/v2ray/ang/handler/WebDavManager;
 
-.field private static cfg:Lcom/v2ray/ang/dto/WebDavConfig;
+.field private static cfg:Lcom/v2ray/ang/dto/entities/WebDavConfig;
 
 .field private static client:Lokhttp3/OkHttpClient;
 
@@ -123,71 +127,71 @@
 .end method
 
 .method private final applyAuth(Lokhttp3/Request$Builder;)Lokhttp3/Request$Builder;
-    .locals 4
+    .locals 3
 
     .line 143
-    sget-object v0, Lcom/v2ray/ang/handler/WebDavManager;->cfg:Lcom/v2ray/ang/dto/WebDavConfig;
+    sget-object p0, Lcom/v2ray/ang/handler/WebDavManager;->cfg:Lcom/v2ray/ang/dto/entities/WebDavConfig;
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
-    invoke-virtual {v0}, Lcom/v2ray/ang/dto/WebDavConfig;->getUsername()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/v2ray/ang/dto/entities/WebDavConfig;->getUsername()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
     goto :goto_0
 
     :cond_0
-    move-object v0, v1
+    move-object p0, v0
 
     .line 144
     :goto_0
-    sget-object v2, Lcom/v2ray/ang/handler/WebDavManager;->cfg:Lcom/v2ray/ang/dto/WebDavConfig;
+    sget-object v1, Lcom/v2ray/ang/handler/WebDavManager;->cfg:Lcom/v2ray/ang/dto/entities/WebDavConfig;
 
-    if-eqz v2, :cond_1
+    if-eqz v1, :cond_1
 
-    invoke-virtual {v2}, Lcom/v2ray/ang/dto/WebDavConfig;->getPassword()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/v2ray/ang/dto/entities/WebDavConfig;->getPassword()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
     goto :goto_1
 
     :cond_1
-    move-object v2, v1
+    move-object v1, v0
 
     .line 145
     :goto_1
-    move-object v3, v0
+    move-object v2, p0
 
-    check-cast v3, Ljava/lang/CharSequence;
+    check-cast v2, Ljava/lang/CharSequence;
 
-    if-eqz v3, :cond_4
+    if-eqz v2, :cond_4
 
-    invoke-interface {v3}, Ljava/lang/CharSequence;->length()I
+    invoke-interface {v2}, Ljava/lang/CharSequence;->length()I
 
-    move-result v3
+    move-result v2
 
-    if-nez v3, :cond_2
+    if-nez v2, :cond_2
 
     goto :goto_2
 
     :cond_2
-    if-nez v2, :cond_3
+    if-nez v1, :cond_3
 
     .line 146
-    const-string v2, ""
+    const-string v1, ""
 
     :cond_3
-    const/4 v3, 0x4
+    const/4 v2, 0x4
 
-    invoke-static {v0, v2, v1, v3, v1}, Lokhttp3/Credentials;->basic$default(Ljava/lang/String;Ljava/lang/String;Ljava/nio/charset/Charset;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0, v1, v0, v2, v0}, Lokhttp3/Credentials;->basic$default(Ljava/lang/String;Ljava/lang/String;Ljava/nio/charset/Charset;ILjava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    const-string v1, "Authorization"
+    const-string v0, "Authorization"
 
-    invoke-virtual {p1, v1, v0}, Lokhttp3/Request$Builder;->header(Ljava/lang/String;Ljava/lang/String;)Lokhttp3/Request$Builder;
+    invoke-virtual {p1, v0, p0}, Lokhttp3/Request$Builder;->header(Ljava/lang/String;Ljava/lang/String;)Lokhttp3/Request$Builder;
 
     :cond_4
     :goto_2
@@ -195,136 +199,136 @@
 .end method
 
 .method private final buildRemoteUrl(Ljava/lang/String;)Ljava/lang/String;
-    .locals 7
+    .locals 6
 
     .line 127
-    sget-object v0, Lcom/v2ray/ang/handler/WebDavManager;->cfg:Lcom/v2ray/ang/dto/WebDavConfig;
+    sget-object p0, Lcom/v2ray/ang/handler/WebDavManager;->cfg:Lcom/v2ray/ang/dto/entities/WebDavConfig;
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    const/16 v2, 0x2f
+    const/16 v1, 0x2f
 
-    const/4 v3, 0x1
+    const/4 v2, 0x1
 
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
-    invoke-virtual {v0}, Lcom/v2ray/ang/dto/WebDavConfig;->getBaseUrl()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/v2ray/ang/dto/entities/WebDavConfig;->getBaseUrl()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
-    new-array v4, v3, [C
+    new-array v3, v2, [C
 
-    aput-char v2, v4, v1
+    aput-char v1, v3, v0
 
-    invoke-static {v0, v4}, Lkotlin/text/StringsKt;->trimEnd(Ljava/lang/String;[C)Ljava/lang/String;
+    invoke-static {p0, v3}, Lkotlin/text/StringsKt;->trimEnd(Ljava/lang/String;[C)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    if-nez v0, :cond_1
+    if-nez p0, :cond_1
 
     :cond_0
-    const-string v0, ""
+    const-string p0, ""
 
     .line 129
     :cond_1
-    sget-object v4, Lcom/v2ray/ang/handler/WebDavManager;->cfg:Lcom/v2ray/ang/dto/WebDavConfig;
+    sget-object v3, Lcom/v2ray/ang/handler/WebDavManager;->cfg:Lcom/v2ray/ang/dto/entities/WebDavConfig;
 
-    const/4 v5, 0x0
+    const/4 v4, 0x0
 
-    if-eqz v4, :cond_2
+    if-eqz v3, :cond_2
 
-    invoke-virtual {v4}, Lcom/v2ray/ang/dto/WebDavConfig;->getRemoteBasePath()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/v2ray/ang/dto/entities/WebDavConfig;->getRemoteBasePath()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v3
 
-    if-eqz v4, :cond_2
+    if-eqz v3, :cond_2
 
-    new-array v6, v3, [C
+    new-array v5, v2, [C
 
-    aput-char v2, v6, v1
+    aput-char v1, v5, v0
 
-    invoke-static {v4, v6}, Lkotlin/text/StringsKt;->trim(Ljava/lang/String;[C)Ljava/lang/String;
+    invoke-static {v3, v5}, Lkotlin/text/StringsKt;->trim(Ljava/lang/String;[C)Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v3
 
-    if-eqz v4, :cond_2
+    if-eqz v3, :cond_2
 
-    move-object v6, v4
+    move-object v5, v3
 
-    check-cast v6, Ljava/lang/CharSequence;
+    check-cast v5, Ljava/lang/CharSequence;
 
-    invoke-interface {v6}, Ljava/lang/CharSequence;->length()I
+    invoke-interface {v5}, Ljava/lang/CharSequence;->length()I
 
-    move-result v6
+    move-result v5
 
-    if-lez v6, :cond_2
+    if-lez v5, :cond_2
 
-    move-object v5, v4
+    move-object v4, v3
 
     :cond_2
-    if-nez v5, :cond_3
+    if-nez v4, :cond_3
 
     .line 130
-    const-string v5, "backups"
+    const-string v4, "backups"
 
     .line 131
     :cond_3
-    new-array v3, v3, [C
+    new-array v2, v2, [C
 
-    aput-char v2, v3, v1
+    aput-char v1, v2, v0
 
-    invoke-static {p1, v3}, Lkotlin/text/StringsKt;->trimStart(Ljava/lang/String;[C)Ljava/lang/String;
+    invoke-static {p1, v2}, Lkotlin/text/StringsKt;->trimStart(Ljava/lang/String;[C)Ljava/lang/String;
 
     move-result-object p1
 
     .line 132
-    move-object v1, v5
+    move-object v0, v4
 
-    check-cast v1, Ljava/lang/CharSequence;
+    check-cast v0, Ljava/lang/CharSequence;
 
-    invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
 
-    move-result v1
+    move-result v0
 
-    const-string v2, "/"
+    const-string v1, "/"
 
-    if-nez v1, :cond_4
+    if-nez v0, :cond_4
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :goto_0
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     :cond_4
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 .end method
 
 .method private final ensureRemoteDirs(Ljava/lang/String;)V
-    .locals 11
+    .locals 12
 
     .line 159
     const-string v1, "/"
@@ -492,7 +496,7 @@
 
     move-result-object v0
 
-    const-string v6, "toString(...)"
+    const-string/jumbo v6, "toString(...)"
 
     invoke-static {v0, v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
     :try_end_0
@@ -568,31 +572,33 @@
     if-eq v9, v10, :cond_4
 
     .line 172
+    sget-object v9, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
+
     invoke-virtual {v7}, Lokhttp3/Response;->code()I
 
     move-result v7
 
-    new-instance v9, Ljava/lang/StringBuilder;
+    new-instance v10, Ljava/lang/StringBuilder;
 
-    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v10, "WebDAV MKCOL "
+    const-string v11, "WebDAV MKCOL "
 
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v10, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v0, " returned "
 
-    invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v10, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v10, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v9, v2, v0}, Lcom/v2ray/ang/util/LogUtil;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 174
     :cond_4
@@ -631,14 +637,16 @@
     :catch_1
     move-exception v0
 
-    move-object p1, v0
+    move-object p0, v0
 
     .line 180
+    sget-object p1, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
+
     const-string v0, "WebDAV ensureRemoteDirs error"
 
-    check-cast p1, Ljava/lang/Throwable;
+    check-cast p0, Ljava/lang/Throwable;
 
-    invoke-static {v2, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-virtual {p1, v2, v0, p0}, Lcom/v2ray/ang/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_5
     :goto_3
@@ -648,7 +656,7 @@
 
 # virtual methods
 .method public final downloadFile(Ljava/lang/String;Ljava/io/File;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 3
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -665,97 +673,97 @@
     .line 89
     invoke-static {}, Lkotlinx/coroutines/Dispatchers;->getIO()Lkotlinx/coroutines/CoroutineDispatcher;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Lkotlin/coroutines/CoroutineContext;
+    check-cast p0, Lkotlin/coroutines/CoroutineContext;
 
-    new-instance v1, Lcom/v2ray/ang/handler/WebDavManager$downloadFile$2;
+    new-instance v0, Lcom/v2ray/ang/handler/WebDavManager$downloadFile$2;
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    invoke-direct {v1, p1, p2, v2}, Lcom/v2ray/ang/handler/WebDavManager$downloadFile$2;-><init>(Ljava/lang/String;Ljava/io/File;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p1, p2, v1}, Lcom/v2ray/ang/handler/WebDavManager$downloadFile$2;-><init>(Ljava/lang/String;Ljava/io/File;Lkotlin/coroutines/Continuation;)V
 
-    check-cast v1, Lkotlin/jvm/functions/Function2;
+    check-cast v0, Lkotlin/jvm/functions/Function2;
 
-    invoke-static {v0, v1, p3}, Lkotlinx/coroutines/BuildersKt;->withContext(Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {p0, v0, p3}, Lkotlinx/coroutines/BuildersKt;->withContext(Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
-.method public final init(Lcom/v2ray/ang/dto/WebDavConfig;)V
-    .locals 4
+.method public final init(Lcom/v2ray/ang/dto/entities/WebDavConfig;)V
+    .locals 3
 
-    const-string v0, "config"
+    const-string p0, "config"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 28
-    sput-object p1, Lcom/v2ray/ang/handler/WebDavManager;->cfg:Lcom/v2ray/ang/dto/WebDavConfig;
+    sput-object p1, Lcom/v2ray/ang/handler/WebDavManager;->cfg:Lcom/v2ray/ang/dto/entities/WebDavConfig;
 
     .line 29
-    new-instance v0, Lokhttp3/OkHttpClient$Builder;
+    new-instance p0, Lokhttp3/OkHttpClient$Builder;
 
-    invoke-direct {v0}, Lokhttp3/OkHttpClient$Builder;-><init>()V
+    invoke-direct {p0}, Lokhttp3/OkHttpClient$Builder;-><init>()V
 
     .line 30
-    invoke-virtual {p1}, Lcom/v2ray/ang/dto/WebDavConfig;->getTimeoutSeconds()J
+    invoke-virtual {p1}, Lcom/v2ray/ang/dto/entities/WebDavConfig;->getTimeoutSeconds()J
 
-    move-result-wide v1
+    move-result-wide v0
 
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v0, v1, v2, v3}, Lokhttp3/OkHttpClient$Builder;->connectTimeout(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$Builder;
+    invoke-virtual {p0, v0, v1, v2}, Lokhttp3/OkHttpClient$Builder;->connectTimeout(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$Builder;
 
-    move-result-object v0
+    move-result-object p0
 
     .line 31
-    invoke-virtual {p1}, Lcom/v2ray/ang/dto/WebDavConfig;->getTimeoutSeconds()J
+    invoke-virtual {p1}, Lcom/v2ray/ang/dto/entities/WebDavConfig;->getTimeoutSeconds()J
 
-    move-result-wide v1
+    move-result-wide v0
 
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v0, v1, v2, v3}, Lokhttp3/OkHttpClient$Builder;->readTimeout(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$Builder;
+    invoke-virtual {p0, v0, v1, v2}, Lokhttp3/OkHttpClient$Builder;->readTimeout(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$Builder;
 
-    move-result-object v0
+    move-result-object p0
 
     .line 32
-    invoke-virtual {p1}, Lcom/v2ray/ang/dto/WebDavConfig;->getTimeoutSeconds()J
+    invoke-virtual {p1}, Lcom/v2ray/ang/dto/entities/WebDavConfig;->getTimeoutSeconds()J
 
-    move-result-wide v1
+    move-result-wide v0
 
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v0, v1, v2, v3}, Lokhttp3/OkHttpClient$Builder;->writeTimeout(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$Builder;
+    invoke-virtual {p0, v0, v1, v2}, Lokhttp3/OkHttpClient$Builder;->writeTimeout(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$Builder;
 
-    move-result-object v0
+    move-result-object p0
 
     .line 33
-    invoke-virtual {p1}, Lcom/v2ray/ang/dto/WebDavConfig;->getTimeoutSeconds()J
+    invoke-virtual {p1}, Lcom/v2ray/ang/dto/entities/WebDavConfig;->getTimeoutSeconds()J
 
-    move-result-wide v1
+    move-result-wide v0
 
     sget-object p1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v0, v1, v2, p1}, Lokhttp3/OkHttpClient$Builder;->callTimeout(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$Builder;
+    invoke-virtual {p0, v0, v1, p1}, Lokhttp3/OkHttpClient$Builder;->callTimeout(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$Builder;
 
-    move-result-object p1
+    move-result-object p0
 
     .line 34
-    invoke-virtual {p1}, Lokhttp3/OkHttpClient$Builder;->build()Lokhttp3/OkHttpClient;
+    invoke-virtual {p0}, Lokhttp3/OkHttpClient$Builder;->build()Lokhttp3/OkHttpClient;
 
-    move-result-object p1
+    move-result-object p0
 
     .line 29
-    sput-object p1, Lcom/v2ray/ang/handler/WebDavManager;->client:Lokhttp3/OkHttpClient;
+    sput-object p0, Lcom/v2ray/ang/handler/WebDavManager;->client:Lokhttp3/OkHttpClient;
 
     return-void
 .end method
 
 .method public final uploadFile(Ljava/io/File;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 3
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -772,21 +780,21 @@
     .line 46
     invoke-static {}, Lkotlinx/coroutines/Dispatchers;->getIO()Lkotlinx/coroutines/CoroutineDispatcher;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Lkotlin/coroutines/CoroutineContext;
+    check-cast p0, Lkotlin/coroutines/CoroutineContext;
 
-    new-instance v1, Lcom/v2ray/ang/handler/WebDavManager$uploadFile$2;
+    new-instance v0, Lcom/v2ray/ang/handler/WebDavManager$uploadFile$2;
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    invoke-direct {v1, p2, p1, v2}, Lcom/v2ray/ang/handler/WebDavManager$uploadFile$2;-><init>(Ljava/lang/String;Ljava/io/File;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p2, p1, v1}, Lcom/v2ray/ang/handler/WebDavManager$uploadFile$2;-><init>(Ljava/lang/String;Ljava/io/File;Lkotlin/coroutines/Continuation;)V
 
-    check-cast v1, Lkotlin/jvm/functions/Function2;
+    check-cast v0, Lkotlin/jvm/functions/Function2;
 
-    invoke-static {v0, v1, p3}, Lkotlinx/coroutines/BuildersKt;->withContext(Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {p0, v0, p3}, Lkotlinx/coroutines/BuildersKt;->withContext(Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

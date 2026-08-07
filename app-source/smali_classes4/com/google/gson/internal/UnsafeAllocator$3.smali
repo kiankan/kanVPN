@@ -33,7 +33,7 @@
 
 # virtual methods
 .method public newInstance(Ljava/lang/Class;)Ljava/lang/Object;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -54,19 +54,19 @@
     invoke-static {p1}, Lcom/google/gson/internal/UnsafeAllocator;->access$000(Ljava/lang/Class;)V
 
     .line 110
-    iget-object v0, p0, Lcom/google/gson/internal/UnsafeAllocator$3;->val$newInstance:Ljava/lang/reflect/Method;
+    iget-object p0, p0, Lcom/google/gson/internal/UnsafeAllocator$3;->val$newInstance:Ljava/lang/reflect/Method;
 
-    const-class v1, Ljava/lang/Object;
+    const-class v0, Ljava/lang/Object;
 
-    filled-new-array {p1, v1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    filled-new-array {p1, v0}, [Ljava/lang/Object;
 
     move-result-object p1
 
-    return-object p1
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
 .end method

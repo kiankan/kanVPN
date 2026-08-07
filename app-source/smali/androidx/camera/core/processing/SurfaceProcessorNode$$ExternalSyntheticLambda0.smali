@@ -33,16 +33,16 @@
 
 # virtual methods
 .method public final run()V
-    .locals 3
+    .locals 2
 
     .line 0
     iget-object v0, p0, Landroidx/camera/core/processing/SurfaceProcessorNode$$ExternalSyntheticLambda0;->f$0:Landroidx/camera/core/processing/SurfaceProcessorNode;
 
     iget-object v1, p0, Landroidx/camera/core/processing/SurfaceProcessorNode$$ExternalSyntheticLambda0;->f$1:Landroidx/camera/core/processing/SurfaceEdge;
 
-    iget-object v2, p0, Landroidx/camera/core/processing/SurfaceProcessorNode$$ExternalSyntheticLambda0;->f$2:Ljava/util/Map$Entry;
+    iget-object p0, p0, Landroidx/camera/core/processing/SurfaceProcessorNode$$ExternalSyntheticLambda0;->f$2:Ljava/util/Map$Entry;
 
-    invoke-virtual {v0, v1, v2}, Landroidx/camera/core/processing/SurfaceProcessorNode;->lambda$sendSurfaceOutputs$0$androidx-camera-core-processing-SurfaceProcessorNode(Landroidx/camera/core/processing/SurfaceEdge;Ljava/util/Map$Entry;)V
+    invoke-virtual {v0, v1, p0}, Landroidx/camera/core/processing/SurfaceProcessorNode;->lambda$sendSurfaceOutputs$0$androidx-camera-core-processing-SurfaceProcessorNode(Landroidx/camera/core/processing/SurfaceEdge;Ljava/util/Map$Entry;)V
 
     return-void
 .end method

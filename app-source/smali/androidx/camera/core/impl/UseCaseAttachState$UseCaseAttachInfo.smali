@@ -59,27 +59,27 @@
         }
     .end annotation
 
-    .line 306
+    .line 297
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 295
+    .line 286
     iput-boolean v0, p0, Landroidx/camera/core/impl/UseCaseAttachState$UseCaseAttachInfo;->mAttached:Z
 
-    .line 301
+    .line 292
     iput-boolean v0, p0, Landroidx/camera/core/impl/UseCaseAttachState$UseCaseAttachInfo;->mActive:Z
 
-    .line 307
+    .line 298
     iput-object p1, p0, Landroidx/camera/core/impl/UseCaseAttachState$UseCaseAttachInfo;->mSessionConfig:Landroidx/camera/core/impl/SessionConfig;
 
-    .line 308
+    .line 299
     iput-object p2, p0, Landroidx/camera/core/impl/UseCaseAttachState$UseCaseAttachInfo;->mUseCaseConfig:Landroidx/camera/core/impl/UseCaseConfig;
 
-    .line 309
+    .line 300
     iput-object p3, p0, Landroidx/camera/core/impl/UseCaseAttachState$UseCaseAttachInfo;->mStreamSpec:Landroidx/camera/core/impl/StreamSpec;
 
-    .line 310
+    .line 301
     iput-object p4, p0, Landroidx/camera/core/impl/UseCaseAttachState$UseCaseAttachInfo;->mCaptureTypes:Ljava/util/List;
 
     return-void
@@ -88,25 +88,25 @@
 
 # virtual methods
 .method getActive()Z
-    .locals 1
+    .locals 0
 
-    .line 342
-    iget-boolean v0, p0, Landroidx/camera/core/impl/UseCaseAttachState$UseCaseAttachInfo;->mActive:Z
+    .line 329
+    iget-boolean p0, p0, Landroidx/camera/core/impl/UseCaseAttachState$UseCaseAttachInfo;->mActive:Z
 
-    return v0
+    return p0
 .end method
 
 .method getAttached()Z
-    .locals 1
+    .locals 0
 
-    .line 334
-    iget-boolean v0, p0, Landroidx/camera/core/impl/UseCaseAttachState$UseCaseAttachInfo;->mAttached:Z
+    .line 321
+    iget-boolean p0, p0, Landroidx/camera/core/impl/UseCaseAttachState$UseCaseAttachInfo;->mAttached:Z
 
-    return v0
+    return p0
 .end method
 
 .method public getCaptureTypes()Ljava/util/List;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -116,32 +116,32 @@
         }
     .end annotation
 
-    .line 330
-    iget-object v0, p0, Landroidx/camera/core/impl/UseCaseAttachState$UseCaseAttachInfo;->mCaptureTypes:Ljava/util/List;
+    .line 317
+    iget-object p0, p0, Landroidx/camera/core/impl/UseCaseAttachState$UseCaseAttachInfo;->mCaptureTypes:Ljava/util/List;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getSessionConfig()Landroidx/camera/core/impl/SessionConfig;
-    .locals 1
+    .locals 0
 
-    .line 320
-    iget-object v0, p0, Landroidx/camera/core/impl/UseCaseAttachState$UseCaseAttachInfo;->mSessionConfig:Landroidx/camera/core/impl/SessionConfig;
+    .line 309
+    iget-object p0, p0, Landroidx/camera/core/impl/UseCaseAttachState$UseCaseAttachInfo;->mSessionConfig:Landroidx/camera/core/impl/SessionConfig;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getStreamSpec()Landroidx/camera/core/impl/StreamSpec;
-    .locals 1
+    .locals 0
 
-    .line 325
-    iget-object v0, p0, Landroidx/camera/core/impl/UseCaseAttachState$UseCaseAttachInfo;->mStreamSpec:Landroidx/camera/core/impl/StreamSpec;
+    .line 313
+    iget-object p0, p0, Landroidx/camera/core/impl/UseCaseAttachState$UseCaseAttachInfo;->mStreamSpec:Landroidx/camera/core/impl/StreamSpec;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getUseCaseConfig()Landroidx/camera/core/impl/UseCaseConfig;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -150,16 +150,16 @@
         }
     .end annotation
 
-    .line 315
-    iget-object v0, p0, Landroidx/camera/core/impl/UseCaseAttachState$UseCaseAttachInfo;->mUseCaseConfig:Landroidx/camera/core/impl/UseCaseConfig;
+    .line 305
+    iget-object p0, p0, Landroidx/camera/core/impl/UseCaseAttachState$UseCaseAttachInfo;->mUseCaseConfig:Landroidx/camera/core/impl/UseCaseConfig;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method setActive(Z)V
     .locals 0
 
-    .line 346
+    .line 333
     iput-boolean p1, p0, Landroidx/camera/core/impl/UseCaseAttachState$UseCaseAttachInfo;->mActive:Z
 
     return-void
@@ -168,7 +168,7 @@
 .method setAttached(Z)V
     .locals 0
 
-    .line 338
+    .line 325
     iput-boolean p1, p0, Landroidx/camera/core/impl/UseCaseAttachState$UseCaseAttachInfo;->mAttached:Z
 
     return-void
@@ -177,7 +177,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 353
+    .line 339
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "UseCaseAttachInfo{mSessionConfig="
@@ -224,17 +224,17 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Landroidx/camera/core/impl/UseCaseAttachState$UseCaseAttachInfo;->mActive:Z
+    iget-boolean p0, p0, Landroidx/camera/core/impl/UseCaseAttachState$UseCaseAttachInfo;->mActive:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const/16 v1, 0x7d
+    const/16 p0, 0x7d
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

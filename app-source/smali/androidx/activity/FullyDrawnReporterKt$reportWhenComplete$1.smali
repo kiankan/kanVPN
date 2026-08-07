@@ -14,14 +14,14 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nFullyDrawnReporter.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FullyDrawnReporter.kt\nandroidx/activity/FullyDrawnReporterKt$reportWhenComplete$1\n*L\n1#1,178:1\n*E\n"
+    value = "SMAP\nFullyDrawnReporter.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FullyDrawnReporter.kt\nandroidx/activity/FullyDrawnReporterKt$reportWhenComplete$1\n*L\n1#1,181:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
     k = 0x3
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0xb0
@@ -34,7 +34,7 @@
         0x0
     }
     l = {
-        0xad
+        0xb0
     }
     m = "reportWhenComplete"
     n = {
@@ -90,13 +90,11 @@
 
     const/4 p1, 0x0
 
-    move-object v0, p0
+    check-cast p0, Lkotlin/coroutines/Continuation;
 
-    check-cast v0, Lkotlin/coroutines/Continuation;
+    invoke-static {p1, p1, p0}, Landroidx/activity/FullyDrawnReporterKt;->reportWhenComplete(Landroidx/activity/FullyDrawnReporter;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-static {p1, p1, v0}, Landroidx/activity/FullyDrawnReporterKt;->reportWhenComplete(Landroidx/activity/FullyDrawnReporter;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-result-object p0
 
-    move-result-object p1
-
-    return-object p1
+    return-object p0
 .end method

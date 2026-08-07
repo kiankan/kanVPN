@@ -25,12 +25,12 @@
 
 # virtual methods
 .method public final analyze(Landroidx/camera/core/ImageProxy;)V
-    .locals 1
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Landroidx/camera/core/ImageAnalysis$$ExternalSyntheticLambda4;->f$0:Landroidx/camera/core/ImageAnalysis$Analyzer;
+    iget-object p0, p0, Landroidx/camera/core/ImageAnalysis$$ExternalSyntheticLambda4;->f$0:Landroidx/camera/core/ImageAnalysis$Analyzer;
 
-    invoke-static {v0, p1}, Landroidx/camera/core/ImageAnalysis;->lambda$setAnalyzer$3(Landroidx/camera/core/ImageAnalysis$Analyzer;Landroidx/camera/core/ImageProxy;)V
+    invoke-static {p0, p1}, Landroidx/camera/core/ImageAnalysis;->lambda$setAnalyzer$3(Landroidx/camera/core/ImageAnalysis$Analyzer;Landroidx/camera/core/ImageProxy;)V
 
     return-void
 .end method

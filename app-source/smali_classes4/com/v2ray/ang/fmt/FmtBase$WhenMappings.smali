@@ -17,7 +17,7 @@
     k = 0x3
     mv = {
         0x2,
-        0x3,
+        0x4,
         0x0
     }
     xi = 0x30
@@ -32,7 +32,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    invoke-static {}, Lcom/v2ray/ang/dto/NetworkType;->values()[Lcom/v2ray/ang/dto/NetworkType;
+    invoke-static {}, Lcom/v2ray/ang/enums/NetworkType;->values()[Lcom/v2ray/ang/enums/NetworkType;
 
     move-result-object v0
 
@@ -41,9 +41,9 @@
     new-array v0, v0, [I
 
     :try_start_0
-    sget-object v1, Lcom/v2ray/ang/dto/NetworkType;->TCP:Lcom/v2ray/ang/dto/NetworkType;
+    sget-object v1, Lcom/v2ray/ang/enums/NetworkType;->TCP:Lcom/v2ray/ang/enums/NetworkType;
 
-    invoke-virtual {v1}, Lcom/v2ray/ang/dto/NetworkType;->ordinal()I
+    invoke-virtual {v1}, Lcom/v2ray/ang/enums/NetworkType;->ordinal()I
 
     move-result v1
 
@@ -55,9 +55,9 @@
 
     :catch_0
     :try_start_1
-    sget-object v1, Lcom/v2ray/ang/dto/NetworkType;->KCP:Lcom/v2ray/ang/dto/NetworkType;
+    sget-object v1, Lcom/v2ray/ang/enums/NetworkType;->KCP:Lcom/v2ray/ang/enums/NetworkType;
 
-    invoke-virtual {v1}, Lcom/v2ray/ang/dto/NetworkType;->ordinal()I
+    invoke-virtual {v1}, Lcom/v2ray/ang/enums/NetworkType;->ordinal()I
 
     move-result v1
 
@@ -69,9 +69,9 @@
 
     :catch_1
     :try_start_2
-    sget-object v1, Lcom/v2ray/ang/dto/NetworkType;->WS:Lcom/v2ray/ang/dto/NetworkType;
+    sget-object v1, Lcom/v2ray/ang/enums/NetworkType;->WS:Lcom/v2ray/ang/enums/NetworkType;
 
-    invoke-virtual {v1}, Lcom/v2ray/ang/dto/NetworkType;->ordinal()I
+    invoke-virtual {v1}, Lcom/v2ray/ang/enums/NetworkType;->ordinal()I
 
     move-result v1
 
@@ -83,9 +83,9 @@
 
     :catch_2
     :try_start_3
-    sget-object v1, Lcom/v2ray/ang/dto/NetworkType;->HTTP_UPGRADE:Lcom/v2ray/ang/dto/NetworkType;
+    sget-object v1, Lcom/v2ray/ang/enums/NetworkType;->HTTP_UPGRADE:Lcom/v2ray/ang/enums/NetworkType;
 
-    invoke-virtual {v1}, Lcom/v2ray/ang/dto/NetworkType;->ordinal()I
+    invoke-virtual {v1}, Lcom/v2ray/ang/enums/NetworkType;->ordinal()I
 
     move-result v1
 
@@ -97,9 +97,9 @@
 
     :catch_3
     :try_start_4
-    sget-object v1, Lcom/v2ray/ang/dto/NetworkType;->XHTTP:Lcom/v2ray/ang/dto/NetworkType;
+    sget-object v1, Lcom/v2ray/ang/enums/NetworkType;->XHTTP:Lcom/v2ray/ang/enums/NetworkType;
 
-    invoke-virtual {v1}, Lcom/v2ray/ang/dto/NetworkType;->ordinal()I
+    invoke-virtual {v1}, Lcom/v2ray/ang/enums/NetworkType;->ordinal()I
 
     move-result v1
 
@@ -111,9 +111,9 @@
 
     :catch_4
     :try_start_5
-    sget-object v1, Lcom/v2ray/ang/dto/NetworkType;->HTTP:Lcom/v2ray/ang/dto/NetworkType;
+    sget-object v1, Lcom/v2ray/ang/enums/NetworkType;->HTTP:Lcom/v2ray/ang/enums/NetworkType;
 
-    invoke-virtual {v1}, Lcom/v2ray/ang/dto/NetworkType;->ordinal()I
+    invoke-virtual {v1}, Lcom/v2ray/ang/enums/NetworkType;->ordinal()I
 
     move-result v1
 
@@ -125,9 +125,9 @@
 
     :catch_5
     :try_start_6
-    sget-object v1, Lcom/v2ray/ang/dto/NetworkType;->H2:Lcom/v2ray/ang/dto/NetworkType;
+    sget-object v1, Lcom/v2ray/ang/enums/NetworkType;->H2:Lcom/v2ray/ang/enums/NetworkType;
 
-    invoke-virtual {v1}, Lcom/v2ray/ang/dto/NetworkType;->ordinal()I
+    invoke-virtual {v1}, Lcom/v2ray/ang/enums/NetworkType;->ordinal()I
 
     move-result v1
 
@@ -139,9 +139,9 @@
 
     :catch_6
     :try_start_7
-    sget-object v1, Lcom/v2ray/ang/dto/NetworkType;->GRPC:Lcom/v2ray/ang/dto/NetworkType;
+    sget-object v1, Lcom/v2ray/ang/enums/NetworkType;->GRPC:Lcom/v2ray/ang/enums/NetworkType;
 
-    invoke-virtual {v1}, Lcom/v2ray/ang/dto/NetworkType;->ordinal()I
+    invoke-virtual {v1}, Lcom/v2ray/ang/enums/NetworkType;->ordinal()I
 
     move-result v1
 

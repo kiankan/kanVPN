@@ -471,40 +471,40 @@
 
     if-ne v0, v2, :cond_1
 
-    iget-byte v0, p0, Lcom/google/zxing/qrcode/decoder/FormatInformation;->dataMask:B
+    iget-byte p0, p0, Lcom/google/zxing/qrcode/decoder/FormatInformation;->dataMask:B
 
     iget-byte p1, p1, Lcom/google/zxing/qrcode/decoder/FormatInformation;->dataMask:B
 
-    if-ne v0, p1, :cond_1
+    if-ne p0, p1, :cond_1
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_1
     return v1
 .end method
 
 .method getDataMask()B
-    .locals 1
+    .locals 0
 
     .line 139
-    iget-byte v0, p0, Lcom/google/zxing/qrcode/decoder/FormatInformation;->dataMask:B
+    iget-byte p0, p0, Lcom/google/zxing/qrcode/decoder/FormatInformation;->dataMask:B
 
-    return v0
+    return p0
 .end method
 
 .method getErrorCorrectionLevel()Lcom/google/zxing/qrcode/decoder/ErrorCorrectionLevel;
-    .locals 1
+    .locals 0
 
     .line 135
-    iget-object v0, p0, Lcom/google/zxing/qrcode/decoder/FormatInformation;->errorCorrectionLevel:Lcom/google/zxing/qrcode/decoder/ErrorCorrectionLevel;
+    iget-object p0, p0, Lcom/google/zxing/qrcode/decoder/FormatInformation;->errorCorrectionLevel:Lcom/google/zxing/qrcode/decoder/ErrorCorrectionLevel;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public hashCode()I
-    .locals 2
+    .locals 1
 
     .line 144
     iget-object v0, p0, Lcom/google/zxing/qrcode/decoder/FormatInformation;->errorCorrectionLevel:Lcom/google/zxing/qrcode/decoder/ErrorCorrectionLevel;
@@ -515,9 +515,9 @@
 
     shl-int/lit8 v0, v0, 0x3
 
-    iget-byte v1, p0, Lcom/google/zxing/qrcode/decoder/FormatInformation;->dataMask:B
+    iget-byte p0, p0, Lcom/google/zxing/qrcode/decoder/FormatInformation;->dataMask:B
 
-    or-int/2addr v0, v1
+    or-int/2addr p0, v0
 
-    return v0
+    return p0
 .end method

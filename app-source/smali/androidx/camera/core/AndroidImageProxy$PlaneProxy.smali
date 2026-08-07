@@ -37,40 +37,40 @@
 
 # virtual methods
 .method public getBuffer()Ljava/nio/ByteBuffer;
-    .locals 1
+    .locals 0
 
-    .line 120
-    iget-object v0, p0, Landroidx/camera/core/AndroidImageProxy$PlaneProxy;->mPlane:Landroid/media/Image$Plane;
+    .line 119
+    iget-object p0, p0, Landroidx/camera/core/AndroidImageProxy$PlaneProxy;->mPlane:Landroid/media/Image$Plane;
 
-    invoke-virtual {v0}, Landroid/media/Image$Plane;->getBuffer()Ljava/nio/ByteBuffer;
+    invoke-virtual {p0}, Landroid/media/Image$Plane;->getBuffer()Ljava/nio/ByteBuffer;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getPixelStride()I
-    .locals 1
+    .locals 0
 
     .line 114
-    iget-object v0, p0, Landroidx/camera/core/AndroidImageProxy$PlaneProxy;->mPlane:Landroid/media/Image$Plane;
+    iget-object p0, p0, Landroidx/camera/core/AndroidImageProxy$PlaneProxy;->mPlane:Landroid/media/Image$Plane;
 
-    invoke-virtual {v0}, Landroid/media/Image$Plane;->getPixelStride()I
+    invoke-virtual {p0}, Landroid/media/Image$Plane;->getPixelStride()I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public getRowStride()I
-    .locals 1
+    .locals 0
 
     .line 109
-    iget-object v0, p0, Landroidx/camera/core/AndroidImageProxy$PlaneProxy;->mPlane:Landroid/media/Image$Plane;
+    iget-object p0, p0, Landroidx/camera/core/AndroidImageProxy$PlaneProxy;->mPlane:Landroid/media/Image$Plane;
 
-    invoke-virtual {v0}, Landroid/media/Image$Plane;->getRowStride()I
+    invoke-virtual {p0}, Landroid/media/Image$Plane;->getRowStride()I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method

@@ -17,7 +17,7 @@
 .method public static hasConflict(Landroidx/camera/core/impl/Config$OptionPriority;Landroidx/camera/core/impl/Config$OptionPriority;)Z
     .locals 1
 
-    .line 296
+    .line 288
     sget-object v0, Landroidx/camera/core/impl/Config$OptionPriority;->REQUIRED:Landroidx/camera/core/impl/Config$OptionPriority;
 
     if-ne p0, v0, :cond_0
@@ -43,7 +43,7 @@
 
     if-nez p1, :cond_0
 
-    .line 311
+    .line 303
     invoke-static {}, Landroidx/camera/core/impl/OptionsBundle;->emptyBundle()Landroidx/camera/core/impl/OptionsBundle;
 
     move-result-object p0
@@ -53,14 +53,14 @@
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 317
+    .line 309
     invoke-static {p1}, Landroidx/camera/core/impl/MutableOptionsBundle;->from(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/MutableOptionsBundle;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 319
+    .line 311
     :cond_1
     invoke-static {}, Landroidx/camera/core/impl/MutableOptionsBundle;->create()Landroidx/camera/core/impl/MutableOptionsBundle;
 
@@ -69,7 +69,7 @@
     :goto_0
     if-eqz p0, :cond_2
 
-    .line 325
+    .line 317
     invoke-interface {p0}, Landroidx/camera/core/impl/Config;->listOptions()Ljava/util/Set;
 
     move-result-object v1
@@ -91,12 +91,12 @@
 
     check-cast v2, Landroidx/camera/core/impl/Config$Option;
 
-    .line 326
+    .line 318
     invoke-static {v0, p1, p0, v2}, Landroidx/camera/core/impl/Config;->mergeOptionValue(Landroidx/camera/core/impl/MutableOptionsBundle;Landroidx/camera/core/impl/Config;Landroidx/camera/core/impl/Config;Landroidx/camera/core/impl/Config$Option;)V
 
     goto :goto_1
 
-    .line 330
+    .line 322
     :cond_2
     invoke-static {v0}, Landroidx/camera/core/impl/OptionsBundle;->from(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/OptionsBundle;
 
@@ -118,7 +118,7 @@
         }
     .end annotation
 
-    .line 351
+    .line 343
     sget-object v0, Landroidx/camera/core/impl/ImageOutputConfig;->OPTION_RESOLUTION_SELECTOR:Landroidx/camera/core/impl/Config$Option;
 
     invoke-static {p3, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -129,47 +129,47 @@
 
     const/4 v0, 0x0
 
-    .line 353
+    .line 345
     invoke-interface {p2, p3, v0}, Landroidx/camera/core/impl/Config;->retrieveOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroidx/camera/core/resolutionselector/ResolutionSelector;
 
-    .line 355
+    .line 347
     invoke-interface {p1, p3, v0}, Landroidx/camera/core/impl/Config;->retrieveOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Landroidx/camera/core/resolutionselector/ResolutionSelector;
 
-    .line 357
+    .line 349
     invoke-interface {p2, p3}, Landroidx/camera/core/impl/Config;->getOptionPriority(Landroidx/camera/core/impl/Config$Option;)Landroidx/camera/core/impl/Config$OptionPriority;
 
     move-result-object p2
 
-    .line 358
+    .line 350
     invoke-static {p1, v1}, Landroidx/camera/core/impl/utils/ResolutionSelectorUtil;->overrideResolutionSelectors(Landroidx/camera/core/resolutionselector/ResolutionSelector;Landroidx/camera/core/resolutionselector/ResolutionSelector;)Landroidx/camera/core/resolutionselector/ResolutionSelector;
 
     move-result-object p1
 
-    .line 356
+    .line 348
     invoke-virtual {p0, p3, p2, p1}, Landroidx/camera/core/impl/MutableOptionsBundle;->insertOption(Landroidx/camera/core/impl/Config$Option;Landroidx/camera/core/impl/Config$OptionPriority;Ljava/lang/Object;)V
 
     return-void
 
-    .line 362
+    .line 354
     :cond_0
     invoke-interface {p2, p3}, Landroidx/camera/core/impl/Config;->getOptionPriority(Landroidx/camera/core/impl/Config$Option;)Landroidx/camera/core/impl/Config$OptionPriority;
 
     move-result-object p1
 
-    .line 363
+    .line 355
     invoke-interface {p2, p3}, Landroidx/camera/core/impl/Config;->retrieveOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
 
     move-result-object p2
 
-    .line 361
+    .line 353
     invoke-virtual {p0, p3, p1, p2}, Landroidx/camera/core/impl/MutableOptionsBundle;->insertOption(Landroidx/camera/core/impl/Config$Option;Landroidx/camera/core/impl/Config$OptionPriority;Ljava/lang/Object;)V
 
     return-void

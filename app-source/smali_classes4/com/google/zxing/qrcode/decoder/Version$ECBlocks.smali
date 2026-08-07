@@ -39,66 +39,66 @@
 
 # virtual methods
 .method public getECBlocks()[Lcom/google/zxing/qrcode/decoder/Version$ECB;
-    .locals 1
+    .locals 0
 
     .line 209
-    iget-object v0, p0, Lcom/google/zxing/qrcode/decoder/Version$ECBlocks;->ecBlocks:[Lcom/google/zxing/qrcode/decoder/Version$ECB;
+    iget-object p0, p0, Lcom/google/zxing/qrcode/decoder/Version$ECBlocks;->ecBlocks:[Lcom/google/zxing/qrcode/decoder/Version$ECB;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getECCodewordsPerBlock()I
-    .locals 1
+    .locals 0
 
     .line 193
-    iget v0, p0, Lcom/google/zxing/qrcode/decoder/Version$ECBlocks;->ecCodewordsPerBlock:I
+    iget p0, p0, Lcom/google/zxing/qrcode/decoder/Version$ECBlocks;->ecCodewordsPerBlock:I
 
-    return v0
+    return p0
 .end method
 
 .method public getNumBlocks()I
-    .locals 5
+    .locals 4
 
     .line 198
-    iget-object v0, p0, Lcom/google/zxing/qrcode/decoder/Version$ECBlocks;->ecBlocks:[Lcom/google/zxing/qrcode/decoder/Version$ECB;
+    iget-object p0, p0, Lcom/google/zxing/qrcode/decoder/Version$ECBlocks;->ecBlocks:[Lcom/google/zxing/qrcode/decoder/Version$ECB;
 
-    array-length v1, v0
+    array-length v0, p0
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    move v3, v2
+    move v2, v1
 
     :goto_0
-    if-ge v2, v1, :cond_0
+    if-ge v1, v0, :cond_0
 
-    aget-object v4, v0, v2
+    aget-object v3, p0, v1
 
     .line 199
-    invoke-virtual {v4}, Lcom/google/zxing/qrcode/decoder/Version$ECB;->getCount()I
+    invoke-virtual {v3}, Lcom/google/zxing/qrcode/decoder/Version$ECB;->getCount()I
 
-    move-result v4
+    move-result v3
 
-    add-int/2addr v3, v4
+    add-int/2addr v2, v3
 
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
     :cond_0
-    return v3
+    return v2
 .end method
 
 .method public getTotalECCodewords()I
-    .locals 2
+    .locals 1
 
     .line 205
     iget v0, p0, Lcom/google/zxing/qrcode/decoder/Version$ECBlocks;->ecCodewordsPerBlock:I
 
     invoke-virtual {p0}, Lcom/google/zxing/qrcode/decoder/Version$ECBlocks;->getNumBlocks()I
 
-    move-result v1
+    move-result p0
 
-    mul-int/2addr v0, v1
+    mul-int/2addr v0, p0
 
     return v0
 .end method

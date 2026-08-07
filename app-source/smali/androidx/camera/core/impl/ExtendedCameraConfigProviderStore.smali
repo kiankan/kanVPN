@@ -22,14 +22,14 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 31
+    .line 32
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Landroidx/camera/core/impl/ExtendedCameraConfigProviderStore;->LOCK:Ljava/lang/Object;
 
-    .line 34
+    .line 35
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -42,7 +42,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 37
+    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -51,18 +51,18 @@
 .method public static addConfig(Ljava/lang/Object;Landroidx/camera/core/impl/CameraConfigProvider;)V
     .locals 2
 
-    .line 44
+    .line 45
     sget-object v0, Landroidx/camera/core/impl/ExtendedCameraConfigProviderStore;->LOCK:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 45
+    .line 46
     :try_start_0
     sget-object v1, Landroidx/camera/core/impl/ExtendedCameraConfigProviderStore;->CAMERA_CONFIG_PROVIDERS:Ljava/util/Map;
 
     invoke-interface {v1, p0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 46
+    .line 47
     monitor-exit v0
 
     return-void

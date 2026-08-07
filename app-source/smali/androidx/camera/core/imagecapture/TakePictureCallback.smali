@@ -1,4 +1,4 @@
-.class interface abstract Landroidx/camera/core/imagecapture/TakePictureCallback;
+.class public interface abstract Landroidx/camera/core/imagecapture/TakePictureCallback;
 .super Ljava/lang/Object;
 .source "TakePictureCallback.java"
 

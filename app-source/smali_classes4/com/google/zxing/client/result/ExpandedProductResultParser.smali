@@ -169,7 +169,7 @@
 
 # virtual methods
 .method public parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/ExpandedProductParsedResult;
-    .locals 23
+    .locals 22
 
     .line 45
     invoke-virtual/range {p1 .. p1}, Lcom/google/zxing/Result;->getBarcodeFormat()Lcom/google/zxing/BarcodeFormat;
@@ -196,7 +196,9 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    move-object v5, v2
+    move-object/from16 p0, v2
+
+    move-object/from16 v5, p0
 
     move-object v6, v5
 
@@ -222,8 +224,6 @@
 
     move-object/from16 v17, v16
 
-    move-object/from16 v18, v17
-
     const/4 v3, 0x0
 
     .line 69
@@ -241,19 +241,19 @@
 
     if-nez v2, :cond_1
 
-    return-object v18
+    return-object p0
 
     .line 76
     :cond_1
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
-    move-result v19
+    move-result v18
 
-    const/16 v20, 0x2
+    const/16 v19, 0x2
 
-    add-int/lit8 v19, v19, 0x2
+    add-int/lit8 v18, v18, 0x2
 
-    add-int v3, v3, v19
+    add-int v3, v3, v18
 
     .line 77
     invoke-static {v3, v4}, Lcom/google/zxing/client/result/ExpandedProductResultParser;->findValue(ILjava/lang/String;)Ljava/lang/String;
@@ -263,25 +263,25 @@
     .line 78
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
-    move-result v19
+    move-result v18
 
-    add-int v3, v3, v19
+    add-int v3, v3, v18
 
     .line 80
     invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
 
-    move-result v19
+    move-result v18
 
-    move/from16 v21, v3
+    move/from16 v20, v3
 
-    const/16 v22, -0x1
+    const/16 v21, -0x1
 
-    sparse-switch v19, :sswitch_data_0
+    sparse-switch v18, :sswitch_data_0
 
     :goto_1
-    move/from16 v20, v22
+    move/from16 v19, v21
 
     goto/16 :goto_2
 
@@ -297,7 +297,7 @@
     goto :goto_1
 
     :cond_2
-    const/16 v20, 0x22
+    const/16 v19, 0x22
 
     goto/16 :goto_2
 
@@ -313,7 +313,7 @@
     goto :goto_1
 
     :cond_3
-    const/16 v20, 0x21
+    const/16 v19, 0x21
 
     goto/16 :goto_2
 
@@ -329,7 +329,7 @@
     goto :goto_1
 
     :cond_4
-    const/16 v20, 0x20
+    const/16 v19, 0x20
 
     goto/16 :goto_2
 
@@ -345,7 +345,7 @@
     goto :goto_1
 
     :cond_5
-    const/16 v20, 0x1f
+    const/16 v19, 0x1f
 
     goto/16 :goto_2
 
@@ -361,7 +361,7 @@
     goto :goto_1
 
     :cond_6
-    const/16 v20, 0x1e
+    const/16 v19, 0x1e
 
     goto/16 :goto_2
 
@@ -377,7 +377,7 @@
     goto :goto_1
 
     :cond_7
-    const/16 v20, 0x1d
+    const/16 v19, 0x1d
 
     goto/16 :goto_2
 
@@ -393,7 +393,7 @@
     goto :goto_1
 
     :cond_8
-    const/16 v20, 0x1c
+    const/16 v19, 0x1c
 
     goto/16 :goto_2
 
@@ -409,7 +409,7 @@
     goto :goto_1
 
     :cond_9
-    const/16 v20, 0x1b
+    const/16 v19, 0x1b
 
     goto/16 :goto_2
 
@@ -425,7 +425,7 @@
     goto :goto_1
 
     :cond_a
-    const/16 v20, 0x1a
+    const/16 v19, 0x1a
 
     goto/16 :goto_2
 
@@ -441,7 +441,7 @@
     goto/16 :goto_1
 
     :cond_b
-    const/16 v20, 0x19
+    const/16 v19, 0x19
 
     goto/16 :goto_2
 
@@ -457,7 +457,7 @@
     goto/16 :goto_1
 
     :cond_c
-    const/16 v20, 0x18
+    const/16 v19, 0x18
 
     goto/16 :goto_2
 
@@ -473,7 +473,7 @@
     goto/16 :goto_1
 
     :cond_d
-    const/16 v20, 0x17
+    const/16 v19, 0x17
 
     goto/16 :goto_2
 
@@ -489,7 +489,7 @@
     goto/16 :goto_1
 
     :cond_e
-    const/16 v20, 0x16
+    const/16 v19, 0x16
 
     goto/16 :goto_2
 
@@ -505,7 +505,7 @@
     goto/16 :goto_1
 
     :cond_f
-    const/16 v20, 0x15
+    const/16 v19, 0x15
 
     goto/16 :goto_2
 
@@ -521,7 +521,7 @@
     goto/16 :goto_1
 
     :cond_10
-    const/16 v20, 0x14
+    const/16 v19, 0x14
 
     goto/16 :goto_2
 
@@ -537,7 +537,7 @@
     goto/16 :goto_1
 
     :cond_11
-    const/16 v20, 0x13
+    const/16 v19, 0x13
 
     goto/16 :goto_2
 
@@ -553,7 +553,7 @@
     goto/16 :goto_1
 
     :cond_12
-    const/16 v20, 0x12
+    const/16 v19, 0x12
 
     goto/16 :goto_2
 
@@ -569,7 +569,7 @@
     goto/16 :goto_1
 
     :cond_13
-    const/16 v20, 0x11
+    const/16 v19, 0x11
 
     goto/16 :goto_2
 
@@ -585,7 +585,7 @@
     goto/16 :goto_1
 
     :cond_14
-    const/16 v20, 0x10
+    const/16 v19, 0x10
 
     goto/16 :goto_2
 
@@ -601,7 +601,7 @@
     goto/16 :goto_1
 
     :cond_15
-    const/16 v20, 0xf
+    const/16 v19, 0xf
 
     goto/16 :goto_2
 
@@ -617,7 +617,7 @@
     goto/16 :goto_1
 
     :cond_16
-    const/16 v20, 0xe
+    const/16 v19, 0xe
 
     goto/16 :goto_2
 
@@ -633,7 +633,7 @@
     goto/16 :goto_1
 
     :cond_17
-    const/16 v20, 0xd
+    const/16 v19, 0xd
 
     goto/16 :goto_2
 
@@ -649,7 +649,7 @@
     goto/16 :goto_1
 
     :cond_18
-    const/16 v20, 0xc
+    const/16 v19, 0xc
 
     goto/16 :goto_2
 
@@ -665,7 +665,7 @@
     goto/16 :goto_1
 
     :cond_19
-    const/16 v20, 0xb
+    const/16 v19, 0xb
 
     goto/16 :goto_2
 
@@ -681,7 +681,7 @@
     goto/16 :goto_1
 
     :cond_1a
-    const/16 v20, 0xa
+    const/16 v19, 0xa
 
     goto/16 :goto_2
 
@@ -697,7 +697,7 @@
     goto/16 :goto_1
 
     :cond_1b
-    const/16 v20, 0x9
+    const/16 v19, 0x9
 
     goto/16 :goto_2
 
@@ -713,7 +713,7 @@
     goto/16 :goto_1
 
     :cond_1c
-    const/16 v20, 0x8
+    const/16 v19, 0x8
 
     goto/16 :goto_2
 
@@ -729,7 +729,7 @@
     goto/16 :goto_1
 
     :cond_1d
-    const/16 v20, 0x7
+    const/16 v19, 0x7
 
     goto :goto_2
 
@@ -745,7 +745,7 @@
     goto/16 :goto_1
 
     :cond_1e
-    const/16 v20, 0x6
+    const/16 v19, 0x6
 
     goto :goto_2
 
@@ -761,7 +761,7 @@
     goto/16 :goto_1
 
     :cond_1f
-    const/16 v20, 0x5
+    const/16 v19, 0x5
 
     goto :goto_2
 
@@ -777,7 +777,7 @@
     goto/16 :goto_1
 
     :cond_20
-    const/16 v20, 0x4
+    const/16 v19, 0x4
 
     goto :goto_2
 
@@ -793,7 +793,7 @@
     goto/16 :goto_1
 
     :cond_21
-    const/16 v20, 0x3
+    const/16 v19, 0x3
 
     goto :goto_2
 
@@ -820,7 +820,7 @@
     goto/16 :goto_1
 
     :cond_22
-    const/16 v20, 0x1
+    const/16 v19, 0x1
 
     goto :goto_2
 
@@ -836,16 +836,16 @@
     goto/16 :goto_1
 
     :cond_23
-    const/16 v20, 0x0
+    const/16 v19, 0x0
 
     :cond_24
     :goto_2
-    packed-switch v20, :pswitch_data_0
+    packed-switch v19, :pswitch_data_0
 
     .line 153
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-object/from16 v19, v0
+    move-object/from16 v18, v0
 
     const/4 v0, 0x0
 
@@ -861,7 +861,7 @@
 
     if-ge v3, v15, :cond_25
 
-    return-object v18
+    return-object p0
 
     :cond_25
     const/4 v3, 0x3
@@ -871,7 +871,7 @@
 
     move-result-object v15
 
-    move-object/from16 v19, v0
+    move-object/from16 v18, v0
 
     const/4 v0, 0x0
 
@@ -888,7 +888,7 @@
     goto :goto_4
 
     :pswitch_1
-    move-object/from16 v19, v0
+    move-object/from16 v18, v0
 
     const/4 v0, 0x0
 
@@ -904,7 +904,7 @@
     goto :goto_4
 
     :pswitch_2
-    move-object/from16 v19, v0
+    move-object/from16 v18, v0
 
     const/4 v0, 0x0
 
@@ -921,7 +921,7 @@
     goto :goto_3
 
     :pswitch_3
-    move-object/from16 v19, v0
+    move-object/from16 v18, v0
 
     const/4 v0, 0x0
 
@@ -941,7 +941,7 @@
     goto :goto_4
 
     :pswitch_4
-    move-object/from16 v19, v0
+    move-object/from16 v18, v0
 
     const/4 v0, 0x0
 
@@ -950,7 +950,7 @@
     goto :goto_4
 
     :pswitch_5
-    move-object/from16 v19, v0
+    move-object/from16 v18, v0
 
     const/4 v0, 0x0
 
@@ -959,7 +959,7 @@
     goto :goto_4
 
     :pswitch_6
-    move-object/from16 v19, v0
+    move-object/from16 v18, v0
 
     const/4 v0, 0x0
 
@@ -968,7 +968,7 @@
     goto :goto_4
 
     :pswitch_7
-    move-object/from16 v19, v0
+    move-object/from16 v18, v0
 
     const/4 v0, 0x0
 
@@ -977,7 +977,7 @@
     goto :goto_4
 
     :pswitch_8
-    move-object/from16 v19, v0
+    move-object/from16 v18, v0
 
     const/4 v0, 0x0
 
@@ -986,7 +986,7 @@
     goto :goto_4
 
     :pswitch_9
-    move-object/from16 v19, v0
+    move-object/from16 v18, v0
 
     const/4 v0, 0x0
 
@@ -995,30 +995,30 @@
     goto :goto_4
 
     :pswitch_a
-    move-object/from16 v19, v0
+    move-object/from16 v18, v0
 
     const/4 v0, 0x0
 
     move-object v6, v1
 
     :goto_4
-    move-object/from16 v0, v19
+    move-object/from16 v0, v18
 
-    move/from16 v3, v21
+    move/from16 v3, v20
 
     goto/16 :goto_0
 
     :cond_26
-    move-object/from16 v19, v0
+    move-object/from16 v18, v0
 
     .line 158
     new-instance v3, Lcom/google/zxing/client/result/ExpandedProductParsedResult;
 
-    move-object/from16 v18, v19
-
     invoke-direct/range {v3 .. v18}, Lcom/google/zxing/client/result/ExpandedProductParsedResult;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
 
     return-object v3
+
+    nop
 
     :sswitch_data_0
     .sparse-switch
@@ -1113,7 +1113,7 @@
     .line 41
     invoke-virtual {p0, p1}, Lcom/google/zxing/client/result/ExpandedProductResultParser;->parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/ExpandedProductParsedResult;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

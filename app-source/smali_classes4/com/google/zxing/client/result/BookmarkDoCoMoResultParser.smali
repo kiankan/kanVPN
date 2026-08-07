@@ -29,70 +29,70 @@
     .line 24
     invoke-virtual {p0, p1}, Lcom/google/zxing/client/result/BookmarkDoCoMoResultParser;->parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/URIParsedResult;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/URIParsedResult;
-    .locals 3
+    .locals 2
 
     .line 28
     invoke-virtual {p1}, Lcom/google/zxing/Result;->getText()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
     .line 29
-    const-string v0, "MEBKM:"
+    const-string p1, "MEBKM:"
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result p1
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    if-nez v0, :cond_0
+    if-nez p1, :cond_0
 
-    return-object v1
+    return-object v0
 
     .line 32
     :cond_0
-    const-string v0, "TITLE:"
+    const-string p1, "TITLE:"
 
-    const/4 v2, 0x1
+    const/4 v1, 0x1
 
-    invoke-static {v0, p1, v2}, Lcom/google/zxing/client/result/BookmarkDoCoMoResultParser;->matchSingleDoCoMoPrefixedField(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 33
-    const-string v2, "URL:"
-
-    invoke-static {v2, p1}, Lcom/google/zxing/client/result/BookmarkDoCoMoResultParser;->matchDoCoMoPrefixedField(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
+    invoke-static {p1, p0, v1}, Lcom/google/zxing/client/result/BookmarkDoCoMoResultParser;->matchSingleDoCoMoPrefixedField(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object p1
 
-    if-nez p1, :cond_1
+    .line 33
+    const-string v1, "URL:"
 
-    return-object v1
+    invoke-static {v1, p0}, Lcom/google/zxing/client/result/BookmarkDoCoMoResultParser;->matchDoCoMoPrefixedField(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object p0
+
+    if-nez p0, :cond_1
+
+    return-object v0
 
     :cond_1
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
     .line 37
-    aget-object p1, p1, v2
+    aget-object p0, p0, v1
 
     .line 38
-    invoke-static {p1}, Lcom/google/zxing/client/result/URIResultParser;->isBasicallyValidURI(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/google/zxing/client/result/URIResultParser;->isBasicallyValidURI(Ljava/lang/String;)Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_2
+    if-eqz v1, :cond_2
 
-    new-instance v1, Lcom/google/zxing/client/result/URIParsedResult;
+    new-instance v0, Lcom/google/zxing/client/result/URIParsedResult;
 
-    invoke-direct {v1, p1, v0}, Lcom/google/zxing/client/result/URIParsedResult;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, p0, p1}, Lcom/google/zxing/client/result/URIParsedResult;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
-    return-object v1
+    return-object v0
 .end method

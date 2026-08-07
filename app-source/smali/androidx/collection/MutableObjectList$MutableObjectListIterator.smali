@@ -62,7 +62,7 @@
     k = 0x1
     mv = {
         0x1,
-        0x8,
+        0x9,
         0x0
     }
     xi = 0x30
@@ -97,15 +97,14 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1263
+    .line 1218
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1264
     iput-object p1, p0, Landroidx/collection/MutableObjectList$MutableObjectListIterator;->list:Ljava/util/List;
 
     add-int/lit8 p2, p2, -0x1
 
-    .line 1267
+    .line 1220
     iput p2, p0, Landroidx/collection/MutableObjectList$MutableObjectListIterator;->prevIndex:I
 
     return-void
@@ -121,7 +120,7 @@
         }
     .end annotation
 
-    .line 1299
+    .line 1252
     iget-object v0, p0, Landroidx/collection/MutableObjectList$MutableObjectListIterator;->list:Ljava/util/List;
 
     iget v1, p0, Landroidx/collection/MutableObjectList$MutableObjectListIterator;->prevIndex:I
@@ -136,47 +135,47 @@
 .end method
 
 .method public hasNext()Z
-    .locals 3
+    .locals 2
 
-    .line 1270
+    .line 1223
     iget v0, p0, Landroidx/collection/MutableObjectList$MutableObjectListIterator;->prevIndex:I
 
-    iget-object v1, p0, Landroidx/collection/MutableObjectList$MutableObjectListIterator;->list:Ljava/util/List;
+    iget-object p0, p0, Landroidx/collection/MutableObjectList$MutableObjectListIterator;->list:Ljava/util/List;
 
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    invoke-interface {p0}, Ljava/util/List;->size()I
 
-    move-result v1
+    move-result p0
 
-    const/4 v2, 0x1
+    const/4 v1, 0x1
 
-    sub-int/2addr v1, v2
+    sub-int/2addr p0, v1
 
-    if-ge v0, v1, :cond_0
+    if-ge v0, p0, :cond_0
 
-    return v2
+    return v1
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public hasPrevious()Z
-    .locals 1
+    .locals 0
 
-    .line 1283
-    iget v0, p0, Landroidx/collection/MutableObjectList$MutableObjectListIterator;->prevIndex:I
+    .line 1236
+    iget p0, p0, Landroidx/collection/MutableObjectList$MutableObjectListIterator;->prevIndex:I
 
-    if-ltz v0, :cond_0
+    if-ltz p0, :cond_0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public next()Ljava/lang/Object;
@@ -187,7 +186,7 @@
         }
     .end annotation
 
-    .line 1274
+    .line 1227
     iget-object v0, p0, Landroidx/collection/MutableObjectList$MutableObjectListIterator;->list:Ljava/util/List;
 
     iget v1, p0, Landroidx/collection/MutableObjectList$MutableObjectListIterator;->prevIndex:I
@@ -198,20 +197,20 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public nextIndex()I
-    .locals 1
+    .locals 0
 
-    .line 1287
-    iget v0, p0, Landroidx/collection/MutableObjectList$MutableObjectListIterator;->prevIndex:I
+    .line 1240
+    iget p0, p0, Landroidx/collection/MutableObjectList$MutableObjectListIterator;->prevIndex:I
 
-    add-int/lit8 v0, v0, 0x1
+    add-int/lit8 p0, p0, 0x1
 
-    return v0
+    return p0
 .end method
 
 .method public previous()Ljava/lang/Object;
@@ -222,7 +221,7 @@
         }
     .end annotation
 
-    .line 1291
+    .line 1244
     iget-object v0, p0, Landroidx/collection/MutableObjectList$MutableObjectListIterator;->list:Ljava/util/List;
 
     iget v1, p0, Landroidx/collection/MutableObjectList$MutableObjectListIterator;->prevIndex:I
@@ -233,31 +232,31 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public previousIndex()I
-    .locals 1
+    .locals 0
 
-    .line 1295
-    iget v0, p0, Landroidx/collection/MutableObjectList$MutableObjectListIterator;->prevIndex:I
+    .line 1248
+    iget p0, p0, Landroidx/collection/MutableObjectList$MutableObjectListIterator;->prevIndex:I
 
-    return v0
+    return p0
 .end method
 
 .method public remove()V
     .locals 2
 
-    .line 1278
+    .line 1231
     iget-object v0, p0, Landroidx/collection/MutableObjectList$MutableObjectListIterator;->list:Ljava/util/List;
 
     iget v1, p0, Landroidx/collection/MutableObjectList$MutableObjectListIterator;->prevIndex:I
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 1279
+    .line 1232
     iget v0, p0, Landroidx/collection/MutableObjectList$MutableObjectListIterator;->prevIndex:I
 
     add-int/lit8 v0, v0, -0x1
@@ -268,19 +267,19 @@
 .end method
 
 .method public set(Ljava/lang/Object;)V
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)V"
         }
     .end annotation
 
-    .line 1303
+    .line 1256
     iget-object v0, p0, Landroidx/collection/MutableObjectList$MutableObjectListIterator;->list:Ljava/util/List;
 
-    iget v1, p0, Landroidx/collection/MutableObjectList$MutableObjectListIterator;->prevIndex:I
+    iget p0, p0, Landroidx/collection/MutableObjectList$MutableObjectListIterator;->prevIndex:I
 
-    invoke-interface {v0, v1, p1}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p0, p1}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

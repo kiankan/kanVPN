@@ -36,7 +36,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0xb0
@@ -105,37 +105,35 @@
     :try_start_0
     sget-object v2, Lkotlin/Result;->Companion:Lkotlin/Result$Companion;
 
-    move-object v2, p0
-
-    check-cast v2, Landroidx/activity/contextaware/ContextAwareKt$withContextAvailable$2$listener$1;
+    check-cast p0, Landroidx/activity/contextaware/ContextAwareKt$withContextAvailable$2$listener$1;
 
     invoke-interface {v1, p1}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-static {p1}, Lkotlin/Result;->constructor-impl(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Lkotlin/Result;->constructor-impl(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
     :catchall_0
-    move-exception p1
+    move-exception p0
 
-    sget-object v1, Lkotlin/Result;->Companion:Lkotlin/Result$Companion;
+    sget-object p1, Lkotlin/Result;->Companion:Lkotlin/Result$Companion;
 
-    invoke-static {p1}, Lkotlin/ResultKt;->createFailure(Ljava/lang/Throwable;)Ljava/lang/Object;
+    invoke-static {p0}, Lkotlin/ResultKt;->createFailure(Ljava/lang/Throwable;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-static {p1}, Lkotlin/Result;->constructor-impl(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Lkotlin/Result;->constructor-impl(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
     :goto_0
-    invoke-interface {v0, p1}, Lkotlinx/coroutines/CancellableContinuation;->resumeWith(Ljava/lang/Object;)V
+    invoke-interface {v0, p0}, Lkotlinx/coroutines/CancellableContinuation;->resumeWith(Ljava/lang/Object;)V
 
     return-void
 .end method

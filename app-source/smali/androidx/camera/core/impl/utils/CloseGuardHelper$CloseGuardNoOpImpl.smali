@@ -36,12 +36,12 @@
 .end method
 
 .method public open(Ljava/lang/String;)V
-    .locals 1
+    .locals 0
 
     .line 108
-    const-string v0, "CloseMethodName must not be null."
+    const-string p0, "CloseMethodName must not be null."
 
-    invoke-static {p1, v0}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1, p0}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

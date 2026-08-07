@@ -29,14 +29,14 @@
 
 # virtual methods
 .method public final run()V
-    .locals 2
+    .locals 1
 
     .line 0
     iget-object v0, p0, Landroidx/camera/core/CameraX$$ExternalSyntheticLambda0;->f$0:Landroidx/camera/core/CameraX;
 
-    iget-object v1, p0, Landroidx/camera/core/CameraX$$ExternalSyntheticLambda0;->f$1:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
+    iget-object p0, p0, Landroidx/camera/core/CameraX$$ExternalSyntheticLambda0;->f$1:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
 
-    invoke-virtual {v0, v1}, Landroidx/camera/core/CameraX;->lambda$shutdownInternal$3$androidx-camera-core-CameraX(Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;)V
+    invoke-virtual {v0, p0}, Landroidx/camera/core/CameraX;->lambda$shutdownInternal$4$androidx-camera-core-CameraX(Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;)V
 
     return-void
 .end method

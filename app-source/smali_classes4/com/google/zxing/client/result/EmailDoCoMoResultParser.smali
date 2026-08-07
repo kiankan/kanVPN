@@ -67,90 +67,90 @@
 
 # virtual methods
 .method public parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/EmailAddressParsedResult;
-    .locals 8
+    .locals 7
 
     .line 38
     invoke-static {p1}, Lcom/google/zxing/client/result/EmailDoCoMoResultParser;->getMassagedText(Lcom/google/zxing/Result;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
     .line 39
-    const-string v0, "MATMSG:"
+    const-string p1, "MATMSG:"
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result p1
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    if-nez v0, :cond_0
+    if-nez p1, :cond_0
 
-    return-object v1
+    return-object v0
 
     .line 42
     :cond_0
-    const-string v0, "TO:"
+    const-string p1, "TO:"
 
-    invoke-static {v0, p1}, Lcom/google/zxing/client/result/EmailDoCoMoResultParser;->matchDoCoMoPrefixedField(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
+    invoke-static {p1, p0}, Lcom/google/zxing/client/result/EmailDoCoMoResultParser;->matchDoCoMoPrefixedField(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    if-nez v3, :cond_1
+    if-nez v2, :cond_1
 
-    return-object v1
+    return-object v0
 
     .line 46
     :cond_1
-    array-length v0, v3
+    array-length p1, v2
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    move v4, v2
+    move v3, v1
 
     :goto_0
-    if-ge v4, v0, :cond_3
+    if-ge v3, p1, :cond_3
 
-    aget-object v5, v3, v4
+    aget-object v4, v2, v3
 
     .line 47
-    invoke-static {v5}, Lcom/google/zxing/client/result/EmailDoCoMoResultParser;->isBasicallyValidEmailAddress(Ljava/lang/String;)Z
+    invoke-static {v4}, Lcom/google/zxing/client/result/EmailDoCoMoResultParser;->isBasicallyValidEmailAddress(Ljava/lang/String;)Z
 
-    move-result v5
+    move-result v4
 
-    if-nez v5, :cond_2
+    if-nez v4, :cond_2
 
-    return-object v1
+    return-object v0
 
     :cond_2
-    add-int/lit8 v4, v4, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     .line 51
     :cond_3
-    const-string v0, "SUB:"
+    const-string p1, "SUB:"
 
-    invoke-static {v0, p1, v2}, Lcom/google/zxing/client/result/EmailDoCoMoResultParser;->matchSingleDoCoMoPrefixedField(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {p1, p0, v1}, Lcom/google/zxing/client/result/EmailDoCoMoResultParser;->matchSingleDoCoMoPrefixedField(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v5
+
+    .line 52
+    const-string p1, "BODY:"
+
+    invoke-static {p1, p0, v1}, Lcom/google/zxing/client/result/EmailDoCoMoResultParser;->matchSingleDoCoMoPrefixedField(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 52
-    const-string v0, "BODY:"
-
-    invoke-static {v0, p1, v2}, Lcom/google/zxing/client/result/EmailDoCoMoResultParser;->matchSingleDoCoMoPrefixedField(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v7
-
     .line 53
-    new-instance v2, Lcom/google/zxing/client/result/EmailAddressParsedResult;
+    new-instance v1, Lcom/google/zxing/client/result/EmailAddressParsedResult;
+
+    const/4 v3, 0x0
 
     const/4 v4, 0x0
 
-    const/4 v5, 0x0
+    invoke-direct/range {v1 .. v6}, Lcom/google/zxing/client/result/EmailAddressParsedResult;-><init>([Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct/range {v2 .. v7}, Lcom/google/zxing/client/result/EmailAddressParsedResult;-><init>([Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v2
+    return-object v1
 .end method
 
 .method public bridge synthetic parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/ParsedResult;
@@ -167,7 +167,7 @@
     .line 30
     invoke-virtual {p0, p1}, Lcom/google/zxing/client/result/EmailDoCoMoResultParser;->parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/EmailAddressParsedResult;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

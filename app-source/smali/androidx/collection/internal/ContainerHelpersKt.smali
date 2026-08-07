@@ -36,7 +36,7 @@
     k = 0x2
     mv = {
         0x1,
-        0x8,
+        0x9,
         0x0
     }
     xi = 0x30
@@ -57,17 +57,17 @@
 
     const/4 v0, 0x0
 
-    .line 22
+    .line 21
     new-array v1, v0, [I
 
     sput-object v1, Landroidx/collection/internal/ContainerHelpersKt;->EMPTY_INTS:[I
 
-    .line 25
+    .line 23
     new-array v1, v0, [J
 
     sput-object v1, Landroidx/collection/internal/ContainerHelpersKt;->EMPTY_LONGS:[J
 
-    .line 28
+    .line 25
     new-array v0, v0, [Ljava/lang/Object;
 
     sput-object v0, Landroidx/collection/internal/ContainerHelpersKt;->EMPTY_OBJECTS:[Ljava/lang/Object;
@@ -93,7 +93,7 @@
 
     ushr-int/lit8 v1, v1, 0x1
 
-    .line 60
+    .line 57
     aget v2, p0, v1
 
     if-ge v2, p2, :cond_0
@@ -136,7 +136,7 @@
 
     ushr-int/lit8 v1, v1, 0x1
 
-    .line 79
+    .line 76
     aget-wide v2, p0, v1
 
     cmp-long v2, v2, p2
@@ -166,7 +166,7 @@
 .method public static final equal(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 0
 
-    .line 49
+    .line 46
     invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -208,7 +208,7 @@
 
     mul-int/lit8 p0, p0, 0x4
 
-    .line 31
+    .line 28
     invoke-static {p0}, Landroidx/collection/internal/ContainerHelpersKt;->idealByteArraySize(I)I
 
     move-result p0
@@ -223,7 +223,7 @@
 
     mul-int/lit8 p0, p0, 0x8
 
-    .line 35
+    .line 32
     invoke-static {p0}, Landroidx/collection/internal/ContainerHelpersKt;->idealByteArraySize(I)I
 
     move-result p0

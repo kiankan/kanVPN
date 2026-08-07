@@ -48,7 +48,7 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1080
+    .line 1184
     invoke-static {}, Landroidx/camera/core/impl/MutableOptionsBundle;->create()Landroidx/camera/core/impl/MutableOptionsBundle;
 
     move-result-object v0
@@ -61,18 +61,18 @@
 .method private constructor <init>(Landroidx/camera/core/impl/MutableOptionsBundle;)V
     .locals 3
 
-    .line 1083
+    .line 1187
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1084
+    .line 1188
     iput-object p1, p0, Landroidx/camera/core/ImageAnalysis$Builder;->mMutableConfig:Landroidx/camera/core/impl/MutableOptionsBundle;
 
-    .line 1086
+    .line 1190
     sget-object v0, Landroidx/camera/core/internal/TargetConfig;->OPTION_TARGET_CLASS:Landroidx/camera/core/impl/Config$Option;
 
     const/4 v1, 0x0
 
-    .line 1087
+    .line 1191
     invoke-virtual {p1, v0, v1}, Landroidx/camera/core/impl/MutableOptionsBundle;->retrieveOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -81,7 +81,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 1088
+    .line 1192
     const-class v0, Landroidx/camera/core/ImageAnalysis;
 
     invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -92,7 +92,7 @@
 
     goto :goto_0
 
-    .line 1089
+    .line 1193
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -104,28 +104,28 @@
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v2, ": "
+    const-string p0, ": "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 1096
+    .line 1200
     :cond_1
     :goto_0
     sget-object p1, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->IMAGE_ANALYSIS:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
 
     invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$Builder;->setCaptureType(Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;)Landroidx/camera/core/ImageAnalysis$Builder;
 
-    .line 1097
+    .line 1201
     const-class p1, Landroidx/camera/core/ImageAnalysis;
 
     invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$Builder;->setTargetClass(Ljava/lang/Class;)Landroidx/camera/core/ImageAnalysis$Builder;
@@ -136,7 +136,7 @@
 .method static fromConfig(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/ImageAnalysis$Builder;
     .locals 1
 
-    .line 1109
+    .line 1212
     new-instance v0, Landroidx/camera/core/ImageAnalysis$Builder;
 
     invoke-static {p0}, Landroidx/camera/core/impl/MutableOptionsBundle;->from(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/MutableOptionsBundle;
@@ -151,7 +151,7 @@
 .method public static fromConfig(Landroidx/camera/core/impl/ImageAnalysisConfig;)Landroidx/camera/core/ImageAnalysis$Builder;
     .locals 1
 
-    .line 1121
+    .line 1223
     new-instance v0, Landroidx/camera/core/ImageAnalysis$Builder;
 
     invoke-static {p0}, Landroidx/camera/core/impl/MutableOptionsBundle;->from(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/MutableOptionsBundle;
@@ -166,76 +166,76 @@
 
 # virtual methods
 .method public build()Landroidx/camera/core/ImageAnalysis;
-    .locals 2
+    .locals 1
 
-    .line 1265
+    .line 1361
     invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Builder;->getUseCaseConfig()Landroidx/camera/core/impl/ImageAnalysisConfig;
 
-    move-result-object v0
+    move-result-object p0
 
-    .line 1266
-    invoke-static {v0}, Landroidx/camera/core/impl/ImageOutputConfig;->validateConfig(Landroidx/camera/core/impl/ImageOutputConfig;)V
+    .line 1362
+    invoke-static {p0}, Landroidx/camera/core/impl/ImageOutputConfig;->validateConfig(Landroidx/camera/core/impl/ImageOutputConfig;)V
 
-    .line 1267
-    new-instance v1, Landroidx/camera/core/ImageAnalysis;
+    .line 1363
+    new-instance v0, Landroidx/camera/core/ImageAnalysis;
 
-    invoke-direct {v1, v0}, Landroidx/camera/core/ImageAnalysis;-><init>(Landroidx/camera/core/impl/ImageAnalysisConfig;)V
+    invoke-direct {v0, p0}, Landroidx/camera/core/ImageAnalysis;-><init>(Landroidx/camera/core/impl/ImageAnalysisConfig;)V
 
-    return-object v1
+    return-object v0
 .end method
 
 .method public bridge synthetic build()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    .line 1069
+    .line 1173
     invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Builder;->build()Landroidx/camera/core/ImageAnalysis;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getMutableConfig()Landroidx/camera/core/impl/MutableConfig;
-    .locals 1
+    .locals 0
 
-    .line 1242
-    iget-object v0, p0, Landroidx/camera/core/ImageAnalysis$Builder;->mMutableConfig:Landroidx/camera/core/impl/MutableOptionsBundle;
+    .line 1340
+    iget-object p0, p0, Landroidx/camera/core/ImageAnalysis$Builder;->mMutableConfig:Landroidx/camera/core/impl/MutableOptionsBundle;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getUseCaseConfig()Landroidx/camera/core/impl/ImageAnalysisConfig;
-    .locals 2
+    .locals 1
 
-    .line 1252
+    .line 1349
     new-instance v0, Landroidx/camera/core/impl/ImageAnalysisConfig;
 
-    iget-object v1, p0, Landroidx/camera/core/ImageAnalysis$Builder;->mMutableConfig:Landroidx/camera/core/impl/MutableOptionsBundle;
+    iget-object p0, p0, Landroidx/camera/core/ImageAnalysis$Builder;->mMutableConfig:Landroidx/camera/core/impl/MutableOptionsBundle;
 
-    invoke-static {v1}, Landroidx/camera/core/impl/OptionsBundle;->from(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/OptionsBundle;
+    invoke-static {p0}, Landroidx/camera/core/impl/OptionsBundle;->from(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/OptionsBundle;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-direct {v0, v1}, Landroidx/camera/core/impl/ImageAnalysisConfig;-><init>(Landroidx/camera/core/impl/OptionsBundle;)V
+    invoke-direct {v0, p0}, Landroidx/camera/core/impl/ImageAnalysisConfig;-><init>(Landroidx/camera/core/impl/OptionsBundle;)V
 
     return-object v0
 .end method
 
 .method public bridge synthetic getUseCaseConfig()Landroidx/camera/core/impl/UseCaseConfig;
-    .locals 1
+    .locals 0
 
-    .line 1069
+    .line 1173
     invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Builder;->getUseCaseConfig()Landroidx/camera/core/impl/ImageAnalysisConfig;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public setBackgroundExecutor(Ljava/util/concurrent/Executor;)Landroidx/camera/core/ImageAnalysis$Builder;
     .locals 2
 
-    .line 1543
+    .line 1629
     invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Builder;->getMutableConfig()Landroidx/camera/core/impl/MutableConfig;
 
     move-result-object v0
@@ -258,18 +258,18 @@
         }
     .end annotation
 
-    .line 1069
+    .line 1173
     invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$Builder;->setBackgroundExecutor(Ljava/util/concurrent/Executor;)Landroidx/camera/core/ImageAnalysis$Builder;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public setBackpressureStrategy(I)Landroidx/camera/core/ImageAnalysis$Builder;
     .locals 2
 
-    .line 1139
+    .line 1240
     invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Builder;->getMutableConfig()Landroidx/camera/core/impl/MutableConfig;
 
     move-result-object v0
@@ -288,7 +288,7 @@
 .method public setCaptureOptionUnpacker(Landroidx/camera/core/impl/CaptureConfig$OptionUnpacker;)Landroidx/camera/core/ImageAnalysis$Builder;
     .locals 2
 
-    .line 1579
+    .line 1661
     invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Builder;->getMutableConfig()Landroidx/camera/core/impl/MutableConfig;
 
     move-result-object v0
@@ -311,18 +311,18 @@
         }
     .end annotation
 
-    .line 1069
+    .line 1173
     invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$Builder;->setCaptureOptionUnpacker(Landroidx/camera/core/impl/CaptureConfig$OptionUnpacker;)Landroidx/camera/core/ImageAnalysis$Builder;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public setCaptureType(Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;)Landroidx/camera/core/ImageAnalysis$Builder;
     .locals 2
 
-    .line 1620
+    .line 1698
     invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Builder;->getMutableConfig()Landroidx/camera/core/impl/MutableConfig;
 
     move-result-object v0
@@ -345,12 +345,12 @@
         }
     .end annotation
 
-    .line 1069
+    .line 1173
     invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$Builder;->setCaptureType(Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;)Landroidx/camera/core/ImageAnalysis$Builder;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public setCustomOrderedResolutions(Ljava/util/List;)Landroidx/camera/core/ImageAnalysis$Builder;
@@ -365,7 +365,7 @@
         }
     .end annotation
 
-    .line 1475
+    .line 1562
     invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Builder;->getMutableConfig()Landroidx/camera/core/impl/MutableConfig;
 
     move-result-object v0
@@ -388,18 +388,18 @@
         }
     .end annotation
 
-    .line 1069
+    .line 1173
     invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$Builder;->setCustomOrderedResolutions(Ljava/util/List;)Landroidx/camera/core/ImageAnalysis$Builder;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public setDefaultCaptureConfig(Landroidx/camera/core/impl/CaptureConfig;)Landroidx/camera/core/ImageAnalysis$Builder;
     .locals 2
 
-    .line 1561
+    .line 1645
     invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Builder;->getMutableConfig()Landroidx/camera/core/impl/MutableConfig;
 
     move-result-object v0
@@ -422,18 +422,18 @@
         }
     .end annotation
 
-    .line 1069
+    .line 1173
     invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$Builder;->setDefaultCaptureConfig(Landroidx/camera/core/impl/CaptureConfig;)Landroidx/camera/core/ImageAnalysis$Builder;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public setDefaultResolution(Landroid/util/Size;)Landroidx/camera/core/ImageAnalysis$Builder;
     .locals 2
 
-    .line 1450
+    .line 1539
     invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Builder;->getMutableConfig()Landroidx/camera/core/impl/MutableConfig;
 
     move-result-object v0
@@ -456,18 +456,18 @@
         }
     .end annotation
 
-    .line 1069
+    .line 1173
     invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$Builder;->setDefaultResolution(Landroid/util/Size;)Landroidx/camera/core/ImageAnalysis$Builder;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public setDefaultSessionConfig(Landroidx/camera/core/impl/SessionConfig;)Landroidx/camera/core/ImageAnalysis$Builder;
     .locals 2
 
-    .line 1553
+    .line 1638
     invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Builder;->getMutableConfig()Landroidx/camera/core/impl/MutableConfig;
 
     move-result-object v0
@@ -490,18 +490,18 @@
         }
     .end annotation
 
-    .line 1069
+    .line 1173
     invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$Builder;->setDefaultSessionConfig(Landroidx/camera/core/impl/SessionConfig;)Landroidx/camera/core/ImageAnalysis$Builder;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public setDynamicRange(Landroidx/camera/core/DynamicRange;)Landroidx/camera/core/ImageAnalysis$Builder;
     .locals 2
 
-    .line 1641
+    .line 1725
     sget-object v0, Landroidx/camera/core/DynamicRange;->SDR:Landroidx/camera/core/DynamicRange;
 
     invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -510,7 +510,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1645
+    .line 1729
     invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Builder;->getMutableConfig()Landroidx/camera/core/impl/MutableConfig;
 
     move-result-object v0
@@ -521,15 +521,15 @@
 
     return-object p0
 
-    .line 1642
+    .line 1726
     :cond_0
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    const-string v0, "ImageAnalysis currently only supports SDR"
+    const-string p1, "ImageAnalysis currently only supports SDR"
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method public bridge synthetic setDynamicRange(Landroidx/camera/core/DynamicRange;)Ljava/lang/Object;
@@ -543,18 +543,18 @@
         }
     .end annotation
 
-    .line 1069
+    .line 1173
     invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$Builder;->setDynamicRange(Landroidx/camera/core/DynamicRange;)Landroidx/camera/core/ImageAnalysis$Builder;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public setHighResolutionDisabled(Z)Landroidx/camera/core/ImageAnalysis$Builder;
     .locals 2
 
-    .line 1612
+    .line 1690
     invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Builder;->getMutableConfig()Landroidx/camera/core/impl/MutableConfig;
 
     move-result-object v0
@@ -581,18 +581,18 @@
         }
     .end annotation
 
-    .line 1069
+    .line 1173
     invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$Builder;->setHighResolutionDisabled(Z)Landroidx/camera/core/ImageAnalysis$Builder;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public setImageQueueDepth(I)Landroidx/camera/core/ImageAnalysis$Builder;
     .locals 2
 
-    .line 1170
+    .line 1270
     invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Builder;->getMutableConfig()Landroidx/camera/core/impl/MutableConfig;
 
     move-result-object v0
@@ -611,7 +611,7 @@
 .method public setImageReaderProxyProvider(Landroidx/camera/core/ImageReaderProxyProvider;)Landroidx/camera/core/ImageAnalysis$Builder;
     .locals 2
 
-    .line 1595
+    .line 1675
     invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Builder;->getMutableConfig()Landroidx/camera/core/impl/MutableConfig;
 
     move-result-object v0
@@ -626,7 +626,7 @@
 .method public setMaxResolution(Landroid/util/Size;)Landroidx/camera/core/ImageAnalysis$Builder;
     .locals 2
 
-    .line 1459
+    .line 1547
     invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Builder;->getMutableConfig()Landroidx/camera/core/impl/MutableConfig;
 
     move-result-object v0
@@ -649,25 +649,25 @@
         }
     .end annotation
 
-    .line 1069
+    .line 1173
     invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$Builder;->setMaxResolution(Landroid/util/Size;)Landroidx/camera/core/ImageAnalysis$Builder;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public setMirrorMode(I)Landroidx/camera/core/ImageAnalysis$Builder;
-    .locals 1
+    .locals 0
 
-    .line 1378
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    .line 1469
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    const-string v0, "setMirrorMode is not supported."
+    const-string/jumbo p1, "setMirrorMode is not supported."
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method public bridge synthetic setMirrorMode(I)Ljava/lang/Object;
@@ -681,30 +681,30 @@
         }
     .end annotation
 
-    .line 1069
+    .line 1173
     invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$Builder;->setMirrorMode(I)Landroidx/camera/core/ImageAnalysis$Builder;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public setOnePixelShiftEnabled(Z)Landroidx/camera/core/ImageAnalysis$Builder;
     .locals 2
 
-    .line 1230
+    .line 1329
     invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Builder;->getMutableConfig()Landroidx/camera/core/impl/MutableConfig;
 
     move-result-object v0
 
     sget-object v1, Landroidx/camera/core/impl/ImageAnalysisConfig;->OPTION_ONE_PIXEL_SHIFT_ENABLED:Landroidx/camera/core/impl/Config$Option;
 
-    .line 1231
+    .line 1330
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
-    .line 1230
+    .line 1329
     invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/MutableConfig;->insertOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)V
 
     return-object p0
@@ -713,7 +713,7 @@
 .method public setOutputImageFormat(I)Landroidx/camera/core/ImageAnalysis$Builder;
     .locals 2
 
-    .line 1191
+    .line 1292
     invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Builder;->getMutableConfig()Landroidx/camera/core/impl/MutableConfig;
 
     move-result-object v0
@@ -732,19 +732,19 @@
 .method public setOutputImageRotationEnabled(Z)Landroidx/camera/core/ImageAnalysis$Builder;
     .locals 2
 
-    .line 1222
+    .line 1322
     invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Builder;->getMutableConfig()Landroidx/camera/core/impl/MutableConfig;
 
     move-result-object v0
 
     sget-object v1, Landroidx/camera/core/impl/ImageAnalysisConfig;->OPTION_OUTPUT_IMAGE_ROTATION_ENABLED:Landroidx/camera/core/impl/Config$Option;
 
-    .line 1223
+    .line 1323
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
-    .line 1222
+    .line 1322
     invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/MutableConfig;->insertOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)V
 
     return-object p0
@@ -753,7 +753,7 @@
 .method public setResolutionSelector(Landroidx/camera/core/resolutionselector/ResolutionSelector;)Landroidx/camera/core/ImageAnalysis$Builder;
     .locals 2
 
-    .line 1525
+    .line 1612
     invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Builder;->getMutableConfig()Landroidx/camera/core/impl/MutableConfig;
 
     move-result-object v0
@@ -776,18 +776,18 @@
         }
     .end annotation
 
-    .line 1069
+    .line 1173
     invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$Builder;->setResolutionSelector(Landroidx/camera/core/resolutionselector/ResolutionSelector;)Landroidx/camera/core/ImageAnalysis$Builder;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public setSessionOptionUnpacker(Landroidx/camera/core/impl/SessionConfig$OptionUnpacker;)Landroidx/camera/core/ImageAnalysis$Builder;
     .locals 2
 
-    .line 1570
+    .line 1653
     invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Builder;->getMutableConfig()Landroidx/camera/core/impl/MutableConfig;
 
     move-result-object v0
@@ -810,12 +810,46 @@
         }
     .end annotation
 
-    .line 1069
+    .line 1173
     invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$Builder;->setSessionOptionUnpacker(Landroidx/camera/core/impl/SessionConfig$OptionUnpacker;)Landroidx/camera/core/ImageAnalysis$Builder;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
+.end method
+
+.method public setStreamUseCase(Landroidx/camera/core/impl/StreamUseCase;)Landroidx/camera/core/ImageAnalysis$Builder;
+    .locals 2
+
+    .line 1705
+    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Builder;->getMutableConfig()Landroidx/camera/core/impl/MutableConfig;
+
+    move-result-object v0
+
+    sget-object v1, Landroidx/camera/core/impl/UseCaseConfig;->OPTION_STREAM_USE_CASE:Landroidx/camera/core/impl/Config$Option;
+
+    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/MutableConfig;->insertOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)V
+
+    return-object p0
+.end method
+
+.method public bridge synthetic setStreamUseCase(Landroidx/camera/core/impl/StreamUseCase;)Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            null
+        }
+    .end annotation
+
+    .line 1173
+    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$Builder;->setStreamUseCase(Landroidx/camera/core/impl/StreamUseCase;)Landroidx/camera/core/ImageAnalysis$Builder;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method public setSupportedResolutions(Ljava/util/List;)Landroidx/camera/core/ImageAnalysis$Builder;
@@ -833,7 +867,7 @@
         }
     .end annotation
 
-    .line 1467
+    .line 1555
     invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Builder;->getMutableConfig()Landroidx/camera/core/impl/MutableConfig;
 
     move-result-object v0
@@ -856,18 +890,18 @@
         }
     .end annotation
 
-    .line 1069
+    .line 1173
     invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$Builder;->setSupportedResolutions(Ljava/util/List;)Landroidx/camera/core/ImageAnalysis$Builder;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public setSurfaceOccupancyPriority(I)Landroidx/camera/core/ImageAnalysis$Builder;
     .locals 2
 
-    .line 1587
+    .line 1668
     invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Builder;->getMutableConfig()Landroidx/camera/core/impl/MutableConfig;
 
     move-result-object v0
@@ -894,12 +928,12 @@
         }
     .end annotation
 
-    .line 1069
+    .line 1173
     invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$Builder;->setSurfaceOccupancyPriority(I)Landroidx/camera/core/ImageAnalysis$Builder;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public setTargetAspectRatio(I)Landroidx/camera/core/ImageAnalysis$Builder;
@@ -913,7 +947,7 @@
 
     const/4 p1, 0x0
 
-    .line 1335
+    .line 1428
     :cond_0
     invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Builder;->getMutableConfig()Landroidx/camera/core/impl/MutableConfig;
 
@@ -944,12 +978,12 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 1069
+    .line 1173
     invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$Builder;->setTargetAspectRatio(I)Landroidx/camera/core/ImageAnalysis$Builder;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public setTargetClass(Ljava/lang/Class;)Landroidx/camera/core/ImageAnalysis$Builder;
@@ -964,7 +998,7 @@
         }
     .end annotation
 
-    .line 1276
+    .line 1371
     invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Builder;->getMutableConfig()Landroidx/camera/core/impl/MutableConfig;
 
     move-result-object v0
@@ -973,7 +1007,7 @@
 
     invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/MutableConfig;->insertOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)V
 
-    .line 1279
+    .line 1374
     invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Builder;->getMutableConfig()Landroidx/camera/core/impl/MutableConfig;
 
     move-result-object v0
@@ -988,7 +1022,7 @@
 
     if-nez v0, :cond_0
 
-    .line 1280
+    .line 1375
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1013,7 +1047,7 @@
 
     move-result-object p1
 
-    .line 1281
+    .line 1376
     invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$Builder;->setTargetName(Ljava/lang/String;)Landroidx/camera/core/ImageAnalysis$Builder;
 
     :cond_0
@@ -1031,18 +1065,18 @@
         }
     .end annotation
 
-    .line 1069
+    .line 1173
     invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$Builder;->setTargetClass(Ljava/lang/Class;)Landroidx/camera/core/ImageAnalysis$Builder;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public setTargetName(Ljava/lang/String;)Landroidx/camera/core/ImageAnalysis$Builder;
     .locals 2
 
-    .line 1303
+    .line 1397
     invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Builder;->getMutableConfig()Landroidx/camera/core/impl/MutableConfig;
 
     move-result-object v0
@@ -1065,12 +1099,12 @@
         }
     .end annotation
 
-    .line 1069
+    .line 1173
     invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$Builder;->setTargetName(Ljava/lang/String;)Landroidx/camera/core/ImageAnalysis$Builder;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public setTargetResolution(Landroid/util/Size;)Landroidx/camera/core/ImageAnalysis$Builder;
@@ -1078,14 +1112,14 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 1435
+    .line 1525
     invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Builder;->getMutableConfig()Landroidx/camera/core/impl/MutableConfig;
 
     move-result-object v0
 
     sget-object v1, Landroidx/camera/core/impl/ImageOutputConfig;->OPTION_TARGET_RESOLUTION:Landroidx/camera/core/impl/Config$Option;
 
-    .line 1436
+    .line 1526
     invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/MutableConfig;->insertOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)V
 
     return-object p0
@@ -1105,18 +1139,18 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 1069
+    .line 1173
     invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$Builder;->setTargetResolution(Landroid/util/Size;)Landroidx/camera/core/ImageAnalysis$Builder;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public setTargetRotation(I)Landroidx/camera/core/ImageAnalysis$Builder;
     .locals 2
 
-    .line 1367
+    .line 1459
     invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Builder;->getMutableConfig()Landroidx/camera/core/impl/MutableConfig;
 
     move-result-object v0
@@ -1143,18 +1177,18 @@
         }
     .end annotation
 
-    .line 1069
+    .line 1173
     invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$Builder;->setTargetRotation(I)Landroidx/camera/core/ImageAnalysis$Builder;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public setZslDisabled(Z)Landroidx/camera/core/ImageAnalysis$Builder;
     .locals 2
 
-    .line 1604
+    .line 1683
     invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Builder;->getMutableConfig()Landroidx/camera/core/impl/MutableConfig;
 
     move-result-object v0
@@ -1181,10 +1215,10 @@
         }
     .end annotation
 
-    .line 1069
+    .line 1173
     invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$Builder;->setZslDisabled(Z)Landroidx/camera/core/ImageAnalysis$Builder;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

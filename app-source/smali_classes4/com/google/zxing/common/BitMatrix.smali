@@ -62,13 +62,13 @@
 
     .line 60
     :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const-string p2, "Both dimensions must be greater than 0"
+    const-string p1, "Both dimensions must be greater than 0"
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method private constructor <init>(III[I)V
@@ -159,9 +159,9 @@
     :cond_2
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public static parse(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/google/zxing/common/BitMatrix;
@@ -478,7 +478,7 @@
 .end method
 
 .method public clone()Lcom/google/zxing/common/BitMatrix;
-    .locals 5
+    .locals 4
 
     .line 534
     new-instance v0, Lcom/google/zxing/common/BitMatrix;
@@ -489,21 +489,21 @@
 
     iget v3, p0, Lcom/google/zxing/common/BitMatrix;->rowSize:I
 
-    iget-object v4, p0, Lcom/google/zxing/common/BitMatrix;->bits:[I
+    iget-object p0, p0, Lcom/google/zxing/common/BitMatrix;->bits:[I
 
-    invoke-virtual {v4}, [I->clone()Ljava/lang/Object;
+    invoke-virtual {p0}, [I->clone()Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object p0
 
-    check-cast v4, [I
+    check-cast p0, [I
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/google/zxing/common/BitMatrix;-><init>(III[I)V
+    invoke-direct {v0, v1, v2, v3, p0}, Lcom/google/zxing/common/BitMatrix;-><init>(III[I)V
 
     return-object v0
 .end method
 
 .method public bridge synthetic clone()Ljava/lang/Object;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/CloneNotSupportedException;
@@ -513,9 +513,9 @@
     .line 36
     invoke-virtual {p0}, Lcom/google/zxing/common/BitMatrix;->clone()Lcom/google/zxing/common/BitMatrix;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -553,20 +553,20 @@
 
     if-ne v0, v2, :cond_1
 
-    iget-object v0, p0, Lcom/google/zxing/common/BitMatrix;->bits:[I
+    iget-object p0, p0, Lcom/google/zxing/common/BitMatrix;->bits:[I
 
     iget-object p1, p1, Lcom/google/zxing/common/BitMatrix;->bits:[I
 
     .line 479
-    invoke-static {v0, p1}, Ljava/util/Arrays;->equals([I[I)Z
+    invoke-static {p0, p1}, Ljava/util/Arrays;->equals([I[I)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_1
+    if-eqz p0, :cond_1
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_1
     return v1
@@ -603,7 +603,7 @@
 .end method
 
 .method public flip(II)V
-    .locals 3
+    .locals 2
 
     .line 188
     iget v0, p0, Lcom/google/zxing/common/BitMatrix;->rowSize:I
@@ -615,19 +615,19 @@
     add-int/2addr p2, v0
 
     .line 189
-    iget-object v0, p0, Lcom/google/zxing/common/BitMatrix;->bits:[I
+    iget-object p0, p0, Lcom/google/zxing/common/BitMatrix;->bits:[I
 
-    aget v1, v0, p2
+    aget v0, p0, p2
 
     and-int/lit8 p1, p1, 0x1f
 
-    const/4 v2, 0x1
+    const/4 v1, 0x1
 
-    shl-int p1, v2, p1
+    shl-int p1, v1, p1
 
-    xor-int/2addr p1, v1
+    xor-int/2addr p1, v0
 
-    aput p1, v0, p2
+    aput p1, p0, p2
 
     return-void
 .end method
@@ -645,30 +645,30 @@
     add-int/2addr p2, v0
 
     .line 162
-    iget-object v0, p0, Lcom/google/zxing/common/BitMatrix;->bits:[I
+    iget-object p0, p0, Lcom/google/zxing/common/BitMatrix;->bits:[I
 
-    aget p2, v0, p2
+    aget p0, p0, p2
 
     and-int/lit8 p1, p1, 0x1f
 
-    ushr-int p1, p2, p1
+    ushr-int/2addr p0, p1
 
-    const/4 p2, 0x1
+    const/4 p1, 0x1
 
-    and-int/2addr p1, p2
+    and-int/2addr p0, p1
 
-    if-eqz p1, :cond_0
-
-    return p2
-
-    :cond_0
-    const/4 p1, 0x0
+    if-eqz p0, :cond_0
 
     return p1
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
 .method public getBottomRightOnBit()[I
-    .locals 5
+    .locals 4
 
     .line 430
     iget-object v0, p0, Lcom/google/zxing/common/BitMatrix;->bits:[I
@@ -694,9 +694,9 @@
     :cond_0
     if-gez v0, :cond_1
 
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return-object v0
+    return-object p0
 
     .line 438
     :cond_1
@@ -710,30 +710,30 @@
     mul-int/lit8 v1, v1, 0x20
 
     .line 441
-    iget-object v3, p0, Lcom/google/zxing/common/BitMatrix;->bits:[I
+    iget-object p0, p0, Lcom/google/zxing/common/BitMatrix;->bits:[I
 
-    aget v0, v3, v0
+    aget p0, p0, v0
 
-    const/16 v3, 0x1f
+    const/16 v0, 0x1f
 
     :goto_1
-    ushr-int v4, v0, v3
+    ushr-int v3, p0, v0
 
-    if-nez v4, :cond_2
+    if-nez v3, :cond_2
 
-    add-int/lit8 v3, v3, -0x1
+    add-int/lit8 v0, v0, -0x1
 
     goto :goto_1
 
     :cond_2
-    add-int/2addr v1, v3
+    add-int/2addr v1, v0
 
     .line 448
     filled-new-array {v1, v2}, [I
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getEnclosingRectangle()[I
@@ -864,24 +864,24 @@
     .line 401
     filled-new-array {v0, v1, v2, v4}, [I
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 
     :cond_9
     :goto_4
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getHeight()I
-    .locals 1
+    .locals 0
 
     .line 462
-    iget v0, p0, Lcom/google/zxing/common/BitMatrix;->height:I
+    iget p0, p0, Lcom/google/zxing/common/BitMatrix;->height:I
 
-    return v0
+    return p0
 .end method
 
 .method public getRow(ILcom/google/zxing/common/BitArray;)Lcom/google/zxing/common/BitArray;
@@ -949,16 +949,16 @@
 .end method
 
 .method public getRowSize()I
-    .locals 1
+    .locals 0
 
     .line 469
-    iget v0, p0, Lcom/google/zxing/common/BitMatrix;->rowSize:I
+    iget p0, p0, Lcom/google/zxing/common/BitMatrix;->rowSize:I
 
-    return v0
+    return p0
 .end method
 
 .method public getTopLeftOnBit()[I
-    .locals 5
+    .locals 4
 
     const/4 v0, 0x0
 
@@ -986,20 +986,20 @@
 
     if-ne v1, v3, :cond_1
 
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return-object v0
+    return-object p0
 
     .line 417
     :cond_1
-    iget v3, p0, Lcom/google/zxing/common/BitMatrix;->rowSize:I
+    iget p0, p0, Lcom/google/zxing/common/BitMatrix;->rowSize:I
 
-    div-int v4, v1, v3
+    div-int v3, v1, p0
 
     .line 418
-    rem-int v3, v1, v3
+    rem-int p0, v1, p0
 
-    mul-int/lit8 v3, v3, 0x20
+    mul-int/lit8 p0, p0, 0x20
 
     .line 420
     aget v1, v2, v1
@@ -1016,23 +1016,23 @@
     goto :goto_1
 
     :cond_2
-    add-int/2addr v3, v0
+    add-int/2addr p0, v0
 
     .line 426
-    filled-new-array {v3, v4}, [I
+    filled-new-array {p0, v3}, [I
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getWidth()I
-    .locals 1
+    .locals 0
 
     .line 455
-    iget v0, p0, Lcom/google/zxing/common/BitMatrix;->width:I
+    iget p0, p0, Lcom/google/zxing/common/BitMatrix;->width:I
 
-    return v0
+    return p0
 .end method
 
 .method public hashCode()I
@@ -1062,13 +1062,13 @@
     mul-int/lit8 v1, v1, 0x1f
 
     .line 488
-    iget-object v0, p0, Lcom/google/zxing/common/BitMatrix;->bits:[I
+    iget-object p0, p0, Lcom/google/zxing/common/BitMatrix;->bits:[I
 
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
+    invoke-static {p0}, Ljava/util/Arrays;->hashCode([I)I
 
-    move-result v0
+    move-result p0
 
-    add-int/2addr v1, v0
+    add-int/2addr v1, p0
 
     return v1
 .end method
@@ -1103,13 +1103,13 @@
 
     .line 309
     :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const-string v0, "degrees must be a multiple of 0, 90, 180, or 270"
+    const-string p1, "degrees must be a multiple of 0, 90, 180, or 270"
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
     .line 302
     :cond_1
@@ -1301,7 +1301,7 @@
 .end method
 
 .method public set(II)V
-    .locals 3
+    .locals 2
 
     .line 172
     iget v0, p0, Lcom/google/zxing/common/BitMatrix;->rowSize:I
@@ -1313,19 +1313,19 @@
     add-int/2addr p2, v0
 
     .line 173
-    iget-object v0, p0, Lcom/google/zxing/common/BitMatrix;->bits:[I
+    iget-object p0, p0, Lcom/google/zxing/common/BitMatrix;->bits:[I
 
-    aget v1, v0, p2
+    aget v0, p0, p2
 
     and-int/lit8 p1, p1, 0x1f
 
-    const/4 v2, 0x1
+    const/4 v1, 0x1
 
-    shl-int p1, v2, p1
+    shl-int p1, v1, p1
 
-    or-int/2addr p1, v1
+    or-int/2addr p1, v0
 
-    aput p1, v0, p2
+    aput p1, p0, p2
 
     return-void
 .end method
@@ -1400,37 +1400,37 @@
 
     .line 250
     :cond_2
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const-string p2, "The region must fit inside the matrix"
+    const-string p1, "The region must fit inside the matrix"
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
     .line 245
     :cond_3
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const-string p2, "Height and width must be at least 1"
+    const-string p1, "Height and width must be at least 1"
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
     .line 242
     :cond_4
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const-string p2, "Left and top must be nonnegative"
+    const-string p1, "Left and top must be nonnegative"
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method public setRow(ILcom/google/zxing/common/BitArray;)V
-    .locals 3
+    .locals 2
 
     .line 286
     invoke-virtual {p2}, Lcom/google/zxing/common/BitArray;->getBitArray()[I
@@ -1439,13 +1439,13 @@
 
     iget-object v0, p0, Lcom/google/zxing/common/BitMatrix;->bits:[I
 
-    iget v1, p0, Lcom/google/zxing/common/BitMatrix;->rowSize:I
+    iget p0, p0, Lcom/google/zxing/common/BitMatrix;->rowSize:I
 
-    mul-int/2addr p1, v1
+    mul-int/2addr p1, p0
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    invoke-static {p2, v2, v0, p1, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-static {p2, v1, v0, p1, p0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     return-void
 .end method
@@ -1460,9 +1460,9 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/google/zxing/common/BitMatrix;->toString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public toString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -1473,9 +1473,9 @@
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/zxing/common/BitMatrix;->buildToString(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public toString(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -1486,13 +1486,13 @@
     .line 518
     invoke-direct {p0, p1, p2, p3}, Lcom/google/zxing/common/BitMatrix;->buildToString(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public unset(II)V
-    .locals 3
+    .locals 2
 
     .line 177
     iget v0, p0, Lcom/google/zxing/common/BitMatrix;->rowSize:I
@@ -1504,21 +1504,21 @@
     add-int/2addr p2, v0
 
     .line 178
-    iget-object v0, p0, Lcom/google/zxing/common/BitMatrix;->bits:[I
+    iget-object p0, p0, Lcom/google/zxing/common/BitMatrix;->bits:[I
 
-    aget v1, v0, p2
+    aget v0, p0, p2
 
     and-int/lit8 p1, p1, 0x1f
 
-    const/4 v2, 0x1
+    const/4 v1, 0x1
 
-    shl-int p1, v2, p1
+    shl-int p1, v1, p1
 
     not-int p1, p1
 
-    and-int/2addr p1, v1
+    and-int/2addr p1, v0
 
-    aput p1, v0, p2
+    aput p1, p0, p2
 
     return-void
 .end method
@@ -1611,11 +1611,11 @@
 
     .line 210
     :cond_2
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const-string v0, "input matrix dimensions do not match"
+    const-string p1, "input matrix dimensions do not match"
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method

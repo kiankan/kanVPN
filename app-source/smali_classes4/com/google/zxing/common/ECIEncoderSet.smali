@@ -35,7 +35,7 @@
     sput-object v0, Lcom/google/zxing/common/ECIEncoderSet;->ENCODERS:Ljava/util/List;
 
     .line 45
-    const-string v19, "windows-1256"
+    const-string/jumbo v19, "windows-1256"
 
     const-string v20, "Shift_JIS"
 
@@ -69,11 +69,11 @@
 
     const-string v15, "ISO-8859-16"
 
-    const-string v16, "windows-1250"
+    const-string/jumbo v16, "windows-1250"
 
-    const-string v17, "windows-1251"
+    const-string/jumbo v17, "windows-1251"
 
-    const-string v18, "windows-1252"
+    const-string/jumbo v18, "windows-1252"
 
     filled-new-array/range {v1 .. v20}, [Ljava/lang/String;
 
@@ -419,158 +419,158 @@
 
 # virtual methods
 .method public canEncode(CI)Z
-    .locals 2
+    .locals 1
 
     .line 183
-    iget-object v0, p0, Lcom/google/zxing/common/ECIEncoderSet;->encoders:[Ljava/nio/charset/CharsetEncoder;
+    iget-object p0, p0, Lcom/google/zxing/common/ECIEncoderSet;->encoders:[Ljava/nio/charset/CharsetEncoder;
 
-    aget-object p2, v0, p2
+    aget-object p0, p0, p2
 
     .line 184
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    const-string v1, ""
+    const-string v0, ""
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Ljava/nio/charset/CharsetEncoder;->canEncode(Ljava/lang/CharSequence;)Z
+    invoke-virtual {p0, p1}, Ljava/nio/charset/CharsetEncoder;->canEncode(Ljava/lang/CharSequence;)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public encode(CI)[B
-    .locals 2
+    .locals 1
 
     .line 189
-    iget-object v0, p0, Lcom/google/zxing/common/ECIEncoderSet;->encoders:[Ljava/nio/charset/CharsetEncoder;
+    iget-object p0, p0, Lcom/google/zxing/common/ECIEncoderSet;->encoders:[Ljava/nio/charset/CharsetEncoder;
 
-    aget-object p2, v0, p2
+    aget-object p0, p0, p2
 
     .line 191
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    const-string v1, ""
+    const-string v0, ""
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p2}, Ljava/nio/charset/CharsetEncoder;->charset()Ljava/nio/charset/Charset;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    return-object p1
+    invoke-virtual {p0}, Ljava/nio/charset/CharsetEncoder;->charset()Ljava/nio/charset/Charset;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method public encode(Ljava/lang/String;I)[B
-    .locals 1
+    .locals 0
 
     .line 196
-    iget-object v0, p0, Lcom/google/zxing/common/ECIEncoderSet;->encoders:[Ljava/nio/charset/CharsetEncoder;
+    iget-object p0, p0, Lcom/google/zxing/common/ECIEncoderSet;->encoders:[Ljava/nio/charset/CharsetEncoder;
 
-    aget-object p2, v0, p2
+    aget-object p0, p0, p2
 
     .line 197
-    invoke-virtual {p2}, Ljava/nio/charset/CharsetEncoder;->charset()Ljava/nio/charset/Charset;
+    invoke-virtual {p0}, Ljava/nio/charset/CharsetEncoder;->charset()Ljava/nio/charset/Charset;
 
-    move-result-object p2
+    move-result-object p0
 
-    invoke-virtual {p1, p2}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+    invoke-virtual {p1, p0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public getCharset(I)Ljava/nio/charset/Charset;
-    .locals 1
+    .locals 0
 
     .line 167
-    iget-object v0, p0, Lcom/google/zxing/common/ECIEncoderSet;->encoders:[Ljava/nio/charset/CharsetEncoder;
+    iget-object p0, p0, Lcom/google/zxing/common/ECIEncoderSet;->encoders:[Ljava/nio/charset/CharsetEncoder;
 
-    aget-object p1, v0, p1
+    aget-object p0, p0, p1
 
-    invoke-virtual {p1}, Ljava/nio/charset/CharsetEncoder;->charset()Ljava/nio/charset/Charset;
+    invoke-virtual {p0}, Ljava/nio/charset/CharsetEncoder;->charset()Ljava/nio/charset/Charset;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public getCharsetName(I)Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 162
-    iget-object v0, p0, Lcom/google/zxing/common/ECIEncoderSet;->encoders:[Ljava/nio/charset/CharsetEncoder;
+    iget-object p0, p0, Lcom/google/zxing/common/ECIEncoderSet;->encoders:[Ljava/nio/charset/CharsetEncoder;
 
-    aget-object p1, v0, p1
+    aget-object p0, p0, p1
 
-    invoke-virtual {p1}, Ljava/nio/charset/CharsetEncoder;->charset()Ljava/nio/charset/Charset;
+    invoke-virtual {p0}, Ljava/nio/charset/CharsetEncoder;->charset()Ljava/nio/charset/Charset;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-virtual {p1}, Ljava/nio/charset/Charset;->name()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/nio/charset/Charset;->name()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public getECIValue(I)I
-    .locals 1
+    .locals 0
 
     .line 171
-    iget-object v0, p0, Lcom/google/zxing/common/ECIEncoderSet;->encoders:[Ljava/nio/charset/CharsetEncoder;
+    iget-object p0, p0, Lcom/google/zxing/common/ECIEncoderSet;->encoders:[Ljava/nio/charset/CharsetEncoder;
 
-    aget-object p1, v0, p1
+    aget-object p0, p0, p1
 
-    invoke-virtual {p1}, Ljava/nio/charset/CharsetEncoder;->charset()Ljava/nio/charset/Charset;
+    invoke-virtual {p0}, Ljava/nio/charset/CharsetEncoder;->charset()Ljava/nio/charset/Charset;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-static {p1}, Lcom/google/zxing/common/CharacterSetECI;->getCharacterSetECI(Ljava/nio/charset/Charset;)Lcom/google/zxing/common/CharacterSetECI;
+    invoke-static {p0}, Lcom/google/zxing/common/CharacterSetECI;->getCharacterSetECI(Ljava/nio/charset/Charset;)Lcom/google/zxing/common/CharacterSetECI;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-virtual {p1}, Lcom/google/zxing/common/CharacterSetECI;->getValue()I
+    invoke-virtual {p0}, Lcom/google/zxing/common/CharacterSetECI;->getValue()I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public getPriorityEncoderIndex()I
-    .locals 1
+    .locals 0
 
     .line 178
-    iget v0, p0, Lcom/google/zxing/common/ECIEncoderSet;->priorityEncoderIndex:I
+    iget p0, p0, Lcom/google/zxing/common/ECIEncoderSet;->priorityEncoderIndex:I
 
-    return v0
+    return p0
 .end method
 
 .method public length()I
-    .locals 1
+    .locals 0
 
     .line 157
-    iget-object v0, p0, Lcom/google/zxing/common/ECIEncoderSet;->encoders:[Ljava/nio/charset/CharsetEncoder;
+    iget-object p0, p0, Lcom/google/zxing/common/ECIEncoderSet;->encoders:[Ljava/nio/charset/CharsetEncoder;
 
-    array-length v0, v0
+    array-length p0, p0
 
-    return v0
+    return p0
 .end method

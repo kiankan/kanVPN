@@ -26,7 +26,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 112
+    .line 110
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -66,7 +66,7 @@
 
     if-nez p0, :cond_0
 
-    .line 108
+    .line 106
     invoke-static {}, Landroidx/camera/core/impl/utils/Optional;->absent()Landroidx/camera/core/impl/utils/Optional;
 
     move-result-object p0
@@ -93,7 +93,7 @@
         }
     .end annotation
 
-    .line 95
+    .line 94
     new-instance v0, Landroidx/camera/core/impl/utils/Present;
 
     invoke-static {p0}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;

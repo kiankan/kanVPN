@@ -26,7 +26,7 @@
 .method public constructor <init>(Landroidx/camera/core/DynamicRange;Landroidx/camera/core/processing/ShaderProvider;)V
     .locals 0
 
-    .line 347
+    .line 345
     invoke-virtual {p1}, Landroidx/camera/core/DynamicRange;->is10BitHdr()Z
 
     move-result p1
@@ -40,27 +40,27 @@
     :cond_0
     sget-object p1, Landroidx/camera/core/processing/util/GLUtils;->DEFAULT_VERTEX_SHADER:Ljava/lang/String;
 
-    .line 348
+    .line 346
     :goto_0
     invoke-static {p2}, Landroidx/camera/core/processing/util/GLUtils;->access$000(Landroidx/camera/core/processing/ShaderProvider;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 347
+    .line 345
     invoke-direct {p0, p1, p2}, Landroidx/camera/core/processing/util/GLUtils$Program2D;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p1, -0x1
 
-    .line 333
+    .line 331
     iput p1, p0, Landroidx/camera/core/processing/util/GLUtils$SamplerShaderProgram;->mSamplerLoc:I
 
-    .line 334
+    .line 332
     iput p1, p0, Landroidx/camera/core/processing/util/GLUtils$SamplerShaderProgram;->mTexMatrixLoc:I
 
-    .line 335
+    .line 333
     iput p1, p0, Landroidx/camera/core/processing/util/GLUtils$SamplerShaderProgram;->mTexCoordLoc:I
 
-    .line 350
+    .line 348
     invoke-direct {p0}, Landroidx/camera/core/processing/util/GLUtils$SamplerShaderProgram;->loadLocations()V
 
     return-void
@@ -69,7 +69,7 @@
 .method public constructor <init>(Landroidx/camera/core/DynamicRange;Landroidx/camera/core/processing/util/GLUtils$InputFormat;)V
     .locals 0
 
-    .line 341
+    .line 339
     invoke-static {p1, p2}, Landroidx/camera/core/processing/util/GLUtils$SamplerShaderProgram;->resolveDefaultShaderProvider(Landroidx/camera/core/DynamicRange;Landroidx/camera/core/processing/util/GLUtils$InputFormat;)Landroidx/camera/core/processing/ShaderProvider;
 
     move-result-object p2
@@ -82,13 +82,13 @@
 .method private loadLocations()V
     .locals 2
 
-    .line 379
+    .line 377
     invoke-static {p0}, Landroidx/camera/core/processing/util/GLUtils$Program2D;->access$100(Landroidx/camera/core/processing/util/GLUtils$Program2D;)V
 
-    .line 380
+    .line 378
     iget v0, p0, Landroidx/camera/core/processing/util/GLUtils$SamplerShaderProgram;->mProgramHandle:I
 
-    const-string v1, "sTexture"
+    const-string/jumbo v1, "sTexture"
 
     invoke-static {v0, v1}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
 
@@ -96,10 +96,10 @@
 
     iput v0, p0, Landroidx/camera/core/processing/util/GLUtils$SamplerShaderProgram;->mSamplerLoc:I
 
-    .line 381
+    .line 379
     invoke-static {v0, v1}, Landroidx/camera/core/processing/util/GLUtils;->checkLocationOrThrow(ILjava/lang/String;)V
 
-    .line 382
+    .line 380
     iget v0, p0, Landroidx/camera/core/processing/util/GLUtils$SamplerShaderProgram;->mProgramHandle:I
 
     const-string v1, "aTextureCoord"
@@ -110,13 +110,13 @@
 
     iput v0, p0, Landroidx/camera/core/processing/util/GLUtils$SamplerShaderProgram;->mTexCoordLoc:I
 
-    .line 383
+    .line 381
     invoke-static {v0, v1}, Landroidx/camera/core/processing/util/GLUtils;->checkLocationOrThrow(ILjava/lang/String;)V
 
-    .line 384
+    .line 382
     iget v0, p0, Landroidx/camera/core/processing/util/GLUtils$SamplerShaderProgram;->mProgramHandle:I
 
-    const-string v1, "uTexMatrix"
+    const-string/jumbo v1, "uTexMatrix"
 
     invoke-static {v0, v1}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
 
@@ -124,7 +124,7 @@
 
     iput v0, p0, Landroidx/camera/core/processing/util/GLUtils$SamplerShaderProgram;->mTexMatrixLoc:I
 
-    .line 385
+    .line 383
     invoke-static {v0, v1}, Landroidx/camera/core/processing/util/GLUtils;->checkLocationOrThrow(ILjava/lang/String;)V
 
     return-void
@@ -133,14 +133,14 @@
 .method private static resolveDefaultShaderProvider(Landroidx/camera/core/DynamicRange;Landroidx/camera/core/processing/util/GLUtils$InputFormat;)Landroidx/camera/core/processing/ShaderProvider;
     .locals 2
 
-    .line 391
+    .line 389
     invoke-virtual {p0}, Landroidx/camera/core/DynamicRange;->is10BitHdr()Z
 
     move-result p0
 
     if-eqz p0, :cond_2
 
-    .line 392
+    .line 390
     sget-object p0, Landroidx/camera/core/processing/util/GLUtils$InputFormat;->UNKNOWN:Landroidx/camera/core/processing/util/GLUtils$InputFormat;
 
     if-eq p1, p0, :cond_0
@@ -167,19 +167,19 @@
 
     invoke-static {p0, v0}, Landroidx/core/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
-    .line 394
+    .line 392
     sget-object p0, Landroidx/camera/core/processing/util/GLUtils$InputFormat;->YUV:Landroidx/camera/core/processing/util/GLUtils$InputFormat;
 
     if-ne p1, p0, :cond_1
 
-    .line 395
+    .line 393
     invoke-static {}, Landroidx/camera/core/processing/util/GLUtils;->access$200()Landroidx/camera/core/processing/ShaderProvider;
 
     move-result-object p0
 
     return-object p0
 
-    .line 397
+    .line 395
     :cond_1
     invoke-static {}, Landroidx/camera/core/processing/util/GLUtils;->access$300()Landroidx/camera/core/processing/ShaderProvider;
 
@@ -187,7 +187,7 @@
 
     return-object p0
 
-    .line 399
+    .line 397
     :cond_2
     invoke-static {}, Landroidx/camera/core/processing/util/GLUtils;->access$400()Landroidx/camera/core/processing/ShaderProvider;
 
@@ -199,21 +199,21 @@
 
 # virtual methods
 .method public updateTextureMatrix([F)V
-    .locals 3
+    .locals 2
+
+    .line 371
+    iget p0, p0, Landroidx/camera/core/processing/util/GLUtils$SamplerShaderProgram;->mTexMatrixLoc:I
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    invoke-static {p0, v0, v1, p1, v1}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZ[FI)V
 
     .line 373
-    iget v0, p0, Landroidx/camera/core/processing/util/GLUtils$SamplerShaderProgram;->mTexMatrixLoc:I
+    const-string p0, "glUniformMatrix4fv"
 
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2, p1, v2}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZ[FI)V
-
-    .line 375
-    const-string p1, "glUniformMatrix4fv"
-
-    invoke-static {p1}, Landroidx/camera/core/processing/util/GLUtils;->checkGlErrorOrThrow(Ljava/lang/String;)V
+    invoke-static {p0}, Landroidx/camera/core/processing/util/GLUtils;->checkGlErrorOrThrow(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -221,27 +221,27 @@
 .method public use()V
     .locals 7
 
-    .line 355
+    .line 353
     invoke-super {p0}, Landroidx/camera/core/processing/util/GLUtils$Program2D;->use()V
 
-    .line 357
+    .line 355
     iget v0, p0, Landroidx/camera/core/processing/util/GLUtils$SamplerShaderProgram;->mSamplerLoc:I
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
-    .line 360
+    .line 358
     iget v0, p0, Landroidx/camera/core/processing/util/GLUtils$SamplerShaderProgram;->mTexCoordLoc:I
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
-    .line 361
+    .line 359
     const-string v0, "glEnableVertexAttribArray"
 
     invoke-static {v0}, Landroidx/camera/core/processing/util/GLUtils;->checkGlErrorOrThrow(Ljava/lang/String;)V
 
-    .line 366
+    .line 364
     iget v1, p0, Landroidx/camera/core/processing/util/GLUtils$SamplerShaderProgram;->mTexCoordLoc:I
 
     const/4 v4, 0x0
@@ -256,10 +256,10 @@
 
     invoke-static/range {v1 .. v6}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
-    .line 368
-    const-string v0, "glVertexAttribPointer"
+    .line 366
+    const-string p0, "glVertexAttribPointer"
 
-    invoke-static {v0}, Landroidx/camera/core/processing/util/GLUtils;->checkGlErrorOrThrow(Ljava/lang/String;)V
+    invoke-static {p0}, Landroidx/camera/core/processing/util/GLUtils;->checkGlErrorOrThrow(Ljava/lang/String;)V
 
     return-void
 .end method

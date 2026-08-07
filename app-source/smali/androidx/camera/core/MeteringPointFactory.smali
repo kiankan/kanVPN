@@ -47,36 +47,36 @@
 .method public final createPoint(FF)Landroidx/camera/core/MeteringPoint;
     .locals 1
 
-    .line 121
+    .line 119
     invoke-static {}, Landroidx/camera/core/MeteringPointFactory;->getDefaultPointSize()F
 
     move-result v0
 
     invoke-virtual {p0, p1, p2, v0}, Landroidx/camera/core/MeteringPointFactory;->createPoint(FFF)Landroidx/camera/core/MeteringPoint;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final createPoint(FFF)Landroidx/camera/core/MeteringPoint;
-    .locals 2
+    .locals 1
 
-    .line 142
+    .line 139
     invoke-virtual {p0, p1, p2}, Landroidx/camera/core/MeteringPointFactory;->convertPoint(FF)Landroid/graphics/PointF;
 
     move-result-object p1
 
-    .line 143
+    .line 140
     new-instance p2, Landroidx/camera/core/MeteringPoint;
 
     iget v0, p1, Landroid/graphics/PointF;->x:F
 
     iget p1, p1, Landroid/graphics/PointF;->y:F
 
-    iget-object v1, p0, Landroidx/camera/core/MeteringPointFactory;->mSurfaceAspectRatio:Landroid/util/Rational;
+    iget-object p0, p0, Landroidx/camera/core/MeteringPointFactory;->mSurfaceAspectRatio:Landroid/util/Rational;
 
-    invoke-direct {p2, v0, p1, p3, v1}, Landroidx/camera/core/MeteringPoint;-><init>(FFFLandroid/util/Rational;)V
+    invoke-direct {p2, v0, p1, p3, p0}, Landroidx/camera/core/MeteringPoint;-><init>(FFFLandroid/util/Rational;)V
 
     return-object p2
 .end method
@@ -84,7 +84,7 @@
 .method protected setSurfaceAspectRatio(Landroid/util/Rational;)V
     .locals 0
 
-    .line 103
+    .line 102
     iput-object p1, p0, Landroidx/camera/core/MeteringPointFactory;->mSurfaceAspectRatio:Landroid/util/Rational;
 
     return-void

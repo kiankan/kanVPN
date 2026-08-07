@@ -44,7 +44,7 @@
 .method private static synthetic $values()[Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
     .locals 7
 
-    .line 54
+    .line 57
     sget-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;->UNKNOWN:Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
 
     sget-object v1, Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;->INACTIVE:Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
@@ -69,7 +69,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 57
+    .line 60
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
 
     const-string v1, "UNKNOWN"
@@ -80,7 +80,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;->UNKNOWN:Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
 
-    .line 60
+    .line 63
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
 
     const-string v1, "INACTIVE"
@@ -91,7 +91,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;->INACTIVE:Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
 
-    .line 63
+    .line 66
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
 
     const-string v1, "SCANNING"
@@ -102,7 +102,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;->SCANNING:Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
 
-    .line 66
+    .line 69
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
 
     const-string v1, "PASSIVE_FOCUSED"
@@ -113,7 +113,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;->PASSIVE_FOCUSED:Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
 
-    .line 69
+    .line 72
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
 
     const-string v1, "PASSIVE_NOT_FOCUSED"
@@ -124,7 +124,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;->PASSIVE_NOT_FOCUSED:Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
 
-    .line 72
+    .line 75
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
 
     const-string v1, "LOCKED_FOCUSED"
@@ -135,7 +135,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;->LOCKED_FOCUSED:Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
 
-    .line 75
+    .line 78
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
 
     const-string v1, "LOCKED_NOT_FOCUSED"
@@ -146,7 +146,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;->LOCKED_NOT_FOCUSED:Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
 
-    .line 54
+    .line 57
     invoke-static {}, Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;->$values()[Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
 
     move-result-object v0
@@ -175,7 +175,7 @@
         }
     .end annotation
 
-    .line 54
+    .line 57
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -192,7 +192,7 @@
         }
     .end annotation
 
-    .line 54
+    .line 57
     const-class v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -207,7 +207,7 @@
 .method public static values()[Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
     .locals 1
 
-    .line 54
+    .line 57
     sget-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;->$VALUES:[Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
 
     invoke-virtual {v0}, [Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;->clone()Ljava/lang/Object;

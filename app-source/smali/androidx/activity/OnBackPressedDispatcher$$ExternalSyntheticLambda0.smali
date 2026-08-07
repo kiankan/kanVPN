@@ -3,7 +3,7 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/navigationevent/OnBackCompletedFallback;
+.implements Lkotlin/jvm/functions/Function0;
 
 
 # instance fields
@@ -24,13 +24,15 @@
 
 
 # virtual methods
-.method public final onBackCompletedFallback()V
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Landroidx/activity/OnBackPressedDispatcher$$ExternalSyntheticLambda0;->f$0:Landroidx/activity/OnBackPressedDispatcher;
+    iget-object p0, p0, Landroidx/activity/OnBackPressedDispatcher$$ExternalSyntheticLambda0;->f$0:Landroidx/activity/OnBackPressedDispatcher;
 
-    invoke-static {v0}, Landroidx/activity/OnBackPressedDispatcher;->$r8$lambda$P3kz-RLc-daaeV_hw-lzaGZuvuU(Landroidx/activity/OnBackPressedDispatcher;)V
+    invoke-static {p0}, Landroidx/activity/OnBackPressedDispatcher;->eventInput_delegate$lambda$0(Landroidx/activity/OnBackPressedDispatcher;)Landroidx/activity/OnBackPressedDispatcher$OnBackPressedEventInput;
 
-    return-void
+    move-result-object p0
+
+    return-object p0
 .end method

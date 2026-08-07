@@ -14,10 +14,10 @@
 .method public constructor <init>(Landroidx/camera/core/impl/CameraCaptureResult;)V
     .locals 0
 
-    .line 32
+    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
+    .line 35
     iput-object p1, p0, Landroidx/camera/core/internal/CameraCaptureResultImageInfo;->mCameraCaptureResult:Landroidx/camera/core/impl/CameraCaptureResult;
 
     return-void
@@ -26,53 +26,70 @@
 
 # virtual methods
 .method public getCameraCaptureResult()Landroidx/camera/core/impl/CameraCaptureResult;
-    .locals 1
+    .locals 0
 
-    .line 65
-    iget-object v0, p0, Landroidx/camera/core/internal/CameraCaptureResultImageInfo;->mCameraCaptureResult:Landroidx/camera/core/impl/CameraCaptureResult;
+    .line 70
+    iget-object p0, p0, Landroidx/camera/core/internal/CameraCaptureResultImageInfo;->mCameraCaptureResult:Landroidx/camera/core/impl/CameraCaptureResult;
 
-    return-object v0
+    return-object p0
+.end method
+
+.method public getFlashState()I
+    .locals 0
+
+    .line 61
+    iget-object p0, p0, Landroidx/camera/core/internal/CameraCaptureResultImageInfo;->mCameraCaptureResult:Landroidx/camera/core/impl/CameraCaptureResult;
+
+    invoke-interface {p0}, Landroidx/camera/core/impl/CameraCaptureResult;->getFlashState()Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;->toFlashState()I
+
+    move-result p0
+
+    return p0
 .end method
 
 .method public getRotationDegrees()I
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public getSensorToBufferTransformMatrix()Landroid/graphics/Matrix;
-    .locals 1
+    .locals 0
 
     .line 55
-    new-instance v0, Landroid/graphics/Matrix;
+    new-instance p0, Landroid/graphics/Matrix;
 
-    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
+    invoke-direct {p0}, Landroid/graphics/Matrix;-><init>()V
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getTagBundle()Landroidx/camera/core/impl/TagBundle;
-    .locals 1
+    .locals 0
 
-    .line 39
-    iget-object v0, p0, Landroidx/camera/core/internal/CameraCaptureResultImageInfo;->mCameraCaptureResult:Landroidx/camera/core/impl/CameraCaptureResult;
+    .line 40
+    iget-object p0, p0, Landroidx/camera/core/internal/CameraCaptureResultImageInfo;->mCameraCaptureResult:Landroidx/camera/core/impl/CameraCaptureResult;
 
-    invoke-interface {v0}, Landroidx/camera/core/impl/CameraCaptureResult;->getTagBundle()Landroidx/camera/core/impl/TagBundle;
+    invoke-interface {p0}, Landroidx/camera/core/impl/CameraCaptureResult;->getTagBundle()Landroidx/camera/core/impl/TagBundle;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getTimestamp()J
     .locals 2
 
-    .line 44
-    iget-object v0, p0, Landroidx/camera/core/internal/CameraCaptureResultImageInfo;->mCameraCaptureResult:Landroidx/camera/core/impl/CameraCaptureResult;
+    .line 45
+    iget-object p0, p0, Landroidx/camera/core/internal/CameraCaptureResultImageInfo;->mCameraCaptureResult:Landroidx/camera/core/impl/CameraCaptureResult;
 
-    invoke-interface {v0}, Landroidx/camera/core/impl/CameraCaptureResult;->getTimestamp()J
+    invoke-interface {p0}, Landroidx/camera/core/impl/CameraCaptureResult;->getTimestamp()J
 
     move-result-wide v0
 
@@ -80,12 +97,12 @@
 .end method
 
 .method public populateExifData(Landroidx/camera/core/impl/utils/ExifData$Builder;)V
-    .locals 1
+    .locals 0
 
-    .line 60
-    iget-object v0, p0, Landroidx/camera/core/internal/CameraCaptureResultImageInfo;->mCameraCaptureResult:Landroidx/camera/core/impl/CameraCaptureResult;
+    .line 66
+    iget-object p0, p0, Landroidx/camera/core/internal/CameraCaptureResultImageInfo;->mCameraCaptureResult:Landroidx/camera/core/impl/CameraCaptureResult;
 
-    invoke-interface {v0, p1}, Landroidx/camera/core/impl/CameraCaptureResult;->populateExifData(Landroidx/camera/core/impl/utils/ExifData$Builder;)V
+    invoke-interface {p0, p1}, Landroidx/camera/core/impl/CameraCaptureResult;->populateExifData(Landroidx/camera/core/impl/utils/ExifData$Builder;)V
 
     return-void
 .end method

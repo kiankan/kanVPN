@@ -198,7 +198,7 @@
 
 # virtual methods
 .method public getByteSegments()Ljava/util/List;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -208,99 +208,99 @@
     .end annotation
 
     .line 117
-    iget-object v0, p0, Lcom/google/zxing/common/DecoderResult;->byteSegments:Ljava/util/List;
+    iget-object p0, p0, Lcom/google/zxing/common/DecoderResult;->byteSegments:Ljava/util/List;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getECLevel()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 124
-    iget-object v0, p0, Lcom/google/zxing/common/DecoderResult;->ecLevel:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/common/DecoderResult;->ecLevel:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getErasures()Ljava/lang/Integer;
-    .locals 1
+    .locals 0
 
     .line 142
-    iget-object v0, p0, Lcom/google/zxing/common/DecoderResult;->erasures:Ljava/lang/Integer;
+    iget-object p0, p0, Lcom/google/zxing/common/DecoderResult;->erasures:Ljava/lang/Integer;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getErrorsCorrected()Ljava/lang/Integer;
-    .locals 1
+    .locals 0
 
     .line 131
-    iget-object v0, p0, Lcom/google/zxing/common/DecoderResult;->errorsCorrected:Ljava/lang/Integer;
+    iget-object p0, p0, Lcom/google/zxing/common/DecoderResult;->errorsCorrected:Ljava/lang/Integer;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getNumBits()I
-    .locals 1
+    .locals 0
 
     .line 95
-    iget v0, p0, Lcom/google/zxing/common/DecoderResult;->numBits:I
+    iget p0, p0, Lcom/google/zxing/common/DecoderResult;->numBits:I
 
-    return v0
+    return p0
 .end method
 
 .method public getOther()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
     .line 153
-    iget-object v0, p0, Lcom/google/zxing/common/DecoderResult;->other:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/google/zxing/common/DecoderResult;->other:Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getRawBytes()[B
-    .locals 1
+    .locals 0
 
     .line 87
-    iget-object v0, p0, Lcom/google/zxing/common/DecoderResult;->rawBytes:[B
+    iget-object p0, p0, Lcom/google/zxing/common/DecoderResult;->rawBytes:[B
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getStructuredAppendParity()I
-    .locals 1
+    .locals 0
 
     .line 165
-    iget v0, p0, Lcom/google/zxing/common/DecoderResult;->structuredAppendParity:I
+    iget p0, p0, Lcom/google/zxing/common/DecoderResult;->structuredAppendParity:I
 
-    return v0
+    return p0
 .end method
 
 .method public getStructuredAppendSequenceNumber()I
-    .locals 1
+    .locals 0
 
     .line 169
-    iget v0, p0, Lcom/google/zxing/common/DecoderResult;->structuredAppendSequenceNumber:I
+    iget p0, p0, Lcom/google/zxing/common/DecoderResult;->structuredAppendSequenceNumber:I
 
-    return v0
+    return p0
 .end method
 
 .method public getSymbologyModifier()I
-    .locals 1
+    .locals 0
 
     .line 173
-    iget v0, p0, Lcom/google/zxing/common/DecoderResult;->symbologyModifier:I
+    iget p0, p0, Lcom/google/zxing/common/DecoderResult;->symbologyModifier:I
 
-    return v0
+    return p0
 .end method
 
 .method public getText()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 110
-    iget-object v0, p0, Lcom/google/zxing/common/DecoderResult;->text:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/common/DecoderResult;->text:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public hasStructuredAppend()Z
@@ -311,18 +311,18 @@
 
     if-ltz v0, :cond_0
 
-    iget v0, p0, Lcom/google/zxing/common/DecoderResult;->structuredAppendSequenceNumber:I
+    iget p0, p0, Lcom/google/zxing/common/DecoderResult;->structuredAppendSequenceNumber:I
 
-    if-ltz v0, :cond_0
+    if-ltz p0, :cond_0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public setErasures(Ljava/lang/Integer;)V

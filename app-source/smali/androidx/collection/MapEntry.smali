@@ -43,7 +43,7 @@
     k = 0x1
     mv = {
         0x1,
-        0x8,
+        0x9,
         0x0
     }
     xi = 0x30
@@ -77,7 +77,7 @@
         }
     .end annotation
 
-    .line 1829
+    .line 1402
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Landroidx/collection/MapEntry;->key:Ljava/lang/Object;
@@ -90,46 +90,46 @@
 
 # virtual methods
 .method public getKey()Ljava/lang/Object;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TK;"
         }
     .end annotation
 
-    .line 1829
-    iget-object v0, p0, Landroidx/collection/MapEntry;->key:Ljava/lang/Object;
+    .line 1402
+    iget-object p0, p0, Landroidx/collection/MapEntry;->key:Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getValue()Ljava/lang/Object;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TV;"
         }
     .end annotation
 
-    .line 1829
-    iget-object v0, p0, Landroidx/collection/MapEntry;->value:Ljava/lang/Object;
+    .line 1402
+    iget-object p0, p0, Landroidx/collection/MapEntry;->value:Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public setValue(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TV;)TV;"
         }
     .end annotation
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    const-string v0, "Operation is not supported for read-only collection"
+    const-string p1, "Operation is not supported for read-only collection"
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method

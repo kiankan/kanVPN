@@ -3,6 +3,7 @@
 .source "SourceFile"
 
 # interfaces
+.implements Lj$/time/temporal/TemporalAmount;
 .implements Ljava/lang/Comparable;
 .implements Ljava/io/Serializable;
 
@@ -11,6 +12,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
+        "Lj$/time/temporal/TemporalAmount;",
         "Ljava/lang/Comparable<",
         "Lj$/time/Duration;",
         ">;",
@@ -236,16 +238,16 @@
 .end method
 
 .method private readObject(Ljava/io/ObjectInputStream;)V
-    .locals 1
+    .locals 0
 
     .line 1543
-    new-instance p1, Ljava/io/InvalidObjectException;
+    new-instance p0, Ljava/io/InvalidObjectException;
 
-    const-string v0, "Deserialization via serialization delegate"
+    const-string p1, "Deserialization via serialization delegate"
 
-    invoke-direct {p1, v0}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method private writeReplace()Ljava/lang/Object;
@@ -263,6 +265,46 @@
 
 
 # virtual methods
+.method public addTo(Lj$/time/temporal/Temporal;)Lj$/time/temporal/Temporal;
+    .locals 4
+
+    .line 1101
+    iget-wide v0, p0, Lj$/time/Duration;->seconds:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v2, v0, v2
+
+    if-eqz v2, :cond_0
+
+    .line 1102
+    sget-object v2, Lj$/time/temporal/ChronoUnit;->SECONDS:Lj$/time/temporal/ChronoUnit;
+
+    invoke-interface {p1, v0, v1, v2}, Lj$/time/temporal/Temporal;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/temporal/Temporal;
+
+    move-result-object p1
+
+    .line 1104
+    :cond_0
+    iget p0, p0, Lj$/time/Duration;->nanos:I
+
+    if-eqz p0, :cond_1
+
+    int-to-long v0, p0
+
+    .line 1105
+    sget-object p0, Lj$/time/temporal/ChronoUnit;->NANOS:Lj$/time/temporal/ChronoUnit;
+
+    invoke-interface {p1, v0, v1, p0}, Lj$/time/temporal/Temporal;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/temporal/Temporal;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_1
+    return-object p1
+.end method
+
 .method public compareTo(Lj$/time/Duration;)I
     .locals 4
 
@@ -281,13 +323,13 @@
 
     .line 1413
     :cond_0
-    iget v0, p0, Lj$/time/Duration;->nanos:I
+    iget p0, p0, Lj$/time/Duration;->nanos:I
 
     iget p1, p1, Lj$/time/Duration;->nanos:I
 
-    sub-int/2addr v0, p1
+    sub-int/2addr p0, p1
 
-    return v0
+    return p0
 .end method
 
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
@@ -298,9 +340,9 @@
 
     invoke-virtual {p0, p1}, Lj$/time/Duration;->compareTo(Lj$/time/Duration;)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -332,11 +374,11 @@
 
     if-nez v1, :cond_1
 
-    iget v1, p0, Lj$/time/Duration;->nanos:I
+    iget p0, p0, Lj$/time/Duration;->nanos:I
 
     iget p1, p1, Lj$/time/Duration;->nanos:I
 
-    if-ne v1, p1, :cond_1
+    if-ne p0, p1, :cond_1
 
     return v0
 
@@ -345,12 +387,12 @@
 .end method
 
 .method public getNano()I
-    .locals 1
+    .locals 0
 
     .line 643
-    iget v0, p0, Lj$/time/Duration;->nanos:I
+    iget p0, p0, Lj$/time/Duration;->nanos:I
 
-    return v0
+    return p0
 .end method
 
 .method public getSeconds()J
@@ -376,11 +418,11 @@
 
     long-to-int v0, v0
 
-    iget v1, p0, Lj$/time/Duration;->nanos:I
+    iget p0, p0, Lj$/time/Duration;->nanos:I
 
-    mul-int/lit8 v1, v1, 0x33
+    mul-int/lit8 p0, p0, 0x33
 
-    add-int/2addr v0, v1
+    add-int/2addr v0, p0
 
     return v0
 .end method
@@ -392,15 +434,15 @@
     iget-wide v0, p0, Lj$/time/Duration;->seconds:J
 
     .line 1218
-    iget v2, p0, Lj$/time/Duration;->nanos:I
+    iget p0, p0, Lj$/time/Duration;->nanos:I
 
-    int-to-long v2, v2
+    int-to-long v2, p0
 
     const-wide/16 v4, 0x0
 
-    cmp-long v4, v0, v4
+    cmp-long p0, v0, v4
 
-    if-gez v4, :cond_0
+    if-gez p0, :cond_0
 
     const-wide/16 v4, 0x1
 
@@ -411,10 +453,10 @@
     sub-long/2addr v2, v4
 
     :cond_0
-    const/16 v4, 0x3e8
+    const/16 p0, 0x3e8
 
     .line 1225
-    invoke-static {v0, v1, v4}, Lj$/time/Duration$$ExternalSyntheticBackport0;->m(JI)J
+    invoke-static {v0, v1, p0}, Lj$/time/Duration$0;->m(JI)J
 
     move-result-wide v0
 
@@ -423,6 +465,45 @@
     .line 1226
     div-long/2addr v2, v4
 
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->addExact(JJ)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public toNanos()J
+    .locals 8
+
+    .line 1240
+    iget-wide v0, p0, Lj$/time/Duration;->seconds:J
+
+    .line 1241
+    iget p0, p0, Lj$/time/Duration;->nanos:I
+
+    int-to-long v2, p0
+
+    const-wide/16 v4, 0x0
+
+    cmp-long p0, v0, v4
+
+    const-wide/32 v4, 0x3b9aca00
+
+    if-gez p0, :cond_0
+
+    const-wide/16 v6, 0x1
+
+    add-long/2addr v0, v6
+
+    sub-long/2addr v2, v4
+
+    .line 1248
+    :cond_0
+    invoke-static {v0, v1, v4, v5}, Ljava/lang/Math;->multiplyExact(JJ)J
+
+    move-result-wide v0
+
+    .line 1249
     invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->addExact(JJ)J
 
     move-result-wide v0
@@ -439,9 +520,9 @@
     if-ne p0, v0, :cond_0
 
     .line 1474
-    const-string v0, "PT0S"
+    const-string p0, "PT0S"
 
-    return-object v0
+    return-object p0
 
     .line 1476
     :cond_0
@@ -534,9 +615,9 @@
     .line 1492
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 
     .line 1494
     :cond_4
@@ -585,78 +666,77 @@
 
     cmp-long v2, v4, v2
 
+    .line 1508
+    iget p0, p0, Lj$/time/Duration;->nanos:I
+
     if-gez v2, :cond_7
 
+    const-wide/32 v2, 0x77359400
+
+    int-to-long v4, p0
+
+    sub-long/2addr v2, v4
+
     .line 1506
-    iget v2, p0, Lj$/time/Duration;->nanos:I
-
-    int-to-long v2, v2
-
-    const-wide/32 v4, 0x77359400
-
-    sub-long/2addr v4, v2
-
-    invoke-virtual {v1, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 1508
     :cond_7
-    iget v2, p0, Lj$/time/Duration;->nanos:I
-
-    int-to-long v2, v2
+    int-to-long v2, p0
 
     const-wide/32 v4, 0x3b9aca00
 
     add-long/2addr v2, v4
 
+    .line 1508
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     .line 1510
     :goto_1
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
 
-    move-result v2
+    move-result p0
 
-    add-int/lit8 v2, v2, -0x1
+    add-int/lit8 p0, p0, -0x1
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->charAt(I)C
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->charAt(I)C
 
-    move-result v2
+    move-result p0
 
-    const/16 v3, 0x30
+    const/16 v2, 0x30
 
-    if-ne v2, v3, :cond_8
+    if-ne p0, v2, :cond_8
 
     .line 1511
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
 
-    move-result v2
+    move-result p0
 
-    add-int/lit8 v2, v2, -0x1
+    add-int/lit8 p0, p0, -0x1
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->setLength(I)V
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->setLength(I)V
 
     goto :goto_1
 
     :cond_8
-    const/16 v2, 0x2e
+    const/16 p0, 0x2e
 
     .line 1513
-    invoke-virtual {v1, v0, v2}, Ljava/lang/StringBuilder;->setCharAt(IC)V
+    invoke-virtual {v1, v0, p0}, Ljava/lang/StringBuilder;->setCharAt(IC)V
 
     :cond_9
-    const/16 v0, 0x53
+    const/16 p0, 0x53
 
     .line 1515
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     .line 1516
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method writeExternal(Ljava/io/DataOutput;)V
@@ -668,9 +748,9 @@
     invoke-interface {p1, v0, v1}, Ljava/io/DataOutput;->writeLong(J)V
 
     .line 1548
-    iget v0, p0, Lj$/time/Duration;->nanos:I
+    iget p0, p0, Lj$/time/Duration;->nanos:I
 
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeInt(I)V
+    invoke-interface {p1, p0}, Ljava/io/DataOutput;->writeInt(I)V
 
     return-void
 .end method

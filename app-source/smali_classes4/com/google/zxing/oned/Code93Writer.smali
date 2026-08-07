@@ -432,168 +432,168 @@
 
 # virtual methods
 .method public encode(Ljava/lang/String;)[Z
-    .locals 7
+    .locals 6
 
     .line 39
     invoke-static {p1}, Lcom/google/zxing/oned/Code93Writer;->convertToExtended(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
     .line 40
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    const/16 v0, 0x50
+
+    if-gt p1, v0, :cond_1
+
+    .line 47
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    const/16 v1, 0x50
+    add-int/lit8 v0, v0, 0x4
 
-    if-gt v0, v1, :cond_1
+    mul-int/lit8 v0, v0, 0x9
 
-    .line 47
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    const/4 v1, 0x1
 
-    move-result v1
-
-    add-int/lit8 v1, v1, 0x4
-
-    mul-int/lit8 v1, v1, 0x9
-
-    const/4 v2, 0x1
-
-    add-int/2addr v1, v2
+    add-int/2addr v0, v1
 
     .line 49
-    new-array v1, v1, [Z
+    new-array v0, v0, [Z
 
     .line 52
-    sget v3, Lcom/google/zxing/oned/Code93Reader;->ASTERISK_ENCODING:I
+    sget v2, Lcom/google/zxing/oned/Code93Reader;->ASTERISK_ENCODING:I
 
-    const/4 v4, 0x0
+    const/4 v3, 0x0
 
-    invoke-static {v1, v4, v3}, Lcom/google/zxing/oned/Code93Writer;->appendPattern([ZII)I
+    invoke-static {v0, v3, v2}, Lcom/google/zxing/oned/Code93Writer;->appendPattern([ZII)I
 
-    move-result v3
+    move-result v2
 
     .line 54
     :goto_0
-    const-string v5, "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ-. $/+%abcd*"
+    const-string v4, "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ-. $/+%abcd*"
 
-    if-ge v4, v0, :cond_0
+    if-ge v3, p1, :cond_0
 
     .line 55
-    invoke-virtual {p1, v4}, Ljava/lang/String;->charAt(I)C
-
-    move-result v6
-
-    invoke-virtual {v5, v6}, Ljava/lang/String;->indexOf(I)I
+    invoke-virtual {p0, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->indexOf(I)I
+
+    move-result v4
 
     .line 56
-    sget-object v6, Lcom/google/zxing/oned/Code93Reader;->CHARACTER_ENCODINGS:[I
+    sget-object v5, Lcom/google/zxing/oned/Code93Reader;->CHARACTER_ENCODINGS:[I
 
-    aget v5, v6, v5
+    aget v4, v5, v4
 
-    invoke-static {v1, v3, v5}, Lcom/google/zxing/oned/Code93Writer;->appendPattern([ZII)I
+    invoke-static {v0, v2, v4}, Lcom/google/zxing/oned/Code93Writer;->appendPattern([ZII)I
 
-    move-result v5
+    move-result v4
 
-    add-int/2addr v3, v5
+    add-int/2addr v2, v4
 
-    add-int/lit8 v4, v4, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_0
-    const/16 v0, 0x14
+    const/16 p1, 0x14
 
     .line 60
-    invoke-static {p1, v0}, Lcom/google/zxing/oned/Code93Writer;->computeChecksumIndex(Ljava/lang/String;I)I
+    invoke-static {p0, p1}, Lcom/google/zxing/oned/Code93Writer;->computeChecksumIndex(Ljava/lang/String;I)I
 
-    move-result v0
+    move-result p1
 
     .line 61
-    sget-object v4, Lcom/google/zxing/oned/Code93Reader;->CHARACTER_ENCODINGS:[I
+    sget-object v3, Lcom/google/zxing/oned/Code93Reader;->CHARACTER_ENCODINGS:[I
 
-    aget v4, v4, v0
+    aget v3, v3, p1
 
-    invoke-static {v1, v3, v4}, Lcom/google/zxing/oned/Code93Writer;->appendPattern([ZII)I
+    invoke-static {v0, v2, v3}, Lcom/google/zxing/oned/Code93Writer;->appendPattern([ZII)I
 
-    move-result v4
+    move-result v3
 
-    add-int/2addr v3, v4
+    add-int/2addr v2, v3
 
     .line 64
-    new-instance v4, Ljava/lang/StringBuilder;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, v0}, Ljava/lang/String;->charAt(I)C
+    invoke-virtual {v4, p1}, Ljava/lang/String;->charAt(I)C
 
-    move-result p1
+    move-result p0
 
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    const/16 v0, 0xf
+    const/16 p1, 0xf
 
     .line 66
-    invoke-static {p1, v0}, Lcom/google/zxing/oned/Code93Writer;->computeChecksumIndex(Ljava/lang/String;I)I
+    invoke-static {p0, p1}, Lcom/google/zxing/oned/Code93Writer;->computeChecksumIndex(Ljava/lang/String;I)I
 
-    move-result p1
+    move-result p0
 
     .line 67
-    sget-object v0, Lcom/google/zxing/oned/Code93Reader;->CHARACTER_ENCODINGS:[I
+    sget-object p1, Lcom/google/zxing/oned/Code93Reader;->CHARACTER_ENCODINGS:[I
 
-    aget p1, v0, p1
+    aget p0, p1, p0
 
-    invoke-static {v1, v3, p1}, Lcom/google/zxing/oned/Code93Writer;->appendPattern([ZII)I
+    invoke-static {v0, v2, p0}, Lcom/google/zxing/oned/Code93Writer;->appendPattern([ZII)I
 
-    move-result p1
+    move-result p0
 
-    add-int/2addr v3, p1
+    add-int/2addr v2, p0
 
     .line 70
-    sget p1, Lcom/google/zxing/oned/Code93Reader;->ASTERISK_ENCODING:I
+    sget p0, Lcom/google/zxing/oned/Code93Reader;->ASTERISK_ENCODING:I
 
-    invoke-static {v1, v3, p1}, Lcom/google/zxing/oned/Code93Writer;->appendPattern([ZII)I
+    invoke-static {v0, v2, p0}, Lcom/google/zxing/oned/Code93Writer;->appendPattern([ZII)I
 
-    move-result p1
+    move-result p0
 
-    add-int/2addr v3, p1
+    add-int/2addr v2, p0
 
     .line 73
-    aput-boolean v2, v1, v3
+    aput-boolean v1, v0, v2
 
-    return-object v1
+    return-object v0
 
     .line 42
     :cond_1
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v2, "Requested contents should be less than 80 digits long after converting to extended encoding, but got "
+    const-string v1, "Requested contents should be less than 80 digits long after converting to extended encoding, but got "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p1
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method protected getSupportedWriteFormats()Ljava/util/Collection;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -604,11 +604,11 @@
     .end annotation
 
     .line 30
-    sget-object v0, Lcom/google/zxing/BarcodeFormat;->CODE_93:Lcom/google/zxing/BarcodeFormat;
+    sget-object p0, Lcom/google/zxing/BarcodeFormat;->CODE_93:Lcom/google/zxing/BarcodeFormat;
 
-    invoke-static {v0}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+    invoke-static {p0}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

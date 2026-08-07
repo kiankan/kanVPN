@@ -24,10 +24,10 @@
 
     if-ne p1, v1, :cond_0
 
-    const/4 p1, 0x3
+    const/4 p0, 0x3
 
     .line 29
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     return v0
 
@@ -42,10 +42,10 @@
 
     add-int/lit8 p1, p1, -0x2c
 
-    int-to-char p1, p1
+    int-to-char p0, p1
 
     .line 33
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     return v0
 
@@ -60,10 +60,10 @@
 
     add-int/lit8 p1, p1, -0x53
 
-    int-to-char p1, p1
+    int-to-char p0, p1
 
     .line 37
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     return v0
 
@@ -92,10 +92,10 @@
 
     add-int/lit8 p1, p1, -0x21
 
-    int-to-char p1, p1
+    int-to-char p0, p1
 
     .line 47
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     return v3
 
@@ -109,10 +109,10 @@
 
     add-int/lit8 p1, p1, -0x2b
 
-    int-to-char p1, p1
+    int-to-char p0, p1
 
     .line 52
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     return v3
 
@@ -130,10 +130,10 @@
 
     add-int/lit8 p1, p1, -0x45
 
-    int-to-char p1, p1
+    int-to-char p0, p1
 
     .line 57
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     return v3
 
@@ -160,10 +160,10 @@
 
     sub-int/2addr p1, v1
 
-    int-to-char p1, p1
+    int-to-char p0, p1
 
     .line 67
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     return v3
 
@@ -177,10 +177,10 @@
 
     sub-int/2addr p1, v0
 
-    int-to-char p1, p1
+    int-to-char p0, p1
 
     .line 72
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     return v3
 
@@ -197,17 +197,17 @@
     .line 77
     invoke-virtual {p0, p1, p2}, Lcom/google/zxing/datamatrix/encoder/TextEncoder;->encodeChar(CLjava/lang/StringBuilder;)I
 
-    move-result p1
+    move-result p0
 
-    add-int/2addr p1, v3
+    add-int/2addr p0, v3
 
-    return p1
+    return p0
 .end method
 
 .method public getEncodingMode()I
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x2
+    const/4 p0, 0x2
 
-    return v0
+    return p0
 .end method

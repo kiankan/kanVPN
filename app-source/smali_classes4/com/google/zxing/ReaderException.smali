@@ -73,14 +73,14 @@
 
 # virtual methods
 .method public final declared-synchronized fillInStackTrace()Ljava/lang/Throwable;
-    .locals 1
+    .locals 0
 
     monitor-enter p0
 
     .line 44
     monitor-exit p0
 
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return-object v0
+    return-object p0
 .end method

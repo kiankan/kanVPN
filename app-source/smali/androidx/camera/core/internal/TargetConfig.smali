@@ -55,6 +55,7 @@
 
     const-class v1, Ljava/lang/String;
 
+    .line 42
     invoke-static {v0, v1}, Landroidx/camera/core/impl/Config$Option;->create(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$Option;
 
     move-result-object v0
@@ -88,16 +89,16 @@
         }
     .end annotation
 
-    .line 75
+    .line 73
     sget-object v0, Landroidx/camera/core/internal/TargetConfig;->OPTION_TARGET_CLASS:Landroidx/camera/core/impl/Config$Option;
 
     invoke-interface {p0, v0}, Landroidx/camera/core/internal/TargetConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Ljava/lang/Class;
+    check-cast p0, Ljava/lang/Class;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getTargetClass(Ljava/lang/Class;)Ljava/lang/Class;
@@ -112,44 +113,44 @@
         }
     .end annotation
 
-    .line 63
+    .line 62
     sget-object v0, Landroidx/camera/core/internal/TargetConfig;->OPTION_TARGET_CLASS:Landroidx/camera/core/impl/Config$Option;
 
     invoke-interface {p0, v0, p1}, Landroidx/camera/core/internal/TargetConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Ljava/lang/Class;
+    check-cast p0, Ljava/lang/Class;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public getTargetName()Ljava/lang/String;
     .locals 1
 
-    .line 104
+    .line 100
     sget-object v0, Landroidx/camera/core/internal/TargetConfig;->OPTION_TARGET_NAME:Landroidx/camera/core/impl/Config$Option;
 
     invoke-interface {p0, v0}, Landroidx/camera/core/internal/TargetConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Ljava/lang/String;
+    check-cast p0, Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getTargetName(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 90
+    .line 87
     sget-object v0, Landroidx/camera/core/internal/TargetConfig;->OPTION_TARGET_NAME:Landroidx/camera/core/impl/Config$Option;
 
     invoke-interface {p0, v0, p1}, Landroidx/camera/core/internal/TargetConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Ljava/lang/String;
+    check-cast p0, Ljava/lang/String;
 
-    return-object p1
+    return-object p0
 .end method

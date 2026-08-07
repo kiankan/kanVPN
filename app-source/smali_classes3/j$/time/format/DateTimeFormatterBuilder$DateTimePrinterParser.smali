@@ -17,3 +17,6 @@
 # virtual methods
 .method public abstract format(Lj$/time/format/DateTimePrintContext;Ljava/lang/StringBuilder;)Z
 .end method
+
+.method public abstract parse(Lj$/time/format/DateTimeParseContext;Ljava/lang/CharSequence;I)I
+.end method

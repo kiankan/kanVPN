@@ -43,12 +43,12 @@
 .method public static toString(Landroidx/camera/core/impl/Quirks;)Ljava/lang/String;
     .locals 2
 
-    .line 116
+    .line 113
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 117
+    .line 114
     iget-object p0, p0, Landroidx/camera/core/impl/Quirks;->mQuirks:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -68,7 +68,7 @@
 
     check-cast v1, Landroidx/camera/core/impl/Quirk;
 
-    .line 118
+    .line 115
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -81,7 +81,7 @@
 
     goto :goto_0
 
-    .line 120
+    .line 117
     :cond_0
     const-string p0, " | "
 
@@ -95,18 +95,18 @@
 
 # virtual methods
 .method public addQuirkForTesting(Landroidx/camera/core/impl/Quirk;)V
-    .locals 1
+    .locals 0
 
-    .line 105
-    iget-object v0, p0, Landroidx/camera/core/impl/Quirks;->mQuirks:Ljava/util/List;
+    .line 103
+    iget-object p0, p0, Landroidx/camera/core/impl/Quirks;->mQuirks:Ljava/util/List;
 
-    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
 .method public contains(Ljava/lang/Class;)Z
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -117,49 +117,49 @@
         }
     .end annotation
 
-    .line 93
-    iget-object v0, p0, Landroidx/camera/core/impl/Quirks;->mQuirks:Ljava/util/List;
+    .line 91
+    iget-object p0, p0, Landroidx/camera/core/impl/Quirks;->mQuirks:Ljava/util/List;
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :cond_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    :cond_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    check-cast v0, Landroidx/camera/core/impl/Quirk;
 
-    move-result v1
+    .line 92
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-eqz v1, :cond_1
+    move-result-object v0
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
-    move-result-object v1
+    move-result v0
 
-    check-cast v1, Landroidx/camera/core/impl/Quirk;
+    if-eqz v0, :cond_0
 
-    .line 94
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 p0, 0x1
 
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
+    return p0
 
     :cond_1
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method public get(Ljava/lang/Class;)Landroidx/camera/core/impl/Quirk;
-    .locals 3
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
@@ -170,43 +170,43 @@
         }
     .end annotation
 
-    .line 53
-    iget-object v0, p0, Landroidx/camera/core/impl/Quirks;->mQuirks:Ljava/util/List;
+    .line 52
+    iget-object p0, p0, Landroidx/camera/core/impl/Quirks;->mQuirks:Ljava/util/List;
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :cond_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    :cond_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    check-cast v0, Landroidx/camera/core/impl/Quirk;
 
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 53
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
 
-    check-cast v1, Landroidx/camera/core/impl/Quirk;
+    if-ne v1, p1, :cond_0
 
-    .line 54
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
-
-    if-ne v2, p1, :cond_0
-
-    return-object v1
+    return-object v0
 
     :cond_1
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public getAll(Ljava/lang/Class;)Ljava/util/List;
-    .locals 4
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
@@ -219,45 +219,45 @@
         }
     .end annotation
 
-    .line 74
+    .line 72
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 75
-    iget-object v1, p0, Landroidx/camera/core/impl/Quirks;->mQuirks:Ljava/util/List;
+    .line 73
+    iget-object p0, p0, Landroidx/camera/core/impl/Quirks;->mQuirks:Ljava/util/List;
 
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object v1
+    move-result-object p0
 
     :cond_0
     :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_1
+    if-eqz v1, :cond_1
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/camera/core/impl/Quirk;
+
+    .line 74
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
 
-    check-cast v2, Landroidx/camera/core/impl/Quirk;
+    invoke-virtual {p1, v2}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
-    .line 76
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result v2
 
-    move-result-object v3
+    if-eqz v2, :cond_0
 
-    invoke-virtual {p1, v3}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    .line 77
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    .line 75
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 

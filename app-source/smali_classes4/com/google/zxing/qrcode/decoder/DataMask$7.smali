@@ -46,16 +46,16 @@
     .line 104
     rem-int/lit8 p1, p1, 0x6
 
-    const/4 p2, 0x3
+    const/4 p0, 0x3
 
-    if-ge p1, p2, :cond_0
+    if-ge p1, p0, :cond_0
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method

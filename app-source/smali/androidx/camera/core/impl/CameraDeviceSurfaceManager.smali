@@ -2,6 +2,9 @@
 .super Ljava/lang/Object;
 .source "CameraDeviceSurfaceManager.java"
 
+# interfaces
+.implements Landroidx/camera/core/impl/InternalCameraPresenceListener;
+
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
@@ -12,7 +15,7 @@
 
 
 # virtual methods
-.method public abstract getSuggestedStreamSpecs(ILjava/lang/String;Ljava/util/List;Ljava/util/Map;ZZ)Landroid/util/Pair;
+.method public abstract getSuggestedStreamSpecs(ILjava/lang/String;Ljava/util/List;Ljava/util/Map;Landroidx/camera/core/impl/stabilization/VideoStabilization;ZZZ)Landroidx/camera/core/impl/SurfaceStreamSpecQueryResult;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -25,20 +28,13 @@
             "*>;",
             "Ljava/util/List<",
             "Landroid/util/Size;",
-            ">;>;ZZ)",
-            "Landroid/util/Pair<",
-            "Ljava/util/Map<",
-            "Landroidx/camera/core/impl/UseCaseConfig<",
-            "*>;",
-            "Landroidx/camera/core/impl/StreamSpec;",
-            ">;",
-            "Ljava/util/Map<",
-            "Landroidx/camera/core/impl/AttachedSurfaceInfo;",
-            "Landroidx/camera/core/impl/StreamSpec;",
-            ">;>;"
+            ">;>;",
+            "Landroidx/camera/core/impl/stabilization/VideoStabilization;",
+            "ZZZ)",
+            "Landroidx/camera/core/impl/SurfaceStreamSpecQueryResult;"
         }
     .end annotation
 .end method
 
-.method public abstract transformSurfaceConfig(ILjava/lang/String;ILandroid/util/Size;)Landroidx/camera/core/impl/SurfaceConfig;
+.method public abstract transformSurfaceConfig(ILjava/lang/String;ILandroid/util/Size;Landroidx/camera/core/impl/StreamUseCase;)Landroidx/camera/core/impl/SurfaceConfig;
 .end method

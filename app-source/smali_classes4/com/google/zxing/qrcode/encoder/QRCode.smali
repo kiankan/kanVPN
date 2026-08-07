@@ -56,48 +56,48 @@
 
 # virtual methods
 .method public getECLevel()Lcom/google/zxing/qrcode/decoder/ErrorCorrectionLevel;
-    .locals 1
+    .locals 0
 
     .line 49
-    iget-object v0, p0, Lcom/google/zxing/qrcode/encoder/QRCode;->ecLevel:Lcom/google/zxing/qrcode/decoder/ErrorCorrectionLevel;
+    iget-object p0, p0, Lcom/google/zxing/qrcode/encoder/QRCode;->ecLevel:Lcom/google/zxing/qrcode/decoder/ErrorCorrectionLevel;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getMaskPattern()I
-    .locals 1
+    .locals 0
 
     .line 57
-    iget v0, p0, Lcom/google/zxing/qrcode/encoder/QRCode;->maskPattern:I
+    iget p0, p0, Lcom/google/zxing/qrcode/encoder/QRCode;->maskPattern:I
 
-    return v0
+    return p0
 .end method
 
 .method public getMatrix()Lcom/google/zxing/qrcode/encoder/ByteMatrix;
-    .locals 1
+    .locals 0
 
     .line 61
-    iget-object v0, p0, Lcom/google/zxing/qrcode/encoder/QRCode;->matrix:Lcom/google/zxing/qrcode/encoder/ByteMatrix;
+    iget-object p0, p0, Lcom/google/zxing/qrcode/encoder/QRCode;->matrix:Lcom/google/zxing/qrcode/encoder/ByteMatrix;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getMode()Lcom/google/zxing/qrcode/decoder/Mode;
-    .locals 1
+    .locals 0
 
     .line 45
-    iget-object v0, p0, Lcom/google/zxing/qrcode/encoder/QRCode;->mode:Lcom/google/zxing/qrcode/decoder/Mode;
+    iget-object p0, p0, Lcom/google/zxing/qrcode/encoder/QRCode;->mode:Lcom/google/zxing/qrcode/decoder/Mode;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getVersion()Lcom/google/zxing/qrcode/decoder/Version;
-    .locals 1
+    .locals 0
 
     .line 53
-    iget-object v0, p0, Lcom/google/zxing/qrcode/encoder/QRCode;->version:Lcom/google/zxing/qrcode/decoder/Version;
+    iget-object p0, p0, Lcom/google/zxing/qrcode/encoder/QRCode;->version:Lcom/google/zxing/qrcode/decoder/Version;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public setECLevel(Lcom/google/zxing/qrcode/decoder/ErrorCorrectionLevel;)V
@@ -201,9 +201,9 @@
     if-nez v1, :cond_0
 
     .line 77
-    const-string v1, "\n matrix: null\n"
+    const-string p0, "\n matrix: null\n"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
@@ -214,20 +214,20 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 80
-    iget-object v1, p0, Lcom/google/zxing/qrcode/encoder/QRCode;->matrix:Lcom/google/zxing/qrcode/encoder/ByteMatrix;
+    iget-object p0, p0, Lcom/google/zxing/qrcode/encoder/QRCode;->matrix:Lcom/google/zxing/qrcode/encoder/ByteMatrix;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     .line 82
     :goto_0
-    const-string v1, ">>\n"
+    const-string p0, ">>\n"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 83
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

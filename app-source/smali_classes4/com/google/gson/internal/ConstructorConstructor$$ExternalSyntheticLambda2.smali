@@ -6,18 +6,12 @@
 .implements Lcom/google/gson/internal/ObjectConstructor;
 
 
-# instance fields
-.field public final synthetic f$0:Ljava/lang/reflect/Type;
-
-
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/reflect/Type;)V
+.method public synthetic constructor <init>()V
     .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/google/gson/internal/ConstructorConstructor$$ExternalSyntheticLambda2;->f$0:Ljava/lang/reflect/Type;
 
     return-void
 .end method
@@ -25,14 +19,14 @@
 
 # virtual methods
 .method public final construct()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Lcom/google/gson/internal/ConstructorConstructor$$ExternalSyntheticLambda2;->f$0:Ljava/lang/reflect/Type;
+    new-instance p0, Ljava/util/concurrent/ConcurrentSkipListMap;
 
-    invoke-static {v0}, Lcom/google/gson/internal/ConstructorConstructor;->lambda$newSpecialCollectionConstructor$5(Ljava/lang/reflect/Type;)Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/util/concurrent/ConcurrentSkipListMap;-><init>()V
 
-    move-result-object v0
+    check-cast p0, Ljava/util/Map;
 
-    return-object v0
+    return-object p0
 .end method

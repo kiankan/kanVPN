@@ -18,7 +18,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 74
+    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,7 +27,7 @@
 .method static hasGainmap(Landroid/graphics/Bitmap;)Z
     .locals 0
 
-    .line 70
+    .line 72
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->hasGainmap()Z
 
     move-result p0

@@ -56,12 +56,12 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 0
 
     .line 109
-    iget-object v0, p0, Landroidx/camera/core/impl/utils/executor/SequentialExecutor$1;->val$task:Ljava/lang/Runnable;
+    iget-object p0, p0, Landroidx/camera/core/impl/utils/executor/SequentialExecutor$1;->val$task:Ljava/lang/Runnable;
 
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    invoke-interface {p0}, Ljava/lang/Runnable;->run()V
 
     return-void
 .end method

@@ -29,14 +29,14 @@
 
 # virtual methods
 .method public final run()V
-    .locals 2
+    .locals 1
 
     .line 0
     iget-object v0, p0, Landroidx/camera/core/processing/DefaultSurfaceProcessor$$ExternalSyntheticLambda0;->f$0:Landroidx/camera/core/processing/DefaultSurfaceProcessor;
 
-    iget-object v1, p0, Landroidx/camera/core/processing/DefaultSurfaceProcessor$$ExternalSyntheticLambda0;->f$1:Landroidx/camera/core/processing/DefaultSurfaceProcessor$PendingSnapshot;
+    iget-object p0, p0, Landroidx/camera/core/processing/DefaultSurfaceProcessor$$ExternalSyntheticLambda0;->f$1:Landroidx/camera/core/processing/DefaultSurfaceProcessor$PendingSnapshot;
 
-    invoke-virtual {v0, v1}, Landroidx/camera/core/processing/DefaultSurfaceProcessor;->lambda$snapshot$6$androidx-camera-core-processing-DefaultSurfaceProcessor(Landroidx/camera/core/processing/DefaultSurfaceProcessor$PendingSnapshot;)V
+    invoke-virtual {v0, p0}, Landroidx/camera/core/processing/DefaultSurfaceProcessor;->lambda$snapshot$6$androidx-camera-core-processing-DefaultSurfaceProcessor(Landroidx/camera/core/processing/DefaultSurfaceProcessor$PendingSnapshot;)V
 
     return-void
 .end method

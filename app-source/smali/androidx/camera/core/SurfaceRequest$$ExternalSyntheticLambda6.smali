@@ -29,16 +29,16 @@
 
 # virtual methods
 .method public final attachCompleter(Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;)Ljava/lang/Object;
-    .locals 2
+    .locals 1
 
     .line 0
     iget-object v0, p0, Landroidx/camera/core/SurfaceRequest$$ExternalSyntheticLambda6;->f$0:Ljava/util/concurrent/atomic/AtomicReference;
 
-    iget-object v1, p0, Landroidx/camera/core/SurfaceRequest$$ExternalSyntheticLambda6;->f$1:Ljava/lang/String;
+    iget-object p0, p0, Landroidx/camera/core/SurfaceRequest$$ExternalSyntheticLambda6;->f$1:Ljava/lang/String;
 
-    invoke-static {v0, v1, p1}, Landroidx/camera/core/SurfaceRequest;->lambda$new$1(Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/String;Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;)Ljava/lang/Object;
+    invoke-static {v0, p0, p1}, Landroidx/camera/core/SurfaceRequest;->lambda$new$0(Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/String;Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

@@ -7,7 +7,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 36
+    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +24,7 @@
         }
     .end annotation
 
-    .line 63
+    .line 64
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -35,12 +35,12 @@
 
     sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    .line 65
+    .line 66
     invoke-static {p1}, Landroidx/camera/core/processing/TargetUtils;->getHumanReadableName(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 66
+    .line 67
     invoke-static {p0}, Landroidx/camera/core/processing/TargetUtils;->getHumanReadableNames(Ljava/util/Collection;)Ljava/lang/String;
 
     move-result-object p0
@@ -49,7 +49,7 @@
 
     move-result-object p0
 
-    .line 63
+    .line 64
     const-string p1, "Effects target %s is not in the supported list %s."
 
     invoke-static {v1, p1, p0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
@@ -64,7 +64,7 @@
 .method public static getHumanReadableName(I)Ljava/lang/String;
     .locals 2
 
-    .line 83
+    .line 82
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -73,7 +73,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 85
+    .line 84
     const-string v1, "IMAGE_CAPTURE"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -83,7 +83,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 88
+    .line 87
     const-string v1, "PREVIEW"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -93,14 +93,14 @@
 
     if-eqz p0, :cond_2
 
-    .line 91
+    .line 90
     const-string p0, "VIDEO_CAPTURE"
 
     invoke-interface {v0, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 93
+    .line 92
     :cond_2
-    const-string p0, "|"
+    const-string/jumbo p0, "|"
 
     invoke-static {p0, v0}, Lkotlin/UByte$$ExternalSyntheticBackport0;->m(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
 

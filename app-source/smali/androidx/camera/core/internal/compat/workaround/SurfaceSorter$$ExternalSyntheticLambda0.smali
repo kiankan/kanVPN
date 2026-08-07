@@ -25,18 +25,18 @@
 
 # virtual methods
 .method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 1
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Landroidx/camera/core/internal/compat/workaround/SurfaceSorter$$ExternalSyntheticLambda0;->f$0:Landroidx/camera/core/internal/compat/workaround/SurfaceSorter;
+    iget-object p0, p0, Landroidx/camera/core/internal/compat/workaround/SurfaceSorter$$ExternalSyntheticLambda0;->f$0:Landroidx/camera/core/internal/compat/workaround/SurfaceSorter;
 
     check-cast p1, Landroidx/camera/core/impl/SessionConfig$OutputConfig;
 
     check-cast p2, Landroidx/camera/core/impl/SessionConfig$OutputConfig;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/camera/core/internal/compat/workaround/SurfaceSorter;->lambda$sort$0$androidx-camera-core-internal-compat-workaround-SurfaceSorter(Landroidx/camera/core/impl/SessionConfig$OutputConfig;Landroidx/camera/core/impl/SessionConfig$OutputConfig;)I
+    invoke-virtual {p0, p1, p2}, Landroidx/camera/core/internal/compat/workaround/SurfaceSorter;->lambda$sort$0$androidx-camera-core-internal-compat-workaround-SurfaceSorter(Landroidx/camera/core/impl/SessionConfig$OutputConfig;Landroidx/camera/core/impl/SessionConfig$OutputConfig;)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method

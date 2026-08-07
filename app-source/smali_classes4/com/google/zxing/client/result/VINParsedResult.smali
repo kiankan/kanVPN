@@ -65,12 +65,12 @@
 
 # virtual methods
 .method public getCountryCode()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 73
-    iget-object v0, p0, Lcom/google/zxing/client/result/VINParsedResult;->countryCode:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/VINParsedResult;->countryCode:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getDisplayResult()Ljava/lang/String;
@@ -134,88 +134,88 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     .line 103
-    iget-object v1, p0, Lcom/google/zxing/client/result/VINParsedResult;->sequentialNumber:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/VINParsedResult;->sequentialNumber:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     .line 104
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getModelYear()I
-    .locals 1
+    .locals 0
 
     .line 81
-    iget v0, p0, Lcom/google/zxing/client/result/VINParsedResult;->modelYear:I
+    iget p0, p0, Lcom/google/zxing/client/result/VINParsedResult;->modelYear:I
 
-    return v0
+    return p0
 .end method
 
 .method public getPlantCode()C
-    .locals 1
+    .locals 0
 
     .line 85
-    iget-char v0, p0, Lcom/google/zxing/client/result/VINParsedResult;->plantCode:C
+    iget-char p0, p0, Lcom/google/zxing/client/result/VINParsedResult;->plantCode:C
 
-    return v0
+    return p0
 .end method
 
 .method public getSequentialNumber()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 89
-    iget-object v0, p0, Lcom/google/zxing/client/result/VINParsedResult;->sequentialNumber:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/VINParsedResult;->sequentialNumber:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getVIN()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 57
-    iget-object v0, p0, Lcom/google/zxing/client/result/VINParsedResult;->vin:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/VINParsedResult;->vin:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getVehicleAttributes()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 77
-    iget-object v0, p0, Lcom/google/zxing/client/result/VINParsedResult;->vehicleAttributes:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/VINParsedResult;->vehicleAttributes:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getVehicleDescriptorSection()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 65
-    iget-object v0, p0, Lcom/google/zxing/client/result/VINParsedResult;->vehicleDescriptorSection:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/VINParsedResult;->vehicleDescriptorSection:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getVehicleIdentifierSection()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 69
-    iget-object v0, p0, Lcom/google/zxing/client/result/VINParsedResult;->vehicleIdentifierSection:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/VINParsedResult;->vehicleIdentifierSection:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getWorldManufacturerID()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 61
-    iget-object v0, p0, Lcom/google/zxing/client/result/VINParsedResult;->worldManufacturerID:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/VINParsedResult;->worldManufacturerID:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method

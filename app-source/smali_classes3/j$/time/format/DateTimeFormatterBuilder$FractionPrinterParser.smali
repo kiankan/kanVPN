@@ -38,20 +38,22 @@
     invoke-direct/range {v0 .. v5}, Lj$/time/format/DateTimeFormatterBuilder$FractionPrinterParser;-><init>(Lj$/time/temporal/TemporalField;IIZI)V
 
     .line 3091
-    const-string p1, "field"
+    const-string p0, "field"
 
-    invoke-static {v1, p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v1, p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 3092
     invoke-interface {v1}, Lj$/time/temporal/TemporalField;->range()Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-virtual {p1}, Lj$/time/temporal/ValueRange;->isFixed()Z
+    invoke-virtual {p0}, Lj$/time/temporal/ValueRange;->isFixed()Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_3
+    if-eqz p0, :cond_3
+
+    const/4 p0, 0x0
 
     if-ltz v2, :cond_2
 
@@ -71,97 +73,47 @@
 
     .line 3102
     :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    const-string p1, "Maximum width must exceed or equal the minimum width but "
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    invoke-static {p1, v3, v2}, Lj$/time/format/DateTimeFormatterBuilder$4;->m(Ljava/lang/String;II)V
 
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string p3, "Maximum width must exceed or equal the minimum width but "
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p3, " < "
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    throw p0
 
     .line 3099
     :cond_1
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    const-string p1, "Maximum width must be from 1 to 9 inclusive but was "
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    invoke-static {p1, v3}, Lj$/time/chrono/HijrahChronology$0;->m(Ljava/lang/String;I)V
 
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string p3, "Maximum width must be from 1 to 9 inclusive but was "
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    throw p0
 
     .line 3096
     :cond_2
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    const-string p1, "Minimum width must be from 0 to 9 inclusive but was "
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    invoke-static {p1, v2}, Lj$/time/chrono/HijrahChronology$0;->m(Ljava/lang/String;I)V
 
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string p3, "Minimum width must be from 0 to 9 inclusive but was "
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    throw p0
 
     .line 3093
     :cond_3
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+    const-string p2, "Field must have a fixed set of values: "
 
-    const-string p3, "Field must have a fixed set of values: "
+    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object p2
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    throw p0
 .end method
 
 .method constructor <init>(Lj$/time/temporal/TemporalField;IIZI)V
@@ -188,8 +140,71 @@
     return-void
 .end method
 
+.method private convertFromFraction(Ljava/math/BigDecimal;)J
+    .locals 3
+
+    .line 3274
+    iget-object p0, p0, Lj$/time/format/DateTimeFormatterBuilder$NumberPrinterParser;->field:Lj$/time/temporal/TemporalField;
+
+    invoke-interface {p0}, Lj$/time/temporal/TemporalField;->range()Lj$/time/temporal/ValueRange;
+
+    move-result-object p0
+
+    .line 3275
+    invoke-virtual {p0}, Lj$/time/temporal/ValueRange;->getMinimum()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/math/BigDecimal;->valueOf(J)Ljava/math/BigDecimal;
+
+    move-result-object v0
+
+    .line 3276
+    invoke-virtual {p0}, Lj$/time/temporal/ValueRange;->getMaximum()J
+
+    move-result-wide v1
+
+    invoke-static {v1, v2}, Ljava/math/BigDecimal;->valueOf(J)Ljava/math/BigDecimal;
+
+    move-result-object p0
+
+    invoke-virtual {p0, v0}, Ljava/math/BigDecimal;->subtract(Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
+
+    move-result-object p0
+
+    sget-object v1, Ljava/math/BigDecimal;->ONE:Ljava/math/BigDecimal;
+
+    invoke-virtual {p0, v1}, Ljava/math/BigDecimal;->add(Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
+
+    move-result-object p0
+
+    .line 3277
+    invoke-virtual {p1, p0}, Ljava/math/BigDecimal;->multiply(Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
+
+    move-result-object p0
+
+    const/4 p1, 0x0
+
+    sget-object v1, Ljava/math/RoundingMode;->FLOOR:Ljava/math/RoundingMode;
+
+    invoke-virtual {p0, p1, v1}, Ljava/math/BigDecimal;->setScale(ILjava/math/RoundingMode;)Ljava/math/BigDecimal;
+
+    move-result-object p0
+
+    invoke-virtual {p0, v0}, Ljava/math/BigDecimal;->add(Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
+
+    move-result-object p0
+
+    .line 3278
+    invoke-virtual {p0}, Ljava/math/BigDecimal;->longValueExact()J
+
+    move-result-wide p0
+
+    return-wide p0
+.end method
+
 .method private convertToFraction(J)Ljava/math/BigDecimal;
-    .locals 4
+    .locals 3
 
     .line 3247
     iget-object v0, p0, Lj$/time/format/DateTimeFormatterBuilder$NumberPrinterParser;->field:Lj$/time/temporal/TemporalField;
@@ -199,9 +214,9 @@
     move-result-object v0
 
     .line 3248
-    iget-object v1, p0, Lj$/time/format/DateTimeFormatterBuilder$NumberPrinterParser;->field:Lj$/time/temporal/TemporalField;
+    iget-object p0, p0, Lj$/time/format/DateTimeFormatterBuilder$NumberPrinterParser;->field:Lj$/time/temporal/TemporalField;
 
-    invoke-virtual {v0, p1, p2, v1}, Lj$/time/temporal/ValueRange;->checkValidValue(JLj$/time/temporal/TemporalField;)J
+    invoke-virtual {v0, p1, p2, p0}, Lj$/time/temporal/ValueRange;->checkValidValue(JLj$/time/temporal/TemporalField;)J
 
     .line 3249
     invoke-virtual {v0}, Lj$/time/temporal/ValueRange;->getMinimum()J
@@ -210,24 +225,24 @@
 
     invoke-static {v1, v2}, Ljava/math/BigDecimal;->valueOf(J)Ljava/math/BigDecimal;
 
-    move-result-object v1
+    move-result-object p0
 
     .line 3250
     invoke-virtual {v0}, Lj$/time/temporal/ValueRange;->getMaximum()J
 
-    move-result-wide v2
+    move-result-wide v0
 
-    invoke-static {v2, v3}, Ljava/math/BigDecimal;->valueOf(J)Ljava/math/BigDecimal;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/math/BigDecimal;->subtract(Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
+    invoke-static {v0, v1}, Ljava/math/BigDecimal;->valueOf(J)Ljava/math/BigDecimal;
 
     move-result-object v0
 
-    sget-object v2, Ljava/math/BigDecimal;->ONE:Ljava/math/BigDecimal;
+    invoke-virtual {v0, p0}, Ljava/math/BigDecimal;->subtract(Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
 
-    invoke-virtual {v0, v2}, Ljava/math/BigDecimal;->add(Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
+    move-result-object v0
+
+    sget-object v1, Ljava/math/BigDecimal;->ONE:Ljava/math/BigDecimal;
+
+    invoke-virtual {v0, v1}, Ljava/math/BigDecimal;->add(Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
 
     move-result-object v0
 
@@ -236,36 +251,36 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, v1}, Ljava/math/BigDecimal;->subtract(Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
+    invoke-virtual {p1, p0}, Ljava/math/BigDecimal;->subtract(Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
 
-    move-result-object p1
+    move-result-object p0
 
-    const/16 p2, 0x9
+    const/16 p1, 0x9
 
     .line 3252
-    sget-object v1, Ljava/math/RoundingMode;->FLOOR:Ljava/math/RoundingMode;
+    sget-object p2, Ljava/math/RoundingMode;->FLOOR:Ljava/math/RoundingMode;
 
-    invoke-virtual {p1, v0, p2, v1}, Ljava/math/BigDecimal;->divide(Ljava/math/BigDecimal;ILjava/math/RoundingMode;)Ljava/math/BigDecimal;
+    invoke-virtual {p0, v0, p1, p2}, Ljava/math/BigDecimal;->divide(Ljava/math/BigDecimal;ILjava/math/RoundingMode;)Ljava/math/BigDecimal;
 
-    move-result-object p1
+    move-result-object p0
 
     .line 3254
-    sget-object p2, Ljava/math/BigDecimal;->ZERO:Ljava/math/BigDecimal;
+    sget-object p1, Ljava/math/BigDecimal;->ZERO:Ljava/math/BigDecimal;
 
-    invoke-virtual {p1, p2}, Ljava/math/BigDecimal;->compareTo(Ljava/math/BigDecimal;)I
+    invoke-virtual {p0, p1}, Ljava/math/BigDecimal;->compareTo(Ljava/math/BigDecimal;)I
 
-    move-result v0
+    move-result p2
 
-    if-nez v0, :cond_0
-
-    return-object p2
-
-    :cond_0
-    invoke-static {p1}, Lj$/time/format/DateTimeFormatterBuilder$FractionPrinterParser$$ExternalSyntheticBackportWithForwarding0;->m(Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
-
-    move-result-object p1
+    if-nez p2, :cond_0
 
     return-object p1
+
+    :cond_0
+    invoke-static {p0}, Lj$/time/format/DateTimeFormatterBuilder$FractionPrinterParser$0;->m(Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 
@@ -385,29 +400,246 @@
     move-result-object v0
 
     .line 3182
-    iget-boolean v1, p0, Lj$/time/format/DateTimeFormatterBuilder$FractionPrinterParser;->decimalPoint:Z
+    iget-boolean p0, p0, Lj$/time/format/DateTimeFormatterBuilder$FractionPrinterParser;->decimalPoint:Z
 
-    if-eqz v1, :cond_3
+    if-eqz p0, :cond_3
 
     .line 3183
     invoke-virtual {p1}, Lj$/time/format/DecimalStyle;->getDecimalSeparator()C
 
-    move-result p1
+    move-result p0
 
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     .line 3185
     :cond_3
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_4
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
+.end method
+
+.method isFixedWidth(Lj$/time/format/DateTimeParseContext;)Z
+    .locals 1
+
+    .line 3154
+    invoke-virtual {p1}, Lj$/time/format/DateTimeParseContext;->isStrict()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget p1, p0, Lj$/time/format/DateTimeFormatterBuilder$NumberPrinterParser;->minWidth:I
+
+    iget v0, p0, Lj$/time/format/DateTimeFormatterBuilder$NumberPrinterParser;->maxWidth:I
+
+    if-ne p1, v0, :cond_0
+
+    iget-boolean p0, p0, Lj$/time/format/DateTimeFormatterBuilder$FractionPrinterParser;->decimalPoint:Z
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public parse(Lj$/time/format/DateTimeParseContext;Ljava/lang/CharSequence;I)I
+    .locals 10
+
+    .line 3192
+    invoke-virtual {p1}, Lj$/time/format/DateTimeParseContext;->isStrict()Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {p0, p1}, Lj$/time/format/DateTimeFormatterBuilder$FractionPrinterParser;->isFixedWidth(Lj$/time/format/DateTimeParseContext;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v1
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    iget v0, p0, Lj$/time/format/DateTimeFormatterBuilder$NumberPrinterParser;->minWidth:I
+
+    .line 3193
+    :goto_1
+    invoke-virtual {p1}, Lj$/time/format/DateTimeParseContext;->isStrict()Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    invoke-virtual {p0, p1}, Lj$/time/format/DateTimeFormatterBuilder$FractionPrinterParser;->isFixedWidth(Lj$/time/format/DateTimeParseContext;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    const/16 v2, 0x9
+
+    goto :goto_3
+
+    :cond_3
+    :goto_2
+    iget v2, p0, Lj$/time/format/DateTimeFormatterBuilder$NumberPrinterParser;->maxWidth:I
+
+    .line 3194
+    :goto_3
+    invoke-interface {p2}, Ljava/lang/CharSequence;->length()I
+
+    move-result v3
+
+    if-ne p3, v3, :cond_4
+
+    if-lez v0, :cond_5
+
+    not-int p0, p3
+
+    return p0
+
+    .line 3199
+    :cond_4
+    iget-boolean v4, p0, Lj$/time/format/DateTimeFormatterBuilder$FractionPrinterParser;->decimalPoint:Z
+
+    if-eqz v4, :cond_7
+
+    .line 3200
+    invoke-interface {p2, p3}, Ljava/lang/CharSequence;->charAt(I)C
+
+    move-result v4
+
+    invoke-virtual {p1}, Lj$/time/format/DateTimeParseContext;->getDecimalStyle()Lj$/time/format/DecimalStyle;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Lj$/time/format/DecimalStyle;->getDecimalSeparator()C
+
+    move-result v5
+
+    if-eq v4, v5, :cond_6
+
+    if-lez v0, :cond_5
+
+    not-int p0, p3
+
+    return p0
+
+    :cond_5
+    return p3
+
+    :cond_6
+    add-int/lit8 p3, p3, 0x1
+
+    :cond_7
+    move v8, p3
+
+    add-int/2addr v0, v8
+
+    if-le v0, v3, :cond_8
+
+    not-int p0, v8
+
+    return p0
+
+    :cond_8
+    add-int/2addr v2, v8
+
+    .line 3210
+    invoke-static {v2, v3}, Ljava/lang/Math;->min(II)I
+
+    move-result p3
+
+    move v9, v8
+
+    :goto_4
+    if-ge v9, p3, :cond_a
+
+    add-int/lit8 v2, v9, 0x1
+
+    .line 3214
+    invoke-interface {p2, v9}, Ljava/lang/CharSequence;->charAt(I)C
+
+    move-result v3
+
+    .line 3215
+    invoke-virtual {p1}, Lj$/time/format/DateTimeParseContext;->getDecimalStyle()Lj$/time/format/DecimalStyle;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v3}, Lj$/time/format/DecimalStyle;->convertToDigit(C)I
+
+    move-result v3
+
+    if-gez v3, :cond_9
+
+    if-ge v2, v0, :cond_a
+
+    not-int p0, v8
+
+    return p0
+
+    :cond_9
+    mul-int/lit8 v1, v1, 0xa
+
+    add-int/2addr v1, v3
+
+    move v9, v2
+
+    goto :goto_4
+
+    .line 3225
+    :cond_a
+    new-instance p2, Ljava/math/BigDecimal;
+
+    invoke-direct {p2, v1}, Ljava/math/BigDecimal;-><init>(I)V
+
+    sub-int p3, v9, v8
+
+    invoke-virtual {p2, p3}, Ljava/math/BigDecimal;->movePointLeft(I)Ljava/math/BigDecimal;
+
+    move-result-object p2
+
+    .line 3226
+    invoke-direct {p0, p2}, Lj$/time/format/DateTimeFormatterBuilder$FractionPrinterParser;->convertFromFraction(Ljava/math/BigDecimal;)J
+
+    move-result-wide v6
+
+    .line 3227
+    iget-object v5, p0, Lj$/time/format/DateTimeFormatterBuilder$NumberPrinterParser;->field:Lj$/time/temporal/TemporalField;
+
+    move-object v4, p1
+
+    invoke-virtual/range {v4 .. v9}, Lj$/time/format/DateTimeParseContext;->setParsedField(Lj$/time/temporal/TemporalField;JII)I
+
+    move-result p0
+
+    return p0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 6
+    .locals 5
 
     .line 3283
     iget-boolean v0, p0, Lj$/time/format/DateTimeFormatterBuilder$FractionPrinterParser;->decimalPoint:Z
@@ -427,39 +659,37 @@
 
     iget v2, p0, Lj$/time/format/DateTimeFormatterBuilder$NumberPrinterParser;->minWidth:I
 
-    iget v3, p0, Lj$/time/format/DateTimeFormatterBuilder$NumberPrinterParser;->maxWidth:I
+    iget p0, p0, Lj$/time/format/DateTimeFormatterBuilder$NumberPrinterParser;->maxWidth:I
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v4, "Fraction("
 
-    const-string v5, "Fraction("
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, ","
 
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v0, ")"
+    const-string p0, ")"
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method withFixedWidth()Lj$/time/format/DateTimeFormatterBuilder$FractionPrinterParser;
@@ -494,14 +724,14 @@
 .end method
 
 .method bridge synthetic withFixedWidth()Lj$/time/format/DateTimeFormatterBuilder$NumberPrinterParser;
-    .locals 1
+    .locals 0
 
     .line 3078
     invoke-virtual {p0}, Lj$/time/format/DateTimeFormatterBuilder$FractionPrinterParser;->withFixedWidth()Lj$/time/format/DateTimeFormatterBuilder$FractionPrinterParser;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method withSubsequentWidth(I)Lj$/time/format/DateTimeFormatterBuilder$FractionPrinterParser;
@@ -518,9 +748,9 @@
 
     iget-boolean v4, p0, Lj$/time/format/DateTimeFormatterBuilder$FractionPrinterParser;->decimalPoint:Z
 
-    iget v5, p0, Lj$/time/format/DateTimeFormatterBuilder$NumberPrinterParser;->subsequentWidth:I
+    iget p0, p0, Lj$/time/format/DateTimeFormatterBuilder$NumberPrinterParser;->subsequentWidth:I
 
-    add-int/2addr v5, p1
+    add-int v5, p0, p1
 
     invoke-direct/range {v0 .. v5}, Lj$/time/format/DateTimeFormatterBuilder$FractionPrinterParser;-><init>(Lj$/time/temporal/TemporalField;IIZI)V
 
@@ -533,7 +763,7 @@
     .line 3078
     invoke-virtual {p0, p1}, Lj$/time/format/DateTimeFormatterBuilder$FractionPrinterParser;->withSubsequentWidth(I)Lj$/time/format/DateTimeFormatterBuilder$FractionPrinterParser;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

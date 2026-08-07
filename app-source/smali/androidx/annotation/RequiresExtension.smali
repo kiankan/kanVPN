@@ -26,6 +26,7 @@
 
 .annotation runtime Ljava/lang/annotation/Target;
     value = {
+        .enum Ljava/lang/annotation/ElementType;->ANNOTATION_TYPE:Ljava/lang/annotation/ElementType;,
         .enum Ljava/lang/annotation/ElementType;->TYPE:Ljava/lang/annotation/ElementType;,
         .enum Ljava/lang/annotation/ElementType;->METHOD:Ljava/lang/annotation/ElementType;,
         .enum Ljava/lang/annotation/ElementType;->CONSTRUCTOR:Ljava/lang/annotation/ElementType;,
@@ -49,8 +50,8 @@
     }
     k = 0x1
     mv = {
+        0x2,
         0x1,
-        0x9,
         0x0
     }
     xi = 0x30

@@ -4,7 +4,7 @@ Android VPN client app — personalized build.
 
 ## Contents
 
-- `kanVPN_2.0.6.apk` — signed, installable APK
+- `kanVPN_2.3.2.apk` — signed, installable APK
 - `app-source/` — decompiled application source (smali) and resources used to produce the APK
 - `rename_pkg.py` — script used to rebrand internal package identifiers
 - `gen_icons.py` — script used to generate the app launcher icon and color theme

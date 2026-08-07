@@ -25,12 +25,12 @@
 
 # virtual methods
 .method public final run()V
-    .locals 1
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/CaptureNode$$ExternalSyntheticLambda5;->f$0:Landroidx/camera/core/SafeCloseImageReaderProxy;
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/CaptureNode$$ExternalSyntheticLambda5;->f$0:Landroidx/camera/core/SafeCloseImageReaderProxy;
 
-    invoke-static {v0}, Landroidx/camera/core/imagecapture/CaptureNode;->lambda$releaseInputResources$3(Landroidx/camera/core/SafeCloseImageReaderProxy;)V
+    invoke-static {p0}, Landroidx/camera/core/imagecapture/CaptureNode;->lambda$releaseInputResources$3(Landroidx/camera/core/SafeCloseImageReaderProxy;)V
 
     return-void
 .end method

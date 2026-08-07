@@ -22,7 +22,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -33,7 +33,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 308
+    .line 328
     invoke-direct {p0}, Landroidx/activity/EdgeToEdgeApi29;-><init>()V
 
     return-void
@@ -42,20 +42,20 @@
 
 # virtual methods
 .method public adjustLayoutInDisplayCutoutMode(Landroid/view/Window;)V
-    .locals 1
+    .locals 0
 
-    const-string v0, "window"
+    const-string/jumbo p0, "window"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 313
+    .line 333
     invoke-virtual {p1}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
 
-    move-result-object p1
+    move-result-object p0
 
-    const/4 v0, 0x3
+    const/4 p1, 0x3
 
-    invoke-static {p1, v0}, Landroidx/activity/BackEventCompat$$ExternalSyntheticApiModelOutline0;->m(Landroid/view/WindowManager$LayoutParams;I)V
+    invoke-static {p0, p1}, Landroidx/activity/BackEventCompat$$ExternalSyntheticApiModelOutline0;->m(Landroid/view/WindowManager$LayoutParams;I)V
 
     return-void
 .end method

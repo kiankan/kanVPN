@@ -51,7 +51,7 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .line 33
+    .line 34
     sget-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;->PASSIVE_FOCUSED:Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
 
     sget-object v1, Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;->PASSIVE_NOT_FOCUSED:Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
@@ -60,7 +60,7 @@
 
     sget-object v3, Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;->LOCKED_NOT_FOCUSED:Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
 
-    .line 34
+    .line 35
     invoke-static {v0, v1, v2, v3}, Ljava/util/EnumSet;->of(Ljava/lang/Enum;Ljava/lang/Enum;Ljava/lang/Enum;Ljava/lang/Enum;)Ljava/util/EnumSet;
 
     move-result-object v0
@@ -71,12 +71,12 @@
 
     sput-object v0, Landroidx/camera/core/impl/ConvergenceUtils;->AF_CONVERGED_STATE_SET:Ljava/util/Set;
 
-    .line 41
+    .line 42
     sget-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;->CONVERGED:Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;
 
     sget-object v1, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;->UNKNOWN:Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;
 
-    .line 42
+    .line 43
     invoke-static {v0, v1}, Ljava/util/EnumSet;->of(Ljava/lang/Enum;Ljava/lang/Enum;)Ljava/util/EnumSet;
 
     move-result-object v0
@@ -87,14 +87,14 @@
 
     sput-object v0, Landroidx/camera/core/impl/ConvergenceUtils;->AWB_CONVERGED_STATE_SET:Ljava/util/Set;
 
-    .line 48
+    .line 49
     sget-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AeState;->CONVERGED:Landroidx/camera/core/impl/CameraCaptureMetaData$AeState;
 
     sget-object v1, Landroidx/camera/core/impl/CameraCaptureMetaData$AeState;->FLASH_REQUIRED:Landroidx/camera/core/impl/CameraCaptureMetaData$AeState;
 
     sget-object v2, Landroidx/camera/core/impl/CameraCaptureMetaData$AeState;->UNKNOWN:Landroidx/camera/core/impl/CameraCaptureMetaData$AeState;
 
-    .line 49
+    .line 50
     invoke-static {v0, v1, v2}, Ljava/util/EnumSet;->of(Ljava/lang/Enum;Ljava/lang/Enum;Ljava/lang/Enum;)Ljava/util/EnumSet;
 
     move-result-object v0
@@ -105,22 +105,22 @@
 
     sput-object v0, Landroidx/camera/core/impl/ConvergenceUtils;->AE_CONVERGED_STATE_SET:Ljava/util/Set;
 
-    .line 59
+    .line 60
     invoke-static {v0}, Ljava/util/EnumSet;->copyOf(Ljava/util/Collection;)Ljava/util/EnumSet;
 
     move-result-object v0
 
-    .line 63
+    .line 64
     sget-object v1, Landroidx/camera/core/impl/CameraCaptureMetaData$AeState;->FLASH_REQUIRED:Landroidx/camera/core/impl/CameraCaptureMetaData$AeState;
 
     invoke-virtual {v0, v1}, Ljava/util/EnumSet;->remove(Ljava/lang/Object;)Z
 
-    .line 68
+    .line 69
     sget-object v1, Landroidx/camera/core/impl/CameraCaptureMetaData$AeState;->UNKNOWN:Landroidx/camera/core/impl/CameraCaptureMetaData$AeState;
 
     invoke-virtual {v0, v1}, Ljava/util/EnumSet;->remove(Ljava/lang/Object;)Z
 
-    .line 70
+    .line 71
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
     move-result-object v0
@@ -133,7 +133,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 73
+    .line 74
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -142,7 +142,7 @@
 .method public static is3AConverged(Landroidx/camera/core/impl/CameraCaptureResult;Z)Z
     .locals 6
 
-    .line 84
+    .line 85
     invoke-interface {p0}, Landroidx/camera/core/impl/CameraCaptureResult;->getAfMode()Landroidx/camera/core/impl/CameraCaptureMetaData$AfMode;
 
     move-result-object v0
@@ -152,15 +152,6 @@
     const/4 v2, 0x0
 
     const/4 v3, 0x1
-
-    if-eq v0, v1, :cond_1
-
-    .line 85
-    invoke-interface {p0}, Landroidx/camera/core/impl/CameraCaptureResult;->getAfMode()Landroidx/camera/core/impl/CameraCaptureMetaData$AfMode;
-
-    move-result-object v0
-
-    sget-object v1, Landroidx/camera/core/impl/CameraCaptureMetaData$AfMode;->UNKNOWN:Landroidx/camera/core/impl/CameraCaptureMetaData$AfMode;
 
     if-eq v0, v1, :cond_1
 

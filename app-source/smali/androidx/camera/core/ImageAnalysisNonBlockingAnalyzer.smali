@@ -25,17 +25,17 @@
 .method constructor <init>(Ljava/util/concurrent/Executor;)V
     .locals 1
 
-    .line 57
+    .line 56
     invoke-direct {p0}, Landroidx/camera/core/ImageAnalysisAbstractAnalyzer;-><init>()V
 
-    .line 43
+    .line 44
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer;->mLock:Ljava/lang/Object;
 
-    .line 58
+    .line 57
     iput-object p1, p0, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer;->mBackgroundExecutor:Ljava/util/concurrent/Executor;
 
     return-void
@@ -46,122 +46,122 @@
 .method acquireImage(Landroidx/camera/core/impl/ImageReaderProxy;)Landroidx/camera/core/ImageProxy;
     .locals 0
 
-    .line 65
+    .line 63
     invoke-interface {p1}, Landroidx/camera/core/impl/ImageReaderProxy;->acquireLatestImage()Landroidx/camera/core/ImageProxy;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method analyzeCachedImage()V
     .locals 3
 
-    .line 132
+    .line 130
     iget-object v0, p0, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
     const/4 v1, 0x0
 
-    .line 133
+    .line 131
     :try_start_0
     iput-object v1, p0, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer;->mPostedImage:Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer$CacheAnalyzingImageProxy;
 
-    .line 134
+    .line 132
     iget-object v2, p0, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer;->mCachedImage:Landroidx/camera/core/ImageProxy;
 
     if-eqz v2, :cond_0
 
-    .line 136
+    .line 134
     iput-object v1, p0, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer;->mCachedImage:Landroidx/camera/core/ImageProxy;
 
-    .line 137
+    .line 135
     invoke-virtual {p0, v2}, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer;->onValidImageAvailable(Landroidx/camera/core/ImageProxy;)V
 
-    .line 139
+    .line 137
     :cond_0
     monitor-exit v0
 
     return-void
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v1
+    throw p0
 .end method
 
 .method clearCache()V
     .locals 2
 
-    .line 120
+    .line 118
     iget-object v0, p0, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 121
+    .line 119
     :try_start_0
     iget-object v1, p0, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer;->mCachedImage:Landroidx/camera/core/ImageProxy;
 
     if-eqz v1, :cond_0
 
-    .line 122
+    .line 120
     invoke-interface {v1}, Landroidx/camera/core/ImageProxy;->close()V
 
     const/4 v1, 0x0
 
-    .line 123
+    .line 121
     iput-object v1, p0, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer;->mCachedImage:Landroidx/camera/core/ImageProxy;
 
-    .line 125
+    .line 123
     :cond_0
     monitor-exit v0
 
     return-void
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v1
+    throw p0
 .end method
 
 .method onValidImageAvailable(Landroidx/camera/core/ImageProxy;)V
     .locals 5
 
-    .line 76
+    .line 74
     iget-object v0, p0, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 77
+    .line 75
     :try_start_0
     iget-boolean v1, p0, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer;->mIsAttached:Z
 
     if-nez v1, :cond_0
 
-    .line 78
+    .line 76
     invoke-interface {p1}, Landroidx/camera/core/ImageProxy;->close()V
 
-    .line 79
+    .line 77
     monitor-exit v0
 
     return-void
 
-    .line 81
+    .line 79
     :cond_0
     iget-object v1, p0, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer;->mPostedImage:Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer$CacheAnalyzingImageProxy;
 
     if-eqz v1, :cond_3
 
-    .line 84
+    .line 82
     invoke-interface {p1}, Landroidx/camera/core/ImageProxy;->getImageInfo()Landroidx/camera/core/ImageInfo;
 
     move-result-object v1
@@ -172,7 +172,7 @@
 
     iget-object v3, p0, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer;->mPostedImage:Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer$CacheAnalyzingImageProxy;
 
-    .line 85
+    .line 83
     invoke-virtual {v3}, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer$CacheAnalyzingImageProxy;->getImageInfo()Landroidx/camera/core/ImageInfo;
 
     move-result-object v3
@@ -185,40 +185,40 @@
 
     if-gtz v1, :cond_1
 
-    .line 88
+    .line 86
     invoke-interface {p1}, Landroidx/camera/core/ImageProxy;->close()V
 
     goto :goto_0
 
-    .line 91
+    .line 89
     :cond_1
     iget-object v1, p0, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer;->mCachedImage:Landroidx/camera/core/ImageProxy;
 
     if-eqz v1, :cond_2
 
-    .line 92
+    .line 90
     invoke-interface {v1}, Landroidx/camera/core/ImageProxy;->close()V
 
-    .line 94
+    .line 92
     :cond_2
     iput-object p1, p0, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer;->mCachedImage:Landroidx/camera/core/ImageProxy;
 
-    .line 96
+    .line 94
     :goto_0
     monitor-exit v0
 
     return-void
 
-    .line 100
+    .line 98
     :cond_3
     new-instance v1, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer$CacheAnalyzingImageProxy;
 
     invoke-direct {v1, p1, p0}, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer$CacheAnalyzingImageProxy;-><init>(Landroidx/camera/core/ImageProxy;Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer;)V
 
-    .line 102
+    .line 100
     iput-object v1, p0, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer;->mPostedImage:Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer$CacheAnalyzingImageProxy;
 
-    .line 103
+    .line 101
     invoke-virtual {p0, v1}, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer;->analyzeImage(Landroidx/camera/core/ImageProxy;)Lcom/google/common/util/concurrent/ListenableFuture;
 
     move-result-object p1
@@ -227,25 +227,25 @@
 
     invoke-direct {v2, p0, v1}, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer$1;-><init>(Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer;Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer$CacheAnalyzingImageProxy;)V
 
-    .line 114
+    .line 112
     invoke-static {}, Landroidx/camera/core/impl/utils/executor/CameraXExecutors;->directExecutor()Ljava/util/concurrent/Executor;
 
-    move-result-object v1
+    move-result-object p0
 
-    .line 103
-    invoke-static {p1, v2, v1}, Landroidx/camera/core/impl/utils/futures/Futures;->addCallback(Lcom/google/common/util/concurrent/ListenableFuture;Landroidx/camera/core/impl/utils/futures/FutureCallback;Ljava/util/concurrent/Executor;)V
+    .line 101
+    invoke-static {p1, v2, p0}, Landroidx/camera/core/impl/utils/futures/Futures;->addCallback(Lcom/google/common/util/concurrent/ListenableFuture;Landroidx/camera/core/impl/utils/futures/FutureCallback;Ljava/util/concurrent/Executor;)V
 
-    .line 115
+    .line 113
     monitor-exit v0
 
     return-void
 
     :catchall_0
-    move-exception p1
+    move-exception p0
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p1
+    throw p0
 .end method

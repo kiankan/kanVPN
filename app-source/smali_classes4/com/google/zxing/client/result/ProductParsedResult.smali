@@ -39,28 +39,28 @@
 
 # virtual methods
 .method public getDisplayResult()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 49
-    iget-object v0, p0, Lcom/google/zxing/client/result/ProductParsedResult;->productID:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/ProductParsedResult;->productID:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getNormalizedProductID()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 44
-    iget-object v0, p0, Lcom/google/zxing/client/result/ProductParsedResult;->normalizedProductID:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/ProductParsedResult;->normalizedProductID:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getProductID()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 40
-    iget-object v0, p0, Lcom/google/zxing/client/result/ProductParsedResult;->productID:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/ProductParsedResult;->productID:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method

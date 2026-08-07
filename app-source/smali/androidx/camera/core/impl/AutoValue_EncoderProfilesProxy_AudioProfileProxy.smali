@@ -48,13 +48,13 @@
 
     .line 31
     :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null mediaType"
+    const-string p1, "Null mediaType"
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 
@@ -68,7 +68,7 @@
 
     return v0
 
-    .line 89
+    .line 88
     :cond_0
     instance-of v1, p1, Landroidx/camera/core/impl/EncoderProfilesProxy$AudioProfileProxy;
 
@@ -76,10 +76,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 90
+    .line 89
     check-cast p1, Landroidx/camera/core/impl/EncoderProfilesProxy$AudioProfileProxy;
 
-    .line 91
+    .line 90
     iget v1, p0, Landroidx/camera/core/impl/AutoValue_EncoderProfilesProxy_AudioProfileProxy;->codec:I
 
     invoke-virtual {p1}, Landroidx/camera/core/impl/EncoderProfilesProxy$AudioProfileProxy;->getCodec()I
@@ -90,7 +90,7 @@
 
     iget-object v1, p0, Landroidx/camera/core/impl/AutoValue_EncoderProfilesProxy_AudioProfileProxy;->mediaType:Ljava/lang/String;
 
-    .line 92
+    .line 91
     invoke-virtual {p1}, Landroidx/camera/core/impl/EncoderProfilesProxy$AudioProfileProxy;->getMediaType()Ljava/lang/String;
 
     move-result-object v3
@@ -103,7 +103,7 @@
 
     iget v1, p0, Landroidx/camera/core/impl/AutoValue_EncoderProfilesProxy_AudioProfileProxy;->bitrate:I
 
-    .line 93
+    .line 92
     invoke-virtual {p1}, Landroidx/camera/core/impl/EncoderProfilesProxy$AudioProfileProxy;->getBitrate()I
 
     move-result v3
@@ -112,7 +112,7 @@
 
     iget v1, p0, Landroidx/camera/core/impl/AutoValue_EncoderProfilesProxy_AudioProfileProxy;->sampleRate:I
 
-    .line 94
+    .line 93
     invoke-virtual {p1}, Landroidx/camera/core/impl/EncoderProfilesProxy$AudioProfileProxy;->getSampleRate()I
 
     move-result v3
@@ -121,21 +121,21 @@
 
     iget v1, p0, Landroidx/camera/core/impl/AutoValue_EncoderProfilesProxy_AudioProfileProxy;->channels:I
 
-    .line 95
+    .line 94
     invoke-virtual {p1}, Landroidx/camera/core/impl/EncoderProfilesProxy$AudioProfileProxy;->getChannels()I
 
     move-result v3
 
     if-ne v1, v3, :cond_1
 
-    iget v1, p0, Landroidx/camera/core/impl/AutoValue_EncoderProfilesProxy_AudioProfileProxy;->profile:I
+    iget p0, p0, Landroidx/camera/core/impl/AutoValue_EncoderProfilesProxy_AudioProfileProxy;->profile:I
 
-    .line 96
+    .line 95
     invoke-virtual {p1}, Landroidx/camera/core/impl/EncoderProfilesProxy$AudioProfileProxy;->getProfile()I
 
     move-result p1
 
-    if-ne v1, p1, :cond_1
+    if-ne p0, p1, :cond_1
 
     return v0
 
@@ -144,63 +144,63 @@
 .end method
 
 .method public getBitrate()I
-    .locals 1
+    .locals 0
 
-    .line 54
-    iget v0, p0, Landroidx/camera/core/impl/AutoValue_EncoderProfilesProxy_AudioProfileProxy;->bitrate:I
+    .line 53
+    iget p0, p0, Landroidx/camera/core/impl/AutoValue_EncoderProfilesProxy_AudioProfileProxy;->bitrate:I
 
-    return v0
+    return p0
 .end method
 
 .method public getChannels()I
-    .locals 1
+    .locals 0
 
-    .line 64
-    iget v0, p0, Landroidx/camera/core/impl/AutoValue_EncoderProfilesProxy_AudioProfileProxy;->channels:I
+    .line 63
+    iget p0, p0, Landroidx/camera/core/impl/AutoValue_EncoderProfilesProxy_AudioProfileProxy;->channels:I
 
-    return v0
+    return p0
 .end method
 
 .method public getCodec()I
-    .locals 1
+    .locals 0
 
     .line 43
-    iget v0, p0, Landroidx/camera/core/impl/AutoValue_EncoderProfilesProxy_AudioProfileProxy;->codec:I
+    iget p0, p0, Landroidx/camera/core/impl/AutoValue_EncoderProfilesProxy_AudioProfileProxy;->codec:I
 
-    return v0
+    return p0
 .end method
 
 .method public getMediaType()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    .line 49
-    iget-object v0, p0, Landroidx/camera/core/impl/AutoValue_EncoderProfilesProxy_AudioProfileProxy;->mediaType:Ljava/lang/String;
+    .line 48
+    iget-object p0, p0, Landroidx/camera/core/impl/AutoValue_EncoderProfilesProxy_AudioProfileProxy;->mediaType:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getProfile()I
-    .locals 1
+    .locals 0
 
-    .line 69
-    iget v0, p0, Landroidx/camera/core/impl/AutoValue_EncoderProfilesProxy_AudioProfileProxy;->profile:I
+    .line 68
+    iget p0, p0, Landroidx/camera/core/impl/AutoValue_EncoderProfilesProxy_AudioProfileProxy;->profile:I
 
-    return v0
+    return p0
 .end method
 
 .method public getSampleRate()I
-    .locals 1
+    .locals 0
 
-    .line 59
-    iget v0, p0, Landroidx/camera/core/impl/AutoValue_EncoderProfilesProxy_AudioProfileProxy;->sampleRate:I
+    .line 58
+    iget p0, p0, Landroidx/camera/core/impl/AutoValue_EncoderProfilesProxy_AudioProfileProxy;->sampleRate:I
 
-    return v0
+    return p0
 .end method
 
 .method public hashCode()I
     .locals 3
 
-    .line 105
+    .line 104
     iget v0, p0, Landroidx/camera/core/impl/AutoValue_EncoderProfilesProxy_AudioProfileProxy;->codec:I
 
     const v1, 0xf4243
@@ -209,7 +209,7 @@
 
     mul-int/2addr v0, v1
 
-    .line 107
+    .line 106
     iget-object v2, p0, Landroidx/camera/core/impl/AutoValue_EncoderProfilesProxy_AudioProfileProxy;->mediaType:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
@@ -220,39 +220,39 @@
 
     mul-int/2addr v0, v1
 
-    .line 109
+    .line 108
     iget v2, p0, Landroidx/camera/core/impl/AutoValue_EncoderProfilesProxy_AudioProfileProxy;->bitrate:I
 
     xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
-    .line 111
+    .line 110
     iget v2, p0, Landroidx/camera/core/impl/AutoValue_EncoderProfilesProxy_AudioProfileProxy;->sampleRate:I
 
     xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
-    .line 113
+    .line 112
     iget v2, p0, Landroidx/camera/core/impl/AutoValue_EncoderProfilesProxy_AudioProfileProxy;->channels:I
 
     xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
-    .line 115
-    iget v1, p0, Landroidx/camera/core/impl/AutoValue_EncoderProfilesProxy_AudioProfileProxy;->profile:I
+    .line 114
+    iget p0, p0, Landroidx/camera/core/impl/AutoValue_EncoderProfilesProxy_AudioProfileProxy;->profile:I
 
-    xor-int/2addr v0, v1
+    xor-int/2addr p0, v0
 
-    return v0
+    return p0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 74
+    .line 73
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "AudioProfileProxy{codec="
@@ -299,17 +299,17 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Landroidx/camera/core/impl/AutoValue_EncoderProfilesProxy_AudioProfileProxy;->profile:I
+    iget p0, p0, Landroidx/camera/core/impl/AutoValue_EncoderProfilesProxy_AudioProfileProxy;->profile:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v1, "}"
+    const-string/jumbo p0, "}"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

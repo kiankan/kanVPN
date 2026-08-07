@@ -14,10 +14,10 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 35
+    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
+    .line 37
     iput p1, p0, Landroidx/camera/core/impl/LensFacingCameraFilter;->mLensFacing:I
 
     return-void
@@ -90,10 +90,10 @@
 .end method
 
 .method public getLensFacing()I
-    .locals 1
+    .locals 0
 
     .line 58
-    iget v0, p0, Landroidx/camera/core/impl/LensFacingCameraFilter;->mLensFacing:I
+    iget p0, p0, Landroidx/camera/core/impl/LensFacingCameraFilter;->mLensFacing:I
 
-    return v0
+    return p0
 .end method

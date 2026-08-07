@@ -49,59 +49,59 @@
 
 # virtual methods
 .method getBucket()I
-    .locals 1
+    .locals 0
 
     .line 64
-    iget v0, p0, Lcom/google/zxing/pdf417/decoder/Codeword;->bucket:I
+    iget p0, p0, Lcom/google/zxing/pdf417/decoder/Codeword;->bucket:I
 
-    return v0
+    return p0
 .end method
 
 .method getEndX()I
-    .locals 1
+    .locals 0
 
     .line 60
-    iget v0, p0, Lcom/google/zxing/pdf417/decoder/Codeword;->endX:I
+    iget p0, p0, Lcom/google/zxing/pdf417/decoder/Codeword;->endX:I
 
-    return v0
+    return p0
 .end method
 
 .method getRowNumber()I
-    .locals 1
+    .locals 0
 
     .line 72
-    iget v0, p0, Lcom/google/zxing/pdf417/decoder/Codeword;->rowNumber:I
+    iget p0, p0, Lcom/google/zxing/pdf417/decoder/Codeword;->rowNumber:I
 
-    return v0
+    return p0
 .end method
 
 .method getStartX()I
-    .locals 1
+    .locals 0
 
     .line 56
-    iget v0, p0, Lcom/google/zxing/pdf417/decoder/Codeword;->startX:I
+    iget p0, p0, Lcom/google/zxing/pdf417/decoder/Codeword;->startX:I
 
-    return v0
+    return p0
 .end method
 
 .method getValue()I
-    .locals 1
+    .locals 0
 
     .line 68
-    iget v0, p0, Lcom/google/zxing/pdf417/decoder/Codeword;->value:I
+    iget p0, p0, Lcom/google/zxing/pdf417/decoder/Codeword;->value:I
 
-    return v0
+    return p0
 .end method
 
 .method getWidth()I
-    .locals 2
+    .locals 1
 
     .line 52
     iget v0, p0, Lcom/google/zxing/pdf417/decoder/Codeword;->endX:I
 
-    iget v1, p0, Lcom/google/zxing/pdf417/decoder/Codeword;->startX:I
+    iget p0, p0, Lcom/google/zxing/pdf417/decoder/Codeword;->startX:I
 
-    sub-int/2addr v0, v1
+    sub-int/2addr v0, p0
 
     return v0
 .end method
@@ -114,9 +114,9 @@
 
     invoke-virtual {p0, v0}, Lcom/google/zxing/pdf417/decoder/Codeword;->isValidRowNumber(I)Z
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method isValidRowNumber(I)Z
@@ -127,22 +127,22 @@
     if-eq p1, v0, :cond_0
 
     .line 44
-    iget v0, p0, Lcom/google/zxing/pdf417/decoder/Codeword;->bucket:I
+    iget p0, p0, Lcom/google/zxing/pdf417/decoder/Codeword;->bucket:I
 
     rem-int/lit8 p1, p1, 0x3
 
     mul-int/lit8 p1, p1, 0x3
 
-    if-ne v0, p1, :cond_0
+    if-ne p0, p1, :cond_0
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method setRowNumber(I)V
@@ -187,17 +187,17 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v1, "|"
+    const-string/jumbo v1, "|"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lcom/google/zxing/pdf417/decoder/Codeword;->value:I
+    iget p0, p0, Lcom/google/zxing/pdf417/decoder/Codeword;->value:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

@@ -30,23 +30,23 @@
 
     .line 24
     :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null schedulerHandler"
+    const-string p1, "Null schedulerHandler"
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
     .line 20
     :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null cameraExecutor"
+    const-string p1, "Null cameraExecutor"
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 
@@ -60,7 +60,7 @@
 
     return v0
 
-    .line 54
+    .line 52
     :cond_0
     instance-of v1, p1, Landroidx/camera/core/impl/CameraThreadConfig;
 
@@ -68,10 +68,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 55
+    .line 53
     check-cast p1, Landroidx/camera/core/impl/CameraThreadConfig;
 
-    .line 56
+    .line 54
     iget-object v1, p0, Landroidx/camera/core/impl/AutoValue_CameraThreadConfig;->cameraExecutor:Ljava/util/concurrent/Executor;
 
     invoke-virtual {p1}, Landroidx/camera/core/impl/CameraThreadConfig;->getCameraExecutor()Ljava/util/concurrent/Executor;
@@ -84,18 +84,18 @@
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Landroidx/camera/core/impl/AutoValue_CameraThreadConfig;->schedulerHandler:Landroid/os/Handler;
+    iget-object p0, p0, Landroidx/camera/core/impl/AutoValue_CameraThreadConfig;->schedulerHandler:Landroid/os/Handler;
 
-    .line 57
+    .line 55
     invoke-virtual {p1}, Landroidx/camera/core/impl/CameraThreadConfig;->getSchedulerHandler()Landroid/os/Handler;
 
     move-result-object p1
 
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_1
+    if-eqz p0, :cond_1
 
     return v0
 
@@ -104,27 +104,27 @@
 .end method
 
 .method public getCameraExecutor()Ljava/util/concurrent/Executor;
-    .locals 1
+    .locals 0
 
-    .line 32
-    iget-object v0, p0, Landroidx/camera/core/impl/AutoValue_CameraThreadConfig;->cameraExecutor:Ljava/util/concurrent/Executor;
+    .line 31
+    iget-object p0, p0, Landroidx/camera/core/impl/AutoValue_CameraThreadConfig;->cameraExecutor:Ljava/util/concurrent/Executor;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getSchedulerHandler()Landroid/os/Handler;
-    .locals 1
+    .locals 0
 
-    .line 38
-    iget-object v0, p0, Landroidx/camera/core/impl/AutoValue_CameraThreadConfig;->schedulerHandler:Landroid/os/Handler;
+    .line 36
+    iget-object p0, p0, Landroidx/camera/core/impl/AutoValue_CameraThreadConfig;->schedulerHandler:Landroid/os/Handler;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public hashCode()I
     .locals 2
 
-    .line 66
+    .line 64
     iget-object v0, p0, Landroidx/camera/core/impl/AutoValue_CameraThreadConfig;->cameraExecutor:Ljava/util/concurrent/Executor;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -137,22 +137,22 @@
 
     mul-int/2addr v0, v1
 
-    .line 68
-    iget-object v1, p0, Landroidx/camera/core/impl/AutoValue_CameraThreadConfig;->schedulerHandler:Landroid/os/Handler;
+    .line 66
+    iget-object p0, p0, Landroidx/camera/core/impl/AutoValue_CameraThreadConfig;->schedulerHandler:Landroid/os/Handler;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
-    move-result v1
+    move-result p0
 
-    xor-int/2addr v0, v1
+    xor-int/2addr p0, v0
 
-    return v0
+    return p0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 43
+    .line 41
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "CameraThreadConfig{cameraExecutor="
@@ -167,17 +167,17 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Landroidx/camera/core/impl/AutoValue_CameraThreadConfig;->schedulerHandler:Landroid/os/Handler;
+    iget-object p0, p0, Landroidx/camera/core/impl/AutoValue_CameraThreadConfig;->schedulerHandler:Landroid/os/Handler;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, "}"
+    const-string/jumbo p0, "}"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

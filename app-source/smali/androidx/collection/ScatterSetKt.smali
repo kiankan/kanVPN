@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nScatterSet.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ScatterSet.kt\nandroidx/collection/ScatterSetKt\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,1100:1\n1#2:1101\n*E\n"
+    value = "SMAP\nScatterSet.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ScatterSet.kt\nandroidx/collection/ScatterSetKt\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,1210:1\n1#2:1211\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -39,7 +39,7 @@
     k = 0x2
     mv = {
         0x1,
-        0x8,
+        0x9,
         0x0
     }
     xi = 0x30
@@ -62,7 +62,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 37
+    .line 40
     new-instance v0, Landroidx/collection/MutableScatterSet;
 
     const/4 v1, 0x0
@@ -86,7 +86,7 @@
         }
     .end annotation
 
-    .line 43
+    .line 44
     sget-object v0, Landroidx/collection/ScatterSetKt;->EmptyScatterSet:Landroidx/collection/MutableScatterSet;
 
     const-string v1, "null cannot be cast to non-null type androidx.collection.ScatterSet<E of androidx.collection.ScatterSetKt.emptyScatterSet>"
@@ -110,7 +110,7 @@
         }
     .end annotation
 
-    .line 81
+    .line 70
     new-instance v0, Landroidx/collection/MutableScatterSet;
 
     const/4 v1, 0x1
@@ -136,14 +136,13 @@
         }
     .end annotation
 
-    .line 87
+    .line 74
     new-instance v0, Landroidx/collection/MutableScatterSet;
 
     const/4 v1, 0x1
 
     invoke-direct {v0, v1}, Landroidx/collection/MutableScatterSet;-><init>(I)V
 
-    .line 88
     invoke-virtual {v0, p0}, Landroidx/collection/MutableScatterSet;->plusAssign(Ljava/lang/Object;)V
 
     return-object v0
@@ -161,17 +160,17 @@
         }
     .end annotation
 
-    .line 95
+    .line 78
     new-instance v0, Landroidx/collection/MutableScatterSet;
 
     const/4 v1, 0x2
 
     invoke-direct {v0, v1}, Landroidx/collection/MutableScatterSet;-><init>(I)V
 
-    .line 96
+    .line 79
     invoke-virtual {v0, p0}, Landroidx/collection/MutableScatterSet;->plusAssign(Ljava/lang/Object;)V
 
-    .line 97
+    .line 80
     invoke-virtual {v0, p1}, Landroidx/collection/MutableScatterSet;->plusAssign(Ljava/lang/Object;)V
 
     return-object v0
@@ -189,20 +188,20 @@
         }
     .end annotation
 
-    .line 104
+    .line 85
     new-instance v0, Landroidx/collection/MutableScatterSet;
 
     const/4 v1, 0x3
 
     invoke-direct {v0, v1}, Landroidx/collection/MutableScatterSet;-><init>(I)V
 
-    .line 105
+    .line 86
     invoke-virtual {v0, p0}, Landroidx/collection/MutableScatterSet;->plusAssign(Ljava/lang/Object;)V
 
-    .line 106
+    .line 87
     invoke-virtual {v0, p1}, Landroidx/collection/MutableScatterSet;->plusAssign(Ljava/lang/Object;)V
 
-    .line 107
+    .line 88
     invoke-virtual {v0, p2}, Landroidx/collection/MutableScatterSet;->plusAssign(Ljava/lang/Object;)V
 
     return-object v0
@@ -224,7 +223,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 114
+    .line 93
     new-instance v0, Landroidx/collection/MutableScatterSet;
 
     array-length v1, p0
@@ -248,7 +247,7 @@
         }
     .end annotation
 
-    .line 49
+    .line 48
     sget-object v0, Landroidx/collection/ScatterSetKt;->EmptyScatterSet:Landroidx/collection/MutableScatterSet;
 
     const-string v1, "null cannot be cast to non-null type androidx.collection.ScatterSet<E of androidx.collection.ScatterSetKt.scatterSetOf>"
@@ -272,7 +271,7 @@
         }
     .end annotation
 
-    .line 55
+    .line 52
     invoke-static {p0}, Landroidx/collection/ScatterSetKt;->mutableScatterSetOf(Ljava/lang/Object;)Landroidx/collection/MutableScatterSet;
 
     move-result-object p0
@@ -294,7 +293,7 @@
         }
     .end annotation
 
-    .line 62
+    .line 57
     invoke-static {p0, p1}, Landroidx/collection/ScatterSetKt;->mutableScatterSetOf(Ljava/lang/Object;Ljava/lang/Object;)Landroidx/collection/MutableScatterSet;
 
     move-result-object p0
@@ -316,7 +315,7 @@
         }
     .end annotation
 
-    .line 69
+    .line 62
     invoke-static {p0, p1, p2}, Landroidx/collection/ScatterSetKt;->mutableScatterSetOf(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Landroidx/collection/MutableScatterSet;
 
     move-result-object p0
@@ -342,7 +341,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 76
+    .line 67
     new-instance v0, Landroidx/collection/MutableScatterSet;
 
     array-length v1, p0

@@ -31,22 +31,22 @@
     .locals 0
 
     .line 94
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    const-string p2, "This luminance source does not support cropping."
+    const-string p1, "This luminance source does not support cropping."
 
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method public final getHeight()I
-    .locals 1
+    .locals 0
 
     .line 73
-    iget v0, p0, Lcom/google/zxing/LuminanceSource;->height:I
+    iget p0, p0, Lcom/google/zxing/LuminanceSource;->height:I
 
-    return v0
+    return p0
 .end method
 
 .method public abstract getMatrix()[B
@@ -56,12 +56,12 @@
 .end method
 
 .method public final getWidth()I
-    .locals 1
+    .locals 0
 
     .line 66
-    iget v0, p0, Lcom/google/zxing/LuminanceSource;->width:I
+    iget p0, p0, Lcom/google/zxing/LuminanceSource;->width:I
 
-    return v0
+    return p0
 .end method
 
 .method public invert()Lcom/google/zxing/LuminanceSource;
@@ -76,45 +76,45 @@
 .end method
 
 .method public isCropSupported()Z
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public isRotateSupported()Z
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public rotateCounterClockwise()Lcom/google/zxing/LuminanceSource;
-    .locals 2
+    .locals 1
 
     .line 119
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    const-string v1, "This luminance source does not support rotation by 90 degrees."
+    const-string v0, "This luminance source does not support rotation by 90 degrees."
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw v0
+    throw p0
 .end method
 
 .method public rotateCounterClockwise45()Lcom/google/zxing/LuminanceSource;
-    .locals 2
+    .locals 1
 
     .line 129
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    const-string v1, "This luminance source does not support rotation by 45 degrees."
+    const-string v0, "This luminance source does not support rotation by 45 degrees."
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw v0
+    throw p0
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -217,7 +217,7 @@
     :cond_4
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

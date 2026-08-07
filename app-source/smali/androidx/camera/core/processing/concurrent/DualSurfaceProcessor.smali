@@ -51,18 +51,18 @@
 
 
 # direct methods
-.method constructor <init>(Landroidx/camera/core/DynamicRange;Landroidx/camera/core/LayoutSettings;Landroidx/camera/core/LayoutSettings;)V
+.method constructor <init>(Landroidx/camera/core/DynamicRange;Landroidx/camera/core/CompositionSettings;Landroidx/camera/core/CompositionSettings;)V
     .locals 1
 
     .line 86
     sget-object v0, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
 
-    invoke-direct {p0, p1, v0, p2, p3}, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;-><init>(Landroidx/camera/core/DynamicRange;Ljava/util/Map;Landroidx/camera/core/LayoutSettings;Landroidx/camera/core/LayoutSettings;)V
+    invoke-direct {p0, p1, v0, p2, p3}, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;-><init>(Landroidx/camera/core/DynamicRange;Ljava/util/Map;Landroidx/camera/core/CompositionSettings;Landroidx/camera/core/CompositionSettings;)V
 
     return-void
 .end method
 
-.method constructor <init>(Landroidx/camera/core/DynamicRange;Ljava/util/Map;Landroidx/camera/core/LayoutSettings;Landroidx/camera/core/LayoutSettings;)V
+.method constructor <init>(Landroidx/camera/core/DynamicRange;Ljava/util/Map;Landroidx/camera/core/CompositionSettings;Landroidx/camera/core/CompositionSettings;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -72,50 +72,50 @@
             "Landroidx/camera/core/processing/util/GLUtils$InputFormat;",
             "Landroidx/camera/core/processing/ShaderProvider;",
             ">;",
-            "Landroidx/camera/core/LayoutSettings;",
-            "Landroidx/camera/core/LayoutSettings;",
+            "Landroidx/camera/core/CompositionSettings;",
+            "Landroidx/camera/core/CompositionSettings;",
             ")V"
         }
     .end annotation
 
-    .line 93
+    .line 94
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 71
+    .line 73
     iput v0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mInputSurfaceCount:I
 
-    .line 72
+    .line 74
     iput-boolean v0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mIsReleased:Z
 
-    .line 73
+    .line 75
     new-instance v1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v1, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mIsReleaseRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 75
+    .line 77
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mOutputSurfaces:Ljava/util/Map;
 
-    .line 94
+    .line 95
     new-instance v0, Landroid/os/HandlerThread;
 
-    const-string v1, "GL Thread"
+    const-string v1, "CameraX-GL Thread"
 
     invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
     iput-object v0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mGlThread:Landroid/os/HandlerThread;
 
-    .line 95
+    .line 96
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 96
+    .line 97
     new-instance v1, Landroid/os/Handler;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -126,21 +126,21 @@
 
     iput-object v1, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mGlHandler:Landroid/os/Handler;
 
-    .line 97
+    .line 98
     invoke-static {v1}, Landroidx/camera/core/impl/utils/executor/CameraXExecutors;->newHandlerExecutor(Landroid/os/Handler;)Ljava/util/concurrent/ScheduledExecutorService;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mGlExecutor:Ljava/util/concurrent/Executor;
 
-    .line 98
+    .line 99
     new-instance v0, Landroidx/camera/core/processing/concurrent/DualOpenGlRenderer;
 
-    invoke-direct {v0, p3, p4}, Landroidx/camera/core/processing/concurrent/DualOpenGlRenderer;-><init>(Landroidx/camera/core/LayoutSettings;Landroidx/camera/core/LayoutSettings;)V
+    invoke-direct {v0, p3, p4}, Landroidx/camera/core/processing/concurrent/DualOpenGlRenderer;-><init>(Landroidx/camera/core/CompositionSettings;Landroidx/camera/core/CompositionSettings;)V
 
     iput-object v0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mGlRenderer:Landroidx/camera/core/processing/concurrent/DualOpenGlRenderer;
 
-    .line 100
+    .line 102
     :try_start_0
     invoke-direct {p0, p1, p2}, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->initGlRenderer(Landroidx/camera/core/DynamicRange;Ljava/util/Map;)V
     :try_end_0
@@ -151,17 +151,17 @@
     :catch_0
     move-exception p1
 
-    .line 102
+    .line 104
     invoke-virtual {p0}, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->release()V
 
-    .line 103
+    .line 105
     throw p1
 .end method
 
 .method private checkReadyToRelease()V
     .locals 2
 
-    .line 251
+    .line 253
     iget-boolean v0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mIsReleased:Z
 
     if-eqz v0, :cond_1
@@ -170,7 +170,7 @@
 
     if-nez v0, :cond_1
 
-    .line 253
+    .line 255
     iget-object v0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mOutputSurfaces:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -194,26 +194,26 @@
 
     check-cast v1, Landroidx/camera/core/SurfaceOutput;
 
-    .line 254
+    .line 256
     invoke-interface {v1}, Landroidx/camera/core/SurfaceOutput;->close()V
 
     goto :goto_0
 
-    .line 256
+    .line 258
     :cond_0
     iget-object v0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mOutputSurfaces:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    .line 257
+    .line 259
     iget-object v0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mGlRenderer:Landroidx/camera/core/processing/concurrent/DualOpenGlRenderer;
 
     invoke-virtual {v0}, Landroidx/camera/core/processing/concurrent/DualOpenGlRenderer;->release()V
 
-    .line 258
-    iget-object v0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mGlThread:Landroid/os/HandlerThread;
+    .line 260
+    iget-object p0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mGlThread:Landroid/os/HandlerThread;
 
-    invoke-virtual {v0}, Landroid/os/HandlerThread;->quit()Z
+    invoke-virtual {p0}, Landroid/os/HandlerThread;->quit()Z
 
     :cond_1
     return-void
@@ -222,7 +222,7 @@
 .method private executeSafely(Ljava/lang/Runnable;)V
     .locals 1
 
-    .line 229
+    .line 231
     new-instance v0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor$$ExternalSyntheticLambda8;
 
     invoke-direct {v0}, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor$$ExternalSyntheticLambda8;-><init>()V
@@ -235,7 +235,7 @@
 .method private executeSafely(Ljava/lang/Runnable;Ljava/lang/Runnable;)V
     .locals 2
 
-    .line 236
+    .line 238
     :try_start_0
     iget-object v0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mGlExecutor:Ljava/util/concurrent/Executor;
 
@@ -250,16 +250,16 @@
     return-void
 
     :catch_0
-    move-exception p1
+    move-exception p0
 
-    .line 244
-    const-string v0, "DualSurfaceProcessor"
+    .line 246
+    const-string p1, "DualSurfaceProcessor"
 
-    const-string v1, "Unable to executor runnable"
+    const-string v0, "Unable to executor runnable"
 
-    invoke-static {v0, v1, p1}, Landroidx/camera/core/Logger;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {p1, v0, p0}, Landroidx/camera/core/Logger;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 245
+    .line 247
     invoke-interface {p2}, Ljava/lang/Runnable;->run()V
 
     return-void
@@ -278,62 +278,56 @@
         }
     .end annotation
 
-    .line 203
+    .line 205
     new-instance v0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor$$ExternalSyntheticLambda3;
 
     invoke-direct {v0, p0, p1, p2}, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor$$ExternalSyntheticLambda3;-><init>(Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;Landroidx/camera/core/DynamicRange;Ljava/util/Map;)V
 
     invoke-static {v0}, Landroidx/concurrent/futures/CallbackToFutureAdapter;->getFuture(Landroidx/concurrent/futures/CallbackToFutureAdapter$Resolver;)Lcom/google/common/util/concurrent/ListenableFuture;
 
-    move-result-object p1
+    move-result-object p0
 
-    .line 215
+    .line 217
     :try_start_0
-    invoke-interface {p1}, Lcom/google/common/util/concurrent/ListenableFuture;->get()Ljava/lang/Object;
+    invoke-interface {p0}, Lcom/google/common/util/concurrent/ListenableFuture;->get()Ljava/lang/Object;
     :try_end_0
-    .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
 
     :catch_0
-    move-exception p1
-
-    goto :goto_0
-
-    :catch_1
-    move-exception p1
-
-    .line 219
-    :goto_0
-    instance-of p2, p1, Ljava/util/concurrent/ExecutionException;
-
-    if-eqz p2, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/Exception;->getCause()Ljava/lang/Throwable;
-
-    move-result-object p1
-
-    .line 220
-    :cond_0
-    instance-of p2, p1, Ljava/lang/RuntimeException;
-
-    if-eqz p2, :cond_1
+    move-exception p0
 
     .line 221
-    check-cast p1, Ljava/lang/RuntimeException;
+    instance-of p1, p0, Ljava/util/concurrent/ExecutionException;
 
-    throw p1
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Ljava/lang/Exception;->getCause()Ljava/lang/Throwable;
+
+    move-result-object p0
+
+    .line 222
+    :cond_0
+    instance-of p1, p0, Ljava/lang/RuntimeException;
+
+    if-eqz p1, :cond_1
 
     .line 223
+    check-cast p0, Ljava/lang/RuntimeException;
+
+    throw p0
+
+    .line 225
     :cond_1
-    new-instance p2, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string v0, "Failed to create DefaultSurfaceProcessor"
+    const-string p2, "Failed to create DefaultSurfaceProcessor"
 
-    invoke-direct {p2, v0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {p1, p2, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    throw p2
+    throw p1
 .end method
 
 .method static synthetic lambda$executeSafely$7()V
@@ -345,19 +339,19 @@
 
 # virtual methods
 .method synthetic lambda$executeSafely$8$androidx-camera-core-processing-concurrent-DualSurfaceProcessor(Ljava/lang/Runnable;Ljava/lang/Runnable;)V
-    .locals 1
+    .locals 0
 
-    .line 237
-    iget-boolean v0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mIsReleased:Z
+    .line 239
+    iget-boolean p0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mIsReleased:Z
 
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
-    .line 238
+    .line 240
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     return-void
 
-    .line 240
+    .line 242
     :cond_0
     invoke-interface {p2}, Ljava/lang/Runnable;->run()V
 
@@ -365,28 +359,28 @@
 .end method
 
 .method synthetic lambda$initGlRenderer$5$androidx-camera-core-processing-concurrent-DualSurfaceProcessor(Landroidx/camera/core/DynamicRange;Ljava/util/Map;Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;)V
-    .locals 1
+    .locals 0
 
-    .line 206
+    .line 208
     :try_start_0
-    iget-object v0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mGlRenderer:Landroidx/camera/core/processing/concurrent/DualOpenGlRenderer;
+    iget-object p0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mGlRenderer:Landroidx/camera/core/processing/concurrent/DualOpenGlRenderer;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/camera/core/processing/concurrent/DualOpenGlRenderer;->init(Landroidx/camera/core/DynamicRange;Ljava/util/Map;)Landroidx/camera/core/processing/util/GraphicDeviceInfo;
+    invoke-virtual {p0, p1, p2}, Landroidx/camera/core/processing/concurrent/DualOpenGlRenderer;->init(Landroidx/camera/core/DynamicRange;Ljava/util/Map;)Landroidx/camera/core/processing/util/GraphicDeviceInfo;
 
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    .line 207
-    invoke-virtual {p3, p1}, Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;->set(Ljava/lang/Object;)Z
+    .line 209
+    invoke-virtual {p3, p0}, Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;->set(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
 
     :catch_0
-    move-exception p1
+    move-exception p0
 
-    .line 209
-    invoke-virtual {p3, p1}, Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;->setException(Ljava/lang/Throwable;)Z
+    .line 211
+    invoke-virtual {p3, p0}, Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;->setException(Ljava/lang/Throwable;)Z
 
     return-void
 .end method
@@ -399,17 +393,17 @@
         }
     .end annotation
 
-    .line 204
+    .line 206
     new-instance v0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor$$ExternalSyntheticLambda4;
 
     invoke-direct {v0, p0, p1, p2, p3}, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor$$ExternalSyntheticLambda4;-><init>(Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;Landroidx/camera/core/DynamicRange;Ljava/util/Map;Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;)V
 
     invoke-direct {p0, v0}, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->executeSafely(Ljava/lang/Runnable;)V
 
-    .line 212
-    const-string p1, "Init GlRenderer"
+    .line 214
+    const-string p0, "Init GlRenderer"
 
-    return-object p1
+    return-object p0
 .end method
 
 .method synthetic lambda$onInputSurface$0$androidx-camera-core-processing-concurrent-DualSurfaceProcessor(Landroid/graphics/SurfaceTexture;Landroid/view/Surface;Landroidx/camera/core/SurfaceRequest$Result;)V
@@ -418,23 +412,23 @@
     .line 0
     const/4 p3, 0x0
 
-    .line 122
+    .line 124
     invoke-virtual {p1, p3}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;)V
 
-    .line 123
+    .line 125
     invoke-virtual {p1}, Landroid/graphics/SurfaceTexture;->release()V
 
-    .line 124
+    .line 126
     invoke-virtual {p2}, Landroid/view/Surface;->release()V
 
-    .line 125
+    .line 127
     iget p1, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mInputSurfaceCount:I
 
     add-int/lit8 p1, p1, -0x1
 
     iput p1, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mInputSurfaceCount:I
 
-    .line 126
+    .line 128
     invoke-direct {p0}, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->checkReadyToRelease()V
 
     return-void
@@ -443,19 +437,19 @@
 .method synthetic lambda$onInputSurface$1$androidx-camera-core-processing-concurrent-DualSurfaceProcessor(Landroidx/camera/core/SurfaceRequest;)V
     .locals 4
 
-    .line 115
+    .line 117
     iget v0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mInputSurfaceCount:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mInputSurfaceCount:I
 
-    .line 116
+    .line 118
     new-instance v0, Landroid/graphics/SurfaceTexture;
 
     iget-object v1, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mGlRenderer:Landroidx/camera/core/processing/concurrent/DualOpenGlRenderer;
 
-    .line 117
+    .line 119
     invoke-virtual {p1}, Landroidx/camera/core/SurfaceRequest;->isPrimary()Z
 
     move-result v2
@@ -466,7 +460,7 @@
 
     invoke-direct {v0, v1}, Landroid/graphics/SurfaceTexture;-><init>(I)V
 
-    .line 118
+    .line 120
     invoke-virtual {p1}, Landroidx/camera/core/SurfaceRequest;->getResolution()Landroid/util/Size;
 
     move-result-object v1
@@ -475,7 +469,7 @@
 
     move-result v1
 
-    .line 119
+    .line 121
     invoke-virtual {p1}, Landroidx/camera/core/SurfaceRequest;->getResolution()Landroid/util/Size;
 
     move-result-object v2
@@ -484,15 +478,15 @@
 
     move-result v2
 
-    .line 118
+    .line 120
     invoke-virtual {v0, v1, v2}, Landroid/graphics/SurfaceTexture;->setDefaultBufferSize(II)V
 
-    .line 120
+    .line 122
     new-instance v1, Landroid/view/Surface;
 
     invoke-direct {v1, v0}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
 
-    .line 121
+    .line 123
     iget-object v2, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mGlExecutor:Ljava/util/concurrent/Executor;
 
     new-instance v3, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor$$ExternalSyntheticLambda1;
@@ -501,23 +495,23 @@
 
     invoke-virtual {p1, v1, v2, v3}, Landroidx/camera/core/SurfaceRequest;->provideSurface(Landroid/view/Surface;Ljava/util/concurrent/Executor;Landroidx/core/util/Consumer;)V
 
-    .line 128
+    .line 130
     invoke-virtual {p1}, Landroidx/camera/core/SurfaceRequest;->isPrimary()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 129
+    .line 131
     iput-object v0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mPrimarySurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     return-void
 
-    .line 131
+    .line 133
     :cond_0
     iput-object v0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mSecondarySurfaceTexture:Landroid/graphics/SurfaceTexture;
 
-    .line 133
+    .line 135
     iget-object p1, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mGlHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, p0, p1}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;Landroid/os/Handler;)V
@@ -528,10 +522,10 @@
 .method synthetic lambda$onOutputSurface$2$androidx-camera-core-processing-concurrent-DualSurfaceProcessor(Landroidx/camera/core/SurfaceOutput;Landroidx/camera/core/SurfaceOutput$Event;)V
     .locals 0
 
-    .line 146
+    .line 148
     invoke-interface {p1}, Landroidx/camera/core/SurfaceOutput;->close()V
 
-    .line 147
+    .line 149
     iget-object p2, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mOutputSurfaces:Ljava/util/Map;
 
     invoke-interface {p2, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -542,10 +536,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 149
-    iget-object p2, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mGlRenderer:Landroidx/camera/core/processing/concurrent/DualOpenGlRenderer;
+    .line 151
+    iget-object p0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mGlRenderer:Landroidx/camera/core/processing/concurrent/DualOpenGlRenderer;
 
-    invoke-virtual {p2, p1}, Landroidx/camera/core/processing/concurrent/DualOpenGlRenderer;->unregisterOutputSurface(Landroid/view/Surface;)V
+    invoke-virtual {p0, p1}, Landroidx/camera/core/processing/concurrent/DualOpenGlRenderer;->unregisterOutputSurface(Landroid/view/Surface;)V
 
     :cond_0
     return-void
@@ -554,7 +548,7 @@
 .method synthetic lambda$onOutputSurface$3$androidx-camera-core-processing-concurrent-DualSurfaceProcessor(Landroidx/camera/core/SurfaceOutput;)V
     .locals 2
 
-    .line 145
+    .line 147
     iget-object v0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mGlExecutor:Ljava/util/concurrent/Executor;
 
     new-instance v1, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor$$ExternalSyntheticLambda6;
@@ -565,15 +559,15 @@
 
     move-result-object v0
 
-    .line 152
+    .line 154
     iget-object v1, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mGlRenderer:Landroidx/camera/core/processing/concurrent/DualOpenGlRenderer;
 
     invoke-virtual {v1, v0}, Landroidx/camera/core/processing/concurrent/DualOpenGlRenderer;->registerOutputSurface(Landroid/view/Surface;)V
 
-    .line 153
-    iget-object v1, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mOutputSurfaces:Ljava/util/Map;
+    .line 155
+    iget-object p0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mOutputSurfaces:Ljava/util/Map;
 
-    invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -584,10 +578,10 @@
     .line 0
     const/4 v0, 0x1
 
-    .line 163
+    .line 165
     iput-boolean v0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mIsReleased:Z
 
-    .line 164
+    .line 166
     invoke-direct {p0}, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->checkReadyToRelease()V
 
     return-void
@@ -596,7 +590,7 @@
 .method public onFrameAvailable(Landroid/graphics/SurfaceTexture;)V
     .locals 10
 
-    .line 170
+    .line 172
     iget-object v0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mIsReleaseRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -607,7 +601,7 @@
 
     goto :goto_1
 
-    .line 174
+    .line 176
     :cond_0
     iget-object v0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mPrimarySurfaceTexture:Landroid/graphics/SurfaceTexture;
 
@@ -619,16 +613,16 @@
 
     goto :goto_1
 
-    .line 177
+    .line 179
     :cond_1
     invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
 
-    .line 178
+    .line 180
     iget-object v0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mSecondarySurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
 
-    .line 179
+    .line 181
     iget-object v0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mOutputSurfaces:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -653,7 +647,7 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 180
+    .line 182
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
@@ -662,7 +656,7 @@
 
     check-cast v6, Landroid/view/Surface;
 
-    .line 181
+    .line 183
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -671,7 +665,7 @@
 
     check-cast v7, Landroidx/camera/core/SurfaceOutput;
 
-    .line 182
+    .line 184
     invoke-interface {v7}, Landroidx/camera/core/SurfaceOutput;->getFormat()I
 
     move-result v0
@@ -680,11 +674,11 @@
 
     if-ne v0, v2, :cond_2
 
-    .line 185
+    .line 187
     :try_start_0
     iget-object v3, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mGlRenderer:Landroidx/camera/core/processing/concurrent/DualOpenGlRenderer;
 
-    .line 186
+    .line 188
     invoke-virtual {p1}, Landroid/graphics/SurfaceTexture;->getTimestamp()J
 
     move-result-wide v4
@@ -693,7 +687,7 @@
 
     iget-object v9, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mSecondarySurfaceTexture:Landroid/graphics/SurfaceTexture;
 
-    .line 185
+    .line 187
     invoke-virtual/range {v3 .. v9}, Landroidx/camera/core/processing/concurrent/DualOpenGlRenderer;->render(JLandroid/view/Surface;Landroidx/camera/core/SurfaceOutput;Landroid/graphics/SurfaceTexture;Landroid/graphics/SurfaceTexture;)V
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
@@ -703,7 +697,7 @@
     :catch_0
     move-exception v0
 
-    .line 194
+    .line 196
     const-string v2, "DualSurfaceProcessor"
 
     const-string v3, "Failed to render with OpenGL."
@@ -725,7 +719,7 @@
         }
     .end annotation
 
-    .line 110
+    .line 112
     iget-object v0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mIsReleaseRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -734,25 +728,25 @@
 
     if-eqz v0, :cond_0
 
-    .line 111
+    .line 113
     invoke-virtual {p1}, Landroidx/camera/core/SurfaceRequest;->willNotProvideSurface()Z
 
     return-void
 
-    .line 114
+    .line 116
     :cond_0
     new-instance v0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor$$ExternalSyntheticLambda2;
 
     invoke-direct {v0, p0, p1}, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor$$ExternalSyntheticLambda2;-><init>(Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;Landroidx/camera/core/SurfaceRequest;)V
 
-    .line 135
+    .line 137
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     new-instance v1, Landroidx/camera/core/processing/DefaultSurfaceProcessor$$ExternalSyntheticLambda2;
 
     invoke-direct {v1, p1}, Landroidx/camera/core/processing/DefaultSurfaceProcessor$$ExternalSyntheticLambda2;-><init>(Landroidx/camera/core/SurfaceRequest;)V
 
-    .line 114
+    .line 116
     invoke-direct {p0, v0, v1}, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->executeSafely(Ljava/lang/Runnable;Ljava/lang/Runnable;)V
 
     return-void
@@ -766,7 +760,7 @@
         }
     .end annotation
 
-    .line 140
+    .line 142
     iget-object v0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mIsReleaseRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -775,25 +769,25 @@
 
     if-eqz v0, :cond_0
 
-    .line 141
+    .line 143
     invoke-interface {p1}, Landroidx/camera/core/SurfaceOutput;->close()V
 
     return-void
 
-    .line 144
+    .line 146
     :cond_0
     new-instance v0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor$$ExternalSyntheticLambda5;
 
     invoke-direct {v0, p0, p1}, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor$$ExternalSyntheticLambda5;-><init>(Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;Landroidx/camera/core/SurfaceOutput;)V
 
-    .line 154
+    .line 156
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     new-instance v1, Landroidx/camera/core/processing/DefaultSurfaceProcessor$$ExternalSyntheticLambda13;
 
     invoke-direct {v1, p1}, Landroidx/camera/core/processing/DefaultSurfaceProcessor$$ExternalSyntheticLambda13;-><init>(Landroidx/camera/core/SurfaceOutput;)V
 
-    .line 144
+    .line 146
     invoke-direct {p0, v0, v1}, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->executeSafely(Ljava/lang/Runnable;Ljava/lang/Runnable;)V
 
     return-void
@@ -802,7 +796,7 @@
 .method public release()V
     .locals 2
 
-    .line 159
+    .line 161
     iget-object v0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->mIsReleaseRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
@@ -815,7 +809,7 @@
 
     return-void
 
-    .line 162
+    .line 164
     :cond_0
     new-instance v0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor$$ExternalSyntheticLambda0;
 

@@ -25,12 +25,12 @@
 
 # virtual methods
 .method public final run()V
-    .locals 1
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Landroidx/camera/core/processing/DefaultSurfaceProcessor$$ExternalSyntheticLambda6;->f$0:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
+    iget-object p0, p0, Landroidx/camera/core/processing/DefaultSurfaceProcessor$$ExternalSyntheticLambda6;->f$0:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
 
-    invoke-static {v0}, Landroidx/camera/core/processing/DefaultSurfaceProcessor;->lambda$snapshot$7(Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;)V
+    invoke-static {p0}, Landroidx/camera/core/processing/DefaultSurfaceProcessor;->lambda$snapshot$7(Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;)V
 
     return-void
 .end method

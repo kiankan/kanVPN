@@ -15,7 +15,7 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u00002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u0008\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0006\n\u0000\n\u0002\u0010 \n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0015\n\u0002\u0010\u000b\n\u0002\u0008\u0004\u0008\u0086\u0008\u0018\u00002\u00020\u0001BO\u0012\n\u0008\u0002\u0010\u0002\u001a\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u0005\u0012\n\u0008\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u0007\u0012\u0010\u0008\u0002\u0010\u0008\u001a\n\u0012\u0004\u0012\u00020\u0005\u0018\u00010\t\u0012\u0010\u0008\u0002\u0010\n\u001a\n\u0012\u0004\u0012\u00020\u000b\u0018\u00010\t\u00a2\u0006\u0004\u0008\u000c\u0010\rJ\u0010\u0010\u0019\u001a\u0004\u0018\u00010\u0003H\u00c6\u0003\u00a2\u0006\u0002\u0010\u000fJ\u000b\u0010\u001a\u001a\u0004\u0018\u00010\u0005H\u00c6\u0003J\u0010\u0010\u001b\u001a\u0004\u0018\u00010\u0007H\u00c6\u0003\u00a2\u0006\u0002\u0010\u0014J\u0011\u0010\u001c\u001a\n\u0012\u0004\u0012\u00020\u0005\u0018\u00010\tH\u00c6\u0003J\u0011\u0010\u001d\u001a\n\u0012\u0004\u0012\u00020\u000b\u0018\u00010\tH\u00c6\u0003JV\u0010\u001e\u001a\u00020\u00002\n\u0008\u0002\u0010\u0002\u001a\u0004\u0018\u00010\u00032\n\u0008\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u00052\n\u0008\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u00072\u0010\u0008\u0002\u0010\u0008\u001a\n\u0012\u0004\u0012\u00020\u0005\u0018\u00010\t2\u0010\u0008\u0002\u0010\n\u001a\n\u0012\u0004\u0012\u00020\u000b\u0018\u00010\tH\u00c6\u0001\u00a2\u0006\u0002\u0010\u001fJ\u0014\u0010 \u001a\u00020!2\u0008\u0010\"\u001a\u0004\u0018\u00010\u0001H\u00d6\u0083\u0004J\n\u0010#\u001a\u00020\u0003H\u00d6\u0081\u0004J\n\u0010$\u001a\u00020\u0005H\u00d6\u0081\u0004R\u0015\u0010\u0002\u001a\u0004\u0018\u00010\u0003\u00a2\u0006\n\n\u0002\u0010\u0010\u001a\u0004\u0008\u000e\u0010\u000fR\u0013\u0010\u0004\u001a\u0004\u0018\u00010\u0005\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0011\u0010\u0012R\u0015\u0010\u0006\u001a\u0004\u0018\u00010\u0007\u00a2\u0006\n\n\u0002\u0010\u0015\u001a\u0004\u0008\u0013\u0010\u0014R\u0019\u0010\u0008\u001a\n\u0012\u0004\u0012\u00020\u0005\u0018\u00010\t\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0016\u0010\u0017R\u0019\u0010\n\u001a\n\u0012\u0004\u0012\u00020\u000b\u0018\u00010\t\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0018\u0010\u0017\u00a8\u0006%"
+        "\u00008\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u0008\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0006\n\u0000\n\u0002\u0010 \n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0015\n\u0002\u0010\u000b\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\u0008\u0087\u0008\u0018\u00002\u00020\u0001BO\u0012\n\u0008\u0002\u0010\u0002\u001a\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u0005\u0012\n\u0008\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u0007\u0012\u0010\u0008\u0002\u0010\u0008\u001a\n\u0012\u0004\u0012\u00020\u0005\u0018\u00010\t\u0012\u0010\u0008\u0002\u0010\n\u001a\n\u0012\u0004\u0012\u00020\u000b\u0018\u00010\t\u00a2\u0006\u0004\u0008\u000c\u0010\rJ\u0010\u0010\u0019\u001a\u0004\u0018\u00010\u0003H\u00c6\u0003\u00a2\u0006\u0002\u0010\u000fJ\u000b\u0010\u001a\u001a\u0004\u0018\u00010\u0005H\u00c6\u0003J\u0010\u0010\u001b\u001a\u0004\u0018\u00010\u0007H\u00c6\u0003\u00a2\u0006\u0002\u0010\u0014J\u0011\u0010\u001c\u001a\n\u0012\u0004\u0012\u00020\u0005\u0018\u00010\tH\u00c6\u0003J\u0011\u0010\u001d\u001a\n\u0012\u0004\u0012\u00020\u000b\u0018\u00010\tH\u00c6\u0003JV\u0010\u001e\u001a\u00020\u00002\n\u0008\u0002\u0010\u0002\u001a\u0004\u0018\u00010\u00032\n\u0008\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u00052\n\u0008\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u00072\u0010\u0008\u0002\u0010\u0008\u001a\n\u0012\u0004\u0012\u00020\u0005\u0018\u00010\t2\u0010\u0008\u0002\u0010\n\u001a\n\u0012\u0004\u0012\u00020\u000b\u0018\u00010\tH\u00c6\u0001\u00a2\u0006\u0002\u0010\u001fJ\u0014\u0010 \u001a\u00020!2\u0008\u0010\"\u001a\u0004\u0018\u00010\u0001H\u00d6\u0083\u0004J\n\u0010#\u001a\u00020\u0003H\u00d6\u0081\u0004J\n\u0010$\u001a\u00020\u0005H\u00d6\u0081\u0004R\u0015\u0010\u0002\u001a\u0004\u0018\u00010\u0003\u00a2\u0006\n\n\u0002\u0010\u0010\u001a\u0004\u0008\u000e\u0010\u000fR\u0013\u0010\u0004\u001a\u0004\u0018\u00010\u0005\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0011\u0010\u0012R\u0015\u0010\u0006\u001a\u0004\u0018\u00010\u0007\u00a2\u0006\n\n\u0002\u0010\u0015\u001a\u0004\u0008\u0013\u0010\u0014R\u0019\u0010\u0008\u001a\n\u0012\u0004\u0012\u00020\u0005\u0018\u00010\t\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0016\u0010\u0017R\u0019\u0010\n\u001a\n\u0012\u0004\u0012\u00020\u000b\u0018\u00010\t\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0018\u0010\u0017\u00ca\u0001\u000c\u0008&\u0012\u0008\u0008\'\u0012\u0004\u0008\u0003\u0010\u0002\u00a8\u0006%"
     }
     d2 = {
         "Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;",
@@ -55,16 +55,22 @@
         "other",
         "hashCode",
         "toString",
-        "app_playstoreRelease"
+        "v2rayNG:app_playstoreRelease",
+        "Landroidx/compose/runtime/internal/StabilityInferred;",
+        "parameters"
     }
     k = 0x1
     mv = {
         0x2,
-        0x3,
+        0x4,
         0x0
     }
     xi = 0x30
 .end annotation
+
+
+# static fields
+.field public static final $stable:I
 
 
 # instance fields
@@ -96,6 +102,12 @@
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 0
+
+    return-void
+.end method
+
 .method public constructor <init>()V
     .locals 8
 
@@ -137,22 +149,22 @@
         }
     .end annotation
 
-    .line 438
+    .line 396
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 439
+    .line 397
     iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->expected:Ljava/lang/Integer;
 
-    .line 440
+    .line 398
     iput-object p2, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->maxRTT:Ljava/lang/String;
 
-    .line 441
+    .line 399
     iput-object p3, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->tolerance:Ljava/lang/Double;
 
-    .line 442
+    .line 400
     iput-object p4, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->baselines:Ljava/util/List;
 
-    .line 443
+    .line 401
     iput-object p5, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->costs:Ljava/util/List;
 
     return-void
@@ -195,26 +207,11 @@
 
     if-eqz p6, :cond_4
 
-    move-object p6, v0
+    move-object p5, v0
 
-    goto :goto_0
-
+    .line 396
     :cond_4
-    move-object p6, p5
-
-    :goto_0
-    move-object p5, p4
-
-    move-object p4, p3
-
-    move-object p3, p2
-
-    move-object p2, p1
-
-    move-object p1, p0
-
-    .line 438
-    invoke-direct/range {p1 .. p6}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Double;Ljava/util/List;Ljava/util/List;)V
+    invoke-direct/range {p0 .. p5}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Double;Ljava/util/List;Ljava/util/List;)V
 
     return-void
 .end method
@@ -279,31 +276,31 @@
 
 # virtual methods
 .method public final component1()Ljava/lang/Integer;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->expected:Ljava/lang/Integer;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->expected:Ljava/lang/Integer;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component2()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->maxRTT:Ljava/lang/String;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->maxRTT:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component3()Ljava/lang/Double;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->tolerance:Ljava/lang/Double;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->tolerance:Ljava/lang/Double;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component4()Ljava/util/List;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -313,13 +310,13 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->baselines:Ljava/util/List;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->baselines:Ljava/util/List;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component5()Ljava/util/List;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -329,13 +326,13 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->costs:Ljava/util/List;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->costs:Ljava/util/List;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final copy(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Double;Ljava/util/List;Ljava/util/List;)Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;
-    .locals 6
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -352,21 +349,11 @@
         }
     .end annotation
 
-    new-instance v0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;
+    new-instance p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;
 
-    move-object v1, p1
+    invoke-direct/range {p0 .. p5}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Double;Ljava/util/List;Ljava/util/List;)V
 
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    move-object v5, p5
-
-    invoke-direct/range {v0 .. v5}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Double;Ljava/util/List;Ljava/util/List;)V
-
-    return-object v0
+    return-object p0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -442,15 +429,15 @@
     return v2
 
     :cond_5
-    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->costs:Ljava/util/List;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->costs:Ljava/util/List;
 
     iget-object p1, p1, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->costs:Ljava/util/List;
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result p0
 
-    if-nez p1, :cond_6
+    if-nez p0, :cond_6
 
     return v2
 
@@ -459,7 +446,7 @@
 .end method
 
 .method public final getBaselines()Ljava/util/List;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -469,14 +456,14 @@
         }
     .end annotation
 
-    .line 442
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->baselines:Ljava/util/List;
+    .line 400
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->baselines:Ljava/util/List;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getCosts()Ljava/util/List;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -486,37 +473,37 @@
         }
     .end annotation
 
-    .line 443
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->costs:Ljava/util/List;
+    .line 401
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->costs:Ljava/util/List;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getExpected()Ljava/lang/Integer;
-    .locals 1
+    .locals 0
 
-    .line 439
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->expected:Ljava/lang/Integer;
+    .line 397
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->expected:Ljava/lang/Integer;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getMaxRTT()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    .line 440
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->maxRTT:Ljava/lang/String;
+    .line 398
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->maxRTT:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getTolerance()Ljava/lang/Double;
-    .locals 1
+    .locals 0
 
-    .line 441
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->tolerance:Ljava/lang/Double;
+    .line 399
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->tolerance:Ljava/lang/Double;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public hashCode()I
@@ -594,14 +581,14 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->costs:Ljava/util/List;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->costs:Ljava/util/List;
 
-    if-nez v2, :cond_4
+    if-nez p0, :cond_4
 
     goto :goto_4
 
     :cond_4
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
@@ -612,7 +599,7 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 7
+    .locals 6
 
     iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->expected:Ljava/lang/Integer;
 
@@ -622,47 +609,47 @@
 
     iget-object v3, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->baselines:Ljava/util/List;
 
-    iget-object v4, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->costs:Ljava/util/List;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;->costs:Ljava/util/List;
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    const-string v6, "StrategySettingsObject(expected="
+    const-string v5, "StrategySettingsObject(expected="
 
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v0, ", maxRTT="
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v0, ", tolerance="
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v0, ", baselines="
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v0, ", costs="
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v0, ")"
+    const-string p0, ")"
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

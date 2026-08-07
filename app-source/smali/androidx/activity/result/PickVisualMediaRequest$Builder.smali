@@ -49,7 +49,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -76,17 +76,17 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 219
+    .line 214
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 221
+    .line 216
     sget-object v0, Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$ImageAndVideo;->INSTANCE:Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$ImageAndVideo;
 
     check-cast v0, Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$VisualMediaType;
 
     iput-object v0, p0, Landroidx/activity/result/PickVisualMediaRequest$Builder;->mediaType:Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$VisualMediaType;
 
-    .line 222
+    .line 217
     sget-object v0, Landroidx/activity/result/contract/ActivityResultContracts$PickMultipleVisualMedia;->Companion:Landroidx/activity/result/contract/ActivityResultContracts$PickMultipleVisualMedia$Companion;
 
     invoke-virtual {v0}, Landroidx/activity/result/contract/ActivityResultContracts$PickMultipleVisualMedia$Companion;->getMaxItems$activity()I
@@ -95,7 +95,7 @@
 
     iput v0, p0, Landroidx/activity/result/PickVisualMediaRequest$Builder;->maxItems:I
 
-    .line 224
+    .line 219
     sget-object v0, Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$DefaultTab$PhotosTab;->INSTANCE:Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$DefaultTab$PhotosTab;
 
     check-cast v0, Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$DefaultTab;
@@ -110,45 +110,45 @@
 .method public final build()Landroidx/activity/result/PickVisualMediaRequest;
     .locals 3
 
-    .line 328
+    .line 325
     new-instance v0, Landroidx/activity/result/PickVisualMediaRequest;
 
     invoke-direct {v0}, Landroidx/activity/result/PickVisualMediaRequest;-><init>()V
 
-    .line 329
+    .line 326
     iget-object v1, p0, Landroidx/activity/result/PickVisualMediaRequest$Builder;->mediaType:Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$VisualMediaType;
 
     invoke-virtual {v0, v1}, Landroidx/activity/result/PickVisualMediaRequest;->setMediaType$activity(Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$VisualMediaType;)V
 
-    .line 330
+    .line 327
     iget v1, p0, Landroidx/activity/result/PickVisualMediaRequest$Builder;->maxItems:I
 
     invoke-virtual {v0, v1}, Landroidx/activity/result/PickVisualMediaRequest;->setMaxItems$activity(I)V
 
-    .line 331
+    .line 328
     iget-boolean v1, p0, Landroidx/activity/result/PickVisualMediaRequest$Builder;->isOrderedSelection:Z
 
     invoke-virtual {v0, v1}, Landroidx/activity/result/PickVisualMediaRequest;->setOrderedSelection$activity(Z)V
 
-    .line 332
+    .line 329
     iget-object v1, p0, Landroidx/activity/result/PickVisualMediaRequest$Builder;->defaultTab:Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$DefaultTab;
 
     invoke-virtual {v0, v1}, Landroidx/activity/result/PickVisualMediaRequest;->setDefaultTab$activity(Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$DefaultTab;)V
 
-    .line 333
+    .line 330
     iget-boolean v1, p0, Landroidx/activity/result/PickVisualMediaRequest$Builder;->isCustomAccentColorApplied:Z
 
     invoke-virtual {v0, v1}, Landroidx/activity/result/PickVisualMediaRequest;->setCustomAccentColorApplied$activity(Z)V
 
-    .line 334
+    .line 331
     iget-wide v1, p0, Landroidx/activity/result/PickVisualMediaRequest$Builder;->accentColor:J
 
     invoke-virtual {v0, v1, v2}, Landroidx/activity/result/PickVisualMediaRequest;->setAccentColor$activity(J)V
 
-    .line 335
-    iget-object v1, p0, Landroidx/activity/result/PickVisualMediaRequest$Builder;->mediaCapabilitiesForTranscoding:Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$MediaCapabilities;
+    .line 332
+    iget-object p0, p0, Landroidx/activity/result/PickVisualMediaRequest$Builder;->mediaCapabilitiesForTranscoding:Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$MediaCapabilities;
 
-    invoke-virtual {v0, v1}, Landroidx/activity/result/PickVisualMediaRequest;->setMediaCapabilitiesForTranscoding$activity(Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$MediaCapabilities;)V
+    invoke-virtual {v0, p0}, Landroidx/activity/result/PickVisualMediaRequest;->setMediaCapabilitiesForTranscoding$activity(Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$MediaCapabilities;)V
 
     return-object v0
 .end method
@@ -156,12 +156,12 @@
 .method public final setAccentColor(J)Landroidx/activity/result/PickVisualMediaRequest$Builder;
     .locals 0
 
-    .line 296
+    .line 291
     iput-wide p1, p0, Landroidx/activity/result/PickVisualMediaRequest$Builder;->accentColor:J
 
     const/4 p1, 0x1
 
-    .line 297
+    .line 292
     iput-boolean p1, p0, Landroidx/activity/result/PickVisualMediaRequest$Builder;->isCustomAccentColorApplied:Z
 
     return-object p0
@@ -174,7 +174,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 281
+    .line 276
     iput-object p1, p0, Landroidx/activity/result/PickVisualMediaRequest$Builder;->defaultTab:Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$DefaultTab;
 
     return-object p0
@@ -183,7 +183,7 @@
 .method public final setMaxItems(I)Landroidx/activity/result/PickVisualMediaRequest$Builder;
     .locals 0
 
-    .line 251
+    .line 246
     iput p1, p0, Landroidx/activity/result/PickVisualMediaRequest$Builder;->maxItems:I
 
     return-object p0
@@ -192,7 +192,7 @@
 .method public final setMediaCapabilitiesForTranscoding(Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$MediaCapabilities;)Landroidx/activity/result/PickVisualMediaRequest$Builder;
     .locals 0
 
-    .line 318
+    .line 315
     iput-object p1, p0, Landroidx/activity/result/PickVisualMediaRequest$Builder;->mediaCapabilitiesForTranscoding:Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$MediaCapabilities;
 
     return-object p0
@@ -205,7 +205,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 239
+    .line 234
     iput-object p1, p0, Landroidx/activity/result/PickVisualMediaRequest$Builder;->mediaType:Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$VisualMediaType;
 
     return-object p0
@@ -214,7 +214,7 @@
 .method public final setOrderedSelection(Z)Landroidx/activity/result/PickVisualMediaRequest$Builder;
     .locals 0
 
-    .line 265
+    .line 260
     iput-boolean p1, p0, Landroidx/activity/result/PickVisualMediaRequest$Builder;->isOrderedSelection:Z
 
     return-object p0

@@ -18,9 +18,9 @@
     .end annotation
 
     .line 53
-    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    sget-object p0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public abstract translateName(Ljava/lang/reflect/Field;)Ljava/lang/String;

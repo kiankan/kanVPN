@@ -39,19 +39,19 @@
 
 # virtual methods
 .method getData()I
-    .locals 1
+    .locals 0
 
     .line 623
-    iget v0, p0, Lcom/google/zxing/aztec/detector/Detector$CorrectedParameter;->data:I
+    iget p0, p0, Lcom/google/zxing/aztec/detector/Detector$CorrectedParameter;->data:I
 
-    return v0
+    return p0
 .end method
 
 .method getErrorsCorrected()I
-    .locals 1
+    .locals 0
 
     .line 627
-    iget v0, p0, Lcom/google/zxing/aztec/detector/Detector$CorrectedParameter;->errorsCorrected:I
+    iget p0, p0, Lcom/google/zxing/aztec/detector/Detector$CorrectedParameter;->errorsCorrected:I
 
-    return v0
+    return p0
 .end method

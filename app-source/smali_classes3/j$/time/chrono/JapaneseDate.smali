@@ -89,13 +89,204 @@
 
     .line 345
     :cond_0
-    new-instance p1, Lj$/time/DateTimeException;
+    const-string p0, "JapaneseDate before Meiji 6 is not supported"
 
-    const-string v0, "JapaneseDate before Meiji 6 is not supported"
+    invoke-static {p0}, Lj$/time/Year$3;->m(Ljava/lang/String;)V
 
-    invoke-direct {p1, v0}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
+    const/4 p0, 0x0
 
-    throw p1
+    throw p0
+.end method
+
+.method constructor <init>(Lj$/time/chrono/JapaneseEra;ILj$/time/LocalDate;)V
+    .locals 1
+
+    .line 364
+    invoke-direct {p0}, Lj$/time/chrono/ChronoLocalDateImpl;-><init>()V
+
+    .line 365
+    sget-object v0, Lj$/time/chrono/JapaneseDate;->MEIJI_6_ISODATE:Lj$/time/LocalDate;
+
+    invoke-virtual {p3, v0}, Lj$/time/LocalDate;->isBefore(Lj$/time/chrono/ChronoLocalDate;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 368
+    iput-object p1, p0, Lj$/time/chrono/JapaneseDate;->era:Lj$/time/chrono/JapaneseEra;
+
+    .line 369
+    iput p2, p0, Lj$/time/chrono/JapaneseDate;->yearOfEra:I
+
+    .line 370
+    iput-object p3, p0, Lj$/time/chrono/JapaneseDate;->isoDate:Lj$/time/LocalDate;
+
+    return-void
+
+    .line 366
+    :cond_0
+    const-string p0, "JapaneseDate before Meiji 6 is not supported"
+
+    invoke-static {p0}, Lj$/time/Year$3;->m(Ljava/lang/String;)V
+
+    const/4 p0, 0x0
+
+    throw p0
+.end method
+
+.method public static of(Lj$/time/chrono/JapaneseEra;III)Lj$/time/chrono/JapaneseDate;
+    .locals 1
+
+    .line 225
+    const-string v0, "era"
+
+    invoke-static {p0, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 233
+    invoke-virtual {p0}, Lj$/time/chrono/JapaneseEra;->getSince()Lj$/time/LocalDate;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lj$/time/LocalDate;->getYear()I
+
+    move-result v0
+
+    add-int/2addr v0, p1
+
+    add-int/lit8 v0, v0, -0x1
+
+    invoke-static {v0, p2, p3}, Lj$/time/LocalDate;->of(III)Lj$/time/LocalDate;
+
+    move-result-object p2
+
+    .line 234
+    invoke-virtual {p0}, Lj$/time/chrono/JapaneseEra;->getSince()Lj$/time/LocalDate;
+
+    move-result-object p3
+
+    invoke-virtual {p2, p3}, Lj$/time/LocalDate;->isBefore(Lj$/time/chrono/ChronoLocalDate;)Z
+
+    move-result p3
+
+    if-nez p3, :cond_0
+
+    invoke-static {p2}, Lj$/time/chrono/JapaneseEra;->from(Lj$/time/LocalDate;)Lj$/time/chrono/JapaneseEra;
+
+    move-result-object p3
+
+    if-ne p0, p3, :cond_0
+
+    .line 237
+    new-instance p3, Lj$/time/chrono/JapaneseDate;
+
+    invoke-direct {p3, p0, p1, p2}, Lj$/time/chrono/JapaneseDate;-><init>(Lj$/time/chrono/JapaneseEra;ILj$/time/LocalDate;)V
+
+    return-object p3
+
+    .line 235
+    :cond_0
+    const-string p0, "year, month, and day not valid for Era"
+
+    invoke-static {p0}, Lj$/time/Year$3;->m(Ljava/lang/String;)V
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method static ofYearDay(Lj$/time/chrono/JapaneseEra;II)Lj$/time/chrono/JapaneseDate;
+    .locals 3
+
+    .line 287
+    const-string v0, "era"
+
+    invoke-static {p0, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    const/4 v0, 0x1
+
+    if-ne p1, v0, :cond_0
+
+    .line 306
+    invoke-virtual {p0}, Lj$/time/chrono/JapaneseEra;->getSince()Lj$/time/LocalDate;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lj$/time/LocalDate;->getYear()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Lj$/time/chrono/JapaneseEra;->getSince()Lj$/time/LocalDate;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lj$/time/LocalDate;->getDayOfYear()I
+
+    move-result v2
+
+    add-int/2addr v2, p2
+
+    sub-int/2addr v2, v0
+
+    .line 305
+    invoke-static {v1, v2}, Lj$/time/LocalDate;->ofYearDay(II)Lj$/time/LocalDate;
+
+    move-result-object p2
+
+    goto :goto_0
+
+    .line 308
+    :cond_0
+    invoke-virtual {p0}, Lj$/time/chrono/JapaneseEra;->getSince()Lj$/time/LocalDate;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lj$/time/LocalDate;->getYear()I
+
+    move-result v1
+
+    add-int/2addr v1, p1
+
+    sub-int/2addr v1, v0
+
+    invoke-static {v1, p2}, Lj$/time/LocalDate;->ofYearDay(II)Lj$/time/LocalDate;
+
+    move-result-object p2
+
+    .line 310
+    :goto_0
+    invoke-virtual {p0}, Lj$/time/chrono/JapaneseEra;->getSince()Lj$/time/LocalDate;
+
+    move-result-object v0
+
+    invoke-virtual {p2, v0}, Lj$/time/LocalDate;->isBefore(Lj$/time/chrono/ChronoLocalDate;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-static {p2}, Lj$/time/chrono/JapaneseEra;->from(Lj$/time/LocalDate;)Lj$/time/chrono/JapaneseEra;
+
+    move-result-object v0
+
+    if-ne p0, v0, :cond_1
+
+    .line 313
+    new-instance v0, Lj$/time/chrono/JapaneseDate;
+
+    invoke-direct {v0, p0, p1, p2}, Lj$/time/chrono/JapaneseDate;-><init>(Lj$/time/chrono/JapaneseEra;ILj$/time/LocalDate;)V
+
+    return-object v0
+
+    .line 311
+    :cond_1
+    const-string p0, "Invalid parameters"
+
+    invoke-static {p0}, Lj$/time/Year$3;->m(Ljava/lang/String;)V
+
+    const/4 p0, 0x0
+
+    return-object p0
 .end method
 
 .method static readExternal(Ljava/io/DataInput;)Lj$/time/chrono/JapaneseDate;
@@ -127,16 +318,16 @@
 .end method
 
 .method private readObject(Ljava/io/ObjectInputStream;)V
-    .locals 1
+    .locals 0
 
     .line 774
-    new-instance p1, Ljava/io/InvalidObjectException;
+    new-instance p0, Ljava/io/InvalidObjectException;
 
-    const-string v0, "Deserialization via serialization delegate"
+    const-string p1, "Deserialization via serialization delegate"
 
-    invoke-direct {p1, v0}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method private with(Lj$/time/LocalDate;)Lj$/time/chrono/JapaneseDate;
@@ -154,11 +345,11 @@
     return-object p0
 
     :cond_0
-    new-instance v0, Lj$/time/chrono/JapaneseDate;
+    new-instance p0, Lj$/time/chrono/JapaneseDate;
 
-    invoke-direct {v0, p1}, Lj$/time/chrono/JapaneseDate;-><init>(Lj$/time/LocalDate;)V
+    invoke-direct {p0, p1}, Lj$/time/chrono/JapaneseDate;-><init>(Lj$/time/LocalDate;)V
 
-    return-object v0
+    return-object p0
 .end method
 
 .method private withYear(I)Lj$/time/chrono/JapaneseDate;
@@ -171,9 +362,9 @@
 
     invoke-direct {p0, v0, p1}, Lj$/time/chrono/JapaneseDate;->withYear(Lj$/time/chrono/JapaneseEra;I)Lj$/time/chrono/JapaneseDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method private withYear(Lj$/time/chrono/JapaneseEra;I)Lj$/time/chrono/JapaneseDate;
@@ -195,9 +386,9 @@
 
     invoke-direct {p0, p1}, Lj$/time/chrono/JapaneseDate;->with(Lj$/time/LocalDate;)Lj$/time/chrono/JapaneseDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method private writeReplace()Ljava/lang/Object;
@@ -221,9 +412,9 @@
     .line 717
     invoke-super {p0, p1}, Lj$/time/chrono/ChronoLocalDate;->atTime(Lj$/time/LocalTime;)Lj$/time/chrono/ChronoLocalDateTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -231,9 +422,9 @@
 
     if-ne p0, p1, :cond_0
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     .line 749
     :cond_0
@@ -245,64 +436,64 @@
     check-cast p1, Lj$/time/chrono/JapaneseDate;
 
     .line 751
-    iget-object v0, p0, Lj$/time/chrono/JapaneseDate;->isoDate:Lj$/time/LocalDate;
+    iget-object p0, p0, Lj$/time/chrono/JapaneseDate;->isoDate:Lj$/time/LocalDate;
 
     iget-object p1, p1, Lj$/time/chrono/JapaneseDate;->isoDate:Lj$/time/LocalDate;
 
-    invoke-virtual {v0, p1}, Lj$/time/LocalDate;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Lj$/time/LocalDate;->equals(Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 
     :cond_1
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method public bridge synthetic getChronology()Lj$/time/chrono/Chronology;
-    .locals 1
+    .locals 0
 
     .line 124
     invoke-virtual {p0}, Lj$/time/chrono/JapaneseDate;->getChronology()Lj$/time/chrono/JapaneseChronology;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getChronology()Lj$/time/chrono/JapaneseChronology;
-    .locals 1
+    .locals 0
 
     .line 384
-    sget-object v0, Lj$/time/chrono/JapaneseChronology;->INSTANCE:Lj$/time/chrono/JapaneseChronology;
+    sget-object p0, Lj$/time/chrono/JapaneseChronology;->INSTANCE:Lj$/time/chrono/JapaneseChronology;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public bridge synthetic getEra()Lj$/time/chrono/Era;
-    .locals 1
+    .locals 0
 
     .line 124
     invoke-virtual {p0}, Lj$/time/chrono/JapaneseDate;->getEra()Lj$/time/chrono/JapaneseEra;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getEra()Lj$/time/chrono/JapaneseEra;
-    .locals 1
+    .locals 0
 
     .line 396
-    iget-object v0, p0, Lj$/time/chrono/JapaneseDate;->era:Lj$/time/chrono/JapaneseEra;
+    iget-object p0, p0, Lj$/time/chrono/JapaneseDate;->era:Lj$/time/chrono/JapaneseEra;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getLong(Lj$/time/temporal/TemporalField;)J
-    .locals 3
+    .locals 2
 
     .line 512
     instance-of v0, p1, Lj$/time/temporal/ChronoField;
@@ -325,108 +516,97 @@
     packed-switch v0, :pswitch_data_0
 
     .line 539
-    iget-object v0, p0, Lj$/time/chrono/JapaneseDate;->isoDate:Lj$/time/LocalDate;
+    iget-object p0, p0, Lj$/time/chrono/JapaneseDate;->isoDate:Lj$/time/LocalDate;
 
-    invoke-virtual {v0, p1}, Lj$/time/LocalDate;->getLong(Lj$/time/temporal/TemporalField;)J
+    invoke-virtual {p0, p1}, Lj$/time/LocalDate;->getLong(Lj$/time/temporal/TemporalField;)J
 
-    move-result-wide v0
+    move-result-wide p0
 
-    return-wide v0
+    return-wide p0
 
     .line 527
     :pswitch_0
-    iget-object p1, p0, Lj$/time/chrono/JapaneseDate;->era:Lj$/time/chrono/JapaneseEra;
+    iget-object p0, p0, Lj$/time/chrono/JapaneseDate;->era:Lj$/time/chrono/JapaneseEra;
 
-    invoke-virtual {p1}, Lj$/time/chrono/JapaneseEra;->getValue()I
+    invoke-virtual {p0}, Lj$/time/chrono/JapaneseEra;->getValue()I
 
-    move-result p1
+    move-result p0
 
-    int-to-long v0, p1
+    int-to-long p0, p0
 
-    return-wide v0
+    return-wide p0
 
     .line 523
     :pswitch_1
-    new-instance v0, Lj$/time/temporal/UnsupportedTemporalTypeException;
+    const-string p0, "Unsupported field: "
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-static {p0, p1}, Lj$/time/Year$2;->m(Ljava/lang/String;Ljava/lang/Object;)V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const-wide/16 p0, 0x0
 
-    const-string v2, "Unsupported field: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Lj$/time/temporal/UnsupportedTemporalTypeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-wide p0
 
     .line 525
     :pswitch_2
-    iget p1, p0, Lj$/time/chrono/JapaneseDate;->yearOfEra:I
+    iget p0, p0, Lj$/time/chrono/JapaneseDate;->yearOfEra:I
 
-    int-to-long v0, p1
+    int-to-long p0, p0
 
-    return-wide v0
+    return-wide p0
 
     .line 534
     :pswitch_3
     iget p1, p0, Lj$/time/chrono/JapaneseDate;->yearOfEra:I
 
-    const/4 v0, 0x1
+    .line 537
+    iget-object v0, p0, Lj$/time/chrono/JapaneseDate;->isoDate:Lj$/time/LocalDate;
 
-    if-ne p1, v0, :cond_0
+    const/4 v1, 0x1
+
+    if-ne p1, v1, :cond_0
 
     .line 535
-    iget-object p1, p0, Lj$/time/chrono/JapaneseDate;->isoDate:Lj$/time/LocalDate;
-
-    invoke-virtual {p1}, Lj$/time/LocalDate;->getDayOfYear()I
+    invoke-virtual {v0}, Lj$/time/LocalDate;->getDayOfYear()I
 
     move-result p1
 
-    iget-object v1, p0, Lj$/time/chrono/JapaneseDate;->era:Lj$/time/chrono/JapaneseEra;
+    iget-object p0, p0, Lj$/time/chrono/JapaneseDate;->era:Lj$/time/chrono/JapaneseEra;
 
-    invoke-virtual {v1}, Lj$/time/chrono/JapaneseEra;->getSince()Lj$/time/LocalDate;
+    invoke-virtual {p0}, Lj$/time/chrono/JapaneseEra;->getSince()Lj$/time/LocalDate;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-virtual {v1}, Lj$/time/LocalDate;->getDayOfYear()I
+    invoke-virtual {p0}, Lj$/time/LocalDate;->getDayOfYear()I
 
-    move-result v1
+    move-result p0
 
-    sub-int/2addr p1, v1
+    sub-int/2addr p1, p0
 
-    add-int/2addr p1, v0
+    add-int/2addr p1, v1
 
-    int-to-long v0, p1
+    int-to-long p0, p1
 
-    return-wide v0
+    return-wide p0
 
     .line 537
     :cond_0
-    iget-object p1, p0, Lj$/time/chrono/JapaneseDate;->isoDate:Lj$/time/LocalDate;
+    invoke-virtual {v0}, Lj$/time/LocalDate;->getDayOfYear()I
 
-    invoke-virtual {p1}, Lj$/time/LocalDate;->getDayOfYear()I
+    move-result p0
 
-    move-result p1
+    int-to-long p0, p0
 
-    int-to-long v0, p1
-
-    return-wide v0
+    return-wide p0
 
     .line 541
     :cond_1
     invoke-interface {p1, p0}, Lj$/time/temporal/TemporalField;->getFrom(Lj$/time/temporal/TemporalAccessor;)J
 
-    move-result-wide v0
+    move-result-wide p0
 
-    return-wide v0
+    return-wide p0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x2
@@ -441,7 +621,7 @@
 .end method
 
 .method public hashCode()I
-    .locals 2
+    .locals 1
 
     .line 763
     invoke-virtual {p0}, Lj$/time/chrono/JapaneseDate;->getChronology()Lj$/time/chrono/JapaneseChronology;
@@ -456,15 +636,15 @@
 
     move-result v0
 
-    iget-object v1, p0, Lj$/time/chrono/JapaneseDate;->isoDate:Lj$/time/LocalDate;
+    iget-object p0, p0, Lj$/time/chrono/JapaneseDate;->isoDate:Lj$/time/LocalDate;
 
-    invoke-virtual {v1}, Lj$/time/LocalDate;->hashCode()I
+    invoke-virtual {p0}, Lj$/time/LocalDate;->hashCode()I
 
-    move-result v1
+    move-result p0
 
-    xor-int/2addr v0, v1
+    xor-int/2addr p0, v0
 
-    return v0
+    return p0
 .end method
 
 .method public isSupported(Lj$/time/temporal/TemporalField;)Z
@@ -500,9 +680,9 @@
     .line 475
     invoke-interface {p1}, Lj$/time/temporal/TemporalField;->isDateBased()Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 
     :cond_1
     if-eqz p1, :cond_2
@@ -510,13 +690,13 @@
     .line 477
     invoke-interface {p1, p0}, Lj$/time/temporal/TemporalField;->isSupportedBy(Lj$/time/temporal/TemporalAccessor;)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_2
+    if-eqz p0, :cond_2
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_2
     :goto_0
@@ -524,16 +704,16 @@
 .end method
 
 .method public lengthOfMonth()I
-    .locals 1
+    .locals 0
 
     .line 409
-    iget-object v0, p0, Lj$/time/chrono/JapaneseDate;->isoDate:Lj$/time/LocalDate;
+    iget-object p0, p0, Lj$/time/chrono/JapaneseDate;->isoDate:Lj$/time/LocalDate;
 
-    invoke-virtual {v0}, Lj$/time/LocalDate;->lengthOfMonth()I
+    invoke-virtual {p0}, Lj$/time/LocalDate;->lengthOfMonth()I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public lengthOfYear()I
@@ -595,19 +775,19 @@
     if-ne v2, v1, :cond_1
 
     .line 427
-    iget-object v2, p0, Lj$/time/chrono/JapaneseDate;->era:Lj$/time/chrono/JapaneseEra;
+    iget-object p0, p0, Lj$/time/chrono/JapaneseDate;->era:Lj$/time/chrono/JapaneseEra;
 
-    invoke-virtual {v2}, Lj$/time/chrono/JapaneseEra;->getSince()Lj$/time/LocalDate;
+    invoke-virtual {p0}, Lj$/time/chrono/JapaneseEra;->getSince()Lj$/time/LocalDate;
 
-    move-result-object v2
+    move-result-object p0
 
-    invoke-virtual {v2}, Lj$/time/LocalDate;->getDayOfYear()I
+    invoke-virtual {p0}, Lj$/time/LocalDate;->getDayOfYear()I
 
-    move-result v2
+    move-result p0
 
-    sub-int/2addr v2, v1
+    sub-int/2addr p0, v1
 
-    sub-int/2addr v0, v2
+    sub-int/2addr v0, p0
 
     :cond_1
     return v0
@@ -619,9 +799,9 @@
     .line 124
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/chrono/JapaneseDate;->minus(JLj$/time/temporal/TemporalUnit;)Lj$/time/chrono/JapaneseDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public minus(JLj$/time/temporal/TemporalUnit;)Lj$/time/chrono/JapaneseDate;
@@ -630,11 +810,11 @@
     .line 687
     invoke-super {p0, p1, p2, p3}, Lj$/time/chrono/ChronoLocalDateImpl;->minus(JLj$/time/temporal/TemporalUnit;)Lj$/time/chrono/ChronoLocalDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lj$/time/chrono/JapaneseDate;
+    check-cast p0, Lj$/time/chrono/JapaneseDate;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic minus(JLj$/time/temporal/TemporalUnit;)Lj$/time/temporal/Temporal;
@@ -643,9 +823,9 @@
     .line 124
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/chrono/JapaneseDate;->minus(JLj$/time/temporal/TemporalUnit;)Lj$/time/chrono/JapaneseDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/chrono/ChronoLocalDate;
@@ -654,9 +834,20 @@
     .line 124
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/chrono/JapaneseDate;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/chrono/JapaneseDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
+.end method
+
+.method public bridge synthetic plus(Lj$/time/temporal/TemporalAmount;)Lj$/time/chrono/ChronoLocalDate;
+    .locals 0
+
+    .line 124
+    invoke-virtual {p0, p1}, Lj$/time/chrono/JapaneseDate;->plus(Lj$/time/temporal/TemporalAmount;)Lj$/time/chrono/JapaneseDate;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method public plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/chrono/JapaneseDate;
@@ -665,11 +856,24 @@
     .line 682
     invoke-super {p0, p1, p2, p3}, Lj$/time/chrono/ChronoLocalDateImpl;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/chrono/ChronoLocalDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lj$/time/chrono/JapaneseDate;
+    check-cast p0, Lj$/time/chrono/JapaneseDate;
 
-    return-object p1
+    return-object p0
+.end method
+
+.method public plus(Lj$/time/temporal/TemporalAmount;)Lj$/time/chrono/JapaneseDate;
+    .locals 0
+
+    .line 610
+    invoke-super {p0, p1}, Lj$/time/chrono/ChronoLocalDateImpl;->plus(Lj$/time/temporal/TemporalAmount;)Lj$/time/chrono/ChronoLocalDate;
+
+    move-result-object p0
+
+    check-cast p0, Lj$/time/chrono/JapaneseDate;
+
+    return-object p0
 .end method
 
 .method public bridge synthetic plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/temporal/Temporal;
@@ -678,9 +882,9 @@
     .line 124
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/chrono/JapaneseDate;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/chrono/JapaneseDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method bridge synthetic plusDays(J)Lj$/time/chrono/ChronoLocalDate;
@@ -689,9 +893,9 @@
     .line 124
     invoke-virtual {p0, p1, p2}, Lj$/time/chrono/JapaneseDate;->plusDays(J)Lj$/time/chrono/JapaneseDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method plusDays(J)Lj$/time/chrono/JapaneseDate;
@@ -706,9 +910,9 @@
 
     invoke-direct {p0, p1}, Lj$/time/chrono/JapaneseDate;->with(Lj$/time/LocalDate;)Lj$/time/chrono/JapaneseDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method bridge synthetic plusMonths(J)Lj$/time/chrono/ChronoLocalDate;
@@ -717,9 +921,9 @@
     .line 124
     invoke-virtual {p0, p1, p2}, Lj$/time/chrono/JapaneseDate;->plusMonths(J)Lj$/time/chrono/JapaneseDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method plusMonths(J)Lj$/time/chrono/JapaneseDate;
@@ -734,9 +938,9 @@
 
     invoke-direct {p0, p1}, Lj$/time/chrono/JapaneseDate;->with(Lj$/time/LocalDate;)Lj$/time/chrono/JapaneseDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method bridge synthetic plusYears(J)Lj$/time/chrono/ChronoLocalDate;
@@ -745,9 +949,9 @@
     .line 124
     invoke-virtual {p0, p1, p2}, Lj$/time/chrono/JapaneseDate;->plusYears(J)Lj$/time/chrono/JapaneseDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method plusYears(J)Lj$/time/chrono/JapaneseDate;
@@ -762,9 +966,9 @@
 
     invoke-direct {p0, p1}, Lj$/time/chrono/JapaneseDate;->with(Lj$/time/LocalDate;)Lj$/time/chrono/JapaneseDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public range(Lj$/time/temporal/TemporalField;)Lj$/time/temporal/ValueRange;
@@ -811,13 +1015,13 @@
     .line 503
     invoke-virtual {p0}, Lj$/time/chrono/JapaneseDate;->getChronology()Lj$/time/chrono/JapaneseChronology;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-virtual {v0, p1}, Lj$/time/chrono/JapaneseChronology;->range(Lj$/time/temporal/ChronoField;)Lj$/time/temporal/ValueRange;
+    invoke-virtual {p0, p1}, Lj$/time/chrono/JapaneseChronology;->range(Lj$/time/temporal/ChronoField;)Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 494
     :cond_0
@@ -832,115 +1036,103 @@
     move-result p1
 
     .line 495
-    iget-object v0, p0, Lj$/time/chrono/JapaneseDate;->era:Lj$/time/chrono/JapaneseEra;
+    iget-object p0, p0, Lj$/time/chrono/JapaneseDate;->era:Lj$/time/chrono/JapaneseEra;
 
-    invoke-virtual {v0}, Lj$/time/chrono/JapaneseEra;->next()Lj$/time/chrono/JapaneseEra;
+    invoke-virtual {p0}, Lj$/time/chrono/JapaneseEra;->next()Lj$/time/chrono/JapaneseEra;
 
-    move-result-object v0
+    move-result-object p0
 
-    if-eqz v0, :cond_1
+    if-eqz p0, :cond_1
 
     .line 497
-    invoke-virtual {v0}, Lj$/time/chrono/JapaneseEra;->getSince()Lj$/time/LocalDate;
+    invoke-virtual {p0}, Lj$/time/chrono/JapaneseEra;->getSince()Lj$/time/LocalDate;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-virtual {v0}, Lj$/time/LocalDate;->getYear()I
+    invoke-virtual {p0}, Lj$/time/LocalDate;->getYear()I
 
-    move-result v0
+    move-result p0
 
-    sub-int/2addr v0, p1
+    sub-int/2addr p0, p1
 
-    add-int/2addr v0, v1
+    add-int/2addr p0, v1
 
-    int-to-long v0, v0
+    int-to-long p0, p0
 
-    invoke-static {v2, v3, v0, v1}, Lj$/time/temporal/ValueRange;->of(JJ)Lj$/time/temporal/ValueRange;
+    invoke-static {v2, v3, p0, p1}, Lj$/time/temporal/ValueRange;->of(JJ)Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     :cond_1
-    const v0, 0x3b9ac9ff
+    const p0, 0x3b9ac9ff
 
-    sub-int/2addr v0, p1
+    sub-int/2addr p0, p1
 
-    int-to-long v0, v0
+    int-to-long p0, p0
 
     .line 500
-    invoke-static {v2, v3, v0, v1}, Lj$/time/temporal/ValueRange;->of(JJ)Lj$/time/temporal/ValueRange;
+    invoke-static {v2, v3, p0, p1}, Lj$/time/temporal/ValueRange;->of(JJ)Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 487
     :cond_2
     invoke-virtual {p0}, Lj$/time/chrono/JapaneseDate;->lengthOfYear()I
 
-    move-result p1
+    move-result p0
 
-    int-to-long v0, p1
+    int-to-long p0, p0
 
-    invoke-static {v2, v3, v0, v1}, Lj$/time/temporal/ValueRange;->of(JJ)Lj$/time/temporal/ValueRange;
+    invoke-static {v2, v3, p0, p1}, Lj$/time/temporal/ValueRange;->of(JJ)Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 486
     :cond_3
     invoke-virtual {p0}, Lj$/time/chrono/JapaneseDate;->lengthOfMonth()I
 
-    move-result p1
+    move-result p0
 
-    int-to-long v0, p1
+    int-to-long p0, p0
 
-    invoke-static {v2, v3, v0, v1}, Lj$/time/temporal/ValueRange;->of(JJ)Lj$/time/temporal/ValueRange;
+    invoke-static {v2, v3, p0, p1}, Lj$/time/temporal/ValueRange;->of(JJ)Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 505
     :cond_4
-    new-instance v0, Lj$/time/temporal/UnsupportedTemporalTypeException;
+    const-string p0, "Unsupported field: "
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-static {p0, p1}, Lj$/time/Year$2;->m(Ljava/lang/String;Ljava/lang/Object;)V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 p0, 0x0
 
-    const-string v2, "Unsupported field: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Lj$/time/temporal/UnsupportedTemporalTypeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-object p0
 
     .line 507
     :cond_5
     invoke-interface {p1, p0}, Lj$/time/temporal/TemporalField;->rangeRefinedBy(Lj$/time/temporal/TemporalAccessor;)Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public toEpochDay()J
     .locals 2
 
     .line 728
-    iget-object v0, p0, Lj$/time/chrono/JapaneseDate;->isoDate:Lj$/time/LocalDate;
+    iget-object p0, p0, Lj$/time/chrono/JapaneseDate;->isoDate:Lj$/time/LocalDate;
 
-    invoke-virtual {v0}, Lj$/time/LocalDate;->toEpochDay()J
+    invoke-virtual {p0}, Lj$/time/LocalDate;->toEpochDay()J
 
     move-result-wide v0
 
@@ -948,14 +1140,14 @@
 .end method
 
 .method public bridge synthetic toString()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 124
     invoke-super {p0}, Lj$/time/chrono/ChronoLocalDateImpl;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public bridge synthetic with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/chrono/ChronoLocalDate;
@@ -964,9 +1156,9 @@
     .line 124
     invoke-virtual {p0, p1}, Lj$/time/chrono/JapaneseDate;->with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/chrono/JapaneseDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic with(Lj$/time/temporal/TemporalField;J)Lj$/time/chrono/ChronoLocalDate;
@@ -975,9 +1167,9 @@
     .line 124
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/chrono/JapaneseDate;->with(Lj$/time/temporal/TemporalField;J)Lj$/time/chrono/JapaneseDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/chrono/JapaneseDate;
@@ -986,11 +1178,11 @@
     .line 600
     invoke-super {p0, p1}, Lj$/time/chrono/ChronoLocalDateImpl;->with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/chrono/ChronoLocalDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lj$/time/chrono/JapaneseDate;
+    check-cast p0, Lj$/time/chrono/JapaneseDate;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public with(Lj$/time/temporal/TemporalField;J)Lj$/time/chrono/JapaneseDate;
@@ -1078,9 +1270,9 @@
 
     invoke-direct {p0, p1}, Lj$/time/chrono/JapaneseDate;->with(Lj$/time/LocalDate;)Lj$/time/chrono/JapaneseDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 580
     :cond_2
@@ -1092,9 +1284,9 @@
 
     invoke-direct {p0, p1}, Lj$/time/chrono/JapaneseDate;->with(Lj$/time/LocalDate;)Lj$/time/chrono/JapaneseDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 582
     :cond_3
@@ -1106,27 +1298,27 @@
 
     invoke-direct {p0, p1, p2}, Lj$/time/chrono/JapaneseDate;->withYear(Lj$/time/chrono/JapaneseEra;I)Lj$/time/chrono/JapaneseDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 578
     :cond_4
     invoke-direct {p0, v2}, Lj$/time/chrono/JapaneseDate;->withYear(I)Lj$/time/chrono/JapaneseDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 590
     :cond_5
     invoke-super {p0, p1, p2, p3}, Lj$/time/chrono/ChronoLocalDateImpl;->with(Lj$/time/temporal/TemporalField;J)Lj$/time/chrono/ChronoLocalDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lj$/time/chrono/JapaneseDate;
+    check-cast p0, Lj$/time/chrono/JapaneseDate;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/temporal/Temporal;
@@ -1135,9 +1327,9 @@
     .line 124
     invoke-virtual {p0, p1}, Lj$/time/chrono/JapaneseDate;->with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/chrono/JapaneseDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic with(Lj$/time/temporal/TemporalField;J)Lj$/time/temporal/Temporal;
@@ -1146,9 +1338,9 @@
     .line 124
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/chrono/JapaneseDate;->with(Lj$/time/temporal/TemporalField;J)Lj$/time/chrono/JapaneseDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method writeExternal(Ljava/io/DataOutput;)V
@@ -1177,9 +1369,9 @@
 
     invoke-interface {p0, v0}, Lj$/time/temporal/TemporalAccessor;->get(Lj$/time/temporal/TemporalField;)I
 
-    move-result v0
+    move-result p0
 
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeByte(I)V
+    invoke-interface {p1, p0}, Ljava/io/DataOutput;->writeByte(I)V
 
     return-void
 .end method

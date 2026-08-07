@@ -1,6 +1,6 @@
 .class public final enum Landroidx/camera/core/impl/SurfaceConfig$ConfigType;
 .super Ljava/lang/Enum;
-.source "SurfaceConfig.java"
+.source "SurfaceConfig.kt"
 
 
 # annotations
@@ -21,8 +21,35 @@
     }
 .end annotation
 
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u000c\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\u0008\u0008\u0008\u0086\u0081\u0002\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00000\u0001B\t\u0008\u0002\u00a2\u0006\u0004\u0008\u0002\u0010\u0003j\u0002\u0008\u0004j\u0002\u0008\u0005j\u0002\u0008\u0006j\u0002\u0008\u0007j\u0002\u0008\u0008\u00a8\u0006\t"
+    }
+    d2 = {
+        "Landroidx/camera/core/impl/SurfaceConfig$ConfigType;",
+        "",
+        "<init>",
+        "(Ljava/lang/String;I)V",
+        "PRIV",
+        "YUV",
+        "JPEG",
+        "JPEG_R",
+        "RAW",
+        "camera-core"
+    }
+    k = 0x1
+    mv = {
+        0x2,
+        0x1,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
 
 # static fields
+.field private static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
+
 .field private static final synthetic $VALUES:[Landroidx/camera/core/impl/SurfaceConfig$ConfigType;
 
 .field public static final enum JPEG:Landroidx/camera/core/impl/SurfaceConfig$ConfigType;
@@ -37,10 +64,9 @@
 
 
 # direct methods
-.method private static synthetic $values()[Landroidx/camera/core/impl/SurfaceConfig$ConfigType;
+.method private static final synthetic $values()[Landroidx/camera/core/impl/SurfaceConfig$ConfigType;
     .locals 5
 
-    .line 185
     sget-object v0, Landroidx/camera/core/impl/SurfaceConfig$ConfigType;->PRIV:Landroidx/camera/core/impl/SurfaceConfig$ConfigType;
 
     sget-object v1, Landroidx/camera/core/impl/SurfaceConfig$ConfigType;->YUV:Landroidx/camera/core/impl/SurfaceConfig$ConfigType;
@@ -61,7 +87,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 186
+    .line 222
     new-instance v0, Landroidx/camera/core/impl/SurfaceConfig$ConfigType;
 
     const-string v1, "PRIV"
@@ -72,7 +98,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/SurfaceConfig$ConfigType;->PRIV:Landroidx/camera/core/impl/SurfaceConfig$ConfigType;
 
-    .line 187
+    .line 223
     new-instance v0, Landroidx/camera/core/impl/SurfaceConfig$ConfigType;
 
     const-string v1, "YUV"
@@ -83,7 +109,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/SurfaceConfig$ConfigType;->YUV:Landroidx/camera/core/impl/SurfaceConfig$ConfigType;
 
-    .line 188
+    .line 224
     new-instance v0, Landroidx/camera/core/impl/SurfaceConfig$ConfigType;
 
     const-string v1, "JPEG"
@@ -94,7 +120,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/SurfaceConfig$ConfigType;->JPEG:Landroidx/camera/core/impl/SurfaceConfig$ConfigType;
 
-    .line 189
+    .line 225
     new-instance v0, Landroidx/camera/core/impl/SurfaceConfig$ConfigType;
 
     const-string v1, "JPEG_R"
@@ -105,7 +131,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/SurfaceConfig$ConfigType;->JPEG_R:Landroidx/camera/core/impl/SurfaceConfig$ConfigType;
 
-    .line 190
+    .line 226
     new-instance v0, Landroidx/camera/core/impl/SurfaceConfig$ConfigType;
 
     const-string v1, "RAW"
@@ -116,53 +142,56 @@
 
     sput-object v0, Landroidx/camera/core/impl/SurfaceConfig$ConfigType;->RAW:Landroidx/camera/core/impl/SurfaceConfig$ConfigType;
 
-    .line 185
     invoke-static {}, Landroidx/camera/core/impl/SurfaceConfig$ConfigType;->$values()[Landroidx/camera/core/impl/SurfaceConfig$ConfigType;
 
     move-result-object v0
 
     sput-object v0, Landroidx/camera/core/impl/SurfaceConfig$ConfigType;->$VALUES:[Landroidx/camera/core/impl/SurfaceConfig$ConfigType;
 
+    check-cast v0, [Ljava/lang/Enum;
+
+    invoke-static {v0}, Lkotlin/enums/EnumEntriesKt;->enumEntries([Ljava/lang/Enum;)Lkotlin/enums/EnumEntries;
+
+    move-result-object v0
+
+    sput-object v0, Landroidx/camera/core/impl/SurfaceConfig$ConfigType;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
     return-void
 .end method
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000,
-            0x1000
-        }
-        names = {
-            null,
-            null
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()V"
         }
     .end annotation
 
-    .line 185
+    .line 221
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Landroidx/camera/core/impl/SurfaceConfig$ConfigType;
+.method public static getEntries()Lkotlin/enums/EnumEntries;
     .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8000
-        }
-        names = {
-            null
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lkotlin/enums/EnumEntries<",
+            "Landroidx/camera/core/impl/SurfaceConfig$ConfigType;",
+            ">;"
         }
     .end annotation
 
-    .line 185
+    sget-object v0, Landroidx/camera/core/impl/SurfaceConfig$ConfigType;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    return-object v0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Landroidx/camera/core/impl/SurfaceConfig$ConfigType;
+    .locals 1
+
     const-class v0, Landroidx/camera/core/impl/SurfaceConfig$ConfigType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -177,10 +206,9 @@
 .method public static values()[Landroidx/camera/core/impl/SurfaceConfig$ConfigType;
     .locals 1
 
-    .line 185
     sget-object v0, Landroidx/camera/core/impl/SurfaceConfig$ConfigType;->$VALUES:[Landroidx/camera/core/impl/SurfaceConfig$ConfigType;
 
-    invoke-virtual {v0}, [Landroidx/camera/core/impl/SurfaceConfig$ConfigType;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

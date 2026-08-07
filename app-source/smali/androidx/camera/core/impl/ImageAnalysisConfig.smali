@@ -91,72 +91,69 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 42
+    .line 43
     const-string v0, "camerax.core.imageAnalysis.backpressureStrategy"
 
     const-class v1, Landroidx/camera/core/ImageAnalysis$BackpressureStrategy;
 
-    .line 43
+    .line 44
     invoke-static {v0, v1}, Landroidx/camera/core/impl/Config$Option;->create(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$Option;
 
     move-result-object v0
 
     sput-object v0, Landroidx/camera/core/impl/ImageAnalysisConfig;->OPTION_BACKPRESSURE_STRATEGY:Landroidx/camera/core/impl/Config$Option;
 
-    .line 45
+    .line 46
     const-string v0, "camerax.core.imageAnalysis.imageQueueDepth"
 
     sget-object v1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    .line 46
+    .line 47
     invoke-static {v0, v1}, Landroidx/camera/core/impl/Config$Option;->create(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$Option;
 
     move-result-object v0
 
     sput-object v0, Landroidx/camera/core/impl/ImageAnalysisConfig;->OPTION_IMAGE_QUEUE_DEPTH:Landroidx/camera/core/impl/Config$Option;
 
-    .line 47
+    .line 48
     const-string v0, "camerax.core.imageAnalysis.imageReaderProxyProvider"
 
     const-class v1, Landroidx/camera/core/ImageReaderProxyProvider;
 
-    .line 48
+    .line 49
     invoke-static {v0, v1}, Landroidx/camera/core/impl/Config$Option;->create(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$Option;
 
     move-result-object v0
 
     sput-object v0, Landroidx/camera/core/impl/ImageAnalysisConfig;->OPTION_IMAGE_READER_PROXY_PROVIDER:Landroidx/camera/core/impl/Config$Option;
 
-    .line 50
+    .line 51
     const-string v0, "camerax.core.imageAnalysis.outputImageFormat"
 
     const-class v1, Landroidx/camera/core/ImageAnalysis$OutputImageFormat;
 
-    .line 51
+    .line 52
     invoke-static {v0, v1}, Landroidx/camera/core/impl/Config$Option;->create(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$Option;
 
     move-result-object v0
 
     sput-object v0, Landroidx/camera/core/impl/ImageAnalysisConfig;->OPTION_OUTPUT_IMAGE_FORMAT:Landroidx/camera/core/impl/Config$Option;
 
-    .line 53
+    .line 55
     const-string v0, "camerax.core.imageAnalysis.onePixelShiftEnabled"
 
     const-class v1, Ljava/lang/Boolean;
 
-    .line 54
     invoke-static {v0, v1}, Landroidx/camera/core/impl/Config$Option;->create(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$Option;
 
     move-result-object v0
 
     sput-object v0, Landroidx/camera/core/impl/ImageAnalysisConfig;->OPTION_ONE_PIXEL_SHIFT_ENABLED:Landroidx/camera/core/impl/Config$Option;
 
-    .line 56
+    .line 57
     const-string v0, "camerax.core.imageAnalysis.outputImageRotationEnabled"
 
-    const-class v1, Ljava/lang/Boolean;
-
-    .line 57
+    .line 58
     invoke-static {v0, v1}, Landroidx/camera/core/impl/Config$Option;->create(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$Option;
 
     move-result-object v0
@@ -169,10 +166,10 @@
 .method public constructor <init>(Landroidx/camera/core/impl/OptionsBundle;)V
     .locals 0
 
-    .line 64
+    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
+    .line 66
     iput-object p1, p0, Landroidx/camera/core/impl/ImageAnalysisConfig;->mConfig:Landroidx/camera/core/impl/OptionsBundle;
 
     return-void
@@ -188,15 +185,15 @@
 
     invoke-virtual {p0, v0}, Landroidx/camera/core/impl/ImageAnalysisConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Ljava/lang/Integer;
+    check-cast p0, Ljava/lang/Integer;
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public getBackpressureStrategy(I)I
@@ -211,24 +208,24 @@
 
     invoke-virtual {p0, v0, p1}, Landroidx/camera/core/impl/ImageAnalysisConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Ljava/lang/Integer;
+    check-cast p0, Ljava/lang/Integer;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public getConfig()Landroidx/camera/core/impl/Config;
-    .locals 1
+    .locals 0
 
     .line 71
-    iget-object v0, p0, Landroidx/camera/core/impl/ImageAnalysisConfig;->mConfig:Landroidx/camera/core/impl/OptionsBundle;
+    iget-object p0, p0, Landroidx/camera/core/impl/ImageAnalysisConfig;->mConfig:Landroidx/camera/core/impl/OptionsBundle;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getImageQueueDepth()I
@@ -239,15 +236,15 @@
 
     invoke-virtual {p0, v0}, Landroidx/camera/core/impl/ImageAnalysisConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Ljava/lang/Integer;
+    check-cast p0, Ljava/lang/Integer;
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public getImageQueueDepth(I)I
@@ -262,40 +259,40 @@
 
     invoke-virtual {p0, v0, p1}, Landroidx/camera/core/impl/ImageAnalysisConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Ljava/lang/Integer;
+    check-cast p0, Ljava/lang/Integer;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public getImageReaderProxyProvider()Landroidx/camera/core/ImageReaderProxyProvider;
     .locals 2
 
-    .line 177
+    .line 175
     sget-object v0, Landroidx/camera/core/impl/ImageAnalysisConfig;->OPTION_IMAGE_READER_PROXY_PROVIDER:Landroidx/camera/core/impl/Config$Option;
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Landroidx/camera/core/impl/ImageAnalysisConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Landroidx/camera/core/ImageReaderProxyProvider;
+    check-cast p0, Landroidx/camera/core/ImageReaderProxyProvider;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getInputFormat()I
-    .locals 1
+    .locals 0
 
-    const/16 v0, 0x23
+    const/16 p0, 0x23
 
-    return v0
+    return p0
 .end method
 
 .method public getOnePixelShiftEnabled(Ljava/lang/Boolean;)Ljava/lang/Boolean;
@@ -306,17 +303,17 @@
 
     invoke-virtual {p0, v0, p1}, Landroidx/camera/core/impl/ImageAnalysisConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Ljava/lang/Boolean;
+    check-cast p0, Ljava/lang/Boolean;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public getOutputImageFormat(I)I
     .locals 1
 
-    .line 147
+    .line 148
     sget-object v0, Landroidx/camera/core/impl/ImageAnalysisConfig;->OPTION_OUTPUT_IMAGE_FORMAT:Landroidx/camera/core/impl/Config$Option;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -325,28 +322,28 @@
 
     invoke-virtual {p0, v0, p1}, Landroidx/camera/core/impl/ImageAnalysisConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Ljava/lang/Integer;
+    check-cast p0, Ljava/lang/Integer;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public isOutputImageRotationEnabled(Ljava/lang/Boolean;)Ljava/lang/Boolean;
     .locals 1
 
-    .line 167
+    .line 166
     sget-object v0, Landroidx/camera/core/impl/ImageAnalysisConfig;->OPTION_OUTPUT_IMAGE_ROTATION_ENABLED:Landroidx/camera/core/impl/Config$Option;
 
     invoke-virtual {p0, v0, p1}, Landroidx/camera/core/impl/ImageAnalysisConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Ljava/lang/Boolean;
+    check-cast p0, Ljava/lang/Boolean;
 
-    return-object p1
+    return-object p0
 .end method

@@ -24,15 +24,15 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 472
+    .line 464
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 474
+    .line 466
     iput-boolean v0, p0, Landroidx/camera/core/RetryPolicy$RetryConfig$Builder;->mShouldRetry:Z
 
-    .line 475
+    .line 467
     invoke-static {}, Landroidx/camera/core/RetryPolicy$RetryConfig;->getDefaultRetryDelayInMillis()J
 
     move-result-wide v0
@@ -45,18 +45,18 @@
 
 # virtual methods
 .method public build()Landroidx/camera/core/RetryPolicy$RetryConfig;
-    .locals 5
+    .locals 4
 
-    .line 515
+    .line 504
     new-instance v0, Landroidx/camera/core/RetryPolicy$RetryConfig;
 
     iget-boolean v1, p0, Landroidx/camera/core/RetryPolicy$RetryConfig$Builder;->mShouldRetry:Z
 
     iget-wide v2, p0, Landroidx/camera/core/RetryPolicy$RetryConfig$Builder;->mTimeoutInMillis:J
 
-    const/4 v4, 0x0
+    const/4 p0, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Landroidx/camera/core/RetryPolicy$RetryConfig;-><init>(ZJLandroidx/camera/core/RetryPolicy$1;)V
+    invoke-direct {v0, v1, v2, v3, p0}, Landroidx/camera/core/RetryPolicy$RetryConfig;-><init>(ZJLandroidx/camera/core/RetryPolicy$1;)V
 
     return-object v0
 .end method
@@ -64,7 +64,7 @@
 .method public setRetryDelayInMillis(J)Landroidx/camera/core/RetryPolicy$RetryConfig$Builder;
     .locals 0
 
-    .line 504
+    .line 494
     iput-wide p1, p0, Landroidx/camera/core/RetryPolicy$RetryConfig$Builder;->mTimeoutInMillis:J
 
     return-object p0
@@ -73,7 +73,7 @@
 .method public setShouldRetry(Z)Landroidx/camera/core/RetryPolicy$RetryConfig$Builder;
     .locals 0
 
-    .line 486
+    .line 477
     iput-boolean p1, p0, Landroidx/camera/core/RetryPolicy$RetryConfig$Builder;->mShouldRetry:Z
 
     return-object p0

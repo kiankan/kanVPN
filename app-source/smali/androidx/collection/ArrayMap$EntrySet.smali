@@ -29,6 +29,14 @@
 # direct methods
 .method constructor <init>(Landroidx/collection/ArrayMap;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            null
+        }
+    .end annotation
 
     .line 258
     iput-object p1, p0, Landroidx/collection/ArrayMap$EntrySet;->this$0:Landroidx/collection/ArrayMap;
@@ -41,7 +49,7 @@
 
 # virtual methods
 .method public iterator()Ljava/util/Iterator;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -54,22 +62,22 @@
     .line 262
     new-instance v0, Landroidx/collection/ArrayMap$MapIterator;
 
-    iget-object v1, p0, Landroidx/collection/ArrayMap$EntrySet;->this$0:Landroidx/collection/ArrayMap;
+    iget-object p0, p0, Landroidx/collection/ArrayMap$EntrySet;->this$0:Landroidx/collection/ArrayMap;
 
-    invoke-direct {v0, v1}, Landroidx/collection/ArrayMap$MapIterator;-><init>(Landroidx/collection/ArrayMap;)V
+    invoke-direct {v0, p0}, Landroidx/collection/ArrayMap$MapIterator;-><init>(Landroidx/collection/ArrayMap;)V
 
     return-object v0
 .end method
 
 .method public size()I
-    .locals 1
+    .locals 0
 
     .line 267
-    iget-object v0, p0, Landroidx/collection/ArrayMap$EntrySet;->this$0:Landroidx/collection/ArrayMap;
+    iget-object p0, p0, Landroidx/collection/ArrayMap$EntrySet;->this$0:Landroidx/collection/ArrayMap;
 
-    invoke-virtual {v0}, Landroidx/collection/ArrayMap;->size()I
+    invoke-virtual {p0}, Landroidx/collection/ArrayMap;->size()I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method

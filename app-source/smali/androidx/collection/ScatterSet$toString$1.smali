@@ -41,7 +41,7 @@
     k = 0x3
     mv = {
         0x1,
-        0x8,
+        0x9,
         0x0
     }
     xi = 0x30
@@ -82,7 +82,7 @@
 
 # virtual methods
 .method public final invoke(Ljava/lang/Object;)Ljava/lang/CharSequence;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TE;)",
@@ -90,36 +90,36 @@
         }
     .end annotation
 
-    .line 421
-    iget-object v0, p0, Landroidx/collection/ScatterSet$toString$1;->this$0:Landroidx/collection/ScatterSet;
+    .line 378
+    iget-object p0, p0, Landroidx/collection/ScatterSet$toString$1;->this$0:Landroidx/collection/ScatterSet;
 
-    if-ne p1, v0, :cond_0
+    if-ne p1, p0, :cond_0
 
-    .line 422
-    const-string p1, "(this)"
+    .line 379
+    const-string p0, "(this)"
 
-    check-cast p1, Ljava/lang/CharSequence;
+    check-cast p0, Ljava/lang/CharSequence;
 
-    return-object p1
+    return-object p0
 
-    .line 424
+    .line 381
     :cond_0
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Ljava/lang/CharSequence;
+    check-cast p0, Ljava/lang/CharSequence;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 420
+    .line 377
     invoke-virtual {p0, p1}, Landroidx/collection/ScatterSet$toString$1;->invoke(Ljava/lang/Object;)Ljava/lang/CharSequence;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

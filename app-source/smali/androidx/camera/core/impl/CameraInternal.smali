@@ -42,28 +42,28 @@
 .end method
 
 .method public getCameraControl()Landroidx/camera/core/CameraControl;
-    .locals 1
+    .locals 0
 
-    .line 192
+    .line 218
     invoke-interface {p0}, Landroidx/camera/core/impl/CameraInternal;->getCameraControlInternal()Landroidx/camera/core/impl/CameraControlInternal;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public abstract getCameraControlInternal()Landroidx/camera/core/impl/CameraControlInternal;
 .end method
 
 .method public getCameraInfo()Landroidx/camera/core/CameraInfo;
-    .locals 1
+    .locals 0
 
-    .line 198
+    .line 223
     invoke-interface {p0}, Landroidx/camera/core/impl/CameraInternal;->getCameraInfoInternal()Landroidx/camera/core/impl/CameraInfoInternal;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public abstract getCameraInfoInternal()Landroidx/camera/core/impl/CameraInfoInternal;
@@ -81,46 +81,60 @@
 .end method
 
 .method public getExtendedConfig()Landroidx/camera/core/impl/CameraConfig;
-    .locals 1
+    .locals 0
 
-    .line 232
+    .line 256
     invoke-static {}, Landroidx/camera/core/impl/CameraConfigs;->defaultConfig()Landroidx/camera/core/impl/CameraConfig;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getHasTransform()Z
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 .end method
 
 .method public isFrontFacing()Z
-    .locals 1
+    .locals 0
 
-    .line 148
+    .line 149
     invoke-interface {p0}, Landroidx/camera/core/impl/CameraInternal;->getCameraInfo()Landroidx/camera/core/CameraInfo;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-interface {v0}, Landroidx/camera/core/CameraInfo;->getLensFacing()I
+    invoke-interface {p0}, Landroidx/camera/core/CameraInfo;->getLensFacing()I
 
-    move-result v0
+    move-result p0
 
-    if-nez v0, :cond_0
+    if-nez p0, :cond_0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
+.end method
+
+.method public isRemoved()Z
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public onRemoved()V
+    .locals 0
+
+    return-void
 .end method
 
 .method public abstract open()V

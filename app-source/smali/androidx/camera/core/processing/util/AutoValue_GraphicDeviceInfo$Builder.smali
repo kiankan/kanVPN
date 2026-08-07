@@ -28,7 +28,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 97
+    .line 93
     invoke-direct {p0}, Landroidx/camera/core/processing/util/GraphicDeviceInfo$Builder;-><init>()V
 
     return-void
@@ -39,27 +39,27 @@
 .method public build()Landroidx/camera/core/processing/util/GraphicDeviceInfo;
     .locals 8
 
-    .line 134
+    .line 130
     iget-object v0, p0, Landroidx/camera/core/processing/util/AutoValue_GraphicDeviceInfo$Builder;->glVersion:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 135
+    .line 131
     const-string v0, " glVersion"
 
     goto :goto_0
 
-    .line 134
+    .line 130
     :cond_0
     const-string v0, ""
 
-    .line 137
+    .line 133
     :goto_0
     iget-object v1, p0, Landroidx/camera/core/processing/util/AutoValue_GraphicDeviceInfo$Builder;->eglVersion:Ljava/lang/String;
 
     if-nez v1, :cond_1
 
-    .line 138
+    .line 134
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -74,13 +74,13 @@
 
     move-result-object v0
 
-    .line 140
+    .line 136
     :cond_1
     iget-object v1, p0, Landroidx/camera/core/processing/util/AutoValue_GraphicDeviceInfo$Builder;->glExtensions:Ljava/lang/String;
 
     if-nez v1, :cond_2
 
-    .line 141
+    .line 137
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -95,13 +95,13 @@
 
     move-result-object v0
 
-    .line 143
+    .line 139
     :cond_2
     iget-object v1, p0, Landroidx/camera/core/processing/util/AutoValue_GraphicDeviceInfo$Builder;->eglExtensions:Ljava/lang/String;
 
     if-nez v1, :cond_3
 
-    .line 144
+    .line 140
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -116,7 +116,7 @@
 
     move-result-object v0
 
-    .line 146
+    .line 142
     :cond_3
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
@@ -124,7 +124,7 @@
 
     if-eqz v1, :cond_4
 
-    .line 149
+    .line 145
     new-instance v2, Landroidx/camera/core/processing/util/AutoValue_GraphicDeviceInfo;
 
     iget-object v3, p0, Landroidx/camera/core/processing/util/AutoValue_GraphicDeviceInfo$Builder;->glVersion:Ljava/lang/String;
@@ -141,107 +141,107 @@
 
     return-object v2
 
-    .line 147
+    .line 143
     :cond_4
-    new-instance v1, Ljava/lang/IllegalStateException;
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v3, "Missing required properties:"
+    const-string v2, "Missing required properties:"
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw v1
+    throw p0
 .end method
 
 .method public setEglExtensions(Ljava/lang/String;)Landroidx/camera/core/processing/util/GraphicDeviceInfo$Builder;
-    .locals 1
+    .locals 0
 
     if-eqz p1, :cond_0
 
-    .line 128
+    .line 124
     iput-object p1, p0, Landroidx/camera/core/processing/util/AutoValue_GraphicDeviceInfo$Builder;->eglExtensions:Ljava/lang/String;
 
     return-object p0
 
-    .line 126
+    .line 122
     :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string v0, "Null eglExtensions"
+    const-string p1, "Null eglExtensions"
 
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method public setEglVersion(Ljava/lang/String;)Landroidx/camera/core/processing/util/GraphicDeviceInfo$Builder;
-    .locals 1
+    .locals 0
 
     if-eqz p1, :cond_0
 
-    .line 112
+    .line 108
     iput-object p1, p0, Landroidx/camera/core/processing/util/AutoValue_GraphicDeviceInfo$Builder;->eglVersion:Ljava/lang/String;
 
     return-object p0
 
-    .line 110
+    .line 106
     :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string v0, "Null eglVersion"
+    const-string p1, "Null eglVersion"
 
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method public setGlExtensions(Ljava/lang/String;)Landroidx/camera/core/processing/util/GraphicDeviceInfo$Builder;
-    .locals 1
+    .locals 0
 
     if-eqz p1, :cond_0
 
-    .line 120
+    .line 116
     iput-object p1, p0, Landroidx/camera/core/processing/util/AutoValue_GraphicDeviceInfo$Builder;->glExtensions:Ljava/lang/String;
 
     return-object p0
 
-    .line 118
+    .line 114
     :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string v0, "Null glExtensions"
+    const-string p1, "Null glExtensions"
 
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method public setGlVersion(Ljava/lang/String;)Landroidx/camera/core/processing/util/GraphicDeviceInfo$Builder;
-    .locals 1
+    .locals 0
 
     if-eqz p1, :cond_0
 
-    .line 104
+    .line 100
     iput-object p1, p0, Landroidx/camera/core/processing/util/AutoValue_GraphicDeviceInfo$Builder;->glVersion:Ljava/lang/String;
 
     return-object p0
 
-    .line 102
+    .line 98
     :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string v0, "Null glVersion"
+    const-string p1, "Null glVersion"
 
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method

@@ -1022,9 +1022,9 @@
     .line 754
     invoke-interface {p1, p0, p2, p3}, Lj$/time/temporal/Temporal;->with(Lj$/time/temporal/TemporalField;J)Lj$/time/temporal/Temporal;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public checkValidIntValue(J)I
@@ -1037,9 +1037,9 @@
 
     invoke-virtual {v0, p1, p2, p0}, Lj$/time/temporal/ValueRange;->checkValidIntValue(JLj$/time/temporal/TemporalField;)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public checkValidValue(J)J
@@ -1052,20 +1052,20 @@
 
     invoke-virtual {v0, p1, p2, p0}, Lj$/time/temporal/ValueRange;->checkValidValue(JLj$/time/temporal/TemporalField;)J
 
-    move-result-wide p1
+    move-result-wide p0
 
-    return-wide p1
+    return-wide p0
 .end method
 
 .method public getFrom(Lj$/time/temporal/TemporalAccessor;)J
-    .locals 2
+    .locals 0
 
     .line 748
     invoke-interface {p1, p0}, Lj$/time/temporal/TemporalAccessor;->getLong(Lj$/time/temporal/TemporalField;)J
 
-    move-result-wide v0
+    move-result-wide p0
 
-    return-wide v0
+    return-wide p0
 .end method
 
 .method public isDateBased()Z
@@ -1086,24 +1086,24 @@
 
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
+    move-result p0
+
+    sget-object v0, Lj$/time/temporal/ChronoField;->ERA:Lj$/time/temporal/ChronoField;
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
     move-result v0
 
-    sget-object v1, Lj$/time/temporal/ChronoField;->ERA:Lj$/time/temporal/ChronoField;
+    if-gt p0, v0, :cond_0
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    const/4 p0, 0x1
 
-    move-result v1
-
-    if-gt v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
+    return p0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public isSupportedBy(Lj$/time/temporal/TemporalAccessor;)Z
@@ -1112,44 +1112,44 @@
     .line 738
     invoke-interface {p1, p0}, Lj$/time/temporal/TemporalAccessor;->isSupported(Lj$/time/temporal/TemporalField;)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public isTimeBased()Z
-    .locals 2
+    .locals 1
 
     .line 694
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
+    move-result p0
+
+    sget-object v0, Lj$/time/temporal/ChronoField;->DAY_OF_WEEK:Lj$/time/temporal/ChronoField;
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
     move-result v0
 
-    sget-object v1, Lj$/time/temporal/ChronoField;->DAY_OF_WEEK:Lj$/time/temporal/ChronoField;
+    if-ge p0, v0, :cond_0
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    const/4 p0, 0x1
 
-    move-result v1
-
-    if-ge v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
+    return p0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public range()Lj$/time/temporal/ValueRange;
-    .locals 1
+    .locals 0
 
     .line 669
-    iget-object v0, p0, Lj$/time/temporal/ChronoField;->range:Lj$/time/temporal/ValueRange;
+    iget-object p0, p0, Lj$/time/temporal/ChronoField;->range:Lj$/time/temporal/ValueRange;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public rangeRefinedBy(Lj$/time/temporal/TemporalAccessor;)Lj$/time/temporal/ValueRange;
@@ -1158,16 +1158,16 @@
     .line 743
     invoke-interface {p1, p0}, Lj$/time/temporal/TemporalAccessor;->range(Lj$/time/temporal/TemporalField;)Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 760
-    iget-object v0, p0, Lj$/time/temporal/ChronoField;->name:Ljava/lang/String;
+    iget-object p0, p0, Lj$/time/temporal/ChronoField;->name:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method

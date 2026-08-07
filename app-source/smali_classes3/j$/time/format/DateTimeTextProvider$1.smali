@@ -39,9 +39,9 @@
 
     invoke-virtual {p0, p1, p2}, Lj$/time/format/DateTimeTextProvider$1;->compare(Ljava/util/Map$Entry;Ljava/util/Map$Entry;)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public compare(Ljava/util/Map$Entry;Ljava/util/Map$Entry;)I
@@ -50,13 +50,13 @@
     .line 105
     invoke-interface {p2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    move-result-object p2
+    move-result-object p0
 
-    check-cast p2, Ljava/lang/String;
+    check-cast p0, Ljava/lang/String;
 
-    invoke-virtual {p2}, Ljava/lang/String;->length()I
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
-    move-result p2
+    move-result p0
 
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -68,7 +68,7 @@
 
     move-result p1
 
-    sub-int/2addr p2, p1
+    sub-int/2addr p0, p1
 
-    return p2
+    return p0
 .end method

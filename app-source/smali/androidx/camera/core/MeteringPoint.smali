@@ -38,37 +38,37 @@
 
 # virtual methods
 .method public getSize()F
-    .locals 1
+    .locals 0
 
     .line 113
-    iget v0, p0, Landroidx/camera/core/MeteringPoint;->mSize:F
+    iget p0, p0, Landroidx/camera/core/MeteringPoint;->mSize:F
 
-    return v0
+    return p0
 .end method
 
 .method public getSurfaceAspectRatio()Landroid/util/Rational;
-    .locals 1
+    .locals 0
 
-    .line 137
-    iget-object v0, p0, Landroidx/camera/core/MeteringPoint;->mSurfaceAspectRatio:Landroid/util/Rational;
+    .line 136
+    iget-object p0, p0, Landroidx/camera/core/MeteringPoint;->mSurfaceAspectRatio:Landroid/util/Rational;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getX()F
-    .locals 1
+    .locals 0
 
     .line 87
-    iget v0, p0, Landroidx/camera/core/MeteringPoint;->mNormalizedX:F
+    iget p0, p0, Landroidx/camera/core/MeteringPoint;->mNormalizedX:F
 
-    return v0
+    return p0
 .end method
 
 .method public getY()F
-    .locals 1
+    .locals 0
 
     .line 97
-    iget v0, p0, Landroidx/camera/core/MeteringPoint;->mNormalizedY:F
+    iget p0, p0, Landroidx/camera/core/MeteringPoint;->mNormalizedY:F
 
-    return v0
+    return p0
 .end method

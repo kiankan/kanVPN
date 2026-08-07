@@ -24,7 +24,7 @@
     .line 0
     invoke-static {p1}, Landroidx/camera/core/impl/UseCaseAttachState;->lambda$getAttachedUseCaseConfigs$0(Landroidx/camera/core/impl/UseCaseAttachState$UseCaseAttachInfo;)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method

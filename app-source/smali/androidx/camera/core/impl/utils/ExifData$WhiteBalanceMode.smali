@@ -34,7 +34,7 @@
 .method private static synthetic $values()[Landroidx/camera/core/impl/utils/ExifData$WhiteBalanceMode;
     .locals 2
 
-    .line 154
+    .line 156
     sget-object v0, Landroidx/camera/core/impl/utils/ExifData$WhiteBalanceMode;->AUTO:Landroidx/camera/core/impl/utils/ExifData$WhiteBalanceMode;
 
     sget-object v1, Landroidx/camera/core/impl/utils/ExifData$WhiteBalanceMode;->MANUAL:Landroidx/camera/core/impl/utils/ExifData$WhiteBalanceMode;
@@ -49,7 +49,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 156
+    .line 158
     new-instance v0, Landroidx/camera/core/impl/utils/ExifData$WhiteBalanceMode;
 
     const-string v1, "AUTO"
@@ -60,7 +60,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/utils/ExifData$WhiteBalanceMode;->AUTO:Landroidx/camera/core/impl/utils/ExifData$WhiteBalanceMode;
 
-    .line 158
+    .line 160
     new-instance v0, Landroidx/camera/core/impl/utils/ExifData$WhiteBalanceMode;
 
     const-string v1, "MANUAL"
@@ -71,7 +71,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/utils/ExifData$WhiteBalanceMode;->MANUAL:Landroidx/camera/core/impl/utils/ExifData$WhiteBalanceMode;
 
-    .line 154
+    .line 156
     invoke-static {}, Landroidx/camera/core/impl/utils/ExifData$WhiteBalanceMode;->$values()[Landroidx/camera/core/impl/utils/ExifData$WhiteBalanceMode;
 
     move-result-object v0
@@ -100,7 +100,7 @@
         }
     .end annotation
 
-    .line 154
+    .line 156
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -117,7 +117,7 @@
         }
     .end annotation
 
-    .line 154
+    .line 156
     const-class v0, Landroidx/camera/core/impl/utils/ExifData$WhiteBalanceMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -132,7 +132,7 @@
 .method public static values()[Landroidx/camera/core/impl/utils/ExifData$WhiteBalanceMode;
     .locals 1
 
-    .line 154
+    .line 156
     sget-object v0, Landroidx/camera/core/impl/utils/ExifData$WhiteBalanceMode;->$VALUES:[Landroidx/camera/core/impl/utils/ExifData$WhiteBalanceMode;
 
     invoke-virtual {v0}, [Landroidx/camera/core/impl/utils/ExifData$WhiteBalanceMode;->clone()Ljava/lang/Object;

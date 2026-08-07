@@ -220,7 +220,7 @@
     if-lt v0, v1, :cond_0
 
     .line 43
-    invoke-static {}, Lcoil3/size/ScaleDrawable$$ExternalSyntheticApiModelOutline0;->m()Ljava/lang/String;
+    invoke-static {}, Lkotlin/io/path/PathTreeWalk$$ExternalSyntheticApiModelOutline0;->m()Ljava/lang/String;
 
     move-result-object v0
 

@@ -23,10 +23,10 @@
 
 # virtual methods
 .method public getImageCaptureError()I
-    .locals 1
+    .locals 0
 
     .line 48
-    iget v0, p0, Landroidx/camera/core/ImageCaptureException;->mImageCaptureError:I
+    iget p0, p0, Landroidx/camera/core/ImageCaptureException;->mImageCaptureError:I
 
-    return v0
+    return p0
 .end method

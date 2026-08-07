@@ -34,7 +34,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 35
+    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -50,17 +50,17 @@
         }
     .end annotation
 
-    .line 41
+    .line 42
     iget-object v0, p0, Landroidx/camera/core/processing/Edge;->mListener:Landroidx/core/util/Consumer;
 
     const-string v1, "Listener is not set."
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 42
-    iget-object v0, p0, Landroidx/camera/core/processing/Edge;->mListener:Landroidx/core/util/Consumer;
+    .line 43
+    iget-object p0, p0, Landroidx/camera/core/processing/Edge;->mListener:Landroidx/core/util/Consumer;
 
-    invoke-interface {v0, p1}, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V
+    invoke-interface {p0, p1}, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -75,7 +75,7 @@
         }
     .end annotation
 
-    .line 49
+    .line 50
     iput-object p1, p0, Landroidx/camera/core/processing/Edge;->mListener:Landroidx/core/util/Consumer;
 
     return-void

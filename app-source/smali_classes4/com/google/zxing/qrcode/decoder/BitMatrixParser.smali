@@ -49,9 +49,9 @@
     :cond_0
     invoke-static {}, Lcom/google/zxing/FormatException;->getFormatInstance()Lcom/google/zxing/FormatException;
 
-    move-result-object p1
+    move-result-object p0
 
-    throw p1
+    throw p0
 .end method
 
 .method private copyBit(III)I
@@ -60,36 +60,34 @@
     .line 141
     iget-boolean v0, p0, Lcom/google/zxing/qrcode/decoder/BitMatrixParser;->mirror:Z
 
+    iget-object p0, p0, Lcom/google/zxing/qrcode/decoder/BitMatrixParser;->bitMatrix:Lcom/google/zxing/common/BitMatrix;
+
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/google/zxing/qrcode/decoder/BitMatrixParser;->bitMatrix:Lcom/google/zxing/common/BitMatrix;
+    invoke-virtual {p0, p2, p1}, Lcom/google/zxing/common/BitMatrix;->get(II)Z
 
-    invoke-virtual {v0, p2, p1}, Lcom/google/zxing/common/BitMatrix;->get(II)Z
-
-    move-result p1
+    move-result p0
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lcom/google/zxing/qrcode/decoder/BitMatrixParser;->bitMatrix:Lcom/google/zxing/common/BitMatrix;
+    invoke-virtual {p0, p1, p2}, Lcom/google/zxing/common/BitMatrix;->get(II)Z
 
-    invoke-virtual {v0, p1, p2}, Lcom/google/zxing/common/BitMatrix;->get(II)Z
-
-    move-result p1
+    move-result p0
 
     :goto_0
-    if-eqz p1, :cond_1
+    if-eqz p0, :cond_1
 
-    shl-int/lit8 p1, p3, 0x1
+    shl-int/lit8 p0, p3, 0x1
 
-    or-int/lit8 p1, p1, 0x1
+    or-int/lit8 p0, p0, 0x1
 
-    return p1
+    return p0
 
     :cond_1
-    shl-int/lit8 p1, p3, 0x1
+    shl-int/lit8 p0, p3, 0x1
 
-    return p1
+    return p0
 .end method
 
 
@@ -326,9 +324,9 @@
     :cond_6
     invoke-virtual {v2}, Lcom/google/zxing/qrcode/decoder/Version;->getTotalCodewords()I
 
-    move-result v1
+    move-result v0
 
-    if-ne v9, v1, :cond_7
+    if-ne v9, v0, :cond_7
 
     return-object v4
 
@@ -336,9 +334,9 @@
     :cond_7
     invoke-static {}, Lcom/google/zxing/FormatException;->getFormatInstance()Lcom/google/zxing/FormatException;
 
-    move-result-object v1
+    move-result-object v0
 
-    throw v1
+    throw v0
 .end method
 
 .method readFormatInformation()Lcom/google/zxing/qrcode/decoder/FormatInformation;
@@ -466,9 +464,9 @@
     :cond_5
     invoke-static {}, Lcom/google/zxing/FormatException;->getFormatInstance()Lcom/google/zxing/FormatException;
 
-    move-result-object v0
+    move-result-object p0
 
-    throw v0
+    throw p0
 .end method
 
 .method readVersion()Lcom/google/zxing/qrcode/decoder/Version;
@@ -506,9 +504,9 @@
     .line 106
     invoke-static {v1}, Lcom/google/zxing/qrcode/decoder/Version;->getVersionForNumber(I)Lcom/google/zxing/qrcode/decoder/Version;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 
     :cond_1
     add-int/lit8 v1, v0, -0xb
@@ -610,13 +608,13 @@
     :cond_7
     invoke-static {}, Lcom/google/zxing/FormatException;->getFormatInstance()Lcom/google/zxing/FormatException;
 
-    move-result-object v0
+    move-result-object p0
 
-    throw v0
+    throw p0
 .end method
 
 .method remask()V
-    .locals 3
+    .locals 2
 
     .line 211
     iget-object v0, p0, Lcom/google/zxing/qrcode/decoder/BitMatrixParser;->parsedFormatInfo:Lcom/google/zxing/qrcode/decoder/FormatInformation;
@@ -647,9 +645,9 @@
     move-result v1
 
     .line 216
-    iget-object v2, p0, Lcom/google/zxing/qrcode/decoder/BitMatrixParser;->bitMatrix:Lcom/google/zxing/common/BitMatrix;
+    iget-object p0, p0, Lcom/google/zxing/qrcode/decoder/BitMatrixParser;->bitMatrix:Lcom/google/zxing/common/BitMatrix;
 
-    invoke-virtual {v0, v2, v1}, Lcom/google/zxing/qrcode/decoder/DataMask;->unmaskBitMatrix(Lcom/google/zxing/common/BitMatrix;I)V
+    invoke-virtual {v0, p0, v1}, Lcom/google/zxing/qrcode/decoder/DataMask;->unmaskBitMatrix(Lcom/google/zxing/common/BitMatrix;I)V
 
     return-void
 .end method

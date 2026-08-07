@@ -25,12 +25,12 @@
 
 # virtual methods
 .method public final onCompleted()V
-    .locals 1
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Landroidx/camera/core/internal/ScreenFlashWrapper$$ExternalSyntheticLambda0;->f$0:Landroidx/camera/core/internal/ScreenFlashWrapper;
+    iget-object p0, p0, Landroidx/camera/core/internal/ScreenFlashWrapper$$ExternalSyntheticLambda0;->f$0:Landroidx/camera/core/internal/ScreenFlashWrapper;
 
-    invoke-static {v0}, Landroidx/camera/core/internal/ScreenFlashWrapper;->$r8$lambda$t_o_lKGGIvRKmzNXRdv2XQWSBSA(Landroidx/camera/core/internal/ScreenFlashWrapper;)V
+    invoke-static {p0}, Landroidx/camera/core/internal/ScreenFlashWrapper;->apply$lambda$1(Landroidx/camera/core/internal/ScreenFlashWrapper;)V
 
     return-void
 .end method

@@ -37,7 +37,7 @@
 
 # virtual methods
 .method public adjustInto(Lj$/time/temporal/Temporal;J)Lj$/time/temporal/Temporal;
-    .locals 4
+    .locals 3
 
     .line 549
     invoke-virtual {p0, p1}, Lj$/time/temporal/IsoFields$Field$4;->isSupportedBy(Lj$/time/temporal/TemporalAccessor;)Z
@@ -49,167 +49,167 @@
     .line 552
     invoke-virtual {p0}, Lj$/time/temporal/IsoFields$Field$4;->range()Lj$/time/temporal/ValueRange;
 
-    move-result-object v0
+    move-result-object p0
 
-    sget-object v1, Lj$/time/temporal/IsoFields$Field;->WEEK_BASED_YEAR:Lj$/time/temporal/IsoFields$Field;
+    sget-object v0, Lj$/time/temporal/IsoFields$Field;->WEEK_BASED_YEAR:Lj$/time/temporal/IsoFields$Field;
 
-    invoke-virtual {v0, p2, p3, v1}, Lj$/time/temporal/ValueRange;->checkValidIntValue(JLj$/time/temporal/TemporalField;)I
+    invoke-virtual {p0, p2, p3, v0}, Lj$/time/temporal/ValueRange;->checkValidIntValue(JLj$/time/temporal/TemporalField;)I
 
-    move-result p2
+    move-result p0
 
     .line 553
     invoke-static {p1}, Lj$/time/LocalDate;->from(Lj$/time/temporal/TemporalAccessor;)Lj$/time/LocalDate;
 
-    move-result-object p3
-
-    .line 554
-    sget-object v0, Lj$/time/temporal/ChronoField;->DAY_OF_WEEK:Lj$/time/temporal/ChronoField;
-
-    invoke-virtual {p3, v0}, Lj$/time/LocalDate;->get(Lj$/time/temporal/TemporalField;)I
-
-    move-result v1
-
-    .line 555
-    invoke-static {p3}, Lj$/time/temporal/IsoFields$Field;->-$$Nest$smgetWeek(Lj$/time/LocalDate;)I
-
-    move-result p3
-
-    const/16 v2, 0x35
-
-    if-ne p3, v2, :cond_0
-
-    .line 556
-    invoke-static {p2}, Lj$/time/temporal/IsoFields$Field;->-$$Nest$smgetWeekRange(I)I
-
-    move-result v2
-
-    const/16 v3, 0x34
-
-    if-ne v2, v3, :cond_0
-
-    move p3, v3
-
-    :cond_0
-    const/4 v2, 0x4
-
-    const/4 v3, 0x1
-
-    .line 559
-    invoke-static {p2, v3, v2}, Lj$/time/LocalDate;->of(III)Lj$/time/LocalDate;
-
     move-result-object p2
 
-    .line 560
-    invoke-virtual {p2, v0}, Lj$/time/LocalDate;->get(Lj$/time/temporal/TemporalField;)I
+    .line 554
+    sget-object p3, Lj$/time/temporal/ChronoField;->DAY_OF_WEEK:Lj$/time/temporal/ChronoField;
+
+    invoke-virtual {p2, p3}, Lj$/time/LocalDate;->get(Lj$/time/temporal/TemporalField;)I
 
     move-result v0
 
-    sub-int/2addr v1, v0
+    .line 555
+    invoke-static {p2}, Lj$/time/temporal/IsoFields$Field;->-$$Nest$smgetWeek(Lj$/time/LocalDate;)I
 
-    sub-int/2addr p3, v3
+    move-result p2
 
-    mul-int/lit8 p3, p3, 0x7
+    const/16 v1, 0x35
 
-    add-int/2addr v1, p3
+    if-ne p2, v1, :cond_0
 
-    int-to-long v0, v1
+    .line 556
+    invoke-static {p0}, Lj$/time/temporal/IsoFields$Field;->-$$Nest$smgetWeekRange(I)I
+
+    move-result v1
+
+    const/16 v2, 0x34
+
+    if-ne v1, v2, :cond_0
+
+    move p2, v2
+
+    :cond_0
+    const/4 v1, 0x4
+
+    const/4 v2, 0x1
+
+    .line 559
+    invoke-static {p0, v2, v1}, Lj$/time/LocalDate;->of(III)Lj$/time/LocalDate;
+
+    move-result-object p0
+
+    .line 560
+    invoke-virtual {p0, p3}, Lj$/time/LocalDate;->get(Lj$/time/temporal/TemporalField;)I
+
+    move-result p3
+
+    sub-int/2addr v0, p3
+
+    sub-int/2addr p2, v2
+
+    mul-int/lit8 p2, p2, 0x7
+
+    add-int/2addr v0, p2
+
+    int-to-long p2, v0
 
     .line 561
-    invoke-virtual {p2, v0, v1}, Lj$/time/LocalDate;->plusDays(J)Lj$/time/LocalDate;
+    invoke-virtual {p0, p2, p3}, Lj$/time/LocalDate;->plusDays(J)Lj$/time/LocalDate;
 
-    move-result-object p2
+    move-result-object p0
 
     .line 562
-    invoke-interface {p1, p2}, Lj$/time/temporal/Temporal;->with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/temporal/Temporal;
+    invoke-interface {p1, p0}, Lj$/time/temporal/Temporal;->with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/temporal/Temporal;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 550
     :cond_1
-    new-instance p1, Lj$/time/temporal/UnsupportedTemporalTypeException;
+    new-instance p0, Lj$/time/temporal/UnsupportedTemporalTypeException;
 
-    const-string p2, "Unsupported field: WeekBasedYear"
+    const-string p1, "Unsupported field: WeekBasedYear"
 
-    invoke-direct {p1, p2}, Lj$/time/temporal/UnsupportedTemporalTypeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lj$/time/temporal/UnsupportedTemporalTypeException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method public getFrom(Lj$/time/temporal/TemporalAccessor;)J
-    .locals 2
+    .locals 0
 
     .line 535
     invoke-virtual {p0, p1}, Lj$/time/temporal/IsoFields$Field$4;->isSupportedBy(Lj$/time/temporal/TemporalAccessor;)Z
 
-    move-result v0
+    move-result p0
 
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
     .line 538
     invoke-static {p1}, Lj$/time/LocalDate;->from(Lj$/time/temporal/TemporalAccessor;)Lj$/time/LocalDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-static {p1}, Lj$/time/temporal/IsoFields$Field;->-$$Nest$smgetWeekBasedYear(Lj$/time/LocalDate;)I
+    invoke-static {p0}, Lj$/time/temporal/IsoFields$Field;->-$$Nest$smgetWeekBasedYear(Lj$/time/LocalDate;)I
 
-    move-result p1
+    move-result p0
 
-    int-to-long v0, p1
+    int-to-long p0, p0
 
-    return-wide v0
+    return-wide p0
 
     .line 536
     :cond_0
-    new-instance p1, Lj$/time/temporal/UnsupportedTemporalTypeException;
+    new-instance p0, Lj$/time/temporal/UnsupportedTemporalTypeException;
 
-    const-string v0, "Unsupported field: WeekBasedYear"
+    const-string p1, "Unsupported field: WeekBasedYear"
 
-    invoke-direct {p1, v0}, Lj$/time/temporal/UnsupportedTemporalTypeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lj$/time/temporal/UnsupportedTemporalTypeException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method public isSupportedBy(Lj$/time/temporal/TemporalAccessor;)Z
-    .locals 1
+    .locals 0
 
     .line 531
-    sget-object v0, Lj$/time/temporal/ChronoField;->EPOCH_DAY:Lj$/time/temporal/ChronoField;
+    sget-object p0, Lj$/time/temporal/ChronoField;->EPOCH_DAY:Lj$/time/temporal/ChronoField;
 
-    invoke-interface {p1, v0}, Lj$/time/temporal/TemporalAccessor;->isSupported(Lj$/time/temporal/TemporalField;)Z
+    invoke-interface {p1, p0}, Lj$/time/temporal/TemporalAccessor;->isSupported(Lj$/time/temporal/TemporalField;)Z
 
-    move-result v0
+    move-result p0
 
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
     invoke-static {p1}, Lj$/time/temporal/IsoFields;->isIso(Lj$/time/temporal/TemporalAccessor;)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_0
+    if-eqz p0, :cond_0
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method public range()Lj$/time/temporal/ValueRange;
-    .locals 1
+    .locals 0
 
     .line 527
-    sget-object v0, Lj$/time/temporal/ChronoField;->YEAR:Lj$/time/temporal/ChronoField;
+    sget-object p0, Lj$/time/temporal/ChronoField;->YEAR:Lj$/time/temporal/ChronoField;
 
-    invoke-virtual {v0}, Lj$/time/temporal/ChronoField;->range()Lj$/time/temporal/ValueRange;
+    invoke-virtual {p0}, Lj$/time/temporal/ChronoField;->range()Lj$/time/temporal/ValueRange;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public rangeRefinedBy(Lj$/time/temporal/TemporalAccessor;)Lj$/time/temporal/ValueRange;
@@ -225,26 +225,26 @@
     .line 544
     invoke-super {p0, p1}, Lj$/time/temporal/IsoFields$Field;->rangeRefinedBy(Lj$/time/temporal/TemporalAccessor;)Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 542
     :cond_0
-    new-instance p1, Lj$/time/temporal/UnsupportedTemporalTypeException;
+    new-instance p0, Lj$/time/temporal/UnsupportedTemporalTypeException;
 
-    const-string v0, "Unsupported field: WeekBasedYear"
+    const-string p1, "Unsupported field: WeekBasedYear"
 
-    invoke-direct {p1, v0}, Lj$/time/temporal/UnsupportedTemporalTypeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lj$/time/temporal/UnsupportedTemporalTypeException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 566
-    const-string v0, "WeekBasedYear"
+    const-string p0, "WeekBasedYear"
 
-    return-object v0
+    return-object p0
 .end method

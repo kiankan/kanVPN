@@ -9,11 +9,11 @@
 # instance fields
 .field public final synthetic f$0:Landroidx/camera/core/impl/LiveDataObservable;
 
-.field public final synthetic f$1:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
+.field public final synthetic f$1:Landroidx/camera/core/impl/Observable$Observer;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/camera/core/impl/LiveDataObservable;Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;)V
+.method public synthetic constructor <init>(Landroidx/camera/core/impl/LiveDataObservable;Landroidx/camera/core/impl/Observable$Observer;)V
     .locals 0
 
     .line 0
@@ -21,7 +21,7 @@
 
     iput-object p1, p0, Landroidx/camera/core/impl/LiveDataObservable$$ExternalSyntheticLambda2;->f$0:Landroidx/camera/core/impl/LiveDataObservable;
 
-    iput-object p2, p0, Landroidx/camera/core/impl/LiveDataObservable$$ExternalSyntheticLambda2;->f$1:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
+    iput-object p2, p0, Landroidx/camera/core/impl/LiveDataObservable$$ExternalSyntheticLambda2;->f$1:Landroidx/camera/core/impl/Observable$Observer;
 
     return-void
 .end method
@@ -29,14 +29,14 @@
 
 # virtual methods
 .method public final run()V
-    .locals 2
+    .locals 1
 
     .line 0
     iget-object v0, p0, Landroidx/camera/core/impl/LiveDataObservable$$ExternalSyntheticLambda2;->f$0:Landroidx/camera/core/impl/LiveDataObservable;
 
-    iget-object v1, p0, Landroidx/camera/core/impl/LiveDataObservable$$ExternalSyntheticLambda2;->f$1:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
+    iget-object p0, p0, Landroidx/camera/core/impl/LiveDataObservable$$ExternalSyntheticLambda2;->f$1:Landroidx/camera/core/impl/Observable$Observer;
 
-    invoke-virtual {v0, v1}, Landroidx/camera/core/impl/LiveDataObservable;->lambda$fetchData$0$androidx-camera-core-impl-LiveDataObservable(Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;)V
+    invoke-virtual {v0, p0}, Landroidx/camera/core/impl/LiveDataObservable;->lambda$addObserver$2$androidx-camera-core-impl-LiveDataObservable(Landroidx/camera/core/impl/Observable$Observer;)V
 
     return-void
 .end method

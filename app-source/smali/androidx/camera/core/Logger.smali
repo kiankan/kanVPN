@@ -21,7 +21,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 65
+    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,21 +30,21 @@
 .method public static d(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 154
+    .line 155
     invoke-static {p0}, Landroidx/camera/core/Logger;->truncateTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     const/4 v0, 0x3
 
-    .line 155
+    .line 156
     invoke-static {p0, v0}, Landroidx/camera/core/Logger;->isLogLevelEnabled(Ljava/lang/String;I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 156
+    .line 157
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -54,21 +54,21 @@
 .method public static d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 166
+    .line 167
     invoke-static {p0}, Landroidx/camera/core/Logger;->truncateTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     const/4 v0, 0x3
 
-    .line 167
+    .line 168
     invoke-static {p0, v0}, Landroidx/camera/core/Logger;->isLogLevelEnabled(Ljava/lang/String;I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 168
+    .line 169
     invoke-static {p0, p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -78,21 +78,21 @@
 .method public static e(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 223
+    .line 224
     invoke-static {p0}, Landroidx/camera/core/Logger;->truncateTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     const/4 v0, 0x6
 
-    .line 224
+    .line 225
     invoke-static {p0, v0}, Landroidx/camera/core/Logger;->isLogLevelEnabled(Ljava/lang/String;I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 225
+    .line 226
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -102,21 +102,21 @@
 .method public static e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 235
+    .line 236
     invoke-static {p0}, Landroidx/camera/core/Logger;->truncateTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     const/4 v0, 0x6
 
-    .line 236
+    .line 237
     invoke-static {p0, v0}, Landroidx/camera/core/Logger;->isLogLevelEnabled(Ljava/lang/String;I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 237
+    .line 238
     invoke-static {p0, p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -126,7 +126,7 @@
 .method static getMinLogLevel()I
     .locals 1
 
-    .line 88
+    .line 89
     sget v0, Landroidx/camera/core/Logger;->sMinLogLevel:I
 
     return v0
@@ -135,21 +135,21 @@
 .method public static i(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 177
+    .line 178
     invoke-static {p0}, Landroidx/camera/core/Logger;->truncateTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     const/4 v0, 0x4
 
-    .line 178
+    .line 179
     invoke-static {p0, v0}, Landroidx/camera/core/Logger;->isLogLevelEnabled(Ljava/lang/String;I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 179
+    .line 180
     invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -159,21 +159,21 @@
 .method public static i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 189
+    .line 190
     invoke-static {p0}, Landroidx/camera/core/Logger;->truncateTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     const/4 v0, 0x4
 
-    .line 190
+    .line 191
     invoke-static {p0, v0}, Landroidx/camera/core/Logger;->isLogLevelEnabled(Ljava/lang/String;I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 191
+    .line 192
     invoke-static {p0, p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -183,7 +183,7 @@
 .method public static isDebugEnabled(Ljava/lang/String;)Z
     .locals 1
 
-    .line 116
+    .line 117
     invoke-static {p0}, Landroidx/camera/core/Logger;->truncateTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -200,7 +200,7 @@
 .method public static isErrorEnabled(Ljava/lang/String;)Z
     .locals 1
 
-    .line 146
+    .line 147
     invoke-static {p0}, Landroidx/camera/core/Logger;->truncateTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -217,7 +217,7 @@
 .method public static isInfoEnabled(Ljava/lang/String;)Z
     .locals 1
 
-    .line 126
+    .line 127
     invoke-static {p0}, Landroidx/camera/core/Logger;->truncateTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -234,7 +234,7 @@
 .method private static isLogLevelEnabled(Ljava/lang/String;I)Z
     .locals 1
 
-    .line 73
+    .line 74
     sget v0, Landroidx/camera/core/Logger;->sMinLogLevel:I
 
     if-le v0, p1, :cond_1
@@ -262,7 +262,7 @@
 .method public static isVerboseEnabled(Ljava/lang/String;)Z
     .locals 1
 
-    .line 106
+    .line 107
     invoke-static {p0}, Landroidx/camera/core/Logger;->truncateTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -279,7 +279,7 @@
 .method public static isWarnEnabled(Ljava/lang/String;)Z
     .locals 1
 
-    .line 136
+    .line 137
     invoke-static {p0}, Landroidx/camera/core/Logger;->truncateTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -298,7 +298,7 @@
 
     const/4 v0, 0x3
 
-    .line 96
+    .line 97
     sput v0, Landroidx/camera/core/Logger;->sMinLogLevel:I
 
     return-void
@@ -307,7 +307,7 @@
 .method static setMinLogLevel(I)V
     .locals 0
 
-    .line 81
+    .line 82
     sput p0, Landroidx/camera/core/Logger;->sMinLogLevel:I
 
     return-void
@@ -345,21 +345,21 @@
 .method public static w(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 200
+    .line 201
     invoke-static {p0}, Landroidx/camera/core/Logger;->truncateTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     const/4 v0, 0x5
 
-    .line 201
+    .line 202
     invoke-static {p0, v0}, Landroidx/camera/core/Logger;->isLogLevelEnabled(Ljava/lang/String;I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 202
+    .line 203
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -369,21 +369,21 @@
 .method public static w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 212
+    .line 213
     invoke-static {p0}, Landroidx/camera/core/Logger;->truncateTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     const/4 v0, 0x5
 
-    .line 213
+    .line 214
     invoke-static {p0, v0}, Landroidx/camera/core/Logger;->isLogLevelEnabled(Ljava/lang/String;I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 214
+    .line 215
     invoke-static {p0, p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0

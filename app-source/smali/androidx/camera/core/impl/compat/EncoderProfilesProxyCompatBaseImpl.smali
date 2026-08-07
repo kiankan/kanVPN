@@ -7,7 +7,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 86
+    .line 84
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -52,17 +52,17 @@
         }
     .end annotation
 
-    .line 73
+    .line 71
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 74
+    .line 72
     iget v1, p0, Landroid/media/CamcorderProfile;->audioCodec:I
 
     iget v2, p0, Landroid/media/CamcorderProfile;->audioCodec:I
 
-    .line 76
+    .line 74
     invoke-static {v2}, Landroidx/camera/core/impl/EncoderProfilesProxy;->getAudioCodecMimeType(I)Ljava/lang/String;
 
     move-result-object v2
@@ -75,12 +75,12 @@
 
     iget p0, p0, Landroid/media/CamcorderProfile;->audioCodec:I
 
-    .line 80
+    .line 78
     invoke-static {p0}, Landroidx/camera/core/impl/EncoderProfilesProxy;->getRequiredAudioProfile(I)I
 
     move-result v6
 
-    .line 74
+    .line 72
     invoke-static/range {v1 .. v6}, Landroidx/camera/core/impl/EncoderProfilesProxy$AudioProfileProxy;->create(ILjava/lang/String;IIII)Landroidx/camera/core/impl/EncoderProfilesProxy$AudioProfileProxy;
 
     move-result-object p0
@@ -103,17 +103,17 @@
         }
     .end annotation
 
-    .line 53
+    .line 52
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 54
+    .line 53
     iget v1, p0, Landroid/media/CamcorderProfile;->videoCodec:I
 
     iget v2, p0, Landroid/media/CamcorderProfile;->videoCodec:I
 
-    .line 56
+    .line 55
     invoke-static {v2}, Landroidx/camera/core/impl/EncoderProfilesProxy;->getVideoCodecMimeType(I)Ljava/lang/String;
 
     move-result-object v2
@@ -134,7 +134,7 @@
 
     const/16 v8, 0x8
 
-    .line 54
+    .line 53
     invoke-static/range {v1 .. v10}, Landroidx/camera/core/impl/EncoderProfilesProxy$VideoProfileProxy;->create(ILjava/lang/String;IIIIIIII)Landroidx/camera/core/impl/EncoderProfilesProxy$VideoProfileProxy;
 
     move-result-object p0

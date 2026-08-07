@@ -30,7 +30,7 @@
         }
     .end annotation
 
-    .line 233
+    .line 229
     iput-object p1, p0, Landroidx/camera/core/impl/utils/futures/Futures$4;->val$input:Lcom/google/common/util/concurrent/ListenableFuture;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,14 +41,14 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 1
 
-    .line 236
-    iget-object v0, p0, Landroidx/camera/core/impl/utils/futures/Futures$4;->val$input:Lcom/google/common/util/concurrent/ListenableFuture;
+    .line 232
+    iget-object p0, p0, Landroidx/camera/core/impl/utils/futures/Futures$4;->val$input:Lcom/google/common/util/concurrent/ListenableFuture;
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    invoke-interface {v0, v1}, Lcom/google/common/util/concurrent/ListenableFuture;->cancel(Z)Z
+    invoke-interface {p0, v0}, Lcom/google/common/util/concurrent/ListenableFuture;->cancel(Z)Z
 
     return-void
 .end method

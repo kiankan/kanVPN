@@ -18,11 +18,17 @@
 
 .field private final inputFormat:I
 
-.field private final outputFormat:I
+.field private final outputFormats:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private final postviewImageFormat:I
-
-.field private final postviewSize:Landroid/util/Size;
+.field private final postviewSettings:Landroidx/camera/core/imagecapture/PostviewSettings;
 
 .field private final requestEdge:Landroidx/camera/core/processing/Edge;
     .annotation system Ldalvik/annotation/Signature;
@@ -40,16 +46,18 @@
 
 
 # direct methods
-.method constructor <init>(Landroid/util/Size;IIZLandroidx/camera/core/ImageReaderProxyProvider;Landroid/util/Size;ILandroidx/camera/core/processing/Edge;Landroidx/camera/core/processing/Edge;)V
+.method constructor <init>(Landroid/util/Size;ILjava/util/List;ZLandroidx/camera/core/ImageReaderProxyProvider;Landroidx/camera/core/imagecapture/PostviewSettings;Landroidx/camera/core/processing/Edge;Landroidx/camera/core/processing/Edge;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/util/Size;",
-            "IIZ",
-            "Landroidx/camera/core/ImageReaderProxyProvider;",
-            "Landroid/util/Size;",
             "I",
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
+            ">;Z",
+            "Landroidx/camera/core/ImageReaderProxyProvider;",
+            "Landroidx/camera/core/imagecapture/PostviewSettings;",
             "Landroidx/camera/core/processing/Edge<",
             "Landroidx/camera/core/imagecapture/ProcessingRequest;",
             ">;",
@@ -59,73 +67,82 @@
         }
     .end annotation
 
-    .line 41
+    .line 39
     invoke-direct {p0}, Landroidx/camera/core/imagecapture/CaptureNode$In;-><init>()V
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_3
 
-    .line 45
+    .line 43
     iput-object p1, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->size:Landroid/util/Size;
 
-    .line 46
+    .line 44
     iput p2, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->inputFormat:I
 
-    .line 47
-    iput p3, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->outputFormat:I
+    if-eqz p3, :cond_2
 
     .line 48
-    iput-boolean p4, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->virtualCamera:Z
+    iput-object p3, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->outputFormats:Ljava/util/List;
 
     .line 49
-    iput-object p5, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->imageReaderProxyProvider:Landroidx/camera/core/ImageReaderProxyProvider;
+    iput-boolean p4, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->virtualCamera:Z
 
     .line 50
-    iput-object p6, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->postviewSize:Landroid/util/Size;
+    iput-object p5, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->imageReaderProxyProvider:Landroidx/camera/core/ImageReaderProxyProvider;
 
     .line 51
-    iput p7, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->postviewImageFormat:I
+    iput-object p6, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->postviewSettings:Landroidx/camera/core/imagecapture/PostviewSettings;
 
-    if-eqz p8, :cond_1
+    if-eqz p7, :cond_1
 
     .line 55
-    iput-object p8, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->requestEdge:Landroidx/camera/core/processing/Edge;
+    iput-object p7, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->requestEdge:Landroidx/camera/core/processing/Edge;
 
-    if-eqz p9, :cond_0
+    if-eqz p8, :cond_0
 
     .line 59
-    iput-object p9, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->errorEdge:Landroidx/camera/core/processing/Edge;
+    iput-object p8, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->errorEdge:Landroidx/camera/core/processing/Edge;
 
     return-void
 
     .line 57
     :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null errorEdge"
+    const-string p1, "Null errorEdge"
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
     .line 53
     :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null requestEdge"
+    const-string p1, "Null requestEdge"
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
-    .line 43
+    .line 46
     :cond_2
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null size"
+    const-string p1, "Null outputFormats"
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
+
+    .line 41
+    :cond_3
+    new-instance p0, Ljava/lang/NullPointerException;
+
+    const-string p1, "Null size"
+
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method
 
 
@@ -139,7 +156,7 @@
 
     return v0
 
-    .line 131
+    .line 122
     :cond_0
     instance-of v1, p1, Landroidx/camera/core/imagecapture/CaptureNode$In;
 
@@ -147,10 +164,10 @@
 
     if-eqz v1, :cond_3
 
-    .line 132
+    .line 123
     check-cast p1, Landroidx/camera/core/imagecapture/CaptureNode$In;
 
-    .line 133
+    .line 124
     iget-object v1, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->size:Landroid/util/Size;
 
     invoke-virtual {p1}, Landroidx/camera/core/imagecapture/CaptureNode$In;->getSize()Landroid/util/Size;
@@ -165,25 +182,29 @@
 
     iget v1, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->inputFormat:I
 
-    .line 134
+    .line 125
     invoke-virtual {p1}, Landroidx/camera/core/imagecapture/CaptureNode$In;->getInputFormat()I
 
     move-result v3
 
     if-ne v1, v3, :cond_3
 
-    iget v1, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->outputFormat:I
+    iget-object v1, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->outputFormats:Ljava/util/List;
 
-    .line 135
-    invoke-virtual {p1}, Landroidx/camera/core/imagecapture/CaptureNode$In;->getOutputFormat()I
+    .line 126
+    invoke-virtual {p1}, Landroidx/camera/core/imagecapture/CaptureNode$In;->getOutputFormats()Ljava/util/List;
 
-    move-result v3
+    move-result-object v3
 
-    if-ne v1, v3, :cond_3
+    invoke-interface {v1, v3}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
 
     iget-boolean v1, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->virtualCamera:Z
 
-    .line 136
+    .line 127
     invoke-virtual {p1}, Landroidx/camera/core/imagecapture/CaptureNode$In;->isVirtualCamera()Z
 
     move-result v3
@@ -194,7 +215,7 @@
 
     if-nez v1, :cond_1
 
-    .line 137
+    .line 128
     invoke-virtual {p1}, Landroidx/camera/core/imagecapture/CaptureNode$In;->getImageReaderProxyProvider()Landroidx/camera/core/ImageReaderProxyProvider;
 
     move-result-object v1
@@ -215,12 +236,12 @@
     if-eqz v1, :cond_3
 
     :goto_0
-    iget-object v1, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->postviewSize:Landroid/util/Size;
+    iget-object v1, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->postviewSettings:Landroidx/camera/core/imagecapture/PostviewSettings;
 
     if-nez v1, :cond_2
 
-    .line 138
-    invoke-virtual {p1}, Landroidx/camera/core/imagecapture/CaptureNode$In;->getPostviewSize()Landroid/util/Size;
+    .line 129
+    invoke-virtual {p1}, Landroidx/camera/core/imagecapture/CaptureNode$In;->getPostviewSettings()Landroidx/camera/core/imagecapture/PostviewSettings;
 
     move-result-object v1
 
@@ -229,29 +250,20 @@
     goto :goto_1
 
     :cond_2
-    invoke-virtual {p1}, Landroidx/camera/core/imagecapture/CaptureNode$In;->getPostviewSize()Landroid/util/Size;
+    invoke-virtual {p1}, Landroidx/camera/core/imagecapture/CaptureNode$In;->getPostviewSettings()Landroidx/camera/core/imagecapture/PostviewSettings;
 
     move-result-object v3
 
-    invoke-virtual {v1, v3}, Landroid/util/Size;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
     :goto_1
-    iget v1, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->postviewImageFormat:I
-
-    .line 139
-    invoke-virtual {p1}, Landroidx/camera/core/imagecapture/CaptureNode$In;->getPostviewImageFormat()I
-
-    move-result v3
-
-    if-ne v1, v3, :cond_3
-
     iget-object v1, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->requestEdge:Landroidx/camera/core/processing/Edge;
 
-    .line 140
+    .line 130
     invoke-virtual {p1}, Landroidx/camera/core/imagecapture/CaptureNode$In;->getRequestEdge()Landroidx/camera/core/processing/Edge;
 
     move-result-object v3
@@ -262,18 +274,18 @@
 
     if-eqz v1, :cond_3
 
-    iget-object v1, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->errorEdge:Landroidx/camera/core/processing/Edge;
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->errorEdge:Landroidx/camera/core/processing/Edge;
 
-    .line 141
+    .line 131
     invoke-virtual {p1}, Landroidx/camera/core/imagecapture/CaptureNode$In;->getErrorEdge()Landroidx/camera/core/processing/Edge;
 
     move-result-object p1
 
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_3
+    if-eqz p0, :cond_3
 
     return v0
 
@@ -282,7 +294,7 @@
 .end method
 
 .method getErrorEdge()Landroidx/camera/core/processing/Edge;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -292,59 +304,58 @@
         }
     .end annotation
 
-    .line 108
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->errorEdge:Landroidx/camera/core/processing/Edge;
+    .line 100
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->errorEdge:Landroidx/camera/core/processing/Edge;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method getImageReaderProxyProvider()Landroidx/camera/core/ImageReaderProxyProvider;
-    .locals 1
+    .locals 0
 
     .line 85
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->imageReaderProxyProvider:Landroidx/camera/core/ImageReaderProxyProvider;
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->imageReaderProxyProvider:Landroidx/camera/core/ImageReaderProxyProvider;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method getInputFormat()I
-    .locals 1
+    .locals 0
 
     .line 69
-    iget v0, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->inputFormat:I
+    iget p0, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->inputFormat:I
 
-    return v0
+    return p0
 .end method
 
-.method getOutputFormat()I
-    .locals 1
+.method getOutputFormats()Ljava/util/List;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
 
-    .line 74
-    iget v0, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->outputFormat:I
+    .line 75
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->outputFormats:Ljava/util/List;
 
-    return v0
+    return-object p0
 .end method
 
-.method getPostviewImageFormat()I
-    .locals 1
+.method getPostviewSettings()Landroidx/camera/core/imagecapture/PostviewSettings;
+    .locals 0
 
-    .line 96
-    iget v0, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->postviewImageFormat:I
+    .line 90
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->postviewSettings:Landroidx/camera/core/imagecapture/PostviewSettings;
 
-    return v0
-.end method
-
-.method getPostviewSize()Landroid/util/Size;
-    .locals 1
-
-    .line 91
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->postviewSize:Landroid/util/Size;
-
-    return-object v0
+    return-object p0
 .end method
 
 .method getRequestEdge()Landroidx/camera/core/processing/Edge;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -354,25 +365,25 @@
         }
     .end annotation
 
-    .line 102
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->requestEdge:Landroidx/camera/core/processing/Edge;
+    .line 95
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->requestEdge:Landroidx/camera/core/processing/Edge;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method getSize()Landroid/util/Size;
-    .locals 1
+    .locals 0
 
     .line 64
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->size:Landroid/util/Size;
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->size:Landroid/util/Size;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public hashCode()I
     .locals 4
 
-    .line 150
+    .line 140
     iget-object v0, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->size:Landroid/util/Size;
 
     invoke-virtual {v0}, Landroid/util/Size;->hashCode()I
@@ -385,21 +396,25 @@
 
     mul-int/2addr v0, v1
 
-    .line 152
+    .line 142
     iget v2, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->inputFormat:I
 
     xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
-    .line 154
-    iget v2, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->outputFormat:I
+    .line 144
+    iget-object v2, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->outputFormats:Ljava/util/List;
+
+    invoke-interface {v2}, Ljava/util/List;->hashCode()I
+
+    move-result v2
 
     xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
-    .line 156
+    .line 146
     iget-boolean v2, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->virtualCamera:Z
 
     if-eqz v2, :cond_0
@@ -416,7 +431,7 @@
 
     mul-int/2addr v0, v1
 
-    .line 158
+    .line 148
     iget-object v2, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->imageReaderProxyProvider:Landroidx/camera/core/ImageReaderProxyProvider;
 
     const/4 v3, 0x0
@@ -437,15 +452,15 @@
 
     mul-int/2addr v0, v1
 
-    .line 160
-    iget-object v2, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->postviewSize:Landroid/util/Size;
+    .line 150
+    iget-object v2, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->postviewSettings:Landroidx/camera/core/imagecapture/PostviewSettings;
 
     if-nez v2, :cond_2
 
     goto :goto_2
 
     :cond_2
-    invoke-virtual {v2}, Landroid/util/Size;->hashCode()I
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
     move-result v3
 
@@ -454,14 +469,7 @@
 
     mul-int/2addr v0, v1
 
-    .line 162
-    iget v2, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->postviewImageFormat:I
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    .line 164
+    .line 152
     iget-object v2, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->requestEdge:Landroidx/camera/core/processing/Edge;
 
     invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
@@ -472,31 +480,31 @@
 
     mul-int/2addr v0, v1
 
-    .line 166
-    iget-object v1, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->errorEdge:Landroidx/camera/core/processing/Edge;
+    .line 154
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->errorEdge:Landroidx/camera/core/processing/Edge;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
-    move-result v1
+    move-result p0
 
-    xor-int/2addr v0, v1
+    xor-int/2addr p0, v0
 
-    return v0
+    return p0
 .end method
 
 .method isVirtualCamera()Z
-    .locals 1
+    .locals 0
 
-    .line 79
-    iget-boolean v0, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->virtualCamera:Z
+    .line 80
+    iget-boolean p0, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->virtualCamera:Z
 
-    return v0
+    return p0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 113
+    .line 105
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "In{size="
@@ -515,13 +523,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v1, ", outputFormat="
+    const-string v1, ", outputFormats="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->outputFormat:I
+    iget-object v1, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->outputFormats:Ljava/util/List;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, ", virtualCamera="
 
@@ -539,21 +547,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", postviewSize="
+    const-string v1, ", postviewSettings="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->postviewSize:Landroid/util/Size;
+    iget-object v1, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->postviewSettings:Landroidx/camera/core/imagecapture/PostviewSettings;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", postviewImageFormat="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->postviewImageFormat:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, ", requestEdge="
 
@@ -567,17 +567,17 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->errorEdge:Landroidx/camera/core/processing/Edge;
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/AutoValue_CaptureNode_In;->errorEdge:Landroidx/camera/core/processing/Edge;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, "}"
+    const-string/jumbo p0, "}"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

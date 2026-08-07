@@ -24,7 +24,7 @@
 .end method
 
 .method static ensureValid(Lj$/time/chrono/Chronology;Lj$/time/temporal/Temporal;)Lj$/time/chrono/ChronoLocalDate;
-    .locals 3
+    .locals 1
 
     .line 162
     check-cast p1, Lj$/time/chrono/ChronoLocalDate;
@@ -44,8 +44,6 @@
 
     .line 164
     :cond_0
-    new-instance v0, Ljava/lang/ClassCastException;
-
     invoke-interface {p0}, Lj$/time/chrono/Chronology;->getId()Ljava/lang/String;
 
     move-result-object p0
@@ -58,29 +56,13 @@
 
     move-result-object p1
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const-string v0, "Chronology mismatch, expected: "
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-static {v0, p0, p1}, Lj$/time/chrono/ChronoLocalDateImpl$0;->m(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    const-string v2, "Chronology mismatch, expected: "
+    const/4 p0, 0x0
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, ", actual: "
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/ClassCastException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-object p0
 .end method
 
 
@@ -107,9 +89,9 @@
 
     invoke-interface {p0, p1}, Lj$/time/chrono/ChronoLocalDate;->compareTo(Lj$/time/chrono/ChronoLocalDate;)I
 
-    move-result p1
+    move-result p0
 
-    if-nez p1, :cond_1
+    if-nez p0, :cond_1
 
     return v0
 
@@ -118,7 +100,7 @@
 .end method
 
 .method public hashCode()I
-    .locals 5
+    .locals 4
 
     .line 423
     invoke-interface {p0}, Lj$/time/chrono/ChronoLocalDate;->toEpochDay()J
@@ -128,23 +110,23 @@
     .line 424
     invoke-interface {p0}, Lj$/time/chrono/ChronoLocalDate;->getChronology()Lj$/time/chrono/Chronology;
 
-    move-result-object v2
+    move-result-object p0
 
-    invoke-interface {v2}, Lj$/time/chrono/Chronology;->hashCode()I
+    invoke-interface {p0}, Lj$/time/chrono/Chronology;->hashCode()I
 
-    move-result v2
+    move-result p0
 
-    const/16 v3, 0x20
+    const/16 v2, 0x20
 
-    ushr-long v3, v0, v3
+    ushr-long v2, v0, v2
 
-    xor-long/2addr v0, v3
+    xor-long/2addr v0, v2
 
     long-to-int v0, v0
 
-    xor-int/2addr v0, v2
+    xor-int/2addr p0, v0
 
-    return v0
+    return p0
 .end method
 
 .method public minus(JLj$/time/temporal/TemporalUnit;)Lj$/time/chrono/ChronoLocalDate;
@@ -153,9 +135,9 @@
     .line 225
     invoke-super {p0, p1, p2, p3}, Lj$/time/chrono/ChronoLocalDate;->minus(JLj$/time/temporal/TemporalUnit;)Lj$/time/chrono/ChronoLocalDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic minus(JLj$/time/temporal/TemporalUnit;)Lj$/time/temporal/Temporal;
@@ -164,9 +146,9 @@
     .line 143
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/chrono/ChronoLocalDateImpl;->minus(JLj$/time/temporal/TemporalUnit;)Lj$/time/chrono/ChronoLocalDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/chrono/ChronoLocalDate;
@@ -194,25 +176,13 @@
     packed-switch v0, :pswitch_data_0
 
     .line 211
-    new-instance p1, Lj$/time/temporal/UnsupportedTemporalTypeException;
+    const-string p0, "Unsupported unit: "
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    invoke-static {p0, p3}, Lj$/time/Year$2;->m(Ljava/lang/String;Ljava/lang/Object;)V
 
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 p0, 0x0
 
-    const-string v0, "Unsupported unit: "
-
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Lj$/time/temporal/UnsupportedTemporalTypeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-object p0
 
     .line 209
     :pswitch_0
@@ -228,97 +198,97 @@
 
     invoke-virtual {p0, p3, p1, p2}, Lj$/time/chrono/ChronoLocalDateImpl;->with(Lj$/time/temporal/TemporalField;J)Lj$/time/chrono/ChronoLocalDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     :pswitch_1
     const/16 p3, 0x3e8
 
     .line 208
-    invoke-static {p1, p2, p3}, Lj$/time/Duration$$ExternalSyntheticBackport0;->m(JI)J
+    invoke-static {p1, p2, p3}, Lj$/time/Duration$0;->m(JI)J
 
     move-result-wide p1
 
     invoke-virtual {p0, p1, p2}, Lj$/time/chrono/ChronoLocalDateImpl;->plusYears(J)Lj$/time/chrono/ChronoLocalDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     :pswitch_2
     const/16 p3, 0x64
 
     .line 207
-    invoke-static {p1, p2, p3}, Lj$/time/Duration$$ExternalSyntheticBackport0;->m(JI)J
+    invoke-static {p1, p2, p3}, Lj$/time/Duration$0;->m(JI)J
 
     move-result-wide p1
 
     invoke-virtual {p0, p1, p2}, Lj$/time/chrono/ChronoLocalDateImpl;->plusYears(J)Lj$/time/chrono/ChronoLocalDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     :pswitch_3
     const/16 p3, 0xa
 
     .line 206
-    invoke-static {p1, p2, p3}, Lj$/time/Duration$$ExternalSyntheticBackport0;->m(JI)J
+    invoke-static {p1, p2, p3}, Lj$/time/Duration$0;->m(JI)J
 
     move-result-wide p1
 
     invoke-virtual {p0, p1, p2}, Lj$/time/chrono/ChronoLocalDateImpl;->plusYears(J)Lj$/time/chrono/ChronoLocalDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 205
     :pswitch_4
     invoke-virtual {p0, p1, p2}, Lj$/time/chrono/ChronoLocalDateImpl;->plusYears(J)Lj$/time/chrono/ChronoLocalDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 204
     :pswitch_5
     invoke-virtual {p0, p1, p2}, Lj$/time/chrono/ChronoLocalDateImpl;->plusMonths(J)Lj$/time/chrono/ChronoLocalDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     :pswitch_6
     const/4 p3, 0x7
 
     .line 203
-    invoke-static {p1, p2, p3}, Lj$/time/Duration$$ExternalSyntheticBackport0;->m(JI)J
+    invoke-static {p1, p2, p3}, Lj$/time/Duration$0;->m(JI)J
 
     move-result-wide p1
 
     invoke-virtual {p0, p1, p2}, Lj$/time/chrono/ChronoLocalDateImpl;->plusDays(J)Lj$/time/chrono/ChronoLocalDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 202
     :pswitch_7
     invoke-virtual {p0, p1, p2}, Lj$/time/chrono/ChronoLocalDateImpl;->plusDays(J)Lj$/time/chrono/ChronoLocalDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 213
     :cond_0
     invoke-super {p0, p1, p2, p3}, Lj$/time/chrono/ChronoLocalDate;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/chrono/ChronoLocalDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     nop
 
@@ -335,15 +305,26 @@
     .end packed-switch
 .end method
 
+.method public plus(Lj$/time/temporal/TemporalAmount;)Lj$/time/chrono/ChronoLocalDate;
+    .locals 0
+
+    .line 192
+    invoke-super {p0, p1}, Lj$/time/chrono/ChronoLocalDate;->plus(Lj$/time/temporal/TemporalAmount;)Lj$/time/chrono/ChronoLocalDate;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method public bridge synthetic plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/temporal/Temporal;
     .locals 0
 
     .line 143
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/chrono/ChronoLocalDateImpl;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/chrono/ChronoLocalDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method abstract plusDays(J)Lj$/time/chrono/ChronoLocalDate;
@@ -356,7 +337,7 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 10
+    .locals 9
 
     .line 430
     sget-object v0, Lj$/time/temporal/ChronoField;->YEAR_OF_ERA:Lj$/time/temporal/ChronoField;
@@ -405,9 +386,9 @@
     .line 436
     invoke-interface {p0}, Lj$/time/chrono/ChronoLocalDate;->getEra()Lj$/time/chrono/Era;
 
-    move-result-object v8
+    move-result-object p0
 
-    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     .line 437
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -417,45 +398,45 @@
 
     const-wide/16 v0, 0xa
 
-    cmp-long v7, v2, v0
+    cmp-long p0, v2, v0
 
     .line 439
-    const-string v8, "-"
+    const-string v7, "-"
 
-    const-string v9, "-0"
+    const-string v8, "-0"
 
-    if-gez v7, :cond_0
+    if-gez p0, :cond_0
 
-    move-object v7, v9
+    move-object p0, v8
 
     goto :goto_0
 
     :cond_0
-    move-object v7, v8
+    move-object p0, v7
 
     :goto_0
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v6, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    cmp-long v0, v4, v0
+    cmp-long p0, v4, v0
 
-    if-gez v0, :cond_1
+    if-gez p0, :cond_1
 
-    move-object v8, v9
+    move-object v7, v8
 
     .line 440
     :cond_1
-    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v6, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     .line 441
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/chrono/ChronoLocalDate;
@@ -464,9 +445,9 @@
     .line 179
     invoke-super {p0, p1}, Lj$/time/chrono/ChronoLocalDate;->with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/chrono/ChronoLocalDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public with(Lj$/time/temporal/TemporalField;J)Lj$/time/chrono/ChronoLocalDate;
@@ -475,9 +456,9 @@
     .line 185
     invoke-super {p0, p1, p2, p3}, Lj$/time/chrono/ChronoLocalDate;->with(Lj$/time/temporal/TemporalField;J)Lj$/time/chrono/ChronoLocalDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/temporal/Temporal;
@@ -486,9 +467,9 @@
     .line 143
     invoke-virtual {p0, p1}, Lj$/time/chrono/ChronoLocalDateImpl;->with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/chrono/ChronoLocalDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic with(Lj$/time/temporal/TemporalField;J)Lj$/time/temporal/Temporal;
@@ -497,7 +478,7 @@
     .line 143
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/chrono/ChronoLocalDateImpl;->with(Lj$/time/temporal/TemporalField;J)Lj$/time/chrono/ChronoLocalDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

@@ -24,17 +24,17 @@
 .method public constructor <init>(Landroid/graphics/Bitmap;Landroid/graphics/Rect;ILandroid/graphics/Matrix;J)V
     .locals 10
 
-    .line 91
+    .line 89
     invoke-static {p1}, Landroidx/camera/core/internal/utils/ImageUtil;->createDirectByteBuffer(Landroid/graphics/Bitmap;)Ljava/nio/ByteBuffer;
 
     move-result-object v1
 
-    .line 93
+    .line 91
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v3
 
-    .line 94
+    .line 92
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v4
@@ -51,7 +51,7 @@
 
     move-wide v8, p5
 
-    .line 91
+    .line 89
     invoke-direct/range {v0 .. v9}, Landroidx/camera/core/imagecapture/RgbaImageProxy;-><init>(Ljava/nio/ByteBuffer;IIILandroid/graphics/Rect;ILandroid/graphics/Matrix;J)V
 
     return-void
@@ -68,7 +68,7 @@
         }
     .end annotation
 
-    .line 78
+    .line 76
     invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getData()Ljava/lang/Object;
 
     move-result-object v0
@@ -77,12 +77,12 @@
 
     check-cast v2, Landroid/graphics/Bitmap;
 
-    .line 79
+    .line 77
     invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getCropRect()Landroid/graphics/Rect;
 
     move-result-object v3
 
-    .line 80
+    .line 78
     invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getRotationDegrees()I
 
     move-result v4
@@ -91,7 +91,7 @@
 
     move-result-object v5
 
-    .line 81
+    .line 79
     invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getCameraCaptureResult()Landroidx/camera/core/impl/CameraCaptureResult;
 
     move-result-object p1
@@ -102,7 +102,7 @@
 
     move-object v1, p0
 
-    .line 78
+    .line 76
     invoke-direct/range {v1 .. v7}, Landroidx/camera/core/imagecapture/RgbaImageProxy;-><init>(Landroid/graphics/Bitmap;Landroid/graphics/Rect;ILandroid/graphics/Matrix;J)V
 
     return-void
@@ -111,43 +111,43 @@
 .method public constructor <init>(Ljava/nio/ByteBuffer;IIILandroid/graphics/Rect;ILandroid/graphics/Matrix;J)V
     .locals 1
 
-    .line 110
+    .line 108
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
+    .line 56
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy;->mLock:Ljava/lang/Object;
 
-    .line 111
+    .line 109
     iput p3, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy;->mWidth:I
 
-    .line 112
+    .line 110
     iput p4, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy;->mHeight:I
 
-    .line 113
+    .line 111
     iput-object p5, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy;->mCropRect:Landroid/graphics/Rect;
 
-    .line 114
+    .line 112
     invoke-static {p8, p9, p6, p7}, Landroidx/camera/core/imagecapture/RgbaImageProxy;->createImageInfo(JILandroid/graphics/Matrix;)Landroidx/camera/core/ImageInfo;
 
     move-result-object p4
 
     iput-object p4, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy;->mImageInfo:Landroidx/camera/core/ImageInfo;
 
-    .line 115
+    .line 113
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
     const/4 p4, 0x1
 
-    .line 116
+    .line 114
     new-array p4, p4, [Landroidx/camera/core/ImageProxy$PlaneProxy;
 
     mul-int/2addr p3, p2
 
-    .line 117
+    .line 115
     invoke-static {p1, p3, p2}, Landroidx/camera/core/imagecapture/RgbaImageProxy;->createPlaneProxy(Ljava/nio/ByteBuffer;II)Landroidx/camera/core/ImageProxy$PlaneProxy;
 
     move-result-object p1
@@ -162,50 +162,50 @@
 .end method
 
 .method private checkNotClosed()V
-    .locals 3
+    .locals 2
 
-    .line 213
+    .line 206
     iget-object v0, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 214
+    .line 207
     :try_start_0
-    iget-object v1, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy;->mPlaneProxy:[Landroidx/camera/core/ImageProxy$PlaneProxy;
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy;->mPlaneProxy:[Landroidx/camera/core/ImageProxy$PlaneProxy;
 
-    if-eqz v1, :cond_0
+    if-eqz p0, :cond_0
 
-    const/4 v1, 0x1
+    const/4 p0, 0x1
 
     goto :goto_0
 
     :cond_0
-    const/4 v1, 0x0
+    const/4 p0, 0x0
 
     :goto_0
-    const-string v2, "The image is closed."
+    const-string v1, "The image is closed."
 
-    invoke-static {v1, v2}, Landroidx/core/util/Preconditions;->checkState(ZLjava/lang/String;)V
+    invoke-static {p0, v1}, Landroidx/core/util/Preconditions;->checkState(ZLjava/lang/String;)V
 
-    .line 215
+    .line 208
     monitor-exit v0
 
     return-void
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v1
+    throw p0
 .end method
 
 .method private static createImageInfo(JILandroid/graphics/Matrix;)Landroidx/camera/core/ImageInfo;
     .locals 1
 
-    .line 241
+    .line 233
     new-instance v0, Landroidx/camera/core/imagecapture/RgbaImageProxy$2;
 
     invoke-direct {v0, p0, p1, p2, p3}, Landroidx/camera/core/imagecapture/RgbaImageProxy$2;-><init>(JILandroid/graphics/Matrix;)V
@@ -216,7 +216,7 @@
 .method private static createPlaneProxy(Ljava/nio/ByteBuffer;II)Landroidx/camera/core/ImageProxy$PlaneProxy;
     .locals 1
 
-    .line 220
+    .line 213
     new-instance v0, Landroidx/camera/core/imagecapture/RgbaImageProxy$1;
 
     invoke-direct {v0, p1, p2, p0}, Landroidx/camera/core/imagecapture/RgbaImageProxy$1;-><init>(IILjava/nio/ByteBuffer;)V
@@ -229,48 +229,48 @@
 .method public close()V
     .locals 2
 
-    .line 123
+    .line 121
     iget-object v0, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 124
+    .line 122
     :try_start_0
     invoke-direct {p0}, Landroidx/camera/core/imagecapture/RgbaImageProxy;->checkNotClosed()V
 
     const/4 v1, 0x0
 
-    .line 126
+    .line 124
     iput-object v1, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy;->mPlaneProxy:[Landroidx/camera/core/ImageProxy$PlaneProxy;
 
-    .line 127
+    .line 125
     monitor-exit v0
 
     return-void
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v1
+    throw p0
 .end method
 
 .method public createBitmap()Landroid/graphics/Bitmap;
-    .locals 4
+    .locals 3
 
-    .line 206
+    .line 199
     iget-object v0, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 207
+    .line 200
     :try_start_0
     invoke-direct {p0}, Landroidx/camera/core/imagecapture/RgbaImageProxy;->checkNotClosed()V
 
-    .line 208
+    .line 201
     invoke-virtual {p0}, Landroidx/camera/core/imagecapture/RgbaImageProxy;->getPlanes()[Landroidx/camera/core/ImageProxy$PlaneProxy;
 
     move-result-object v1
@@ -281,274 +281,274 @@
 
     invoke-virtual {p0}, Landroidx/camera/core/imagecapture/RgbaImageProxy;->getHeight()I
 
-    move-result v3
+    move-result p0
 
-    invoke-static {v1, v2, v3}, Landroidx/camera/core/internal/utils/ImageUtil;->createBitmapFromPlane([Landroidx/camera/core/ImageProxy$PlaneProxy;II)Landroid/graphics/Bitmap;
+    invoke-static {v1, v2, p0}, Landroidx/camera/core/internal/utils/ImageUtil;->createBitmapFromPlane([Landroidx/camera/core/ImageProxy$PlaneProxy;II)Landroid/graphics/Bitmap;
 
-    move-result-object v1
+    move-result-object p0
 
     monitor-exit v0
 
-    return-object v1
+    return-object p0
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
-    .line 209
+    .line 202
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v1
+    throw p0
 .end method
 
 .method public getCropRect()Landroid/graphics/Rect;
-    .locals 2
+    .locals 1
 
-    .line 133
+    .line 130
     iget-object v0, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 134
+    .line 131
     :try_start_0
     invoke-direct {p0}, Landroidx/camera/core/imagecapture/RgbaImageProxy;->checkNotClosed()V
 
-    .line 135
-    iget-object v1, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy;->mCropRect:Landroid/graphics/Rect;
+    .line 132
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy;->mCropRect:Landroid/graphics/Rect;
 
     monitor-exit v0
 
-    return-object v1
+    return-object p0
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
-    .line 136
+    .line 133
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v1
+    throw p0
 .end method
 
 .method public getFormat()I
-    .locals 2
+    .locals 1
 
-    .line 151
+    .line 148
     iget-object v0, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 152
+    .line 149
     :try_start_0
     invoke-direct {p0}, Landroidx/camera/core/imagecapture/RgbaImageProxy;->checkNotClosed()V
 
-    const/4 v1, 0x1
+    const/4 p0, 0x1
 
-    .line 153
+    .line 150
     monitor-exit v0
 
-    return v1
+    return p0
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
-    .line 154
+    .line 151
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v1
+    throw p0
 .end method
 
 .method public getHeight()I
-    .locals 2
+    .locals 1
 
-    .line 159
+    .line 156
     iget-object v0, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 160
+    .line 157
     :try_start_0
     invoke-direct {p0}, Landroidx/camera/core/imagecapture/RgbaImageProxy;->checkNotClosed()V
 
-    .line 161
-    iget v1, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy;->mHeight:I
+    .line 158
+    iget p0, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy;->mHeight:I
 
     monitor-exit v0
 
-    return v1
+    return p0
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
-    .line 162
+    .line 159
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v1
+    throw p0
 .end method
 
 .method public getImage()Landroid/media/Image;
-    .locals 2
+    .locals 1
 
-    .line 195
+    .line 189
     iget-object v0, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 196
+    .line 190
     :try_start_0
     invoke-direct {p0}, Landroidx/camera/core/imagecapture/RgbaImageProxy;->checkNotClosed()V
 
-    const/4 v1, 0x0
+    const/4 p0, 0x0
 
-    .line 197
+    .line 191
     monitor-exit v0
 
-    return-object v1
+    return-object p0
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
-    .line 198
+    .line 192
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v1
+    throw p0
 .end method
 
 .method public getImageInfo()Landroidx/camera/core/ImageInfo;
-    .locals 2
+    .locals 1
 
-    .line 185
+    .line 180
     iget-object v0, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 186
+    .line 181
     :try_start_0
     invoke-direct {p0}, Landroidx/camera/core/imagecapture/RgbaImageProxy;->checkNotClosed()V
 
-    .line 187
-    iget-object v1, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy;->mImageInfo:Landroidx/camera/core/ImageInfo;
+    .line 182
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy;->mImageInfo:Landroidx/camera/core/ImageInfo;
 
     monitor-exit v0
 
-    return-object v1
+    return-object p0
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
-    .line 188
+    .line 183
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v1
+    throw p0
 .end method
 
 .method public getPlanes()[Landroidx/camera/core/ImageProxy$PlaneProxy;
-    .locals 2
+    .locals 1
 
-    .line 176
+    .line 172
     iget-object v0, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 177
+    .line 173
     :try_start_0
     invoke-direct {p0}, Landroidx/camera/core/imagecapture/RgbaImageProxy;->checkNotClosed()V
 
-    .line 178
-    iget-object v1, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy;->mPlaneProxy:[Landroidx/camera/core/ImageProxy$PlaneProxy;
+    .line 174
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy;->mPlaneProxy:[Landroidx/camera/core/ImageProxy$PlaneProxy;
 
-    invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object p0
 
-    check-cast v1, [Landroidx/camera/core/ImageProxy$PlaneProxy;
+    check-cast p0, [Landroidx/camera/core/ImageProxy$PlaneProxy;
 
     monitor-exit v0
 
-    return-object v1
+    return-object p0
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
-    .line 179
+    .line 175
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v1
+    throw p0
 .end method
 
 .method public getWidth()I
-    .locals 2
+    .locals 1
 
-    .line 167
+    .line 164
     iget-object v0, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 168
+    .line 165
     :try_start_0
     invoke-direct {p0}, Landroidx/camera/core/imagecapture/RgbaImageProxy;->checkNotClosed()V
 
-    .line 169
-    iget v1, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy;->mWidth:I
+    .line 166
+    iget p0, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy;->mWidth:I
 
     monitor-exit v0
 
-    return v1
+    return p0
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
-    .line 170
+    .line 167
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v1
+    throw p0
 .end method
 
 .method public setCropRect(Landroid/graphics/Rect;)V
-    .locals 2
+    .locals 1
 
-    .line 141
+    .line 138
     iget-object v0, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 142
+    .line 139
     :try_start_0
     invoke-direct {p0}, Landroidx/camera/core/imagecapture/RgbaImageProxy;->checkNotClosed()V
 
     if-eqz p1, :cond_0
 
-    .line 144
-    iget-object v1, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy;->mCropRect:Landroid/graphics/Rect;
+    .line 141
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy;->mCropRect:Landroid/graphics/Rect;
 
-    invoke-virtual {v1, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {p0, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 146
+    .line 143
     :cond_0
     monitor-exit v0
 
     return-void
 
     :catchall_0
-    move-exception p1
+    move-exception p0
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p1
+    throw p0
 .end method

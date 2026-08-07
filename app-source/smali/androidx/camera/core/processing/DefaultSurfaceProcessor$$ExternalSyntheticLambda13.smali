@@ -25,12 +25,12 @@
 
 # virtual methods
 .method public final run()V
-    .locals 1
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Landroidx/camera/core/processing/DefaultSurfaceProcessor$$ExternalSyntheticLambda13;->f$0:Landroidx/camera/core/SurfaceOutput;
+    iget-object p0, p0, Landroidx/camera/core/processing/DefaultSurfaceProcessor$$ExternalSyntheticLambda13;->f$0:Landroidx/camera/core/SurfaceOutput;
 
-    invoke-interface {v0}, Landroidx/camera/core/SurfaceOutput;->close()V
+    invoke-interface {p0}, Landroidx/camera/core/SurfaceOutput;->close()V
 
     return-void
 .end method

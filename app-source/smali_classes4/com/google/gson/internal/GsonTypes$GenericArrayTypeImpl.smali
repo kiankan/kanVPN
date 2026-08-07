@@ -4,7 +4,6 @@
 
 # interfaces
 .implements Ljava/lang/reflect/GenericArrayType;
-.implements Ljava/io/Serializable;
 
 
 # annotations
@@ -18,10 +17,6 @@
 .end annotation
 
 
-# static fields
-.field private static final serialVersionUID:J
-
-
 # instance fields
 .field private final componentType:Ljava/lang/reflect/Type;
 
@@ -30,13 +25,13 @@
 .method constructor <init>(Ljava/lang/reflect/Type;)V
     .locals 0
 
-    .line 595
+    .line 584
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 596
+    .line 585
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 597
+    .line 586
     invoke-static {p1}, Lcom/google/gson/internal/GsonTypes;->canonicalize(Ljava/lang/reflect/Type;)Ljava/lang/reflect/Type;
 
     move-result-object p1
@@ -51,7 +46,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
-    .line 607
+    .line 596
     instance-of v0, p1, Ljava/lang/reflect/GenericArrayType;
 
     if-eqz v0, :cond_0
@@ -60,65 +55,65 @@
 
     invoke-static {p0, p1}, Lcom/google/gson/internal/GsonTypes;->equals(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_0
+    if-eqz p0, :cond_0
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method public getGenericComponentType()Ljava/lang/reflect/Type;
-    .locals 1
+    .locals 0
 
-    .line 602
-    iget-object v0, p0, Lcom/google/gson/internal/GsonTypes$GenericArrayTypeImpl;->componentType:Ljava/lang/reflect/Type;
+    .line 591
+    iget-object p0, p0, Lcom/google/gson/internal/GsonTypes$GenericArrayTypeImpl;->componentType:Ljava/lang/reflect/Type;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public hashCode()I
-    .locals 1
+    .locals 0
 
-    .line 612
-    iget-object v0, p0, Lcom/google/gson/internal/GsonTypes$GenericArrayTypeImpl;->componentType:Ljava/lang/reflect/Type;
+    .line 601
+    iget-object p0, p0, Lcom/google/gson/internal/GsonTypes$GenericArrayTypeImpl;->componentType:Ljava/lang/reflect/Type;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 2
+    .locals 1
 
-    .line 617
+    .line 606
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v1, p0, Lcom/google/gson/internal/GsonTypes$GenericArrayTypeImpl;->componentType:Ljava/lang/reflect/Type;
+    iget-object p0, p0, Lcom/google/gson/internal/GsonTypes$GenericArrayTypeImpl;->componentType:Ljava/lang/reflect/Type;
 
-    invoke-static {v1}, Lcom/google/gson/internal/GsonTypes;->typeToString(Ljava/lang/reflect/Type;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/google/gson/internal/GsonTypes;->typeToString(Ljava/lang/reflect/Type;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, "[]"
+    const-string p0, "[]"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

@@ -9,6 +9,20 @@
 .implements Ljava/io/Serializable;
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lj$/time/temporal/Temporal;",
+        "Lj$/time/temporal/TemporalAdjuster;",
+        "Ljava/lang/Comparable<",
+        "Lj$/time/Year;",
+        ">;",
+        "Ljava/io/Serializable;"
+    }
+.end annotation
+
+
 # static fields
 .field private static final PARSER:Lj$/time/format/DateTimeFormatter;
 
@@ -63,6 +77,47 @@
     return-void
 .end method
 
+.method public static isLeap(J)Z
+    .locals 4
+
+    const-wide/16 v0, 0x3
+
+    and-long/2addr v0, p0
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_1
+
+    const-wide/16 v0, 0x64
+
+    .line 316
+    rem-long v0, p0, v0
+
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_0
+
+    const-wide/16 v0, 0x190
+
+    rem-long/2addr p0, v0
+
+    cmp-long p0, p0, v2
+
+    if-nez p0, :cond_1
+
+    :cond_0
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
 .method public static of(I)Lj$/time/Year;
     .locals 3
 
@@ -97,16 +152,16 @@
 .end method
 
 .method private readObject(Ljava/io/ObjectInputStream;)V
-    .locals 1
+    .locals 0
 
     .line 1111
-    new-instance p1, Ljava/io/InvalidObjectException;
+    new-instance p0, Ljava/io/InvalidObjectException;
 
-    const-string v0, "Deserialization via serialization delegate"
+    const-string p1, "Deserialization via serialization delegate"
 
-    invoke-direct {p1, v0}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method private writeReplace()Ljava/lang/Object;
@@ -143,38 +198,38 @@
     .line 862
     sget-object v0, Lj$/time/temporal/ChronoField;->YEAR:Lj$/time/temporal/ChronoField;
 
-    iget v1, p0, Lj$/time/Year;->year:I
+    iget p0, p0, Lj$/time/Year;->year:I
 
-    int-to-long v1, v1
+    int-to-long v1, p0
 
     invoke-interface {p1, v0, v1, v2}, Lj$/time/temporal/Temporal;->with(Lj$/time/temporal/TemporalField;J)Lj$/time/temporal/Temporal;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 860
     :cond_0
-    new-instance p1, Lj$/time/DateTimeException;
+    const-string p0, "Adjustment only supported on ISO date-time"
 
-    const-string v0, "Adjustment only supported on ISO date-time"
+    invoke-static {p0}, Lj$/time/Year$3;->m(Ljava/lang/String;)V
 
-    invoke-direct {p1, v0}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
+    const/4 p0, 0x0
 
-    throw p1
+    return-object p0
 .end method
 
 .method public compareTo(Lj$/time/Year;)I
-    .locals 1
+    .locals 0
 
     .line 1024
-    iget v0, p0, Lj$/time/Year;->year:I
+    iget p0, p0, Lj$/time/Year;->year:I
 
     iget p1, p1, Lj$/time/Year;->year:I
 
-    sub-int/2addr v0, p1
+    sub-int/2addr p0, p1
 
-    return v0
+    return p0
 .end method
 
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
@@ -185,9 +240,9 @@
 
     invoke-virtual {p0, p1}, Lj$/time/Year;->compareTo(Lj$/time/Year;)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -208,13 +263,13 @@
     if-eqz v1, :cond_1
 
     .line 1062
-    iget v1, p0, Lj$/time/Year;->year:I
+    iget p0, p0, Lj$/time/Year;->year:I
 
     check-cast p1, Lj$/time/Year;
 
     iget p1, p1, Lj$/time/Year;->year:I
 
-    if-ne v1, p1, :cond_1
+    if-ne p0, p1, :cond_1
 
     return v0
 
@@ -236,9 +291,9 @@
 
     invoke-virtual {v0, v1, v2, p1}, Lj$/time/temporal/ValueRange;->checkValidIntValue(JLj$/time/temporal/TemporalField;)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public getLong(Lj$/time/temporal/TemporalField;)J
@@ -275,76 +330,73 @@
     if-ne v0, v2, :cond_1
 
     .line 501
-    iget p1, p0, Lj$/time/Year;->year:I
+    iget p0, p0, Lj$/time/Year;->year:I
 
-    if-ge p1, v1, :cond_0
+    if-ge p0, v1, :cond_0
 
     const/4 v1, 0x0
 
     :cond_0
-    int-to-long v0, v1
+    int-to-long p0, v1
 
-    return-wide v0
+    return-wide p0
 
     .line 503
     :cond_1
-    new-instance v0, Lj$/time/temporal/UnsupportedTemporalTypeException;
+    const-string p0, "Unsupported field: "
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-static {p0, p1}, Lj$/time/Year$2;->m(Ljava/lang/String;Ljava/lang/Object;)V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const-wide/16 p0, 0x0
 
-    const-string v2, "Unsupported field: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Lj$/time/temporal/UnsupportedTemporalTypeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-wide p0
 
     .line 500
     :cond_2
-    iget p1, p0, Lj$/time/Year;->year:I
+    iget p0, p0, Lj$/time/Year;->year:I
 
-    int-to-long v0, p1
+    int-to-long p0, p0
 
-    return-wide v0
+    return-wide p0
 
     .line 499
     :cond_3
-    iget p1, p0, Lj$/time/Year;->year:I
+    iget p0, p0, Lj$/time/Year;->year:I
 
-    if-ge p1, v1, :cond_4
+    if-ge p0, v1, :cond_4
 
-    rsub-int/lit8 p1, p1, 0x1
+    rsub-int/lit8 p0, p0, 0x1
 
     :cond_4
-    int-to-long v0, p1
+    int-to-long p0, p0
 
-    return-wide v0
+    return-wide p0
 
     .line 505
     :cond_5
     invoke-interface {p1, p0}, Lj$/time/temporal/TemporalField;->getFrom(Lj$/time/temporal/TemporalAccessor;)J
 
-    move-result-wide v0
+    move-result-wide p0
 
-    return-wide v0
+    return-wide p0
+.end method
+
+.method public getValue()I
+    .locals 0
+
+    .line 338
+    iget p0, p0, Lj$/time/Year;->year:I
+
+    return p0
 .end method
 
 .method public hashCode()I
-    .locals 1
+    .locals 0
 
     .line 1074
-    iget v0, p0, Lj$/time/Year;->year:I
+    iget p0, p0, Lj$/time/Year;->year:I
 
-    return v0
+    return p0
 .end method
 
 .method public isSupported(Lj$/time/temporal/TemporalField;)Z
@@ -360,17 +412,17 @@
     if-eqz v0, :cond_2
 
     .line 370
-    sget-object v0, Lj$/time/temporal/ChronoField;->YEAR:Lj$/time/temporal/ChronoField;
+    sget-object p0, Lj$/time/temporal/ChronoField;->YEAR:Lj$/time/temporal/ChronoField;
 
-    if-eq p1, v0, :cond_1
+    if-eq p1, p0, :cond_1
 
-    sget-object v0, Lj$/time/temporal/ChronoField;->YEAR_OF_ERA:Lj$/time/temporal/ChronoField;
+    sget-object p0, Lj$/time/temporal/ChronoField;->YEAR_OF_ERA:Lj$/time/temporal/ChronoField;
 
-    if-eq p1, v0, :cond_1
+    if-eq p1, p0, :cond_1
 
-    sget-object v0, Lj$/time/temporal/ChronoField;->ERA:Lj$/time/temporal/ChronoField;
+    sget-object p0, Lj$/time/temporal/ChronoField;->ERA:Lj$/time/temporal/ChronoField;
 
-    if-ne p1, v0, :cond_0
+    if-ne p1, p0, :cond_0
 
     goto :goto_0
 
@@ -387,9 +439,9 @@
     .line 372
     invoke-interface {p1, p0}, Lj$/time/temporal/TemporalField;->isSupportedBy(Lj$/time/temporal/TemporalAccessor;)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_3
+    if-eqz p0, :cond_3
 
     return v1
 
@@ -411,24 +463,21 @@
     .line 785
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/Year;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/Year;
 
-    move-result-object p1
+    move-result-object p0
 
-    const-wide/16 v0, 0x1
+    const-wide/16 p1, 0x1
 
-    invoke-virtual {p1, v0, v1, p3}, Lj$/time/Year;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/Year;
+    :goto_0
+    invoke-virtual {p0, p1, p2, p3}, Lj$/time/Year;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/Year;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     :cond_0
     neg-long p1, p1
 
-    invoke-virtual {p0, p1, p2, p3}, Lj$/time/Year;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/Year;
-
-    move-result-object p1
-
-    return-object p1
+    goto :goto_0
 .end method
 
 .method public bridge synthetic minus(JLj$/time/temporal/TemporalUnit;)Lj$/time/temporal/Temporal;
@@ -437,9 +486,9 @@
     .line 135
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/Year;->minus(JLj$/time/temporal/TemporalUnit;)Lj$/time/Year;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/Year;
@@ -496,91 +545,79 @@
 
     invoke-virtual {p0, p3, p1, p2}, Lj$/time/Year;->with(Lj$/time/temporal/TemporalField;J)Lj$/time/Year;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 717
     :cond_0
-    new-instance p1, Lj$/time/temporal/UnsupportedTemporalTypeException;
+    const-string p0, "Unsupported unit: "
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    invoke-static {p0, p3}, Lj$/time/Year$2;->m(Ljava/lang/String;Ljava/lang/Object;)V
 
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 p0, 0x0
 
-    const-string v0, "Unsupported unit: "
-
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Lj$/time/temporal/UnsupportedTemporalTypeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-object p0
 
     :cond_1
     const/16 p3, 0x3e8
 
     .line 714
-    invoke-static {p1, p2, p3}, Lj$/time/Duration$$ExternalSyntheticBackport0;->m(JI)J
+    invoke-static {p1, p2, p3}, Lj$/time/Duration$0;->m(JI)J
 
     move-result-wide p1
 
     invoke-virtual {p0, p1, p2}, Lj$/time/Year;->plusYears(J)Lj$/time/Year;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     :cond_2
     const/16 p3, 0x64
 
     .line 713
-    invoke-static {p1, p2, p3}, Lj$/time/Duration$$ExternalSyntheticBackport0;->m(JI)J
+    invoke-static {p1, p2, p3}, Lj$/time/Duration$0;->m(JI)J
 
     move-result-wide p1
 
     invoke-virtual {p0, p1, p2}, Lj$/time/Year;->plusYears(J)Lj$/time/Year;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     :cond_3
     const/16 p3, 0xa
 
     .line 712
-    invoke-static {p1, p2, p3}, Lj$/time/Duration$$ExternalSyntheticBackport0;->m(JI)J
+    invoke-static {p1, p2, p3}, Lj$/time/Duration$0;->m(JI)J
 
     move-result-wide p1
 
     invoke-virtual {p0, p1, p2}, Lj$/time/Year;->plusYears(J)Lj$/time/Year;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 711
     :cond_4
     invoke-virtual {p0, p1, p2}, Lj$/time/Year;->plusYears(J)Lj$/time/Year;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 719
     :cond_5
     invoke-interface {p3, p0, p1, p2}, Lj$/time/temporal/TemporalUnit;->addTo(Lj$/time/temporal/Temporal;J)Lj$/time/temporal/Temporal;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lj$/time/Year;
+    check-cast p0, Lj$/time/Year;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/temporal/Temporal;
@@ -589,9 +626,9 @@
     .line 135
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/Year;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/Year;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public plusYears(J)Lj$/time/Year;
@@ -609,21 +646,21 @@
     :cond_0
     sget-object v0, Lj$/time/temporal/ChronoField;->YEAR:Lj$/time/temporal/ChronoField;
 
-    iget v1, p0, Lj$/time/Year;->year:I
+    iget p0, p0, Lj$/time/Year;->year:I
 
-    int-to-long v1, v1
+    int-to-long v1, p0
 
     add-long/2addr v1, p1
 
     invoke-virtual {v0, v1, v2}, Lj$/time/temporal/ChronoField;->checkValidIntValue(J)I
 
-    move-result p1
+    move-result p0
 
-    invoke-static {p1}, Lj$/time/Year;->of(I)Lj$/time/Year;
+    invoke-static {p0}, Lj$/time/Year;->of(I)Lj$/time/Year;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public query(Lj$/time/temporal/TemporalQuery;)Ljava/lang/Object;
@@ -637,9 +674,9 @@
     if-ne p1, v0, :cond_0
 
     .line 824
-    sget-object p1, Lj$/time/chrono/IsoChronology;->INSTANCE:Lj$/time/chrono/IsoChronology;
+    sget-object p0, Lj$/time/chrono/IsoChronology;->INSTANCE:Lj$/time/chrono/IsoChronology;
 
-    return-object p1
+    return-object p0
 
     .line 825
     :cond_0
@@ -650,21 +687,21 @@
     if-ne p1, v0, :cond_1
 
     .line 826
-    sget-object p1, Lj$/time/temporal/ChronoUnit;->YEARS:Lj$/time/temporal/ChronoUnit;
+    sget-object p0, Lj$/time/temporal/ChronoUnit;->YEARS:Lj$/time/temporal/ChronoUnit;
 
-    return-object p1
+    return-object p0
 
     .line 828
     :cond_1
     invoke-super {p0, p1}, Lj$/time/temporal/TemporalAccessor;->query(Lj$/time/temporal/TemporalQuery;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public range(Lj$/time/temporal/TemporalField;)Lj$/time/temporal/ValueRange;
-    .locals 4
+    .locals 2
 
     .line 435
     sget-object v0, Lj$/time/temporal/ChronoField;->YEAR_OF_ERA:Lj$/time/temporal/ChronoField;
@@ -672,23 +709,23 @@
     if-ne p1, v0, :cond_1
 
     .line 436
-    iget p1, p0, Lj$/time/Year;->year:I
+    iget p0, p0, Lj$/time/Year;->year:I
 
     const-wide/16 v0, 0x1
 
-    if-gtz p1, :cond_0
+    if-gtz p0, :cond_0
 
-    const-wide/32 v2, 0x3b9aca00
+    const-wide/32 p0, 0x3b9aca00
 
     :goto_0
-    invoke-static {v0, v1, v2, v3}, Lj$/time/temporal/ValueRange;->of(JJ)Lj$/time/temporal/ValueRange;
+    invoke-static {v0, v1, p0, p1}, Lj$/time/temporal/ValueRange;->of(JJ)Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     :cond_0
-    const-wide/32 v2, 0x3b9ac9ff
+    const-wide/32 p0, 0x3b9ac9ff
 
     goto :goto_0
 
@@ -696,22 +733,22 @@
     :cond_1
     invoke-super {p0, p1}, Lj$/time/temporal/TemporalAccessor;->range(Lj$/time/temporal/TemporalField;)Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 1085
-    iget v0, p0, Lj$/time/Year;->year:I
+    iget p0, p0, Lj$/time/Year;->year:I
 
-    invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+    invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/Year;
@@ -720,11 +757,11 @@
     .line 574
     invoke-interface {p1, p0}, Lj$/time/temporal/TemporalAdjuster;->adjustInto(Lj$/time/temporal/Temporal;)Lj$/time/temporal/Temporal;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lj$/time/Year;
+    check-cast p0, Lj$/time/Year;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public with(Lj$/time/temporal/TemporalField;J)Lj$/time/Year;
@@ -778,76 +815,64 @@
     return-object p0
 
     :cond_0
-    iget p1, p0, Lj$/time/Year;->year:I
+    iget p0, p0, Lj$/time/Year;->year:I
 
-    sub-int/2addr v1, p1
+    sub-int/2addr v1, p0
 
     invoke-static {v1}, Lj$/time/Year;->of(I)Lj$/time/Year;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 628
     :cond_1
-    new-instance p2, Lj$/time/temporal/UnsupportedTemporalTypeException;
+    const-string p0, "Unsupported field: "
 
-    new-instance p3, Ljava/lang/StringBuilder;
+    invoke-static {p0, p1}, Lj$/time/Year$2;->m(Ljava/lang/String;Ljava/lang/Object;)V
 
-    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 p0, 0x0
 
-    const-string v0, "Unsupported field: "
-
-    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Lj$/time/temporal/UnsupportedTemporalTypeException;-><init>(Ljava/lang/String;)V
-
-    throw p2
+    return-object p0
 
     :cond_2
-    long-to-int p1, p2
+    long-to-int p0, p2
 
     .line 625
-    invoke-static {p1}, Lj$/time/Year;->of(I)Lj$/time/Year;
+    invoke-static {p0}, Lj$/time/Year;->of(I)Lj$/time/Year;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 624
     :cond_3
-    iget p1, p0, Lj$/time/Year;->year:I
+    iget p0, p0, Lj$/time/Year;->year:I
 
-    if-ge p1, v1, :cond_4
+    if-ge p0, v1, :cond_4
 
-    const-wide/16 v0, 0x1
+    const-wide/16 p0, 0x1
 
-    sub-long p2, v0, p2
+    sub-long p2, p0, p2
 
     :cond_4
-    long-to-int p1, p2
+    long-to-int p0, p2
 
-    invoke-static {p1}, Lj$/time/Year;->of(I)Lj$/time/Year;
+    invoke-static {p0}, Lj$/time/Year;->of(I)Lj$/time/Year;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 630
     :cond_5
     invoke-interface {p1, p0, p2, p3}, Lj$/time/temporal/TemporalField;->adjustInto(Lj$/time/temporal/Temporal;J)Lj$/time/temporal/Temporal;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lj$/time/Year;
+    check-cast p0, Lj$/time/Year;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/temporal/Temporal;
@@ -856,9 +881,9 @@
     .line 135
     invoke-virtual {p0, p1}, Lj$/time/Year;->with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/Year;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic with(Lj$/time/temporal/TemporalField;J)Lj$/time/temporal/Temporal;
@@ -867,18 +892,18 @@
     .line 135
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/Year;->with(Lj$/time/temporal/TemporalField;J)Lj$/time/Year;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method writeExternal(Ljava/io/DataOutput;)V
-    .locals 1
+    .locals 0
 
     .line 1115
-    iget v0, p0, Lj$/time/Year;->year:I
+    iget p0, p0, Lj$/time/Year;->year:I
 
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeInt(I)V
+    invoke-interface {p1, p0}, Ljava/io/DataOutput;->writeInt(I)V
 
     return-void
 .end method

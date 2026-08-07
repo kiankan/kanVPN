@@ -22,7 +22,7 @@
     .line 62
     invoke-direct {p0, p1}, Landroidx/camera/core/ForwardingImageProxy;-><init>(Landroidx/camera/core/ImageProxy;)V
 
-    .line 33
+    .line 34
     new-instance p1, Ljava/lang/Object;
 
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
@@ -83,20 +83,20 @@
 
 # virtual methods
 .method public getCropRect()Landroid/graphics/Rect;
-    .locals 5
+    .locals 4
 
-    .line 76
+    .line 75
     iget-object v0, p0, Landroidx/camera/core/SettableImageProxy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 77
+    .line 76
     :try_start_0
     iget-object v1, p0, Landroidx/camera/core/SettableImageProxy;->mCropRect:Landroid/graphics/Rect;
 
     if-nez v1, :cond_0
 
-    .line 78
+    .line 77
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Landroidx/camera/core/SettableImageProxy;->getWidth()I
@@ -105,64 +105,64 @@
 
     invoke-virtual {p0}, Landroidx/camera/core/SettableImageProxy;->getHeight()I
 
-    move-result v3
+    move-result p0
 
-    const/4 v4, 0x0
+    const/4 v3, 0x0
 
-    invoke-direct {v1, v4, v4, v2, v3}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-direct {v1, v3, v3, v2, p0}, Landroid/graphics/Rect;-><init>(IIII)V
 
     monitor-exit v0
 
     return-object v1
 
-    .line 80
+    .line 79
     :cond_0
     new-instance v1, Landroid/graphics/Rect;
 
-    iget-object v2, p0, Landroidx/camera/core/SettableImageProxy;->mCropRect:Landroid/graphics/Rect;
+    iget-object p0, p0, Landroidx/camera/core/SettableImageProxy;->mCropRect:Landroid/graphics/Rect;
 
-    invoke-direct {v1, v2}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
+    invoke-direct {v1, p0}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
     monitor-exit v0
 
     return-object v1
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
-    .line 82
+    .line 81
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v1
+    throw p0
 .end method
 
 .method public getHeight()I
-    .locals 1
+    .locals 0
 
-    .line 105
-    iget v0, p0, Landroidx/camera/core/SettableImageProxy;->mHeight:I
+    .line 104
+    iget p0, p0, Landroidx/camera/core/SettableImageProxy;->mHeight:I
 
-    return v0
+    return p0
 .end method
 
 .method public getImageInfo()Landroidx/camera/core/ImageInfo;
-    .locals 1
+    .locals 0
 
-    .line 111
-    iget-object v0, p0, Landroidx/camera/core/SettableImageProxy;->mImageInfo:Landroidx/camera/core/ImageInfo;
+    .line 109
+    iget-object p0, p0, Landroidx/camera/core/SettableImageProxy;->mImageInfo:Landroidx/camera/core/ImageInfo;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getWidth()I
-    .locals 1
+    .locals 0
 
-    .line 100
-    iget v0, p0, Landroidx/camera/core/SettableImageProxy;->mWidth:I
+    .line 99
+    iget p0, p0, Landroidx/camera/core/SettableImageProxy;->mWidth:I
 
-    return v0
+    return p0
 .end method
 
 .method public setCropRect(Landroid/graphics/Rect;)V
@@ -170,12 +170,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 88
+    .line 87
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0, p1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 89
+    .line 88
     invoke-virtual {p0}, Landroidx/camera/core/SettableImageProxy;->getWidth()I
 
     move-result p1
@@ -192,33 +192,33 @@
 
     if-nez p1, :cond_0
 
-    .line 90
+    .line 89
     invoke-virtual {v0}, Landroid/graphics/Rect;->setEmpty()V
 
     :cond_0
     move-object p1, v0
 
-    .line 93
+    .line 92
     :cond_1
     iget-object v0, p0, Landroidx/camera/core/SettableImageProxy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 94
+    .line 93
     :try_start_0
     iput-object p1, p0, Landroidx/camera/core/SettableImageProxy;->mCropRect:Landroid/graphics/Rect;
 
-    .line 95
+    .line 94
     monitor-exit v0
 
     return-void
 
     :catchall_0
-    move-exception p1
+    move-exception p0
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p1
+    throw p0
 .end method

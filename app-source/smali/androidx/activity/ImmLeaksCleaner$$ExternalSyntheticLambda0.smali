@@ -19,12 +19,12 @@
 
 # virtual methods
 .method public final invoke()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
     .line 0
-    invoke-static {}, Landroidx/activity/ImmLeaksCleaner;->$r8$lambda$Exo1Z5q5y2pqqGK3kDcOXUK9u98()Landroidx/activity/ImmLeaksCleaner$Cleaner;
+    invoke-static {}, Landroidx/activity/ImmLeaksCleaner;->cleaner_delegate$lambda$0()Landroidx/activity/ImmLeaksCleaner$Cleaner;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

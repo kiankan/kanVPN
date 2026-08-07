@@ -13,7 +13,7 @@
 
 
 # static fields
-.field static final DEFAULT_AUTOCANCEL_DURATION:J = 0x1388L
+.field public static final DEFAULT_AUTO_CANCEL_DURATION_MILLIS:J = 0x1388L
 
 .field static final DEFAULT_METERING_MODE:I = 0x7
 
@@ -62,10 +62,10 @@
 .method constructor <init>(Landroidx/camera/core/FocusMeteringAction$Builder;)V
     .locals 2
 
-    .line 97
+    .line 108
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 98
+    .line 109
     iget-object v0, p1, Landroidx/camera/core/FocusMeteringAction$Builder;->mMeteringPointsAf:Ljava/util/List;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
@@ -74,7 +74,7 @@
 
     iput-object v0, p0, Landroidx/camera/core/FocusMeteringAction;->mMeteringPointsAf:Ljava/util/List;
 
-    .line 99
+    .line 110
     iget-object v0, p1, Landroidx/camera/core/FocusMeteringAction$Builder;->mMeteringPointsAe:Ljava/util/List;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
@@ -83,7 +83,7 @@
 
     iput-object v0, p0, Landroidx/camera/core/FocusMeteringAction;->mMeteringPointsAe:Ljava/util/List;
 
-    .line 100
+    .line 111
     iget-object v0, p1, Landroidx/camera/core/FocusMeteringAction$Builder;->mMeteringPointsAwb:Ljava/util/List;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
@@ -92,7 +92,7 @@
 
     iput-object v0, p0, Landroidx/camera/core/FocusMeteringAction;->mMeteringPointsAwb:Ljava/util/List;
 
-    .line 101
+    .line 112
     iget-wide v0, p1, Landroidx/camera/core/FocusMeteringAction$Builder;->mAutoCancelDurationInMillis:J
 
     iput-wide v0, p0, Landroidx/camera/core/FocusMeteringAction;->mAutoCancelDurationInMillis:J
@@ -105,14 +105,14 @@
 .method public getAutoCancelDurationInMillis()J
     .locals 2
 
-    .line 108
+    .line 119
     iget-wide v0, p0, Landroidx/camera/core/FocusMeteringAction;->mAutoCancelDurationInMillis:J
 
     return-wide v0
 .end method
 
 .method public getMeteringPointsAe()Ljava/util/List;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -122,14 +122,14 @@
         }
     .end annotation
 
-    .line 124
-    iget-object v0, p0, Landroidx/camera/core/FocusMeteringAction;->mMeteringPointsAe:Ljava/util/List;
+    .line 133
+    iget-object p0, p0, Landroidx/camera/core/FocusMeteringAction;->mMeteringPointsAe:Ljava/util/List;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getMeteringPointsAf()Ljava/util/List;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -139,14 +139,14 @@
         }
     .end annotation
 
-    .line 116
-    iget-object v0, p0, Landroidx/camera/core/FocusMeteringAction;->mMeteringPointsAf:Ljava/util/List;
+    .line 126
+    iget-object p0, p0, Landroidx/camera/core/FocusMeteringAction;->mMeteringPointsAf:Ljava/util/List;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getMeteringPointsAwb()Ljava/util/List;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -156,30 +156,30 @@
         }
     .end annotation
 
-    .line 132
-    iget-object v0, p0, Landroidx/camera/core/FocusMeteringAction;->mMeteringPointsAwb:Ljava/util/List;
+    .line 140
+    iget-object p0, p0, Landroidx/camera/core/FocusMeteringAction;->mMeteringPointsAwb:Ljava/util/List;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public isAutoCancelEnabled()Z
     .locals 4
 
-    .line 139
+    .line 147
     iget-wide v0, p0, Landroidx/camera/core/FocusMeteringAction;->mAutoCancelDurationInMillis:J
 
     const-wide/16 v2, 0x0
 
-    cmp-long v0, v0, v2
+    cmp-long p0, v0, v2
 
-    if-lez v0, :cond_0
+    if-lez p0, :cond_0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method

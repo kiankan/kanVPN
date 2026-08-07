@@ -16,7 +16,7 @@
 .method public static create()Landroidx/camera/core/impl/DeviceProperties;
     .locals 3
 
-    .line 33
+    .line 32
     sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
 
     sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
@@ -33,7 +33,7 @@
 .method public static create(Ljava/lang/String;Ljava/lang/String;I)Landroidx/camera/core/impl/DeviceProperties;
     .locals 1
 
-    .line 40
+    .line 38
     new-instance v0, Landroidx/camera/core/impl/AutoValue_DeviceProperties;
 
     invoke-direct {v0, p0, p1, p2}, Landroidx/camera/core/impl/AutoValue_DeviceProperties;-><init>(Ljava/lang/String;Ljava/lang/String;I)V

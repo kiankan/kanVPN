@@ -88,11 +88,11 @@
     if-lez p2, :cond_1
 
     .line 58
-    iget p2, p0, Lcom/google/zxing/qrcode/detector/FinderPattern;->estimatedModuleSize:F
+    iget p0, p0, Lcom/google/zxing/qrcode/detector/FinderPattern;->estimatedModuleSize:F
 
-    cmpg-float p1, p1, p2
+    cmpg-float p0, p1, p0
 
-    if-gtz p1, :cond_0
+    if-gtz p0, :cond_0
 
     goto :goto_0
 
@@ -101,9 +101,9 @@
 
     :cond_1
     :goto_0
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_2
     return v0
@@ -152,36 +152,36 @@
 
     int-to-float p1, p1
 
-    iget v3, p0, Lcom/google/zxing/qrcode/detector/FinderPattern;->estimatedModuleSize:F
+    iget p0, p0, Lcom/google/zxing/qrcode/detector/FinderPattern;->estimatedModuleSize:F
 
-    mul-float/2addr p1, v3
+    mul-float/2addr p1, p0
 
     add-float/2addr p1, p3
 
     div-float/2addr p1, p2
 
     .line 73
-    new-instance p2, Lcom/google/zxing/qrcode/detector/FinderPattern;
+    new-instance p0, Lcom/google/zxing/qrcode/detector/FinderPattern;
 
-    invoke-direct {p2, v0, v2, p1, v1}, Lcom/google/zxing/qrcode/detector/FinderPattern;-><init>(FFFI)V
+    invoke-direct {p0, v0, v2, p1, v1}, Lcom/google/zxing/qrcode/detector/FinderPattern;-><init>(FFFI)V
 
-    return-object p2
+    return-object p0
 .end method
 
 .method public getCount()I
-    .locals 1
+    .locals 0
 
     .line 48
-    iget v0, p0, Lcom/google/zxing/qrcode/detector/FinderPattern;->count:I
+    iget p0, p0, Lcom/google/zxing/qrcode/detector/FinderPattern;->count:I
 
-    return v0
+    return p0
 .end method
 
 .method public getEstimatedModuleSize()F
-    .locals 1
+    .locals 0
 
     .line 44
-    iget v0, p0, Lcom/google/zxing/qrcode/detector/FinderPattern;->estimatedModuleSize:F
+    iget p0, p0, Lcom/google/zxing/qrcode/detector/FinderPattern;->estimatedModuleSize:F
 
-    return v0
+    return p0
 .end method

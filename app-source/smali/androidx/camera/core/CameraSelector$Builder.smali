@@ -32,10 +32,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 242
+    .line 309
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 243
+    .line 310
     new-instance v0, Ljava/util/LinkedHashSet;
 
     invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
@@ -56,10 +56,10 @@
         }
     .end annotation
 
-    .line 246
+    .line 313
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 247
+    .line 314
     new-instance v0, Ljava/util/LinkedHashSet;
 
     invoke-direct {v0, p1}, Ljava/util/LinkedHashSet;-><init>(Ljava/util/Collection;)V
@@ -72,10 +72,10 @@
 .method public static fromSelector(Landroidx/camera/core/CameraSelector;)Landroidx/camera/core/CameraSelector$Builder;
     .locals 1
 
-    .line 299
+    .line 363
     new-instance v0, Landroidx/camera/core/CameraSelector$Builder;
 
-    .line 300
+    .line 364
     invoke-virtual {p0}, Landroidx/camera/core/CameraSelector;->getCameraFilterSet()Ljava/util/LinkedHashSet;
 
     move-result-object p0
@@ -90,7 +90,7 @@
 .method public addCameraFilter(Landroidx/camera/core/CameraFilter;)Landroidx/camera/core/CameraSelector$Builder;
     .locals 1
 
-    .line 286
+    .line 351
     iget-object v0, p0, Landroidx/camera/core/CameraSelector$Builder;->mCameraFilterSet:Ljava/util/LinkedHashSet;
 
     invoke-virtual {v0, p1}, Ljava/util/LinkedHashSet;->add(Ljava/lang/Object;)Z
@@ -99,16 +99,16 @@
 .end method
 
 .method public build()Landroidx/camera/core/CameraSelector;
-    .locals 3
+    .locals 2
 
-    .line 341
+    .line 403
     new-instance v0, Landroidx/camera/core/CameraSelector;
 
     iget-object v1, p0, Landroidx/camera/core/CameraSelector$Builder;->mCameraFilterSet:Ljava/util/LinkedHashSet;
 
-    iget-object v2, p0, Landroidx/camera/core/CameraSelector$Builder;->mPhysicalCameraId:Ljava/lang/String;
+    iget-object p0, p0, Landroidx/camera/core/CameraSelector$Builder;->mPhysicalCameraId:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2}, Landroidx/camera/core/CameraSelector;-><init>(Ljava/util/LinkedHashSet;Ljava/lang/String;)V
+    invoke-direct {v0, v1, p0}, Landroidx/camera/core/CameraSelector;-><init>(Ljava/util/LinkedHashSet;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -127,13 +127,13 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 267
+    .line 333
     :goto_0
     const-string v1, "The specified lens facing is invalid."
 
     invoke-static {v0, v1}, Landroidx/core/util/Preconditions;->checkState(ZLjava/lang/String;)V
 
-    .line 269
+    .line 335
     iget-object v0, p0, Landroidx/camera/core/CameraSelector$Builder;->mCameraFilterSet:Ljava/util/LinkedHashSet;
 
     new-instance v1, Landroidx/camera/core/impl/LensFacingCameraFilter;
@@ -148,7 +148,7 @@
 .method public setPhysicalCameraId(Ljava/lang/String;)Landroidx/camera/core/CameraSelector$Builder;
     .locals 0
 
-    .line 334
+    .line 397
     iput-object p1, p0, Landroidx/camera/core/CameraSelector$Builder;->mPhysicalCameraId:Ljava/lang/String;
 
     return-object p0

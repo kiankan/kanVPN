@@ -102,6 +102,16 @@
     .end annotation
 .end method
 
+.method public abstract setStreamUseCase(Landroidx/camera/core/impl/StreamUseCase;)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/camera/core/impl/StreamUseCase;",
+            ")TB;"
+        }
+    .end annotation
+.end method
+
 .method public abstract setSurfaceOccupancyPriority(I)Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {

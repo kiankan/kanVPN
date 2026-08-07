@@ -19,19 +19,19 @@
 .end method
 
 .method public getDefaultTargetResolution()Landroid/util/Size;
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getTargetCoordinateSystem()I
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public updateTransform(Landroid/graphics/Matrix;)V

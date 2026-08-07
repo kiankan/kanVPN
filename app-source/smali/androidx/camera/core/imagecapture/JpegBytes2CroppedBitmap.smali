@@ -24,14 +24,14 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 38
+    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 .method private createCroppedBitmap([BLandroid/graphics/Rect;)Landroid/graphics/Bitmap;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroidx/camera/core/ImageCaptureException;
@@ -40,40 +40,40 @@
 
     .line 60
     :try_start_0
-    array-length v0, p1
+    array-length p0, p1
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    invoke-static {p1, v1, v0, v1}, Landroid/graphics/BitmapRegionDecoder;->newInstance([BIIZ)Landroid/graphics/BitmapRegionDecoder;
+    invoke-static {p1, v0, p0, v0}, Landroid/graphics/BitmapRegionDecoder;->newInstance([BIIZ)Landroid/graphics/BitmapRegionDecoder;
 
-    move-result-object p1
+    move-result-object p0
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 65
-    new-instance v0, Landroid/graphics/BitmapFactory$Options;
+    new-instance p1, Landroid/graphics/BitmapFactory$Options;
 
-    invoke-direct {v0}, Landroid/graphics/BitmapFactory$Options;-><init>()V
+    invoke-direct {p1}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    invoke-virtual {p1, p2, v0}, Landroid/graphics/BitmapRegionDecoder;->decodeRegion(Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+    invoke-virtual {p0, p2, p1}, Landroid/graphics/BitmapRegionDecoder;->decodeRegion(Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     :catch_0
-    move-exception p1
+    move-exception p0
 
     .line 63
-    new-instance p2, Landroidx/camera/core/ImageCaptureException;
+    new-instance p1, Landroidx/camera/core/ImageCaptureException;
 
-    const/4 v0, 0x1
+    const/4 p2, 0x1
 
-    const-string v1, "Failed to decode JPEG."
+    const-string v0, "Failed to decode JPEG."
 
-    invoke-direct {p2, v0, v1, p1}, Landroidx/camera/core/ImageCaptureException;-><init>(ILjava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {p1, p2, v0, p0}, Landroidx/camera/core/ImageCaptureException;-><init>(ILjava/lang/String;Ljava/lang/Throwable;)V
 
-    throw p2
+    throw p1
 .end method
 
 
@@ -97,12 +97,12 @@
         }
     .end annotation
 
-    .line 43
+    .line 44
     invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getCropRect()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 44
+    .line 45
     invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getData()Ljava/lang/Object;
 
     move-result-object v1
@@ -113,59 +113,59 @@
 
     move-result-object v2
 
-    .line 47
+    .line 48
     invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getExif()Landroidx/camera/core/impl/utils/Exif;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object p0
 
-    move-object v3, v1
+    move-object v3, p0
 
     check-cast v3, Landroidx/camera/core/impl/utils/Exif;
 
     new-instance v4, Landroid/graphics/Rect;
 
-    .line 48
+    .line 49
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
-    move-result v1
+    move-result p0
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
 
-    move-result v5
+    move-result v1
 
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
-    invoke-direct {v4, v6, v6, v1, v5}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-direct {v4, v5, v5, p0, v1}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 49
+    .line 50
     invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getRotationDegrees()I
 
     move-result v5
 
-    .line 50
+    .line 51
     invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getSensorToBufferTransform()Landroid/graphics/Matrix;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-static {v1, v0}, Landroidx/camera/core/impl/utils/TransformUtils;->updateSensorToBufferTransform(Landroid/graphics/Matrix;Landroid/graphics/Rect;)Landroid/graphics/Matrix;
+    invoke-static {p0, v0}, Landroidx/camera/core/impl/utils/TransformUtils;->updateSensorToBufferTransform(Landroid/graphics/Matrix;Landroid/graphics/Rect;)Landroid/graphics/Matrix;
 
     move-result-object v6
 
-    .line 51
+    .line 52
     invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getCameraCaptureResult()Landroidx/camera/core/impl/CameraCaptureResult;
 
     move-result-object v7
 
-    .line 45
+    .line 46
     invoke-static/range {v2 .. v7}, Landroidx/camera/core/processing/Packet;->of(Landroid/graphics/Bitmap;Landroidx/camera/core/impl/utils/Exif;Landroid/graphics/Rect;ILandroid/graphics/Matrix;Landroidx/camera/core/impl/CameraCaptureResult;)Landroidx/camera/core/processing/Packet;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
@@ -185,12 +185,12 @@
         }
     .end annotation
 
-    .line 38
+    .line 39
     check-cast p1, Landroidx/camera/core/processing/Packet;
 
     invoke-virtual {p0, p1}, Landroidx/camera/core/imagecapture/JpegBytes2CroppedBitmap;->apply(Landroidx/camera/core/processing/Packet;)Landroidx/camera/core/processing/Packet;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

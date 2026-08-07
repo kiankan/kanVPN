@@ -1,0 +1,336 @@
+.class final Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener$handleUnaryTask$1;
+.super Lkotlin/coroutines/jvm/internal/SuspendLambda;
+.source "DialerNativeService.kt"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function2;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener;->handleUnaryTask(Lokhttp3/WebSocket;Lcom/v2ray/ang/service/DialerNativeService$BrowserDialerTask;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/coroutines/jvm/internal/SuspendLambda;",
+        "Lkotlin/jvm/functions/Function2<",
+        "Lkotlinx/coroutines/CoroutineScope;",
+        "Lkotlin/coroutines/Continuation<",
+        "-",
+        "Lkotlin/Unit;",
+        ">;",
+        "Ljava/lang/Object;",
+        ">;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\n\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\u0010\u0000\u001a\u00020\u0001*\u00020\u0002H\n"
+    }
+    d2 = {
+        "<anonymous>",
+        "",
+        "Lkotlinx/coroutines/CoroutineScope;"
+    }
+    k = 0x3
+    mv = {
+        0x2,
+        0x4,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+.annotation runtime Lkotlin/coroutines/jvm/internal/DebugMetadata;
+    c = "com.v2ray.ang.service.DialerNativeService$ControlSocketListener$handleUnaryTask$1"
+    f = "DialerNativeService.kt"
+    i = {}
+    l = {
+        0x260
+    }
+    m = "invokeSuspend"
+    n = {}
+    nl = {
+        0x261
+    }
+    s = {}
+    v = 0x2
+.end annotation
+
+
+# instance fields
+.field final synthetic $controlSocket:Lokhttp3/WebSocket;
+
+.field final synthetic $done:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field final synthetic $task:Lcom/v2ray/ang/service/DialerNativeService$BrowserDialerTask;
+
+.field label:I
+
+.field final synthetic this$0:Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener;
+
+.field final synthetic this$1:Lcom/v2ray/ang/service/DialerNativeService;
+
+
+# direct methods
+.method constructor <init>(Ljava/util/concurrent/atomic/AtomicBoolean;Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener;Lcom/v2ray/ang/service/DialerNativeService;Lcom/v2ray/ang/service/DialerNativeService$BrowserDialerTask;Lokhttp3/WebSocket;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/concurrent/atomic/AtomicBoolean;",
+            "Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener;",
+            "Lcom/v2ray/ang/service/DialerNativeService;",
+            "Lcom/v2ray/ang/service/DialerNativeService$BrowserDialerTask;",
+            "Lokhttp3/WebSocket;",
+            "Lkotlin/coroutines/Continuation<",
+            "-",
+            "Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener$handleUnaryTask$1;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener$handleUnaryTask$1;->$done:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    iput-object p2, p0, Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener$handleUnaryTask$1;->this$0:Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener;
+
+    iput-object p3, p0, Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener$handleUnaryTask$1;->this$1:Lcom/v2ray/ang/service/DialerNativeService;
+
+    iput-object p4, p0, Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener$handleUnaryTask$1;->$task:Lcom/v2ray/ang/service/DialerNativeService$BrowserDialerTask;
+
+    iput-object p5, p0, Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener$handleUnaryTask$1;->$controlSocket:Lokhttp3/WebSocket;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p6}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final create(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Object;",
+            "Lkotlin/coroutines/Continuation<",
+            "*>;)",
+            "Lkotlin/coroutines/Continuation<",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance v0, Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener$handleUnaryTask$1;
+
+    iget-object v1, p0, Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener$handleUnaryTask$1;->$done:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    iget-object v2, p0, Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener$handleUnaryTask$1;->this$0:Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener;
+
+    iget-object v3, p0, Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener$handleUnaryTask$1;->this$1:Lcom/v2ray/ang/service/DialerNativeService;
+
+    iget-object v4, p0, Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener$handleUnaryTask$1;->$task:Lcom/v2ray/ang/service/DialerNativeService$BrowserDialerTask;
+
+    iget-object v5, p0, Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener$handleUnaryTask$1;->$controlSocket:Lokhttp3/WebSocket;
+
+    move-object v6, p2
+
+    invoke-direct/range {v0 .. v6}, Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener$handleUnaryTask$1;-><init>(Ljava/util/concurrent/atomic/AtomicBoolean;Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener;Lcom/v2ray/ang/service/DialerNativeService;Lcom/v2ray/ang/service/DialerNativeService$BrowserDialerTask;Lokhttp3/WebSocket;Lkotlin/coroutines/Continuation;)V
+
+    check-cast v0, Lkotlin/coroutines/Continuation;
+
+    return-object v0
+.end method
+
+.method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lkotlinx/coroutines/CoroutineScope;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener$handleUnaryTask$1;->invoke(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final invoke(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlinx/coroutines/CoroutineScope;",
+            "Lkotlin/coroutines/Continuation<",
+            "-",
+            "Lkotlin/Unit;",
+            ">;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1, p2}, Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener$handleUnaryTask$1;->create(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener$handleUnaryTask$1;
+
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    invoke-virtual {p0, p1}, Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener$handleUnaryTask$1;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
+
+    move-result-object v0
+
+    .line 607
+    iget v1, p0, Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener$handleUnaryTask$1;->label:I
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_1
+
+    if-ne v1, v2, :cond_0
+
+    invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+
+    .line 608
+    move-object p1, p0
+
+    check-cast p1, Lkotlin/coroutines/Continuation;
+
+    iput v2, p0, Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener$handleUnaryTask$1;->label:I
+
+    const-wide/16 v3, 0x3a98
+
+    invoke-static {v3, v4, p1}, Lkotlinx/coroutines/DelayKt;->delay(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    .line 609
+    :cond_2
+    :goto_0
+    iget-object p1, p0, Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener$handleUnaryTask$1;->$done:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    .line 610
+    iget-object p1, p0, Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener$handleUnaryTask$1;->this$0:Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0}, Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener;->access$setBinaryHandler$p(Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener;Lkotlin/jvm/functions/Function1;)V
+
+    .line 611
+    iget-object p1, p0, Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener$handleUnaryTask$1;->this$0:Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener;
+
+    invoke-static {p1, v0}, Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener;->access$setTextHandler$p(Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener;Lkotlin/jvm/functions/Function1;)V
+
+    .line 612
+    iget-object p1, p0, Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener$handleUnaryTask$1;->this$1:Lcom/v2ray/ang/service/DialerNativeService;
+
+    iget-object v1, p0, Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener$handleUnaryTask$1;->this$0:Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener;
+
+    invoke-static {v1}, Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener;->access$getSocketId$p(Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener;)J
+
+    move-result-wide v1
+
+    iget-object v3, p0, Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener$handleUnaryTask$1;->$task:Lcom/v2ray/ang/service/DialerNativeService$BrowserDialerTask;
+
+    invoke-virtual {v3}, Lcom/v2ray/ang/service/DialerNativeService$BrowserDialerTask;->getMethod()Ljava/lang/String;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener$handleUnaryTask$1;->$task:Lcom/v2ray/ang/service/DialerNativeService$BrowserDialerTask;
+
+    invoke-virtual {v4}, Lcom/v2ray/ang/service/DialerNativeService$BrowserDialerTask;->getUrl()Ljava/lang/String;
+
+    move-result-object v4
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string v6, "BrowserDialer: unary task timed out waiting for payload socketId="
+
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, " method="
+
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " url="
+
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x2
+
+    invoke-static {p1, v1, v0, v2, v0}, Lcom/v2ray/ang/service/DialerNativeService;->debug$default(Lcom/v2ray/ang/service/DialerNativeService;Ljava/lang/String;Ljava/lang/Throwable;ILjava/lang/Object;)V
+
+    .line 613
+    iget-object p1, p0, Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener$handleUnaryTask$1;->this$0:Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener;
+
+    iget-object p0, p0, Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener$handleUnaryTask$1;->$controlSocket:Lokhttp3/WebSocket;
+
+    const/16 v0, 0x3e8
+
+    const-string/jumbo v1, "unary payload timeout"
+
+    invoke-static {p1, p0, v0, v1}, Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener;->access$failAndClose(Lcom/v2ray/ang/service/DialerNativeService$ControlSocketListener;Lokhttp3/WebSocket;ILjava/lang/String;)V
+
+    .line 615
+    :cond_3
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    return-object p0
+.end method

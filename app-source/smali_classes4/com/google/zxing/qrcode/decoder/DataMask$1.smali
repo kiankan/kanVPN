@@ -43,16 +43,16 @@
 
     add-int/2addr p1, p2
 
-    const/4 p2, 0x1
+    const/4 p0, 0x1
 
-    and-int/2addr p1, p2
+    and-int/2addr p1, p0
 
     if-nez p1, :cond_0
 
-    return p2
+    return p0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method

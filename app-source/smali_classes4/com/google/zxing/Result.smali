@@ -173,34 +173,34 @@
 .end method
 
 .method public getBarcodeFormat()Lcom/google/zxing/BarcodeFormat;
-    .locals 1
+    .locals 0
 
     .line 103
-    iget-object v0, p0, Lcom/google/zxing/Result;->format:Lcom/google/zxing/BarcodeFormat;
+    iget-object p0, p0, Lcom/google/zxing/Result;->format:Lcom/google/zxing/BarcodeFormat;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getNumBits()I
-    .locals 1
+    .locals 0
 
     .line 87
-    iget v0, p0, Lcom/google/zxing/Result;->numBits:I
+    iget p0, p0, Lcom/google/zxing/Result;->numBits:I
 
-    return v0
+    return p0
 .end method
 
 .method public getRawBytes()[B
-    .locals 1
+    .locals 0
 
     .line 79
-    iget-object v0, p0, Lcom/google/zxing/Result;->rawBytes:[B
+    iget-object p0, p0, Lcom/google/zxing/Result;->rawBytes:[B
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getResultMetadata()Ljava/util/Map;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -212,27 +212,27 @@
     .end annotation
 
     .line 112
-    iget-object v0, p0, Lcom/google/zxing/Result;->resultMetadata:Ljava/util/Map;
+    iget-object p0, p0, Lcom/google/zxing/Result;->resultMetadata:Ljava/util/Map;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getResultPoints()[Lcom/google/zxing/ResultPoint;
-    .locals 1
+    .locals 0
 
     .line 96
-    iget-object v0, p0, Lcom/google/zxing/Result;->resultPoints:[Lcom/google/zxing/ResultPoint;
+    iget-object p0, p0, Lcom/google/zxing/Result;->resultPoints:[Lcom/google/zxing/ResultPoint;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getText()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 72
-    iget-object v0, p0, Lcom/google/zxing/Result;->text:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/Result;->text:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getTimestamp()J
@@ -295,18 +295,18 @@
 
     .line 119
     :cond_0
-    iget-object v0, p0, Lcom/google/zxing/Result;->resultMetadata:Ljava/util/Map;
+    iget-object p0, p0, Lcom/google/zxing/Result;->resultMetadata:Ljava/util/Map;
 
-    invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 150
-    iget-object v0, p0, Lcom/google/zxing/Result;->text:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/Result;->text:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method

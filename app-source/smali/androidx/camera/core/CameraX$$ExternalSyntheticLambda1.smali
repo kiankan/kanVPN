@@ -60,7 +60,7 @@
 
     iget-object v6, p0, Landroidx/camera/core/CameraX$$ExternalSyntheticLambda1;->f$5:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
 
-    invoke-virtual/range {v0 .. v6}, Landroidx/camera/core/CameraX;->lambda$initAndRetryRecursively$1$androidx-camera-core-CameraX(Ljava/util/concurrent/Executor;JILandroid/content/Context;Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;)V
+    invoke-virtual/range {v0 .. v6}, Landroidx/camera/core/CameraX;->lambda$initAndRetryRecursively$2$androidx-camera-core-CameraX(Ljava/util/concurrent/Executor;JILandroid/content/Context;Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;)V
 
     return-void
 .end method

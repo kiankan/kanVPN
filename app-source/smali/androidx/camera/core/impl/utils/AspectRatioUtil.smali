@@ -27,7 +27,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 36
+    .line 37
     new-instance v0, Landroid/util/Rational;
 
     const/4 v1, 0x4
@@ -38,14 +38,14 @@
 
     sput-object v0, Landroidx/camera/core/impl/utils/AspectRatioUtil;->ASPECT_RATIO_4_3:Landroid/util/Rational;
 
-    .line 37
+    .line 38
     new-instance v0, Landroid/util/Rational;
 
     invoke-direct {v0, v2, v1}, Landroid/util/Rational;-><init>(II)V
 
     sput-object v0, Landroidx/camera/core/impl/utils/AspectRatioUtil;->ASPECT_RATIO_3_4:Landroid/util/Rational;
 
-    .line 38
+    .line 39
     new-instance v0, Landroid/util/Rational;
 
     const/16 v1, 0x10
@@ -56,7 +56,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/utils/AspectRatioUtil;->ASPECT_RATIO_16_9:Landroid/util/Rational;
 
-    .line 39
+    .line 40
     new-instance v0, Landroid/util/Rational;
 
     invoke-direct {v0, v2, v1}, Landroid/util/Rational;-><init>(II)V
@@ -69,7 +69,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 43
+    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -78,7 +78,7 @@
 .method public static hasMatchingAspectRatio(Landroid/util/Size;Landroid/util/Rational;)Z
     .locals 1
 
-    .line 57
+    .line 58
     sget-object v0, Landroidx/camera/core/internal/utils/SizeUtil;->RESOLUTION_VGA:Landroid/util/Size;
 
     invoke-static {p0, p1, v0}, Landroidx/camera/core/impl/utils/AspectRatioUtil;->hasMatchingAspectRatio(Landroid/util/Size;Landroid/util/Rational;Landroid/util/Size;)Z
@@ -97,11 +97,11 @@
 
     return v0
 
-    .line 71
+    .line 72
     :cond_0
     new-instance v1, Landroid/util/Rational;
 
-    .line 72
+    .line 73
     invoke-virtual {p0}, Landroid/util/Size;->getWidth()I
 
     move-result v2
@@ -112,7 +112,7 @@
 
     invoke-direct {v1, v2, v3}, Landroid/util/Rational;-><init>(II)V
 
-    .line 71
+    .line 72
     invoke-virtual {p1, v1}, Landroid/util/Rational;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -123,7 +123,7 @@
 
     return p0
 
-    .line 74
+    .line 75
     :cond_1
     invoke-static {p0}, Landroidx/camera/core/internal/utils/SizeUtil;->getArea(Landroid/util/Size;)I
 
@@ -135,7 +135,7 @@
 
     if-lt v1, p2, :cond_2
 
-    .line 75
+    .line 76
     invoke-static {p0, p1}, Landroidx/camera/core/impl/utils/AspectRatioUtil;->isPossibleMod16FromAspectRatio(Landroid/util/Size;Landroid/util/Rational;)Z
 
     move-result p0
@@ -149,31 +149,31 @@
 .method private static isPossibleMod16FromAspectRatio(Landroid/util/Size;Landroid/util/Rational;)Z
     .locals 5
 
-    .line 92
+    .line 93
     invoke-virtual {p0}, Landroid/util/Size;->getWidth()I
 
     move-result v0
 
-    .line 93
+    .line 94
     invoke-virtual {p0}, Landroid/util/Size;->getHeight()I
 
     move-result p0
 
-    .line 95
+    .line 96
     new-instance v1, Landroid/util/Rational;
 
     invoke-virtual {p1}, Landroid/util/Rational;->getDenominator()I
 
     move-result v2
 
-    .line 96
+    .line 97
     invoke-virtual {p1}, Landroid/util/Rational;->getNumerator()I
 
     move-result v3
 
     invoke-direct {v1, v2, v3}, Landroid/util/Rational;-><init>(II)V
 
-    .line 97
+    .line 98
     rem-int/lit8 v2, v0, 0x10
 
     const/4 v3, 0x0
@@ -186,7 +186,7 @@
 
     add-int/lit8 v2, p0, -0x10
 
-    .line 98
+    .line 99
     invoke-static {v3, v2}, Ljava/lang/Math;->max(II)I
 
     move-result v2
@@ -199,7 +199,7 @@
 
     add-int/lit8 v0, v0, -0x10
 
-    .line 99
+    .line 100
     invoke-static {v3, v0}, Ljava/lang/Math;->max(II)I
 
     move-result p1
@@ -224,20 +224,20 @@
     :cond_2
     if-nez v2, :cond_3
 
-    .line 102
+    .line 103
     invoke-static {p0, v0, p1}, Landroidx/camera/core/impl/utils/AspectRatioUtil;->ratioIntersectsMod16Segment(IILandroid/util/Rational;)Z
 
     move-result p0
 
     return p0
 
-    .line 103
+    .line 104
     :cond_3
     rem-int/lit8 p1, p0, 0x10
 
     if-nez p1, :cond_4
 
-    .line 104
+    .line 105
     invoke-static {v0, p0, v1}, Landroidx/camera/core/impl/utils/AspectRatioUtil;->ratioIntersectsMod16Segment(IILandroid/util/Rational;)Z
 
     move-result p0
@@ -251,7 +251,7 @@
 .method private static ratioIntersectsMod16Segment(IILandroid/util/Rational;)Z
     .locals 7
 
-    .line 111
+    .line 112
     rem-int/lit8 v0, p1, 0x10
 
     const/4 v1, 0x1
@@ -270,7 +270,7 @@
     :goto_0
     invoke-static {v0}, Landroidx/core/util/Preconditions;->checkArgument(Z)V
 
-    .line 113
+    .line 114
     invoke-virtual {p2}, Landroid/util/Rational;->getNumerator()I
 
     move-result v0
@@ -289,7 +289,7 @@
 
     add-int/lit8 p0, p1, -0x10
 
-    .line 114
+    .line 115
     invoke-static {v2, p0}, Ljava/lang/Math;->max(II)I
 
     move-result p0

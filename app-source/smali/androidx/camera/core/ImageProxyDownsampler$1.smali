@@ -58,28 +58,28 @@
 
 # virtual methods
 .method public getBuffer()Ljava/nio/ByteBuffer;
-    .locals 1
+    .locals 0
 
-    .line 208
-    iget-object v0, p0, Landroidx/camera/core/ImageProxyDownsampler$1;->mBuffer:Ljava/nio/ByteBuffer;
+    .line 207
+    iget-object p0, p0, Landroidx/camera/core/ImageProxyDownsampler$1;->mBuffer:Ljava/nio/ByteBuffer;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getPixelStride()I
-    .locals 1
+    .locals 0
 
     .line 202
-    iget v0, p0, Landroidx/camera/core/ImageProxyDownsampler$1;->val$pixelStride:I
+    iget p0, p0, Landroidx/camera/core/ImageProxyDownsampler$1;->val$pixelStride:I
 
-    return v0
+    return p0
 .end method
 
 .method public getRowStride()I
-    .locals 1
+    .locals 0
 
     .line 197
-    iget v0, p0, Landroidx/camera/core/ImageProxyDownsampler$1;->val$rowStride:I
+    iget p0, p0, Landroidx/camera/core/ImageProxyDownsampler$1;->val$rowStride:I
 
-    return v0
+    return p0
 .end method

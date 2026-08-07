@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static final CAMERAX_USER_TAG_PREFIX:Ljava/lang/String; = "android.hardware.camera2.CaptureRequest.setTag.CX"
+.field public static final CAMERAX_USER_TAG_PREFIX:Ljava/lang/String; = "android.hardware.camera2.CaptureRequest.setTag.CX"
 
 .field private static final EMPTY_TAGBUNDLE:Landroidx/camera/core/impl/TagBundle;
 
@@ -76,12 +76,12 @@
         }
     .end annotation
 
-    .line 62
+    .line 60
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 63
+    .line 61
     iget-object v1, p0, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/String;
@@ -90,7 +90,7 @@
 
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 64
+    .line 62
     new-instance p0, Landroidx/camera/core/impl/TagBundle;
 
     invoke-direct {p0, v0}, Landroidx/camera/core/impl/TagBundle;-><init>(Ljava/util/Map;)V
@@ -101,7 +101,7 @@
 .method public static emptyBundle()Landroidx/camera/core/impl/TagBundle;
     .locals 1
 
-    .line 52
+    .line 51
     sget-object v0, Landroidx/camera/core/impl/TagBundle;->EMPTY_TAGBUNDLE:Landroidx/camera/core/impl/TagBundle;
 
     return-object v0
@@ -110,12 +110,12 @@
 .method public static from(Landroidx/camera/core/impl/TagBundle;)Landroidx/camera/core/impl/TagBundle;
     .locals 4
 
-    .line 77
+    .line 74
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 78
+    .line 75
     invoke-virtual {p0}, Landroidx/camera/core/impl/TagBundle;->listKeys()Ljava/util/Set;
 
     move-result-object v1
@@ -137,7 +137,7 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 79
+    .line 76
     invoke-virtual {p0, v2}, Landroidx/camera/core/impl/TagBundle;->getTag(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
@@ -146,7 +146,7 @@
 
     goto :goto_0
 
-    .line 82
+    .line 79
     :cond_0
     new-instance p0, Landroidx/camera/core/impl/TagBundle;
 
@@ -158,20 +158,20 @@
 
 # virtual methods
 .method public getTag(Ljava/lang/String;)Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    .line 93
-    iget-object v0, p0, Landroidx/camera/core/impl/TagBundle;->mTagMap:Ljava/util/Map;
+    .line 89
+    iget-object p0, p0, Landroidx/camera/core/impl/TagBundle;->mTagMap:Ljava/util/Map;
 
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public listKeys()Ljava/util/Set;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -181,21 +181,21 @@
         }
     .end annotation
 
-    .line 104
-    iget-object v0, p0, Landroidx/camera/core/impl/TagBundle;->mTagMap:Ljava/util/Map;
+    .line 99
+    iget-object p0, p0, Landroidx/camera/core/impl/TagBundle;->mTagMap:Ljava/util/Map;
 
-    invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
+    invoke-interface {p0}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    .line 124
-    const-string v0, "android.hardware.camera2.CaptureRequest.setTag.CX"
+    .line 118
+    const-string p0, "android.hardware.camera2.CaptureRequest.setTag.CX"
 
-    return-object v0
+    return-object p0
 .end method

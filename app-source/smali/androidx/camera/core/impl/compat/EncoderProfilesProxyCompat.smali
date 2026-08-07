@@ -11,7 +11,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 63
+    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,14 +20,14 @@
 .method public static from(Landroid/media/CamcorderProfile;)Landroidx/camera/core/impl/EncoderProfilesProxy;
     .locals 2
 
-    .line 54
+    .line 53
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1f
 
     if-lt v0, v1, :cond_0
 
-    .line 55
+    .line 54
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "Should use from(EncoderProfiles) on API "
@@ -50,7 +50,7 @@
 
     invoke-static {v1, v0}, Landroidx/camera/core/Logger;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 59
+    .line 58
     :cond_0
     invoke-static {p0}, Landroidx/camera/core/impl/compat/EncoderProfilesProxyCompatBaseImpl;->from(Landroid/media/CamcorderProfile;)Landroidx/camera/core/impl/EncoderProfilesProxy;
 

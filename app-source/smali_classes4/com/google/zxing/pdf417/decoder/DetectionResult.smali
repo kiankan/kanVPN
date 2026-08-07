@@ -48,17 +48,17 @@
 .end method
 
 .method private adjustIndicatorColumnRowNumbers(Lcom/google/zxing/pdf417/decoder/DetectionResultColumn;)V
-    .locals 1
+    .locals 0
 
     if-eqz p1, :cond_0
 
     .line 56
     check-cast p1, Lcom/google/zxing/pdf417/decoder/DetectionResultRowIndicatorColumn;
 
-    iget-object v0, p0, Lcom/google/zxing/pdf417/decoder/DetectionResult;->barcodeMetadata:Lcom/google/zxing/pdf417/decoder/BarcodeMetadata;
+    iget-object p0, p0, Lcom/google/zxing/pdf417/decoder/DetectionResult;->barcodeMetadata:Lcom/google/zxing/pdf417/decoder/BarcodeMetadata;
 
     .line 57
-    invoke-virtual {p1, v0}, Lcom/google/zxing/pdf417/decoder/DetectionResultRowIndicatorColumn;->adjustCompleteIndicatorColumnRowNumbers(Lcom/google/zxing/pdf417/decoder/BarcodeMetadata;)V
+    invoke-virtual {p1, p0}, Lcom/google/zxing/pdf417/decoder/DetectionResultRowIndicatorColumn;->adjustCompleteIndicatorColumnRowNumbers(Lcom/google/zxing/pdf417/decoder/BarcodeMetadata;)V
 
     :cond_0
     return-void
@@ -221,7 +221,7 @@
 .end method
 
 .method private adjustRowNumbers(II[Lcom/google/zxing/pdf417/decoder/Codeword;)V
-    .locals 10
+    .locals 9
 
     .line 191
     aget-object v0, p3, p2
@@ -238,175 +238,175 @@
     move-result-object v1
 
     .line 194
-    iget-object v2, p0, Lcom/google/zxing/pdf417/decoder/DetectionResult;->detectionResultColumns:[Lcom/google/zxing/pdf417/decoder/DetectionResultColumn;
+    iget-object p0, p0, Lcom/google/zxing/pdf417/decoder/DetectionResult;->detectionResultColumns:[Lcom/google/zxing/pdf417/decoder/DetectionResultColumn;
 
-    const/4 v3, 0x1
+    const/4 v2, 0x1
 
-    add-int/2addr p1, v3
+    add-int/2addr p1, v2
 
-    aget-object p1, v2, p1
+    aget-object p0, p0, p1
 
-    if-eqz p1, :cond_0
+    if-eqz p0, :cond_0
 
     .line 195
-    invoke-virtual {p1}, Lcom/google/zxing/pdf417/decoder/DetectionResultColumn;->getCodewords()[Lcom/google/zxing/pdf417/decoder/Codeword;
+    invoke-virtual {p0}, Lcom/google/zxing/pdf417/decoder/DetectionResultColumn;->getCodewords()[Lcom/google/zxing/pdf417/decoder/Codeword;
 
-    move-result-object p1
+    move-result-object p0
 
     goto :goto_0
 
     :cond_0
-    move-object p1, v1
+    move-object p0, v1
 
     :goto_0
-    const/16 v2, 0xe
+    const/16 p1, 0xe
 
     .line 198
-    new-array v4, v2, [Lcom/google/zxing/pdf417/decoder/Codeword;
+    new-array v3, p1, [Lcom/google/zxing/pdf417/decoder/Codeword;
 
     .line 200
-    aget-object v5, v1, p2
+    aget-object v4, v1, p2
 
-    const/4 v6, 0x2
+    const/4 v5, 0x2
 
-    aput-object v5, v4, v6
+    aput-object v4, v3, v5
 
-    const/4 v5, 0x3
+    const/4 v4, 0x3
 
     .line 201
-    aget-object v7, p1, p2
+    aget-object v6, p0, p2
 
-    aput-object v7, v4, v5
+    aput-object v6, v3, v4
 
-    const/4 v5, 0x0
+    const/4 v4, 0x0
 
     if-lez p2, :cond_1
 
-    add-int/lit8 v7, p2, -0x1
+    add-int/lit8 v6, p2, -0x1
 
     .line 204
-    aget-object v8, p3, v7
+    aget-object v7, p3, v6
 
-    aput-object v8, v4, v5
+    aput-object v7, v3, v4
 
-    const/4 v8, 0x4
+    const/4 v7, 0x4
 
     .line 205
-    aget-object v9, v1, v7
+    aget-object v8, v1, v6
 
-    aput-object v9, v4, v8
+    aput-object v8, v3, v7
 
-    const/4 v8, 0x5
+    const/4 v7, 0x5
 
     .line 206
-    aget-object v7, p1, v7
+    aget-object v6, p0, v6
 
-    aput-object v7, v4, v8
+    aput-object v6, v3, v7
 
     :cond_1
-    if-le p2, v3, :cond_2
+    if-le p2, v2, :cond_2
 
-    add-int/lit8 v7, p2, -0x2
+    add-int/lit8 v6, p2, -0x2
 
     .line 209
-    aget-object v8, p3, v7
+    aget-object v7, p3, v6
 
-    const/16 v9, 0x8
+    const/16 v8, 0x8
 
-    aput-object v8, v4, v9
+    aput-object v7, v3, v8
 
-    const/16 v8, 0xa
+    const/16 v7, 0xa
 
     .line 210
-    aget-object v9, v1, v7
+    aget-object v8, v1, v6
 
-    aput-object v9, v4, v8
+    aput-object v8, v3, v7
 
-    const/16 v8, 0xb
+    const/16 v7, 0xb
 
     .line 211
-    aget-object v7, p1, v7
+    aget-object v6, p0, v6
 
-    aput-object v7, v4, v8
+    aput-object v6, v3, v7
 
     .line 213
     :cond_2
-    array-length v7, p3
+    array-length v6, p3
 
-    sub-int/2addr v7, v3
+    sub-int/2addr v6, v2
 
-    if-ge p2, v7, :cond_3
+    if-ge p2, v6, :cond_3
 
-    add-int/lit8 v7, p2, 0x1
+    add-int/lit8 v6, p2, 0x1
 
     .line 214
-    aget-object v8, p3, v7
+    aget-object v7, p3, v6
 
-    aput-object v8, v4, v3
+    aput-object v7, v3, v2
 
-    const/4 v3, 0x6
+    const/4 v2, 0x6
 
     .line 215
-    aget-object v8, v1, v7
+    aget-object v7, v1, v6
 
-    aput-object v8, v4, v3
+    aput-object v7, v3, v2
 
-    const/4 v3, 0x7
+    const/4 v2, 0x7
 
     .line 216
-    aget-object v7, p1, v7
+    aget-object v6, p0, v6
 
-    aput-object v7, v4, v3
+    aput-object v6, v3, v2
 
     .line 218
     :cond_3
-    array-length v3, p3
+    array-length v2, p3
 
-    sub-int/2addr v3, v6
+    sub-int/2addr v2, v5
 
-    if-ge p2, v3, :cond_4
+    if-ge p2, v2, :cond_4
 
-    add-int/2addr p2, v6
+    add-int/2addr p2, v5
 
     .line 219
     aget-object p3, p3, p2
 
-    const/16 v3, 0x9
+    const/16 v2, 0x9
 
-    aput-object p3, v4, v3
+    aput-object p3, v3, v2
 
     const/16 p3, 0xc
 
     .line 220
     aget-object v1, v1, p2
 
-    aput-object v1, v4, p3
+    aput-object v1, v3, p3
 
     const/16 p3, 0xd
 
     .line 221
-    aget-object p1, p1, p2
+    aget-object p0, p0, p2
 
-    aput-object p1, v4, p3
+    aput-object p0, v3, p3
 
     :cond_4
     :goto_1
-    if-ge v5, v2, :cond_6
+    if-ge v4, p1, :cond_6
 
     .line 223
-    aget-object p1, v4, v5
+    aget-object p0, v3, v4
 
     .line 224
-    invoke-static {v0, p1}, Lcom/google/zxing/pdf417/decoder/DetectionResult;->adjustRowNumber(Lcom/google/zxing/pdf417/decoder/Codeword;Lcom/google/zxing/pdf417/decoder/Codeword;)Z
+    invoke-static {v0, p0}, Lcom/google/zxing/pdf417/decoder/DetectionResult;->adjustRowNumber(Lcom/google/zxing/pdf417/decoder/Codeword;Lcom/google/zxing/pdf417/decoder/Codeword;)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_5
+    if-eqz p0, :cond_5
 
     goto :goto_2
 
     :cond_5
-    add-int/lit8 v5, v5, 0x1
+    add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
@@ -416,7 +416,7 @@
 .end method
 
 .method private adjustRowNumbersByRow()I
-    .locals 2
+    .locals 1
 
     .line 88
     invoke-direct {p0}, Lcom/google/zxing/pdf417/decoder/DetectionResult;->adjustRowNumbersFromBothRI()V
@@ -429,9 +429,9 @@
     .line 94
     invoke-direct {p0}, Lcom/google/zxing/pdf417/decoder/DetectionResult;->adjustRowNumbersFromRRI()I
 
-    move-result v1
+    move-result p0
 
-    add-int/2addr v0, v1
+    add-int/2addr v0, p0
 
     return v0
 .end method
@@ -789,58 +789,58 @@
 
 # virtual methods
 .method getBarcodeColumnCount()I
-    .locals 1
+    .locals 0
 
     .line 245
-    iget v0, p0, Lcom/google/zxing/pdf417/decoder/DetectionResult;->barcodeColumnCount:I
+    iget p0, p0, Lcom/google/zxing/pdf417/decoder/DetectionResult;->barcodeColumnCount:I
 
-    return v0
+    return p0
 .end method
 
 .method getBarcodeECLevel()I
-    .locals 1
+    .locals 0
 
     .line 253
-    iget-object v0, p0, Lcom/google/zxing/pdf417/decoder/DetectionResult;->barcodeMetadata:Lcom/google/zxing/pdf417/decoder/BarcodeMetadata;
+    iget-object p0, p0, Lcom/google/zxing/pdf417/decoder/DetectionResult;->barcodeMetadata:Lcom/google/zxing/pdf417/decoder/BarcodeMetadata;
 
-    invoke-virtual {v0}, Lcom/google/zxing/pdf417/decoder/BarcodeMetadata;->getErrorCorrectionLevel()I
+    invoke-virtual {p0}, Lcom/google/zxing/pdf417/decoder/BarcodeMetadata;->getErrorCorrectionLevel()I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method getBarcodeRowCount()I
-    .locals 1
+    .locals 0
 
     .line 249
-    iget-object v0, p0, Lcom/google/zxing/pdf417/decoder/DetectionResult;->barcodeMetadata:Lcom/google/zxing/pdf417/decoder/BarcodeMetadata;
+    iget-object p0, p0, Lcom/google/zxing/pdf417/decoder/DetectionResult;->barcodeMetadata:Lcom/google/zxing/pdf417/decoder/BarcodeMetadata;
 
-    invoke-virtual {v0}, Lcom/google/zxing/pdf417/decoder/BarcodeMetadata;->getRowCount()I
+    invoke-virtual {p0}, Lcom/google/zxing/pdf417/decoder/BarcodeMetadata;->getRowCount()I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method getBoundingBox()Lcom/google/zxing/pdf417/decoder/BoundingBox;
-    .locals 1
+    .locals 0
 
     .line 261
-    iget-object v0, p0, Lcom/google/zxing/pdf417/decoder/DetectionResult;->boundingBox:Lcom/google/zxing/pdf417/decoder/BoundingBox;
+    iget-object p0, p0, Lcom/google/zxing/pdf417/decoder/DetectionResult;->boundingBox:Lcom/google/zxing/pdf417/decoder/BoundingBox;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method getDetectionResultColumn(I)Lcom/google/zxing/pdf417/decoder/DetectionResultColumn;
-    .locals 1
+    .locals 0
 
     .line 269
-    iget-object v0, p0, Lcom/google/zxing/pdf417/decoder/DetectionResult;->detectionResultColumns:[Lcom/google/zxing/pdf417/decoder/DetectionResultColumn;
+    iget-object p0, p0, Lcom/google/zxing/pdf417/decoder/DetectionResult;->detectionResultColumns:[Lcom/google/zxing/pdf417/decoder/DetectionResultColumn;
 
-    aget-object p1, v0, p1
+    aget-object p0, p0, p1
 
-    return-object p1
+    return-object p0
 .end method
 
 .method getDetectionResultColumns()[Lcom/google/zxing/pdf417/decoder/DetectionResultColumn;
@@ -888,9 +888,9 @@
     .line 51
     :cond_1
     :goto_1
-    iget-object v0, p0, Lcom/google/zxing/pdf417/decoder/DetectionResult;->detectionResultColumns:[Lcom/google/zxing/pdf417/decoder/DetectionResultColumn;
+    iget-object p0, p0, Lcom/google/zxing/pdf417/decoder/DetectionResult;->detectionResultColumns:[Lcom/google/zxing/pdf417/decoder/DetectionResultColumn;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method setBoundingBox(Lcom/google/zxing/pdf417/decoder/BoundingBox;)V
@@ -903,12 +903,12 @@
 .end method
 
 .method setDetectionResultColumn(ILcom/google/zxing/pdf417/decoder/DetectionResultColumn;)V
-    .locals 1
+    .locals 0
 
     .line 265
-    iget-object v0, p0, Lcom/google/zxing/pdf417/decoder/DetectionResult;->detectionResultColumns:[Lcom/google/zxing/pdf417/decoder/DetectionResultColumn;
+    iget-object p0, p0, Lcom/google/zxing/pdf417/decoder/DetectionResult;->detectionResultColumns:[Lcom/google/zxing/pdf417/decoder/DetectionResultColumn;
 
-    aput-object p2, v0, p1
+    aput-object p2, p0, p1
 
     return-void
 .end method
@@ -1057,17 +1057,17 @@
     :cond_4
     invoke-virtual {v0}, Ljava/util/Formatter;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 296
     invoke-virtual {v0}, Ljava/util/Formatter;->close()V
 
-    return-object v1
+    return-object p0
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
     .line 278
     :try_start_2
@@ -1080,8 +1080,8 @@
     :catchall_1
     move-exception v0
 
-    invoke-virtual {v1, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+    invoke-virtual {p0, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
     :goto_3
-    throw v1
+    throw p0
 .end method

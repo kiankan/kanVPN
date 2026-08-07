@@ -1,113 +1,91 @@
 .class public final Landroidx/camera/camera2/Camera2Config;
 .super Ljava/lang/Object;
-.source "Camera2Config.java"
+.source "Camera2Config.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroidx/camera/camera2/Camera2Config$Companion;,
         Landroidx/camera/camera2/Camera2Config$DefaultProvider;
     }
 .end annotation
 
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u000c\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0005\u0018\u0000 \u00052\u00020\u0001:\u0002\u0004\u0005B\t\u0008\u0002\u00a2\u0006\u0004\u0008\u0002\u0010\u0003\u00a8\u0006\u0006"
+    }
+    d2 = {
+        "Landroidx/camera/camera2/Camera2Config;",
+        "",
+        "<init>",
+        "()V",
+        "DefaultProvider",
+        "Companion",
+        "camera-camera2"
+    }
+    k = 0x1
+    mv = {
+        0x2,
+        0x1,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# static fields
+.field public static final Companion:Landroidx/camera/camera2/Camera2Config$Companion;
+
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Landroidx/camera/camera2/Camera2Config$Companion;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Landroidx/camera/camera2/Camera2Config$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    sput-object v0, Landroidx/camera/camera2/Camera2Config;->Companion:Landroidx/camera/camera2/Camera2Config$Companion;
+
+    return-void
+.end method
+
 .method private constructor <init>()V
     .locals 0
 
-    .line 36
+    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static defaultConfig()Landroidx/camera/core/CameraXConfig;
-    .locals 4
+.method public static final defaultConfig()Landroidx/camera/core/CameraXConfig;
+    .locals 1
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
 
-    .line 46
-    new-instance v0, Landroidx/camera/camera2/Camera2Config$$ExternalSyntheticLambda0;
+    sget-object v0, Landroidx/camera/camera2/Camera2Config;->Companion:Landroidx/camera/camera2/Camera2Config$Companion;
 
-    invoke-direct {v0}, Landroidx/camera/camera2/Camera2Config$$ExternalSyntheticLambda0;-><init>()V
-
-    .line 49
-    new-instance v1, Landroidx/camera/camera2/Camera2Config$$ExternalSyntheticLambda1;
-
-    invoke-direct {v1}, Landroidx/camera/camera2/Camera2Config$$ExternalSyntheticLambda1;-><init>()V
-
-    .line 60
-    new-instance v2, Landroidx/camera/camera2/Camera2Config$$ExternalSyntheticLambda2;
-
-    invoke-direct {v2}, Landroidx/camera/camera2/Camera2Config$$ExternalSyntheticLambda2;-><init>()V
-
-    .line 63
-    new-instance v3, Landroidx/camera/core/CameraXConfig$Builder;
-
-    invoke-direct {v3}, Landroidx/camera/core/CameraXConfig$Builder;-><init>()V
-
-    .line 65
-    invoke-virtual {v3, v0}, Landroidx/camera/core/CameraXConfig$Builder;->setCameraFactoryProvider(Landroidx/camera/core/impl/CameraFactory$Provider;)Landroidx/camera/core/CameraXConfig$Builder;
-
-    move-result-object v0
-
-    .line 66
-    invoke-virtual {v0, v1}, Landroidx/camera/core/CameraXConfig$Builder;->setDeviceSurfaceManagerProvider(Landroidx/camera/core/impl/CameraDeviceSurfaceManager$Provider;)Landroidx/camera/core/CameraXConfig$Builder;
-
-    move-result-object v0
-
-    .line 67
-    invoke-virtual {v0, v2}, Landroidx/camera/core/CameraXConfig$Builder;->setUseCaseConfigFactoryProvider(Landroidx/camera/core/impl/UseCaseConfigFactory$Provider;)Landroidx/camera/core/CameraXConfig$Builder;
-
-    move-result-object v0
-
-    .line 69
-    invoke-virtual {v0}, Landroidx/camera/core/CameraXConfig$Builder;->build()Landroidx/camera/core/CameraXConfig;
+    invoke-virtual {v0}, Landroidx/camera/camera2/Camera2Config$Companion;->defaultConfig()Landroidx/camera/core/CameraXConfig;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic lambda$defaultConfig$0(Landroid/content/Context;Ljava/lang/Object;Ljava/util/Set;)Landroidx/camera/core/impl/CameraDeviceSurfaceManager;
+.method public static final from(Landroidx/camera/camera2/pipe/CameraPipe;Landroid/content/Context;Landroidx/camera/core/impl/CameraThreadConfig;)Landroidx/camera/core/CameraXConfig;
     .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroidx/camera/core/InitializationException;
-        }
+    .annotation runtime Lkotlin/jvm/JvmStatic;
     .end annotation
 
-    .line 52
-    :try_start_0
-    new-instance v0, Landroidx/camera/camera2/internal/Camera2DeviceSurfaceManager;
+    sget-object v0, Landroidx/camera/camera2/Camera2Config;->Companion:Landroidx/camera/camera2/Camera2Config$Companion;
 
-    invoke-direct {v0, p0, p1, p2}, Landroidx/camera/camera2/internal/Camera2DeviceSurfaceManager;-><init>(Landroid/content/Context;Ljava/lang/Object;Ljava/util/Set;)V
-    :try_end_0
-    .catch Landroidx/camera/core/CameraUnavailableException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v0, p0, p1, p2}, Landroidx/camera/camera2/Camera2Config$Companion;->from(Landroidx/camera/camera2/pipe/CameraPipe;Landroid/content/Context;Landroidx/camera/core/impl/CameraThreadConfig;)Landroidx/camera/core/CameraXConfig;
 
-    return-object v0
+    move-result-object p0
 
-    :catch_0
-    move-exception p0
-
-    .line 55
-    new-instance p1, Landroidx/camera/core/InitializationException;
-
-    invoke-direct {p1, p0}, Landroidx/camera/core/InitializationException;-><init>(Ljava/lang/Throwable;)V
-
-    throw p1
-.end method
-
-.method static synthetic lambda$defaultConfig$1(Landroid/content/Context;)Landroidx/camera/core/impl/UseCaseConfigFactory;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroidx/camera/core/InitializationException;
-        }
-    .end annotation
-
-    .line 61
-    new-instance v0, Landroidx/camera/camera2/internal/Camera2UseCaseConfigFactory;
-
-    invoke-direct {v0, p0}, Landroidx/camera/camera2/internal/Camera2UseCaseConfigFactory;-><init>(Landroid/content/Context;)V
-
-    return-object v0
+    return-object p0
 .end method

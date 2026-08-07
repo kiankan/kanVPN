@@ -4,6 +4,27 @@
 
 
 # direct methods
+.method static synthetic lambda$lastDayOfMonth$2(Lj$/time/temporal/Temporal;)Lj$/time/temporal/Temporal;
+    .locals 3
+
+    .line 189
+    sget-object v0, Lj$/time/temporal/ChronoField;->DAY_OF_MONTH:Lj$/time/temporal/ChronoField;
+
+    invoke-interface {p0, v0}, Lj$/time/temporal/TemporalAccessor;->range(Lj$/time/temporal/TemporalField;)Lj$/time/temporal/ValueRange;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lj$/time/temporal/ValueRange;->getMaximum()J
+
+    move-result-wide v1
+
+    invoke-interface {p0, v0, v1, v2}, Lj$/time/temporal/Temporal;->with(Lj$/time/temporal/TemporalField;J)Lj$/time/temporal/Temporal;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method static synthetic lambda$nextOrSame$10(ILj$/time/temporal/Temporal;)Lj$/time/temporal/Temporal;
     .locals 2
 
@@ -88,6 +109,17 @@
     return-object p0
 .end method
 
+.method public static lastDayOfMonth()Lj$/time/temporal/TemporalAdjuster;
+    .locals 1
+
+    .line 189
+    new-instance v0, Lj$/time/temporal/TemporalAdjusters$9;
+
+    invoke-direct {v0}, Lj$/time/temporal/TemporalAdjusters$9;-><init>()V
+
+    return-object v0
+.end method
+
 .method public static nextOrSame(Lj$/time/DayOfWeek;)Lj$/time/temporal/TemporalAdjuster;
     .locals 1
 
@@ -97,9 +129,9 @@
     move-result p0
 
     .line 414
-    new-instance v0, Lj$/time/temporal/TemporalAdjusters$$ExternalSyntheticLambda6;
+    new-instance v0, Lj$/time/temporal/TemporalAdjusters$6;
 
-    invoke-direct {v0, p0}, Lj$/time/temporal/TemporalAdjusters$$ExternalSyntheticLambda6;-><init>(I)V
+    invoke-direct {v0, p0}, Lj$/time/temporal/TemporalAdjusters$6;-><init>(I)V
 
     return-object v0
 .end method
@@ -113,9 +145,9 @@
     move-result p0
 
     .line 468
-    new-instance v0, Lj$/time/temporal/TemporalAdjusters$$ExternalSyntheticLambda8;
+    new-instance v0, Lj$/time/temporal/TemporalAdjusters$8;
 
-    invoke-direct {v0, p0}, Lj$/time/temporal/TemporalAdjusters$$ExternalSyntheticLambda8;-><init>(I)V
+    invoke-direct {v0, p0}, Lj$/time/temporal/TemporalAdjusters$8;-><init>(I)V
 
     return-object v0
 .end method

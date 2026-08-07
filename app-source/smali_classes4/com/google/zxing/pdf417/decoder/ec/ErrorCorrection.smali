@@ -86,9 +86,9 @@
     :cond_2
     invoke-static {}, Lcom/google/zxing/ChecksumException;->getChecksumInstance()Lcom/google/zxing/ChecksumException;
 
-    move-result-object p1
+    move-result-object p0
 
-    throw p1
+    throw p0
 .end method
 
 .method private findErrorMagnitudes(Lcom/google/zxing/pdf417/decoder/ec/ModulusPoly;Lcom/google/zxing/pdf417/decoder/ec/ModulusPoly;[I)[I
@@ -106,9 +106,9 @@
     if-ge v0, v2, :cond_0
 
     .line 170
-    new-array p1, v1, [I
+    new-array p0, v1, [I
 
-    return-object p1
+    return-object p0
 
     .line 172
     :cond_0
@@ -384,9 +384,9 @@
     :cond_2
     invoke-static {}, Lcom/google/zxing/ChecksumException;->getChecksumInstance()Lcom/google/zxing/ChecksumException;
 
-    move-result-object p1
+    move-result-object p0
 
-    throw p1
+    throw p0
 
     :cond_3
     const/4 p2, 0x0
@@ -399,40 +399,40 @@
     if-eqz p3, :cond_4
 
     .line 142
-    iget-object v1, p0, Lcom/google/zxing/pdf417/decoder/ec/ErrorCorrection;->field:Lcom/google/zxing/pdf417/decoder/ec/ModulusGF;
+    iget-object p0, p0, Lcom/google/zxing/pdf417/decoder/ec/ErrorCorrection;->field:Lcom/google/zxing/pdf417/decoder/ec/ModulusGF;
 
-    invoke-virtual {v1, p3}, Lcom/google/zxing/pdf417/decoder/ec/ModulusGF;->inverse(I)I
+    invoke-virtual {p0, p3}, Lcom/google/zxing/pdf417/decoder/ec/ModulusGF;->inverse(I)I
 
-    move-result p3
+    move-result p0
 
     .line 143
-    invoke-virtual {v0, p3}, Lcom/google/zxing/pdf417/decoder/ec/ModulusPoly;->multiply(I)Lcom/google/zxing/pdf417/decoder/ec/ModulusPoly;
+    invoke-virtual {v0, p0}, Lcom/google/zxing/pdf417/decoder/ec/ModulusPoly;->multiply(I)Lcom/google/zxing/pdf417/decoder/ec/ModulusPoly;
 
-    move-result-object v0
+    move-result-object p3
 
     .line 144
-    invoke-virtual {p1, p3}, Lcom/google/zxing/pdf417/decoder/ec/ModulusPoly;->multiply(I)Lcom/google/zxing/pdf417/decoder/ec/ModulusPoly;
+    invoke-virtual {p1, p0}, Lcom/google/zxing/pdf417/decoder/ec/ModulusPoly;->multiply(I)Lcom/google/zxing/pdf417/decoder/ec/ModulusPoly;
 
-    move-result-object p1
+    move-result-object p0
 
     .line 145
-    new-array p3, v3, [Lcom/google/zxing/pdf417/decoder/ec/ModulusPoly;
+    new-array p1, v3, [Lcom/google/zxing/pdf417/decoder/ec/ModulusPoly;
 
-    aput-object v0, p3, p2
+    aput-object p3, p1, p2
 
     const/4 p2, 0x1
 
-    aput-object p1, p3, p2
+    aput-object p0, p1, p2
 
-    return-object p3
+    return-object p1
 
     .line 139
     :cond_4
     invoke-static {}, Lcom/google/zxing/ChecksumException;->getChecksumInstance()Lcom/google/zxing/ChecksumException;
 
-    move-result-object p1
+    move-result-object p0
 
-    throw p1
+    throw p0
 .end method
 
 
@@ -633,13 +633,13 @@
     :cond_4
     invoke-static {}, Lcom/google/zxing/ChecksumException;->getChecksumInstance()Lcom/google/zxing/ChecksumException;
 
-    move-result-object p1
+    move-result-object p0
 
-    throw p1
+    throw p0
 
     .line 94
     :cond_5
-    array-length p1, v0
+    array-length p0, v0
 
-    return p1
+    return p0
 .end method

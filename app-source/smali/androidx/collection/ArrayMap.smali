@@ -184,14 +184,14 @@
 
     if-nez v0, :cond_0
 
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 
     :cond_1
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 .end method
 
 .method public containsKey(Ljava/lang/Object;)Z
@@ -200,9 +200,9 @@
     .line 115
     invoke-super {p0, p1}, Landroidx/collection/SimpleArrayMap;->containsKey(Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public containsValue(Ljava/lang/Object;)Z
@@ -211,9 +211,9 @@
     .line 128
     invoke-super {p0, p1}, Landroidx/collection/SimpleArrayMap;->containsValue(Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public entrySet()Ljava/util/Set;
@@ -256,9 +256,9 @@
     .line 141
     invoke-super {p0, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public keySet()Ljava/util/Set;
@@ -362,9 +362,9 @@
     .line 154
     invoke-super {p0, p1}, Landroidx/collection/SimpleArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public removeAll(Ljava/util/Collection;)Z
@@ -407,18 +407,18 @@
     :cond_0
     invoke-virtual {p0}, Landroidx/collection/ArrayMap;->size()I
 
-    move-result p1
+    move-result p0
 
-    if-eq v0, p1, :cond_1
+    if-eq v0, p0, :cond_1
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_1
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method public retainAll(Ljava/util/Collection;)Z
@@ -471,16 +471,16 @@
     :cond_1
     invoke-virtual {p0}, Landroidx/collection/ArrayMap;->size()I
 
-    move-result p1
+    move-result p0
 
-    if-eq v0, p1, :cond_2
+    if-eq v0, p0, :cond_2
 
     return v2
 
     :cond_2
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method public values()Ljava/util/Collection;

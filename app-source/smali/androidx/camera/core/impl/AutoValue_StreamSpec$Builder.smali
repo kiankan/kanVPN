@@ -29,7 +29,11 @@
 
 .field private implementationOptions:Landroidx/camera/core/impl/Config;
 
+.field private originalConfiguredResolution:Landroid/util/Size;
+
 .field private resolution:Landroid/util/Size;
+
+.field private sessionType:Ljava/lang/Integer;
 
 .field private zslDisabled:Ljava/lang/Boolean;
 
@@ -38,7 +42,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 120
+    .line 144
     invoke-direct {p0}, Landroidx/camera/core/impl/StreamSpec$Builder;-><init>()V
 
     return-void
@@ -47,38 +51,56 @@
 .method private constructor <init>(Landroidx/camera/core/impl/StreamSpec;)V
     .locals 1
 
-    .line 122
+    .line 146
     invoke-direct {p0}, Landroidx/camera/core/impl/StreamSpec$Builder;-><init>()V
 
-    .line 123
+    .line 147
     invoke-virtual {p1}, Landroidx/camera/core/impl/StreamSpec;->getResolution()Landroid/util/Size;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;->resolution:Landroid/util/Size;
 
-    .line 124
+    .line 148
+    invoke-virtual {p1}, Landroidx/camera/core/impl/StreamSpec;->getOriginalConfiguredResolution()Landroid/util/Size;
+
+    move-result-object v0
+
+    iput-object v0, p0, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;->originalConfiguredResolution:Landroid/util/Size;
+
+    .line 149
     invoke-virtual {p1}, Landroidx/camera/core/impl/StreamSpec;->getDynamicRange()Landroidx/camera/core/DynamicRange;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;->dynamicRange:Landroidx/camera/core/DynamicRange;
 
-    .line 125
+    .line 150
+    invoke-virtual {p1}, Landroidx/camera/core/impl/StreamSpec;->getSessionType()I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    iput-object v0, p0, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;->sessionType:Ljava/lang/Integer;
+
+    .line 151
     invoke-virtual {p1}, Landroidx/camera/core/impl/StreamSpec;->getExpectedFrameRateRange()Landroid/util/Range;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;->expectedFrameRateRange:Landroid/util/Range;
 
-    .line 126
+    .line 152
     invoke-virtual {p1}, Landroidx/camera/core/impl/StreamSpec;->getImplementationOptions()Landroidx/camera/core/impl/Config;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;->implementationOptions:Landroidx/camera/core/impl/Config;
 
-    .line 127
+    .line 153
     invoke-virtual {p1}, Landroidx/camera/core/impl/StreamSpec;->getZslDisabled()Z
 
     move-result p1
@@ -95,7 +117,7 @@
 .method synthetic constructor <init>(Landroidx/camera/core/impl/StreamSpec;Landroidx/camera/core/impl/AutoValue_StreamSpec$1;)V
     .locals 0
 
-    .line 114
+    .line 136
     invoke-direct {p0, p1}, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;-><init>(Landroidx/camera/core/impl/StreamSpec;)V
 
     return-void
@@ -104,29 +126,50 @@
 
 # virtual methods
 .method public build()Landroidx/camera/core/impl/StreamSpec;
-    .locals 9
+    .locals 11
 
-    .line 166
+    .line 205
     iget-object v0, p0, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;->resolution:Landroid/util/Size;
 
     if-nez v0, :cond_0
 
-    .line 167
+    .line 206
     const-string v0, " resolution"
 
     goto :goto_0
 
-    .line 166
+    .line 205
     :cond_0
     const-string v0, ""
 
-    .line 169
+    .line 208
     :goto_0
-    iget-object v1, p0, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;->dynamicRange:Landroidx/camera/core/DynamicRange;
+    iget-object v1, p0, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;->originalConfiguredResolution:Landroid/util/Size;
 
     if-nez v1, :cond_1
 
-    .line 170
+    .line 209
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, " originalConfiguredResolution"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 211
+    :cond_1
+    iget-object v1, p0, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;->dynamicRange:Landroidx/camera/core/DynamicRange;
+
+    if-nez v1, :cond_2
+
+    .line 212
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -141,13 +184,34 @@
 
     move-result-object v0
 
-    .line 172
-    :cond_1
+    .line 214
+    :cond_2
+    iget-object v1, p0, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;->sessionType:Ljava/lang/Integer;
+
+    if-nez v1, :cond_3
+
+    .line 215
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, " sessionType"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 217
+    :cond_3
     iget-object v1, p0, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;->expectedFrameRateRange:Landroid/util/Range;
 
-    if-nez v1, :cond_2
+    if-nez v1, :cond_4
 
-    .line 173
+    .line 218
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -162,13 +226,13 @@
 
     move-result-object v0
 
-    .line 175
-    :cond_2
+    .line 220
+    :cond_4
     iget-object v1, p0, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;->zslDisabled:Ljava/lang/Boolean;
 
-    if-nez v1, :cond_3
+    if-nez v1, :cond_5
 
-    .line 176
+    .line 221
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -183,82 +247,91 @@
 
     move-result-object v0
 
-    .line 178
-    :cond_3
+    .line 223
+    :cond_5
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_6
 
-    .line 181
+    .line 226
     new-instance v2, Landroidx/camera/core/impl/AutoValue_StreamSpec;
 
     iget-object v3, p0, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;->resolution:Landroid/util/Size;
 
-    iget-object v4, p0, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;->dynamicRange:Landroidx/camera/core/DynamicRange;
+    iget-object v4, p0, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;->originalConfiguredResolution:Landroid/util/Size;
 
-    iget-object v5, p0, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;->expectedFrameRateRange:Landroid/util/Range;
+    iget-object v5, p0, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;->dynamicRange:Landroidx/camera/core/DynamicRange;
 
-    iget-object v6, p0, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;->implementationOptions:Landroidx/camera/core/impl/Config;
+    iget-object v0, p0, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;->sessionType:Ljava/lang/Integer;
 
-    iget-object v0, p0, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;->zslDisabled:Ljava/lang/Boolean;
+    .line 230
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    .line 186
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    move-result v6
 
-    move-result v7
+    iget-object v7, p0, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;->expectedFrameRateRange:Landroid/util/Range;
 
-    const/4 v8, 0x0
+    iget-object v8, p0, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;->implementationOptions:Landroidx/camera/core/impl/Config;
 
-    invoke-direct/range {v2 .. v8}, Landroidx/camera/core/impl/AutoValue_StreamSpec;-><init>(Landroid/util/Size;Landroidx/camera/core/DynamicRange;Landroid/util/Range;Landroidx/camera/core/impl/Config;ZLandroidx/camera/core/impl/AutoValue_StreamSpec$1;)V
+    iget-object p0, p0, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;->zslDisabled:Ljava/lang/Boolean;
+
+    .line 233
+    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v9
+
+    const/4 v10, 0x0
+
+    invoke-direct/range {v2 .. v10}, Landroidx/camera/core/impl/AutoValue_StreamSpec;-><init>(Landroid/util/Size;Landroid/util/Size;Landroidx/camera/core/DynamicRange;ILandroid/util/Range;Landroidx/camera/core/impl/Config;ZLandroidx/camera/core/impl/AutoValue_StreamSpec$1;)V
 
     return-object v2
 
-    .line 179
-    :cond_4
-    new-instance v1, Ljava/lang/IllegalStateException;
+    .line 224
+    :cond_6
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v3, "Missing required properties:"
+    const-string v2, "Missing required properties:"
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw v1
+    throw p0
 .end method
 
 .method public setDynamicRange(Landroidx/camera/core/DynamicRange;)Landroidx/camera/core/impl/StreamSpec$Builder;
-    .locals 1
+    .locals 0
 
     if-eqz p1, :cond_0
 
-    .line 142
+    .line 176
     iput-object p1, p0, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;->dynamicRange:Landroidx/camera/core/DynamicRange;
 
     return-object p0
 
-    .line 140
+    .line 174
     :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string v0, "Null dynamicRange"
+    const-string p1, "Null dynamicRange"
 
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method public setExpectedFrameRateRange(Landroid/util/Range;)Landroidx/camera/core/impl/StreamSpec$Builder;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -271,56 +344,90 @@
 
     if-eqz p1, :cond_0
 
-    .line 150
+    .line 189
     iput-object p1, p0, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;->expectedFrameRateRange:Landroid/util/Range;
 
     return-object p0
 
-    .line 148
+    .line 187
     :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string v0, "Null expectedFrameRateRange"
+    const-string p1, "Null expectedFrameRateRange"
 
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method public setImplementationOptions(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/StreamSpec$Builder;
     .locals 0
 
-    .line 155
+    .line 194
     iput-object p1, p0, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;->implementationOptions:Landroidx/camera/core/impl/Config;
 
     return-object p0
 .end method
 
-.method public setResolution(Landroid/util/Size;)Landroidx/camera/core/impl/StreamSpec$Builder;
-    .locals 1
+.method public setOriginalConfiguredResolution(Landroid/util/Size;)Landroidx/camera/core/impl/StreamSpec$Builder;
+    .locals 0
 
     if-eqz p1, :cond_0
 
-    .line 134
+    .line 168
+    iput-object p1, p0, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;->originalConfiguredResolution:Landroid/util/Size;
+
+    return-object p0
+
+    .line 166
+    :cond_0
+    new-instance p0, Ljava/lang/NullPointerException;
+
+    const-string p1, "Null originalConfiguredResolution"
+
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public setResolution(Landroid/util/Size;)Landroidx/camera/core/impl/StreamSpec$Builder;
+    .locals 0
+
+    if-eqz p1, :cond_0
+
+    .line 160
     iput-object p1, p0, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;->resolution:Landroid/util/Size;
 
     return-object p0
 
-    .line 132
+    .line 158
     :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string v0, "Null resolution"
+    const-string p1, "Null resolution"
 
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
+.end method
+
+.method public setSessionType(I)Landroidx/camera/core/impl/StreamSpec$Builder;
+    .locals 0
+
+    .line 181
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    iput-object p1, p0, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;->sessionType:Ljava/lang/Integer;
+
+    return-object p0
 .end method
 
 .method public setZslDisabled(Z)Landroidx/camera/core/impl/StreamSpec$Builder;
     .locals 0
 
-    .line 160
+    .line 199
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1

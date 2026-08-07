@@ -44,13 +44,13 @@
 
     .line 19
     :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null packet"
+    const-string p1, "Null packet"
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 
@@ -88,14 +88,14 @@
 
     if-eqz v1, :cond_1
 
-    iget v1, p0, Landroidx/camera/core/imagecapture/AutoValue_Image2JpegBytes_In;->jpegQuality:I
+    iget p0, p0, Landroidx/camera/core/imagecapture/AutoValue_Image2JpegBytes_In;->jpegQuality:I
 
     .line 51
     invoke-virtual {p1}, Landroidx/camera/core/imagecapture/Image2JpegBytes$In;->getJpegQuality()I
 
     move-result p1
 
-    if-ne v1, p1, :cond_1
+    if-ne p0, p1, :cond_1
 
     return v0
 
@@ -104,16 +104,16 @@
 .end method
 
 .method getJpegQuality()I
-    .locals 1
+    .locals 0
 
     .line 32
-    iget v0, p0, Landroidx/camera/core/imagecapture/AutoValue_Image2JpegBytes_In;->jpegQuality:I
+    iget p0, p0, Landroidx/camera/core/imagecapture/AutoValue_Image2JpegBytes_In;->jpegQuality:I
 
-    return v0
+    return p0
 .end method
 
 .method getPacket()Landroidx/camera/core/processing/Packet;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -124,9 +124,9 @@
     .end annotation
 
     .line 27
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/AutoValue_Image2JpegBytes_In;->packet:Landroidx/camera/core/processing/Packet;
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/AutoValue_Image2JpegBytes_In;->packet:Landroidx/camera/core/processing/Packet;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public hashCode()I
@@ -146,11 +146,11 @@
     mul-int/2addr v0, v1
 
     .line 62
-    iget v1, p0, Landroidx/camera/core/imagecapture/AutoValue_Image2JpegBytes_In;->jpegQuality:I
+    iget p0, p0, Landroidx/camera/core/imagecapture/AutoValue_Image2JpegBytes_In;->jpegQuality:I
 
-    xor-int/2addr v0, v1
+    xor-int/2addr p0, v0
 
-    return v0
+    return p0
 .end method
 
 .method public toString()Ljava/lang/String;
@@ -171,17 +171,17 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Landroidx/camera/core/imagecapture/AutoValue_Image2JpegBytes_In;->jpegQuality:I
+    iget p0, p0, Landroidx/camera/core/imagecapture/AutoValue_Image2JpegBytes_In;->jpegQuality:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v1, "}"
+    const-string/jumbo p0, "}"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

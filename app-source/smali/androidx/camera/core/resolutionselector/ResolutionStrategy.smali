@@ -53,7 +53,7 @@
 
     const/4 v0, 0x0
 
-    .line 93
+    .line 94
     iput-object v0, p0, Landroidx/camera/core/resolutionselector/ResolutionStrategy;->mBoundSize:Landroid/util/Size;
 
     const/4 v0, 0x0
@@ -67,13 +67,13 @@
 .method public constructor <init>(Landroid/util/Size;I)V
     .locals 0
 
-    .line 126
+    .line 129
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 127
+    .line 130
     iput-object p1, p0, Landroidx/camera/core/resolutionselector/ResolutionStrategy;->mBoundSize:Landroid/util/Size;
 
-    .line 128
+    .line 131
     iput p2, p0, Landroidx/camera/core/resolutionselector/ResolutionStrategy;->mFallbackRule:I
 
     return-void
@@ -82,19 +82,19 @@
 
 # virtual methods
 .method public getBoundSize()Landroid/util/Size;
-    .locals 1
+    .locals 0
 
-    .line 139
-    iget-object v0, p0, Landroidx/camera/core/resolutionselector/ResolutionStrategy;->mBoundSize:Landroid/util/Size;
+    .line 141
+    iget-object p0, p0, Landroidx/camera/core/resolutionselector/ResolutionStrategy;->mBoundSize:Landroid/util/Size;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getFallbackRule()I
-    .locals 1
+    .locals 0
 
-    .line 148
-    iget v0, p0, Landroidx/camera/core/resolutionselector/ResolutionStrategy;->mFallbackRule:I
+    .line 150
+    iget p0, p0, Landroidx/camera/core/resolutionselector/ResolutionStrategy;->mFallbackRule:I
 
-    return v0
+    return p0
 .end method

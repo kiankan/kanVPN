@@ -107,9 +107,9 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 2363
-    iget-boolean p2, p0, Lj$/time/format/DateTimeFormatterBuilder$CompositePrinterParser;->optional:Z
+    iget-boolean p0, p0, Lj$/time/format/DateTimeFormatterBuilder$CompositePrinterParser;->optional:Z
 
-    if-eqz p2, :cond_1
+    if-eqz p0, :cond_1
 
     .line 2364
     invoke-virtual {p1}, Lj$/time/format/DateTimePrintContext;->endOptional()V
@@ -129,9 +129,9 @@
 
     .line 2363
     :cond_3
-    iget-boolean p2, p0, Lj$/time/format/DateTimeFormatterBuilder$CompositePrinterParser;->optional:Z
+    iget-boolean p0, p0, Lj$/time/format/DateTimeFormatterBuilder$CompositePrinterParser;->optional:Z
 
-    if-eqz p2, :cond_4
+    if-eqz p0, :cond_4
 
     .line 2364
     invoke-virtual {p1}, Lj$/time/format/DateTimePrintContext;->endOptional()V
@@ -141,9 +141,9 @@
 
     .line 2363
     :goto_1
-    iget-boolean v0, p0, Lj$/time/format/DateTimeFormatterBuilder$CompositePrinterParser;->optional:Z
+    iget-boolean p0, p0, Lj$/time/format/DateTimeFormatterBuilder$CompositePrinterParser;->optional:Z
 
-    if-eqz v0, :cond_5
+    if-eqz p0, :cond_5
 
     .line 2364
     invoke-virtual {p1}, Lj$/time/format/DateTimePrintContext;->endOptional()V
@@ -151,6 +151,87 @@
     .line 2366
     :cond_5
     throw p2
+.end method
+
+.method public parse(Lj$/time/format/DateTimeParseContext;Ljava/lang/CharSequence;I)I
+    .locals 5
+
+    .line 2372
+    iget-boolean v0, p0, Lj$/time/format/DateTimeFormatterBuilder$CompositePrinterParser;->optional:Z
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_2
+
+    .line 2373
+    invoke-virtual {p1}, Lj$/time/format/DateTimeParseContext;->startOptional()V
+
+    .line 2375
+    iget-object p0, p0, Lj$/time/format/DateTimeFormatterBuilder$CompositePrinterParser;->printerParsers:[Lj$/time/format/DateTimeFormatterBuilder$DateTimePrinterParser;
+
+    array-length v0, p0
+
+    move v3, p3
+
+    move v2, v1
+
+    :goto_0
+    if-ge v2, v0, :cond_1
+
+    aget-object v4, p0, v2
+
+    .line 2376
+    invoke-interface {v4, p1, p2, v3}, Lj$/time/format/DateTimeFormatterBuilder$DateTimePrinterParser;->parse(Lj$/time/format/DateTimeParseContext;Ljava/lang/CharSequence;I)I
+
+    move-result v3
+
+    if-gez v3, :cond_0
+
+    .line 2378
+    invoke-virtual {p1, v1}, Lj$/time/format/DateTimeParseContext;->endOptional(Z)V
+
+    return p3
+
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p0, 0x1
+
+    .line 2382
+    invoke-virtual {p1, p0}, Lj$/time/format/DateTimeParseContext;->endOptional(Z)V
+
+    return v3
+
+    .line 2385
+    :cond_2
+    iget-object p0, p0, Lj$/time/format/DateTimeFormatterBuilder$CompositePrinterParser;->printerParsers:[Lj$/time/format/DateTimeFormatterBuilder$DateTimePrinterParser;
+
+    array-length v0, p0
+
+    :goto_1
+    if-ge v1, v0, :cond_4
+
+    aget-object v2, p0, v1
+
+    .line 2386
+    invoke-interface {v2, p1, p2, p3}, Lj$/time/format/DateTimeFormatterBuilder$DateTimePrinterParser;->parse(Lj$/time/format/DateTimeParseContext;Ljava/lang/CharSequence;I)I
+
+    move-result p3
+
+    if-gez p3, :cond_3
+
+    return p3
+
+    :cond_3
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
+
+    :cond_4
+    return p3
 .end method
 
 .method public toString()Ljava/lang/String;
@@ -202,31 +283,31 @@
 
     .line 2403
     :cond_1
-    iget-boolean v1, p0, Lj$/time/format/DateTimeFormatterBuilder$CompositePrinterParser;->optional:Z
+    iget-boolean p0, p0, Lj$/time/format/DateTimeFormatterBuilder$CompositePrinterParser;->optional:Z
 
-    if-eqz v1, :cond_2
+    if-eqz p0, :cond_2
 
-    const-string v1, "]"
+    const-string p0, "]"
 
     goto :goto_2
 
     :cond_2
-    const-string v1, ")"
+    const-string p0, ")"
 
     :goto_2
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 2405
     :cond_3
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public withOptional(Z)Lj$/time/format/DateTimeFormatterBuilder$CompositePrinterParser;
-    .locals 2
+    .locals 1
 
     .line 2343
     iget-boolean v0, p0, Lj$/time/format/DateTimeFormatterBuilder$CompositePrinterParser;->optional:Z
@@ -239,9 +320,9 @@
     :cond_0
     new-instance v0, Lj$/time/format/DateTimeFormatterBuilder$CompositePrinterParser;
 
-    iget-object v1, p0, Lj$/time/format/DateTimeFormatterBuilder$CompositePrinterParser;->printerParsers:[Lj$/time/format/DateTimeFormatterBuilder$DateTimePrinterParser;
+    iget-object p0, p0, Lj$/time/format/DateTimeFormatterBuilder$CompositePrinterParser;->printerParsers:[Lj$/time/format/DateTimeFormatterBuilder$DateTimePrinterParser;
 
-    invoke-direct {v0, v1, p1}, Lj$/time/format/DateTimeFormatterBuilder$CompositePrinterParser;-><init>([Lj$/time/format/DateTimeFormatterBuilder$DateTimePrinterParser;Z)V
+    invoke-direct {v0, p0, p1}, Lj$/time/format/DateTimeFormatterBuilder$CompositePrinterParser;-><init>([Lj$/time/format/DateTimeFormatterBuilder$DateTimePrinterParser;Z)V
 
     return-object v0
 .end method

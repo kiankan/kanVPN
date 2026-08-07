@@ -77,23 +77,21 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .line 73
-    const-string v0, ";<>@[\\]_`~!\r\t,:\n-.$/\"|*()?{}\'"
+    const/16 v0, 0x1d
 
     .line 74
-    invoke-virtual {v0}, Ljava/lang/String;->toCharArray()[C
+    new-array v0, v0, [C
 
-    move-result-object v0
+    fill-array-data v0, :array_0
 
     sput-object v0, Lcom/google/zxing/pdf417/decoder/DecodedBitStreamParser;->PUNCT_CHARS:[C
 
-    .line 76
-    const-string v0, "0123456789&\r\t,:#-.$/+%*=^"
+    const/16 v0, 0x19
 
     .line 77
-    invoke-virtual {v0}, Ljava/lang/String;->toCharArray()[C
+    new-array v0, v0, [C
 
-    move-result-object v0
+    fill-array-data v0, :array_1
 
     sput-object v0, Lcom/google/zxing/pdf417/decoder/DecodedBitStreamParser;->MIXED_CHARS:[C
 
@@ -150,6 +148,70 @@
 
     :cond_0
     return-void
+
+    :array_0
+    .array-data 2
+        0x3bs
+        0x3cs
+        0x3es
+        0x40s
+        0x5bs
+        0x5cs
+        0x5ds
+        0x5fs
+        0x60s
+        0x7es
+        0x21s
+        0xds
+        0x9s
+        0x2cs
+        0x3as
+        0xas
+        0x2ds
+        0x2es
+        0x24s
+        0x2fs
+        0x22s
+        0x7cs
+        0x2as
+        0x28s
+        0x29s
+        0x3fs
+        0x7bs
+        0x7ds
+        0x27s
+    .end array-data
+
+    nop
+
+    :array_1
+    .array-data 2
+        0x30s
+        0x31s
+        0x32s
+        0x33s
+        0x34s
+        0x35s
+        0x36s
+        0x37s
+        0x38s
+        0x39s
+        0x26s
+        0xds
+        0x9s
+        0x2cs
+        0x3as
+        0x23s
+        0x2ds
+        0x2es
+        0x24s
+        0x2fs
+        0x2bs
+        0x25s
+        0x2as
+        0x3ds
+        0x5es
+    .end array-data
 .end method
 
 .method private constructor <init>()V

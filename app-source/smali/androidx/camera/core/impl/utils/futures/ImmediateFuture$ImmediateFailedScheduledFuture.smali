@@ -33,7 +33,7 @@
 .method constructor <init>(Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 149
+    .line 143
     invoke-direct {p0, p1}, Landroidx/camera/core/impl/utils/futures/ImmediateFuture$ImmediateFailedFuture;-><init>(Ljava/lang/Throwable;)V
 
     return-void
@@ -52,28 +52,28 @@
         }
     .end annotation
 
-    .line 145
+    .line 139
     check-cast p1, Ljava/util/concurrent/Delayed;
 
     invoke-virtual {p0, p1}, Landroidx/camera/core/impl/utils/futures/ImmediateFuture$ImmediateFailedScheduledFuture;->compareTo(Ljava/util/concurrent/Delayed;)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public compareTo(Ljava/util/concurrent/Delayed;)I
     .locals 0
 
-    const/4 p1, -0x1
+    const/4 p0, -0x1
 
-    return p1
+    return p0
 .end method
 
 .method public getDelay(Ljava/util/concurrent/TimeUnit;)J
-    .locals 2
+    .locals 0
 
-    const-wide/16 v0, 0x0
+    const-wide/16 p0, 0x0
 
-    return-wide v0
+    return-wide p0
 .end method

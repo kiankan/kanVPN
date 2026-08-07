@@ -22,10 +22,10 @@
 .method public constructor <init>(Landroidx/camera/core/impl/CameraCaptureFailure;)V
     .locals 0
 
-    .line 319
+    .line 298
     invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
-    .line 320
+    .line 299
     iput-object p1, p0, Landroidx/camera/core/impl/CameraControlInternal$CameraControlException;->mCameraCaptureFailure:Landroidx/camera/core/impl/CameraCaptureFailure;
 
     return-void
@@ -34,10 +34,10 @@
 .method public constructor <init>(Landroidx/camera/core/impl/CameraCaptureFailure;Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 325
+    .line 304
     invoke-direct {p0, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
 
-    .line 326
+    .line 305
     iput-object p1, p0, Landroidx/camera/core/impl/CameraControlInternal$CameraControlException;->mCameraCaptureFailure:Landroidx/camera/core/impl/CameraCaptureFailure;
 
     return-void
@@ -46,10 +46,10 @@
 
 # virtual methods
 .method public getCameraCaptureFailure()Landroidx/camera/core/impl/CameraCaptureFailure;
-    .locals 1
+    .locals 0
 
-    .line 331
-    iget-object v0, p0, Landroidx/camera/core/impl/CameraControlInternal$CameraControlException;->mCameraCaptureFailure:Landroidx/camera/core/impl/CameraCaptureFailure;
+    .line 309
+    iget-object p0, p0, Landroidx/camera/core/impl/CameraControlInternal$CameraControlException;->mCameraCaptureFailure:Landroidx/camera/core/impl/CameraCaptureFailure;
 
-    return-object v0
+    return-object p0
 .end method

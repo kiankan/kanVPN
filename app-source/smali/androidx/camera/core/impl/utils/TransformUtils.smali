@@ -11,7 +11,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 45
+    .line 46
     new-instance v0, Landroid/graphics/RectF;
 
     const/high16 v1, -0x40800000    # -1.0f
@@ -28,7 +28,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 47
+    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -57,7 +57,7 @@
 
     float-to-double p0, p0
 
-    .line 183
+    .line 174
     invoke-static {p0, p1}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide p0
@@ -70,7 +70,7 @@
 
     float-to-double p2, p2
 
-    .line 184
+    .line 175
     invoke-static {p2, p3}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide p2
@@ -85,12 +85,12 @@
 
     div-double/2addr p2, p0
 
-    .line 191
+    .line 182
     invoke-static {p2, p3, v2, v3}, Ljava/lang/Math;->atan2(DD)D
 
     move-result-wide p0
 
-    .line 194
+    .line 185
     invoke-static {p0, p1}, Ljava/lang/Math;->toDegrees(D)D
 
     move-result-wide p0
@@ -103,12 +103,12 @@
 .method public static getExifTransform(III)Landroid/graphics/Matrix;
     .locals 8
 
-    .line 416
+    .line 397
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 421
+    .line 402
     new-instance v1, Landroid/graphics/RectF;
 
     int-to-float p1, p1
@@ -119,7 +119,7 @@
 
     invoke-direct {v1, v2, v2, p1, p2}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 422
+    .line 403
     sget-object v3, Landroidx/camera/core/impl/utils/TransformUtils;->NORMALIZED_RECT:Landroid/graphics/RectF;
 
     sget-object v4, Landroid/graphics/Matrix$ScaleToFit;->FILL:Landroid/graphics/Matrix$ScaleToFit;
@@ -138,35 +138,35 @@
 
     goto :goto_1
 
-    .line 457
+    .line 438
     :pswitch_0
     invoke-virtual {v0, v5}, Landroid/graphics/Matrix;->postRotate(F)Z
 
     goto :goto_0
 
-    .line 452
+    .line 433
     :pswitch_1
     invoke-virtual {v0, v7, v6}, Landroid/graphics/Matrix;->postScale(FF)Z
 
-    .line 453
+    .line 434
     invoke-virtual {v0, v4}, Landroid/graphics/Matrix;->postRotate(F)Z
 
     goto :goto_0
 
-    .line 446
+    .line 427
     :pswitch_2
     invoke-virtual {v0, v4}, Landroid/graphics/Matrix;->postRotate(F)Z
 
     goto :goto_0
 
-    .line 441
+    .line 422
     :pswitch_3
     invoke-virtual {v0, v7, v6}, Landroid/graphics/Matrix;->postScale(FF)Z
 
-    .line 442
+    .line 423
     invoke-virtual {v0, v5}, Landroid/graphics/Matrix;->postRotate(F)Z
 
-    .line 470
+    .line 451
     :goto_0
     new-instance v1, Landroid/graphics/RectF;
 
@@ -174,7 +174,7 @@
 
     goto :goto_1
 
-    .line 436
+    .line 417
     :pswitch_4
     invoke-virtual {v0, v6, v7}, Landroid/graphics/Matrix;->postScale(FF)Z
 
@@ -183,27 +183,27 @@
     :pswitch_5
     const/high16 p0, 0x43340000    # 180.0f
 
-    .line 433
+    .line 414
     invoke-virtual {v0, p0}, Landroid/graphics/Matrix;->postRotate(F)Z
 
     goto :goto_1
 
-    .line 430
+    .line 411
     :pswitch_6
     invoke-virtual {v0, v7, v6}, Landroid/graphics/Matrix;->postScale(FF)Z
 
-    .line 471
+    .line 452
     :goto_1
     new-instance p0, Landroid/graphics/Matrix;
 
     invoke-direct {p0}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 472
+    .line 453
     sget-object p1, Landroid/graphics/Matrix$ScaleToFit;->FILL:Landroid/graphics/Matrix$ScaleToFit;
 
     invoke-virtual {p0, v3, v1, p1}, Landroid/graphics/Matrix;->setRectToRect(Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/Matrix$ScaleToFit;)Z
 
-    .line 473
+    .line 454
     invoke-virtual {v0, p0}, Landroid/graphics/Matrix;->postConcat(Landroid/graphics/Matrix;)Z
 
     return-object v0
@@ -223,7 +223,7 @@
 .method public static getNormalizedToBuffer(Landroid/graphics/Rect;)Landroid/graphics/Matrix;
     .locals 1
 
-    .line 386
+    .line 370
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0, p0}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V
@@ -238,12 +238,12 @@
 .method public static getNormalizedToBuffer(Landroid/graphics/RectF;)Landroid/graphics/Matrix;
     .locals 3
 
-    .line 406
+    .line 388
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 407
+    .line 389
     sget-object v1, Landroidx/camera/core/impl/utils/TransformUtils;->NORMALIZED_RECT:Landroid/graphics/RectF;
 
     sget-object v2, Landroid/graphics/Matrix$ScaleToFit;->FILL:Landroid/graphics/Matrix$ScaleToFit;
@@ -258,7 +258,7 @@
 
     const/4 v0, 0x0
 
-    .line 348
+    .line 334
     invoke-static {p0, p1, p2, v0}, Landroidx/camera/core/impl/utils/TransformUtils;->getRectToRect(Landroid/graphics/RectF;Landroid/graphics/RectF;IZ)Landroid/graphics/Matrix;
 
     move-result-object p0
@@ -269,12 +269,12 @@
 .method public static getRectToRect(Landroid/graphics/RectF;Landroid/graphics/RectF;IZ)Landroid/graphics/Matrix;
     .locals 3
 
-    .line 369
+    .line 354
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 370
+    .line 355
     sget-object v1, Landroidx/camera/core/impl/utils/TransformUtils;->NORMALIZED_RECT:Landroid/graphics/RectF;
 
     sget-object v2, Landroid/graphics/Matrix$ScaleToFit;->FILL:Landroid/graphics/Matrix$ScaleToFit;
@@ -283,7 +283,7 @@
 
     int-to-float p0, p2
 
-    .line 372
+    .line 357
     invoke-virtual {v0, p0}, Landroid/graphics/Matrix;->postRotate(F)Z
 
     if-eqz p3, :cond_0
@@ -292,10 +292,10 @@
 
     const/high16 p2, 0x3f800000    # 1.0f
 
-    .line 374
+    .line 359
     invoke-virtual {v0, p0, p2}, Landroid/graphics/Matrix;->postScale(FF)Z
 
-    .line 377
+    .line 362
     :cond_0
     invoke-static {p1}, Landroidx/camera/core/impl/utils/TransformUtils;->getNormalizedToBuffer(Landroid/graphics/RectF;)Landroid/graphics/Matrix;
 
@@ -309,7 +309,7 @@
 .method public static getRotatedSize(Landroid/graphics/Rect;I)Landroid/util/Size;
     .locals 0
 
-    .line 207
+    .line 197
     invoke-static {p0}, Landroidx/camera/core/impl/utils/TransformUtils;->rectToSize(Landroid/graphics/Rect;)Landroid/util/Size;
 
     move-result-object p0
@@ -326,27 +326,27 @@
 
     const/16 v0, 0x9
 
-    .line 484
+    .line 465
     new-array v0, v0, [F
 
-    .line 485
+    .line 466
     invoke-virtual {p0, v0}, Landroid/graphics/Matrix;->getValues([F)V
 
     const/4 p0, 0x0
 
-    .line 488
+    .line 469
     aget p0, v0, p0
 
     const/4 v1, 0x3
 
-    .line 489
+    .line 470
     aget v0, v0, v1
 
     float-to-double v0, v0
 
     float-to-double v2, p0
 
-    .line 491
+    .line 472
     invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->atan2(DD)D
 
     move-result-wide v0
@@ -371,7 +371,7 @@
 .method public static hasCropping(Landroid/graphics/Rect;Landroid/util/Size;)Z
     .locals 2
 
-    .line 84
+    .line 81
     iget v0, p0, Landroid/graphics/Rect;->left:I
 
     if-nez v0, :cond_1
@@ -390,7 +390,7 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 85
+    .line 82
     invoke-virtual {p0}, Landroid/graphics/Rect;->height()I
 
     move-result p0
@@ -437,7 +437,7 @@
 
     goto :goto_0
 
-    .line 254
+    .line 243
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -475,7 +475,7 @@
 
     const/4 v0, 0x0
 
-    .line 282
+    .line 269
     invoke-static {p0, v0, p1, v0}, Landroidx/camera/core/impl/utils/TransformUtils;->isAspectRatioMatchingWithRoundingError(Landroid/util/Size;ZLandroid/util/Size;Z)Z
 
     move-result p0
@@ -490,7 +490,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 312
+    .line 299
     invoke-virtual {p0}, Landroid/util/Size;->getWidth()I
 
     move-result p1
@@ -509,7 +509,7 @@
 
     goto :goto_0
 
-    .line 315
+    .line 302
     :cond_0
     invoke-virtual {p0}, Landroid/util/Size;->getWidth()I
 
@@ -529,7 +529,7 @@
 
     div-float/2addr p1, v1
 
-    .line 316
+    .line 303
     invoke-virtual {p0}, Landroid/util/Size;->getWidth()I
 
     move-result v1
@@ -551,7 +551,7 @@
     :goto_0
     if-eqz p3, :cond_1
 
-    .line 321
+    .line 308
     invoke-virtual {p2}, Landroid/util/Size;->getWidth()I
 
     move-result p3
@@ -570,7 +570,7 @@
 
     goto :goto_1
 
-    .line 324
+    .line 311
     :cond_1
     invoke-virtual {p2}, Landroid/util/Size;->getWidth()I
 
@@ -590,7 +590,7 @@
 
     div-float/2addr p3, v1
 
-    .line 325
+    .line 312
     invoke-virtual {p2}, Landroid/util/Size;->getWidth()I
 
     move-result v1
@@ -639,17 +639,17 @@
 
     const/4 v0, 0x4
 
-    .line 167
+    .line 158
     new-array v0, v0, [F
 
     fill-array-data v0, :array_0
 
-    .line 168
+    .line 159
     invoke-virtual {p0, v0}, Landroid/graphics/Matrix;->mapVectors([F)V
 
     const/4 p0, 0x0
 
-    .line 169
+    .line 160
     aget v1, v0, p0
 
     const/4 v2, 0x1
@@ -691,7 +691,7 @@
 .method public static max(FFFF)F
     .locals 0
 
-    .line 234
+    .line 223
     invoke-static {p0, p1}, Ljava/lang/Math;->max(FF)F
 
     move-result p0
@@ -710,7 +710,7 @@
 .method public static min(FFFF)F
     .locals 0
 
-    .line 241
+    .line 230
     invoke-static {p0, p1}, Ljava/lang/Math;->min(FF)F
 
     move-result p0
@@ -748,7 +748,7 @@
 .method public static rectToString(Landroid/graphics/Rect;)Ljava/lang/String;
     .locals 3
 
-    .line 61
+    .line 60
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     invoke-virtual {p0}, Landroid/graphics/Rect;->width()I
@@ -783,7 +783,7 @@
 .method public static rectToVertices(Landroid/graphics/RectF;)[F
     .locals 9
 
-    .line 271
+    .line 258
     iget v0, p0, Landroid/graphics/RectF;->left:F
 
     iget v1, p0, Landroid/graphics/RectF;->top:F
@@ -842,7 +842,7 @@
 .method public static reverseSize(Landroid/util/Size;)Landroid/util/Size;
     .locals 2
 
-    .line 112
+    .line 106
     new-instance v0, Landroid/util/Size;
 
     invoke-virtual {p0}, Landroid/util/Size;->getHeight()I
@@ -861,7 +861,7 @@
 .method public static reverseSizeF(Landroid/util/SizeF;)Landroid/util/SizeF;
     .locals 2
 
-    .line 123
+    .line 116
     new-instance v0, Landroid/util/SizeF;
 
     invoke-virtual {p0}, Landroid/util/SizeF;->getHeight()F
@@ -880,7 +880,7 @@
 .method public static rotateRect(Landroid/graphics/RectF;I)Landroid/graphics/RectF;
     .locals 3
 
-    .line 148
+    .line 139
     rem-int/lit8 v0, p1, 0x5a
 
     if-nez v0, :cond_0
@@ -907,7 +907,7 @@
 
     invoke-static {v0, v1}, Landroidx/core/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
-    .line 150
+    .line 141
     invoke-static {p1}, Landroidx/camera/core/impl/utils/TransformUtils;->within360(I)I
 
     move-result p1
@@ -918,7 +918,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 151
+    .line 142
     new-instance p1, Landroid/graphics/RectF;
 
     invoke-virtual {p0}, Landroid/graphics/RectF;->height()F
@@ -942,7 +942,7 @@
 .method public static rotateSize(Landroid/util/Size;I)Landroid/util/Size;
     .locals 3
 
-    .line 136
+    .line 128
     rem-int/lit8 v0, p1, 0x5a
 
     if-nez v0, :cond_0
@@ -969,7 +969,7 @@
 
     invoke-static {v0, v1}, Landroidx/core/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
-    .line 138
+    .line 130
     invoke-static {p1}, Landroidx/camera/core/impl/utils/TransformUtils;->within360(I)I
 
     move-result p1
@@ -993,7 +993,7 @@
 
     const/4 v0, 0x0
 
-    .line 69
+    .line 67
     invoke-static {p0, v0, v0}, Landroidx/camera/core/impl/utils/TransformUtils;->sizeToRect(Landroid/util/Size;II)Landroid/graphics/Rect;
 
     move-result-object p0
@@ -1004,7 +1004,7 @@
 .method public static sizeToRect(Landroid/util/Size;II)Landroid/graphics/Rect;
     .locals 2
 
-    .line 77
+    .line 74
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Landroid/util/Size;->getWidth()I
@@ -1029,7 +1029,7 @@
 
     const/4 v0, 0x0
 
-    .line 93
+    .line 89
     invoke-static {p0, v0, v0}, Landroidx/camera/core/impl/utils/TransformUtils;->sizeToRectF(Landroid/util/Size;II)Landroid/graphics/RectF;
 
     move-result-object p0
@@ -1040,7 +1040,7 @@
 .method public static sizeToRectF(Landroid/util/Size;II)Landroid/graphics/RectF;
     .locals 4
 
-    .line 101
+    .line 96
     new-instance v0, Landroid/graphics/RectF;
 
     int-to-float v1, p1
@@ -1071,7 +1071,7 @@
 .method public static sizeToVertices(Landroid/util/Size;)[F
     .locals 6
 
-    .line 262
+    .line 250
     invoke-virtual {p0}, Landroid/util/Size;->getWidth()I
 
     move-result v0
@@ -1090,7 +1090,7 @@
 
     int-to-float v2, v2
 
-    .line 263
+    .line 251
     invoke-virtual {p0}, Landroid/util/Size;->getHeight()I
 
     move-result p0
@@ -1141,12 +1141,12 @@
 .method public static updateSensorToBufferTransform(Landroid/graphics/Matrix;Landroid/graphics/Rect;)Landroid/graphics/Matrix;
     .locals 1
 
-    .line 396
+    .line 379
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0, p0}, Landroid/graphics/Matrix;-><init>(Landroid/graphics/Matrix;)V
 
-    .line 397
+    .line 380
     iget p0, p1, Landroid/graphics/Rect;->left:I
 
     neg-int p0, p0
@@ -1167,7 +1167,7 @@
 .method public static verticesToRect([F)Landroid/graphics/RectF;
     .locals 14
 
-    .line 222
+    .line 211
     new-instance v0, Landroid/graphics/RectF;
 
     const/4 v1, 0x0
@@ -1186,7 +1186,7 @@
 
     aget v8, p0, v7
 
-    .line 223
+    .line 212
     invoke-static {v2, v4, v6, v8}, Landroidx/camera/core/impl/utils/TransformUtils;->min(FFFF)F
 
     move-result v2
@@ -1207,7 +1207,7 @@
 
     aget v13, p0, v12
 
-    .line 224
+    .line 213
     invoke-static {v6, v9, v11, v13}, Landroidx/camera/core/impl/utils/TransformUtils;->min(FFFF)F
 
     move-result v6
@@ -1220,7 +1220,7 @@
 
     aget v7, p0, v7
 
-    .line 225
+    .line 214
     invoke-static {v1, v3, v5, v7}, Landroidx/camera/core/impl/utils/TransformUtils;->max(FFFF)F
 
     move-result v1
@@ -1233,7 +1233,7 @@
 
     aget p0, p0, v12
 
-    .line 226
+    .line 215
     invoke-static {v3, v4, v5, p0}, Landroidx/camera/core/impl/utils/TransformUtils;->max(FFFF)F
 
     move-result p0
@@ -1246,7 +1246,7 @@
 .method public static within360(I)I
     .locals 0
 
-    .line 214
+    .line 204
     rem-int/lit16 p0, p0, 0x168
 
     add-int/lit16 p0, p0, 0x168

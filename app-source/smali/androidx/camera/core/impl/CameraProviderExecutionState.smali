@@ -113,37 +113,37 @@
 
 # virtual methods
 .method public getCause()Ljava/lang/Throwable;
-    .locals 1
+    .locals 0
 
-    .line 88
-    iget-object v0, p0, Landroidx/camera/core/impl/CameraProviderExecutionState;->mCause:Ljava/lang/Throwable;
+    .line 87
+    iget-object p0, p0, Landroidx/camera/core/impl/CameraProviderExecutionState;->mCause:Ljava/lang/Throwable;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getExecutedTimeInMillis()J
     .locals 2
 
-    .line 96
+    .line 95
     iget-wide v0, p0, Landroidx/camera/core/impl/CameraProviderExecutionState;->mTaskExecutedTimeInMillis:J
 
     return-wide v0
 .end method
 
 .method public getNumOfAttempts()I
-    .locals 1
+    .locals 0
 
-    .line 104
-    iget v0, p0, Landroidx/camera/core/impl/CameraProviderExecutionState;->mAttemptCount:I
+    .line 103
+    iget p0, p0, Landroidx/camera/core/impl/CameraProviderExecutionState;->mAttemptCount:I
 
-    return v0
+    return p0
 .end method
 
 .method public getStatus()I
-    .locals 1
+    .locals 0
 
     .line 79
-    iget v0, p0, Landroidx/camera/core/impl/CameraProviderExecutionState;->mStatus:I
+    iget p0, p0, Landroidx/camera/core/impl/CameraProviderExecutionState;->mStatus:I
 
-    return v0
+    return p0
 .end method

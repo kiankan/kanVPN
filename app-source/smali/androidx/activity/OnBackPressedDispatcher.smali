@@ -12,7 +12,7 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000N\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0018\u00002\u00020\u0001:\u0001 B!\u0012\u0008\u0010\u0002\u001a\u0004\u0018\u00010\u0003\u0012\u000e\u0010\u0004\u001a\n\u0012\u0004\u0012\u00020\u0006\u0018\u00010\u0005\u00a2\u0006\u0004\u0008\u0007\u0010\u0008B\u0015\u0008\u0017\u0012\n\u0008\u0002\u0010\u0002\u001a\u0004\u0018\u00010\u0003\u00a2\u0006\u0004\u0008\u0007\u0010\tJ\u0010\u0010\u0011\u001a\u00020\u00122\u0006\u0010\u0013\u001a\u00020\u0014H\u0007J\u0010\u0010\u0015\u001a\u00020\u00122\u0006\u0010\u0016\u001a\u00020\u0017H\u0007J\u0018\u0010\u0015\u001a\u00020\u00122\u0006\u0010\u0018\u001a\u00020\u00192\u0006\u0010\u0016\u001a\u00020\u0017H\u0007J\u0008\u0010\n\u001a\u00020\u0006H\u0007J\u0010\u0010\u001a\u001a\u00020\u00122\u0006\u0010\u001b\u001a\u00020\u001cH\u0007J\u0010\u0010\u001d\u001a\u00020\u00122\u0006\u0010\u001b\u001a\u00020\u001cH\u0007J\u0008\u0010\u001e\u001a\u00020\u0012H\u0007J\u0008\u0010\u001f\u001a\u00020\u0012H\u0007R\u0010\u0010\u0002\u001a\u0004\u0018\u00010\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0016\u0010\u0004\u001a\n\u0012\u0004\u0012\u00020\u0006\u0018\u00010\u0005X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u0006X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u000b\u001a\u00020\u000cX\u0080\u0004\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\r\u0010\u000eR\u0012\u0010\u000f\u001a\u00060\u0010R\u00020\u0000X\u0082\u0004\u00a2\u0006\u0002\n\u0000\u00a8\u0006!"
+        "\u0000P\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0018\u00002\u00020\u0001:\u0001$B!\u0012\u0008\u0010\u0002\u001a\u0004\u0018\u00010\u0003\u0012\u000e\u0010\u0004\u001a\n\u0012\u0004\u0012\u00020\u0006\u0018\u00010\u0005\u00a2\u0006\u0004\u0008\u0007\u0010\u0008B\u0015\u0008\u0017\u0012\n\u0008\u0002\u0010\u0002\u001a\u0004\u0018\u00010\u0003\u00a2\u0006\u0004\u0008\u0007\u0010\tJ\u0010\u0010\u0015\u001a\u00020\u00162\u0006\u0010\u0017\u001a\u00020\u0018H\u0007J\u0010\u0010\u0019\u001a\u00020\u00162\u0006\u0010\u001a\u001a\u00020\u001bH\u0007J\u0018\u0010\u0019\u001a\u00020\u00162\u0006\u0010\u001c\u001a\u00020\u001d2\u0006\u0010\u001a\u001a\u00020\u001bH\u0007J\u0008\u0010\n\u001a\u00020\u0006H\u0007J\u0010\u0010\u001e\u001a\u00020\u00162\u0006\u0010\u001f\u001a\u00020 H\u0007J\u0010\u0010!\u001a\u00020\u00162\u0006\u0010\u001f\u001a\u00020 H\u0007J\u0008\u0010\"\u001a\u00020\u0016H\u0007J\u0008\u0010#\u001a\u00020\u0016H\u0007R\u0010\u0010\u0002\u001a\u0004\u0018\u00010\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0016\u0010\u0004\u001a\n\u0012\u0004\u0012\u00020\u0006\u0018\u00010\u0005X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u0006X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001f\u0010\u000b\u001a\u00060\u000cR\u00020\u00008BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u000f\u0010\u0010\u001a\u0004\u0008\r\u0010\u000eR\u0014\u0010\u0011\u001a\u00020\u00128@X\u0080\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u0013\u0010\u0014\u00a8\u0006%"
     }
     d2 = {
         "Landroidx/activity/OnBackPressedDispatcher;",
@@ -26,12 +26,16 @@
         "(Ljava/lang/Runnable;Landroidx/core/util/Consumer;)V",
         "(Ljava/lang/Runnable;)V",
         "hasEnabledCallbacks",
+        "eventInput",
+        "Landroidx/activity/OnBackPressedDispatcher$OnBackPressedEventInput;",
+        "getEventInput",
+        "()Landroidx/activity/OnBackPressedDispatcher$OnBackPressedEventInput;",
+        "eventInput$delegate",
+        "Lkotlin/Lazy;",
         "eventDispatcher",
         "Landroidx/navigationevent/NavigationEventDispatcher;",
         "getEventDispatcher$activity",
         "()Landroidx/navigationevent/NavigationEventDispatcher;",
-        "eventInput",
-        "Landroidx/activity/OnBackPressedDispatcher$OnBackPressedEventInput;",
         "setOnBackInvokedDispatcher",
         "",
         "invoker",
@@ -53,7 +57,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -61,9 +65,7 @@
 
 
 # instance fields
-.field private final eventDispatcher:Landroidx/navigationevent/NavigationEventDispatcher;
-
-.field private final eventInput:Landroidx/activity/OnBackPressedDispatcher$OnBackPressedEventInput;
+.field private final eventInput$delegate:Lkotlin/Lazy;
 
 .field private final fallbackOnBackPressed:Ljava/lang/Runnable;
 
@@ -81,14 +83,6 @@
 
 
 # direct methods
-.method public static synthetic $r8$lambda$P3kz-RLc-daaeV_hw-lzaGZuvuU(Landroidx/activity/OnBackPressedDispatcher;)V
-    .locals 0
-
-    invoke-static {p0}, Landroidx/activity/OnBackPressedDispatcher;->eventDispatcher$lambda$0(Landroidx/activity/OnBackPressedDispatcher;)V
-
-    return-void
-.end method
-
 .method public constructor <init>()V
     .locals 2
 
@@ -106,7 +100,7 @@
 
     const/4 v0, 0x0
 
-    .line 98
+    .line 94
     invoke-direct {p0, p1, v0}, Landroidx/activity/OnBackPressedDispatcher;-><init>(Ljava/lang/Runnable;Landroidx/core/util/Consumer;)V
 
     return-void
@@ -121,7 +115,7 @@
 
     const/4 p1, 0x0
 
-    .line 98
+    .line 94
     :cond_0
     invoke-direct {p0, p1}, Landroidx/activity/OnBackPressedDispatcher;-><init>(Ljava/lang/Runnable;)V
 
@@ -149,30 +143,27 @@
     .line 72
     iput-object p2, p0, Landroidx/activity/OnBackPressedDispatcher;->onHasEnabledCallbacksChanged:Landroidx/core/util/Consumer;
 
-    .line 84
-    new-instance p1, Landroidx/navigationevent/NavigationEventDispatcher;
+    .line 81
+    new-instance p1, Landroidx/activity/OnBackPressedDispatcher$$ExternalSyntheticLambda0;
 
-    new-instance p2, Landroidx/activity/OnBackPressedDispatcher$$ExternalSyntheticLambda0;
+    invoke-direct {p1, p0}, Landroidx/activity/OnBackPressedDispatcher$$ExternalSyntheticLambda0;-><init>(Landroidx/activity/OnBackPressedDispatcher;)V
 
-    invoke-direct {p2, p0}, Landroidx/activity/OnBackPressedDispatcher$$ExternalSyntheticLambda0;-><init>(Landroidx/activity/OnBackPressedDispatcher;)V
+    invoke-static {p1}, Lkotlin/LazyKt;->lazy(Lkotlin/jvm/functions/Function0;)Lkotlin/Lazy;
 
-    invoke-direct {p1, p2}, Landroidx/navigationevent/NavigationEventDispatcher;-><init>(Landroidx/navigationevent/OnBackCompletedFallback;)V
+    move-result-object p1
 
-    iput-object p1, p0, Landroidx/activity/OnBackPressedDispatcher;->eventDispatcher:Landroidx/navigationevent/NavigationEventDispatcher;
-
-    .line 90
-    new-instance p2, Landroidx/activity/OnBackPressedDispatcher$OnBackPressedEventInput;
-
-    invoke-direct {p2, p0}, Landroidx/activity/OnBackPressedDispatcher$OnBackPressedEventInput;-><init>(Landroidx/activity/OnBackPressedDispatcher;)V
-
-    iput-object p2, p0, Landroidx/activity/OnBackPressedDispatcher;->eventInput:Landroidx/activity/OnBackPressedDispatcher$OnBackPressedEventInput;
-
-    .line 94
-    check-cast p2, Landroidx/navigationevent/NavigationEventInput;
-
-    invoke-virtual {p1, p2}, Landroidx/navigationevent/NavigationEventDispatcher;->addInput(Landroidx/navigationevent/NavigationEventInput;)V
+    iput-object p1, p0, Landroidx/activity/OnBackPressedDispatcher;->eventInput$delegate:Lkotlin/Lazy;
 
     return-void
+.end method
+
+.method public static final synthetic access$getFallbackOnBackPressed$p(Landroidx/activity/OnBackPressedDispatcher;)Ljava/lang/Runnable;
+    .locals 0
+
+    .line 70
+    iget-object p0, p0, Landroidx/activity/OnBackPressedDispatcher;->fallbackOnBackPressed:Ljava/lang/Runnable;
+
+    return-object p0
 .end method
 
 .method public static final synthetic access$getOnHasEnabledCallbacksChanged$p(Landroidx/activity/OnBackPressedDispatcher;)Landroidx/core/util/Consumer;
@@ -193,30 +184,53 @@
     return-void
 .end method
 
-.method private static final eventDispatcher$lambda$0(Landroidx/activity/OnBackPressedDispatcher;)V
+.method static final addCallback$lambda$0(Landroidx/lifecycle/Lifecycle;Landroidx/activity/OnBackPressedDispatcher$addCallback$observer$1;)V
     .locals 0
 
-    .line 84
-    iget-object p0, p0, Landroidx/activity/OnBackPressedDispatcher;->fallbackOnBackPressed:Ljava/lang/Runnable;
+    .line 214
+    check-cast p1, Landroidx/lifecycle/LifecycleObserver;
 
-    if-eqz p0, :cond_0
+    invoke-virtual {p0, p1}, Landroidx/lifecycle/Lifecycle;->removeObserver(Landroidx/lifecycle/LifecycleObserver;)V
 
-    invoke-interface {p0}, Ljava/lang/Runnable;->run()V
-
-    :cond_0
     return-void
+.end method
+
+.method static final eventInput_delegate$lambda$0(Landroidx/activity/OnBackPressedDispatcher;)Landroidx/activity/OnBackPressedDispatcher$OnBackPressedEventInput;
+    .locals 1
+
+    .line 81
+    new-instance v0, Landroidx/activity/OnBackPressedDispatcher$OnBackPressedEventInput;
+
+    invoke-direct {v0, p0}, Landroidx/activity/OnBackPressedDispatcher$OnBackPressedEventInput;-><init>(Landroidx/activity/OnBackPressedDispatcher;)V
+
+    return-object v0
+.end method
+
+.method private final getEventInput()Landroidx/activity/OnBackPressedDispatcher$OnBackPressedEventInput;
+    .locals 0
+
+    .line 81
+    iget-object p0, p0, Landroidx/activity/OnBackPressedDispatcher;->eventInput$delegate:Lkotlin/Lazy;
+
+    invoke-interface {p0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroidx/activity/OnBackPressedDispatcher$OnBackPressedEventInput;
+
+    return-object p0
 .end method
 
 
 # virtual methods
 .method public final addCallback(Landroidx/activity/OnBackPressedCallback;)V
-    .locals 4
+    .locals 3
 
     const-string v0, "onBackPressedCallback"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 131
+    .line 127
     new-instance v0, Landroidx/activity/OnBackPressedCallbackInfo;
 
     const/4 v1, 0x0
@@ -225,21 +239,23 @@
 
     invoke-direct {v0, p1, v1, v2, v1}, Landroidx/activity/OnBackPressedCallbackInfo;-><init>(Landroidx/activity/OnBackPressedCallback;Landroidx/lifecycle/LifecycleOwner;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 132
+    .line 128
     check-cast v0, Landroidx/navigationevent/NavigationEventInfo;
 
     invoke-virtual {p1, v0}, Landroidx/activity/OnBackPressedCallback;->createNavigationEventHandler$activity(Landroidx/navigationevent/NavigationEventInfo;)Landroidx/activity/OnBackPressedCallback$OnBackPressedEventHandler;
 
     move-result-object p1
 
-    .line 133
-    iget-object v0, p0, Landroidx/activity/OnBackPressedDispatcher;->eventDispatcher:Landroidx/navigationevent/NavigationEventDispatcher;
+    .line 129
+    invoke-virtual {p0}, Landroidx/activity/OnBackPressedDispatcher;->getEventDispatcher$activity()Landroidx/navigationevent/NavigationEventDispatcher;
+
+    move-result-object p0
 
     check-cast p1, Landroidx/navigationevent/NavigationEventHandler;
 
-    const/4 v3, 0x0
+    const/4 v0, 0x0
 
-    invoke-static {v0, p1, v3, v2, v1}, Landroidx/navigationevent/NavigationEventDispatcher;->addHandler$default(Landroidx/navigationevent/NavigationEventDispatcher;Landroidx/navigationevent/NavigationEventHandler;IILjava/lang/Object;)V
+    invoke-static {p0, p1, v0, v2, v1}, Landroidx/navigationevent/NavigationEventDispatcher;->addHandler$default(Landroidx/navigationevent/NavigationEventDispatcher;Landroidx/navigationevent/NavigationEventHandler;IILjava/lang/Object;)V
 
     return-void
 .end method
@@ -247,7 +263,7 @@
 .method public final addCallback(Landroidx/lifecycle/LifecycleOwner;Landroidx/activity/OnBackPressedCallback;)V
     .locals 6
 
-    const-string v0, "owner"
+    const-string/jumbo v0, "owner"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -255,12 +271,12 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 161
+    .line 157
     invoke-interface {p1}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object v0
 
-    .line 163
+    .line 159
     invoke-virtual {v0}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object v1
@@ -271,13 +287,13 @@
 
     return-void
 
-    .line 167
+    .line 163
     :cond_0
     new-instance v1, Landroidx/activity/OnBackPressedCallbackInfo;
 
     invoke-direct {v1, p2, p1}, Landroidx/activity/OnBackPressedCallbackInfo;-><init>(Landroidx/activity/OnBackPressedCallback;Landroidx/lifecycle/LifecycleOwner;)V
 
-    .line 168
+    .line 164
     check-cast v1, Landroidx/navigationevent/NavigationEventInfo;
 
     invoke-virtual {p2, v1}, Landroidx/activity/OnBackPressedCallback;->createNavigationEventHandler$activity(Landroidx/navigationevent/NavigationEventInfo;)Landroidx/activity/OnBackPressedCallback$OnBackPressedEventHandler;
@@ -291,11 +307,13 @@
 
     const/4 v1, 0x0
 
-    .line 172
+    .line 171
     invoke-virtual {p1, v1}, Landroidx/activity/OnBackPressedCallback$OnBackPressedEventHandler;->setLifecycleActive(Z)V
 
-    .line 175
-    iget-object v2, p0, Landroidx/activity/OnBackPressedDispatcher;->eventDispatcher:Landroidx/navigationevent/NavigationEventDispatcher;
+    .line 173
+    invoke-virtual {p0}, Landroidx/activity/OnBackPressedDispatcher;->getEventDispatcher$activity()Landroidx/navigationevent/NavigationEventDispatcher;
+
+    move-result-object v2
 
     move-object v3, p1
 
@@ -307,34 +325,38 @@
 
     invoke-static {v2, v3, v1, v4, v5}, Landroidx/navigationevent/NavigationEventDispatcher;->addHandler$default(Landroidx/navigationevent/NavigationEventDispatcher;Landroidx/navigationevent/NavigationEventHandler;IILjava/lang/Object;)V
 
-    .line 180
+    .line 178
     :cond_1
-    new-instance v1, Landroidx/activity/OnBackPressedDispatcher$addCallback$lifecycleObserver$1;
+    new-instance v1, Landroidx/activity/OnBackPressedDispatcher$addCallback$observer$1;
 
-    invoke-direct {v1, p1, p0, v0}, Landroidx/activity/OnBackPressedDispatcher$addCallback$lifecycleObserver$1;-><init>(Landroidx/activity/OnBackPressedCallback$OnBackPressedEventHandler;Landroidx/activity/OnBackPressedDispatcher;Landroidx/lifecycle/Lifecycle;)V
+    invoke-direct {v1, p1, p0, v0}, Landroidx/activity/OnBackPressedDispatcher$addCallback$observer$1;-><init>(Landroidx/activity/OnBackPressedCallback$OnBackPressedEventHandler;Landroidx/activity/OnBackPressedDispatcher;Landroidx/lifecycle/Lifecycle;)V
 
-    .line 215
-    move-object p1, v1
+    .line 211
+    move-object p0, v1
 
-    check-cast p1, Landroidx/lifecycle/LifecycleObserver;
+    check-cast p0, Landroidx/lifecycle/LifecycleObserver;
 
-    invoke-virtual {v0, p1}, Landroidx/lifecycle/Lifecycle;->addObserver(Landroidx/lifecycle/LifecycleObserver;)V
+    invoke-virtual {v0, p0}, Landroidx/lifecycle/Lifecycle;->addObserver(Landroidx/lifecycle/LifecycleObserver;)V
 
-    .line 217
-    check-cast v1, Ljava/lang/AutoCloseable;
+    .line 212
+    new-instance p0, Landroidx/activity/OnBackPressedDispatcher$$ExternalSyntheticLambda1;
 
-    invoke-virtual {p2, v1}, Landroidx/activity/OnBackPressedCallback;->addCloseable$activity(Ljava/lang/AutoCloseable;)V
+    invoke-direct {p0, v0, v1}, Landroidx/activity/OnBackPressedDispatcher$$ExternalSyntheticLambda1;-><init>(Landroidx/lifecycle/Lifecycle;Landroidx/activity/OnBackPressedDispatcher$addCallback$observer$1;)V
+
+    invoke-virtual {p2, p0}, Landroidx/activity/OnBackPressedCallback;->addCloseable$activity(Ljava/lang/AutoCloseable;)V
 
     return-void
 .end method
 
 .method public final dispatchOnBackCancelled()V
-    .locals 1
+    .locals 0
 
-    .line 256
-    iget-object v0, p0, Landroidx/activity/OnBackPressedDispatcher;->eventInput:Landroidx/activity/OnBackPressedDispatcher$OnBackPressedEventInput;
+    .line 254
+    invoke-direct {p0}, Landroidx/activity/OnBackPressedDispatcher;->getEventInput()Landroidx/activity/OnBackPressedDispatcher$OnBackPressedEventInput;
 
-    invoke-virtual {v0}, Landroidx/activity/OnBackPressedDispatcher$OnBackPressedEventInput;->backCancelled()V
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroidx/activity/OnBackPressedDispatcher$OnBackPressedEventInput;->backCancelled()V
 
     return-void
 .end method
@@ -346,14 +368,16 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 237
-    iget-object v0, p0, Landroidx/activity/OnBackPressedDispatcher;->eventInput:Landroidx/activity/OnBackPressedDispatcher$OnBackPressedEventInput;
+    .line 235
+    invoke-direct {p0}, Landroidx/activity/OnBackPressedDispatcher;->getEventInput()Landroidx/activity/OnBackPressedDispatcher$OnBackPressedEventInput;
+
+    move-result-object p0
 
     invoke-virtual {p1}, Landroidx/activity/BackEventCompat;->toNavigationEvent()Landroidx/navigationevent/NavigationEvent;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Landroidx/activity/OnBackPressedDispatcher$OnBackPressedEventInput;->backProgressed(Landroidx/navigationevent/NavigationEvent;)V
+    invoke-virtual {p0, p1}, Landroidx/activity/OnBackPressedDispatcher$OnBackPressedEventInput;->backProgressed(Landroidx/navigationevent/NavigationEvent;)V
 
     return-void
 .end method
@@ -365,43 +389,53 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 231
-    iget-object v0, p0, Landroidx/activity/OnBackPressedDispatcher;->eventInput:Landroidx/activity/OnBackPressedDispatcher$OnBackPressedEventInput;
+    .line 229
+    invoke-direct {p0}, Landroidx/activity/OnBackPressedDispatcher;->getEventInput()Landroidx/activity/OnBackPressedDispatcher$OnBackPressedEventInput;
+
+    move-result-object p0
 
     invoke-virtual {p1}, Landroidx/activity/BackEventCompat;->toNavigationEvent()Landroidx/navigationevent/NavigationEvent;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Landroidx/activity/OnBackPressedDispatcher$OnBackPressedEventInput;->backStarted(Landroidx/navigationevent/NavigationEvent;)V
+    invoke-virtual {p0, p1}, Landroidx/activity/OnBackPressedDispatcher$OnBackPressedEventInput;->backStarted(Landroidx/navigationevent/NavigationEvent;)V
 
     return-void
 .end method
 
 .method public final getEventDispatcher$activity()Landroidx/navigationevent/NavigationEventDispatcher;
-    .locals 1
+    .locals 0
 
-    .line 84
-    iget-object v0, p0, Landroidx/activity/OnBackPressedDispatcher;->eventDispatcher:Landroidx/navigationevent/NavigationEventDispatcher;
+    .line 91
+    invoke-direct {p0}, Landroidx/activity/OnBackPressedDispatcher;->getEventInput()Landroidx/activity/OnBackPressedDispatcher$OnBackPressedEventInput;
 
-    return-object v0
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroidx/activity/OnBackPressedDispatcher$OnBackPressedEventInput;->getDispatcher()Landroidx/navigationevent/NavigationEventDispatcher;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method public final hasEnabledCallbacks()Z
-    .locals 1
+    .locals 0
 
-    .line 226
-    iget-boolean v0, p0, Landroidx/activity/OnBackPressedDispatcher;->hasEnabledCallbacks:Z
+    .line 224
+    iget-boolean p0, p0, Landroidx/activity/OnBackPressedDispatcher;->hasEnabledCallbacks:Z
 
-    return v0
+    return p0
 .end method
 
 .method public final onBackPressed()V
-    .locals 1
+    .locals 0
 
-    .line 250
-    iget-object v0, p0, Landroidx/activity/OnBackPressedDispatcher;->eventInput:Landroidx/activity/OnBackPressedDispatcher$OnBackPressedEventInput;
+    .line 248
+    invoke-direct {p0}, Landroidx/activity/OnBackPressedDispatcher;->getEventInput()Landroidx/activity/OnBackPressedDispatcher$OnBackPressedEventInput;
 
-    invoke-virtual {v0}, Landroidx/activity/OnBackPressedDispatcher$OnBackPressedEventInput;->backCompleted()V
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroidx/activity/OnBackPressedDispatcher$OnBackPressedEventInput;->backCompleted()V
 
     return-void
 .end method
@@ -413,10 +447,12 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 107
-    iget-object v0, p0, Landroidx/activity/OnBackPressedDispatcher;->eventDispatcher:Landroidx/navigationevent/NavigationEventDispatcher;
+    .line 103
+    invoke-virtual {p0}, Landroidx/activity/OnBackPressedDispatcher;->getEventDispatcher$activity()Landroidx/navigationevent/NavigationEventDispatcher;
 
-    .line 108
+    move-result-object v0
+
+    .line 104
     new-instance v1, Landroidx/navigationevent/OnBackInvokedDefaultInput;
 
     invoke-direct {v1, p1}, Landroidx/navigationevent/OnBackInvokedDefaultInput;-><init>(Landroid/window/OnBackInvokedDispatcher;)V
@@ -425,23 +461,25 @@
 
     const/4 v2, 0x1
 
-    .line 107
+    .line 103
     invoke-virtual {v0, v1, v2}, Landroidx/navigationevent/NavigationEventDispatcher;->addInput(Landroidx/navigationevent/NavigationEventInput;I)V
 
-    .line 111
-    iget-object v0, p0, Landroidx/activity/OnBackPressedDispatcher;->eventDispatcher:Landroidx/navigationevent/NavigationEventDispatcher;
+    .line 107
+    invoke-virtual {p0}, Landroidx/activity/OnBackPressedDispatcher;->getEventDispatcher$activity()Landroidx/navigationevent/NavigationEventDispatcher;
 
-    .line 112
-    new-instance v1, Landroidx/navigationevent/OnBackInvokedOverlayInput;
+    move-result-object p0
 
-    invoke-direct {v1, p1}, Landroidx/navigationevent/OnBackInvokedOverlayInput;-><init>(Landroid/window/OnBackInvokedDispatcher;)V
+    .line 108
+    new-instance v0, Landroidx/navigationevent/OnBackInvokedOverlayInput;
 
-    check-cast v1, Landroidx/navigationevent/NavigationEventInput;
+    invoke-direct {v0, p1}, Landroidx/navigationevent/OnBackInvokedOverlayInput;-><init>(Landroid/window/OnBackInvokedDispatcher;)V
+
+    check-cast v0, Landroidx/navigationevent/NavigationEventInput;
 
     const/4 p1, 0x0
 
-    .line 111
-    invoke-virtual {v0, v1, p1}, Landroidx/navigationevent/NavigationEventDispatcher;->addInput(Landroidx/navigationevent/NavigationEventInput;I)V
+    .line 107
+    invoke-virtual {p0, v0, p1}, Landroidx/navigationevent/NavigationEventDispatcher;->addInput(Landroidx/navigationevent/NavigationEventInput;I)V
 
     return-void
 .end method

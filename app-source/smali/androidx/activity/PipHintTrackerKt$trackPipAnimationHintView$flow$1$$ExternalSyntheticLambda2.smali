@@ -37,7 +37,7 @@
 
 # virtual methods
 .method public final invoke()Ljava/lang/Object;
-    .locals 4
+    .locals 3
 
     .line 0
     iget-object v0, p0, Landroidx/activity/PipHintTrackerKt$trackPipAnimationHintView$flow$1$$ExternalSyntheticLambda2;->f$0:Landroid/view/View;
@@ -46,11 +46,11 @@
 
     iget-object v2, p0, Landroidx/activity/PipHintTrackerKt$trackPipAnimationHintView$flow$1$$ExternalSyntheticLambda2;->f$2:Landroid/view/View$OnLayoutChangeListener;
 
-    iget-object v3, p0, Landroidx/activity/PipHintTrackerKt$trackPipAnimationHintView$flow$1$$ExternalSyntheticLambda2;->f$3:Landroidx/activity/PipHintTrackerKt$trackPipAnimationHintView$flow$1$attachStateChangeListener$1;
+    iget-object p0, p0, Landroidx/activity/PipHintTrackerKt$trackPipAnimationHintView$flow$1$$ExternalSyntheticLambda2;->f$3:Landroidx/activity/PipHintTrackerKt$trackPipAnimationHintView$flow$1$attachStateChangeListener$1;
 
-    invoke-static {v0, v1, v2, v3}, Landroidx/activity/PipHintTrackerKt$trackPipAnimationHintView$flow$1;->$r8$lambda$JlDmmAtrK939XIgV9x1wNcsCteM(Landroid/view/View;Landroid/view/ViewTreeObserver$OnScrollChangedListener;Landroid/view/View$OnLayoutChangeListener;Landroidx/activity/PipHintTrackerKt$trackPipAnimationHintView$flow$1$attachStateChangeListener$1;)Lkotlin/Unit;
+    invoke-static {v0, v1, v2, p0}, Landroidx/activity/PipHintTrackerKt$trackPipAnimationHintView$flow$1;->invokeSuspend$lambda$2(Landroid/view/View;Landroid/view/ViewTreeObserver$OnScrollChangedListener;Landroid/view/View$OnLayoutChangeListener;Landroidx/activity/PipHintTrackerKt$trackPipAnimationHintView$flow$1$attachStateChangeListener$1;)Lkotlin/Unit;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

@@ -25,12 +25,12 @@
 
 # virtual methods
 .method public final run()V
-    .locals 1
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer$CacheAnalyzingImageProxy$$ExternalSyntheticLambda1;->f$0:Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer;
+    iget-object p0, p0, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer$CacheAnalyzingImageProxy$$ExternalSyntheticLambda1;->f$0:Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer;
 
-    invoke-static {v0}, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer$CacheAnalyzingImageProxy;->lambda$new$0(Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer;)V
+    invoke-static {p0}, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer$CacheAnalyzingImageProxy;->lambda$new$0(Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer;)V
 
     return-void
 .end method

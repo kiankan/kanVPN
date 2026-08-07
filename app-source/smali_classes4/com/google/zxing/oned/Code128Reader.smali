@@ -2275,7 +2275,7 @@
 
     const/4 v15, 0x6
 
-    move/from16 p3, v5
+    move/from16 p0, v5
 
     .line 272
     new-array v5, v15, [I
@@ -2460,7 +2460,7 @@
 
     if-ne v2, v10, :cond_a
 
-    move/from16 v21, p3
+    move/from16 v21, p0
 
     :cond_a
     :goto_5
@@ -2580,7 +2580,7 @@
 
     if-ne v2, v10, :cond_12
 
-    move/from16 v21, p3
+    move/from16 v21, p0
 
     :cond_12
     :goto_9
@@ -2734,7 +2734,7 @@
 
     if-ne v10, v12, :cond_1b
 
-    move/from16 v21, p3
+    move/from16 v21, p0
 
     :cond_1b
     :goto_e
@@ -2954,7 +2954,7 @@
 
     move-result-object v4
 
-    move/from16 v5, p3
+    move/from16 v5, p0
 
     new-array v5, v5, [Lcom/google/zxing/ResultPoint;
 

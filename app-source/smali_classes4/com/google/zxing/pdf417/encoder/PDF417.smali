@@ -3520,41 +3520,41 @@
 
     .line 672
     :cond_1
-    new-instance p2, Lcom/google/zxing/WriterException;
+    new-instance p0, Lcom/google/zxing/WriterException;
 
-    new-instance p3, Ljava/lang/StringBuilder;
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    const-string v0, "Encoded message contains too many code words, message too big ("
+    const-string p3, "Encoded message contains too many code words, message too big ("
 
-    invoke-direct {p3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 673
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result p1
 
-    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string p1, " bytes)"
 
-    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {p2, p1}, Lcom/google/zxing/WriterException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcom/google/zxing/WriterException;-><init>(Ljava/lang/String;)V
 
-    throw p2
+    throw p0
 .end method
 
 .method public getBarcodeMatrix()Lcom/google/zxing/pdf417/encoder/BarcodeMatrix;
-    .locals 1
+    .locals 0
 
     .line 539
-    iget-object v0, p0, Lcom/google/zxing/pdf417/encoder/PDF417;->barcodeMatrix:Lcom/google/zxing/pdf417/encoder/BarcodeMatrix;
+    iget-object p0, p0, Lcom/google/zxing/pdf417/encoder/PDF417;->barcodeMatrix:Lcom/google/zxing/pdf417/encoder/BarcodeMatrix;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public setCompact(Z)V

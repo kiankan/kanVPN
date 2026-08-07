@@ -315,47 +315,47 @@
 
 # virtual methods
 .method addEdge([[[Lcom/google/zxing/qrcode/encoder/MinimalEncoder$Edge;ILcom/google/zxing/qrcode/encoder/MinimalEncoder$Edge;)V
-    .locals 2
+    .locals 1
 
     .line 212
     invoke-static {p3}, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$Edge;->access$000(Lcom/google/zxing/qrcode/encoder/MinimalEncoder$Edge;)I
 
-    move-result v0
+    move-result p0
 
-    add-int/2addr p2, v0
+    add-int/2addr p2, p0
 
     .line 213
-    aget-object p1, p1, p2
+    aget-object p0, p1, p2
 
     invoke-static {p3}, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$Edge;->access$100(Lcom/google/zxing/qrcode/encoder/MinimalEncoder$Edge;)I
 
-    move-result p2
+    move-result p1
 
-    aget-object p1, p1, p2
+    aget-object p0, p0, p1
 
     .line 214
     invoke-static {p3}, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$Edge;->access$200(Lcom/google/zxing/qrcode/encoder/MinimalEncoder$Edge;)Lcom/google/zxing/qrcode/decoder/Mode;
 
-    move-result-object p2
+    move-result-object p1
 
-    invoke-static {p2}, Lcom/google/zxing/qrcode/encoder/MinimalEncoder;->getCompactedOrdinal(Lcom/google/zxing/qrcode/decoder/Mode;)I
+    invoke-static {p1}, Lcom/google/zxing/qrcode/encoder/MinimalEncoder;->getCompactedOrdinal(Lcom/google/zxing/qrcode/decoder/Mode;)I
+
+    move-result p1
+
+    .line 215
+    aget-object p2, p0, p1
+
+    if-eqz p2, :cond_1
+
+    invoke-static {p2}, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$Edge;->access$300(Lcom/google/zxing/qrcode/encoder/MinimalEncoder$Edge;)I
 
     move-result p2
 
-    .line 215
-    aget-object v0, p1, p2
-
-    if-eqz v0, :cond_1
-
-    invoke-static {v0}, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$Edge;->access$300(Lcom/google/zxing/qrcode/encoder/MinimalEncoder$Edge;)I
+    invoke-static {p3}, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$Edge;->access$300(Lcom/google/zxing/qrcode/encoder/MinimalEncoder$Edge;)I
 
     move-result v0
 
-    invoke-static {p3}, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$Edge;->access$300(Lcom/google/zxing/qrcode/encoder/MinimalEncoder$Edge;)I
-
-    move-result v1
-
-    if-le v0, v1, :cond_0
+    if-le p2, v0, :cond_0
 
     goto :goto_0
 
@@ -365,7 +365,7 @@
     .line 216
     :cond_1
     :goto_0
-    aput-object p3, p1, p2
+    aput-object p3, p0, p1
 
     return-void
 .end method
@@ -673,63 +673,63 @@
 .end method
 
 .method canEncode(Lcom/google/zxing/qrcode/decoder/Mode;C)Z
-    .locals 2
+    .locals 1
 
     .line 182
-    sget-object v0, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$1;->$SwitchMap$com$google$zxing$qrcode$decoder$Mode:[I
+    sget-object p0, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$1;->$SwitchMap$com$google$zxing$qrcode$decoder$Mode:[I
 
     invoke-virtual {p1}, Lcom/google/zxing/qrcode/decoder/Mode;->ordinal()I
 
     move-result p1
 
-    aget p1, v0, p1
+    aget p0, p0, p1
 
-    const/4 v0, 0x1
+    const/4 p1, 0x1
 
-    if-eq p1, v0, :cond_3
+    if-eq p0, p1, :cond_3
 
-    const/4 v1, 0x2
+    const/4 v0, 0x2
 
-    if-eq p1, v1, :cond_2
+    if-eq p0, v0, :cond_2
 
-    const/4 v1, 0x3
+    const/4 v0, 0x3
 
-    if-eq p1, v1, :cond_1
+    if-eq p0, v0, :cond_1
 
     const/4 p2, 0x4
 
-    if-eq p1, p2, :cond_0
+    if-eq p0, p2, :cond_0
 
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 
     :cond_0
-    return v0
+    return p1
 
     .line 185
     :cond_1
     invoke-static {p2}, Lcom/google/zxing/qrcode/encoder/MinimalEncoder;->isNumeric(C)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 
     .line 184
     :cond_2
     invoke-static {p2}, Lcom/google/zxing/qrcode/encoder/MinimalEncoder;->isAlphanumeric(C)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 
     .line 183
     :cond_3
     invoke-static {p2}, Lcom/google/zxing/qrcode/encoder/MinimalEncoder;->isDoubleByteKanji(C)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method encode(Lcom/google/zxing/qrcode/decoder/Version;)Lcom/google/zxing/qrcode/encoder/MinimalEncoder$ResultList;
@@ -848,19 +848,19 @@
     if-ltz v4, :cond_2
 
     .line 142
-    aget-object p1, v1, v4
+    aget-object p0, v1, v4
 
-    return-object p1
+    return-object p0
 
     .line 140
     :cond_2
-    new-instance p1, Lcom/google/zxing/WriterException;
+    new-instance p0, Lcom/google/zxing/WriterException;
 
-    const-string v0, "Data too big for any version"
+    const-string p1, "Data too big for any version"
 
-    invoke-direct {p1, v0}, Lcom/google/zxing/WriterException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcom/google/zxing/WriterException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
     .line 144
     :cond_3
@@ -885,35 +885,35 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/google/zxing/qrcode/encoder/MinimalEncoder;->ecLevel:Lcom/google/zxing/qrcode/decoder/ErrorCorrectionLevel;
+    iget-object p0, p0, Lcom/google/zxing/qrcode/encoder/MinimalEncoder;->ecLevel:Lcom/google/zxing/qrcode/decoder/ErrorCorrectionLevel;
 
-    invoke-static {v1, v2, v3}, Lcom/google/zxing/qrcode/encoder/Encoder;->willFit(ILcom/google/zxing/qrcode/decoder/Version;Lcom/google/zxing/qrcode/decoder/ErrorCorrectionLevel;)Z
+    invoke-static {v1, v2, p0}, Lcom/google/zxing/qrcode/encoder/Encoder;->willFit(ILcom/google/zxing/qrcode/decoder/Version;Lcom/google/zxing/qrcode/decoder/ErrorCorrectionLevel;)Z
 
-    move-result v1
+    move-result p0
 
-    if-eqz v1, :cond_4
+    if-eqz p0, :cond_4
 
     return-object v0
 
     .line 146
     :cond_4
-    new-instance v0, Lcom/google/zxing/WriterException;
+    new-instance p0, Lcom/google/zxing/WriterException;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v2, "Data too big for version"
+    const-string v1, "Data too big for version"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {v0, p1}, Lcom/google/zxing/WriterException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcom/google/zxing/WriterException;-><init>(Ljava/lang/String;)V
 
-    throw v0
+    throw p0
 .end method
 
 .method encodeSpecificVersion(Lcom/google/zxing/qrcode/decoder/Version;)Lcom/google/zxing/qrcode/encoder/MinimalEncoder$ResultList;
@@ -1107,19 +1107,19 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/google/zxing/qrcode/encoder/MinimalEncoder;->stringToEncode:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/qrcode/encoder/MinimalEncoder;->stringToEncode:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, "\""
+    const-string p0, "\""
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-direct {p1, v0}, Lcom/google/zxing/WriterException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p0}, Lcom/google/zxing/WriterException;-><init>(Ljava/lang/String;)V
 
     throw p1
 .end method

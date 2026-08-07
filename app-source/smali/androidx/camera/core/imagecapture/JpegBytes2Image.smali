@@ -28,7 +28,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 36
+    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,7 +37,7 @@
 
 # virtual methods
 .method public apply(Landroidx/camera/core/processing/Packet;)Landroidx/camera/core/processing/Packet;
-    .locals 7
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -55,99 +55,99 @@
         }
     .end annotation
 
-    .line 45
-    new-instance v0, Landroidx/camera/core/SafeCloseImageReaderProxy;
-
-    .line 47
-    invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getSize()Landroid/util/Size;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/util/Size;->getWidth()I
-
-    move-result v1
+    .line 46
+    new-instance p0, Landroidx/camera/core/SafeCloseImageReaderProxy;
 
     .line 48
     invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getSize()Landroid/util/Size;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v2}, Landroid/util/Size;->getHeight()I
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
 
-    move-result v2
+    move-result v0
 
-    const/16 v3, 0x100
-
-    const/4 v4, 0x2
-
-    .line 46
-    invoke-static {v1, v2, v3, v4}, Landroidx/camera/core/ImageReaderProxys;->createIsolatedReader(IIII)Landroidx/camera/core/impl/ImageReaderProxy;
+    .line 49
+    invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getSize()Landroid/util/Size;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Landroidx/camera/core/SafeCloseImageReaderProxy;-><init>(Landroidx/camera/core/impl/ImageReaderProxy;)V
+    invoke-virtual {v1}, Landroid/util/Size;->getHeight()I
 
-    .line 51
-    invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getData()Ljava/lang/Object;
+    move-result v1
 
-    move-result-object v1
+    const/16 v2, 0x100
 
-    check-cast v1, [B
+    const/4 v3, 0x2
 
-    invoke-static {v0, v1}, Landroidx/camera/core/ImageProcessingUtil;->convertJpegBytesToImage(Landroidx/camera/core/impl/ImageReaderProxy;[B)Landroidx/camera/core/ImageProxy;
+    .line 47
+    invoke-static {v0, v1, v2, v3}, Landroidx/camera/core/ImageReaderProxys;->createIsolatedReader(IIII)Landroidx/camera/core/impl/ImageReaderProxy;
 
-    move-result-object v1
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Landroidx/camera/core/SafeCloseImageReaderProxy;-><init>(Landroidx/camera/core/impl/ImageReaderProxy;)V
 
     .line 52
-    invoke-virtual {v0}, Landroidx/camera/core/SafeCloseImageReaderProxy;->safeClose()V
-
-    .line 54
-    invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getData()Ljava/lang/Object;
 
     move-result-object v0
 
-    move-object v1, v0
+    check-cast v0, [B
 
-    check-cast v1, Landroidx/camera/core/ImageProxy;
+    invoke-static {p0, v0}, Landroidx/camera/core/ImageProcessingUtil;->convertJpegBytesToImage(Landroidx/camera/core/impl/ImageReaderProxy;[B)Landroidx/camera/core/ImageProxy;
+
+    move-result-object v0
+
+    .line 53
+    invoke-virtual {p0}, Landroidx/camera/core/SafeCloseImageReaderProxy;->safeClose()V
 
     .line 55
-    invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getExif()Landroidx/camera/core/impl/utils/Exif;
-
-    move-result-object v0
-
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    move-object v2, v0
+    move-object v0, p0
 
-    check-cast v2, Landroidx/camera/core/impl/utils/Exif;
+    check-cast v0, Landroidx/camera/core/ImageProxy;
 
     .line 56
-    invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getCropRect()Landroid/graphics/Rect;
+    invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getExif()Landroidx/camera/core/impl/utils/Exif;
 
-    move-result-object v3
+    move-result-object p0
+
+    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    move-object v1, p0
+
+    check-cast v1, Landroidx/camera/core/impl/utils/Exif;
 
     .line 57
+    invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getCropRect()Landroid/graphics/Rect;
+
+    move-result-object v2
+
+    .line 58
     invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getRotationDegrees()I
 
-    move-result v4
+    move-result v3
 
     invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getSensorToBufferTransform()Landroid/graphics/Matrix;
 
-    move-result-object v5
+    move-result-object v4
 
-    .line 58
+    .line 59
     invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getCameraCaptureResult()Landroidx/camera/core/impl/CameraCaptureResult;
 
-    move-result-object v6
+    move-result-object v5
 
-    .line 53
-    invoke-static/range {v1 .. v6}, Landroidx/camera/core/processing/Packet;->of(Landroidx/camera/core/ImageProxy;Landroidx/camera/core/impl/utils/Exif;Landroid/graphics/Rect;ILandroid/graphics/Matrix;Landroidx/camera/core/impl/CameraCaptureResult;)Landroidx/camera/core/processing/Packet;
+    .line 54
+    invoke-static/range {v0 .. v5}, Landroidx/camera/core/processing/Packet;->of(Landroidx/camera/core/ImageProxy;Landroidx/camera/core/impl/utils/Exif;Landroid/graphics/Rect;ILandroid/graphics/Matrix;Landroidx/camera/core/impl/CameraCaptureResult;)Landroidx/camera/core/processing/Packet;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
@@ -167,12 +167,12 @@
         }
     .end annotation
 
-    .line 36
+    .line 37
     check-cast p1, Landroidx/camera/core/processing/Packet;
 
     invoke-virtual {p0, p1}, Landroidx/camera/core/imagecapture/JpegBytes2Image;->apply(Landroidx/camera/core/processing/Packet;)Landroidx/camera/core/processing/Packet;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

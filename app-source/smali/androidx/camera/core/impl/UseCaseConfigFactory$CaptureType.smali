@@ -42,7 +42,7 @@
 .method private static synthetic $values()[Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
     .locals 6
 
-    .line 31
+    .line 32
     sget-object v0, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->IMAGE_CAPTURE:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
 
     sget-object v1, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->PREVIEW:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
@@ -65,7 +65,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 36
+    .line 37
     new-instance v0, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
 
     const-string v1, "IMAGE_CAPTURE"
@@ -76,7 +76,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->IMAGE_CAPTURE:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
 
-    .line 41
+    .line 42
     new-instance v0, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
 
     const-string v1, "PREVIEW"
@@ -87,7 +87,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->PREVIEW:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
 
-    .line 46
+    .line 47
     new-instance v0, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
 
     const-string v1, "IMAGE_ANALYSIS"
@@ -98,7 +98,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->IMAGE_ANALYSIS:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
 
-    .line 51
+    .line 52
     new-instance v0, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
 
     const-string v1, "VIDEO_CAPTURE"
@@ -109,7 +109,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->VIDEO_CAPTURE:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
 
-    .line 55
+    .line 56
     new-instance v0, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
 
     const-string v1, "STREAM_SHARING"
@@ -120,7 +120,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->STREAM_SHARING:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
 
-    .line 60
+    .line 61
     new-instance v0, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
 
     const-string v1, "METERING_REPEATING"
@@ -131,7 +131,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->METERING_REPEATING:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
 
-    .line 31
+    .line 32
     invoke-static {}, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->$values()[Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
 
     move-result-object v0
@@ -160,7 +160,7 @@
         }
     .end annotation
 
-    .line 31
+    .line 32
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -177,7 +177,7 @@
         }
     .end annotation
 
-    .line 31
+    .line 32
     const-class v0, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -192,7 +192,7 @@
 .method public static values()[Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
     .locals 1
 
-    .line 31
+    .line 32
     sget-object v0, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->$VALUES:[Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
 
     invoke-virtual {v0}, [Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->clone()Ljava/lang/Object;

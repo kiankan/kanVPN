@@ -32,6 +32,14 @@
 # direct methods
 .method constructor <init>(Landroidx/collection/ArrayMap;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            null
+        }
+    .end annotation
 
     .line 378
     iput-object p1, p0, Landroidx/collection/ArrayMap$ValueCollection;->this$0:Landroidx/collection/ArrayMap;
@@ -52,11 +60,11 @@
     .end annotation
 
     .line 381
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    throw p1
+    throw p0
 .end method
 
 .method public addAll(Ljava/util/Collection;)Z
@@ -70,44 +78,44 @@
     .end annotation
 
     .line 386
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    throw p1
+    throw p0
 .end method
 
 .method public clear()V
-    .locals 1
+    .locals 0
 
     .line 391
-    iget-object v0, p0, Landroidx/collection/ArrayMap$ValueCollection;->this$0:Landroidx/collection/ArrayMap;
+    iget-object p0, p0, Landroidx/collection/ArrayMap$ValueCollection;->this$0:Landroidx/collection/ArrayMap;
 
-    invoke-virtual {v0}, Landroidx/collection/ArrayMap;->clear()V
+    invoke-virtual {p0}, Landroidx/collection/ArrayMap;->clear()V
 
     return-void
 .end method
 
 .method public contains(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 0
 
     .line 397
-    iget-object v0, p0, Landroidx/collection/ArrayMap$ValueCollection;->this$0:Landroidx/collection/ArrayMap;
+    iget-object p0, p0, Landroidx/collection/ArrayMap$ValueCollection;->this$0:Landroidx/collection/ArrayMap;
 
-    invoke-virtual {v0, p1}, Landroidx/collection/ArrayMap;->__restricted$indexOfValue(Ljava/lang/Object;)I
+    invoke-virtual {p0, p1}, Landroidx/collection/ArrayMap;->__restricted$indexOfValue(Ljava/lang/Object;)I
 
-    move-result p1
+    move-result p0
 
-    if-ltz p1, :cond_0
+    if-ltz p0, :cond_0
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method public containsAll(Ljava/util/Collection;)Z
@@ -143,31 +151,31 @@
 
     if-nez v0, :cond_0
 
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 
     :cond_1
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 .end method
 
 .method public isEmpty()Z
-    .locals 1
+    .locals 0
 
     .line 412
-    iget-object v0, p0, Landroidx/collection/ArrayMap$ValueCollection;->this$0:Landroidx/collection/ArrayMap;
+    iget-object p0, p0, Landroidx/collection/ArrayMap$ValueCollection;->this$0:Landroidx/collection/ArrayMap;
 
-    invoke-virtual {v0}, Landroidx/collection/ArrayMap;->isEmpty()Z
+    invoke-virtual {p0}, Landroidx/collection/ArrayMap;->isEmpty()Z
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public iterator()Ljava/util/Iterator;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -179,9 +187,9 @@
     .line 418
     new-instance v0, Landroidx/collection/ArrayMap$ValueIterator;
 
-    iget-object v1, p0, Landroidx/collection/ArrayMap$ValueCollection;->this$0:Landroidx/collection/ArrayMap;
+    iget-object p0, p0, Landroidx/collection/ArrayMap$ValueCollection;->this$0:Landroidx/collection/ArrayMap;
 
-    invoke-direct {v0, v1}, Landroidx/collection/ArrayMap$ValueIterator;-><init>(Landroidx/collection/ArrayMap;)V
+    invoke-direct {v0, p0}, Landroidx/collection/ArrayMap$ValueIterator;-><init>(Landroidx/collection/ArrayMap;)V
 
     return-object v0
 .end method
@@ -199,18 +207,18 @@
     if-ltz p1, :cond_0
 
     .line 426
-    iget-object v0, p0, Landroidx/collection/ArrayMap$ValueCollection;->this$0:Landroidx/collection/ArrayMap;
+    iget-object p0, p0, Landroidx/collection/ArrayMap$ValueCollection;->this$0:Landroidx/collection/ArrayMap;
 
-    invoke-virtual {v0, p1}, Landroidx/collection/ArrayMap;->removeAt(I)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Landroidx/collection/ArrayMap;->removeAt(I)Ljava/lang/Object;
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method public removeAll(Ljava/util/Collection;)Z
@@ -334,16 +342,16 @@
 .end method
 
 .method public size()I
-    .locals 1
+    .locals 0
 
     .line 466
-    iget-object v0, p0, Landroidx/collection/ArrayMap$ValueCollection;->this$0:Landroidx/collection/ArrayMap;
+    iget-object p0, p0, Landroidx/collection/ArrayMap$ValueCollection;->this$0:Landroidx/collection/ArrayMap;
 
-    invoke-virtual {v0}, Landroidx/collection/ArrayMap;->size()I
+    invoke-virtual {p0}, Landroidx/collection/ArrayMap;->size()I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public toArray()[Ljava/lang/Object;
@@ -437,14 +445,14 @@
 
     .line 491
     :cond_1
-    array-length v1, p1
+    array-length p0, p1
 
-    if-le v1, v0, :cond_2
+    if-le p0, v0, :cond_2
 
-    const/4 v1, 0x0
+    const/4 p0, 0x0
 
     .line 492
-    aput-object v1, p1, v0
+    aput-object p0, p1, v0
 
     :cond_2
     return-object p1

@@ -4,18 +4,26 @@
 
 
 # virtual methods
+.method public getFlashState()I
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
 .method public abstract getRotationDegrees()I
 .end method
 
 .method public getSensorToBufferTransformMatrix()Landroid/graphics/Matrix;
-    .locals 1
+    .locals 0
 
-    .line 117
-    new-instance v0, Landroid/graphics/Matrix;
+    .line 119
+    new-instance p0, Landroid/graphics/Matrix;
 
-    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
+    invoke-direct {p0}, Landroid/graphics/Matrix;-><init>()V
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public abstract getTagBundle()Landroidx/camera/core/impl/TagBundle;

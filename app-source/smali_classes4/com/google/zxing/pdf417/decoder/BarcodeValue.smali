@@ -36,26 +36,26 @@
 
 # virtual methods
 .method getConfidence(I)Ljava/lang/Integer;
-    .locals 1
+    .locals 0
 
     .line 65
-    iget-object v0, p0, Lcom/google/zxing/pdf417/decoder/BarcodeValue;->values:Ljava/util/Map;
+    iget-object p0, p0, Lcom/google/zxing/pdf417/decoder/BarcodeValue;->values:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Ljava/lang/Integer;
+    check-cast p0, Ljava/lang/Integer;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method getValue()[I
-    .locals 5
+    .locals 4
 
     .line 51
     new-instance v0, Ljava/util/ArrayList;
@@ -63,92 +63,92 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 52
-    iget-object v1, p0, Lcom/google/zxing/pdf417/decoder/BarcodeValue;->values:Ljava/util/Map;
+    iget-object p0, p0, Lcom/google/zxing/pdf417/decoder/BarcodeValue;->values:Ljava/util/Map;
 
-    invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+    invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    move-result-object v1
+    move-result-object p0
 
-    const/4 v2, -0x1
+    const/4 v1, -0x1
 
     :cond_0
     :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v3
+    move-result v2
 
-    if-eqz v3, :cond_2
+    if-eqz v2, :cond_2
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/util/Map$Entry;
-
-    .line 53
-    invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/lang/Integer;
-
-    invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
-
-    move-result v4
-
-    if-le v4, v2, :cond_1
-
-    .line 54
-    invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Ljava/lang/Integer;
+    check-cast v2, Ljava/util/Map$Entry;
 
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+    .line 53
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    move-result v2
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/Integer;
+
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    if-le v3, v1, :cond_1
+
+    .line 54
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Integer;
+
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
 
     .line 55
     invoke-interface {v0}, Ljava/util/Collection;->clear()V
 
     .line 56
-    invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object v2
 
-    check-cast v3, Ljava/lang/Integer;
+    check-cast v2, Ljava/lang/Integer;
 
-    invoke-interface {v0, v3}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
     .line 57
     :cond_1
-    invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/lang/Integer;
-
-    invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
-
-    move-result v4
-
-    if-ne v4, v2, :cond_0
-
-    .line 58
-    invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/lang/Integer;
 
-    invoke-interface {v0, v3}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    if-ne v3, v1, :cond_0
+
+    .line 58
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Integer;
+
+    invoke-interface {v0, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
@@ -156,9 +156,9 @@
     :cond_2
     invoke-static {v0}, Lcom/google/zxing/pdf417/PDF417Common;->toIntArray(Ljava/util/Collection;)[I
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method setValue(I)V
@@ -199,13 +199,13 @@
     move-result-object v0
 
     .line 42
-    iget-object v1, p0, Lcom/google/zxing/pdf417/decoder/BarcodeValue;->values:Ljava/util/Map;
+    iget-object p0, p0, Lcom/google/zxing/pdf417/decoder/BarcodeValue;->values:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

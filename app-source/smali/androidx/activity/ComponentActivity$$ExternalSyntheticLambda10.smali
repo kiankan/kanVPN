@@ -25,14 +25,14 @@
 
 # virtual methods
 .method public final invoke()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Landroidx/activity/ComponentActivity$$ExternalSyntheticLambda10;->f$0:Landroidx/activity/ComponentActivity;
+    iget-object p0, p0, Landroidx/activity/ComponentActivity$$ExternalSyntheticLambda10;->f$0:Landroidx/activity/ComponentActivity;
 
-    invoke-static {v0}, Landroidx/activity/ComponentActivity;->$r8$lambda$G6Thfp3wAqF9QgDIJrKyBT1uzss(Landroidx/activity/ComponentActivity;)Landroidx/lifecycle/SavedStateViewModelFactory;
+    invoke-static {p0}, Landroidx/activity/ComponentActivity;->defaultViewModelProviderFactory_delegate$lambda$0(Landroidx/activity/ComponentActivity;)Landroidx/lifecycle/SavedStateViewModelFactory;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

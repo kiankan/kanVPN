@@ -58,7 +58,7 @@
 
     return v0
 
-    .line 60
+    .line 58
     :cond_0
     instance-of v1, p1, Landroidx/camera/core/ResolutionInfo$ResolutionInfoInternal;
 
@@ -66,10 +66,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 61
+    .line 59
     check-cast p1, Landroidx/camera/core/ResolutionInfo$ResolutionInfoInternal;
 
-    .line 62
+    .line 60
     iget-object v1, p0, Landroidx/camera/core/AutoValue_ResolutionInfo_ResolutionInfoInternal;->resolution:Landroid/util/Size;
 
     invoke-virtual {p1}, Landroidx/camera/core/ResolutionInfo$ResolutionInfoInternal;->getResolution()Landroid/util/Size;
@@ -84,7 +84,7 @@
 
     iget-object v1, p0, Landroidx/camera/core/AutoValue_ResolutionInfo_ResolutionInfoInternal;->cropRect:Landroid/graphics/Rect;
 
-    .line 63
+    .line 61
     invoke-virtual {p1}, Landroidx/camera/core/ResolutionInfo$ResolutionInfoInternal;->getCropRect()Landroid/graphics/Rect;
 
     move-result-object v3
@@ -95,14 +95,14 @@
 
     if-eqz v1, :cond_1
 
-    iget v1, p0, Landroidx/camera/core/AutoValue_ResolutionInfo_ResolutionInfoInternal;->rotationDegrees:I
+    iget p0, p0, Landroidx/camera/core/AutoValue_ResolutionInfo_ResolutionInfoInternal;->rotationDegrees:I
 
-    .line 64
+    .line 62
     invoke-virtual {p1}, Landroidx/camera/core/ResolutionInfo$ResolutionInfoInternal;->getRotationDegrees()I
 
     move-result p1
 
-    if-ne v1, p1, :cond_1
+    if-ne p0, p1, :cond_1
 
     return v0
 
@@ -111,36 +111,36 @@
 .end method
 
 .method getCropRect()Landroid/graphics/Rect;
-    .locals 1
+    .locals 0
 
-    .line 37
-    iget-object v0, p0, Landroidx/camera/core/AutoValue_ResolutionInfo_ResolutionInfoInternal;->cropRect:Landroid/graphics/Rect;
+    .line 35
+    iget-object p0, p0, Landroidx/camera/core/AutoValue_ResolutionInfo_ResolutionInfoInternal;->cropRect:Landroid/graphics/Rect;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method getResolution()Landroid/util/Size;
-    .locals 1
+    .locals 0
 
-    .line 31
-    iget-object v0, p0, Landroidx/camera/core/AutoValue_ResolutionInfo_ResolutionInfoInternal;->resolution:Landroid/util/Size;
+    .line 30
+    iget-object p0, p0, Landroidx/camera/core/AutoValue_ResolutionInfo_ResolutionInfoInternal;->resolution:Landroid/util/Size;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method getRotationDegrees()I
-    .locals 1
+    .locals 0
 
-    .line 43
-    iget v0, p0, Landroidx/camera/core/AutoValue_ResolutionInfo_ResolutionInfoInternal;->rotationDegrees:I
+    .line 41
+    iget p0, p0, Landroidx/camera/core/AutoValue_ResolutionInfo_ResolutionInfoInternal;->rotationDegrees:I
 
-    return v0
+    return p0
 .end method
 
 .method public hashCode()I
     .locals 3
 
-    .line 73
+    .line 71
     iget-object v0, p0, Landroidx/camera/core/AutoValue_ResolutionInfo_ResolutionInfoInternal;->resolution:Landroid/util/Size;
 
     invoke-virtual {v0}, Landroid/util/Size;->hashCode()I
@@ -153,7 +153,7 @@
 
     mul-int/2addr v0, v1
 
-    .line 75
+    .line 73
     iget-object v2, p0, Landroidx/camera/core/AutoValue_ResolutionInfo_ResolutionInfoInternal;->cropRect:Landroid/graphics/Rect;
 
     invoke-virtual {v2}, Landroid/graphics/Rect;->hashCode()I
@@ -164,18 +164,18 @@
 
     mul-int/2addr v0, v1
 
-    .line 77
-    iget v1, p0, Landroidx/camera/core/AutoValue_ResolutionInfo_ResolutionInfoInternal;->rotationDegrees:I
+    .line 75
+    iget p0, p0, Landroidx/camera/core/AutoValue_ResolutionInfo_ResolutionInfoInternal;->rotationDegrees:I
 
-    xor-int/2addr v0, v1
+    xor-int/2addr p0, v0
 
-    return v0
+    return p0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 48
+    .line 46
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "ResolutionInfoInternal{resolution="
@@ -198,17 +198,17 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Landroidx/camera/core/AutoValue_ResolutionInfo_ResolutionInfoInternal;->rotationDegrees:I
+    iget p0, p0, Landroidx/camera/core/AutoValue_ResolutionInfo_ResolutionInfoInternal;->rotationDegrees:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v1, "}"
+    const-string/jumbo p0, "}"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

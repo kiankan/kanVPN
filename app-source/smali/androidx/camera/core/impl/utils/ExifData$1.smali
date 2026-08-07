@@ -22,7 +22,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 548
+    .line 543
     invoke-static {}, Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;->values()[Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;
 
     move-result-object v0

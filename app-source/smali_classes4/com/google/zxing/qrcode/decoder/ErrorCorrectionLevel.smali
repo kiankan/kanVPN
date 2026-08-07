@@ -212,10 +212,10 @@
 
 # virtual methods
 .method public getBits()I
-    .locals 1
+    .locals 0
 
     .line 45
-    iget v0, p0, Lcom/google/zxing/qrcode/decoder/ErrorCorrectionLevel;->bits:I
+    iget p0, p0, Lcom/google/zxing/qrcode/decoder/ErrorCorrectionLevel;->bits:I
 
-    return v0
+    return p0
 .end method

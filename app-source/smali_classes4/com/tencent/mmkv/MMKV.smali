@@ -409,7 +409,7 @@
 
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string p0, "while it\'s already been opened with SINGLE_PROCESS_MODE by someone somewhere else!"
+    const-string/jumbo p0, "while it\'s already been opened with SINGLE_PROCESS_MODE by someone somewhere else!"
 
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -813,25 +813,25 @@
 .end method
 
 .method private getParcelableByte(Landroid/os/Parcelable;)[B
-    .locals 2
+    .locals 1
 
     .line 910
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
-    move-result-object v0
+    move-result-object p0
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
     .line 911
-    invoke-interface {p1, v0, v1}, Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-interface {p1, p0, v0}, Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V
 
     .line 912
-    invoke-virtual {v0}, Landroid/os/Parcel;->marshall()[B
+    invoke-virtual {p0}, Landroid/os/Parcel;->marshall()[B
 
     move-result-object p1
 
     .line 913
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+    invoke-virtual {p0}, Landroid/os/Parcel;->recycle()V
 
     return-object p1
 .end method
@@ -2470,9 +2470,9 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcom/tencent/mmkv/MMKV;->allKeys(JZ)[Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public allNonExpireKeys()[Ljava/lang/String;
@@ -2485,9 +2485,9 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcom/tencent/mmkv/MMKV;->allKeys(JZ)[Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public apply()V
@@ -2566,9 +2566,9 @@
     .line 1447
     invoke-virtual {p0, p1}, Lcom/tencent/mmkv/MMKV;->containsKey(Ljava/lang/String;)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public containsKey(Ljava/lang/String;)Z
@@ -2579,9 +2579,9 @@
 
     invoke-direct {p0, v0, v1, p1}, Lcom/tencent/mmkv/MMKV;->containsKey(JLjava/lang/String;)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public count()J
@@ -2627,9 +2627,9 @@
 
     invoke-direct {p0, v0, v1, p1, v2}, Lcom/tencent/mmkv/MMKV;->decodeBool(JLjava/lang/String;Z)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public decodeBool(Ljava/lang/String;Z)Z
@@ -2640,9 +2640,9 @@
 
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/tencent/mmkv/MMKV;->decodeBool(JLjava/lang/String;Z)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public decodeBytes(Ljava/lang/String;)[B
@@ -2653,9 +2653,9 @@
     .line 898
     invoke-virtual {p0, p1, v0}, Lcom/tencent/mmkv/MMKV;->decodeBytes(Ljava/lang/String;[B)[B
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public decodeBytes(Ljava/lang/String;[B)[B
@@ -2666,11 +2666,11 @@
 
     invoke-direct {p0, v0, v1, p1}, Lcom/tencent/mmkv/MMKV;->decodeBytes(JLjava/lang/String;)[B
 
-    move-result-object p1
+    move-result-object p0
 
-    if-eqz p1, :cond_0
+    if-eqz p0, :cond_0
 
-    return-object p1
+    return-object p0
 
     :cond_0
     return-object p2
@@ -2690,9 +2690,9 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/tencent/mmkv/MMKV;->decodeDouble(JLjava/lang/String;D)D
 
-    move-result-wide v1
+    move-result-wide p0
 
-    return-wide v1
+    return-wide p0
 .end method
 
 .method public decodeDouble(Ljava/lang/String;D)D
@@ -2709,9 +2709,9 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/tencent/mmkv/MMKV;->decodeDouble(JLjava/lang/String;D)D
 
-    move-result-wide p1
+    move-result-wide p0
 
-    return-wide p1
+    return-wide p0
 .end method
 
 .method public decodeFloat(Ljava/lang/String;)F
@@ -2724,9 +2724,9 @@
 
     invoke-direct {p0, v0, v1, p1, v2}, Lcom/tencent/mmkv/MMKV;->decodeFloat(JLjava/lang/String;F)F
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public decodeFloat(Ljava/lang/String;F)F
@@ -2737,9 +2737,9 @@
 
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/tencent/mmkv/MMKV;->decodeFloat(JLjava/lang/String;F)F
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public decodeInt(Ljava/lang/String;)I
@@ -2752,9 +2752,9 @@
 
     invoke-direct {p0, v0, v1, p1, v2}, Lcom/tencent/mmkv/MMKV;->decodeInt(JLjava/lang/String;I)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public decodeInt(Ljava/lang/String;I)I
@@ -2765,9 +2765,9 @@
 
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/tencent/mmkv/MMKV;->decodeInt(JLjava/lang/String;I)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public decodeLong(Ljava/lang/String;)J
@@ -2784,9 +2784,9 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/tencent/mmkv/MMKV;->decodeLong(JLjava/lang/String;J)J
 
-    move-result-wide v1
+    move-result-wide p0
 
-    return-wide v1
+    return-wide p0
 .end method
 
 .method public decodeLong(Ljava/lang/String;J)J
@@ -2803,9 +2803,9 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/tencent/mmkv/MMKV;->decodeLong(JLjava/lang/String;J)J
 
-    move-result-wide p1
+    move-result-wide p0
 
-    return-wide p1
+    return-wide p0
 .end method
 
 .method public decodeParcelable(Ljava/lang/String;Ljava/lang/Class;)Landroid/os/Parcelable;
@@ -2826,13 +2826,13 @@
     .line 941
     invoke-virtual {p0, p1, p2, v0}, Lcom/tencent/mmkv/MMKV;->decodeParcelable(Ljava/lang/String;Ljava/lang/Class;Landroid/os/Parcelable;)Landroid/os/Parcelable;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public decodeParcelable(Ljava/lang/String;Ljava/lang/Class;Landroid/os/Parcelable;)Landroid/os/Parcelable;
-    .locals 4
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
@@ -2856,9 +2856,9 @@
 
     invoke-direct {p0, v1, v2, p1}, Lcom/tencent/mmkv/MMKV;->decodeBytes(JLjava/lang/String;)[B
 
-    move-result-object p1
+    move-result-object p0
 
-    if-nez p1, :cond_1
+    if-nez p0, :cond_1
 
     :goto_0
     return-object p3
@@ -2867,105 +2867,105 @@
     :cond_1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
-    move-result-object v1
+    move-result-object p1
 
     .line 957
-    array-length v2, p1
+    array-length v1, p0
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    invoke-virtual {v1, p1, v3, v2}, Landroid/os/Parcel;->unmarshall([BII)V
+    invoke-virtual {p1, p0, v2, v1}, Landroid/os/Parcel;->unmarshall([BII)V
 
     .line 958
-    invoke-virtual {v1, v3}, Landroid/os/Parcel;->setDataPosition(I)V
+    invoke-virtual {p1, v2}, Landroid/os/Parcel;->setDataPosition(I)V
 
     .line 961
     :try_start_0
     invoke-virtual {p2}, Ljava/lang/Class;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
     .line 963
-    sget-object v2, Lcom/tencent/mmkv/MMKV;->mCreators:Ljava/util/HashMap;
+    sget-object v1, Lcom/tencent/mmkv/MMKV;->mCreators:Ljava/util/HashMap;
 
-    monitor-enter v2
+    monitor-enter v1
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     .line 964
     :try_start_1
-    invoke-virtual {v2, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object v2
 
-    check-cast v3, Landroid/os/Parcelable$Creator;
+    check-cast v2, Landroid/os/Parcelable$Creator;
 
-    if-nez v3, :cond_2
+    if-nez v2, :cond_2
 
     .line 966
-    const-string v3, "CREATOR"
+    const-string v2, "CREATOR"
 
-    invoke-virtual {p2, v3}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+    invoke-virtual {p2, v2}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object p2
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
     .line 967
-    invoke-virtual {p2, v3}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p2, v2}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
 
-    move-object v3, p2
+    move-object v2, p2
 
-    check-cast v3, Landroid/os/Parcelable$Creator;
+    check-cast v2, Landroid/os/Parcelable$Creator;
 
-    if-eqz v3, :cond_2
+    if-eqz v2, :cond_2
 
     .line 969
-    invoke-virtual {v2, p1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p0, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 972
     :cond_2
-    monitor-exit v2
+    monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    if-eqz v3, :cond_3
+    if-eqz v2, :cond_3
 
     .line 974
     :try_start_2
-    invoke-interface {v3, v1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    invoke-interface {v2, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Landroid/os/Parcelable;
+    check-cast p0, Landroid/os/Parcelable;
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     .line 983
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
 
-    return-object p1
+    return-object p0
 
     .line 976
     :cond_3
     :try_start_3
     new-instance p2, Ljava/lang/Exception;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-direct {p2, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, p0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
     throw p2
     :try_end_3
@@ -2973,50 +2973,50 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     :catchall_0
-    move-exception p1
+    move-exception p0
 
     .line 972
     :try_start_4
-    monitor-exit v2
+    monitor-exit v1
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     :try_start_5
-    throw p1
+    throw p0
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
     :catchall_1
-    move-exception p1
+    move-exception p0
 
     goto :goto_1
 
     :catch_0
-    move-exception p1
+    move-exception p0
 
     .line 981
     :try_start_6
     sget-object p2, Lcom/tencent/mmkv/MMKVLogLevel;->LevelError:Lcom/tencent/mmkv/MMKVLogLevel;
 
-    invoke-virtual {p1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-static {p2, p1}, Lcom/tencent/mmkv/MMKV;->simpleLog(Lcom/tencent/mmkv/MMKVLogLevel;Ljava/lang/String;)V
+    invoke-static {p2, p0}, Lcom/tencent/mmkv/MMKV;->simpleLog(Lcom/tencent/mmkv/MMKVLogLevel;Ljava/lang/String;)V
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
     .line 983
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
 
     return-object p3
 
     :goto_1
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
 
     .line 984
-    throw p1
+    throw p0
 .end method
 
 .method public decodeString(Ljava/lang/String;)Ljava/lang/String;
@@ -3029,9 +3029,9 @@
 
     invoke-direct {p0, v0, v1, p1, v2}, Lcom/tencent/mmkv/MMKV;->decodeString(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public decodeString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -3042,9 +3042,9 @@
 
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/tencent/mmkv/MMKV;->decodeString(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public decodeStringSet(Ljava/lang/String;)Ljava/util/Set;
@@ -3065,9 +3065,9 @@
     .line 856
     invoke-virtual {p0, p1, v0}, Lcom/tencent/mmkv/MMKV;->decodeStringSet(Ljava/lang/String;Ljava/util/Set;)Ljava/util/Set;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public decodeStringSet(Ljava/lang/String;Ljava/util/Set;)Ljava/util/Set;
@@ -3090,9 +3090,9 @@
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/tencent/mmkv/MMKV;->decodeStringSet(Ljava/lang/String;Ljava/util/Set;Ljava/lang/Class;)Ljava/util/Set;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public decodeStringSet(Ljava/lang/String;Ljava/util/Set;Ljava/lang/Class;)Ljava/util/Set;
@@ -3119,9 +3119,9 @@
 
     invoke-direct {p0, v0, v1, p1}, Lcom/tencent/mmkv/MMKV;->decodeStringSet(JLjava/lang/String;)[Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    if-nez p1, :cond_0
+    if-nez p0, :cond_0
 
     goto :goto_0
 
@@ -3130,21 +3130,21 @@
     :try_start_0
     invoke-virtual {p3}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
-    move-result-object p3
+    move-result-object p1
 
-    check-cast p3, Ljava/util/Set;
+    check-cast p1, Ljava/util/Set;
     :try_end_0
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 879
-    invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-interface {p3, p1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
+    invoke-interface {p1, p0}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    return-object p3
+    return-object p1
 
     :catch_0
     :goto_0
@@ -3217,9 +3217,9 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/tencent/mmkv/MMKV;->encodeDouble(JLjava/lang/String;D)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public encode(Ljava/lang/String;DI)Z
@@ -3238,9 +3238,9 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/tencent/mmkv/MMKV;->encodeDouble_2(JLjava/lang/String;DI)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public encode(Ljava/lang/String;F)Z
@@ -3251,9 +3251,9 @@
 
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/tencent/mmkv/MMKV;->encodeFloat(JLjava/lang/String;F)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public encode(Ljava/lang/String;FI)Z
@@ -3272,9 +3272,9 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/tencent/mmkv/MMKV;->encodeFloat_2(JLjava/lang/String;FI)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public encode(Ljava/lang/String;I)Z
@@ -3285,9 +3285,9 @@
 
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/tencent/mmkv/MMKV;->encodeInt(JLjava/lang/String;I)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public encode(Ljava/lang/String;II)Z
@@ -3306,9 +3306,9 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/tencent/mmkv/MMKV;->encodeInt_2(JLjava/lang/String;II)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public encode(Ljava/lang/String;J)Z
@@ -3325,9 +3325,9 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/tencent/mmkv/MMKV;->encodeLong(JLjava/lang/String;J)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public encode(Ljava/lang/String;JI)Z
@@ -3346,9 +3346,9 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/tencent/mmkv/MMKV;->encodeLong_2(JLjava/lang/String;JI)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public encode(Ljava/lang/String;Landroid/os/Parcelable;)Z
@@ -3363,9 +3363,9 @@
 
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/tencent/mmkv/MMKV;->encodeBytes(JLjava/lang/String;[B)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 
     .line 921
     :cond_0
@@ -3378,9 +3378,9 @@
 
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/tencent/mmkv/MMKV;->encodeBytes(JLjava/lang/String;[B)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public encode(Ljava/lang/String;Landroid/os/Parcelable;I)Z
@@ -3401,9 +3401,9 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/tencent/mmkv/MMKV;->encodeBytes_2(JLjava/lang/String;[BI)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 
     :cond_0
     move-object v0, p0
@@ -3413,7 +3413,7 @@
     move v5, p3
 
     .line 934
-    invoke-direct {p0, p2}, Lcom/tencent/mmkv/MMKV;->getParcelableByte(Landroid/os/Parcelable;)[B
+    invoke-direct {v0, p2}, Lcom/tencent/mmkv/MMKV;->getParcelableByte(Landroid/os/Parcelable;)[B
 
     move-result-object v4
 
@@ -3422,9 +3422,9 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/tencent/mmkv/MMKV;->encodeBytes_2(JLjava/lang/String;[BI)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public encode(Ljava/lang/String;Ljava/lang/String;)Z
@@ -3435,9 +3435,9 @@
 
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/tencent/mmkv/MMKV;->encodeString(JLjava/lang/String;Ljava/lang/String;)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public encode(Ljava/lang/String;Ljava/lang/String;I)Z
@@ -3456,9 +3456,9 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/tencent/mmkv/MMKV;->encodeString_2(JLjava/lang/String;Ljava/lang/String;I)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public encode(Ljava/lang/String;Ljava/util/Set;)Z
@@ -3496,9 +3496,9 @@
     :goto_0
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/tencent/mmkv/MMKV;->encodeSet(JLjava/lang/String;[Ljava/lang/String;)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public encode(Ljava/lang/String;Ljava/util/Set;I)Z
@@ -3544,9 +3544,9 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/tencent/mmkv/MMKV;->encodeSet_2(JLjava/lang/String;[Ljava/lang/String;I)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public encode(Ljava/lang/String;Z)Z
@@ -3557,9 +3557,9 @@
 
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/tencent/mmkv/MMKV;->encodeBool(JLjava/lang/String;Z)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public encode(Ljava/lang/String;ZI)Z
@@ -3578,9 +3578,9 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/tencent/mmkv/MMKV;->encodeBool_2(JLjava/lang/String;ZI)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public encode(Ljava/lang/String;[B)Z
@@ -3591,9 +3591,9 @@
 
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/tencent/mmkv/MMKV;->encodeBytes(JLjava/lang/String;[B)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public encode(Ljava/lang/String;[BI)Z
@@ -3612,13 +3612,13 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/tencent/mmkv/MMKV;->encodeBytes_2(JLjava/lang/String;[BI)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public getAll()Ljava/util/Map;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -3629,13 +3629,13 @@
     .end annotation
 
     .line 1291
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    const-string v1, "Intentionally Not Supported. Use allKeys() instead, getAll() not implement because type-erasure inside mmkv"
+    const-string v0, "Intentionally Not Supported. Use allKeys() instead, getAll() not implement because type-erasure inside mmkv"
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw v0
+    throw p0
 .end method
 
 .method public getBoolean(Ljava/lang/String;Z)Z
@@ -3646,9 +3646,9 @@
 
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/tencent/mmkv/MMKV;->decodeBool(JLjava/lang/String;Z)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public getBytes(Ljava/lang/String;[B)[B
@@ -3657,9 +3657,9 @@
     .line 1340
     invoke-virtual {p0, p1, p2}, Lcom/tencent/mmkv/MMKV;->decodeBytes(Ljava/lang/String;[B)[B
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public getFloat(Ljava/lang/String;F)F
@@ -3670,9 +3670,9 @@
 
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/tencent/mmkv/MMKV;->decodeFloat(JLjava/lang/String;F)F
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public getInt(Ljava/lang/String;I)I
@@ -3683,9 +3683,9 @@
 
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/tencent/mmkv/MMKV;->decodeInt(JLjava/lang/String;I)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public getLong(Ljava/lang/String;J)J
@@ -3702,9 +3702,9 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/tencent/mmkv/MMKV;->decodeLong(JLjava/lang/String;J)J
 
-    move-result-wide p1
+    move-result-wide p0
 
-    return-wide p1
+    return-wide p0
 .end method
 
 .method public getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -3715,9 +3715,9 @@
 
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/tencent/mmkv/MMKV;->decodeString(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public getStringSet(Ljava/lang/String;Ljava/util/Set;)Ljava/util/Set;
@@ -3738,9 +3738,9 @@
     .line 1315
     invoke-virtual {p0, p1, p2}, Lcom/tencent/mmkv/MMKV;->decodeStringSet(Ljava/lang/String;Ljava/util/Set;)Ljava/util/Set;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public getValueActualSize(Ljava/lang/String;)I
@@ -3753,9 +3753,9 @@
 
     invoke-direct {p0, v0, v1, p1, v2}, Lcom/tencent/mmkv/MMKV;->valueSize(JLjava/lang/String;Z)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public getValueSize(Ljava/lang/String;)I
@@ -3768,9 +3768,9 @@
 
     invoke-direct {p0, v0, v1, p1, v2}, Lcom/tencent/mmkv/MMKV;->valueSize(JLjava/lang/String;Z)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public importFromSharedPreferences(Landroid/content/SharedPreferences;)I
@@ -3790,7 +3790,7 @@
 
     if-gtz v0, :cond_0
 
-    goto/16 :goto_2
+    goto/16 :goto_3
 
     .line 1172
     :cond_0
@@ -3802,6 +3802,7 @@
 
     move-result-object v0
 
+    :cond_1
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -3829,17 +3830,17 @@
 
     move-result-object v1
 
-    if-eqz v6, :cond_9
+    if-eqz v6, :cond_1
 
-    if-nez v1, :cond_1
+    if-nez v1, :cond_2
 
     goto :goto_0
 
     .line 1179
-    :cond_1
+    :cond_2
     instance-of v2, v1, Ljava/lang/Boolean;
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_3
 
     .line 1180
     iget-wide v2, p0, Lcom/tencent/mmkv/MMKV;->nativeHandle:J
@@ -3852,13 +3853,16 @@
 
     invoke-direct {p0, v2, v3, v6, v1}, Lcom/tencent/mmkv/MMKV;->encodeBool(JLjava/lang/String;Z)Z
 
-    goto/16 :goto_1
+    :goto_1
+    move-object v3, p0
+
+    goto/16 :goto_2
 
     .line 1181
-    :cond_2
+    :cond_3
     instance-of v2, v1, Ljava/lang/Integer;
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_4
 
     .line 1182
     iget-wide v2, p0, Lcom/tencent/mmkv/MMKV;->nativeHandle:J
@@ -3874,10 +3878,10 @@
     goto :goto_1
 
     .line 1183
-    :cond_3
+    :cond_4
     instance-of v2, v1, Ljava/lang/Long;
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_5
 
     .line 1184
     iget-wide v4, p0, Lcom/tencent/mmkv/MMKV;->nativeHandle:J
@@ -3892,15 +3896,15 @@
 
     invoke-direct/range {v3 .. v8}, Lcom/tencent/mmkv/MMKV;->encodeLong(JLjava/lang/String;J)Z
 
-    goto :goto_0
+    goto :goto_2
 
-    :cond_4
+    :cond_5
     move-object v3, p0
 
     .line 1185
-    instance-of v2, v1, Ljava/lang/Float;
+    instance-of p0, v1, Ljava/lang/Float;
 
-    if-eqz v2, :cond_5
+    if-eqz p0, :cond_6
 
     .line 1186
     iget-wide v4, v3, Lcom/tencent/mmkv/MMKV;->nativeHandle:J
@@ -3909,17 +3913,17 @@
 
     invoke-virtual {v1}, Ljava/lang/Float;->floatValue()F
 
-    move-result v1
+    move-result p0
 
-    invoke-direct {p0, v4, v5, v6, v1}, Lcom/tencent/mmkv/MMKV;->encodeFloat(JLjava/lang/String;F)Z
+    invoke-direct {v3, v4, v5, v6, p0}, Lcom/tencent/mmkv/MMKV;->encodeFloat(JLjava/lang/String;F)Z
 
-    goto :goto_0
+    goto :goto_2
 
     .line 1187
-    :cond_5
-    instance-of v2, v1, Ljava/lang/Double;
+    :cond_6
+    instance-of p0, v1, Ljava/lang/Double;
 
-    if-eqz v2, :cond_6
+    if-eqz p0, :cond_7
 
     .line 1188
     iget-wide v4, v3, Lcom/tencent/mmkv/MMKV;->nativeHandle:J
@@ -3932,83 +3936,76 @@
 
     invoke-direct/range {v3 .. v8}, Lcom/tencent/mmkv/MMKV;->encodeDouble(JLjava/lang/String;D)Z
 
-    goto :goto_0
+    goto :goto_2
 
     .line 1189
-    :cond_6
-    instance-of v2, v1, Ljava/lang/String;
+    :cond_7
+    instance-of p0, v1, Ljava/lang/String;
 
-    if-eqz v2, :cond_7
+    if-eqz p0, :cond_8
 
     .line 1190
     iget-wide v4, v3, Lcom/tencent/mmkv/MMKV;->nativeHandle:J
 
     check-cast v1, Ljava/lang/String;
 
-    invoke-direct {p0, v4, v5, v6, v1}, Lcom/tencent/mmkv/MMKV;->encodeString(JLjava/lang/String;Ljava/lang/String;)Z
+    invoke-direct {v3, v4, v5, v6, v1}, Lcom/tencent/mmkv/MMKV;->encodeString(JLjava/lang/String;Ljava/lang/String;)Z
 
-    goto :goto_0
+    goto :goto_2
 
     .line 1191
-    :cond_7
-    instance-of v2, v1, Ljava/util/Set;
+    :cond_8
+    instance-of p0, v1, Ljava/util/Set;
 
-    if-eqz v2, :cond_8
+    if-eqz p0, :cond_9
 
     .line 1192
     check-cast v1, Ljava/util/Set;
 
-    invoke-virtual {p0, v6, v1}, Lcom/tencent/mmkv/MMKV;->encode(Ljava/lang/String;Ljava/util/Set;)Z
+    invoke-virtual {v3, v6, v1}, Lcom/tencent/mmkv/MMKV;->encode(Ljava/lang/String;Ljava/util/Set;)Z
 
-    goto/16 :goto_0
+    goto :goto_2
 
     .line 1194
-    :cond_8
-    sget-object v2, Lcom/tencent/mmkv/MMKVLogLevel;->LevelError:Lcom/tencent/mmkv/MMKVLogLevel;
+    :cond_9
+    sget-object p0, Lcom/tencent/mmkv/MMKVLogLevel;->LevelError:Lcom/tencent/mmkv/MMKVLogLevel;
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string v5, "unknown type: "
+    const-string/jumbo v4, "unknown type: "
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
 
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcom/tencent/mmkv/MMKV;->simpleLog(Lcom/tencent/mmkv/MMKVLogLevel;Ljava/lang/String;)V
+    invoke-static {p0, v1}, Lcom/tencent/mmkv/MMKV;->simpleLog(Lcom/tencent/mmkv/MMKVLogLevel;Ljava/lang/String;)V
+
+    :goto_2
+    move-object p0, v3
 
     goto/16 :goto_0
-
-    :cond_9
-    :goto_1
-    move-object v3, p0
-
-    goto/16 :goto_0
-
-    :cond_a
-    move-object v3, p0
 
     .line 1197
+    :cond_a
     invoke-interface {p1}, Ljava/util/Map;->size()I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 
     :cond_b
-    :goto_2
-    move-object v3, p0
+    :goto_3
+    const/4 p0, 0x0
 
-    const/4 p1, 0x0
-
-    return p1
+    return p0
 .end method
 
 .method public native lock()V
@@ -4233,16 +4230,16 @@
 .end method
 
 .method public registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
-    .locals 1
+    .locals 0
 
     .line 1461
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    const-string v0, "Intentionally Not implement in MMKV"
+    const-string p1, "Intentionally Not implement in MMKV"
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method public remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
@@ -4302,16 +4299,16 @@
 .end method
 
 .method public unregisterOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
-    .locals 1
+    .locals 0
 
     .line 1469
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    const-string v0, "Intentionally Not implement in MMKV"
+    const-string p1, "Intentionally Not implement in MMKV"
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method public writeValueToNativeBuffer(Ljava/lang/String;Lcom/tencent/mmkv/NativeBuffer;)I
@@ -4330,7 +4327,7 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/tencent/mmkv/MMKV;->writeValueToNB(JLjava/lang/String;JI)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method

@@ -7,7 +7,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 41
+    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -399,7 +399,7 @@
 
     goto :goto_8
 
-    .line 262
+    .line 261
     :cond_b
     new-instance p2, Ljava/lang/IllegalArgumentException;
 
@@ -425,7 +425,7 @@
 
     throw p2
 
-    .line 258
+    .line 257
     :cond_c
     :goto_8
     invoke-virtual {p2}, Landroid/graphics/RectF;->centerY()F
@@ -436,19 +436,19 @@
 
     move-result-object p0
 
-    .line 259
+    .line 258
     invoke-virtual {p2}, Landroid/graphics/RectF;->centerX()F
 
     move-result p1
 
-    .line 258
+    .line 257
     invoke-static {p0, p1}, Landroidx/camera/core/internal/ViewPorts;->flipHorizontally(Landroid/graphics/RectF;F)Landroid/graphics/RectF;
 
     move-result-object p0
 
     return-object p0
 
-    .line 242
+    .line 241
     :cond_d
     :goto_9
     invoke-virtual {p2}, Landroid/graphics/RectF;->centerY()F
@@ -461,7 +461,7 @@
 
     return-object p0
 
-    .line 226
+    .line 225
     :cond_e
     :goto_a
     invoke-virtual {p2}, Landroid/graphics/RectF;->centerX()F
@@ -482,12 +482,12 @@
 .method private static flipHorizontally(Landroid/graphics/RectF;F)Landroid/graphics/RectF;
     .locals 4
 
-    .line 278
+    .line 277
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Landroid/graphics/RectF;->right:F
 
-    .line 279
+    .line 278
     invoke-static {v1, p1}, Landroidx/camera/core/internal/ViewPorts;->flipX(FF)F
 
     move-result v1
@@ -496,7 +496,7 @@
 
     iget v3, p0, Landroid/graphics/RectF;->left:F
 
-    .line 281
+    .line 280
     invoke-static {v3, p1}, Landroidx/camera/core/internal/ViewPorts;->flipX(FF)F
 
     move-result p1
@@ -511,14 +511,14 @@
 .method private static flipVertically(Landroid/graphics/RectF;F)Landroid/graphics/RectF;
     .locals 4
 
-    .line 286
+    .line 285
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Landroid/graphics/RectF;->left:F
 
     iget v2, p0, Landroid/graphics/RectF;->bottom:F
 
-    .line 288
+    .line 287
     invoke-static {v2, p1}, Landroidx/camera/core/internal/ViewPorts;->flipY(FF)F
 
     move-result v2
@@ -527,7 +527,7 @@
 
     iget p0, p0, Landroid/graphics/RectF;->top:F
 
-    .line 290
+    .line 289
     invoke-static {p0, p1}, Landroidx/camera/core/internal/ViewPorts;->flipY(FF)F
 
     move-result p0
@@ -566,13 +566,13 @@
 
     return-object p0
 
-    .line 148
+    .line 147
     :cond_0
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 149
+    .line 148
     new-instance v1, Landroid/graphics/RectF;
 
     invoke-virtual {p1}, Landroid/util/Rational;->getNumerator()I
@@ -581,7 +581,7 @@
 
     int-to-float v2, v2
 
-    .line 150
+    .line 149
     invoke-virtual {p1}, Landroid/util/Rational;->getDenominator()I
 
     move-result p1
@@ -602,14 +602,14 @@
 
     if-ne p2, p1, :cond_1
 
-    .line 161
+    .line 160
     sget-object p1, Landroid/graphics/Matrix$ScaleToFit;->END:Landroid/graphics/Matrix$ScaleToFit;
 
     invoke-virtual {v0, v1, p0, p1}, Landroid/graphics/Matrix;->setRectToRect(Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/Matrix$ScaleToFit;)Z
 
     goto :goto_0
 
-    .line 165
+    .line 164
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -629,7 +629,7 @@
 
     throw p0
 
-    .line 153
+    .line 152
     :cond_2
     sget-object p1, Landroid/graphics/Matrix$ScaleToFit;->CENTER:Landroid/graphics/Matrix$ScaleToFit;
 
@@ -637,27 +637,27 @@
 
     goto :goto_0
 
-    .line 157
+    .line 156
     :cond_3
     sget-object p1, Landroid/graphics/Matrix$ScaleToFit;->START:Landroid/graphics/Matrix$ScaleToFit;
 
     invoke-virtual {v0, v1, p0, p1}, Landroid/graphics/Matrix;->setRectToRect(Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/Matrix$ScaleToFit;)Z
 
-    .line 168
+    .line 167
     :goto_0
     new-instance p1, Landroid/graphics/RectF;
 
     invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
 
-    .line 169
+    .line 168
     invoke-virtual {v0, p1, v1}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;Landroid/graphics/RectF;)Z
 
-    .line 173
+    .line 172
     invoke-static {p3, p4}, Landroidx/camera/core/internal/ViewPorts;->shouldMirrorStartAndEnd(ZI)Z
 
     move-result p2
 
-    .line 172
+    .line 171
     invoke-static {p2, p5, p0, p1}, Landroidx/camera/core/internal/ViewPorts;->correctStartOrEnd(ZILandroid/graphics/RectF;Landroid/graphics/RectF;)Landroid/graphics/RectF;
 
     move-result-object p0

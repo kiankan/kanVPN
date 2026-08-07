@@ -130,122 +130,114 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 3
 
-    .line 58
+    .line 59
     const-string v0, "camerax.core.imageOutput.targetAspectRatio"
 
     const-class v1, Landroidx/camera/core/AspectRatio;
 
-    .line 59
+    .line 60
     invoke-static {v0, v1}, Landroidx/camera/core/impl/Config$Option;->create(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$Option;
 
     move-result-object v0
 
     sput-object v0, Landroidx/camera/core/impl/ImageOutputConfig;->OPTION_TARGET_ASPECT_RATIO:Landroidx/camera/core/impl/Config$Option;
 
-    .line 64
+    .line 65
     const-string v0, "camerax.core.imageOutput.targetRotation"
 
     sget-object v1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    .line 65
+    .line 66
     invoke-static {v0, v1}, Landroidx/camera/core/impl/Config$Option;->create(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$Option;
 
     move-result-object v0
 
     sput-object v0, Landroidx/camera/core/impl/ImageOutputConfig;->OPTION_TARGET_ROTATION:Landroidx/camera/core/impl/Config$Option;
 
-    .line 70
+    .line 71
     const-string v0, "camerax.core.imageOutput.appTargetRotation"
 
     sget-object v1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    .line 71
+    .line 72
     invoke-static {v0, v1}, Landroidx/camera/core/impl/Config$Option;->create(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$Option;
 
     move-result-object v0
 
     sput-object v0, Landroidx/camera/core/impl/ImageOutputConfig;->OPTION_APP_TARGET_ROTATION:Landroidx/camera/core/impl/Config$Option;
 
-    .line 76
+    .line 77
     const-string v0, "camerax.core.imageOutput.mirrorMode"
 
     sget-object v1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    .line 77
+    .line 78
     invoke-static {v0, v1}, Landroidx/camera/core/impl/Config$Option;->create(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$Option;
 
     move-result-object v0
 
     sput-object v0, Landroidx/camera/core/impl/ImageOutputConfig;->OPTION_MIRROR_MODE:Landroidx/camera/core/impl/Config$Option;
 
-    .line 82
+    .line 84
     const-string v0, "camerax.core.imageOutput.targetResolution"
 
     const-class v1, Landroid/util/Size;
 
-    .line 83
     invoke-static {v0, v1}, Landroidx/camera/core/impl/Config$Option;->create(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$Option;
 
     move-result-object v0
 
     sput-object v0, Landroidx/camera/core/impl/ImageOutputConfig;->OPTION_TARGET_RESOLUTION:Landroidx/camera/core/impl/Config$Option;
 
-    .line 87
+    .line 88
     const-string v0, "camerax.core.imageOutput.defaultResolution"
 
-    const-class v1, Landroid/util/Size;
-
-    .line 88
+    .line 89
     invoke-static {v0, v1}, Landroidx/camera/core/impl/Config$Option;->create(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$Option;
 
     move-result-object v0
 
     sput-object v0, Landroidx/camera/core/impl/ImageOutputConfig;->OPTION_DEFAULT_RESOLUTION:Landroidx/camera/core/impl/Config$Option;
 
-    .line 92
+    .line 93
     const-string v0, "camerax.core.imageOutput.maxResolution"
 
-    const-class v1, Landroid/util/Size;
-
-    .line 93
+    .line 94
     invoke-static {v0, v1}, Landroidx/camera/core/impl/Config$Option;->create(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$Option;
 
     move-result-object v0
 
     sput-object v0, Landroidx/camera/core/impl/ImageOutputConfig;->OPTION_MAX_RESOLUTION:Landroidx/camera/core/impl/Config$Option;
 
-    .line 97
+    .line 99
     const-string v0, "camerax.core.imageOutput.supportedResolutions"
 
     const-class v1, Ljava/util/List;
 
-    .line 98
     invoke-static {v0, v1}, Landroidx/camera/core/impl/Config$Option;->create(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$Option;
 
     move-result-object v0
 
     sput-object v0, Landroidx/camera/core/impl/ImageOutputConfig;->OPTION_SUPPORTED_RESOLUTIONS:Landroidx/camera/core/impl/Config$Option;
 
-    .line 103
+    .line 104
     const-string v0, "camerax.core.imageOutput.resolutionSelector"
 
-    const-class v1, Landroidx/camera/core/resolutionselector/ResolutionSelector;
+    const-class v2, Landroidx/camera/core/resolutionselector/ResolutionSelector;
 
-    .line 104
-    invoke-static {v0, v1}, Landroidx/camera/core/impl/Config$Option;->create(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$Option;
+    .line 105
+    invoke-static {v0, v2}, Landroidx/camera/core/impl/Config$Option;->create(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$Option;
 
     move-result-object v0
 
     sput-object v0, Landroidx/camera/core/impl/ImageOutputConfig;->OPTION_RESOLUTION_SELECTOR:Landroidx/camera/core/impl/Config$Option;
 
-    .line 109
+    .line 110
     const-string v0, "camerax.core.imageOutput.customOrderedResolutions"
 
-    const-class v1, Ljava/util/List;
-
-    .line 110
+    .line 111
     invoke-static {v0, v1}, Landroidx/camera/core/impl/Config$Option;->create(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$Option;
 
     move-result-object v0
@@ -258,14 +250,14 @@
 .method public static validateConfig(Landroidx/camera/core/impl/ImageOutputConfig;)V
     .locals 3
 
-    .line 354
+    .line 344
     invoke-interface {p0}, Landroidx/camera/core/impl/ImageOutputConfig;->hasTargetAspectRatio()Z
 
     move-result v0
 
     const/4 v1, 0x0
 
-    .line 355
+    .line 345
     invoke-interface {p0, v1}, Landroidx/camera/core/impl/ImageOutputConfig;->getTargetResolution(Landroid/util/Size;)Landroid/util/Size;
 
     move-result-object v2
@@ -286,7 +278,7 @@
 
     goto :goto_1
 
-    .line 360
+    .line 350
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -296,7 +288,7 @@
 
     throw p0
 
-    .line 365
+    .line 355
     :cond_2
     :goto_1
     invoke-interface {p0, v1}, Landroidx/camera/core/impl/ImageOutputConfig;->getResolutionSelector(Landroidx/camera/core/resolutionselector/ResolutionSelector;)Landroidx/camera/core/resolutionselector/ResolutionSelector;
@@ -311,7 +303,7 @@
 
     goto :goto_2
 
-    .line 371
+    .line 361
     :cond_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -331,7 +323,7 @@
 .method public getAppTargetRotation(I)I
     .locals 1
 
-    .line 160
+    .line 161
     sget-object v0, Landroidx/camera/core/impl/ImageOutputConfig;->OPTION_APP_TARGET_ROTATION:Landroidx/camera/core/impl/Config$Option;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -340,15 +332,15 @@
 
     invoke-interface {p0, v0, p1}, Landroidx/camera/core/impl/ImageOutputConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Ljava/lang/Integer;
+    check-cast p0, Ljava/lang/Integer;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public getCustomOrderedResolutions()Ljava/util/List;
@@ -362,24 +354,24 @@
         }
     .end annotation
 
-    .line 342
+    .line 332
     new-instance v0, Ljava/util/ArrayList;
 
     sget-object v1, Landroidx/camera/core/impl/ImageOutputConfig;->OPTION_CUSTOM_ORDERED_RESOLUTIONS:Landroidx/camera/core/impl/Config$Option;
 
     invoke-interface {p0, v1}, Landroidx/camera/core/impl/ImageOutputConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object p0
 
-    check-cast v1, Ljava/util/List;
+    check-cast p0, Ljava/util/List;
 
-    invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object p0
 
-    check-cast v1, Ljava/util/Collection;
+    check-cast p0, Ljava/util/Collection;
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    invoke-direct {v0, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     return-object v0
 .end method
@@ -398,88 +390,88 @@
         }
     .end annotation
 
-    .line 327
+    .line 318
     sget-object v0, Landroidx/camera/core/impl/ImageOutputConfig;->OPTION_CUSTOM_ORDERED_RESOLUTIONS:Landroidx/camera/core/impl/Config$Option;
 
     invoke-interface {p0, v0, p1}, Landroidx/camera/core/impl/ImageOutputConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Ljava/util/List;
+    check-cast p0, Ljava/util/List;
 
-    if-eqz p1, :cond_0
+    if-eqz p0, :cond_0
 
-    .line 328
-    new-instance v0, Ljava/util/ArrayList;
+    .line 319
+    new-instance p1, Ljava/util/ArrayList;
 
-    invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    return-object v0
-
-    :cond_0
-    const/4 p1, 0x0
+    invoke-direct {p1, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     return-object p1
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
 .end method
 
 .method public getDefaultResolution()Landroid/util/Size;
     .locals 1
 
-    .line 233
+    .line 230
     sget-object v0, Landroidx/camera/core/impl/ImageOutputConfig;->OPTION_DEFAULT_RESOLUTION:Landroidx/camera/core/impl/Config$Option;
 
     invoke-interface {p0, v0}, Landroidx/camera/core/impl/ImageOutputConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Landroid/util/Size;
+    check-cast p0, Landroid/util/Size;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getDefaultResolution(Landroid/util/Size;)Landroid/util/Size;
     .locals 1
 
-    .line 222
+    .line 220
     sget-object v0, Landroidx/camera/core/impl/ImageOutputConfig;->OPTION_DEFAULT_RESOLUTION:Landroidx/camera/core/impl/Config$Option;
 
     invoke-interface {p0, v0, p1}, Landroidx/camera/core/impl/ImageOutputConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Landroid/util/Size;
+    check-cast p0, Landroid/util/Size;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public getMaxResolution()Landroid/util/Size;
     .locals 1
 
-    .line 258
+    .line 253
     sget-object v0, Landroidx/camera/core/impl/ImageOutputConfig;->OPTION_MAX_RESOLUTION:Landroidx/camera/core/impl/Config$Option;
 
     invoke-interface {p0, v0}, Landroidx/camera/core/impl/ImageOutputConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Landroid/util/Size;
+    check-cast p0, Landroid/util/Size;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getMaxResolution(Landroid/util/Size;)Landroid/util/Size;
     .locals 1
 
-    .line 246
+    .line 242
     sget-object v0, Landroidx/camera/core/impl/ImageOutputConfig;->OPTION_MAX_RESOLUTION:Landroidx/camera/core/impl/Config$Option;
 
     invoke-interface {p0, v0, p1}, Landroidx/camera/core/impl/ImageOutputConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Landroid/util/Size;
+    check-cast p0, Landroid/util/Size;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public getMirrorMode(I)I
@@ -494,45 +486,45 @@
 
     invoke-interface {p0, v0, p1}, Landroidx/camera/core/impl/ImageOutputConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Ljava/lang/Integer;
+    check-cast p0, Ljava/lang/Integer;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public getResolutionSelector()Landroidx/camera/core/resolutionselector/ResolutionSelector;
     .locals 1
 
-    .line 298
+    .line 291
     sget-object v0, Landroidx/camera/core/impl/ImageOutputConfig;->OPTION_RESOLUTION_SELECTOR:Landroidx/camera/core/impl/Config$Option;
 
     invoke-interface {p0, v0}, Landroidx/camera/core/impl/ImageOutputConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Landroidx/camera/core/resolutionselector/ResolutionSelector;
+    check-cast p0, Landroidx/camera/core/resolutionselector/ResolutionSelector;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getResolutionSelector(Landroidx/camera/core/resolutionselector/ResolutionSelector;)Landroidx/camera/core/resolutionselector/ResolutionSelector;
     .locals 1
 
-    .line 287
+    .line 281
     sget-object v0, Landroidx/camera/core/impl/ImageOutputConfig;->OPTION_RESOLUTION_SELECTOR:Landroidx/camera/core/impl/Config$Option;
 
     invoke-interface {p0, v0, p1}, Landroidx/camera/core/impl/ImageOutputConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Landroidx/camera/core/resolutionselector/ResolutionSelector;
+    check-cast p0, Landroidx/camera/core/resolutionselector/ResolutionSelector;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public getSupportedResolutions()Ljava/util/List;
@@ -549,16 +541,16 @@
         }
     .end annotation
 
-    .line 313
+    .line 305
     sget-object v0, Landroidx/camera/core/impl/ImageOutputConfig;->OPTION_SUPPORTED_RESOLUTIONS:Landroidx/camera/core/impl/Config$Option;
 
     invoke-interface {p0, v0}, Landroidx/camera/core/impl/ImageOutputConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Ljava/util/List;
+    check-cast p0, Ljava/util/List;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getSupportedResolutions(Ljava/util/List;)Ljava/util/List;
@@ -581,50 +573,50 @@
         }
     .end annotation
 
-    .line 275
+    .line 269
     sget-object v0, Landroidx/camera/core/impl/ImageOutputConfig;->OPTION_SUPPORTED_RESOLUTIONS:Landroidx/camera/core/impl/Config$Option;
 
     invoke-interface {p0, v0, p1}, Landroidx/camera/core/impl/ImageOutputConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Ljava/util/List;
+    check-cast p0, Ljava/util/List;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public getTargetAspectRatio()I
     .locals 1
 
-    .line 132
+    .line 133
     sget-object v0, Landroidx/camera/core/impl/ImageOutputConfig;->OPTION_TARGET_ASPECT_RATIO:Landroidx/camera/core/impl/Config$Option;
 
     invoke-interface {p0, v0}, Landroidx/camera/core/impl/ImageOutputConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Ljava/lang/Integer;
+    check-cast p0, Ljava/lang/Integer;
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public getTargetResolution()Landroid/util/Size;
     .locals 1
 
-    .line 210
+    .line 209
     sget-object v0, Landroidx/camera/core/impl/ImageOutputConfig;->OPTION_TARGET_RESOLUTION:Landroidx/camera/core/impl/Config$Option;
 
     invoke-interface {p0, v0}, Landroidx/camera/core/impl/ImageOutputConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Landroid/util/Size;
+    check-cast p0, Landroid/util/Size;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getTargetResolution(Landroid/util/Size;)Landroid/util/Size;
@@ -635,36 +627,36 @@
 
     invoke-interface {p0, v0, p1}, Landroidx/camera/core/impl/ImageOutputConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Landroid/util/Size;
+    check-cast p0, Landroid/util/Size;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public getTargetRotation()I
     .locals 1
 
-    .line 175
+    .line 176
     sget-object v0, Landroidx/camera/core/impl/ImageOutputConfig;->OPTION_TARGET_ROTATION:Landroidx/camera/core/impl/Config$Option;
 
     invoke-interface {p0, v0}, Landroidx/camera/core/impl/ImageOutputConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Ljava/lang/Integer;
+    check-cast p0, Ljava/lang/Integer;
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public getTargetRotation(I)I
     .locals 1
 
-    .line 148
+    .line 149
     sget-object v0, Landroidx/camera/core/impl/ImageOutputConfig;->OPTION_TARGET_ROTATION:Landroidx/camera/core/impl/Config$Option;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -673,26 +665,26 @@
 
     invoke-interface {p0, v0, p1}, Landroidx/camera/core/impl/ImageOutputConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Ljava/lang/Integer;
+    check-cast p0, Ljava/lang/Integer;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public hasTargetAspectRatio()Z
     .locals 1
 
-    .line 121
+    .line 122
     sget-object v0, Landroidx/camera/core/impl/ImageOutputConfig;->OPTION_TARGET_ASPECT_RATIO:Landroidx/camera/core/impl/Config$Option;
 
     invoke-interface {p0, v0}, Landroidx/camera/core/impl/ImageOutputConfig;->containsOption(Landroidx/camera/core/impl/Config$Option;)Z
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method

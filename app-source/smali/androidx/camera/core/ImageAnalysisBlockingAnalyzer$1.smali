@@ -68,9 +68,9 @@
     .locals 0
 
     .line 55
-    iget-object p1, p0, Landroidx/camera/core/ImageAnalysisBlockingAnalyzer$1;->val$imageProxy:Landroidx/camera/core/ImageProxy;
+    iget-object p0, p0, Landroidx/camera/core/ImageAnalysisBlockingAnalyzer$1;->val$imageProxy:Landroidx/camera/core/ImageProxy;
 
-    invoke-interface {p1}, Landroidx/camera/core/ImageProxy;->close()V
+    invoke-interface {p0}, Landroidx/camera/core/ImageProxy;->close()V
 
     return-void
 .end method

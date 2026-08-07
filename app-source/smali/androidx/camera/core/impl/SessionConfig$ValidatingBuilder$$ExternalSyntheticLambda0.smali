@@ -25,12 +25,12 @@
 
 # virtual methods
 .method public final onError(Landroidx/camera/core/impl/SessionConfig;Landroidx/camera/core/impl/SessionConfig$SessionError;)V
-    .locals 1
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$ValidatingBuilder$$ExternalSyntheticLambda0;->f$0:Landroidx/camera/core/impl/SessionConfig$ValidatingBuilder;
+    iget-object p0, p0, Landroidx/camera/core/impl/SessionConfig$ValidatingBuilder$$ExternalSyntheticLambda0;->f$0:Landroidx/camera/core/impl/SessionConfig$ValidatingBuilder;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/camera/core/impl/SessionConfig$ValidatingBuilder;->lambda$build$0$androidx-camera-core-impl-SessionConfig$ValidatingBuilder(Landroidx/camera/core/impl/SessionConfig;Landroidx/camera/core/impl/SessionConfig$SessionError;)V
+    invoke-virtual {p0, p1, p2}, Landroidx/camera/core/impl/SessionConfig$ValidatingBuilder;->lambda$build$0$androidx-camera-core-impl-SessionConfig$ValidatingBuilder(Landroidx/camera/core/impl/SessionConfig;Landroidx/camera/core/impl/SessionConfig$SessionError;)V
 
     return-void
 .end method

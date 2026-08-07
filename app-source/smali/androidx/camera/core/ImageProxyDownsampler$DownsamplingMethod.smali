@@ -34,7 +34,7 @@
 .method private static synthetic $values()[Landroidx/camera/core/ImageProxyDownsampler$DownsamplingMethod;
     .locals 2
 
-    .line 213
+    .line 212
     sget-object v0, Landroidx/camera/core/ImageProxyDownsampler$DownsamplingMethod;->NEAREST_NEIGHBOR:Landroidx/camera/core/ImageProxyDownsampler$DownsamplingMethod;
 
     sget-object v1, Landroidx/camera/core/ImageProxyDownsampler$DownsamplingMethod;->AVERAGING:Landroidx/camera/core/ImageProxyDownsampler$DownsamplingMethod;
@@ -49,7 +49,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 215
+    .line 214
     new-instance v0, Landroidx/camera/core/ImageProxyDownsampler$DownsamplingMethod;
 
     const-string v1, "NEAREST_NEIGHBOR"
@@ -60,7 +60,7 @@
 
     sput-object v0, Landroidx/camera/core/ImageProxyDownsampler$DownsamplingMethod;->NEAREST_NEIGHBOR:Landroidx/camera/core/ImageProxyDownsampler$DownsamplingMethod;
 
-    .line 217
+    .line 216
     new-instance v0, Landroidx/camera/core/ImageProxyDownsampler$DownsamplingMethod;
 
     const-string v1, "AVERAGING"
@@ -71,7 +71,7 @@
 
     sput-object v0, Landroidx/camera/core/ImageProxyDownsampler$DownsamplingMethod;->AVERAGING:Landroidx/camera/core/ImageProxyDownsampler$DownsamplingMethod;
 
-    .line 213
+    .line 212
     invoke-static {}, Landroidx/camera/core/ImageProxyDownsampler$DownsamplingMethod;->$values()[Landroidx/camera/core/ImageProxyDownsampler$DownsamplingMethod;
 
     move-result-object v0
@@ -100,7 +100,7 @@
         }
     .end annotation
 
-    .line 213
+    .line 212
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -117,7 +117,7 @@
         }
     .end annotation
 
-    .line 213
+    .line 212
     const-class v0, Landroidx/camera/core/ImageProxyDownsampler$DownsamplingMethod;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -132,7 +132,7 @@
 .method public static values()[Landroidx/camera/core/ImageProxyDownsampler$DownsamplingMethod;
     .locals 1
 
-    .line 213
+    .line 212
     sget-object v0, Landroidx/camera/core/ImageProxyDownsampler$DownsamplingMethod;->$VALUES:[Landroidx/camera/core/ImageProxyDownsampler$DownsamplingMethod;
 
     invoke-virtual {v0}, [Landroidx/camera/core/ImageProxyDownsampler$DownsamplingMethod;->clone()Ljava/lang/Object;

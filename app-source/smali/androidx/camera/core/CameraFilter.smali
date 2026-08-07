@@ -11,7 +11,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 36
+    .line 37
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -42,10 +42,10 @@
 .end method
 
 .method public getIdentifier()Landroidx/camera/core/impl/Identifier;
-    .locals 1
+    .locals 0
 
-    .line 75
-    sget-object v0, Landroidx/camera/core/CameraFilter;->DEFAULT_ID:Landroidx/camera/core/impl/Identifier;
+    .line 74
+    sget-object p0, Landroidx/camera/core/CameraFilter;->DEFAULT_ID:Landroidx/camera/core/impl/Identifier;
 
-    return-object v0
+    return-object p0
 .end method

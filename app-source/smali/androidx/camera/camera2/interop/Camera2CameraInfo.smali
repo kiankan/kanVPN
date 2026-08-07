@@ -1,133 +1,182 @@
 .class public final Landroidx/camera/camera2/interop/Camera2CameraInfo;
 .super Ljava/lang/Object;
-.source "Camera2CameraInfo.java"
+.source "Camera2CameraInfo.kt"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/camera/camera2/interop/Camera2CameraInfo$Companion;
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/SourceDebugExtension;
+    value = "SMAP\nCamera2CameraInfo.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Camera2CameraInfo.kt\nandroidx/camera/camera2/interop/Camera2CameraInfo\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,116:1\n1869#2,2:117\n*S KotlinDebug\n*F\n+ 1 Camera2CameraInfo.kt\nandroidx/camera/camera2/interop/Camera2CameraInfo\n*L\n48#1:117,2\n*E\n"
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000(\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000e\n\u0002\u0008\u0007\u0008\u0007\u0018\u0000 \u00112\u00020\u0001:\u0001\u0011B3\u0008\u0002\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012 \u0008\u0002\u0010\u0004\u001a\u001a\u0012\u0014\u0012\u0012\u0012\u0008\u0012\u0006\u0012\u0002\u0008\u00030\u0007\u0012\u0004\u0012\u00020\u00010\u0006\u0018\u00010\u0005\u00a2\u0006\u0004\u0008\u0008\u0010\tJ!\u0010\u000c\u001a\u0004\u0018\u0001H\r\"\u0004\u0008\u0000\u0010\r2\u000c\u0010\u000e\u001a\u0008\u0012\u0004\u0012\u0002H\r0\u0007\u00a2\u0006\u0002\u0010\u000fJ\u0006\u0010\u0010\u001a\u00020\u000bR\u000e\u0010\u0002\u001a\u00020\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000R&\u0010\u0004\u001a\u001a\u0012\u0014\u0012\u0012\u0012\u0008\u0012\u0006\u0012\u0002\u0008\u00030\u0007\u0012\u0004\u0012\u00020\u00010\u0006\u0018\u00010\u0005X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\n\u001a\u00020\u000b8\u0006X\u0087\u0004\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u0012"
+    }
+    d2 = {
+        "Landroidx/camera/camera2/interop/Camera2CameraInfo;",
+        "",
+        "cameraProperties",
+        "Landroidx/camera/camera2/impl/CameraProperties;",
+        "extensionsSpecificChars",
+        "",
+        "Landroid/util/Pair;",
+        "Landroid/hardware/camera2/CameraCharacteristics$Key;",
+        "<init>",
+        "(Landroidx/camera/camera2/impl/CameraProperties;Ljava/util/List;)V",
+        "cameraId",
+        "",
+        "getCameraCharacteristic",
+        "T",
+        "key",
+        "(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;",
+        "getCameraId",
+        "Companion",
+        "camera-camera2"
+    }
+    k = 0x1
+    mv = {
+        0x2,
+        0x1,
+        0x0
+    }
+    xi = 0x30
+.end annotation
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "Camera2CameraInfo"
+.field public static final Companion:Landroidx/camera/camera2/interop/Camera2CameraInfo$Companion;
 
 
 # instance fields
-.field private mCamera2CameraInfoImpl:Landroidx/camera/camera2/internal/Camera2CameraInfoImpl;
+.field public final synthetic cameraId:Ljava/lang/String;
 
-.field private mCamera2PhysicalCameraInfo:Landroidx/camera/camera2/internal/Camera2PhysicalCameraInfoImpl;
+.field private final cameraProperties:Landroidx/camera/camera2/impl/CameraProperties;
+
+.field private final extensionsSpecificChars:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Landroid/util/Pair<",
+            "Landroid/hardware/camera2/CameraCharacteristics$Key<",
+            "*>;",
+            "Ljava/lang/Object;",
+            ">;>;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Landroidx/camera/camera2/internal/Camera2CameraInfoImpl;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    .line 54
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Landroidx/camera/camera2/interop/Camera2CameraInfo$Companion;
 
-    .line 55
-    iput-object p1, p0, Landroidx/camera/camera2/interop/Camera2CameraInfo;->mCamera2CameraInfoImpl:Landroidx/camera/camera2/internal/Camera2CameraInfoImpl;
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Landroidx/camera/camera2/interop/Camera2CameraInfo$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    sput-object v0, Landroidx/camera/camera2/interop/Camera2CameraInfo;->Companion:Landroidx/camera/camera2/interop/Camera2CameraInfo$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroidx/camera/camera2/internal/Camera2PhysicalCameraInfoImpl;)V
+.method private constructor <init>(Landroidx/camera/camera2/impl/CameraProperties;Ljava/util/List;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/camera/camera2/impl/CameraProperties;",
+            "Ljava/util/List<",
+            "+",
+            "Landroid/util/Pair<",
+            "Landroid/hardware/camera2/CameraCharacteristics$Key<",
+            "*>;",
+            "Ljava/lang/Object;",
+            ">;>;)V"
+        }
+    .end annotation
 
-    .line 62
+    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 63
-    iput-object p1, p0, Landroidx/camera/camera2/interop/Camera2CameraInfo;->mCamera2PhysicalCameraInfo:Landroidx/camera/camera2/internal/Camera2PhysicalCameraInfoImpl;
+    .line 32
+    iput-object p1, p0, Landroidx/camera/camera2/interop/Camera2CameraInfo;->cameraProperties:Landroidx/camera/camera2/impl/CameraProperties;
+
+    .line 33
+    iput-object p2, p0, Landroidx/camera/camera2/interop/Camera2CameraInfo;->extensionsSpecificChars:Ljava/util/List;
+
+    .line 35
+    invoke-interface {p1}, Landroidx/camera/camera2/impl/CameraProperties;->getCameraId-Dz_R5H8()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Landroidx/camera/camera2/interop/Camera2CameraInfo;->cameraId:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static extractCameraCharacteristics(Landroidx/camera/core/CameraInfo;)Landroid/hardware/camera2/CameraCharacteristics;
-    .locals 2
+.method synthetic constructor <init>(Landroidx/camera/camera2/impl/CameraProperties;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    .locals 0
 
-    .line 150
-    instance-of v0, p0, Landroidx/camera/camera2/internal/Camera2PhysicalCameraInfoImpl;
+    and-int/lit8 p3, p3, 0x2
 
-    if-eqz v0, :cond_0
+    if-eqz p3, :cond_0
 
-    .line 151
-    check-cast p0, Landroidx/camera/camera2/internal/Camera2PhysicalCameraInfoImpl;
+    const/4 p2, 0x0
 
-    .line 152
-    invoke-virtual {p0}, Landroidx/camera/camera2/internal/Camera2PhysicalCameraInfoImpl;->getCameraCharacteristicsCompat()Landroidx/camera/camera2/internal/compat/CameraCharacteristicsCompat;
+    .line 31
+    :cond_0
+    invoke-direct {p0, p1, p2}, Landroidx/camera/camera2/interop/Camera2CameraInfo;-><init>(Landroidx/camera/camera2/impl/CameraProperties;Ljava/util/List;)V
 
-    move-result-object p0
+    return-void
+.end method
 
-    .line 153
-    invoke-virtual {p0}, Landroidx/camera/camera2/internal/compat/CameraCharacteristicsCompat;->toCameraCharacteristics()Landroid/hardware/camera2/CameraCharacteristics;
+.method public synthetic constructor <init>(Landroidx/camera/camera2/impl/CameraProperties;Ljava/util/List;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    .locals 0
 
-    move-result-object p0
+    invoke-direct {p0, p1, p2}, Landroidx/camera/camera2/interop/Camera2CameraInfo;-><init>(Landroidx/camera/camera2/impl/CameraProperties;Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public static final synthetic access$getCameraProperties$p(Landroidx/camera/camera2/interop/Camera2CameraInfo;)Landroidx/camera/camera2/impl/CameraProperties;
+    .locals 0
+
+    .line 29
+    iget-object p0, p0, Landroidx/camera/camera2/interop/Camera2CameraInfo;->cameraProperties:Landroidx/camera/camera2/impl/CameraProperties;
 
     return-object p0
+.end method
 
-    .line 156
-    :cond_0
-    check-cast p0, Landroidx/camera/core/impl/CameraInfoInternal;
+.method public static final create(Landroidx/camera/camera2/impl/CameraProperties;)Landroidx/camera/camera2/interop/Camera2CameraInfo;
+    .locals 1
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
 
-    invoke-interface {p0}, Landroidx/camera/core/impl/CameraInfoInternal;->getImplementation()Landroidx/camera/core/impl/CameraInfoInternal;
+    sget-object v0, Landroidx/camera/camera2/interop/Camera2CameraInfo;->Companion:Landroidx/camera/camera2/interop/Camera2CameraInfo$Companion;
 
-    move-result-object p0
-
-    .line 157
-    instance-of v0, p0, Landroidx/camera/camera2/internal/Camera2CameraInfoImpl;
-
-    const-string v1, "CameraInfo does not contain any Camera2 information."
-
-    invoke-static {v0, v1}, Landroidx/core/util/Preconditions;->checkState(ZLjava/lang/String;)V
-
-    .line 159
-    check-cast p0, Landroidx/camera/camera2/internal/Camera2CameraInfoImpl;
-
-    .line 160
-    invoke-virtual {p0}, Landroidx/camera/camera2/internal/Camera2CameraInfoImpl;->getCameraCharacteristicsCompat()Landroidx/camera/camera2/internal/compat/CameraCharacteristicsCompat;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroidx/camera/camera2/internal/compat/CameraCharacteristicsCompat;->toCameraCharacteristics()Landroid/hardware/camera2/CameraCharacteristics;
+    invoke-virtual {v0, p0}, Landroidx/camera/camera2/interop/Camera2CameraInfo$Companion;->create(Landroidx/camera/camera2/impl/CameraProperties;)Landroidx/camera/camera2/interop/Camera2CameraInfo;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static from(Landroidx/camera/core/CameraInfo;)Landroidx/camera/camera2/interop/Camera2CameraInfo;
-    .locals 2
+.method public static final from(Landroidx/camera/core/CameraInfo;)Landroidx/camera/camera2/interop/Camera2CameraInfo;
+    .locals 1
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
 
-    .line 77
-    instance-of v0, p0, Landroidx/camera/camera2/internal/Camera2PhysicalCameraInfoImpl;
+    sget-object v0, Landroidx/camera/camera2/interop/Camera2CameraInfo;->Companion:Landroidx/camera/camera2/interop/Camera2CameraInfo$Companion;
 
-    if-eqz v0, :cond_0
-
-    .line 78
-    check-cast p0, Landroidx/camera/camera2/internal/Camera2PhysicalCameraInfoImpl;
-
-    invoke-virtual {p0}, Landroidx/camera/camera2/internal/Camera2PhysicalCameraInfoImpl;->getCamera2CameraInfo()Landroidx/camera/camera2/interop/Camera2CameraInfo;
-
-    move-result-object p0
-
-    return-object p0
-
-    .line 81
-    :cond_0
-    check-cast p0, Landroidx/camera/core/impl/CameraInfoInternal;
-
-    .line 82
-    invoke-interface {p0}, Landroidx/camera/core/impl/CameraInfoInternal;->getImplementation()Landroidx/camera/core/impl/CameraInfoInternal;
-
-    move-result-object p0
-
-    .line 83
-    instance-of v0, p0, Landroidx/camera/camera2/internal/Camera2CameraInfoImpl;
-
-    const-string v1, "CameraInfo doesn\'t contain Camera2 implementation."
-
-    invoke-static {v0, v1}, Landroidx/core/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
-
-    .line 85
-    check-cast p0, Landroidx/camera/camera2/internal/Camera2CameraInfoImpl;
-
-    invoke-virtual {p0}, Landroidx/camera/camera2/internal/Camera2CameraInfoImpl;->getCamera2CameraInfo()Landroidx/camera/camera2/interop/Camera2CameraInfo;
+    invoke-virtual {v0, p0}, Landroidx/camera/camera2/interop/Camera2CameraInfo$Companion;->from(Landroidx/camera/core/CameraInfo;)Landroidx/camera/camera2/interop/Camera2CameraInfo;
 
     move-result-object p0
 
@@ -136,8 +185,8 @@
 
 
 # virtual methods
-.method public getCameraCharacteristic(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
-    .locals 1
+.method public final getCameraCharacteristic(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -148,92 +197,69 @@
         }
     .end annotation
 
-    .line 126
-    iget-object v0, p0, Landroidx/camera/camera2/interop/Camera2CameraInfo;->mCamera2PhysicalCameraInfo:Landroidx/camera/camera2/internal/Camera2PhysicalCameraInfoImpl;
+    const-string v0, "key"
 
-    if-eqz v0, :cond_0
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 127
-    invoke-virtual {v0}, Landroidx/camera/camera2/internal/Camera2PhysicalCameraInfoImpl;->getCameraCharacteristicsCompat()Landroidx/camera/camera2/internal/compat/CameraCharacteristicsCompat;
+    .line 48
+    iget-object v0, p0, Landroidx/camera/camera2/interop/Camera2CameraInfo;->extensionsSpecificChars:Ljava/util/List;
+
+    if-eqz v0, :cond_1
+
+    check-cast v0, Ljava/lang/Iterable;
+
+    .line 117
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Landroidx/camera/camera2/internal/compat/CameraCharacteristicsCompat;->get(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-
-    .line 129
     :cond_0
-    iget-object v0, p0, Landroidx/camera/camera2/interop/Camera2CameraInfo;->mCamera2CameraInfoImpl:Landroidx/camera/camera2/internal/Camera2CameraInfoImpl;
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {v0}, Landroidx/camera/camera2/internal/Camera2CameraInfoImpl;->getCameraCharacteristicsCompat()Landroidx/camera/camera2/internal/compat/CameraCharacteristicsCompat;
+    move-result v1
 
-    move-result-object v0
+    if-eqz v1, :cond_1
 
-    invoke-virtual {v0, p1}, Landroidx/camera/camera2/internal/compat/CameraCharacteristicsCompat;->get(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v1
 
-    return-object p1
+    check-cast v1, Landroid/util/Pair;
+
+    .line 49
+    iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
+
+    invoke-static {v2, p1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    .line 51
+    iget-object p0, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    return-object p0
+
+    .line 54
+    :cond_1
+    iget-object p0, p0, Landroidx/camera/camera2/interop/Camera2CameraInfo;->cameraProperties:Landroidx/camera/camera2/impl/CameraProperties;
+
+    invoke-interface {p0}, Landroidx/camera/camera2/impl/CameraProperties;->getMetadata()Landroidx/camera/camera2/pipe/CameraMetadata;
+
+    move-result-object p0
+
+    invoke-static {p0, p1}, Landroidx/camera/camera2/compat/workaround/CameraMetadataSafeGetterKt;->getSafely(Landroidx/camera/camera2/pipe/CameraMetadata;Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method public getCameraCharacteristicsMap()Ljava/util/Map;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Landroid/hardware/camera2/CameraCharacteristics;",
-            ">;"
-        }
-    .end annotation
+.method public final getCameraId()Ljava/lang/String;
+    .locals 0
 
-    .line 174
-    iget-object v0, p0, Landroidx/camera/camera2/interop/Camera2CameraInfo;->mCamera2PhysicalCameraInfo:Landroidx/camera/camera2/internal/Camera2PhysicalCameraInfoImpl;
+    .line 73
+    iget-object p0, p0, Landroidx/camera/camera2/interop/Camera2CameraInfo;->cameraId:Ljava/lang/String;
 
-    if-eqz v0, :cond_0
-
-    .line 175
-    sget-object v0, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
-
-    return-object v0
-
-    .line 177
-    :cond_0
-    iget-object v0, p0, Landroidx/camera/camera2/interop/Camera2CameraInfo;->mCamera2CameraInfoImpl:Landroidx/camera/camera2/internal/Camera2CameraInfoImpl;
-
-    invoke-virtual {v0}, Landroidx/camera/camera2/internal/Camera2CameraInfoImpl;->getCameraCharacteristicsMap()Ljava/util/Map;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public getCameraId()Ljava/lang/String;
-    .locals 1
-
-    .line 107
-    iget-object v0, p0, Landroidx/camera/camera2/interop/Camera2CameraInfo;->mCamera2PhysicalCameraInfo:Landroidx/camera/camera2/internal/Camera2PhysicalCameraInfoImpl;
-
-    if-eqz v0, :cond_0
-
-    .line 108
-    invoke-virtual {v0}, Landroidx/camera/camera2/internal/Camera2PhysicalCameraInfoImpl;->getCameraId()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    .line 110
-    :cond_0
-    iget-object v0, p0, Landroidx/camera/camera2/interop/Camera2CameraInfo;->mCamera2CameraInfoImpl:Landroidx/camera/camera2/internal/Camera2CameraInfoImpl;
-
-    invoke-virtual {v0}, Landroidx/camera/camera2/internal/Camera2CameraInfoImpl;->getCameraId()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p0
 .end method

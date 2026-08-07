@@ -46,12 +46,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 196
+    .line 189
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 197
+    .line 190
     iput-boolean v0, p0, Landroidx/camera/core/impl/QuirkSettings$Builder;->mEnabledWhenDeviceHasQuirk:Z
 
     return-void
@@ -60,20 +60,20 @@
 
 # virtual methods
 .method public build()Landroidx/camera/core/impl/QuirkSettings;
-    .locals 5
+    .locals 4
 
-    .line 235
+    .line 224
     new-instance v0, Landroidx/camera/core/impl/QuirkSettings;
 
     iget-boolean v1, p0, Landroidx/camera/core/impl/QuirkSettings$Builder;->mEnabledWhenDeviceHasQuirk:Z
 
     iget-object v2, p0, Landroidx/camera/core/impl/QuirkSettings$Builder;->mForceEnabledQuirks:Ljava/util/Set;
 
-    iget-object v3, p0, Landroidx/camera/core/impl/QuirkSettings$Builder;->mForceDisabledQuirks:Ljava/util/Set;
+    iget-object p0, p0, Landroidx/camera/core/impl/QuirkSettings$Builder;->mForceDisabledQuirks:Ljava/util/Set;
 
-    const/4 v4, 0x0
+    const/4 v3, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Landroidx/camera/core/impl/QuirkSettings;-><init>(ZLjava/util/Set;Ljava/util/Set;Landroidx/camera/core/impl/QuirkSettings$1;)V
+    invoke-direct {v0, v1, v2, p0, v3}, Landroidx/camera/core/impl/QuirkSettings;-><init>(ZLjava/util/Set;Ljava/util/Set;Landroidx/camera/core/impl/QuirkSettings$1;)V
 
     return-object v0
 .end method
@@ -92,7 +92,7 @@
         }
     .end annotation
 
-    .line 224
+    .line 214
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0, p1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
@@ -116,7 +116,7 @@
         }
     .end annotation
 
-    .line 215
+    .line 206
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0, p1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
@@ -129,7 +129,7 @@
 .method public setEnabledWhenDeviceHasQuirk(Z)Landroidx/camera/core/impl/QuirkSettings$Builder;
     .locals 0
 
-    .line 206
+    .line 198
     iput-boolean p1, p0, Landroidx/camera/core/impl/QuirkSettings$Builder;->mEnabledWhenDeviceHasQuirk:Z
 
     return-object p0

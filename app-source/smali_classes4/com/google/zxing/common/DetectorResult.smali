@@ -28,19 +28,19 @@
 
 # virtual methods
 .method public final getBits()Lcom/google/zxing/common/BitMatrix;
-    .locals 1
+    .locals 0
 
     .line 39
-    iget-object v0, p0, Lcom/google/zxing/common/DetectorResult;->bits:Lcom/google/zxing/common/BitMatrix;
+    iget-object p0, p0, Lcom/google/zxing/common/DetectorResult;->bits:Lcom/google/zxing/common/BitMatrix;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getPoints()[Lcom/google/zxing/ResultPoint;
-    .locals 1
+    .locals 0
 
     .line 43
-    iget-object v0, p0, Lcom/google/zxing/common/DetectorResult;->points:[Lcom/google/zxing/ResultPoint;
+    iget-object p0, p0, Lcom/google/zxing/common/DetectorResult;->points:[Lcom/google/zxing/ResultPoint;
 
-    return-object v0
+    return-object p0
 .end method

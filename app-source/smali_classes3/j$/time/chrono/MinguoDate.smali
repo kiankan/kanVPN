@@ -47,13 +47,13 @@
 
     mul-long/2addr v0, v2
 
-    iget-object v2, p0, Lj$/time/chrono/MinguoDate;->isoDate:Lj$/time/LocalDate;
+    iget-object p0, p0, Lj$/time/chrono/MinguoDate;->isoDate:Lj$/time/LocalDate;
 
-    invoke-virtual {v2}, Lj$/time/LocalDate;->getMonthValue()I
+    invoke-virtual {p0}, Lj$/time/LocalDate;->getMonthValue()I
 
-    move-result v2
+    move-result p0
 
-    int-to-long v2, v2
+    int-to-long v2, p0
 
     add-long/2addr v0, v2
 
@@ -65,18 +65,18 @@
 .end method
 
 .method private getProlepticYear()I
-    .locals 1
+    .locals 0
 
     .line 306
-    iget-object v0, p0, Lj$/time/chrono/MinguoDate;->isoDate:Lj$/time/LocalDate;
+    iget-object p0, p0, Lj$/time/chrono/MinguoDate;->isoDate:Lj$/time/LocalDate;
 
-    invoke-virtual {v0}, Lj$/time/LocalDate;->getYear()I
+    invoke-virtual {p0}, Lj$/time/LocalDate;->getYear()I
 
-    move-result v0
+    move-result p0
 
-    add-int/lit16 v0, v0, -0x777
+    add-int/lit16 p0, p0, -0x777
 
-    return v0
+    return p0
 .end method
 
 .method static readExternal(Ljava/io/DataInput;)Lj$/time/chrono/MinguoDate;
@@ -108,16 +108,16 @@
 .end method
 
 .method private readObject(Ljava/io/ObjectInputStream;)V
-    .locals 1
+    .locals 0
 
     .line 485
-    new-instance p1, Ljava/io/InvalidObjectException;
+    new-instance p0, Ljava/io/InvalidObjectException;
 
-    const-string v0, "Deserialization via serialization delegate"
+    const-string p1, "Deserialization via serialization delegate"
 
-    invoke-direct {p1, v0}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method private with(Lj$/time/LocalDate;)Lj$/time/chrono/MinguoDate;
@@ -135,11 +135,11 @@
     return-object p0
 
     :cond_0
-    new-instance v0, Lj$/time/chrono/MinguoDate;
+    new-instance p0, Lj$/time/chrono/MinguoDate;
 
-    invoke-direct {v0, p1}, Lj$/time/chrono/MinguoDate;-><init>(Lj$/time/LocalDate;)V
+    invoke-direct {p0, p1}, Lj$/time/chrono/MinguoDate;-><init>(Lj$/time/LocalDate;)V
 
-    return-object v0
+    return-object p0
 .end method
 
 .method private writeReplace()Ljava/lang/Object;
@@ -163,9 +163,9 @@
     .line 428
     invoke-super {p0, p1}, Lj$/time/chrono/ChronoLocalDate;->atTime(Lj$/time/LocalTime;)Lj$/time/chrono/ChronoLocalDateTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -173,9 +173,9 @@
 
     if-ne p0, p1, :cond_0
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     .line 460
     :cond_0
@@ -187,73 +187,73 @@
     check-cast p1, Lj$/time/chrono/MinguoDate;
 
     .line 462
-    iget-object v0, p0, Lj$/time/chrono/MinguoDate;->isoDate:Lj$/time/LocalDate;
+    iget-object p0, p0, Lj$/time/chrono/MinguoDate;->isoDate:Lj$/time/LocalDate;
 
     iget-object p1, p1, Lj$/time/chrono/MinguoDate;->isoDate:Lj$/time/LocalDate;
 
-    invoke-virtual {v0, p1}, Lj$/time/LocalDate;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Lj$/time/LocalDate;->equals(Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 
     :cond_1
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method public bridge synthetic getChronology()Lj$/time/chrono/Chronology;
-    .locals 1
+    .locals 0
 
     .line 106
     invoke-virtual {p0}, Lj$/time/chrono/MinguoDate;->getChronology()Lj$/time/chrono/MinguoChronology;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getChronology()Lj$/time/chrono/MinguoChronology;
-    .locals 1
+    .locals 0
 
     .line 228
-    sget-object v0, Lj$/time/chrono/MinguoChronology;->INSTANCE:Lj$/time/chrono/MinguoChronology;
+    sget-object p0, Lj$/time/chrono/MinguoChronology;->INSTANCE:Lj$/time/chrono/MinguoChronology;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public bridge synthetic getEra()Lj$/time/chrono/Era;
-    .locals 1
+    .locals 0
 
     .line 106
     invoke-virtual {p0}, Lj$/time/chrono/MinguoDate;->getEra()Lj$/time/chrono/MinguoEra;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getEra()Lj$/time/chrono/MinguoEra;
-    .locals 2
+    .locals 1
 
     .line 241
     invoke-direct {p0}, Lj$/time/chrono/MinguoDate;->getProlepticYear()I
 
-    move-result v0
+    move-result p0
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    if-lt v0, v1, :cond_0
+    if-lt p0, v0, :cond_0
 
-    sget-object v0, Lj$/time/chrono/MinguoEra;->ROC:Lj$/time/chrono/MinguoEra;
+    sget-object p0, Lj$/time/chrono/MinguoEra;->ROC:Lj$/time/chrono/MinguoEra;
 
-    return-object v0
+    return-object p0
 
     :cond_0
-    sget-object v0, Lj$/time/chrono/MinguoEra;->BEFORE_ROC:Lj$/time/chrono/MinguoEra;
+    sget-object p0, Lj$/time/chrono/MinguoEra;->BEFORE_ROC:Lj$/time/chrono/MinguoEra;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getLong(Lj$/time/temporal/TemporalField;)J
@@ -296,21 +296,21 @@
     if-eq v0, v1, :cond_0
 
     .line 296
-    iget-object v0, p0, Lj$/time/chrono/MinguoDate;->isoDate:Lj$/time/LocalDate;
+    iget-object p0, p0, Lj$/time/chrono/MinguoDate;->isoDate:Lj$/time/LocalDate;
 
-    invoke-virtual {v0, p1}, Lj$/time/LocalDate;->getLong(Lj$/time/temporal/TemporalField;)J
+    invoke-virtual {p0, p1}, Lj$/time/LocalDate;->getLong(Lj$/time/temporal/TemporalField;)J
 
-    move-result-wide v0
+    move-result-wide p0
 
-    return-wide v0
+    return-wide p0
 
     .line 294
     :cond_0
     invoke-direct {p0}, Lj$/time/chrono/MinguoDate;->getProlepticYear()I
 
-    move-result p1
+    move-result p0
 
-    if-lt p1, v2, :cond_1
+    if-lt p0, v2, :cond_1
 
     goto :goto_0
 
@@ -318,57 +318,57 @@
     const/4 v2, 0x0
 
     :goto_0
-    int-to-long v0, v2
+    int-to-long p0, v2
 
-    return-wide v0
+    return-wide p0
 
     .line 292
     :cond_2
     invoke-direct {p0}, Lj$/time/chrono/MinguoDate;->getProlepticYear()I
 
-    move-result p1
+    move-result p0
 
-    int-to-long v0, p1
+    int-to-long p0, p0
 
-    return-wide v0
+    return-wide p0
 
     .line 286
     :cond_3
     invoke-direct {p0}, Lj$/time/chrono/MinguoDate;->getProlepticMonth()J
 
-    move-result-wide v0
+    move-result-wide p0
 
-    return-wide v0
+    return-wide p0
 
     .line 288
     :cond_4
     invoke-direct {p0}, Lj$/time/chrono/MinguoDate;->getProlepticYear()I
 
-    move-result p1
+    move-result p0
 
-    if-lt p1, v2, :cond_5
+    if-lt p0, v2, :cond_5
 
     goto :goto_1
 
     :cond_5
-    rsub-int/lit8 p1, p1, 0x1
+    rsub-int/lit8 p0, p0, 0x1
 
     :goto_1
-    int-to-long v0, p1
+    int-to-long p0, p0
 
-    return-wide v0
+    return-wide p0
 
     .line 298
     :cond_6
     invoke-interface {p1, p0}, Lj$/time/temporal/TemporalField;->getFrom(Lj$/time/temporal/TemporalAccessor;)J
 
-    move-result-wide v0
+    move-result-wide p0
 
-    return-wide v0
+    return-wide p0
 .end method
 
 .method public hashCode()I
-    .locals 2
+    .locals 1
 
     .line 474
     invoke-virtual {p0}, Lj$/time/chrono/MinguoDate;->getChronology()Lj$/time/chrono/MinguoChronology;
@@ -383,15 +383,15 @@
 
     move-result v0
 
-    iget-object v1, p0, Lj$/time/chrono/MinguoDate;->isoDate:Lj$/time/LocalDate;
+    iget-object p0, p0, Lj$/time/chrono/MinguoDate;->isoDate:Lj$/time/LocalDate;
 
-    invoke-virtual {v1}, Lj$/time/LocalDate;->hashCode()I
+    invoke-virtual {p0}, Lj$/time/LocalDate;->hashCode()I
 
-    move-result v1
+    move-result p0
 
-    xor-int/2addr v0, v1
+    xor-int/2addr p0, v0
 
-    return v0
+    return p0
 .end method
 
 .method public bridge synthetic minus(JLj$/time/temporal/TemporalUnit;)Lj$/time/chrono/ChronoLocalDate;
@@ -400,9 +400,9 @@
     .line 106
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/chrono/MinguoDate;->minus(JLj$/time/temporal/TemporalUnit;)Lj$/time/chrono/MinguoDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public minus(JLj$/time/temporal/TemporalUnit;)Lj$/time/chrono/MinguoDate;
@@ -411,11 +411,11 @@
     .line 398
     invoke-super {p0, p1, p2, p3}, Lj$/time/chrono/ChronoLocalDateImpl;->minus(JLj$/time/temporal/TemporalUnit;)Lj$/time/chrono/ChronoLocalDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lj$/time/chrono/MinguoDate;
+    check-cast p0, Lj$/time/chrono/MinguoDate;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic minus(JLj$/time/temporal/TemporalUnit;)Lj$/time/temporal/Temporal;
@@ -424,9 +424,9 @@
     .line 106
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/chrono/MinguoDate;->minus(JLj$/time/temporal/TemporalUnit;)Lj$/time/chrono/MinguoDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/chrono/ChronoLocalDate;
@@ -435,9 +435,20 @@
     .line 106
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/chrono/MinguoDate;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/chrono/MinguoDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
+.end method
+
+.method public bridge synthetic plus(Lj$/time/temporal/TemporalAmount;)Lj$/time/chrono/ChronoLocalDate;
+    .locals 0
+
+    .line 106
+    invoke-virtual {p0, p1}, Lj$/time/chrono/MinguoDate;->plus(Lj$/time/temporal/TemporalAmount;)Lj$/time/chrono/MinguoDate;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method public plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/chrono/MinguoDate;
@@ -446,11 +457,24 @@
     .line 393
     invoke-super {p0, p1, p2, p3}, Lj$/time/chrono/ChronoLocalDateImpl;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/chrono/ChronoLocalDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lj$/time/chrono/MinguoDate;
+    check-cast p0, Lj$/time/chrono/MinguoDate;
 
-    return-object p1
+    return-object p0
+.end method
+
+.method public plus(Lj$/time/temporal/TemporalAmount;)Lj$/time/chrono/MinguoDate;
+    .locals 0
+
+    .line 357
+    invoke-super {p0, p1}, Lj$/time/chrono/ChronoLocalDateImpl;->plus(Lj$/time/temporal/TemporalAmount;)Lj$/time/chrono/ChronoLocalDate;
+
+    move-result-object p0
+
+    check-cast p0, Lj$/time/chrono/MinguoDate;
+
+    return-object p0
 .end method
 
 .method public bridge synthetic plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/temporal/Temporal;
@@ -459,9 +483,9 @@
     .line 106
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/chrono/MinguoDate;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/chrono/MinguoDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method bridge synthetic plusDays(J)Lj$/time/chrono/ChronoLocalDate;
@@ -470,9 +494,9 @@
     .line 106
     invoke-virtual {p0, p1, p2}, Lj$/time/chrono/MinguoDate;->plusDays(J)Lj$/time/chrono/MinguoDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method plusDays(J)Lj$/time/chrono/MinguoDate;
@@ -487,9 +511,9 @@
 
     invoke-direct {p0, p1}, Lj$/time/chrono/MinguoDate;->with(Lj$/time/LocalDate;)Lj$/time/chrono/MinguoDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method bridge synthetic plusMonths(J)Lj$/time/chrono/ChronoLocalDate;
@@ -498,9 +522,9 @@
     .line 106
     invoke-virtual {p0, p1, p2}, Lj$/time/chrono/MinguoDate;->plusMonths(J)Lj$/time/chrono/MinguoDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method plusMonths(J)Lj$/time/chrono/MinguoDate;
@@ -515,9 +539,9 @@
 
     invoke-direct {p0, p1}, Lj$/time/chrono/MinguoDate;->with(Lj$/time/LocalDate;)Lj$/time/chrono/MinguoDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method bridge synthetic plusYears(J)Lj$/time/chrono/ChronoLocalDate;
@@ -526,9 +550,9 @@
     .line 106
     invoke-virtual {p0, p1, p2}, Lj$/time/chrono/MinguoDate;->plusYears(J)Lj$/time/chrono/MinguoDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method plusYears(J)Lj$/time/chrono/MinguoDate;
@@ -543,13 +567,13 @@
 
     invoke-direct {p0, p1}, Lj$/time/chrono/MinguoDate;->with(Lj$/time/LocalDate;)Lj$/time/chrono/MinguoDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public range(Lj$/time/temporal/TemporalField;)Lj$/time/temporal/ValueRange;
-    .locals 4
+    .locals 3
 
     .line 260
     instance-of v0, p1, Lj$/time/temporal/ChronoField;
@@ -596,13 +620,13 @@
     .line 274
     invoke-virtual {p0}, Lj$/time/chrono/MinguoDate;->getChronology()Lj$/time/chrono/MinguoChronology;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-virtual {p1, v0}, Lj$/time/chrono/MinguoChronology;->range(Lj$/time/temporal/ChronoField;)Lj$/time/temporal/ValueRange;
+    invoke-virtual {p0, v0}, Lj$/time/chrono/MinguoChronology;->range(Lj$/time/temporal/ChronoField;)Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 269
     :cond_0
@@ -615,89 +639,77 @@
     .line 270
     invoke-direct {p0}, Lj$/time/chrono/MinguoDate;->getProlepticYear()I
 
-    move-result v0
+    move-result p0
 
-    if-gtz v0, :cond_1
+    if-gtz p0, :cond_1
 
     invoke-virtual {p1}, Lj$/time/temporal/ValueRange;->getMinimum()J
 
-    move-result-wide v0
+    move-result-wide p0
 
-    neg-long v0, v0
+    neg-long p0, p0
 
-    const-wide/16 v2, 0x778
+    const-wide/16 v0, 0x778
 
-    add-long/2addr v0, v2
+    add-long/2addr p0, v0
 
     goto :goto_0
 
     :cond_1
     invoke-virtual {p1}, Lj$/time/temporal/ValueRange;->getMaximum()J
 
-    move-result-wide v0
+    move-result-wide p0
 
-    const-wide/16 v2, 0x777
+    const-wide/16 v0, 0x777
 
-    sub-long/2addr v0, v2
+    sub-long/2addr p0, v0
 
     :goto_0
-    const-wide/16 v2, 0x1
+    const-wide/16 v0, 0x1
 
     .line 271
-    invoke-static {v2, v3, v0, v1}, Lj$/time/temporal/ValueRange;->of(JJ)Lj$/time/temporal/ValueRange;
+    invoke-static {v0, v1, p0, p1}, Lj$/time/temporal/ValueRange;->of(JJ)Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 267
     :cond_2
-    iget-object v0, p0, Lj$/time/chrono/MinguoDate;->isoDate:Lj$/time/LocalDate;
+    iget-object p0, p0, Lj$/time/chrono/MinguoDate;->isoDate:Lj$/time/LocalDate;
 
-    invoke-virtual {v0, p1}, Lj$/time/LocalDate;->range(Lj$/time/temporal/TemporalField;)Lj$/time/temporal/ValueRange;
+    invoke-virtual {p0, p1}, Lj$/time/LocalDate;->range(Lj$/time/temporal/TemporalField;)Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 276
     :cond_3
-    new-instance v0, Lj$/time/temporal/UnsupportedTemporalTypeException;
+    const-string p0, "Unsupported field: "
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-static {p0, p1}, Lj$/time/Year$2;->m(Ljava/lang/String;Ljava/lang/Object;)V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 p0, 0x0
 
-    const-string v2, "Unsupported field: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Lj$/time/temporal/UnsupportedTemporalTypeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-object p0
 
     .line 278
     :cond_4
     invoke-interface {p1, p0}, Lj$/time/temporal/TemporalField;->rangeRefinedBy(Lj$/time/temporal/TemporalAccessor;)Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public toEpochDay()J
     .locals 2
 
     .line 439
-    iget-object v0, p0, Lj$/time/chrono/MinguoDate;->isoDate:Lj$/time/LocalDate;
+    iget-object p0, p0, Lj$/time/chrono/MinguoDate;->isoDate:Lj$/time/LocalDate;
 
-    invoke-virtual {v0}, Lj$/time/LocalDate;->toEpochDay()J
+    invoke-virtual {p0}, Lj$/time/LocalDate;->toEpochDay()J
 
     move-result-wide v0
 
@@ -705,14 +717,14 @@
 .end method
 
 .method public bridge synthetic toString()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 106
     invoke-super {p0}, Lj$/time/chrono/ChronoLocalDateImpl;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public bridge synthetic with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/chrono/ChronoLocalDate;
@@ -721,9 +733,9 @@
     .line 106
     invoke-virtual {p0, p1}, Lj$/time/chrono/MinguoDate;->with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/chrono/MinguoDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic with(Lj$/time/temporal/TemporalField;J)Lj$/time/chrono/ChronoLocalDate;
@@ -732,9 +744,9 @@
     .line 106
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/chrono/MinguoDate;->with(Lj$/time/temporal/TemporalField;J)Lj$/time/chrono/MinguoDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/chrono/MinguoDate;
@@ -743,11 +755,11 @@
     .line 347
     invoke-super {p0, p1}, Lj$/time/chrono/ChronoLocalDateImpl;->with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/chrono/ChronoLocalDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lj$/time/chrono/MinguoDate;
+    check-cast p0, Lj$/time/chrono/MinguoDate;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public with(Lj$/time/temporal/TemporalField;J)Lj$/time/chrono/MinguoDate;
@@ -823,9 +835,9 @@
 
     invoke-virtual {p0, p2, p3}, Lj$/time/chrono/MinguoDate;->plusMonths(J)Lj$/time/chrono/MinguoDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 324
     :cond_2
@@ -864,9 +876,9 @@
 
     invoke-direct {p0, p1}, Lj$/time/chrono/MinguoDate;->with(Lj$/time/LocalDate;)Lj$/time/chrono/MinguoDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 331
     :cond_3
@@ -884,9 +896,9 @@
 
     invoke-direct {p0, p1}, Lj$/time/chrono/MinguoDate;->with(Lj$/time/LocalDate;)Lj$/time/chrono/MinguoDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 329
     :cond_4
@@ -900,9 +912,9 @@
 
     invoke-direct {p0, p1}, Lj$/time/chrono/MinguoDate;->with(Lj$/time/LocalDate;)Lj$/time/chrono/MinguoDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 327
     :cond_5
@@ -930,19 +942,19 @@
 
     invoke-direct {p0, p1}, Lj$/time/chrono/MinguoDate;->with(Lj$/time/LocalDate;)Lj$/time/chrono/MinguoDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 337
     :cond_7
     invoke-super {p0, p1, p2, p3}, Lj$/time/chrono/ChronoLocalDateImpl;->with(Lj$/time/temporal/TemporalField;J)Lj$/time/chrono/ChronoLocalDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lj$/time/chrono/MinguoDate;
+    check-cast p0, Lj$/time/chrono/MinguoDate;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/temporal/Temporal;
@@ -951,9 +963,9 @@
     .line 106
     invoke-virtual {p0, p1}, Lj$/time/chrono/MinguoDate;->with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/chrono/MinguoDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic with(Lj$/time/temporal/TemporalField;J)Lj$/time/temporal/Temporal;
@@ -962,9 +974,9 @@
     .line 106
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/chrono/MinguoDate;->with(Lj$/time/temporal/TemporalField;J)Lj$/time/chrono/MinguoDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method writeExternal(Ljava/io/DataOutput;)V
@@ -993,9 +1005,9 @@
 
     invoke-interface {p0, v0}, Lj$/time/temporal/TemporalAccessor;->get(Lj$/time/temporal/TemporalField;)I
 
-    move-result v0
+    move-result p0
 
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeByte(I)V
+    invoke-interface {p1, p0}, Ljava/io/DataOutput;->writeByte(I)V
 
     return-void
 .end method

@@ -33,7 +33,7 @@
         }
     .end annotation
 
-    .line 129
+    .line 131
     iput-object p1, p0, Landroidx/camera/core/impl/CameraControlInternal$1;->this$0:Landroidx/camera/core/impl/CameraControlInternal;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +44,7 @@
 
 # virtual methods
 .method public invokePostCapture()Lcom/google/common/util/concurrent/ListenableFuture;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -54,18 +54,18 @@
         }
     .end annotation
 
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
     .line 139
-    invoke-static {v0}, Landroidx/camera/core/impl/utils/futures/Futures;->immediateFuture(Ljava/lang/Object;)Lcom/google/common/util/concurrent/ListenableFuture;
+    invoke-static {p0}, Landroidx/camera/core/impl/utils/futures/Futures;->immediateFuture(Ljava/lang/Object;)Lcom/google/common/util/concurrent/ListenableFuture;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public invokePreCapture()Lcom/google/common/util/concurrent/ListenableFuture;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -75,12 +75,12 @@
         }
     .end annotation
 
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    .line 133
-    invoke-static {v0}, Landroidx/camera/core/impl/utils/futures/Futures;->immediateFuture(Ljava/lang/Object;)Lcom/google/common/util/concurrent/ListenableFuture;
+    .line 134
+    invoke-static {p0}, Landroidx/camera/core/impl/utils/futures/Futures;->immediateFuture(Ljava/lang/Object;)Lcom/google/common/util/concurrent/ListenableFuture;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

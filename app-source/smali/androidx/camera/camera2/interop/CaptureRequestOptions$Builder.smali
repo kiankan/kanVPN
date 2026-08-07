@@ -1,6 +1,6 @@
 .class public final Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder;
 .super Ljava/lang/Object;
-.source "CaptureRequestOptions.java"
+.source "CaptureRequestOptions.kt"
 
 # interfaces
 .implements Landroidx/camera/core/ExtendableBuilder;
@@ -16,6 +16,12 @@
     name = "Builder"
 .end annotation
 
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder$Companion;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
@@ -25,72 +31,97 @@
     }
 .end annotation
 
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0006\u0018\u0000 \u00122\n\u0012\u0006\u0012\u0004\u0018\u00010\u00020\u0001:\u0001\u0012B\u0007\u00a2\u0006\u0004\u0008\u0003\u0010\u0004J\u0008\u0010\u0008\u001a\u00020\tH\u0017J\'\u0010\n\u001a\u00020\u0000\"\u0004\u0008\u0000\u0010\u000b2\u000c\u0010\u000c\u001a\u0008\u0012\u0004\u0012\u0002H\u000b0\r2\u0006\u0010\u000e\u001a\u0002H\u000b\u00a2\u0006\u0002\u0010\u000fJ\u001a\u0010\u0010\u001a\u00020\u0000\"\u0004\u0008\u0000\u0010\u000b2\u000c\u0010\u000c\u001a\u0008\u0012\u0004\u0012\u0002H\u000b0\rJ\u0008\u0010\u0011\u001a\u00020\u0002H\u0016R\u0013\u0010\u0005\u001a\u00070\u0006\u00a2\u0006\u0002\u0008\u0007X\u0082\u0004\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u0013"
+    }
+    d2 = {
+        "Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder;",
+        "Landroidx/camera/core/ExtendableBuilder;",
+        "Landroidx/camera/camera2/interop/CaptureRequestOptions;",
+        "<init>",
+        "()V",
+        "mutableOptionsBundle",
+        "Landroidx/camera/core/impl/MutableOptionsBundle;",
+        "Lorg/jspecify/annotations/NonNull;",
+        "getMutableConfig",
+        "Landroidx/camera/core/impl/MutableConfig;",
+        "setCaptureRequestOption",
+        "ValueT",
+        "key",
+        "Landroid/hardware/camera2/CaptureRequest$Key;",
+        "value",
+        "(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder;",
+        "clearCaptureRequestOption",
+        "build",
+        "Companion",
+        "camera-camera2"
+    }
+    k = 0x1
+    mv = {
+        0x2,
+        0x1,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# static fields
+.field public static final Companion:Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder$Companion;
+
 
 # instance fields
-.field private final mMutableOptionsBundle:Landroidx/camera/core/impl/MutableOptionsBundle;
+.field private final mutableOptionsBundle:Landroidx/camera/core/impl/MutableOptionsBundle;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    .line 103
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder$Companion;
 
-    .line 105
-    invoke-static {}, Landroidx/camera/core/impl/MutableOptionsBundle;->create()Landroidx/camera/core/impl/MutableOptionsBundle;
+    const/4 v1, 0x0
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    iput-object v0, p0, Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder;->mMutableOptionsBundle:Landroidx/camera/core/impl/MutableOptionsBundle;
+    sput-object v0, Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder;->Companion:Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder$Companion;
 
     return-void
 .end method
 
-.method public static from(Landroidx/camera/core/impl/Config;)Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder;
-    .locals 3
+.method public constructor <init>()V
+    .locals 2
 
-    .line 116
-    new-instance v0, Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder;
+    .line 84
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder;-><init>()V
-
-    .line 117
-    new-instance v1, Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder$$ExternalSyntheticLambda0;
-
-    invoke-direct {v1, v0, p0}, Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder$$ExternalSyntheticLambda0;-><init>(Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder;Landroidx/camera/core/impl/Config;)V
-
-    const-string v2, "camera2.captureRequest.option."
-
-    invoke-interface {p0, v2, v1}, Landroidx/camera/core/impl/Config;->findOptions(Ljava/lang/String;Landroidx/camera/core/impl/Config$OptionMatcher;)V
-
-    return-object v0
-.end method
-
-.method static synthetic lambda$from$0(Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder;Landroidx/camera/core/impl/Config;Landroidx/camera/core/impl/Config$Option;)Z
-    .locals 1
-
-    .line 125
-    invoke-virtual {p0}, Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder;->getMutableConfig()Landroidx/camera/core/impl/MutableConfig;
-
-    move-result-object p0
-
-    .line 126
-    invoke-interface {p1, p2}, Landroidx/camera/core/impl/Config;->getOptionPriority(Landroidx/camera/core/impl/Config$Option;)Landroidx/camera/core/impl/Config$OptionPriority;
+    .line 85
+    invoke-static {}, Landroidx/camera/core/impl/MutableOptionsBundle;->create()Landroidx/camera/core/impl/MutableOptionsBundle;
 
     move-result-object v0
 
-    .line 127
-    invoke-interface {p1, p2}, Landroidx/camera/core/impl/Config;->retrieveOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
+    const-string v1, "create(...)"
 
-    move-result-object p1
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 125
-    invoke-interface {p0, p2, v0, p1}, Landroidx/camera/core/impl/MutableConfig;->insertOption(Landroidx/camera/core/impl/Config$Option;Landroidx/camera/core/impl/Config$OptionPriority;Ljava/lang/Object;)V
+    iput-object v0, p0, Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder;->mutableOptionsBundle:Landroidx/camera/core/impl/MutableOptionsBundle;
 
-    const/4 p0, 0x1
+    return-void
+.end method
 
-    return p0
+.method public static final from(Landroidx/camera/core/impl/Config;)Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder;
+    .locals 1
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
+
+    sget-object v0, Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder;->Companion:Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder$Companion;
+
+    invoke-virtual {v0, p0}, Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder$Companion;->from(Landroidx/camera/core/impl/Config;)Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 
@@ -98,32 +129,40 @@
 .method public build()Landroidx/camera/camera2/interop/CaptureRequestOptions;
     .locals 2
 
-    .line 175
+    .line 143
     new-instance v0, Landroidx/camera/camera2/interop/CaptureRequestOptions;
 
-    iget-object v1, p0, Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder;->mMutableOptionsBundle:Landroidx/camera/core/impl/MutableOptionsBundle;
+    iget-object p0, p0, Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder;->mutableOptionsBundle:Landroidx/camera/core/impl/MutableOptionsBundle;
 
-    invoke-static {v1}, Landroidx/camera/core/impl/OptionsBundle;->from(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/OptionsBundle;
+    check-cast p0, Landroidx/camera/core/impl/Config;
 
-    move-result-object v1
+    invoke-static {p0}, Landroidx/camera/core/impl/OptionsBundle;->from(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/OptionsBundle;
 
-    invoke-direct {v0, v1}, Landroidx/camera/camera2/interop/CaptureRequestOptions;-><init>(Landroidx/camera/core/impl/Config;)V
+    move-result-object p0
+
+    const-string v1, "from(...)"
+
+    invoke-static {p0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast p0, Landroidx/camera/core/impl/Config;
+
+    invoke-direct {v0, p0}, Landroidx/camera/camera2/interop/CaptureRequestOptions;-><init>(Landroidx/camera/core/impl/Config;)V
 
     return-object v0
 .end method
 
 .method public bridge synthetic build()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    .line 103
+    .line 84
     invoke-virtual {p0}, Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder;->build()Landroidx/camera/camera2/interop/CaptureRequestOptions;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
-.method public clearCaptureRequestOption(Landroid/hardware/camera2/CaptureRequest$Key;)Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder;
+.method public final clearCaptureRequestOption(Landroid/hardware/camera2/CaptureRequest$Key;)Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -136,13 +175,17 @@
         }
     .end annotation
 
-    .line 161
-    invoke-static {p1}, Landroidx/camera/camera2/impl/Camera2ImplConfig;->createCaptureRequestOption(Landroid/hardware/camera2/CaptureRequest$Key;)Landroidx/camera/core/impl/Config$Option;
+    const-string v0, "key"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 132
+    invoke-static {p1}, Landroidx/camera/camera2/impl/Camera2ImplConfigKt;->createCaptureRequestOption(Landroid/hardware/camera2/CaptureRequest$Key;)Landroidx/camera/core/impl/Config$Option;
 
     move-result-object p1
 
-    .line 162
-    iget-object v0, p0, Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder;->mMutableOptionsBundle:Landroidx/camera/core/impl/MutableOptionsBundle;
+    .line 133
+    iget-object v0, p0, Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder;->mutableOptionsBundle:Landroidx/camera/core/impl/MutableOptionsBundle;
 
     invoke-virtual {v0, p1}, Landroidx/camera/core/impl/MutableOptionsBundle;->removeOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
 
@@ -150,15 +193,17 @@
 .end method
 
 .method public getMutableConfig()Landroidx/camera/core/impl/MutableConfig;
-    .locals 1
+    .locals 0
 
-    .line 141
-    iget-object v0, p0, Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder;->mMutableOptionsBundle:Landroidx/camera/core/impl/MutableOptionsBundle;
+    .line 117
+    iget-object p0, p0, Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder;->mutableOptionsBundle:Landroidx/camera/core/impl/MutableOptionsBundle;
 
-    return-object v0
+    check-cast p0, Landroidx/camera/core/impl/MutableConfig;
+
+    return-object p0
 .end method
 
-.method public setCaptureRequestOption(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder;
+.method public final setCaptureRequestOption(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -171,13 +216,17 @@
         }
     .end annotation
 
-    .line 150
-    invoke-static {p1}, Landroidx/camera/camera2/impl/Camera2ImplConfig;->createCaptureRequestOption(Landroid/hardware/camera2/CaptureRequest$Key;)Landroidx/camera/core/impl/Config$Option;
+    const-string v0, "key"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 125
+    invoke-static {p1}, Landroidx/camera/camera2/impl/Camera2ImplConfigKt;->createCaptureRequestOption(Landroid/hardware/camera2/CaptureRequest$Key;)Landroidx/camera/core/impl/Config$Option;
 
     move-result-object p1
 
-    .line 151
-    iget-object v0, p0, Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder;->mMutableOptionsBundle:Landroidx/camera/core/impl/MutableOptionsBundle;
+    .line 126
+    iget-object v0, p0, Landroidx/camera/camera2/interop/CaptureRequestOptions$Builder;->mutableOptionsBundle:Landroidx/camera/core/impl/MutableOptionsBundle;
 
     invoke-virtual {v0, p1, p2}, Landroidx/camera/core/impl/MutableOptionsBundle;->insertOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)V
 

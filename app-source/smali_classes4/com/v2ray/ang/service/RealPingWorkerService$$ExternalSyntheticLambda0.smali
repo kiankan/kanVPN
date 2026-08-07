@@ -22,11 +22,11 @@
     .locals 0
 
     .line 0
-    check-cast p1, Ljava/lang/String;
+    check-cast p1, Lcom/v2ray/ang/dto/RealPingEvent;
 
-    invoke-static {p1}, Lcom/v2ray/ang/service/RealPingWorkerService;->$r8$lambda$wnfaaVSTwORgVcRZD5p1CubxIvs(Ljava/lang/String;)Lkotlin/Unit;
+    invoke-static {p1}, Lcom/v2ray/ang/service/RealPingWorkerService;->_init_$lambda$0(Lcom/v2ray/ang/dto/RealPingEvent;)Lkotlin/Unit;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

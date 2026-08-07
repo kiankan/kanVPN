@@ -24,7 +24,7 @@
     .line 0
     invoke-static {p1, p2}, Landroidx/camera/core/impl/CameraConfigProvider;->lambda$static$0(Landroidx/camera/core/CameraInfo;Landroid/content/Context;)Landroidx/camera/core/impl/CameraConfig;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

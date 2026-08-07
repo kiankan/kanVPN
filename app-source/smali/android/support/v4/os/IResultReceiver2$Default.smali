@@ -21,7 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 14
+    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,11 +30,19 @@
 
 # virtual methods
 .method public asBinder()Landroid/os/IBinder;
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return-object v0
+    return-object p0
+.end method
+
+.method public getInterfaceVersion()I
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
 .method public send(ILandroid/os/Bundle;)V

@@ -9,7 +9,6 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroid/support/v4/app/INotificationSideChannel$_Parcel;,
         Landroid/support/v4/app/INotificationSideChannel$Stub;,
         Landroid/support/v4/app/INotificationSideChannel$Default;
     }
@@ -18,6 +17,8 @@
 
 # static fields
 .field public static final DESCRIPTOR:Ljava/lang/String;
+
+.field public static final VERSION:I = 0x1
 
 
 # direct methods
@@ -28,7 +29,7 @@
 
     const/16 v1, 0x2e
 
-    .line 180
+    .line 224
     const-string v2, "android$support$v4$app$INotificationSideChannel"
 
     invoke-virtual {v2, v0, v1}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
@@ -51,6 +52,14 @@
 .end method
 
 .method public abstract cancelAll(Ljava/lang/String;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract getInterfaceVersion()I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

@@ -22,7 +22,7 @@
 .end method
 
 .method final encodeCompressedWeight(Ljava/lang/StringBuilder;II)V
-    .locals 2
+    .locals 1
 
     .line 41
     invoke-virtual {p0}, Lcom/google/zxing/oned/rss/expanded/decoders/AI01weightDecoder;->getGeneralDecoder()Lcom/google/zxing/oned/rss/expanded/decoders/GeneralAppIdDecoder;
@@ -39,38 +39,38 @@
     .line 44
     invoke-virtual {p0, p2}, Lcom/google/zxing/oned/rss/expanded/decoders/AI01weightDecoder;->checkWeight(I)I
 
-    move-result p2
+    move-result p0
 
-    const p3, 0x186a0
+    const p2, 0x186a0
 
-    const/4 v0, 0x0
+    const/4 p3, 0x0
 
     :goto_0
-    const/4 v1, 0x5
+    const/4 v0, 0x5
 
-    if-ge v0, v1, :cond_1
+    if-ge p3, v0, :cond_1
 
     .line 48
-    div-int v1, p2, p3
+    div-int v0, p0, p2
 
-    if-nez v1, :cond_0
+    if-nez v0, :cond_0
 
-    const/16 v1, 0x30
+    const/16 v0, 0x30
 
     .line 49
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     .line 51
     :cond_0
-    div-int/lit8 p3, p3, 0xa
+    div-int/lit8 p2, p2, 0xa
 
-    add-int/lit8 v0, v0, 0x1
+    add-int/lit8 p3, p3, 0x1
 
     goto :goto_0
 
     .line 53
     :cond_1
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     return-void
 .end method

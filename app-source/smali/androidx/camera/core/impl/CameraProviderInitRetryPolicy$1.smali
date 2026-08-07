@@ -43,7 +43,7 @@
         }
     .end annotation
 
-    .line 39
+    .line 40
     iput-object p1, p0, Landroidx/camera/core/impl/CameraProviderInitRetryPolicy$1;->this$0:Landroidx/camera/core/impl/CameraProviderInitRetryPolicy;
 
     iput-wide p2, p0, Landroidx/camera/core/impl/CameraProviderInitRetryPolicy$1;->val$timeoutInMillis:J
@@ -58,32 +58,32 @@
 .method public getTimeoutInMillis()J
     .locals 2
 
-    .line 52
+    .line 53
     iget-wide v0, p0, Landroidx/camera/core/impl/CameraProviderInitRetryPolicy$1;->val$timeoutInMillis:J
 
     return-wide v0
 .end method
 
 .method public onRetryDecisionRequested(Landroidx/camera/core/RetryPolicy$ExecutionState;)Landroidx/camera/core/RetryPolicy$RetryConfig;
-    .locals 1
-
-    .line 43
-    invoke-interface {p1}, Landroidx/camera/core/RetryPolicy$ExecutionState;->getStatus()I
-
-    move-result p1
-
-    const/4 v0, 0x1
-
-    if-ne p1, v0, :cond_0
+    .locals 0
 
     .line 44
-    sget-object p1, Landroidx/camera/core/RetryPolicy$RetryConfig;->NOT_RETRY:Landroidx/camera/core/RetryPolicy$RetryConfig;
+    invoke-interface {p1}, Landroidx/camera/core/RetryPolicy$ExecutionState;->getStatus()I
 
-    return-object p1
+    move-result p0
 
-    .line 47
+    const/4 p1, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    .line 45
+    sget-object p0, Landroidx/camera/core/RetryPolicy$RetryConfig;->NOT_RETRY:Landroidx/camera/core/RetryPolicy$RetryConfig;
+
+    return-object p0
+
+    .line 48
     :cond_0
-    sget-object p1, Landroidx/camera/core/RetryPolicy$RetryConfig;->DEFAULT_DELAY_RETRY:Landroidx/camera/core/RetryPolicy$RetryConfig;
+    sget-object p0, Landroidx/camera/core/RetryPolicy$RetryConfig;->DEFAULT_DELAY_RETRY:Landroidx/camera/core/RetryPolicy$RetryConfig;
 
-    return-object p1
+    return-object p0
 .end method

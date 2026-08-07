@@ -73,16 +73,16 @@
 
 # virtual methods
 .method public getBits()Lcom/google/zxing/common/BitMatrix;
-    .locals 1
+    .locals 0
 
     .line 44
-    iget-object v0, p0, Lcom/google/zxing/pdf417/detector/PDF417DetectorResult;->bits:Lcom/google/zxing/common/BitMatrix;
+    iget-object p0, p0, Lcom/google/zxing/pdf417/detector/PDF417DetectorResult;->bits:Lcom/google/zxing/common/BitMatrix;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getPoints()Ljava/util/List;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -94,16 +94,16 @@
     .end annotation
 
     .line 48
-    iget-object v0, p0, Lcom/google/zxing/pdf417/detector/PDF417DetectorResult;->points:Ljava/util/List;
+    iget-object p0, p0, Lcom/google/zxing/pdf417/detector/PDF417DetectorResult;->points:Ljava/util/List;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getRotation()I
-    .locals 1
+    .locals 0
 
     .line 52
-    iget v0, p0, Lcom/google/zxing/pdf417/detector/PDF417DetectorResult;->rotation:I
+    iget p0, p0, Lcom/google/zxing/pdf417/detector/PDF417DetectorResult;->rotation:I
 
-    return v0
+    return p0
 .end method

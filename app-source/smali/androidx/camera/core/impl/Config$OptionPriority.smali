@@ -38,7 +38,7 @@
 .method private static synthetic $values()[Landroidx/camera/core/impl/Config$OptionPriority;
     .locals 4
 
-    .line 246
+    .line 238
     sget-object v0, Landroidx/camera/core/impl/Config$OptionPriority;->ALWAYS_OVERRIDE:Landroidx/camera/core/impl/Config$OptionPriority;
 
     sget-object v1, Landroidx/camera/core/impl/Config$OptionPriority;->HIGH_PRIORITY_REQUIRED:Landroidx/camera/core/impl/Config$OptionPriority;
@@ -57,7 +57,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 257
+    .line 249
     new-instance v0, Landroidx/camera/core/impl/Config$OptionPriority;
 
     const-string v1, "ALWAYS_OVERRIDE"
@@ -68,7 +68,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/Config$OptionPriority;->ALWAYS_OVERRIDE:Landroidx/camera/core/impl/Config$OptionPriority;
 
-    .line 267
+    .line 259
     new-instance v0, Landroidx/camera/core/impl/Config$OptionPriority;
 
     const-string v1, "HIGH_PRIORITY_REQUIRED"
@@ -79,7 +79,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/Config$OptionPriority;->HIGH_PRIORITY_REQUIRED:Landroidx/camera/core/impl/Config$OptionPriority;
 
-    .line 279
+    .line 271
     new-instance v0, Landroidx/camera/core/impl/Config$OptionPriority;
 
     const-string v1, "REQUIRED"
@@ -90,7 +90,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/Config$OptionPriority;->REQUIRED:Landroidx/camera/core/impl/Config$OptionPriority;
 
-    .line 285
+    .line 277
     new-instance v0, Landroidx/camera/core/impl/Config$OptionPriority;
 
     const-string v1, "OPTIONAL"
@@ -101,7 +101,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/Config$OptionPriority;->OPTIONAL:Landroidx/camera/core/impl/Config$OptionPriority;
 
-    .line 246
+    .line 238
     invoke-static {}, Landroidx/camera/core/impl/Config$OptionPriority;->$values()[Landroidx/camera/core/impl/Config$OptionPriority;
 
     move-result-object v0
@@ -130,7 +130,7 @@
         }
     .end annotation
 
-    .line 246
+    .line 238
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -147,7 +147,7 @@
         }
     .end annotation
 
-    .line 246
+    .line 238
     const-class v0, Landroidx/camera/core/impl/Config$OptionPriority;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -162,7 +162,7 @@
 .method public static values()[Landroidx/camera/core/impl/Config$OptionPriority;
     .locals 1
 
-    .line 246
+    .line 238
     sget-object v0, Landroidx/camera/core/impl/Config$OptionPriority;->$VALUES:[Landroidx/camera/core/impl/Config$OptionPriority;
 
     invoke-virtual {v0}, [Landroidx/camera/core/impl/Config$OptionPriority;->clone()Ljava/lang/Object;

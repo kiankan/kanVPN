@@ -75,52 +75,52 @@
     check-cast p1, Lcom/google/zxing/oned/rss/FinderPattern;
 
     .line 57
-    iget v0, p0, Lcom/google/zxing/oned/rss/FinderPattern;->value:I
+    iget p0, p0, Lcom/google/zxing/oned/rss/FinderPattern;->value:I
 
     iget p1, p1, Lcom/google/zxing/oned/rss/FinderPattern;->value:I
 
-    if-ne v0, p1, :cond_1
+    if-ne p0, p1, :cond_1
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_1
     return v1
 .end method
 
 .method public getResultPoints()[Lcom/google/zxing/ResultPoint;
-    .locals 1
+    .locals 0
 
     .line 48
-    iget-object v0, p0, Lcom/google/zxing/oned/rss/FinderPattern;->resultPoints:[Lcom/google/zxing/ResultPoint;
+    iget-object p0, p0, Lcom/google/zxing/oned/rss/FinderPattern;->resultPoints:[Lcom/google/zxing/ResultPoint;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getStartEnd()[I
-    .locals 1
+    .locals 0
 
     .line 44
-    iget-object v0, p0, Lcom/google/zxing/oned/rss/FinderPattern;->startEnd:[I
+    iget-object p0, p0, Lcom/google/zxing/oned/rss/FinderPattern;->startEnd:[I
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getValue()I
-    .locals 1
+    .locals 0
 
     .line 40
-    iget v0, p0, Lcom/google/zxing/oned/rss/FinderPattern;->value:I
+    iget p0, p0, Lcom/google/zxing/oned/rss/FinderPattern;->value:I
 
-    return v0
+    return p0
 .end method
 
 .method public hashCode()I
-    .locals 1
+    .locals 0
 
     .line 62
-    iget v0, p0, Lcom/google/zxing/oned/rss/FinderPattern;->value:I
+    iget p0, p0, Lcom/google/zxing/oned/rss/FinderPattern;->value:I
 
-    return v0
+    return p0
 .end method

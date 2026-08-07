@@ -61,15 +61,15 @@
     .line 119
     :cond_0
     :try_start_0
-    iget-object v0, p0, Lcom/google/zxing/datamatrix/decoder/Decoder;->rsDecoder:Lcom/google/zxing/common/reedsolomon/ReedSolomonDecoder;
+    iget-object p0, p0, Lcom/google/zxing/datamatrix/decoder/Decoder;->rsDecoder:Lcom/google/zxing/common/reedsolomon/ReedSolomonDecoder;
 
-    array-length v3, p1
+    array-length v0, p1
 
-    sub-int/2addr v3, p2
+    sub-int/2addr v0, p2
 
-    invoke-virtual {v0, v1, v3}, Lcom/google/zxing/common/reedsolomon/ReedSolomonDecoder;->decodeWithECCount([II)I
+    invoke-virtual {p0, v1, v0}, Lcom/google/zxing/common/reedsolomon/ReedSolomonDecoder;->decodeWithECCount([II)I
 
-    move-result v0
+    move-result p0
     :try_end_0
     .catch Lcom/google/zxing/common/reedsolomon/ReedSolomonException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -77,26 +77,26 @@
     if-ge v2, p2, :cond_1
 
     .line 126
-    aget v3, v1, v2
+    aget v0, v1, v2
 
-    int-to-byte v3, v3
+    int-to-byte v0, v0
 
-    aput-byte v3, p1, v2
+    aput-byte v0, p1, v2
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
     :cond_1
-    return v0
+    return p0
 
     .line 121
     :catch_0
     invoke-static {}, Lcom/google/zxing/ChecksumException;->getChecksumInstance()Lcom/google/zxing/ChecksumException;
 
-    move-result-object p1
+    move-result-object p0
 
-    throw p1
+    throw p0
 .end method
 
 
@@ -216,16 +216,16 @@
     :cond_2
     invoke-static {v0}, Lcom/google/zxing/datamatrix/decoder/DecodedBitStreamParser;->decode([B)Lcom/google/zxing/common/DecoderResult;
 
-    move-result-object p1
+    move-result-object p0
 
     .line 97
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v0
+    move-result-object p1
 
-    invoke-virtual {p1, v0}, Lcom/google/zxing/common/DecoderResult;->setErrorsCorrected(Ljava/lang/Integer;)V
+    invoke-virtual {p0, p1}, Lcom/google/zxing/common/DecoderResult;->setErrorsCorrected(Ljava/lang/Integer;)V
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public decode([[Z)Lcom/google/zxing/common/DecoderResult;
@@ -244,7 +244,7 @@
 
     invoke-virtual {p0, p1}, Lcom/google/zxing/datamatrix/decoder/Decoder;->decode(Lcom/google/zxing/common/BitMatrix;)Lcom/google/zxing/common/DecoderResult;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

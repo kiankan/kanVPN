@@ -62,33 +62,33 @@
 
     .line 50
     :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null getSize"
+    const-string p1, "Null getSize"
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
     .line 46
     :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null getCropRect"
+    const-string p1, "Null getCropRect"
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
     .line 40
     :cond_2
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null getUuid"
+    const-string p1, "Null getUuid"
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 
@@ -102,7 +102,7 @@
 
     return v0
 
-    .line 122
+    .line 119
     :cond_0
     instance-of v1, p1, Landroidx/camera/core/processing/util/OutConfig;
 
@@ -110,10 +110,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 123
+    .line 120
     check-cast p1, Landroidx/camera/core/processing/util/OutConfig;
 
-    .line 124
+    .line 121
     iget-object v1, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->getUuid:Ljava/util/UUID;
 
     invoke-virtual {p1}, Landroidx/camera/core/processing/util/OutConfig;->getUuid()Ljava/util/UUID;
@@ -128,7 +128,7 @@
 
     iget v1, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->getTargets:I
 
-    .line 125
+    .line 122
     invoke-virtual {p1}, Landroidx/camera/core/processing/util/OutConfig;->getTargets()I
 
     move-result v3
@@ -137,7 +137,7 @@
 
     iget v1, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->getFormat:I
 
-    .line 126
+    .line 123
     invoke-virtual {p1}, Landroidx/camera/core/processing/util/OutConfig;->getFormat()I
 
     move-result v3
@@ -146,7 +146,7 @@
 
     iget-object v1, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->getCropRect:Landroid/graphics/Rect;
 
-    .line 127
+    .line 124
     invoke-virtual {p1}, Landroidx/camera/core/processing/util/OutConfig;->getCropRect()Landroid/graphics/Rect;
 
     move-result-object v3
@@ -159,7 +159,7 @@
 
     iget-object v1, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->getSize:Landroid/util/Size;
 
-    .line 128
+    .line 125
     invoke-virtual {p1}, Landroidx/camera/core/processing/util/OutConfig;->getSize()Landroid/util/Size;
 
     move-result-object v3
@@ -172,7 +172,7 @@
 
     iget v1, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->getRotationDegrees:I
 
-    .line 129
+    .line 126
     invoke-virtual {p1}, Landroidx/camera/core/processing/util/OutConfig;->getRotationDegrees()I
 
     move-result v3
@@ -181,21 +181,21 @@
 
     iget-boolean v1, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->isMirroring:Z
 
-    .line 130
+    .line 127
     invoke-virtual {p1}, Landroidx/camera/core/processing/util/OutConfig;->isMirroring()Z
 
     move-result v3
 
     if-ne v1, v3, :cond_1
 
-    iget-boolean v1, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->shouldRespectInputCropRect:Z
+    iget-boolean p0, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->shouldRespectInputCropRect:Z
 
-    .line 131
+    .line 128
     invoke-virtual {p1}, Landroidx/camera/core/processing/util/OutConfig;->shouldRespectInputCropRect()Z
 
     move-result p1
 
-    if-ne v1, p1, :cond_1
+    if-ne p0, p1, :cond_1
 
     return v0
 
@@ -204,63 +204,63 @@
 .end method
 
 .method public getCropRect()Landroid/graphics/Rect;
-    .locals 1
+    .locals 0
 
-    .line 79
-    iget-object v0, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->getCropRect:Landroid/graphics/Rect;
+    .line 77
+    iget-object p0, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->getCropRect:Landroid/graphics/Rect;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getFormat()I
-    .locals 1
+    .locals 0
 
-    .line 73
-    iget v0, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->getFormat:I
+    .line 72
+    iget p0, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->getFormat:I
 
-    return v0
+    return p0
 .end method
 
 .method public getRotationDegrees()I
-    .locals 1
+    .locals 0
 
-    .line 90
-    iget v0, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->getRotationDegrees:I
+    .line 87
+    iget p0, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->getRotationDegrees:I
 
-    return v0
+    return p0
 .end method
 
 .method public getSize()Landroid/util/Size;
-    .locals 1
+    .locals 0
 
-    .line 85
-    iget-object v0, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->getSize:Landroid/util/Size;
+    .line 82
+    iget-object p0, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->getSize:Landroid/util/Size;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getTargets()I
-    .locals 1
+    .locals 0
 
-    .line 67
-    iget v0, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->getTargets:I
+    .line 66
+    iget p0, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->getTargets:I
 
-    return v0
+    return p0
 .end method
 
 .method getUuid()Ljava/util/UUID;
-    .locals 1
+    .locals 0
 
-    .line 61
-    iget-object v0, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->getUuid:Ljava/util/UUID;
+    .line 60
+    iget-object p0, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->getUuid:Ljava/util/UUID;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public hashCode()I
     .locals 5
 
-    .line 140
+    .line 137
     iget-object v0, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->getUuid:Ljava/util/UUID;
 
     invoke-virtual {v0}, Ljava/util/UUID;->hashCode()I
@@ -273,21 +273,21 @@
 
     mul-int/2addr v0, v1
 
-    .line 142
+    .line 139
     iget v2, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->getTargets:I
 
     xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
-    .line 144
+    .line 141
     iget v2, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->getFormat:I
 
     xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
-    .line 146
+    .line 143
     iget-object v2, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->getCropRect:Landroid/graphics/Rect;
 
     invoke-virtual {v2}, Landroid/graphics/Rect;->hashCode()I
@@ -298,7 +298,7 @@
 
     mul-int/2addr v0, v1
 
-    .line 148
+    .line 145
     iget-object v2, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->getSize:Landroid/util/Size;
 
     invoke-virtual {v2}, Landroid/util/Size;->hashCode()I
@@ -309,14 +309,14 @@
 
     mul-int/2addr v0, v1
 
-    .line 150
+    .line 147
     iget v2, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->getRotationDegrees:I
 
     xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
-    .line 152
+    .line 149
     iget-boolean v2, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->isMirroring:Z
 
     const/16 v3, 0x4cf
@@ -337,10 +337,10 @@
 
     mul-int/2addr v0, v1
 
-    .line 154
-    iget-boolean v1, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->shouldRespectInputCropRect:Z
+    .line 151
+    iget-boolean p0, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->shouldRespectInputCropRect:Z
 
-    if-eqz v1, :cond_1
+    if-eqz p0, :cond_1
 
     goto :goto_1
 
@@ -348,33 +348,33 @@
     move v3, v4
 
     :goto_1
-    xor-int/2addr v0, v3
+    xor-int p0, v0, v3
 
-    return v0
+    return p0
 .end method
 
 .method public isMirroring()Z
-    .locals 1
+    .locals 0
 
-    .line 95
-    iget-boolean v0, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->isMirroring:Z
+    .line 92
+    iget-boolean p0, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->isMirroring:Z
 
-    return v0
+    return p0
 .end method
 
 .method public shouldRespectInputCropRect()Z
-    .locals 1
+    .locals 0
 
-    .line 100
-    iget-boolean v0, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->shouldRespectInputCropRect:Z
+    .line 97
+    iget-boolean p0, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->shouldRespectInputCropRect:Z
 
-    return v0
+    return p0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 105
+    .line 102
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "OutConfig{getUuid="
@@ -437,17 +437,17 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->shouldRespectInputCropRect:Z
+    iget-boolean p0, p0, Landroidx/camera/core/processing/util/AutoValue_OutConfig;->shouldRespectInputCropRect:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v1, "}"
+    const-string/jumbo p0, "}"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

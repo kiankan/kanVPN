@@ -3,6 +3,7 @@
 .source "SourceFile"
 
 # interfaces
+.implements Lj$/time/temporal/TemporalAmount;
 .implements Ljava/io/Serializable;
 
 
@@ -56,7 +57,7 @@
 
     sget-object v2, Lj$/time/temporal/ChronoUnit;->DAYS:Lj$/time/temporal/ChronoUnit;
 
-    invoke-static {v0, v1, v2}, Lj$/time/Period$$ExternalSyntheticBackport0;->m(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v0, v1, v2}, Lj$/time/Period$0;->m(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
@@ -117,6 +118,19 @@
     return-object p0
 .end method
 
+.method public static ofDays(I)Lj$/time/Period;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 219
+    invoke-static {v0, v0, p0}, Lj$/time/Period;->create(III)Lj$/time/Period;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method static readExternal(Ljava/io/DataInput;)Lj$/time/Period;
     .locals 2
 
@@ -144,16 +158,77 @@
 .end method
 
 .method private readObject(Ljava/io/ObjectInputStream;)V
-    .locals 1
+    .locals 0
 
     .line 1070
-    new-instance p1, Ljava/io/InvalidObjectException;
+    new-instance p0, Ljava/io/InvalidObjectException;
 
-    const-string v0, "Deserialization via serialization delegate"
+    const-string p1, "Deserialization via serialization delegate"
 
-    invoke-direct {p1, v0}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method private validateChrono(Lj$/time/temporal/TemporalAccessor;)V
+    .locals 2
+
+    .line 973
+    const-string p0, "temporal"
+
+    invoke-static {p1, p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 974
+    invoke-static {}, Lj$/time/temporal/TemporalQueries;->chronology()Lj$/time/temporal/TemporalQuery;
+
+    move-result-object p0
+
+    invoke-interface {p1, p0}, Lj$/time/temporal/TemporalAccessor;->query(Lj$/time/temporal/TemporalQuery;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lj$/time/chrono/Chronology;
+
+    if-eqz p0, :cond_1
+
+    .line 975
+    sget-object p1, Lj$/time/chrono/IsoChronology;->INSTANCE:Lj$/time/chrono/IsoChronology;
+
+    invoke-virtual {p1, p0}, Lj$/time/chrono/AbstractChronology;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    .line 976
+    :cond_0
+    new-instance p1, Lj$/time/DateTimeException;
+
+    invoke-interface {p0}, Lj$/time/chrono/Chronology;->getId()Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Chronology mismatch, expected: ISO, actual: "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
 
     throw p1
+
+    :cond_1
+    :goto_0
+    return-void
 .end method
 
 .method private writeReplace()Ljava/lang/Object;
@@ -171,6 +246,74 @@
 
 
 # virtual methods
+.method public addTo(Lj$/time/temporal/Temporal;)Lj$/time/temporal/Temporal;
+    .locals 4
+
+    .line 899
+    invoke-direct {p0, p1}, Lj$/time/Period;->validateChrono(Lj$/time/temporal/TemporalAccessor;)V
+
+    .line 900
+    iget v0, p0, Lj$/time/Period;->months:I
+
+    if-nez v0, :cond_0
+
+    .line 901
+    iget v0, p0, Lj$/time/Period;->years:I
+
+    if-eqz v0, :cond_1
+
+    int-to-long v0, v0
+
+    .line 902
+    sget-object v2, Lj$/time/temporal/ChronoUnit;->YEARS:Lj$/time/temporal/ChronoUnit;
+
+    invoke-interface {p1, v0, v1, v2}, Lj$/time/temporal/Temporal;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/temporal/Temporal;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    .line 905
+    :cond_0
+    invoke-virtual {p0}, Lj$/time/Period;->toTotalMonths()J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v2, v0, v2
+
+    if-eqz v2, :cond_1
+
+    .line 907
+    sget-object v2, Lj$/time/temporal/ChronoUnit;->MONTHS:Lj$/time/temporal/ChronoUnit;
+
+    invoke-interface {p1, v0, v1, v2}, Lj$/time/temporal/Temporal;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/temporal/Temporal;
+
+    move-result-object p1
+
+    .line 910
+    :cond_1
+    :goto_0
+    iget p0, p0, Lj$/time/Period;->days:I
+
+    if-eqz p0, :cond_2
+
+    int-to-long v0, p0
+
+    .line 911
+    sget-object p0, Lj$/time/temporal/ChronoUnit;->DAYS:Lj$/time/temporal/ChronoUnit;
+
+    invoke-interface {p1, v0, v1, p0}, Lj$/time/temporal/Temporal;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/temporal/Temporal;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_2
+    return-object p1
+.end method
+
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
 
@@ -204,16 +347,43 @@
 
     if-ne v1, v3, :cond_1
 
-    iget v1, p0, Lj$/time/Period;->days:I
+    iget p0, p0, Lj$/time/Period;->days:I
 
     iget p1, p1, Lj$/time/Period;->days:I
 
-    if-ne v1, p1, :cond_1
+    if-ne p0, p1, :cond_1
 
     return v0
 
     :cond_1
     return v2
+.end method
+
+.method public getDays()I
+    .locals 0
+
+    .line 543
+    iget p0, p0, Lj$/time/Period;->days:I
+
+    return p0
+.end method
+
+.method public getMonths()I
+    .locals 0
+
+    .line 532
+    iget p0, p0, Lj$/time/Period;->months:I
+
+    return p0
+.end method
+
+.method public getYears()I
+    .locals 0
+
+    .line 517
+    iget p0, p0, Lj$/time/Period;->years:I
+
+    return p0
 .end method
 
 .method public hashCode()I
@@ -232,17 +402,35 @@
 
     add-int/2addr v0, v1
 
-    iget v1, p0, Lj$/time/Period;->days:I
+    iget p0, p0, Lj$/time/Period;->days:I
 
-    const/16 v2, 0x10
+    const/16 v1, 0x10
 
-    invoke-static {v1, v2}, Ljava/lang/Integer;->rotateLeft(II)I
+    invoke-static {p0, v1}, Ljava/lang/Integer;->rotateLeft(II)I
 
-    move-result v1
+    move-result p0
 
-    add-int/2addr v0, v1
+    add-int/2addr v0, p0
 
     return v0
+.end method
+
+.method public isZero()Z
+    .locals 1
+
+    .line 490
+    sget-object v0, Lj$/time/Period;->ZERO:Lj$/time/Period;
+
+    if-ne p0, v0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
 .method public toString()Ljava/lang/String;
@@ -254,20 +442,17 @@
     if-ne p0, v0, :cond_0
 
     .line 1028
-    const-string v0, "P0D"
+    const-string p0, "P0D"
 
-    return-object v0
+    return-object p0
 
     .line 1030
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v1, "P"
 
-    const/16 v1, 0x50
-
-    .line 1031
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 1032
     iget v1, p0, Lj$/time/Period;->years:I
@@ -296,24 +481,45 @@
 
     .line 1038
     :cond_2
-    iget v1, p0, Lj$/time/Period;->days:I
+    iget p0, p0, Lj$/time/Period;->days:I
 
-    if-eqz v1, :cond_3
+    if-eqz p0, :cond_3
 
     .line 1039
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const/16 v1, 0x44
+    const/16 p0, 0x44
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     .line 1041
     :cond_3
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
+.end method
+
+.method public toTotalMonths()J
+    .locals 4
+
+    .line 859
+    iget v0, p0, Lj$/time/Period;->years:I
+
+    int-to-long v0, v0
+
+    const-wide/16 v2, 0xc
+
+    mul-long/2addr v0, v2
+
+    iget p0, p0, Lj$/time/Period;->months:I
+
+    int-to-long v2, p0
+
+    add-long/2addr v0, v2
+
+    return-wide v0
 .end method
 
 .method writeExternal(Ljava/io/DataOutput;)V
@@ -330,9 +536,9 @@
     invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeInt(I)V
 
     .line 1076
-    iget v0, p0, Lj$/time/Period;->days:I
+    iget p0, p0, Lj$/time/Period;->days:I
 
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeInt(I)V
+    invoke-interface {p1, p0}, Ljava/io/DataOutput;->writeInt(I)V
 
     return-void
 .end method

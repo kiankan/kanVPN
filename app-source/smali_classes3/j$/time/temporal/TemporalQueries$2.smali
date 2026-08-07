@@ -30,18 +30,18 @@
 
 # virtual methods
 .method public queryFrom(Lj$/time/temporal/TemporalAccessor;)Lj$/time/chrono/Chronology;
-    .locals 1
+    .locals 0
 
     .line 362
-    sget-object v0, Lj$/time/temporal/TemporalQueries;->CHRONO:Lj$/time/temporal/TemporalQuery;
+    sget-object p0, Lj$/time/temporal/TemporalQueries;->CHRONO:Lj$/time/temporal/TemporalQuery;
 
-    invoke-interface {p1, v0}, Lj$/time/temporal/TemporalAccessor;->query(Lj$/time/temporal/TemporalQuery;)Ljava/lang/Object;
+    invoke-interface {p1, p0}, Lj$/time/temporal/TemporalAccessor;->query(Lj$/time/temporal/TemporalQuery;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lj$/time/chrono/Chronology;
+    check-cast p0, Lj$/time/chrono/Chronology;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic queryFrom(Lj$/time/temporal/TemporalAccessor;)Ljava/lang/Object;
@@ -50,16 +50,16 @@
     .line 359
     invoke-virtual {p0, p1}, Lj$/time/temporal/TemporalQueries$2;->queryFrom(Lj$/time/temporal/TemporalAccessor;)Lj$/time/chrono/Chronology;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 367
-    const-string v0, "Chronology"
+    const-string p0, "Chronology"
 
-    return-object v0
+    return-object p0
 .end method

@@ -36,10 +36,10 @@
 
     iput-object p1, p0, Lcom/google/zxing/datamatrix/encoder/DefaultPlacement;->bits:[B
 
-    const/4 p2, -0x1
+    const/4 p0, -0x1
 
     .line 43
-    invoke-static {p1, p2}, Ljava/util/Arrays;->fill([BB)V
+    invoke-static {p1, p0}, Ljava/util/Arrays;->fill([BB)V
 
     return-void
 .end method
@@ -435,46 +435,46 @@
 .end method
 
 .method private noBit(II)Z
-    .locals 2
+    .locals 1
 
     .line 67
     iget-object v0, p0, Lcom/google/zxing/datamatrix/encoder/DefaultPlacement;->bits:[B
 
-    iget v1, p0, Lcom/google/zxing/datamatrix/encoder/DefaultPlacement;->numcols:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/encoder/DefaultPlacement;->numcols:I
 
-    mul-int/2addr p2, v1
+    mul-int/2addr p2, p0
 
     add-int/2addr p2, p1
 
-    aget-byte p1, v0, p2
+    aget-byte p0, v0, p2
 
-    if-gez p1, :cond_0
+    if-gez p0, :cond_0
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method private setBit(IIZ)V
-    .locals 2
+    .locals 1
 
     .line 63
     iget-object v0, p0, Lcom/google/zxing/datamatrix/encoder/DefaultPlacement;->bits:[B
 
-    iget v1, p0, Lcom/google/zxing/datamatrix/encoder/DefaultPlacement;->numcols:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/encoder/DefaultPlacement;->numcols:I
 
-    mul-int/2addr p2, v1
+    mul-int/2addr p2, p0
 
     add-int/2addr p2, p1
 
-    int-to-byte p1, p3
+    int-to-byte p0, p3
 
-    aput-byte p1, v0, p2
+    aput-byte p0, v0, p2
 
     return-void
 .end method
@@ -536,56 +536,56 @@
 
 # virtual methods
 .method public final getBit(II)Z
-    .locals 2
+    .locals 1
 
     .line 59
     iget-object v0, p0, Lcom/google/zxing/datamatrix/encoder/DefaultPlacement;->bits:[B
 
-    iget v1, p0, Lcom/google/zxing/datamatrix/encoder/DefaultPlacement;->numcols:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/encoder/DefaultPlacement;->numcols:I
 
-    mul-int/2addr p2, v1
+    mul-int/2addr p2, p0
 
     add-int/2addr p2, p1
 
-    aget-byte p1, v0, p2
+    aget-byte p0, v0, p2
 
-    const/4 p2, 0x1
+    const/4 p1, 0x1
 
-    if-ne p1, p2, :cond_0
-
-    return p2
-
-    :cond_0
-    const/4 p1, 0x0
+    if-ne p0, p1, :cond_0
 
     return p1
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
 .method final getBits()[B
-    .locals 1
+    .locals 0
 
     .line 55
-    iget-object v0, p0, Lcom/google/zxing/datamatrix/encoder/DefaultPlacement;->bits:[B
+    iget-object p0, p0, Lcom/google/zxing/datamatrix/encoder/DefaultPlacement;->bits:[B
 
-    return-object v0
+    return-object p0
 .end method
 
 .method final getNumcols()I
-    .locals 1
+    .locals 0
 
     .line 51
-    iget v0, p0, Lcom/google/zxing/datamatrix/encoder/DefaultPlacement;->numcols:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/encoder/DefaultPlacement;->numcols:I
 
-    return v0
+    return p0
 .end method
 
 .method final getNumrows()I
-    .locals 1
+    .locals 0
 
     .line 47
-    iget v0, p0, Lcom/google/zxing/datamatrix/encoder/DefaultPlacement;->numrows:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/encoder/DefaultPlacement;->numrows:I
 
-    return v0
+    return p0
 .end method
 
 .method public final place()V

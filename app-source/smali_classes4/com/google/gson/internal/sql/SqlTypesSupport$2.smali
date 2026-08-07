@@ -26,7 +26,7 @@
 .method constructor <init>(Ljava/lang/Class;)V
     .locals 0
 
-    .line 64
+    .line 71
     invoke-direct {p0, p1}, Lcom/google/gson/internal/bind/DefaultDateTypeAdapter$DateType;-><init>(Ljava/lang/Class;)V
 
     return-void
@@ -35,27 +35,27 @@
 
 # virtual methods
 .method protected deserialize(Ljava/util/Date;)Ljava/sql/Timestamp;
-    .locals 3
+    .locals 2
 
-    .line 67
-    new-instance v0, Ljava/sql/Timestamp;
+    .line 74
+    new-instance p0, Ljava/sql/Timestamp;
 
     invoke-virtual {p1}, Ljava/util/Date;->getTime()J
 
-    move-result-wide v1
+    move-result-wide v0
 
-    invoke-direct {v0, v1, v2}, Ljava/sql/Timestamp;-><init>(J)V
+    invoke-direct {p0, v0, v1}, Ljava/sql/Timestamp;-><init>(J)V
 
-    return-object v0
+    return-object p0
 .end method
 
 .method protected bridge synthetic deserialize(Ljava/util/Date;)Ljava/util/Date;
     .locals 0
 
-    .line 64
+    .line 71
     invoke-virtual {p0, p1}, Lcom/google/gson/internal/sql/SqlTypesSupport$2;->deserialize(Ljava/util/Date;)Ljava/sql/Timestamp;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

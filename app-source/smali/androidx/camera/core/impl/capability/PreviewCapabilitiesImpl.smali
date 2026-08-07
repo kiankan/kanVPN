@@ -14,10 +14,10 @@
 .method constructor <init>(Landroidx/camera/core/impl/CameraInfoInternal;)V
     .locals 0
 
-    .line 35
+    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
+    .line 37
     invoke-interface {p1}, Landroidx/camera/core/impl/CameraInfoInternal;->isPreviewStabilizationSupported()Z
 
     move-result p1
@@ -43,10 +43,10 @@
 
 # virtual methods
 .method public isStabilizationSupported()Z
-    .locals 1
+    .locals 0
 
     .line 49
-    iget-boolean v0, p0, Landroidx/camera/core/impl/capability/PreviewCapabilitiesImpl;->mIsStabilizationSupported:Z
+    iget-boolean p0, p0, Landroidx/camera/core/impl/capability/PreviewCapabilitiesImpl;->mIsStabilizationSupported:Z
 
-    return v0
+    return p0
 .end method

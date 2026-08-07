@@ -26,7 +26,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 140
+    .line 136
     new-instance v0, Landroidx/camera/core/impl/utils/futures/Futures$2;
 
     invoke-direct {v0}, Landroidx/camera/core/impl/utils/futures/Futures$2;-><init>()V
@@ -39,7 +39,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 504
+    .line 492
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -61,10 +61,10 @@
         }
     .end annotation
 
-    .line 320
+    .line 313
     invoke-static {p1}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 321
+    .line 314
     new-instance v0, Landroidx/camera/core/impl/utils/futures/Futures$CallbackListener;
 
     invoke-direct {v0, p0, p1}, Landroidx/camera/core/impl/utils/futures/Futures$CallbackListener;-><init>(Ljava/util/concurrent/Future;Landroidx/camera/core/impl/utils/futures/FutureCallback;)V
@@ -91,7 +91,7 @@
         }
     .end annotation
 
-    .line 304
+    .line 297
     new-instance v0, Landroidx/camera/core/impl/utils/futures/ListFuture;
 
     new-instance v1, Ljava/util/ArrayList;
@@ -127,7 +127,7 @@
         }
     .end annotation
 
-    .line 387
+    .line 378
     invoke-interface {p0}, Ljava/util/concurrent/Future;->isDone()Z
 
     move-result v0
@@ -146,7 +146,7 @@
 
     invoke-static {v0, v1}, Landroidx/core/util/Preconditions;->checkState(ZLjava/lang/String;)V
 
-    .line 388
+    .line 379
     invoke-static {p0}, Landroidx/camera/core/impl/utils/futures/Futures;->getUninterruptibly(Ljava/util/concurrent/Future;)Ljava/lang/Object;
 
     move-result-object p0
@@ -174,7 +174,7 @@
 
     const/4 v0, 0x0
 
-    .line 403
+    .line 394
     :goto_0
     :try_start_0
     invoke-interface {p0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
@@ -186,7 +186,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 410
+    .line 401
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
@@ -207,7 +207,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
-    .line 412
+    .line 403
     :cond_1
     throw p0
 
@@ -231,7 +231,7 @@
         }
     .end annotation
 
-    .line 74
+    .line 73
     new-instance v0, Landroidx/camera/core/impl/utils/futures/ImmediateFuture$ImmediateFailedFuture;
 
     invoke-direct {v0, p0}, Landroidx/camera/core/impl/utils/futures/ImmediateFuture$ImmediateFailedFuture;-><init>(Ljava/lang/Throwable;)V
@@ -253,7 +253,7 @@
         }
     .end annotation
 
-    .line 88
+    .line 87
     new-instance v0, Landroidx/camera/core/impl/utils/futures/ImmediateFuture$ImmediateFailedScheduledFuture;
 
     invoke-direct {v0, p0}, Landroidx/camera/core/impl/utils/futures/ImmediateFuture$ImmediateFailedScheduledFuture;-><init>(Ljava/lang/Throwable;)V
@@ -299,7 +299,7 @@
         }
     .end annotation
 
-    .line 437
+    .line 427
     new-instance v0, Ljava/util/concurrent/TimeoutException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -342,7 +342,7 @@
 
     const/4 v0, 0x1
 
-    .line 441
+    .line 431
     invoke-interface {p0, v0}, Ljava/util/concurrent/ScheduledFuture;->cancel(Z)Z
 
     return-void
@@ -356,17 +356,17 @@
         }
     .end annotation
 
-    .line 434
+    .line 424
     invoke-static {p0, p4}, Landroidx/camera/core/impl/utils/futures/Futures;->propagate(Lcom/google/common/util/concurrent/ListenableFuture;Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;)V
 
-    .line 435
+    .line 425
     invoke-interface {p0}, Lcom/google/common/util/concurrent/ListenableFuture;->isDone()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 436
+    .line 426
     new-instance v0, Landroidx/camera/core/impl/utils/futures/Futures$$ExternalSyntheticLambda7;
 
     invoke-direct {v0, p4, p0, p2, p3}, Landroidx/camera/core/impl/utils/futures/Futures$$ExternalSyntheticLambda7;-><init>(Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;Lcom/google/common/util/concurrent/ListenableFuture;J)V
@@ -377,20 +377,20 @@
 
     move-result-object p1
 
-    .line 440
+    .line 430
     new-instance p2, Landroidx/camera/core/impl/utils/futures/Futures$$ExternalSyntheticLambda8;
 
     invoke-direct {p2, p1}, Landroidx/camera/core/impl/utils/futures/Futures$$ExternalSyntheticLambda8;-><init>(Ljava/util/concurrent/ScheduledFuture;)V
 
-    .line 441
+    .line 431
     invoke-static {}, Landroidx/camera/core/impl/utils/executor/CameraXExecutors;->directExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object p1
 
-    .line 440
+    .line 430
     invoke-interface {p0, p2, p1}, Lcom/google/common/util/concurrent/ListenableFuture;->addListener(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
-    .line 443
+    .line 433
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -414,14 +414,14 @@
 .method static synthetic lambda$makeTimeoutFuture$4(Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;Ljava/lang/Object;ZLcom/google/common/util/concurrent/ListenableFuture;)V
     .locals 0
 
-    .line 470
+    .line 459
     invoke-virtual {p0, p1}, Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;->set(Ljava/lang/Object;)Z
 
     if-eqz p2, :cond_0
 
     const/4 p0, 0x1
 
-    .line 472
+    .line 461
     invoke-interface {p3, p0}, Lcom/google/common/util/concurrent/ListenableFuture;->cancel(Z)Z
 
     :cond_0
@@ -433,7 +433,7 @@
 
     const/4 v0, 0x1
 
-    .line 477
+    .line 466
     invoke-interface {p0, v0}, Ljava/util/concurrent/ScheduledFuture;->cancel(Z)Z
 
     return-void
@@ -447,17 +447,17 @@
         }
     .end annotation
 
-    .line 466
+    .line 455
     invoke-static {p0, p6}, Landroidx/camera/core/impl/utils/futures/Futures;->propagate(Lcom/google/common/util/concurrent/ListenableFuture;Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;)V
 
-    .line 467
+    .line 456
     invoke-interface {p0}, Lcom/google/common/util/concurrent/ListenableFuture;->isDone()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 468
+    .line 457
     new-instance v0, Landroidx/camera/core/impl/utils/futures/Futures$$ExternalSyntheticLambda5;
 
     invoke-direct {v0, p6, p2, p3, p0}, Landroidx/camera/core/impl/utils/futures/Futures$$ExternalSyntheticLambda5;-><init>(Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;Ljava/lang/Object;ZLcom/google/common/util/concurrent/ListenableFuture;)V
@@ -468,20 +468,20 @@
 
     move-result-object p1
 
-    .line 476
+    .line 465
     new-instance p2, Landroidx/camera/core/impl/utils/futures/Futures$$ExternalSyntheticLambda6;
 
     invoke-direct {p2, p1}, Landroidx/camera/core/impl/utils/futures/Futures$$ExternalSyntheticLambda6;-><init>(Ljava/util/concurrent/ScheduledFuture;)V
 
-    .line 477
+    .line 466
     invoke-static {}, Landroidx/camera/core/impl/utils/executor/CameraXExecutors;->directExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object p1
 
-    .line 476
+    .line 465
     invoke-interface {p0, p2, p1}, Lcom/google/common/util/concurrent/ListenableFuture;->addListener(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
-    .line 479
+    .line 468
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -510,20 +510,20 @@
         }
     .end annotation
 
-    .line 261
+    .line 256
     sget-object v0, Landroidx/camera/core/impl/utils/futures/Futures;->IDENTITY_FUNCTION:Landroidx/arch/core/util/Function;
 
     const/4 v1, 0x0
 
-    .line 264
+    .line 259
     invoke-static {}, Landroidx/camera/core/impl/utils/executor/CameraXExecutors;->directExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v2
 
-    .line 263
+    .line 258
     invoke-static {v1, p0, v0, p1, v2}, Landroidx/camera/core/impl/utils/futures/Futures;->propagateTransform(ZLcom/google/common/util/concurrent/ListenableFuture;Landroidx/arch/core/util/Function;Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;Ljava/util/concurrent/Executor;)V
 
-    .line 265
+    .line 260
     new-instance p1, Ljava/lang/StringBuilder;
 
     const-string v0, "nonCancellationPropagating["
@@ -548,7 +548,7 @@
 
     const/4 v0, 0x0
 
-    .line 496
+    .line 484
     invoke-virtual {p0, v0}, Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;->set(Ljava/lang/Object;)Z
 
     return-void
@@ -562,7 +562,7 @@
         }
     .end annotation
 
-    .line 496
+    .line 484
     new-instance v0, Landroidx/camera/core/impl/utils/futures/Futures$$ExternalSyntheticLambda2;
 
     invoke-direct {v0, p1}, Landroidx/camera/core/impl/utils/futures/Futures$$ExternalSyntheticLambda2;-><init>(Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;)V
@@ -573,10 +573,10 @@
 
     invoke-interface {p0, v0, p1}, Lcom/google/common/util/concurrent/ListenableFuture;->addListener(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
-    .line 497
+    .line 485
     new-instance p1, Ljava/lang/StringBuilder;
 
-    const-string v0, "transformVoidFuture ["
+    const-string/jumbo v0, "transformVoidFuture ["
 
     invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -608,7 +608,7 @@
         }
     .end annotation
 
-    .line 433
+    .line 423
     new-instance v0, Landroidx/camera/core/impl/utils/futures/Futures$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p3, p2, p0, p1}, Landroidx/camera/core/impl/utils/futures/Futures$$ExternalSyntheticLambda0;-><init>(Lcom/google/common/util/concurrent/ListenableFuture;Ljava/util/concurrent/ScheduledExecutorService;J)V
@@ -636,7 +636,7 @@
         }
     .end annotation
 
-    .line 465
+    .line 454
     new-instance v0, Landroidx/camera/core/impl/utils/futures/Futures$$ExternalSyntheticLambda4;
 
     move-wide v5, p0
@@ -672,10 +672,10 @@
         }
     .end annotation
 
-    .line 252
+    .line 247
     invoke-static {p0}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 254
+    .line 249
     invoke-interface {p0}, Lcom/google/common/util/concurrent/ListenableFuture;->isDone()Z
 
     move-result v0
@@ -684,7 +684,7 @@
 
     return-object p0
 
-    .line 258
+    .line 253
     :cond_0
     new-instance v0, Landroidx/camera/core/impl/utils/futures/Futures$$ExternalSyntheticLambda3;
 
@@ -711,10 +711,10 @@
         }
     .end annotation
 
-    .line 161
+    .line 157
     sget-object v0, Landroidx/camera/core/impl/utils/futures/Futures;->IDENTITY_FUNCTION:Landroidx/arch/core/util/Function;
 
-    .line 164
+    .line 160
     invoke-static {}, Landroidx/camera/core/impl/utils/executor/CameraXExecutors;->directExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v1
@@ -746,7 +746,7 @@
 
     const/4 v0, 0x1
 
-    .line 185
+    .line 181
     invoke-static {v0, p0, p1, p2, p3}, Landroidx/camera/core/impl/utils/futures/Futures;->propagateTransform(ZLcom/google/common/util/concurrent/ListenableFuture;Landroidx/arch/core/util/Function;Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;Ljava/util/concurrent/Executor;)V
 
     return-void
@@ -772,19 +772,19 @@
         }
     .end annotation
 
-    .line 210
+    .line 206
     invoke-static {p1}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 211
+    .line 207
     invoke-static {p2}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 212
+    .line 208
     invoke-static {p3}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 213
+    .line 209
     invoke-static {p4}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 215
+    .line 211
     new-instance v0, Landroidx/camera/core/impl/utils/futures/Futures$3;
 
     invoke-direct {v0, p3, p2}, Landroidx/camera/core/impl/utils/futures/Futures$3;-><init>(Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;Landroidx/arch/core/util/Function;)V
@@ -793,17 +793,17 @@
 
     if-eqz p0, :cond_0
 
-    .line 233
+    .line 229
     new-instance p0, Landroidx/camera/core/impl/utils/futures/Futures$4;
 
     invoke-direct {p0, p1}, Landroidx/camera/core/impl/utils/futures/Futures$4;-><init>(Lcom/google/common/util/concurrent/ListenableFuture;)V
 
-    .line 238
+    .line 234
     invoke-static {}, Landroidx/camera/core/impl/utils/executor/CameraXExecutors;->directExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object p1
 
-    .line 233
+    .line 229
     invoke-virtual {p3, p0, p1}, Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;->addCancellationListener(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
     :cond_0
@@ -827,7 +827,7 @@
         }
     .end annotation
 
-    .line 285
+    .line 279
     new-instance v0, Landroidx/camera/core/impl/utils/futures/ListFuture;
 
     new-instance v1, Ljava/util/ArrayList;
@@ -836,7 +836,7 @@
 
     const/4 p0, 0x0
 
-    .line 286
+    .line 280
     invoke-static {}, Landroidx/camera/core/impl/utils/executor/CameraXExecutors;->directExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v2
@@ -866,10 +866,10 @@
         }
     .end annotation
 
-    .line 129
+    .line 126
     invoke-static {p1}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 130
+    .line 127
     new-instance v0, Landroidx/camera/core/impl/utils/futures/Futures$1;
 
     invoke-direct {v0, p1}, Landroidx/camera/core/impl/utils/futures/Futures$1;-><init>(Landroidx/arch/core/util/Function;)V
@@ -901,12 +901,12 @@
         }
     .end annotation
 
-    .line 108
+    .line 106
     new-instance v0, Landroidx/camera/core/impl/utils/futures/ChainingListenableFuture;
 
     invoke-direct {v0, p1, p0}, Landroidx/camera/core/impl/utils/futures/ChainingListenableFuture;-><init>(Landroidx/camera/core/impl/utils/futures/AsyncFunction;Lcom/google/common/util/concurrent/ListenableFuture;)V
 
-    .line 109
+    .line 107
     invoke-interface {p0, v0, p2}, Lcom/google/common/util/concurrent/ListenableFuture;->addListener(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
     return-object v0
@@ -927,7 +927,7 @@
         }
     .end annotation
 
-    .line 495
+    .line 483
     new-instance v0, Landroidx/camera/core/impl/utils/futures/Futures$$ExternalSyntheticLambda1;
 
     invoke-direct {v0, p0}, Landroidx/camera/core/impl/utils/futures/Futures$$ExternalSyntheticLambda1;-><init>(Lcom/google/common/util/concurrent/ListenableFuture;)V

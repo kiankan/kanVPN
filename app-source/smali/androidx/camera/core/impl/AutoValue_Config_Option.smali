@@ -64,23 +64,23 @@
 
     .line 26
     :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null valueClass"
+    const-string p1, "Null valueClass"
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
     .line 22
     :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null id"
+    const-string p1, "Null id"
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 
@@ -94,7 +94,7 @@
 
     return v0
 
-    .line 64
+    .line 61
     :cond_0
     instance-of v1, p1, Landroidx/camera/core/impl/Config$Option;
 
@@ -102,10 +102,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 65
+    .line 62
     check-cast p1, Landroidx/camera/core/impl/Config$Option;
 
-    .line 66
+    .line 63
     iget-object v1, p0, Landroidx/camera/core/impl/AutoValue_Config_Option;->id:Ljava/lang/String;
 
     invoke-virtual {p1}, Landroidx/camera/core/impl/Config$Option;->getId()Ljava/lang/String;
@@ -120,7 +120,7 @@
 
     iget-object v1, p0, Landroidx/camera/core/impl/AutoValue_Config_Option;->valueClass:Ljava/lang/Class;
 
-    .line 67
+    .line 64
     invoke-virtual {p1}, Landroidx/camera/core/impl/Config$Option;->getValueClass()Ljava/lang/Class;
 
     move-result-object v3
@@ -131,16 +131,16 @@
 
     if-eqz v1, :cond_2
 
-    iget-object v1, p0, Landroidx/camera/core/impl/AutoValue_Config_Option;->token:Ljava/lang/Object;
+    iget-object p0, p0, Landroidx/camera/core/impl/AutoValue_Config_Option;->token:Ljava/lang/Object;
 
-    if-nez v1, :cond_1
+    if-nez p0, :cond_1
 
-    .line 68
+    .line 65
     invoke-virtual {p1}, Landroidx/camera/core/impl/Config$Option;->getToken()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    if-nez p1, :cond_2
+    if-nez p0, :cond_2
 
     goto :goto_0
 
@@ -149,11 +149,11 @@
 
     move-result-object p1
 
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_2
+    if-eqz p0, :cond_2
 
     :goto_0
     return v0
@@ -163,25 +163,25 @@
 .end method
 
 .method public getId()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    .line 35
-    iget-object v0, p0, Landroidx/camera/core/impl/AutoValue_Config_Option;->id:Ljava/lang/String;
+    .line 34
+    iget-object p0, p0, Landroidx/camera/core/impl/AutoValue_Config_Option;->id:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getToken()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    .line 47
-    iget-object v0, p0, Landroidx/camera/core/impl/AutoValue_Config_Option;->token:Ljava/lang/Object;
+    .line 44
+    iget-object p0, p0, Landroidx/camera/core/impl/AutoValue_Config_Option;->token:Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getValueClass()Ljava/lang/Class;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -190,16 +190,16 @@
         }
     .end annotation
 
-    .line 41
-    iget-object v0, p0, Landroidx/camera/core/impl/AutoValue_Config_Option;->valueClass:Ljava/lang/Class;
+    .line 39
+    iget-object p0, p0, Landroidx/camera/core/impl/AutoValue_Config_Option;->valueClass:Ljava/lang/Class;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public hashCode()I
     .locals 3
 
-    .line 77
+    .line 74
     iget-object v0, p0, Landroidx/camera/core/impl/AutoValue_Config_Option;->id:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -212,7 +212,7 @@
 
     mul-int/2addr v0, v1
 
-    .line 79
+    .line 76
     iget-object v2, p0, Landroidx/camera/core/impl/AutoValue_Config_Option;->valueClass:Ljava/lang/Class;
 
     invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
@@ -223,30 +223,30 @@
 
     mul-int/2addr v0, v1
 
-    .line 81
-    iget-object v1, p0, Landroidx/camera/core/impl/AutoValue_Config_Option;->token:Ljava/lang/Object;
+    .line 78
+    iget-object p0, p0, Landroidx/camera/core/impl/AutoValue_Config_Option;->token:Ljava/lang/Object;
 
-    if-nez v1, :cond_0
+    if-nez p0, :cond_0
 
-    const/4 v1, 0x0
+    const/4 p0, 0x0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
-    move-result v1
+    move-result p0
 
     :goto_0
-    xor-int/2addr v0, v1
+    xor-int/2addr p0, v0
 
-    return v0
+    return p0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 52
+    .line 49
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "Option{id="
@@ -269,17 +269,17 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Landroidx/camera/core/impl/AutoValue_Config_Option;->token:Ljava/lang/Object;
+    iget-object p0, p0, Landroidx/camera/core/impl/AutoValue_Config_Option;->token:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, "}"
+    const-string/jumbo p0, "}"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

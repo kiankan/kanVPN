@@ -25,14 +25,14 @@
 
 # virtual methods
 .method public final attachCompleter(Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;)Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Landroidx/camera/core/impl/DeferrableSurface$$ExternalSyntheticLambda1;->f$0:Landroidx/camera/core/impl/DeferrableSurface;
+    iget-object p0, p0, Landroidx/camera/core/impl/DeferrableSurface$$ExternalSyntheticLambda1;->f$0:Landroidx/camera/core/impl/DeferrableSurface;
 
-    invoke-virtual {v0, p1}, Landroidx/camera/core/impl/DeferrableSurface;->lambda$new$1$androidx-camera-core-impl-DeferrableSurface(Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Landroidx/camera/core/impl/DeferrableSurface;->lambda$new$1$androidx-camera-core-impl-DeferrableSurface(Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

@@ -155,186 +155,186 @@
 
 # virtual methods
 .method public parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/CalendarParsedResult;
-    .locals 16
+    .locals 14
 
     .line 33
-    invoke-static/range {p1 .. p1}, Lcom/google/zxing/client/result/VEventResultParser;->getMassagedText(Lcom/google/zxing/Result;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/google/zxing/client/result/VEventResultParser;->getMassagedText(Lcom/google/zxing/Result;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
     .line 34
-    const-string v1, "BEGIN:VEVENT"
+    const-string p1, "BEGIN:VEVENT"
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+    invoke-virtual {p0, p1}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
-    move-result v1
+    move-result p1
 
-    const/4 v2, 0x0
+    const/4 v0, 0x0
 
-    if-gez v1, :cond_0
+    if-gez p1, :cond_0
 
-    return-object v2
+    return-object v0
 
     .line 39
     :cond_0
-    const-string v1, "SUMMARY"
+    const-string p1, "SUMMARY"
 
-    invoke-static {v1, v0}, Lcom/google/zxing/client/result/VEventResultParser;->matchSingleVCardPrefixedField(Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, p0}, Lcom/google/zxing/client/result/VEventResultParser;->matchSingleVCardPrefixedField(Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v2
 
     .line 40
-    const-string v1, "DTSTART"
+    const-string p1, "DTSTART"
 
-    invoke-static {v1, v0}, Lcom/google/zxing/client/result/VEventResultParser;->matchSingleVCardPrefixedField(Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, p0}, Lcom/google/zxing/client/result/VEventResultParser;->matchSingleVCardPrefixedField(Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v3
 
-    if-nez v5, :cond_1
+    if-nez v3, :cond_1
 
-    return-object v2
+    return-object v0
 
     .line 44
     :cond_1
-    const-string v1, "DTEND"
+    const-string p1, "DTEND"
 
-    invoke-static {v1, v0}, Lcom/google/zxing/client/result/VEventResultParser;->matchSingleVCardPrefixedField(Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, p0}, Lcom/google/zxing/client/result/VEventResultParser;->matchSingleVCardPrefixedField(Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    .line 45
+    const-string p1, "DURATION"
+
+    invoke-static {p1, p0}, Lcom/google/zxing/client/result/VEventResultParser;->matchSingleVCardPrefixedField(Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    .line 46
+    const-string p1, "LOCATION"
+
+    invoke-static {p1, p0}, Lcom/google/zxing/client/result/VEventResultParser;->matchSingleVCardPrefixedField(Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 45
-    const-string v1, "DURATION"
+    .line 47
+    const-string p1, "ORGANIZER"
 
-    invoke-static {v1, v0}, Lcom/google/zxing/client/result/VEventResultParser;->matchSingleVCardPrefixedField(Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, p0}, Lcom/google/zxing/client/result/VEventResultParser;->matchSingleVCardPrefixedField(Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/google/zxing/client/result/VEventResultParser;->stripMailto(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 46
-    const-string v1, "LOCATION"
+    .line 49
+    const-string p1, "ATTENDEE"
 
-    invoke-static {v1, v0}, Lcom/google/zxing/client/result/VEventResultParser;->matchSingleVCardPrefixedField(Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, p0}, Lcom/google/zxing/client/result/VEventResultParser;->matchVCardPrefixedField(Ljava/lang/CharSequence;Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v8
 
-    .line 47
-    const-string v1, "ORGANIZER"
+    const/4 p1, 0x0
 
-    invoke-static {v1, v0}, Lcom/google/zxing/client/result/VEventResultParser;->matchSingleVCardPrefixedField(Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/String;
+    if-eqz v8, :cond_2
 
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/google/zxing/client/result/VEventResultParser;->stripMailto(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v9
-
-    .line 49
-    const-string v1, "ATTENDEE"
-
-    invoke-static {v1, v0}, Lcom/google/zxing/client/result/VEventResultParser;->matchVCardPrefixedField(Ljava/lang/CharSequence;Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v10
-
-    const/4 v1, 0x0
-
-    if-eqz v10, :cond_2
-
-    move v3, v1
+    move v1, p1
 
     .line 51
     :goto_0
-    array-length v11, v10
+    array-length v9, v8
 
-    if-ge v3, v11, :cond_2
+    if-ge v1, v9, :cond_2
 
     .line 52
-    aget-object v11, v10, v3
+    aget-object v9, v8, v1
 
-    invoke-static {v11}, Lcom/google/zxing/client/result/VEventResultParser;->stripMailto(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v9}, Lcom/google/zxing/client/result/VEventResultParser;->stripMailto(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v11
+    move-result-object v9
 
-    aput-object v11, v10, v3
+    aput-object v9, v8, v1
 
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
     .line 55
     :cond_2
-    const-string v3, "DESCRIPTION"
+    const-string v1, "DESCRIPTION"
 
-    invoke-static {v3, v0}, Lcom/google/zxing/client/result/VEventResultParser;->matchSingleVCardPrefixedField(Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p0}, Lcom/google/zxing/client/result/VEventResultParser;->matchSingleVCardPrefixedField(Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v11
+    move-result-object v9
 
     .line 57
-    const-string v3, "GEO"
+    const-string v1, "GEO"
 
-    invoke-static {v3, v0}, Lcom/google/zxing/client/result/VEventResultParser;->matchSingleVCardPrefixedField(Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p0}, Lcom/google/zxing/client/result/VEventResultParser;->matchSingleVCardPrefixedField(Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    if-nez v0, :cond_3
+    if-nez p0, :cond_3
 
-    const-wide/high16 v0, 0x7ff8000000000000L    # Double.NaN
+    const-wide/high16 p0, 0x7ff8000000000000L    # Double.NaN
 
-    move-wide v12, v0
+    move-wide v10, p0
 
-    move-wide v14, v12
+    move-wide v12, v10
 
     goto :goto_1
 
     :cond_3
-    const/16 v3, 0x3b
+    const/16 v1, 0x3b
 
     .line 64
-    invoke-virtual {v0, v3}, Ljava/lang/String;->indexOf(I)I
+    invoke-virtual {p0, v1}, Ljava/lang/String;->indexOf(I)I
 
-    move-result v3
+    move-result v1
 
-    if-gez v3, :cond_4
+    if-gez v1, :cond_4
 
-    return-object v2
+    return-object v0
 
     .line 69
     :cond_4
     :try_start_0
-    invoke-virtual {v0, v1, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    invoke-virtual {p0, p1, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p1
 
-    invoke-static {v1}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
+    invoke-static {p1}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
-    move-result-wide v12
+    move-result-wide v10
 
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v1, v1, 0x1
 
     .line 70
-    invoke-virtual {v0, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-static {v0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
+    invoke-static {p0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
-    move-result-wide v0
+    move-result-wide p0
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-wide v14, v0
+    move-wide v12, p0
 
     .line 77
     :goto_1
     :try_start_1
-    new-instance v3, Lcom/google/zxing/client/result/CalendarParsedResult;
+    new-instance v1, Lcom/google/zxing/client/result/CalendarParsedResult;
 
-    invoke-direct/range {v3 .. v15}, Lcom/google/zxing/client/result/CalendarParsedResult;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;DD)V
+    invoke-direct/range {v1 .. v13}, Lcom/google/zxing/client/result/CalendarParsedResult;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;DD)V
     :try_end_1
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_0
 
-    return-object v3
+    return-object v1
 
     :catch_0
-    return-object v2
+    return-object v0
 .end method
 
 .method public bridge synthetic parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/ParsedResult;
@@ -351,7 +351,7 @@
     .line 29
     invoke-virtual {p0, p1}, Lcom/google/zxing/client/result/VEventResultParser;->parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/CalendarParsedResult;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

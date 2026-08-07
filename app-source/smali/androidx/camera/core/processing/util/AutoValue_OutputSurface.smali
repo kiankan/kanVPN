@@ -33,13 +33,13 @@
 
     .line 22
     :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null eglSurface"
+    const-string p1, "Null eglSurface"
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 
@@ -53,7 +53,7 @@
 
     return v0
 
-    .line 59
+    .line 58
     :cond_0
     instance-of v1, p1, Landroidx/camera/core/processing/util/OutputSurface;
 
@@ -61,10 +61,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 60
+    .line 59
     check-cast p1, Landroidx/camera/core/processing/util/OutputSurface;
 
-    .line 61
+    .line 60
     iget-object v1, p0, Landroidx/camera/core/processing/util/AutoValue_OutputSurface;->eglSurface:Landroid/opengl/EGLSurface;
 
     invoke-virtual {p1}, Landroidx/camera/core/processing/util/OutputSurface;->getEglSurface()Landroid/opengl/EGLSurface;
@@ -79,21 +79,21 @@
 
     iget v1, p0, Landroidx/camera/core/processing/util/AutoValue_OutputSurface;->width:I
 
-    .line 62
+    .line 61
     invoke-virtual {p1}, Landroidx/camera/core/processing/util/OutputSurface;->getWidth()I
 
     move-result v3
 
     if-ne v1, v3, :cond_1
 
-    iget v1, p0, Landroidx/camera/core/processing/util/AutoValue_OutputSurface;->height:I
+    iget p0, p0, Landroidx/camera/core/processing/util/AutoValue_OutputSurface;->height:I
 
-    .line 63
+    .line 62
     invoke-virtual {p1}, Landroidx/camera/core/processing/util/OutputSurface;->getHeight()I
 
     move-result p1
 
-    if-ne v1, p1, :cond_1
+    if-ne p0, p1, :cond_1
 
     return v0
 
@@ -102,36 +102,36 @@
 .end method
 
 .method public getEglSurface()Landroid/opengl/EGLSurface;
-    .locals 1
+    .locals 0
 
-    .line 32
-    iget-object v0, p0, Landroidx/camera/core/processing/util/AutoValue_OutputSurface;->eglSurface:Landroid/opengl/EGLSurface;
+    .line 31
+    iget-object p0, p0, Landroidx/camera/core/processing/util/AutoValue_OutputSurface;->eglSurface:Landroid/opengl/EGLSurface;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getHeight()I
-    .locals 1
+    .locals 0
 
-    .line 42
-    iget v0, p0, Landroidx/camera/core/processing/util/AutoValue_OutputSurface;->height:I
+    .line 41
+    iget p0, p0, Landroidx/camera/core/processing/util/AutoValue_OutputSurface;->height:I
 
-    return v0
+    return p0
 .end method
 
 .method public getWidth()I
-    .locals 1
+    .locals 0
 
-    .line 37
-    iget v0, p0, Landroidx/camera/core/processing/util/AutoValue_OutputSurface;->width:I
+    .line 36
+    iget p0, p0, Landroidx/camera/core/processing/util/AutoValue_OutputSurface;->width:I
 
-    return v0
+    return p0
 .end method
 
 .method public hashCode()I
     .locals 3
 
-    .line 72
+    .line 71
     iget-object v0, p0, Landroidx/camera/core/processing/util/AutoValue_OutputSurface;->eglSurface:Landroid/opengl/EGLSurface;
 
     invoke-virtual {v0}, Landroid/opengl/EGLSurface;->hashCode()I
@@ -144,25 +144,25 @@
 
     mul-int/2addr v0, v1
 
-    .line 74
+    .line 73
     iget v2, p0, Landroidx/camera/core/processing/util/AutoValue_OutputSurface;->width:I
 
     xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
-    .line 76
-    iget v1, p0, Landroidx/camera/core/processing/util/AutoValue_OutputSurface;->height:I
+    .line 75
+    iget p0, p0, Landroidx/camera/core/processing/util/AutoValue_OutputSurface;->height:I
 
-    xor-int/2addr v0, v1
+    xor-int/2addr p0, v0
 
-    return v0
+    return p0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 47
+    .line 46
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "OutputSurface{eglSurface="
@@ -185,17 +185,17 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Landroidx/camera/core/processing/util/AutoValue_OutputSurface;->height:I
+    iget p0, p0, Landroidx/camera/core/processing/util/AutoValue_OutputSurface;->height:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v1, "}"
+    const-string/jumbo p0, "}"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

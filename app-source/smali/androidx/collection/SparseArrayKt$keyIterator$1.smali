@@ -34,7 +34,7 @@
     k = 0x1
     mv = {
         0x1,
-        0x8,
+        0x9,
         0x0
     }
     xi = 0x30
@@ -67,7 +67,7 @@
 
     iput-object p1, p0, Landroidx/collection/SparseArrayKt$keyIterator$1;->$this_keyIterator:Landroidx/collection/SparseArrayCompat;
 
-    .line 68
+    .line 70
     invoke-direct {p0}, Lkotlin/collections/IntIterator;-><init>()V
 
     return-void
@@ -76,42 +76,42 @@
 
 # virtual methods
 .method public final getIndex()I
-    .locals 1
+    .locals 0
 
-    .line 69
-    iget v0, p0, Landroidx/collection/SparseArrayKt$keyIterator$1;->index:I
+    .line 71
+    iget p0, p0, Landroidx/collection/SparseArrayKt$keyIterator$1;->index:I
 
-    return v0
+    return p0
 .end method
 
 .method public hasNext()Z
-    .locals 2
+    .locals 1
 
-    .line 70
+    .line 73
     iget v0, p0, Landroidx/collection/SparseArrayKt$keyIterator$1;->index:I
 
-    iget-object v1, p0, Landroidx/collection/SparseArrayKt$keyIterator$1;->$this_keyIterator:Landroidx/collection/SparseArrayCompat;
+    iget-object p0, p0, Landroidx/collection/SparseArrayKt$keyIterator$1;->$this_keyIterator:Landroidx/collection/SparseArrayCompat;
 
-    invoke-virtual {v1}, Landroidx/collection/SparseArrayCompat;->size()I
+    invoke-virtual {p0}, Landroidx/collection/SparseArrayCompat;->size()I
 
-    move-result v1
+    move-result p0
 
-    if-ge v0, v1, :cond_0
+    if-ge v0, p0, :cond_0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public nextInt()I
     .locals 3
 
-    .line 71
+    .line 75
     iget-object v0, p0, Landroidx/collection/SparseArrayKt$keyIterator$1;->$this_keyIterator:Landroidx/collection/SparseArrayCompat;
 
     iget v1, p0, Landroidx/collection/SparseArrayKt$keyIterator$1;->index:I
@@ -122,15 +122,15 @@
 
     invoke-virtual {v0, v1}, Landroidx/collection/SparseArrayCompat;->keyAt(I)I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public final setIndex(I)V
     .locals 0
 
-    .line 69
+    .line 71
     iput p1, p0, Landroidx/collection/SparseArrayKt$keyIterator$1;->index:I
 
     return-void

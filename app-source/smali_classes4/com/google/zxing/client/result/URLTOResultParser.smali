@@ -29,77 +29,77 @@
     .line 28
     invoke-virtual {p0, p1}, Lcom/google/zxing/client/result/URLTOResultParser;->parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/URIParsedResult;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/URIParsedResult;
-    .locals 3
+    .locals 2
 
     .line 32
     invoke-static {p1}, Lcom/google/zxing/client/result/URLTOResultParser;->getMassagedText(Lcom/google/zxing/Result;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
     .line 33
-    const-string v0, "urlto:"
+    const-string/jumbo p1, "urlto:"
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result p1
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    if-nez v0, :cond_0
+    if-nez p1, :cond_0
 
-    const-string v0, "URLTO:"
+    const-string p1, "URLTO:"
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result p1
 
-    if-nez v0, :cond_0
+    if-nez p1, :cond_0
 
-    return-object v1
+    return-object v0
 
     :cond_0
-    const/16 v0, 0x3a
+    const/16 p1, 0x3a
 
-    const/4 v2, 0x6
+    const/4 v1, 0x6
 
     .line 36
-    invoke-virtual {p1, v0, v2}, Ljava/lang/String;->indexOf(II)I
+    invoke-virtual {p0, p1, v1}, Ljava/lang/String;->indexOf(II)I
 
-    move-result v0
+    move-result p1
 
-    if-gez v0, :cond_1
+    if-gez p1, :cond_1
 
-    return-object v1
+    return-object v0
 
     :cond_1
-    if-gt v0, v2, :cond_2
+    if-gt p1, v1, :cond_2
 
     goto :goto_0
 
     .line 40
     :cond_2
-    invoke-virtual {p1, v2, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    invoke-virtual {p0, v1, p1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
     :goto_0
-    add-int/lit8 v0, v0, 0x1
+    add-int/lit8 p1, p1, 0x1
 
     .line 41
-    invoke-virtual {p1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
     .line 42
-    new-instance v0, Lcom/google/zxing/client/result/URIParsedResult;
+    new-instance p1, Lcom/google/zxing/client/result/URIParsedResult;
 
-    invoke-direct {v0, p1, v1}, Lcom/google/zxing/client/result/URIParsedResult;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p1, p0, v0}, Lcom/google/zxing/client/result/URIParsedResult;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    return-object v0
+    return-object p1
 .end method

@@ -29,176 +29,176 @@
     .line 21
     invoke-virtual {p0, p1}, Lcom/google/zxing/client/result/WifiResultParser;->parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/WifiParsedResult;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/WifiParsedResult;
-    .locals 13
+    .locals 12
 
     .line 43
     invoke-static {p1}, Lcom/google/zxing/client/result/WifiResultParser;->getMassagedText(Lcom/google/zxing/Result;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
     .line 44
-    const-string v0, "WIFI:"
+    const-string p1, "WIFI:"
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result p1
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    if-nez v0, :cond_0
+    if-nez p1, :cond_0
 
-    return-object v1
+    return-object v0
 
     :cond_0
-    const/4 v0, 0x5
+    const/4 p1, 0x5
 
     .line 47
-    invoke-virtual {p1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
     .line 48
-    const-string v0, "S:"
+    const-string p1, "S:"
 
-    const/16 v2, 0x3b
+    const/16 v1, 0x3b
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    invoke-static {v0, p1, v2, v3}, Lcom/google/zxing/client/result/WifiResultParser;->matchSinglePrefixedField(Ljava/lang/String;Ljava/lang/String;CZ)Ljava/lang/String;
+    invoke-static {p1, p0, v1, v2}, Lcom/google/zxing/client/result/WifiResultParser;->matchSinglePrefixedField(Ljava/lang/String;Ljava/lang/String;CZ)Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v5
 
-    if-eqz v6, :cond_6
+    if-eqz v5, :cond_6
 
     .line 49
-    invoke-virtual {v6}, Ljava/lang/String;->isEmpty()Z
+    invoke-virtual {v5}, Ljava/lang/String;->isEmpty()Z
 
-    move-result v0
+    move-result p1
 
-    if-eqz v0, :cond_1
+    if-eqz p1, :cond_1
 
     goto :goto_3
 
     .line 52
     :cond_1
-    const-string v0, "P:"
+    const-string p1, "P:"
 
-    invoke-static {v0, p1, v2, v3}, Lcom/google/zxing/client/result/WifiResultParser;->matchSinglePrefixedField(Ljava/lang/String;Ljava/lang/String;CZ)Ljava/lang/String;
+    invoke-static {p1, p0, v1, v2}, Lcom/google/zxing/client/result/WifiResultParser;->matchSinglePrefixedField(Ljava/lang/String;Ljava/lang/String;CZ)Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v6
 
     .line 53
-    const-string v0, "T:"
+    const-string p1, "T:"
 
-    invoke-static {v0, p1, v2, v3}, Lcom/google/zxing/client/result/WifiResultParser;->matchSinglePrefixedField(Ljava/lang/String;Ljava/lang/String;CZ)Ljava/lang/String;
+    invoke-static {p1, p0, v1, v2}, Lcom/google/zxing/client/result/WifiResultParser;->matchSinglePrefixedField(Ljava/lang/String;Ljava/lang/String;CZ)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p1
 
-    if-nez v0, :cond_2
+    if-nez p1, :cond_2
 
     .line 55
-    const-string v0, "nopass"
+    const-string p1, "nopass"
 
     :cond_2
-    move-object v5, v0
+    move-object v4, p1
 
     .line 62
-    const-string v0, "PH2:"
+    const-string p1, "PH2:"
 
-    invoke-static {v0, p1, v2, v3}, Lcom/google/zxing/client/result/WifiResultParser;->matchSinglePrefixedField(Ljava/lang/String;Ljava/lang/String;CZ)Ljava/lang/String;
+    invoke-static {p1, p0, v1, v2}, Lcom/google/zxing/client/result/WifiResultParser;->matchSinglePrefixedField(Ljava/lang/String;Ljava/lang/String;CZ)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 63
+    const-string v0, "H:"
+
+    invoke-static {v0, p0, v1, v2}, Lcom/google/zxing/client/result/WifiResultParser;->matchSinglePrefixedField(Ljava/lang/String;Ljava/lang/String;CZ)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 63
-    const-string v1, "H:"
+    if-eqz v0, :cond_5
 
-    invoke-static {v1, p1, v2, v3}, Lcom/google/zxing/client/result/WifiResultParser;->matchSinglePrefixedField(Ljava/lang/String;Ljava/lang/String;CZ)Ljava/lang/String;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_5
-
-    if-nez v0, :cond_4
+    if-nez p1, :cond_4
 
     .line 66
-    const-string v4, "true"
+    const-string/jumbo v3, "true"
 
-    invoke-virtual {v4, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v3, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
-    move-result v4
+    move-result v3
 
-    if-nez v4, :cond_4
+    if-nez v3, :cond_4
 
-    const-string v4, "false"
+    const-string v3, "false"
 
-    invoke-virtual {v4, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v3, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
-    move-result v4
+    move-result v3
 
-    if-eqz v4, :cond_3
+    if-eqz v3, :cond_3
 
     goto :goto_0
 
     :cond_3
-    move-object v12, v1
+    move-object v11, v0
 
     goto :goto_1
 
     .line 67
     :cond_4
     :goto_0
-    invoke-static {v1}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
+    invoke-static {v0}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
-    move-result v1
+    move-result v0
 
-    move-object v12, v0
+    move-object v11, p1
 
-    move v8, v1
+    move v7, v0
 
     goto :goto_2
 
     :cond_5
-    move-object v12, v0
+    move-object v11, p1
 
     :goto_1
-    move v8, v3
+    move v7, v2
 
     .line 73
     :goto_2
-    const-string v0, "I:"
+    const-string p1, "I:"
 
-    invoke-static {v0, p1, v2, v3}, Lcom/google/zxing/client/result/WifiResultParser;->matchSinglePrefixedField(Ljava/lang/String;Ljava/lang/String;CZ)Ljava/lang/String;
+    invoke-static {p1, p0, v1, v2}, Lcom/google/zxing/client/result/WifiResultParser;->matchSinglePrefixedField(Ljava/lang/String;Ljava/lang/String;CZ)Ljava/lang/String;
+
+    move-result-object v8
+
+    .line 74
+    const-string p1, "A:"
+
+    invoke-static {p1, p0, v1, v2}, Lcom/google/zxing/client/result/WifiResultParser;->matchSinglePrefixedField(Ljava/lang/String;Ljava/lang/String;CZ)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 74
-    const-string v0, "A:"
+    .line 75
+    const-string p1, "E:"
 
-    invoke-static {v0, p1, v2, v3}, Lcom/google/zxing/client/result/WifiResultParser;->matchSinglePrefixedField(Ljava/lang/String;Ljava/lang/String;CZ)Ljava/lang/String;
+    invoke-static {p1, p0, v1, v2}, Lcom/google/zxing/client/result/WifiResultParser;->matchSinglePrefixedField(Ljava/lang/String;Ljava/lang/String;CZ)Ljava/lang/String;
 
     move-result-object v10
 
-    .line 75
-    const-string v0, "E:"
-
-    invoke-static {v0, p1, v2, v3}, Lcom/google/zxing/client/result/WifiResultParser;->matchSinglePrefixedField(Ljava/lang/String;Ljava/lang/String;CZ)Ljava/lang/String;
-
-    move-result-object v11
-
     .line 77
-    new-instance v4, Lcom/google/zxing/client/result/WifiParsedResult;
+    new-instance v3, Lcom/google/zxing/client/result/WifiParsedResult;
 
-    invoke-direct/range {v4 .. v12}, Lcom/google/zxing/client/result/WifiParsedResult;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v3 .. v11}, Lcom/google/zxing/client/result/WifiParsedResult;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    return-object v4
+    return-object v3
 
     :cond_6
     :goto_3
-    return-object v1
+    return-object v0
 .end method

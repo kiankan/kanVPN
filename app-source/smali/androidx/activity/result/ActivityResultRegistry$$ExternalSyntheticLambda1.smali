@@ -19,12 +19,12 @@
 
 # virtual methods
 .method public final invoke()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
     .line 0
-    invoke-static {}, Landroidx/activity/result/ActivityResultRegistry;->$r8$lambda$-f_tNvtP3uEenATo3uzHmjDoXwg()Ljava/lang/Integer;
+    invoke-static {}, Landroidx/activity/result/ActivityResultRegistry;->generateRandomNumber$lambda$0()Ljava/lang/Integer;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

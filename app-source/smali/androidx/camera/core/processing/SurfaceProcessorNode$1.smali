@@ -52,7 +52,7 @@
         }
     .end annotation
 
-    .line 221
+    .line 228
     iput-object p1, p0, Landroidx/camera/core/processing/SurfaceProcessorNode$1;->this$0:Landroidx/camera/core/processing/SurfaceProcessorNode;
 
     iput-object p2, p0, Landroidx/camera/core/processing/SurfaceProcessorNode$1;->val$outputEdge:Landroidx/camera/core/processing/SurfaceEdge;
@@ -67,7 +67,7 @@
 .method public onFailure(Ljava/lang/Throwable;)V
     .locals 3
 
-    .line 234
+    .line 241
     iget-object v0, p0, Landroidx/camera/core/processing/SurfaceProcessorNode$1;->val$outputEdge:Landroidx/camera/core/processing/SurfaceEdge;
 
     invoke-virtual {v0}, Landroidx/camera/core/processing/SurfaceEdge;->getTargets()I
@@ -84,14 +84,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 236
-    const-string p1, "Downstream VideoCapture failed to provide Surface."
+    .line 243
+    const-string p0, "Downstream VideoCapture failed to provide Surface."
 
-    invoke-static {v2, p1}, Landroidx/camera/core/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, p0}, Landroidx/camera/core/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    .line 238
+    .line 245
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -99,56 +99,56 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Landroidx/camera/core/processing/SurfaceProcessorNode$1;->val$outputEdge:Landroidx/camera/core/processing/SurfaceEdge;
+    iget-object p0, p0, Landroidx/camera/core/processing/SurfaceProcessorNode$1;->val$outputEdge:Landroidx/camera/core/processing/SurfaceEdge;
 
-    .line 239
-    invoke-virtual {v1}, Landroidx/camera/core/processing/SurfaceEdge;->getTargets()I
+    .line 246
+    invoke-virtual {p0}, Landroidx/camera/core/processing/SurfaceEdge;->getTargets()I
 
-    move-result v1
+    move-result p0
 
-    invoke-static {v1}, Landroidx/camera/core/processing/TargetUtils;->getHumanReadableName(I)Ljava/lang/String;
+    invoke-static {p0}, Landroidx/camera/core/processing/TargetUtils;->getHumanReadableName(I)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    .line 238
-    invoke-static {v2, v0, p1}, Landroidx/camera/core/Logger;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .line 245
+    invoke-static {v2, p0, p1}, Landroidx/camera/core/Logger;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
 .method public onSuccess(Landroidx/camera/core/SurfaceOutput;)V
-    .locals 2
+    .locals 1
 
-    .line 224
+    .line 231
     invoke-static {p1}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 226
+    .line 233
     :try_start_0
-    iget-object v0, p0, Landroidx/camera/core/processing/SurfaceProcessorNode$1;->this$0:Landroidx/camera/core/processing/SurfaceProcessorNode;
+    iget-object p0, p0, Landroidx/camera/core/processing/SurfaceProcessorNode$1;->this$0:Landroidx/camera/core/processing/SurfaceProcessorNode;
 
-    iget-object v0, v0, Landroidx/camera/core/processing/SurfaceProcessorNode;->mSurfaceProcessor:Landroidx/camera/core/processing/SurfaceProcessorInternal;
+    iget-object p0, p0, Landroidx/camera/core/processing/SurfaceProcessorNode;->mSurfaceProcessor:Landroidx/camera/core/processing/SurfaceProcessorInternal;
 
-    invoke-interface {v0, p1}, Landroidx/camera/core/processing/SurfaceProcessorInternal;->onOutputSurface(Landroidx/camera/core/SurfaceOutput;)V
+    invoke-interface {p0, p1}, Landroidx/camera/core/processing/SurfaceProcessorInternal;->onOutputSurface(Landroidx/camera/core/SurfaceOutput;)V
     :try_end_0
     .catch Landroidx/camera/core/ProcessingException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
 
     :catch_0
-    move-exception p1
+    move-exception p0
 
-    .line 228
-    const-string v0, "SurfaceProcessorNode"
+    .line 235
+    const-string p1, "SurfaceProcessorNode"
 
-    const-string v1, "Failed to send SurfaceOutput to SurfaceProcessor."
+    const-string v0, "Failed to send SurfaceOutput to SurfaceProcessor."
 
-    invoke-static {v0, v1, p1}, Landroidx/camera/core/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {p1, v0, p0}, Landroidx/camera/core/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -164,7 +164,7 @@
         }
     .end annotation
 
-    .line 221
+    .line 228
     check-cast p1, Landroidx/camera/core/SurfaceOutput;
 
     invoke-virtual {p0, p1}, Landroidx/camera/core/processing/SurfaceProcessorNode$1;->onSuccess(Landroidx/camera/core/SurfaceOutput;)V

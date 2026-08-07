@@ -56,9 +56,9 @@
     .line 212
     invoke-virtual {p0, v0}, Lcom/google/gson/TypeAdapter;->read(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final fromJson(Ljava/lang/String;)Ljava/lang/Object;
@@ -84,9 +84,9 @@
 
     invoke-virtual {p0, v0}, Lcom/google/gson/TypeAdapter;->fromJson(Ljava/io/Reader;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final fromJsonTree(Lcom/google/gson/JsonElement;)Ljava/lang/Object;
@@ -108,21 +108,21 @@
     .line 244
     invoke-virtual {p0, v0}, Lcom/google/gson/TypeAdapter;->read(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object p1
+    return-object p0
 
     :catch_0
-    move-exception p1
+    move-exception p0
 
     .line 246
-    new-instance v0, Lcom/google/gson/JsonIOException;
+    new-instance p1, Lcom/google/gson/JsonIOException;
 
-    invoke-direct {v0, p1}, Lcom/google/gson/JsonIOException;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {p1, p0}, Lcom/google/gson/JsonIOException;-><init>(Ljava/lang/Throwable;)V
 
-    throw v0
+    throw p1
 .end method
 
 .method public final nullSafe()Lcom/google/gson/TypeAdapter;
@@ -196,19 +196,19 @@
     .line 166
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     :catch_0
-    move-exception p1
+    move-exception p0
 
     .line 164
-    new-instance v0, Lcom/google/gson/JsonIOException;
+    new-instance p1, Lcom/google/gson/JsonIOException;
 
-    invoke-direct {v0, p1}, Lcom/google/gson/JsonIOException;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {p1, p0}, Lcom/google/gson/JsonIOException;-><init>(Ljava/lang/Throwable;)V
 
-    throw v0
+    throw p1
 .end method
 
 .method public final toJson(Ljava/io/Writer;Ljava/lang/Object;)V
@@ -259,21 +259,21 @@
     .line 182
     invoke-virtual {v0}, Lcom/google/gson/internal/bind/JsonTreeWriter;->get()Lcom/google/gson/JsonElement;
 
-    move-result-object p1
+    move-result-object p0
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object p1
+    return-object p0
 
     :catch_0
-    move-exception p1
+    move-exception p0
 
     .line 184
-    new-instance v0, Lcom/google/gson/JsonIOException;
+    new-instance p1, Lcom/google/gson/JsonIOException;
 
-    invoke-direct {v0, p1}, Lcom/google/gson/JsonIOException;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {p1, p0}, Lcom/google/gson/JsonIOException;-><init>(Ljava/lang/Throwable;)V
 
-    throw v0
+    throw p1
 .end method
 
 .method public abstract write(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V

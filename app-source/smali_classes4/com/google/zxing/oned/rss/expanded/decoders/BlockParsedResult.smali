@@ -41,19 +41,19 @@
 
 # virtual methods
 .method getDecodedInformation()Lcom/google/zxing/oned/rss/expanded/decoders/DecodedInformation;
-    .locals 1
+    .locals 0
 
     .line 48
-    iget-object v0, p0, Lcom/google/zxing/oned/rss/expanded/decoders/BlockParsedResult;->decodedInformation:Lcom/google/zxing/oned/rss/expanded/decoders/DecodedInformation;
+    iget-object p0, p0, Lcom/google/zxing/oned/rss/expanded/decoders/BlockParsedResult;->decodedInformation:Lcom/google/zxing/oned/rss/expanded/decoders/DecodedInformation;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method isFinished()Z
-    .locals 1
+    .locals 0
 
     .line 52
-    iget-boolean v0, p0, Lcom/google/zxing/oned/rss/expanded/decoders/BlockParsedResult;->finished:Z
+    iget-boolean p0, p0, Lcom/google/zxing/oned/rss/expanded/decoders/BlockParsedResult;->finished:Z
 
-    return v0
+    return p0
 .end method

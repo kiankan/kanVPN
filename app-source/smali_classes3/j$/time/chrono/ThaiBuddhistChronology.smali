@@ -127,36 +127,47 @@
 .end method
 
 .method private readObject(Ljava/io/ObjectInputStream;)V
-    .locals 1
+    .locals 0
 
     .line 398
-    new-instance p1, Ljava/io/InvalidObjectException;
+    new-instance p0, Ljava/io/InvalidObjectException;
 
-    const-string v0, "Deserialization via serialization delegate"
+    const-string p1, "Deserialization via serialization delegate"
 
-    invoke-direct {p1, v0}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 
 # virtual methods
+.method public bridge synthetic date(III)Lj$/time/chrono/ChronoLocalDate;
+    .locals 0
+
+    .line 109
+    invoke-virtual {p0, p1, p2, p3}, Lj$/time/chrono/ThaiBuddhistChronology;->date(III)Lj$/time/chrono/ThaiBuddhistDate;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method public bridge synthetic date(Lj$/time/temporal/TemporalAccessor;)Lj$/time/chrono/ChronoLocalDate;
     .locals 0
 
     .line 109
     invoke-virtual {p0, p1}, Lj$/time/chrono/ThaiBuddhistChronology;->date(Lj$/time/temporal/TemporalAccessor;)Lj$/time/chrono/ThaiBuddhistDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public date(III)Lj$/time/chrono/ThaiBuddhistDate;
-    .locals 1
+    .locals 0
 
     .line 228
-    new-instance v0, Lj$/time/chrono/ThaiBuddhistDate;
+    new-instance p0, Lj$/time/chrono/ThaiBuddhistDate;
 
     add-int/lit16 p1, p1, -0x21f
 
@@ -164,18 +175,18 @@
 
     move-result-object p1
 
-    invoke-direct {v0, p1}, Lj$/time/chrono/ThaiBuddhistDate;-><init>(Lj$/time/LocalDate;)V
+    invoke-direct {p0, p1}, Lj$/time/chrono/ThaiBuddhistDate;-><init>(Lj$/time/LocalDate;)V
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public date(Lj$/time/temporal/TemporalAccessor;)Lj$/time/chrono/ThaiBuddhistDate;
-    .locals 1
+    .locals 0
 
     .line 290
-    instance-of v0, p1, Lj$/time/chrono/ThaiBuddhistDate;
+    instance-of p0, p1, Lj$/time/chrono/ThaiBuddhistDate;
 
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
     .line 291
     check-cast p1, Lj$/time/chrono/ThaiBuddhistDate;
@@ -184,15 +195,110 @@
 
     .line 293
     :cond_0
-    new-instance v0, Lj$/time/chrono/ThaiBuddhistDate;
+    new-instance p0, Lj$/time/chrono/ThaiBuddhistDate;
 
     invoke-static {p1}, Lj$/time/LocalDate;->from(Lj$/time/temporal/TemporalAccessor;)Lj$/time/LocalDate;
 
     move-result-object p1
 
-    invoke-direct {v0, p1}, Lj$/time/chrono/ThaiBuddhistDate;-><init>(Lj$/time/LocalDate;)V
+    invoke-direct {p0, p1}, Lj$/time/chrono/ThaiBuddhistDate;-><init>(Lj$/time/LocalDate;)V
 
-    return-object v0
+    return-object p0
+.end method
+
+.method public bridge synthetic dateEpochDay(J)Lj$/time/chrono/ChronoLocalDate;
+    .locals 0
+
+    .line 109
+    invoke-virtual {p0, p1, p2}, Lj$/time/chrono/ThaiBuddhistChronology;->dateEpochDay(J)Lj$/time/chrono/ThaiBuddhistDate;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public dateEpochDay(J)Lj$/time/chrono/ThaiBuddhistDate;
+    .locals 0
+
+    .line 270
+    new-instance p0, Lj$/time/chrono/ThaiBuddhistDate;
+
+    invoke-static {p1, p2}, Lj$/time/LocalDate;->ofEpochDay(J)Lj$/time/LocalDate;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Lj$/time/chrono/ThaiBuddhistDate;-><init>(Lj$/time/LocalDate;)V
+
+    return-object p0
+.end method
+
+.method public bridge synthetic dateNow()Lj$/time/chrono/ChronoLocalDate;
+    .locals 0
+
+    .line 109
+    invoke-virtual {p0}, Lj$/time/chrono/ThaiBuddhistChronology;->dateNow()Lj$/time/chrono/ThaiBuddhistDate;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public dateNow()Lj$/time/chrono/ThaiBuddhistDate;
+    .locals 1
+
+    .line 275
+    invoke-static {}, Lj$/time/Clock;->systemDefaultZone()Lj$/time/Clock;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lj$/time/chrono/ThaiBuddhistChronology;->dateNow(Lj$/time/Clock;)Lj$/time/chrono/ThaiBuddhistDate;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public dateNow(Lj$/time/Clock;)Lj$/time/chrono/ThaiBuddhistDate;
+    .locals 0
+
+    .line 285
+    invoke-static {p1}, Lj$/time/LocalDate;->now(Lj$/time/Clock;)Lj$/time/LocalDate;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lj$/time/chrono/ThaiBuddhistChronology;->date(Lj$/time/temporal/TemporalAccessor;)Lj$/time/chrono/ThaiBuddhistDate;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public bridge synthetic dateYearDay(II)Lj$/time/chrono/ChronoLocalDate;
+    .locals 0
+
+    .line 109
+    invoke-virtual {p0, p1, p2}, Lj$/time/chrono/ThaiBuddhistChronology;->dateYearDay(II)Lj$/time/chrono/ThaiBuddhistDate;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public dateYearDay(II)Lj$/time/chrono/ThaiBuddhistDate;
+    .locals 0
+
+    .line 258
+    new-instance p0, Lj$/time/chrono/ThaiBuddhistDate;
+
+    add-int/lit16 p1, p1, -0x21f
+
+    invoke-static {p1, p2}, Lj$/time/LocalDate;->ofYearDay(II)Lj$/time/LocalDate;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Lj$/time/chrono/ThaiBuddhistDate;-><init>(Lj$/time/LocalDate;)V
+
+    return-object p0
 .end method
 
 .method public bridge synthetic eraOf(I)Lj$/time/chrono/Era;
@@ -201,9 +307,9 @@
     .line 109
     invoke-virtual {p0, p1}, Lj$/time/chrono/ThaiBuddhistChronology;->eraOf(I)Lj$/time/chrono/ThaiBuddhistEra;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public eraOf(I)Lj$/time/chrono/ThaiBuddhistEra;
@@ -212,27 +318,59 @@
     .line 340
     invoke-static {p1}, Lj$/time/chrono/ThaiBuddhistEra;->of(I)Lj$/time/chrono/ThaiBuddhistEra;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
+.end method
+
+.method public eras()Ljava/util/List;
+    .locals 0
+
+    .line 345
+    invoke-static {}, Lj$/time/chrono/ThaiBuddhistEra;->values()[Lj$/time/chrono/ThaiBuddhistEra;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lj$/time/Duration$DurationUnits$0;->m([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method public getCalendarType()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 195
-    const-string v0, "buddhist"
+    const-string p0, "buddhist"
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getId()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 178
-    const-string v0, "ThaiBuddhist"
+    const-string p0, "ThaiBuddhist"
 
-    return-object v0
+    return-object p0
+.end method
+
+.method public isLeapYear(J)Z
+    .locals 2
+
+    .line 327
+    sget-object p0, Lj$/time/chrono/IsoChronology;->INSTANCE:Lj$/time/chrono/IsoChronology;
+
+    const-wide/16 v0, 0x21f
+
+    sub-long/2addr p1, v0
+
+    invoke-virtual {p0, p1, p2}, Lj$/time/chrono/IsoChronology;->isLeapYear(J)Z
+
+    move-result p0
+
+    return p0
 .end method
 
 .method public localDateTime(Lj$/time/temporal/TemporalAccessor;)Lj$/time/chrono/ChronoLocalDateTime;
@@ -241,116 +379,147 @@
     .line 299
     invoke-super {p0, p1}, Lj$/time/chrono/Chronology;->localDateTime(Lj$/time/temporal/TemporalAccessor;)Lj$/time/chrono/ChronoLocalDateTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
+.end method
+
+.method public prolepticYear(Lj$/time/chrono/Era;I)I
+    .locals 0
+
+    .line 332
+    instance-of p0, p1, Lj$/time/chrono/ThaiBuddhistEra;
+
+    if-eqz p0, :cond_1
+
+    .line 335
+    sget-object p0, Lj$/time/chrono/ThaiBuddhistEra;->BE:Lj$/time/chrono/ThaiBuddhistEra;
+
+    if-ne p1, p0, :cond_0
+
+    return p2
+
+    :cond_0
+    rsub-int/lit8 p0, p2, 0x1
+
+    return p0
+
+    .line 333
+    :cond_1
+    new-instance p0, Ljava/lang/ClassCastException;
+
+    const-string p1, "Era must be BuddhistEra"
+
+    invoke-direct {p0, p1}, Ljava/lang/ClassCastException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method
 
 .method public range(Lj$/time/temporal/ChronoField;)Lj$/time/temporal/ValueRange;
-    .locals 12
+    .locals 13
 
     .line 351
-    sget-object v0, Lj$/time/chrono/ThaiBuddhistChronology$1;->$SwitchMap$java$time$temporal$ChronoField:[I
+    sget-object p0, Lj$/time/chrono/ThaiBuddhistChronology$1;->$SwitchMap$java$time$temporal$ChronoField:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
-    move-result v1
+    move-result v0
 
-    aget v0, v0, v1
+    aget p0, p0, v0
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    if-eq v0, v1, :cond_2
+    if-eq p0, v0, :cond_2
 
-    const/4 v1, 0x2
+    const/4 v0, 0x2
 
-    const-wide/16 v2, 0x21f
+    const-wide/16 v1, 0x21f
 
-    if-eq v0, v1, :cond_1
+    if-eq p0, v0, :cond_1
 
-    const/4 v1, 0x3
+    const/4 v0, 0x3
 
-    if-eq v0, v1, :cond_0
+    if-eq p0, v0, :cond_0
 
     .line 365
     invoke-virtual {p1}, Lj$/time/temporal/ChronoField;->range()Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 361
     :cond_0
-    sget-object p1, Lj$/time/temporal/ChronoField;->YEAR:Lj$/time/temporal/ChronoField;
+    sget-object p0, Lj$/time/temporal/ChronoField;->YEAR:Lj$/time/temporal/ChronoField;
 
-    invoke-virtual {p1}, Lj$/time/temporal/ChronoField;->range()Lj$/time/temporal/ValueRange;
+    invoke-virtual {p0}, Lj$/time/temporal/ChronoField;->range()Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
     .line 362
-    invoke-virtual {p1}, Lj$/time/temporal/ValueRange;->getMinimum()J
+    invoke-virtual {p0}, Lj$/time/temporal/ValueRange;->getMinimum()J
 
-    move-result-wide v0
+    move-result-wide v3
 
-    add-long/2addr v0, v2
+    add-long/2addr v3, v1
 
-    invoke-virtual {p1}, Lj$/time/temporal/ValueRange;->getMaximum()J
+    invoke-virtual {p0}, Lj$/time/temporal/ValueRange;->getMaximum()J
 
-    move-result-wide v4
+    move-result-wide p0
 
-    add-long/2addr v4, v2
+    add-long/2addr p0, v1
 
-    invoke-static {v0, v1, v4, v5}, Lj$/time/temporal/ValueRange;->of(JJ)Lj$/time/temporal/ValueRange;
+    invoke-static {v3, v4, p0, p1}, Lj$/time/temporal/ValueRange;->of(JJ)Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 357
     :cond_1
-    sget-object p1, Lj$/time/temporal/ChronoField;->YEAR:Lj$/time/temporal/ChronoField;
+    sget-object p0, Lj$/time/temporal/ChronoField;->YEAR:Lj$/time/temporal/ChronoField;
 
-    invoke-virtual {p1}, Lj$/time/temporal/ChronoField;->range()Lj$/time/temporal/ValueRange;
+    invoke-virtual {p0}, Lj$/time/temporal/ChronoField;->range()Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
     .line 358
-    invoke-virtual {p1}, Lj$/time/temporal/ValueRange;->getMinimum()J
+    invoke-virtual {p0}, Lj$/time/temporal/ValueRange;->getMinimum()J
 
-    move-result-wide v0
+    move-result-wide v3
 
-    add-long/2addr v0, v2
+    add-long/2addr v3, v1
 
-    neg-long v0, v0
+    neg-long v3, v3
 
-    const-wide/16 v4, 0x1
+    const-wide/16 v5, 0x1
 
-    add-long v8, v0, v4
+    add-long v9, v3, v5
 
-    invoke-virtual {p1}, Lj$/time/temporal/ValueRange;->getMaximum()J
+    invoke-virtual {p0}, Lj$/time/temporal/ValueRange;->getMaximum()J
 
-    move-result-wide v0
+    move-result-wide p0
 
-    add-long v10, v0, v2
+    add-long v11, p0, v1
 
-    const-wide/16 v6, 0x1
+    const-wide/16 v7, 0x1
 
-    invoke-static/range {v6 .. v11}, Lj$/time/temporal/ValueRange;->of(JJJ)Lj$/time/temporal/ValueRange;
+    invoke-static/range {v7 .. v12}, Lj$/time/temporal/ValueRange;->of(JJJ)Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 353
     :cond_2
-    sget-object p1, Lj$/time/temporal/ChronoField;->PROLEPTIC_MONTH:Lj$/time/temporal/ChronoField;
+    sget-object p0, Lj$/time/temporal/ChronoField;->PROLEPTIC_MONTH:Lj$/time/temporal/ChronoField;
 
-    invoke-virtual {p1}, Lj$/time/temporal/ChronoField;->range()Lj$/time/temporal/ValueRange;
+    invoke-virtual {p0}, Lj$/time/temporal/ChronoField;->range()Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
     .line 354
-    invoke-virtual {p1}, Lj$/time/temporal/ValueRange;->getMinimum()J
+    invoke-virtual {p0}, Lj$/time/temporal/ValueRange;->getMinimum()J
 
     move-result-wide v0
 
@@ -358,28 +527,52 @@
 
     add-long/2addr v0, v2
 
-    invoke-virtual {p1}, Lj$/time/temporal/ValueRange;->getMaximum()J
+    invoke-virtual {p0}, Lj$/time/temporal/ValueRange;->getMaximum()J
 
-    move-result-wide v4
+    move-result-wide p0
 
-    add-long/2addr v4, v2
+    add-long/2addr p0, v2
 
-    invoke-static {v0, v1, v4, v5}, Lj$/time/temporal/ValueRange;->of(JJ)Lj$/time/temporal/ValueRange;
+    invoke-static {v0, v1, p0, p1}, Lj$/time/temporal/ValueRange;->of(JJ)Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
+.end method
+
+.method public bridge synthetic resolveDate(Ljava/util/Map;Lj$/time/format/ResolverStyle;)Lj$/time/chrono/ChronoLocalDate;
+    .locals 0
+
+    .line 109
+    invoke-virtual {p0, p1, p2}, Lj$/time/chrono/ThaiBuddhistChronology;->resolveDate(Ljava/util/Map;Lj$/time/format/ResolverStyle;)Lj$/time/chrono/ThaiBuddhistDate;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public resolveDate(Ljava/util/Map;Lj$/time/format/ResolverStyle;)Lj$/time/chrono/ThaiBuddhistDate;
+    .locals 0
+
+    .line 371
+    invoke-super {p0, p1, p2}, Lj$/time/chrono/AbstractChronology;->resolveDate(Ljava/util/Map;Lj$/time/format/ResolverStyle;)Lj$/time/chrono/ChronoLocalDate;
+
+    move-result-object p0
+
+    check-cast p0, Lj$/time/chrono/ThaiBuddhistDate;
+
+    return-object p0
 .end method
 
 .method writeReplace()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
     .line 388
     invoke-super {p0}, Lj$/time/chrono/AbstractChronology;->writeReplace()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public zonedDateTime(Lj$/time/Instant;Lj$/time/ZoneId;)Lj$/time/chrono/ChronoZonedDateTime;
@@ -388,7 +581,7 @@
     .line 311
     invoke-super {p0, p1, p2}, Lj$/time/chrono/Chronology;->zonedDateTime(Lj$/time/Instant;Lj$/time/ZoneId;)Lj$/time/chrono/ChronoZonedDateTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

@@ -25,12 +25,12 @@
 
 # virtual methods
 .method public final run()V
-    .locals 1
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Landroidx/activity/FullyDrawnReporter$$ExternalSyntheticLambda0;->f$0:Landroidx/activity/FullyDrawnReporter;
+    iget-object p0, p0, Landroidx/activity/FullyDrawnReporter$$ExternalSyntheticLambda0;->f$0:Landroidx/activity/FullyDrawnReporter;
 
-    invoke-static {v0}, Landroidx/activity/FullyDrawnReporter;->$r8$lambda$TKFtFHklx2CcDV3Ota5gM1TFI_Y(Landroidx/activity/FullyDrawnReporter;)V
+    invoke-static {p0}, Landroidx/activity/FullyDrawnReporter;->reportRunnable$lambda$0(Landroidx/activity/FullyDrawnReporter;)V
 
     return-void
 .end method

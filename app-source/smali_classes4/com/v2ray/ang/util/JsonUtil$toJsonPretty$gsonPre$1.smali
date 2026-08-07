@@ -29,12 +29,12 @@
         "com/v2ray/ang/util/JsonUtil$toJsonPretty$gsonPre$1",
         "Lcom/google/gson/reflect/TypeToken;",
         "",
-        "app_playstoreRelease"
+        "v2rayNG:app_playstoreRelease"
     }
     k = 0x1
     mv = {
         0x2,
-        0x3,
+        0x4,
         0x0
     }
     xi = 0x30
@@ -45,7 +45,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 52
+    .line 68
     invoke-direct {p0}, Lcom/google/gson/reflect/TypeToken;-><init>()V
 
     return-void

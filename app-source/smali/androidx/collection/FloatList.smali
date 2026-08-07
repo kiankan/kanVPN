@@ -5,12 +5,12 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nFloatList.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FloatList.kt\nandroidx/collection/FloatList\n*L\n1#1,969:1\n253#1,6:970\n279#1,6:976\n253#1,6:982\n75#1:988\n253#1,6:989\n253#1,6:995\n253#1,6:1001\n266#1,6:1007\n279#1,6:1013\n293#1,6:1019\n70#1:1025\n70#1:1026\n266#1,6:1027\n266#1,6:1033\n293#1,6:1039\n70#1:1045\n279#1,6:1046\n293#1,6:1052\n266#1,6:1058\n266#1,6:1064\n253#1,6:1070\n75#1:1076\n467#1,10:1077\n266#1,4:1087\n477#1,9:1091\n271#1:1100\n486#1,2:1101\n467#1,10:1103\n266#1,4:1113\n477#1,9:1117\n271#1:1126\n486#1,2:1127\n467#1,10:1129\n266#1,4:1139\n477#1,9:1143\n271#1:1152\n486#1,2:1153\n467#1,10:1155\n266#1,4:1165\n477#1,9:1169\n271#1:1178\n486#1,2:1179\n467#1,10:1181\n266#1,4:1191\n477#1,9:1195\n271#1:1204\n486#1,2:1205\n*S KotlinDebug\n*F\n+ 1 FloatList.kt\nandroidx/collection/FloatList\n*L\n96#1:970,6\n110#1:976,6\n122#1:982,6\n135#1:988\n153#1:989,6\n175#1:995,6\n192#1:1001,6\n208#1:1007,6\n225#1:1013,6\n241#1:1019,6\n306#1:1025\n317#1:1026\n343#1:1027,6\n357#1:1033,6\n371#1:1039,6\n397#1:1045\n407#1:1046,6\n420#1:1052,6\n445#1:1058,6\n476#1:1064,6\n494#1:1070,6\n510#1:1076\n-1#1:1077,10\n-1#1:1087,4\n-1#1:1091,9\n-1#1:1100\n-1#1:1101,2\n-1#1:1103,10\n-1#1:1113,4\n-1#1:1117,9\n-1#1:1126\n-1#1:1127,2\n-1#1:1129,10\n-1#1:1139,4\n-1#1:1143,9\n-1#1:1152\n-1#1:1153,2\n-1#1:1155,10\n-1#1:1165,4\n-1#1:1169,9\n-1#1:1178\n-1#1:1179,2\n-1#1:1181,10\n-1#1:1191,4\n-1#1:1195,9\n-1#1:1204\n-1#1:1205,2\n*E\n"
+    value = "SMAP\nFloatList.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FloatList.kt\nandroidx/collection/FloatList\n*L\n1#1,976:1\n365#1:977\n368#1:978\n237#1,6:979\n265#1,6:985\n237#1,6:991\n74#1:997\n237#1,6:998\n365#1:1004\n237#1,6:1005\n237#1,6:1011\n251#1,6:1017\n265#1,6:1023\n279#1,6:1029\n251#1,6:1035\n251#1,6:1041\n279#1,6:1047\n365#1:1053\n70#1:1054\n265#1,6:1055\n279#1,6:1061\n65#1:1067\n251#1,6:1068\n251#1,6:1074\n237#1,6:1080\n74#1:1086\n486#1,10:1087\n251#1,4:1097\n496#1,9:1101\n256#1:1110\n505#1,2:1111\n486#1,10:1113\n251#1,4:1123\n496#1,9:1127\n256#1:1136\n505#1,2:1137\n486#1,10:1139\n251#1,4:1149\n496#1,9:1153\n256#1:1162\n505#1,2:1163\n486#1,10:1165\n251#1,4:1175\n496#1,9:1179\n256#1:1188\n505#1,2:1189\n486#1,10:1191\n251#1,4:1201\n496#1,9:1205\n256#1:1214\n505#1,2:1215\n*S KotlinDebug\n*F\n+ 1 FloatList.kt\nandroidx/collection/FloatList\n*L\n78#1:977\n83#1:978\n89#1:979,6\n103#1:985,6\n113#1:991,6\n126#1:997\n143#1:998,6\n152#1:1004\n166#1:1005,6\n182#1:1011,6\n196#1:1017,6\n212#1:1023,6\n226#1:1029,6\n328#1:1035,6\n342#1:1041,6\n356#1:1047,6\n375#1:1053\n378#1:1054\n389#1:1055,6\n402#1:1061,6\n424#1:1067\n464#1:1068,6\n495#1:1074,6\n511#1:1080,6\n524#1:1086\n-1#1:1087,10\n-1#1:1097,4\n-1#1:1101,9\n-1#1:1110\n-1#1:1111,2\n-1#1:1113,10\n-1#1:1123,4\n-1#1:1127,9\n-1#1:1136\n-1#1:1137,2\n-1#1:1139,10\n-1#1:1149,4\n-1#1:1153,9\n-1#1:1162\n-1#1:1163,2\n-1#1:1165,10\n-1#1:1175,4\n-1#1:1179,9\n-1#1:1188\n-1#1:1189,2\n-1#1:1191,10\n-1#1:1201,4\n-1#1:1205,9\n-1#1:1214\n-1#1:1215,2\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000d\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0005\n\u0002\u0010\u0014\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0007\n\u0002\u0018\u0002\n\u0002\u0008\u0011\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u0002\n\u0002\u0008\u000c\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\r\n\u0002\u0008\n\n\u0002\u0018\u0002\n\u0000\u00086\u0018\u00002\u00020\u0001B\u000f\u0008\u0004\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004J\u0006\u0010\u0014\u001a\u00020\u0015J:\u0010\u0014\u001a\u00020\u00152!\u0010\u0016\u001a\u001d\u0012\u0013\u0012\u00110\u0018\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0004\u0012\u00020\u00150\u0017H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001J\u0011\u0010\u001c\u001a\u00020\u00152\u0006\u0010\u001b\u001a\u00020\u0018H\u0086\u0002J\u000e\u0010\u001d\u001a\u00020\u00152\u0006\u0010\u001e\u001a\u00020\u0000J\u0006\u0010\u001f\u001a\u00020\u0003J:\u0010\u001f\u001a\u00020\u00032!\u0010\u0016\u001a\u001d\u0012\u0013\u0012\u00110\u0018\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0004\u0012\u00020\u00150\u0017H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001J\u0010\u0010 \u001a\u00020\u00182\u0008\u0008\u0001\u0010!\u001a\u00020\u0003J9\u0010\"\u001a\u00020\u00182\u0008\u0008\u0001\u0010!\u001a\u00020\u00032!\u0010#\u001a\u001d\u0012\u0013\u0012\u00110\u0003\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(!\u0012\u0004\u0012\u00020\u00180\u0017H\u0086\u0008\u00f8\u0001\u0000J\u0013\u0010$\u001a\u00020\u00152\u0008\u0010%\u001a\u0004\u0018\u00010\u0001H\u0096\u0002J\u0006\u0010&\u001a\u00020\u0018J:\u0010&\u001a\u00020\u00182!\u0010\u0016\u001a\u001d\u0012\u0013\u0012\u00110\u0018\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0004\u0012\u00020\u00150\u0017H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001Jb\u0010\'\u001a\u0002H(\"\u0004\u0008\u0000\u0010(2\u0006\u0010)\u001a\u0002H(26\u0010*\u001a2\u0012\u0013\u0012\u0011H(\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(,\u0012\u0013\u0012\u00110\u0018\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0004\u0012\u0002H(0+H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0002\u00a2\u0006\u0002\u0010-Jw\u0010.\u001a\u0002H(\"\u0004\u0008\u0000\u0010(2\u0006\u0010)\u001a\u0002H(2K\u0010*\u001aG\u0012\u0013\u0012\u00110\u0003\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(!\u0012\u0013\u0012\u0011H(\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(,\u0012\u0013\u0012\u00110\u0018\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0004\u0012\u0002H(0/H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0002\u00a2\u0006\u0002\u00100Jb\u00101\u001a\u0002H(\"\u0004\u0008\u0000\u0010(2\u0006\u0010)\u001a\u0002H(26\u0010*\u001a2\u0012\u0013\u0012\u00110\u0018\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0013\u0012\u0011H(\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(,\u0012\u0004\u0012\u0002H(0+H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0002\u00a2\u0006\u0002\u0010-Jw\u00102\u001a\u0002H(\"\u0004\u0008\u0000\u0010(2\u0006\u0010)\u001a\u0002H(2K\u0010*\u001aG\u0012\u0013\u0012\u00110\u0003\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(!\u0012\u0013\u0012\u00110\u0018\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0013\u0012\u0011H(\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(,\u0012\u0004\u0012\u0002H(0/H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0002\u00a2\u0006\u0002\u00100J:\u00103\u001a\u0002042!\u00105\u001a\u001d\u0012\u0013\u0012\u00110\u0018\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0004\u0012\u0002040\u0017H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001JO\u00106\u001a\u00020426\u00105\u001a2\u0012\u0013\u0012\u00110\u0003\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(!\u0012\u0013\u0012\u00110\u0018\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0004\u0012\u0002040+H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001J:\u00107\u001a\u0002042!\u00105\u001a\u001d\u0012\u0013\u0012\u00110\u0018\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0004\u0012\u0002040\u0017H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001JO\u00108\u001a\u00020426\u00105\u001a2\u0012\u0013\u0012\u00110\u0003\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(!\u0012\u0013\u0012\u00110\u0018\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0004\u0012\u0002040+H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001J\u0013\u00109\u001a\u00020\u00182\u0008\u0008\u0001\u0010!\u001a\u00020\u0003H\u0086\u0002J\u0008\u0010:\u001a\u00020\u0003H\u0016J\u000e\u0010;\u001a\u00020\u00032\u0006\u0010\u001b\u001a\u00020\u0018J:\u0010<\u001a\u00020\u00032!\u0010\u0016\u001a\u001d\u0012\u0013\u0012\u00110\u0018\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0004\u0012\u00020\u00150\u0017H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001J:\u0010=\u001a\u00020\u00032!\u0010\u0016\u001a\u001d\u0012\u0013\u0012\u00110\u0018\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0004\u0012\u00020\u00150\u0017H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001J\u0006\u0010>\u001a\u00020\u0015J\u0006\u0010?\u001a\u00020\u0015J:\u0010@\u001a\u00020A2\u0008\u0008\u0002\u0010B\u001a\u00020C2\u0008\u0008\u0002\u0010D\u001a\u00020C2\u0008\u0008\u0002\u0010E\u001a\u00020C2\u0008\u0008\u0002\u0010F\u001a\u00020\u00032\u0008\u0008\u0002\u0010G\u001a\u00020CH\u0007JT\u0010@\u001a\u00020A2\u0008\u0008\u0002\u0010B\u001a\u00020C2\u0008\u0008\u0002\u0010D\u001a\u00020C2\u0008\u0008\u0002\u0010E\u001a\u00020C2\u0008\u0008\u0002\u0010F\u001a\u00020\u00032\u0008\u0008\u0002\u0010G\u001a\u00020C2\u0014\u0008\u0004\u0010H\u001a\u000e\u0012\u0004\u0012\u00020\u0018\u0012\u0004\u0012\u00020C0\u0017H\u0087\u0008\u00f8\u0001\u0000J\u0006\u0010I\u001a\u00020\u0018J:\u0010I\u001a\u00020\u00182!\u0010\u0016\u001a\u001d\u0012\u0013\u0012\u00110\u0018\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0004\u0012\u00020\u00150\u0017H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001J\u000e\u0010J\u001a\u00020\u00032\u0006\u0010\u001b\u001a\u00020\u0018J\u0006\u0010K\u001a\u00020\u0015J:\u0010L\u001a\u00020\u00152!\u0010\u0016\u001a\u001d\u0012\u0013\u0012\u00110\u0018\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0004\u0012\u00020\u00150\u0017H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001J\u0008\u0010M\u001a\u00020AH\u0016R\u0018\u0010\u0005\u001a\u00020\u00038\u0000@\u0000X\u0081\u000e\u00a2\u0006\u0008\n\u0000\u0012\u0004\u0008\u0006\u0010\u0007R\u0018\u0010\u0008\u001a\u00020\t8\u0000@\u0000X\u0081\u000e\u00a2\u0006\u0008\n\u0000\u0012\u0004\u0008\n\u0010\u0007R\u0012\u0010\u000b\u001a\u00020\u000c8\u00c6\u0002\u00a2\u0006\u0006\u001a\u0004\u0008\r\u0010\u000eR\u0012\u0010\u000f\u001a\u00020\u00038\u00c7\u0002\u00a2\u0006\u0006\u001a\u0004\u0008\u0010\u0010\u0011R\u0011\u0010\u0012\u001a\u00020\u00038G\u00a2\u0006\u0006\u001a\u0004\u0008\u0013\u0010\u0011\u0082\u0001\u0001N\u0082\u0002\u0007\n\u0005\u0008\u009920\u0001\u00a8\u0006O"
+        "\u0000d\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0005\n\u0002\u0010\u0014\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0007\n\u0002\u0018\u0002\n\u0002\u0008\u0014\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u0002\n\u0002\u0008\u000c\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\r\n\u0002\u0008\n\n\u0002\u0018\u0002\n\u0000\u00086\u0018\u00002\u00020\u0001B\u000f\u0008\u0004\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004J\t\u0010\u0014\u001a\u00020\u0015H\u0086\u0008J:\u0010\u0014\u001a\u00020\u00152!\u0010\u0016\u001a\u001d\u0012\u0013\u0012\u00110\u0018\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0004\u0012\u00020\u00150\u0017H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001J$\u0010\u001c\u001a\u00020\u00032\u0006\u0010\u001b\u001a\u00020\u00032\u0008\u0008\u0002\u0010\u001d\u001a\u00020\u00032\u0008\u0008\u0002\u0010\u001e\u001a\u00020\u0003H\u0007J\u0011\u0010\u001f\u001a\u00020\u00152\u0006\u0010\u001b\u001a\u00020\u0018H\u0086\u0002J\u000e\u0010 \u001a\u00020\u00152\u0006\u0010!\u001a\u00020\u0000J\t\u0010\"\u001a\u00020\u0003H\u0086\u0008J:\u0010\"\u001a\u00020\u00032!\u0010\u0016\u001a\u001d\u0012\u0013\u0012\u00110\u0018\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0004\u0012\u00020\u00150\u0017H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001J\u0010\u0010#\u001a\u00020\u00182\u0008\u0008\u0001\u0010$\u001a\u00020\u0003J9\u0010%\u001a\u00020\u00182\u0008\u0008\u0001\u0010$\u001a\u00020\u00032!\u0010&\u001a\u001d\u0012\u0013\u0012\u00110\u0003\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008($\u0012\u0004\u0012\u00020\u00180\u0017H\u0086\u0008\u00f8\u0001\u0000J\u0013\u0010\'\u001a\u00020\u00152\u0008\u0010(\u001a\u0004\u0018\u00010\u0001H\u0096\u0002J\u0006\u0010)\u001a\u00020\u0018J:\u0010)\u001a\u00020\u00182!\u0010\u0016\u001a\u001d\u0012\u0013\u0012\u00110\u0018\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0004\u0012\u00020\u00150\u0017H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001Jb\u0010*\u001a\u0002H+\"\u0004\u0008\u0000\u0010+2\u0006\u0010,\u001a\u0002H+26\u0010-\u001a2\u0012\u0013\u0012\u0011H+\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(/\u0012\u0013\u0012\u00110\u0018\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0004\u0012\u0002H+0.H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0002\u00a2\u0006\u0002\u00100Jw\u00101\u001a\u0002H+\"\u0004\u0008\u0000\u0010+2\u0006\u0010,\u001a\u0002H+2K\u0010-\u001aG\u0012\u0013\u0012\u00110\u0003\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008($\u0012\u0013\u0012\u0011H+\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(/\u0012\u0013\u0012\u00110\u0018\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0004\u0012\u0002H+02H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0002\u00a2\u0006\u0002\u00103Jb\u00104\u001a\u0002H+\"\u0004\u0008\u0000\u0010+2\u0006\u0010,\u001a\u0002H+26\u0010-\u001a2\u0012\u0013\u0012\u00110\u0018\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0013\u0012\u0011H+\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(/\u0012\u0004\u0012\u0002H+0.H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0002\u00a2\u0006\u0002\u00100Jw\u00105\u001a\u0002H+\"\u0004\u0008\u0000\u0010+2\u0006\u0010,\u001a\u0002H+2K\u0010-\u001aG\u0012\u0013\u0012\u00110\u0003\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008($\u0012\u0013\u0012\u00110\u0018\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0013\u0012\u0011H+\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(/\u0012\u0004\u0012\u0002H+02H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0002\u00a2\u0006\u0002\u00103J:\u00106\u001a\u0002072!\u00108\u001a\u001d\u0012\u0013\u0012\u00110\u0018\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0004\u0012\u0002070\u0017H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001JO\u00109\u001a\u00020726\u00108\u001a2\u0012\u0013\u0012\u00110\u0003\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008($\u0012\u0013\u0012\u00110\u0018\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0004\u0012\u0002070.H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001J:\u0010:\u001a\u0002072!\u00108\u001a\u001d\u0012\u0013\u0012\u00110\u0018\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0004\u0012\u0002070\u0017H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001JO\u0010;\u001a\u00020726\u00108\u001a2\u0012\u0013\u0012\u00110\u0003\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008($\u0012\u0013\u0012\u00110\u0018\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0004\u0012\u0002070.H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001J\u0013\u0010<\u001a\u00020\u00182\u0008\u0008\u0001\u0010$\u001a\u00020\u0003H\u0086\u0002J\u0008\u0010=\u001a\u00020\u0003H\u0016J\u000e\u0010>\u001a\u00020\u00032\u0006\u0010\u001b\u001a\u00020\u0018J:\u0010?\u001a\u00020\u00032!\u0010\u0016\u001a\u001d\u0012\u0013\u0012\u00110\u0018\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0004\u0012\u00020\u00150\u0017H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001J:\u0010@\u001a\u00020\u00032!\u0010\u0016\u001a\u001d\u0012\u0013\u0012\u00110\u0018\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0004\u0012\u00020\u00150\u0017H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001J\t\u0010A\u001a\u00020\u0015H\u0086\u0008J\t\u0010B\u001a\u00020\u0015H\u0086\u0008J:\u0010C\u001a\u00020D2\u0008\u0008\u0002\u0010E\u001a\u00020F2\u0008\u0008\u0002\u0010G\u001a\u00020F2\u0008\u0008\u0002\u0010H\u001a\u00020F2\u0008\u0008\u0002\u0010I\u001a\u00020\u00032\u0008\u0008\u0002\u0010J\u001a\u00020FH\u0007JT\u0010C\u001a\u00020D2\u0008\u0008\u0002\u0010E\u001a\u00020F2\u0008\u0008\u0002\u0010G\u001a\u00020F2\u0008\u0008\u0002\u0010H\u001a\u00020F2\u0008\u0008\u0002\u0010I\u001a\u00020\u00032\u0008\u0008\u0002\u0010J\u001a\u00020F2\u0014\u0008\u0004\u0010K\u001a\u000e\u0012\u0004\u0012\u00020\u0018\u0012\u0004\u0012\u00020F0\u0017H\u0087\u0008\u00f8\u0001\u0000J\u0006\u0010L\u001a\u00020\u0018J:\u0010L\u001a\u00020\u00182!\u0010\u0016\u001a\u001d\u0012\u0013\u0012\u00110\u0018\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0004\u0012\u00020\u00150\u0017H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001J\u000e\u0010M\u001a\u00020\u00032\u0006\u0010\u001b\u001a\u00020\u0018J\t\u0010N\u001a\u00020\u0015H\u0086\u0008J:\u0010O\u001a\u00020\u00152!\u0010\u0016\u001a\u001d\u0012\u0013\u0012\u00110\u0018\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0004\u0012\u00020\u00150\u0017H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001J\u0008\u0010P\u001a\u00020DH\u0016R\u0018\u0010\u0005\u001a\u00020\u00038\u0000@\u0000X\u0081\u000e\u00a2\u0006\u0008\n\u0000\u0012\u0004\u0008\u0006\u0010\u0007R\u0018\u0010\u0008\u001a\u00020\t8\u0000@\u0000X\u0081\u000e\u00a2\u0006\u0008\n\u0000\u0012\u0004\u0008\n\u0010\u0007R\u0012\u0010\u000b\u001a\u00020\u000c8\u00c6\u0002\u00a2\u0006\u0006\u001a\u0004\u0008\r\u0010\u000eR\u0012\u0010\u000f\u001a\u00020\u00038\u00c7\u0002\u00a2\u0006\u0006\u001a\u0004\u0008\u0010\u0010\u0011R\u0012\u0010\u0012\u001a\u00020\u00038\u00c7\u0002\u00a2\u0006\u0006\u001a\u0004\u0008\u0013\u0010\u0011\u0082\u0001\u0001Q\u0082\u0002\u0007\n\u0005\u0008\u009920\u0001\u00a8\u0006R"
     }
     d2 = {
         "Landroidx/collection/FloatList;",
@@ -41,6 +41,9 @@
         "Lkotlin/ParameterName;",
         "name",
         "element",
+        "binarySearch",
+        "fromIndex",
+        "toIndex",
         "contains",
         "containsAll",
         "elements",
@@ -97,7 +100,7 @@
     k = 0x1
     mv = {
         0x1,
-        0x8,
+        0x9,
         0x0
     }
     xi = 0x30
@@ -114,23 +117,23 @@
 .method private constructor <init>(I)V
     .locals 0
 
-    .line 45
+    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-nez p1, :cond_0
 
-    .line 49
+    .line 55
     invoke-static {}, Landroidx/collection/FloatSetKt;->getEmptyFloatArray()[F
 
     move-result-object p1
 
     goto :goto_0
 
-    .line 51
+    .line 57
     :cond_0
     new-array p1, p1, [F
 
-    .line 48
+    .line 54
     :goto_0
     iput-object p1, p0, Landroidx/collection/FloatList;->content:[F
 
@@ -143,6 +146,43 @@
     invoke-direct {p0, p1}, Landroidx/collection/FloatList;-><init>(I)V
 
     return-void
+.end method
+
+.method public static synthetic binarySearch$default(Landroidx/collection/FloatList;IIIILjava/lang/Object;)I
+    .locals 0
+
+    if-nez p5, :cond_2
+
+    and-int/lit8 p5, p4, 0x2
+
+    if-eqz p5, :cond_0
+
+    const/4 p2, 0x0
+
+    :cond_0
+    and-int/lit8 p4, p4, 0x4
+
+    if-eqz p4, :cond_1
+
+    .line 1067
+    iget p3, p0, Landroidx/collection/FloatList;->_size:I
+
+    .line 424
+    :cond_1
+    invoke-virtual {p0, p1, p2, p3}, Landroidx/collection/FloatList;->binarySearch(III)I
+
+    move-result p0
+
+    return p0
+
+    :cond_2
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string p1, "Super calls with default arguments not supported in this target, function: binarySearch"
+
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method
 
 .method public static synthetic getContent$annotations()V
@@ -166,7 +206,7 @@
 
     if-eqz p7, :cond_0
 
-    .line 438
+    .line 457
     const-string p1, ", "
 
     check-cast p1, Ljava/lang/CharSequence;
@@ -174,12 +214,12 @@
     :cond_0
     and-int/lit8 p7, p6, 0x2
 
-    .line 437
+    .line 456
     const-string v0, ""
 
     if-eqz p7, :cond_1
 
-    .line 439
+    .line 458
     move-object p2, v0
 
     check-cast p2, Ljava/lang/CharSequence;
@@ -189,7 +229,7 @@
 
     if-eqz p7, :cond_2
 
-    .line 440
+    .line 459
     move-object p3, v0
 
     check-cast p3, Ljava/lang/CharSequence;
@@ -206,7 +246,7 @@
 
     if-eqz p6, :cond_4
 
-    .line 442
+    .line 461
     const-string p5, "..."
 
     check-cast p5, Ljava/lang/CharSequence;
@@ -224,7 +264,7 @@
 
     move-object p3, p1
 
-    .line 437
+    .line 456
     invoke-virtual/range {p2 .. p7}, Landroidx/collection/FloatList;->joinToString(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object p0
@@ -250,7 +290,7 @@
 
     if-eqz p8, :cond_0
 
-    .line 468
+    .line 487
     const-string p1, ", "
 
     check-cast p1, Ljava/lang/CharSequence;
@@ -258,12 +298,12 @@
     :cond_0
     and-int/lit8 p8, p7, 0x2
 
-    .line 467
+    .line 486
     const-string v0, ""
 
     if-eqz p8, :cond_1
 
-    .line 469
+    .line 488
     move-object p2, v0
 
     check-cast p2, Ljava/lang/CharSequence;
@@ -273,7 +313,7 @@
 
     if-eqz p8, :cond_2
 
-    .line 470
+    .line 489
     move-object p3, v0
 
     check-cast p3, Ljava/lang/CharSequence;
@@ -290,45 +330,45 @@
 
     if-eqz p7, :cond_4
 
-    .line 472
+    .line 491
     const-string p5, "..."
 
     check-cast p5, Ljava/lang/CharSequence;
 
-    .line 467
+    .line 486
     :cond_4
-    const-string p7, "separator"
+    const-string/jumbo p7, "separator"
 
     invoke-static {p1, p7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string p7, "prefix"
+    const-string/jumbo p7, "prefix"
 
     invoke-static {p2, p7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string p7, "postfix"
+    const-string/jumbo p7, "postfix"
 
     invoke-static {p3, p7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string p7, "truncated"
+    const-string/jumbo p7, "truncated"
 
     invoke-static {p5, p7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string p7, "transform"
+    const-string/jumbo p7, "transform"
 
     invoke-static {p6, p7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 474
+    .line 493
     new-instance p7, Ljava/lang/StringBuilder;
 
     invoke-direct {p7}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 475
+    .line 494
     invoke-virtual {p7, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1065
+    .line 1075
     iget-object p2, p0, Landroidx/collection/FloatList;->content:[F
 
-    .line 1066
+    .line 1076
     iget p0, p0, Landroidx/collection/FloatList;->_size:I
 
     const/4 p8, 0x0
@@ -336,12 +376,12 @@
     :goto_0
     if-ge p8, p0, :cond_7
 
-    .line 1067
+    .line 1077
     aget v0, p2, p8
 
     if-ne p8, p4, :cond_5
 
-    .line 478
+    .line 497
     invoke-virtual {p7, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     goto :goto_1
@@ -349,10 +389,10 @@
     :cond_5
     if-eqz p8, :cond_6
 
-    .line 482
+    .line 501
     invoke-virtual {p7, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 484
+    .line 503
     :cond_6
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
@@ -370,23 +410,23 @@
 
     goto :goto_0
 
-    .line 486
+    .line 505
     :cond_7
     invoke-virtual {p7, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 474
+    .line 493
     :goto_1
     invoke-virtual {p7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    const-string p1, "StringBuilder().apply(builderAction).toString()"
+    const-string/jumbo p1, "toString(...)"
 
     invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 
-    .line 467
+    .line 486
     :cond_8
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -400,18 +440,25 @@
 
 # virtual methods
 .method public final any()Z
-    .locals 1
+    .locals 0
 
-    .line 88
-    invoke-virtual {p0}, Landroidx/collection/FloatList;->isNotEmpty()Z
+    .line 978
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
 
-    move-result v0
+    if-eqz p0, :cond_0
 
-    return v0
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
 .method public final any(Lkotlin/jvm/functions/Function1;)Z
-    .locals 5
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -423,90 +470,197 @@
         }
     .end annotation
 
-    const-string v0, "predicate"
+    const-string/jumbo v0, "predicate"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 971
+    .line 980
     iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
 
-    .line 972
-    iget v1, p0, Landroidx/collection/FloatList;->_size:I
+    .line 981
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    move v3, v2
+    move v2, v1
 
     :goto_0
-    if-ge v3, v1, :cond_1
+    if-ge v2, p0, :cond_1
 
-    .line 973
-    aget v4, v0, v3
+    .line 982
+    aget v3, v0, v2
 
-    .line 97
-    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    .line 90
+    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-interface {p1, v4}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v3}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v3
 
-    check-cast v4, Ljava/lang/Boolean;
+    check-cast v3, Ljava/lang/Boolean;
 
-    invoke-virtual {v4}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result v4
+    move-result v3
 
-    if-eqz v4, :cond_0
+    if-eqz v3, :cond_0
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_0
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     :cond_1
-    return v2
+    return v1
+.end method
+
+.method public final binarySearch(I)I
+    .locals 6
+
+    const/4 v4, 0x6
+
+    const/4 v5, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    move-object v0, p0
+
+    move v1, p1
+
+    invoke-static/range {v0 .. v5}, Landroidx/collection/FloatList;->binarySearch$default(Landroidx/collection/FloatList;IIIILjava/lang/Object;)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final binarySearch(II)I
+    .locals 6
+
+    const/4 v4, 0x4
+
+    const/4 v5, 0x0
+
+    const/4 v3, 0x0
+
+    move-object v0, p0
+
+    move v1, p1
+
+    move v2, p2
+
+    invoke-static/range {v0 .. v5}, Landroidx/collection/FloatList;->binarySearch$default(Landroidx/collection/FloatList;IIIILjava/lang/Object;)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final binarySearch(III)I
+    .locals 4
+
+    if-ltz p2, :cond_0
+
+    if-ge p2, p3, :cond_0
+
+    .line 425
+    iget v0, p0, Landroidx/collection/FloatList;->_size:I
+
+    if-le p3, v0, :cond_1
+
+    .line 426
+    :cond_0
+    const-string v0, ""
+
+    invoke-static {v0}, Landroidx/collection/internal/RuntimeHelpersKt;->throwIndexOutOfBoundsException(Ljava/lang/String;)V
+
+    :cond_1
+    add-int/lit8 p3, p3, -0x1
+
+    :goto_0
+    if-gt p2, p3, :cond_4
+
+    add-int v0, p2, p3
+
+    ushr-int/lit8 v0, v0, 0x1
+
+    .line 434
+    iget-object v1, p0, Landroidx/collection/FloatList;->content:[F
+
+    aget v1, v1, v0
+
+    int-to-float v2, p1
+
+    cmpg-float v3, v1, v2
+
+    if-gez v3, :cond_2
+
+    add-int/lit8 p2, v0, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    cmpl-float p3, v1, v2
+
+    if-lez p3, :cond_3
+
+    add-int/lit8 p3, v0, -0x1
+
+    goto :goto_0
+
+    :cond_3
+    return v0
+
+    :cond_4
+    add-int/lit8 p2, p2, 0x1
+
+    neg-int p0, p2
+
+    return p0
 .end method
 
 .method public final contains(F)Z
-    .locals 5
+    .locals 4
 
-    .line 983
+    .line 992
     iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
 
-    .line 984
-    iget v1, p0, Landroidx/collection/FloatList;->_size:I
+    .line 993
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    move v3, v2
+    move v2, v1
 
     :goto_0
-    if-ge v3, v1, :cond_1
+    if-ge v2, p0, :cond_1
 
-    .line 985
-    aget v4, v0, v3
+    .line 994
+    aget v3, v0, v2
 
-    cmpg-float v4, v4, p1
+    cmpg-float v3, v3, p1
 
-    if-nez v4, :cond_0
+    if-nez v3, :cond_0
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_0
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     :cond_1
-    return v2
+    return v1
 .end method
 
 .method public final containsAll(Landroidx/collection/FloatList;)Z
@@ -516,7 +670,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 988
+    .line 997
     iget v0, p1, Landroidx/collection/FloatList;->_size:I
 
     const/4 v1, 0x0
@@ -525,7 +679,7 @@
 
     move-result-object v0
 
-    .line 135
+    .line 126
     invoke-virtual {v0}, Lkotlin/ranges/IntRange;->getFirst()I
 
     move-result v2
@@ -536,7 +690,7 @@
 
     if-gt v2, v0, :cond_1
 
-    .line 136
+    .line 127
     :goto_0
     invoke-virtual {p1, v2}, Landroidx/collection/FloatList;->get(I)F
 
@@ -558,22 +712,22 @@
     goto :goto_0
 
     :cond_1
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 .end method
 
 .method public final count()I
-    .locals 1
+    .locals 0
 
-    .line 144
-    iget v0, p0, Landroidx/collection/FloatList;->_size:I
+    .line 133
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
 
-    return v0
+    return p0
 .end method
 
 .method public final count(Lkotlin/jvm/functions/Function1;)I
-    .locals 5
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -585,102 +739,79 @@
         }
     .end annotation
 
-    const-string v0, "predicate"
+    const-string/jumbo v0, "predicate"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 990
+    .line 999
     iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
 
-    .line 991
-    iget v1, p0, Landroidx/collection/FloatList;->_size:I
+    .line 1000
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    move v3, v2
+    move v2, v1
 
     :goto_0
-    if-ge v2, v1, :cond_1
+    if-ge v1, p0, :cond_1
 
-    .line 992
-    aget v4, v0, v2
+    .line 1001
+    aget v3, v0, v1
 
-    .line 153
-    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    .line 143
+    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-interface {p1, v4}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v3}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v3
 
-    check-cast v4, Ljava/lang/Boolean;
+    check-cast v3, Ljava/lang/Boolean;
 
-    invoke-virtual {v4}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result v4
+    move-result v3
 
-    if-eqz v4, :cond_0
+    if-eqz v3, :cond_0
 
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     :cond_0
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
     :cond_1
-    return v3
+    return v2
 .end method
 
 .method public final elementAt(I)F
-    .locals 3
+    .locals 1
 
     if-ltz p1, :cond_0
 
-    .line 316
+    .line 302
     iget v0, p0, Landroidx/collection/FloatList;->_size:I
 
     if-ge p1, v0, :cond_0
 
-    .line 319
-    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
+    goto :goto_0
 
-    aget p1, v0, p1
-
-    return p1
-
-    .line 317
+    .line 303
     :cond_0
-    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+    const-string v0, "Index must be between 0 and size"
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-static {v0}, Landroidx/collection/internal/RuntimeHelpersKt;->throwIndexOutOfBoundsException(Ljava/lang/String;)V
 
-    const-string v2, "Index "
+    .line 305
+    :goto_0
+    iget-object p0, p0, Landroidx/collection/FloatList;->content:[F
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    aget p0, p0, p1
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p1, " must be in 0.."
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 1026
-    iget p1, p0, Landroidx/collection/FloatList;->_size:I
-
-    add-int/lit8 p1, p1, -0x1
-
-    .line 317
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return p0
 .end method
 
 .method public final elementAtOrElse(ILkotlin/jvm/functions/Function1;)F
@@ -702,41 +833,41 @@
 
     if-ltz p1, :cond_0
 
-    .line 333
+    .line 320
     iget v0, p0, Landroidx/collection/FloatList;->_size:I
 
     if-ge p1, v0, :cond_0
 
-    .line 336
-    iget-object p2, p0, Landroidx/collection/FloatList;->content:[F
+    .line 323
+    iget-object p0, p0, Landroidx/collection/FloatList;->content:[F
 
-    aget p1, p2, p1
+    aget p0, p0, p1
 
-    return p1
+    return p0
 
-    .line 334
+    .line 321
     :cond_0
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-interface {p2, p1}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, p0}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Ljava/lang/Number;
+    check-cast p0, Ljava/lang/Number;
 
-    invoke-virtual {p1}, Ljava/lang/Number;->floatValue()F
+    invoke-virtual {p0}, Ljava/lang/Number;->floatValue()F
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
-    .locals 6
+    .locals 5
 
-    .line 505
+    .line 519
     instance-of v0, p1, Landroidx/collection/FloatList;
 
     const/4 v1, 0x0
@@ -753,42 +884,42 @@
 
     goto :goto_1
 
-    .line 508
+    .line 522
     :cond_0
-    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
+    iget-object p0, p0, Landroidx/collection/FloatList;->content:[F
 
-    .line 509
+    .line 523
     iget-object p1, p1, Landroidx/collection/FloatList;->content:[F
 
-    .line 1076
+    .line 1086
     invoke-static {v1, v2}, Lkotlin/ranges/RangesKt;->until(II)Lkotlin/ranges/IntRange;
 
-    move-result-object v2
+    move-result-object v0
 
-    .line 510
-    invoke-virtual {v2}, Lkotlin/ranges/IntRange;->getFirst()I
-
-    move-result v3
-
-    invoke-virtual {v2}, Lkotlin/ranges/IntRange;->getLast()I
+    .line 524
+    invoke-virtual {v0}, Lkotlin/ranges/IntRange;->getFirst()I
 
     move-result v2
 
-    if-gt v3, v2, :cond_2
+    invoke-virtual {v0}, Lkotlin/ranges/IntRange;->getLast()I
 
-    .line 511
+    move-result v0
+
+    if-gt v2, v0, :cond_2
+
+    .line 525
     :goto_0
-    aget v4, v0, v3
+    aget v3, p0, v2
 
-    aget v5, p1, v3
+    aget v4, p1, v2
 
-    cmpg-float v4, v4, v5
+    cmpg-float v3, v3, v4
 
-    if-nez v4, :cond_1
+    if-nez v3, :cond_1
 
-    if-eq v3, v2, :cond_2
+    if-eq v2, v0, :cond_2
 
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
@@ -796,9 +927,9 @@
     return v1
 
     :cond_2
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_3
     :goto_1
@@ -806,37 +937,31 @@
 .end method
 
 .method public final first()F
-    .locals 2
+    .locals 1
 
-    .line 162
-    invoke-virtual {p0}, Landroidx/collection/FloatList;->isEmpty()Z
-
-    move-result v0
+    .line 1004
+    iget v0, p0, Landroidx/collection/FloatList;->_size:I
 
     if-nez v0, :cond_0
 
-    .line 165
-    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
+    .line 153
+    const-string v0, "FloatList is empty."
 
-    const/4 v1, 0x0
+    invoke-static {v0}, Landroidx/collection/internal/RuntimeHelpersKt;->throwNoSuchElementException(Ljava/lang/String;)V
 
-    aget v0, v0, v1
-
-    return v0
-
-    .line 163
+    .line 155
     :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
+    iget-object p0, p0, Landroidx/collection/FloatList;->content:[F
 
-    const-string v1, "FloatList is empty."
+    const/4 v0, 0x0
 
-    invoke-direct {v0, v1}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
+    aget p0, p0, v0
 
-    throw v0
+    return p0
 .end method
 
 .method public final first(Lkotlin/jvm/functions/Function1;)F
-    .locals 5
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -848,655 +973,26 @@
         }
     .end annotation
 
-    const-string v0, "predicate"
+    const-string/jumbo v0, "predicate"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 996
+    .line 1006
     iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
 
-    .line 997
-    iget v1, p0, Landroidx/collection/FloatList;->_size:I
+    .line 1007
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
 
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_1
-
-    .line 998
-    aget v3, v0, v2
-
-    .line 176
-    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v4
-
-    invoke-interface {p1, v4}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/lang/Boolean;
-
-    invoke-virtual {v4}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    return v3
-
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    .line 178
-    :cond_1
-    new-instance p1, Ljava/util/NoSuchElementException;
-
-    const-string v0, "FloatList contains no element matching the predicate."
-
-    invoke-direct {p1, v0}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final fold(Ljava/lang/Object;Lkotlin/jvm/functions/Function2;)Ljava/lang/Object;
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<R:",
-            "Ljava/lang/Object;",
-            ">(TR;",
-            "Lkotlin/jvm/functions/Function2<",
-            "-TR;-",
-            "Ljava/lang/Float;",
-            "+TR;>;)TR;"
-        }
-    .end annotation
-
-    const-string v0, "operation"
-
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 1002
-    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
-
-    .line 1003
-    iget v1, p0, Landroidx/collection/FloatList;->_size:I
-
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
     :goto_0
-    if-ge v2, v1, :cond_0
-
-    .line 1004
-    aget v3, v0, v2
-
-    .line 193
-    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v3
-
-    invoke-interface {p2, p1, v3}, Lkotlin/jvm/functions/Function2;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-object p1
-.end method
-
-.method public final foldIndexed(Ljava/lang/Object;Lkotlin/jvm/functions/Function3;)Ljava/lang/Object;
-    .locals 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<R:",
-            "Ljava/lang/Object;",
-            ">(TR;",
-            "Lkotlin/jvm/functions/Function3<",
-            "-",
-            "Ljava/lang/Integer;",
-            "-TR;-",
-            "Ljava/lang/Float;",
-            "+TR;>;)TR;"
-        }
-    .end annotation
-
-    const-string v0, "operation"
-
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    if-ge v1, p0, :cond_1
 
     .line 1008
-    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
-
-    .line 1009
-    iget v1, p0, Landroidx/collection/FloatList;->_size:I
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_0
-
-    .line 1010
-    aget v3, v0, v2
-
-    .line 209
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v3
-
-    invoke-interface {p2, v4, p1, v3}, Lkotlin/jvm/functions/Function3;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-object p1
-.end method
-
-.method public final foldRight(Ljava/lang/Object;Lkotlin/jvm/functions/Function2;)Ljava/lang/Object;
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<R:",
-            "Ljava/lang/Object;",
-            ">(TR;",
-            "Lkotlin/jvm/functions/Function2<",
-            "-",
-            "Ljava/lang/Float;",
-            "-TR;+TR;>;)TR;"
-        }
-    .end annotation
-
-    const-string v0, "operation"
-
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 1014
-    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
-
-    .line 1015
-    iget v1, p0, Landroidx/collection/FloatList;->_size:I
-
-    add-int/lit8 v1, v1, -0x1
-
-    :goto_0
-    const/4 v2, -0x1
-
-    if-ge v2, v1, :cond_0
-
-    .line 1016
     aget v2, v0, v1
 
-    .line 226
+    .line 166
     invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v2
-
-    invoke-interface {p2, v2, p1}, Lkotlin/jvm/functions/Function2;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    add-int/lit8 v1, v1, -0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-object p1
-.end method
-
-.method public final foldRightIndexed(Ljava/lang/Object;Lkotlin/jvm/functions/Function3;)Ljava/lang/Object;
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<R:",
-            "Ljava/lang/Object;",
-            ">(TR;",
-            "Lkotlin/jvm/functions/Function3<",
-            "-",
-            "Ljava/lang/Integer;",
-            "-",
-            "Ljava/lang/Float;",
-            "-TR;+TR;>;)TR;"
-        }
-    .end annotation
-
-    const-string v0, "operation"
-
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 1020
-    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
-
-    .line 1021
-    iget v1, p0, Landroidx/collection/FloatList;->_size:I
-
-    add-int/lit8 v1, v1, -0x1
-
-    :goto_0
-    const/4 v2, -0x1
-
-    if-ge v2, v1, :cond_0
-
-    .line 1022
-    aget v2, v0, v1
-
-    .line 242
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v2
-
-    invoke-interface {p2, v3, v2, p1}, Lkotlin/jvm/functions/Function3;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    add-int/lit8 v1, v1, -0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-object p1
-.end method
-
-.method public final forEach(Lkotlin/jvm/functions/Function1;)V
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lkotlin/jvm/functions/Function1<",
-            "-",
-            "Ljava/lang/Float;",
-            "Lkotlin/Unit;",
-            ">;)V"
-        }
-    .end annotation
-
-    const-string v0, "block"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 254
-    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
-
-    .line 255
-    iget v1, p0, Landroidx/collection/FloatList;->_size:I
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_0
-
-    .line 256
-    aget v3, v0, v2
-
-    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v3
-
-    invoke-interface {p1, v3}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final forEachIndexed(Lkotlin/jvm/functions/Function2;)V
-    .locals 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lkotlin/jvm/functions/Function2<",
-            "-",
-            "Ljava/lang/Integer;",
-            "-",
-            "Ljava/lang/Float;",
-            "Lkotlin/Unit;",
-            ">;)V"
-        }
-    .end annotation
-
-    const-string v0, "block"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 267
-    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
-
-    .line 268
-    iget v1, p0, Landroidx/collection/FloatList;->_size:I
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_0
-
-    .line 269
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aget v4, v0, v2
-
-    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v4
-
-    invoke-interface {p1, v3, v4}, Lkotlin/jvm/functions/Function2;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final forEachReversed(Lkotlin/jvm/functions/Function1;)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lkotlin/jvm/functions/Function1<",
-            "-",
-            "Ljava/lang/Float;",
-            "Lkotlin/Unit;",
-            ">;)V"
-        }
-    .end annotation
-
-    const-string v0, "block"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 280
-    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
-
-    .line 281
-    iget v1, p0, Landroidx/collection/FloatList;->_size:I
-
-    add-int/lit8 v1, v1, -0x1
-
-    :goto_0
-    const/4 v2, -0x1
-
-    if-ge v2, v1, :cond_0
-
-    .line 282
-    aget v2, v0, v1
-
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v2
-
-    invoke-interface {p1, v2}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 v1, v1, -0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final forEachReversedIndexed(Lkotlin/jvm/functions/Function2;)V
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lkotlin/jvm/functions/Function2<",
-            "-",
-            "Ljava/lang/Integer;",
-            "-",
-            "Ljava/lang/Float;",
-            "Lkotlin/Unit;",
-            ">;)V"
-        }
-    .end annotation
-
-    const-string v0, "block"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 294
-    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
-
-    .line 295
-    iget v1, p0, Landroidx/collection/FloatList;->_size:I
-
-    add-int/lit8 v1, v1, -0x1
-
-    :goto_0
-    const/4 v2, -0x1
-
-    if-ge v2, v1, :cond_0
-
-    .line 296
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    aget v3, v0, v1
-
-    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v3
-
-    invoke-interface {p1, v2, v3}, Lkotlin/jvm/functions/Function2;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 v1, v1, -0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final get(I)F
-    .locals 3
-
-    if-ltz p1, :cond_0
-
-    .line 305
-    iget v0, p0, Landroidx/collection/FloatList;->_size:I
-
-    if-ge p1, v0, :cond_0
-
-    .line 308
-    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
-
-    aget p1, v0, p1
-
-    return p1
-
-    .line 306
-    :cond_0
-    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Index "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p1, " must be in 0.."
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 1025
-    iget p1, p0, Landroidx/collection/FloatList;->_size:I
-
-    add-int/lit8 p1, p1, -0x1
-
-    .line 306
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final getIndices()Lkotlin/ranges/IntRange;
-    .locals 2
-
-    const/4 v0, 0x0
-
-    .line 75
-    iget v1, p0, Landroidx/collection/FloatList;->_size:I
-
-    invoke-static {v0, v1}, Lkotlin/ranges/RangesKt;->until(II)Lkotlin/ranges/IntRange;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getLastIndex()I
-    .locals 1
-
-    .line 70
-    iget v0, p0, Landroidx/collection/FloatList;->_size:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    return v0
-.end method
-
-.method public final getSize()I
-    .locals 1
-
-    .line 64
-    iget v0, p0, Landroidx/collection/FloatList;->_size:I
-
-    return v0
-.end method
-
-.method public hashCode()I
-    .locals 5
-
-    .line 1071
-    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
-
-    .line 1072
-    iget v1, p0, Landroidx/collection/FloatList;->_size:I
-
-    const/4 v2, 0x0
-
-    move v3, v2
-
-    :goto_0
-    if-ge v2, v1, :cond_0
-
-    .line 1073
-    aget v4, v0, v2
-
-    .line 495
-    invoke-static {v4}, Ljava/lang/Float;->hashCode(F)I
-
-    move-result v4
-
-    mul-int/lit8 v4, v4, 0x1f
-
-    add-int/2addr v3, v4
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return v3
-.end method
-
-.method public final indexOf(F)I
-    .locals 4
-
-    .line 1028
-    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
-
-    .line 1029
-    iget v1, p0, Landroidx/collection/FloatList;->_size:I
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_1
-
-    .line 1030
-    aget v3, v0, v2
-
-    cmpg-float v3, p1, v3
-
-    if-nez v3, :cond_0
-
-    return v2
-
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p1, -0x1
-
-    return p1
-.end method
-
-.method public final indexOfFirst(Lkotlin/jvm/functions/Function1;)I
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lkotlin/jvm/functions/Function1<",
-            "-",
-            "Ljava/lang/Float;",
-            "Ljava/lang/Boolean;",
-            ">;)I"
-        }
-    .end annotation
-
-    const-string v0, "predicate"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 1034
-    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
-
-    .line 1035
-    iget v1, p0, Landroidx/collection/FloatList;->_size:I
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_1
-
-    .line 1036
-    aget v3, v0, v2
-
-    .line 358
-    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v3
 
@@ -1515,17 +1011,562 @@
     return v2
 
     :cond_0
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    .line 167
+    :cond_1
+    new-instance p0, Ljava/util/NoSuchElementException;
+
+    const-string p1, "FloatList contains no element matching the predicate."
+
+    invoke-direct {p0, p1}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public final fold(Ljava/lang/Object;Lkotlin/jvm/functions/Function2;)Ljava/lang/Object;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<R:",
+            "Ljava/lang/Object;",
+            ">(TR;",
+            "Lkotlin/jvm/functions/Function2<",
+            "-TR;-",
+            "Ljava/lang/Float;",
+            "+TR;>;)TR;"
+        }
+    .end annotation
+
+    const-string/jumbo v0, "operation"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1012
+    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
+
+    .line 1013
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, p0, :cond_0
+
+    .line 1014
+    aget v2, v0, v1
+
+    .line 182
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v2
+
+    invoke-interface {p2, p1, v2}, Lkotlin/jvm/functions/Function2;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-object p1
+.end method
+
+.method public final foldIndexed(Ljava/lang/Object;Lkotlin/jvm/functions/Function3;)Ljava/lang/Object;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<R:",
+            "Ljava/lang/Object;",
+            ">(TR;",
+            "Lkotlin/jvm/functions/Function3<",
+            "-",
+            "Ljava/lang/Integer;",
+            "-TR;-",
+            "Ljava/lang/Float;",
+            "+TR;>;)TR;"
+        }
+    .end annotation
+
+    const-string/jumbo v0, "operation"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1018
+    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
+
+    .line 1019
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, p0, :cond_0
+
+    .line 1020
+    aget v2, v0, v1
+
+    .line 196
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v2
+
+    invoke-interface {p2, v3, p1, v2}, Lkotlin/jvm/functions/Function3;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-object p1
+.end method
+
+.method public final foldRight(Ljava/lang/Object;Lkotlin/jvm/functions/Function2;)Ljava/lang/Object;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<R:",
+            "Ljava/lang/Object;",
+            ">(TR;",
+            "Lkotlin/jvm/functions/Function2<",
+            "-",
+            "Ljava/lang/Float;",
+            "-TR;+TR;>;)TR;"
+        }
+    .end annotation
+
+    const-string/jumbo v0, "operation"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1024
+    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
+
+    .line 1025
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
+
+    add-int/lit8 p0, p0, -0x1
+
+    :goto_0
+    const/4 v1, -0x1
+
+    if-ge v1, p0, :cond_0
+
+    .line 1026
+    aget v1, v0, p0
+
+    .line 212
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v1
+
+    invoke-interface {p2, v1, p1}, Lkotlin/jvm/functions/Function2;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    add-int/lit8 p0, p0, -0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-object p1
+.end method
+
+.method public final foldRightIndexed(Ljava/lang/Object;Lkotlin/jvm/functions/Function3;)Ljava/lang/Object;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<R:",
+            "Ljava/lang/Object;",
+            ">(TR;",
+            "Lkotlin/jvm/functions/Function3<",
+            "-",
+            "Ljava/lang/Integer;",
+            "-",
+            "Ljava/lang/Float;",
+            "-TR;+TR;>;)TR;"
+        }
+    .end annotation
+
+    const-string/jumbo v0, "operation"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1030
+    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
+
+    .line 1031
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
+
+    add-int/lit8 p0, p0, -0x1
+
+    :goto_0
+    const/4 v1, -0x1
+
+    if-ge v1, p0, :cond_0
+
+    .line 1032
+    aget v1, v0, p0
+
+    .line 226
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v1
+
+    invoke-interface {p2, v2, v1, p1}, Lkotlin/jvm/functions/Function3;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    add-int/lit8 p0, p0, -0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-object p1
+.end method
+
+.method public final forEach(Lkotlin/jvm/functions/Function1;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlin/jvm/functions/Function1<",
+            "-",
+            "Ljava/lang/Float;",
+            "Lkotlin/Unit;",
+            ">;)V"
+        }
+    .end annotation
+
+    const-string v0, "block"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 238
+    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
+
+    .line 239
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, p0, :cond_0
+
+    .line 240
+    aget v2, v0, v1
+
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v2
+
+    invoke-interface {p1, v2}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final forEachIndexed(Lkotlin/jvm/functions/Function2;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlin/jvm/functions/Function2<",
+            "-",
+            "Ljava/lang/Integer;",
+            "-",
+            "Ljava/lang/Float;",
+            "Lkotlin/Unit;",
+            ">;)V"
+        }
+    .end annotation
+
+    const-string v0, "block"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 252
+    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
+
+    .line 253
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, p0, :cond_0
+
+    .line 254
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    aget v3, v0, v1
+
+    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v3
+
+    invoke-interface {p1, v2, v3}, Lkotlin/jvm/functions/Function2;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final forEachReversed(Lkotlin/jvm/functions/Function1;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlin/jvm/functions/Function1<",
+            "-",
+            "Ljava/lang/Float;",
+            "Lkotlin/Unit;",
+            ">;)V"
+        }
+    .end annotation
+
+    const-string v0, "block"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 266
+    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
+
+    .line 267
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
+
+    add-int/lit8 p0, p0, -0x1
+
+    :goto_0
+    const/4 v1, -0x1
+
+    if-ge v1, p0, :cond_0
+
+    .line 268
+    aget v1, v0, p0
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v1
+
+    invoke-interface {p1, v1}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    add-int/lit8 p0, p0, -0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final forEachReversedIndexed(Lkotlin/jvm/functions/Function2;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlin/jvm/functions/Function2<",
+            "-",
+            "Ljava/lang/Integer;",
+            "-",
+            "Ljava/lang/Float;",
+            "Lkotlin/Unit;",
+            ">;)V"
+        }
+    .end annotation
+
+    const-string v0, "block"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 280
+    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
+
+    .line 281
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
+
+    add-int/lit8 p0, p0, -0x1
+
+    :goto_0
+    const/4 v1, -0x1
+
+    if-ge v1, p0, :cond_0
+
+    .line 282
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    aget v2, v0, p0
+
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v2
+
+    invoke-interface {p1, v1, v2}, Lkotlin/jvm/functions/Function2;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    add-int/lit8 p0, p0, -0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final get(I)F
+    .locals 1
+
+    if-ltz p1, :cond_0
+
+    .line 291
+    iget v0, p0, Landroidx/collection/FloatList;->_size:I
+
+    if-ge p1, v0, :cond_0
+
+    goto :goto_0
+
+    .line 292
+    :cond_0
+    const-string v0, "Index must be between 0 and size"
+
+    invoke-static {v0}, Landroidx/collection/internal/RuntimeHelpersKt;->throwIndexOutOfBoundsException(Ljava/lang/String;)V
+
+    .line 294
+    :goto_0
+    iget-object p0, p0, Landroidx/collection/FloatList;->content:[F
+
+    aget p0, p0, p1
+
+    return p0
+.end method
+
+.method public final getIndices()Lkotlin/ranges/IntRange;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 74
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
+
+    invoke-static {v0, p0}, Lkotlin/ranges/RangesKt;->until(II)Lkotlin/ranges/IntRange;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final getLastIndex()I
+    .locals 0
+
+    .line 70
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
+
+    add-int/lit8 p0, p0, -0x1
+
+    return p0
+.end method
+
+.method public final getSize()I
+    .locals 0
+
+    .line 65
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
+
+    return p0
+.end method
+
+.method public hashCode()I
+    .locals 4
+
+    .line 1081
+    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
+
+    .line 1082
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_0
+    if-ge v1, p0, :cond_0
+
+    .line 1083
+    aget v3, v0, v1
+
+    .line 511
+    invoke-static {v3}, Ljava/lang/Float;->hashCode(F)I
+
+    move-result v3
+
+    mul-int/lit8 v3, v3, 0x1f
+
+    add-int/2addr v2, v3
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return v2
+.end method
+
+.method public final indexOf(F)I
+    .locals 3
+
+    .line 1036
+    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
+
+    .line 1037
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, p0, :cond_1
+
+    .line 1038
+    aget v2, v0, v1
+
+    cmpg-float v2, p1, v2
+
+    if-nez v2, :cond_0
+
+    return v1
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
     :cond_1
-    const/4 p1, -0x1
+    const/4 p0, -0x1
 
-    return p1
+    return p0
 .end method
 
-.method public final indexOfLast(Lkotlin/jvm/functions/Function1;)I
+.method public final indexOfFirst(Lkotlin/jvm/functions/Function1;)I
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1538,27 +1579,25 @@
         }
     .end annotation
 
-    const-string v0, "predicate"
+    const-string/jumbo v0, "predicate"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1040
+    .line 1042
     iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
 
-    .line 1041
-    iget v1, p0, Landroidx/collection/FloatList;->_size:I
+    .line 1043
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
 
-    add-int/lit8 v1, v1, -0x1
+    const/4 v1, 0x0
 
     :goto_0
-    const/4 v2, -0x1
+    if-ge v1, p0, :cond_1
 
-    if-ge v2, v1, :cond_1
-
-    .line 1042
+    .line 1044
     aget v2, v0, v1
 
-    .line 372
+    .line 343
     invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v2
@@ -1578,48 +1617,111 @@
     return v1
 
     :cond_0
-    add-int/lit8 v1, v1, -0x1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
     :cond_1
-    return v2
+    const/4 p0, -0x1
+
+    return p0
+.end method
+
+.method public final indexOfLast(Lkotlin/jvm/functions/Function1;)I
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlin/jvm/functions/Function1<",
+            "-",
+            "Ljava/lang/Float;",
+            "Ljava/lang/Boolean;",
+            ">;)I"
+        }
+    .end annotation
+
+    const-string/jumbo v0, "predicate"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1048
+    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
+
+    .line 1049
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
+
+    add-int/lit8 p0, p0, -0x1
+
+    :goto_0
+    const/4 v1, -0x1
+
+    if-ge v1, p0, :cond_1
+
+    .line 1050
+    aget v1, v0, p0
+
+    .line 357
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v1
+
+    invoke-interface {p1, v1}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Boolean;
+
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    return p0
+
+    :cond_0
+    add-int/lit8 p0, p0, -0x1
+
+    goto :goto_0
+
+    :cond_1
+    return v1
 .end method
 
 .method public final isEmpty()Z
-    .locals 1
+    .locals 0
 
-    .line 382
-    iget v0, p0, Landroidx/collection/FloatList;->_size:I
+    .line 365
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
 
-    if-nez v0, :cond_0
+    if-nez p0, :cond_0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public final isNotEmpty()Z
-    .locals 1
+    .locals 0
 
-    .line 387
-    iget v0, p0, Landroidx/collection/FloatList;->_size:I
+    .line 368
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
 
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public final joinToString()Ljava/lang/String;
@@ -1643,15 +1745,15 @@
 
     invoke-static/range {v0 .. v7}, Landroidx/collection/FloatList;->joinToString$default(Landroidx/collection/FloatList;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    return-object v1
+    return-object p0
 .end method
 
 .method public final joinToString(Ljava/lang/CharSequence;)Ljava/lang/String;
     .locals 9
 
-    const-string v0, "separator"
+    const-string/jumbo v0, "separator"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -1673,19 +1775,19 @@
 
     invoke-static/range {v1 .. v8}, Landroidx/collection/FloatList;->joinToString$default(Landroidx/collection/FloatList;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/Object;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final joinToString(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
     .locals 9
 
-    const-string v0, "separator"
+    const-string/jumbo v0, "separator"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "prefix"
+    const-string/jumbo v0, "prefix"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -1707,23 +1809,23 @@
 
     invoke-static/range {v1 .. v8}, Landroidx/collection/FloatList;->joinToString$default(Landroidx/collection/FloatList;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/Object;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final joinToString(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
     .locals 9
 
-    const-string v0, "separator"
+    const-string/jumbo v0, "separator"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "prefix"
+    const-string/jumbo v0, "prefix"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "postfix"
+    const-string/jumbo v0, "postfix"
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -1745,23 +1847,23 @@
 
     invoke-static/range {v1 .. v8}, Landroidx/collection/FloatList;->joinToString$default(Landroidx/collection/FloatList;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/Object;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final joinToString(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;I)Ljava/lang/String;
     .locals 9
 
-    const-string v0, "separator"
+    const-string/jumbo v0, "separator"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "prefix"
+    const-string/jumbo v0, "prefix"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "postfix"
+    const-string/jumbo v0, "postfix"
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -1783,92 +1885,92 @@
 
     invoke-static/range {v1 .. v8}, Landroidx/collection/FloatList;->joinToString$default(Landroidx/collection/FloatList;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/Object;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final joinToString(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;)Ljava/lang/String;
-    .locals 4
+    .locals 3
 
-    const-string v0, "separator"
+    const-string/jumbo v0, "separator"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "prefix"
+    const-string/jumbo v0, "prefix"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "postfix"
+    const-string/jumbo v0, "postfix"
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "truncated"
+    const-string/jumbo v0, "truncated"
 
     invoke-static {p5, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 443
+    .line 462
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 444
+    .line 463
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1059
+    .line 1069
     iget-object p2, p0, Landroidx/collection/FloatList;->content:[F
 
-    .line 1060
-    iget v1, p0, Landroidx/collection/FloatList;->_size:I
+    .line 1070
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
     :goto_0
-    if-ge v2, v1, :cond_2
+    if-ge v1, p0, :cond_2
 
-    .line 1061
-    aget v3, p2, v2
+    .line 1071
+    aget v2, p2, v1
 
-    if-ne v2, p4, :cond_0
+    if-ne v1, p4, :cond_0
 
-    .line 447
+    .line 466
     invoke-virtual {v0, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
     :cond_0
-    if-eqz v2, :cond_1
+    if-eqz v1, :cond_1
 
-    .line 451
+    .line 470
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 453
+    .line 472
     :cond_1
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 455
+    .line 474
     :cond_2
     invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 443
+    .line 462
     :goto_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    const-string p2, "StringBuilder().apply(builderAction).toString()"
+    const-string/jumbo p1, "toString(...)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final joinToString(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/functions/Function1;)Ljava/lang/String;
-    .locals 4
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1887,97 +1989,207 @@
         }
     .end annotation
 
-    const-string v0, "separator"
+    const-string/jumbo v0, "separator"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "prefix"
+    const-string/jumbo v0, "prefix"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "postfix"
+    const-string/jumbo v0, "postfix"
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "truncated"
+    const-string/jumbo v0, "truncated"
 
     invoke-static {p5, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "transform"
+    const-string/jumbo v0, "transform"
 
     invoke-static {p6, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 474
+    .line 493
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 475
+    .line 494
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1065
+    .line 1075
     iget-object p2, p0, Landroidx/collection/FloatList;->content:[F
 
-    .line 1066
-    iget v1, p0, Landroidx/collection/FloatList;->_size:I
+    .line 1076
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, p0, :cond_2
+
+    .line 1077
+    aget v2, p2, v1
+
+    if-ne v1, p4, :cond_0
+
+    .line 497
+    invoke-virtual {v0, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    goto :goto_1
+
+    :cond_0
+    if-eqz v1, :cond_1
+
+    .line 501
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    .line 503
+    :cond_1
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v2
+
+    invoke-interface {p6, v2}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    .line 505
+    :cond_2
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    .line 493
+    :goto_1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string/jumbo p1, "toString(...)"
+
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-object p0
+.end method
+
+.method public final joinToString(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILkotlin/jvm/functions/Function1;)Ljava/lang/String;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/CharSequence;",
+            "Ljava/lang/CharSequence;",
+            "Ljava/lang/CharSequence;",
+            "I",
+            "Lkotlin/jvm/functions/Function1<",
+            "-",
+            "Ljava/lang/Float;",
+            "+",
+            "Ljava/lang/CharSequence;",
+            ">;)",
+            "Ljava/lang/String;"
+        }
+    .end annotation
+
+    const-string/jumbo v0, "separator"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string/jumbo v0, "prefix"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string/jumbo v0, "postfix"
+
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string/jumbo v0, "transform"
+
+    invoke-static {p5, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1092
+    const-string v0, "..."
+
+    check-cast v0, Ljava/lang/CharSequence;
+
+    .line 1094
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    .line 1095
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    .line 1098
+    iget-object p2, p0, Landroidx/collection/FloatList;->content:[F
+
+    .line 1099
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
 
     const/4 v2, 0x0
 
     :goto_0
-    if-ge v2, v1, :cond_2
+    if-ge v2, p0, :cond_2
 
-    .line 1067
+    .line 1100
     aget v3, p2, v2
 
     if-ne v2, p4, :cond_0
 
-    .line 478
-    invoke-virtual {v0, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+    .line 1102
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
     :cond_0
     if-eqz v2, :cond_1
 
-    .line 482
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+    .line 1106
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 484
+    .line 1108
     :cond_1
     invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v3
 
-    invoke-interface {p6, v3}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p5, v3}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/lang/CharSequence;
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 486
+    .line 1111
     :cond_2
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 474
+    .line 1094
     :goto_1
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    const-string p2, "StringBuilder().apply(builderAction).toString()"
+    const-string/jumbo p1, "toString(...)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    return-object p1
+    return-object p0
 .end method
 
-.method public final joinToString(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILkotlin/jvm/functions/Function1;)Ljava/lang/String;
+.method public final joinToString(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Lkotlin/jvm/functions/Function1;)Ljava/lang/String;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1985,7 +2197,6 @@
             "Ljava/lang/CharSequence;",
             "Ljava/lang/CharSequence;",
             "Ljava/lang/CharSequence;",
-            "I",
             "Lkotlin/jvm/functions/Function1<",
             "-",
             "Ljava/lang/Float;",
@@ -1996,105 +2207,106 @@
         }
     .end annotation
 
-    const-string v0, "separator"
+    const-string/jumbo v0, "separator"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "prefix"
+    const-string/jumbo v0, "prefix"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "postfix"
+    const-string/jumbo v0, "postfix"
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "transform"
+    const-string/jumbo v0, "transform"
 
-    invoke-static {p5, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1082
+    .line 1118
     const-string v0, "..."
 
     check-cast v0, Ljava/lang/CharSequence;
 
-    .line 1084
+    .line 1120
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1085
+    .line 1121
     invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1088
+    .line 1124
     iget-object p2, p0, Landroidx/collection/FloatList;->content:[F
 
-    .line 1089
-    iget v2, p0, Landroidx/collection/FloatList;->_size:I
+    .line 1125
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
     :goto_0
-    if-ge v3, v2, :cond_2
+    if-ge v2, p0, :cond_2
 
-    .line 1090
-    aget v4, p2, v3
+    .line 1126
+    aget v3, p2, v2
 
-    if-ne v3, p4, :cond_0
+    const/4 v4, -0x1
 
-    .line 1092
+    if-ne v2, v4, :cond_0
+
+    .line 1128
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
     :cond_0
-    if-eqz v3, :cond_1
+    if-eqz v2, :cond_1
 
-    .line 1096
+    .line 1132
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1098
+    .line 1134
     :cond_1
-    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-interface {p5, v4}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p4, v3}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v3
 
-    check-cast v4, Ljava/lang/CharSequence;
+    check-cast v3, Ljava/lang/CharSequence;
 
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 1101
+    .line 1137
     :cond_2
     invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1084
+    .line 1120
     :goto_1
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    const-string p2, "StringBuilder().apply(builderAction).toString()"
+    const-string/jumbo p1, "toString(...)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    return-object p1
+    return-object p0
 .end method
 
-.method public final joinToString(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Lkotlin/jvm/functions/Function1;)Ljava/lang/String;
+.method public final joinToString(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Lkotlin/jvm/functions/Function1;)Ljava/lang/String;
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/CharSequence;",
             "Ljava/lang/CharSequence;",
-            "Ljava/lang/CharSequence;",
             "Lkotlin/jvm/functions/Function1<",
             "-",
             "Ljava/lang/Float;",
@@ -2105,106 +2317,106 @@
         }
     .end annotation
 
-    const-string v0, "separator"
+    const-string/jumbo v0, "separator"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "prefix"
+    const-string/jumbo v0, "prefix"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "postfix"
+    const-string/jumbo v0, "transform"
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "transform"
-
-    invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 1108
-    const-string v0, "..."
+    .line 1142
+    const-string v0, ""
 
     check-cast v0, Ljava/lang/CharSequence;
 
-    .line 1110
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 1144
+    const-string v1, "..."
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    check-cast v1, Ljava/lang/CharSequence;
 
-    .line 1111
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+    .line 1146
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 1114
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    .line 1147
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    .line 1150
     iget-object p2, p0, Landroidx/collection/FloatList;->content:[F
 
-    .line 1115
-    iget v2, p0, Landroidx/collection/FloatList;->_size:I
+    .line 1151
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
 
     const/4 v3, 0x0
 
     :goto_0
-    if-ge v3, v2, :cond_2
+    if-ge v3, p0, :cond_2
 
-    .line 1116
+    .line 1152
     aget v4, p2, v3
 
     const/4 v5, -0x1
 
     if-ne v3, v5, :cond_0
 
-    .line 1118
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+    .line 1154
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
     :cond_0
     if-eqz v3, :cond_1
 
-    .line 1122
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+    .line 1158
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1124
+    .line 1160
     :cond_1
     invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v4
 
-    invoke-interface {p4, v4}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, v4}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Ljava/lang/CharSequence;
 
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 1127
+    .line 1163
     :cond_2
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1110
+    .line 1146
     :goto_1
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    const-string p2, "StringBuilder().apply(builderAction).toString()"
+    const-string/jumbo p1, "toString(...)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    return-object p1
+    return-object p0
 .end method
 
-.method public final joinToString(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Lkotlin/jvm/functions/Function1;)Ljava/lang/String;
+.method public final joinToString(Ljava/lang/CharSequence;Lkotlin/jvm/functions/Function1;)Ljava/lang/String;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/CharSequence;",
-            "Ljava/lang/CharSequence;",
             "Lkotlin/jvm/functions/Function1<",
             "-",
             "Ljava/lang/Float;",
@@ -2215,213 +2427,103 @@
         }
     .end annotation
 
-    const-string v0, "separator"
+    const-string/jumbo v0, "separator"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "prefix"
+    const-string/jumbo v0, "transform"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "transform"
-
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 1132
-    const-string v0, ""
-
-    check-cast v0, Ljava/lang/CharSequence;
-
-    .line 1134
-    const-string v1, "..."
-
-    check-cast v1, Ljava/lang/CharSequence;
-
-    .line 1136
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    .line 1137
-    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    .line 1140
-    iget-object p2, p0, Landroidx/collection/FloatList;->content:[F
-
-    .line 1141
-    iget v3, p0, Landroidx/collection/FloatList;->_size:I
-
-    const/4 v4, 0x0
-
-    :goto_0
-    if-ge v4, v3, :cond_2
-
-    .line 1142
-    aget v5, p2, v4
-
-    const/4 v6, -0x1
-
-    if-ne v4, v6, :cond_0
-
-    .line 1144
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    goto :goto_1
-
-    :cond_0
-    if-eqz v4, :cond_1
-
-    .line 1148
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    .line 1150
-    :cond_1
-    invoke-static {v5}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v5
-
-    invoke-interface {p3, v5}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/lang/CharSequence;
-
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    .line 1153
-    :cond_2
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    .line 1136
-    :goto_1
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string p2, "StringBuilder().apply(builderAction).toString()"
-
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    return-object p1
-.end method
-
-.method public final joinToString(Ljava/lang/CharSequence;Lkotlin/jvm/functions/Function1;)Ljava/lang/String;
-    .locals 8
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/CharSequence;",
-            "Lkotlin/jvm/functions/Function1<",
-            "-",
-            "Ljava/lang/Float;",
-            "+",
-            "Ljava/lang/CharSequence;",
-            ">;)",
-            "Ljava/lang/String;"
-        }
-    .end annotation
-
-    const-string v0, "separator"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "transform"
-
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 1157
+    .line 1167
     const-string v0, ""
 
     move-object v1, v0
 
     check-cast v1, Ljava/lang/CharSequence;
 
-    .line 1158
+    .line 1168
     check-cast v0, Ljava/lang/CharSequence;
 
-    .line 1160
+    .line 1170
     const-string v2, "..."
 
     check-cast v2, Ljava/lang/CharSequence;
 
-    .line 1162
+    .line 1172
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1163
+    .line 1173
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1166
+    .line 1176
     iget-object v1, p0, Landroidx/collection/FloatList;->content:[F
 
-    .line 1167
-    iget v4, p0, Landroidx/collection/FloatList;->_size:I
+    .line 1177
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
 
-    const/4 v5, 0x0
+    const/4 v4, 0x0
 
     :goto_0
-    if-ge v5, v4, :cond_2
+    if-ge v4, p0, :cond_2
 
-    .line 1168
-    aget v6, v1, v5
+    .line 1178
+    aget v5, v1, v4
 
-    const/4 v7, -0x1
+    const/4 v6, -0x1
 
-    if-ne v5, v7, :cond_0
+    if-ne v4, v6, :cond_0
 
-    .line 1170
+    .line 1180
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
     :cond_0
-    if-eqz v5, :cond_1
+    if-eqz v4, :cond_1
 
-    .line 1174
+    .line 1184
     invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1176
+    .line 1186
     :cond_1
-    invoke-static {v6}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    invoke-static {v5}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    move-result-object v6
+    move-result-object v5
 
-    invoke-interface {p2, v6}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v5}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v6
+    move-result-object v5
 
-    check-cast v6, Ljava/lang/CharSequence;
+    check-cast v5, Ljava/lang/CharSequence;
 
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    add-int/lit8 v5, v5, 0x1
+    add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 1179
+    .line 1189
     :cond_2
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1162
+    .line 1172
     :goto_1
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    const-string p2, "StringBuilder().apply(builderAction).toString()"
+    const-string/jumbo p1, "toString(...)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final joinToString(Lkotlin/jvm/functions/Function1;)Ljava/lang/String;
-    .locals 9
+    .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2435,137 +2537,131 @@
         }
     .end annotation
 
-    const-string v0, "transform"
+    const-string/jumbo v0, "transform"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1182
+    .line 1192
     const-string v0, ", "
 
     check-cast v0, Ljava/lang/CharSequence;
 
-    .line 1183
+    .line 1193
     const-string v1, ""
 
     move-object v2, v1
 
     check-cast v2, Ljava/lang/CharSequence;
 
-    .line 1184
+    .line 1194
     check-cast v1, Ljava/lang/CharSequence;
 
-    .line 1186
+    .line 1196
     const-string v3, "..."
 
     check-cast v3, Ljava/lang/CharSequence;
 
-    .line 1188
+    .line 1198
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1189
+    .line 1199
     invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1192
+    .line 1202
     iget-object v2, p0, Landroidx/collection/FloatList;->content:[F
 
-    .line 1193
-    iget v5, p0, Landroidx/collection/FloatList;->_size:I
+    .line 1203
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
 
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
     :goto_0
-    if-ge v6, v5, :cond_2
+    if-ge v5, p0, :cond_2
 
-    .line 1194
-    aget v7, v2, v6
+    .line 1204
+    aget v6, v2, v5
 
-    const/4 v8, -0x1
+    const/4 v7, -0x1
 
-    if-ne v6, v8, :cond_0
+    if-ne v5, v7, :cond_0
 
-    .line 1196
+    .line 1206
     invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
     :cond_0
-    if-eqz v6, :cond_1
+    if-eqz v5, :cond_1
 
-    .line 1200
+    .line 1210
     invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1202
+    .line 1212
     :cond_1
-    invoke-static {v7}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    invoke-static {v6}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    move-result-object v7
+    move-result-object v6
 
-    invoke-interface {p1, v7}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v6}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v7
+    move-result-object v6
 
-    check-cast v7, Ljava/lang/CharSequence;
+    check-cast v6, Ljava/lang/CharSequence;
 
-    invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    add-int/lit8 v6, v6, 0x1
+    add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
-    .line 1205
+    .line 1215
     :cond_2
     invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1188
+    .line 1198
     :goto_1
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    const-string v0, "StringBuilder().apply(builderAction).toString()"
+    const-string/jumbo p1, "toString(...)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final last()F
-    .locals 2
+    .locals 1
 
-    .line 394
-    invoke-virtual {p0}, Landroidx/collection/FloatList;->isEmpty()Z
-
-    move-result v0
+    .line 1053
+    iget v0, p0, Landroidx/collection/FloatList;->_size:I
 
     if-nez v0, :cond_0
 
-    .line 397
+    .line 376
+    const-string v0, "FloatList is empty."
+
+    invoke-static {v0}, Landroidx/collection/internal/RuntimeHelpersKt;->throwNoSuchElementException(Ljava/lang/String;)V
+
+    .line 378
+    :cond_0
     iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
 
-    .line 1045
-    iget v1, p0, Landroidx/collection/FloatList;->_size:I
+    .line 1054
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
 
-    add-int/lit8 v1, v1, -0x1
+    add-int/lit8 p0, p0, -0x1
 
-    aget v0, v0, v1
+    aget p0, v0, p0
 
-    return v0
-
-    .line 395
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    const-string v1, "FloatList is empty."
-
-    invoke-direct {v0, v1}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return p0
 .end method
 
 .method public final last(Lkotlin/jvm/functions/Function1;)F
-    .locals 4
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2577,108 +2673,115 @@
         }
     .end annotation
 
-    const-string v0, "predicate"
+    const-string/jumbo v0, "predicate"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1047
+    .line 1056
     iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
 
-    .line 1048
-    iget v1, p0, Landroidx/collection/FloatList;->_size:I
+    .line 1057
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
 
-    add-int/lit8 v1, v1, -0x1
-
-    :goto_0
-    const/4 v2, -0x1
-
-    if-ge v2, v1, :cond_1
-
-    .line 1049
-    aget v2, v0, v1
-
-    .line 408
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v3
-
-    invoke-interface {p1, v3}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/Boolean;
-
-    invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    return v2
-
-    :cond_0
-    add-int/lit8 v1, v1, -0x1
-
-    goto :goto_0
-
-    .line 412
-    :cond_1
-    new-instance p1, Ljava/util/NoSuchElementException;
-
-    const-string v0, "FloatList contains no element matching the predicate."
-
-    invoke-direct {p1, v0}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final lastIndexOf(F)I
-    .locals 3
-
-    .line 1053
-    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
-
-    .line 1054
-    iget v1, p0, Landroidx/collection/FloatList;->_size:I
-
-    add-int/lit8 v1, v1, -0x1
+    add-int/lit8 p0, p0, -0x1
 
     :goto_0
-    const/4 v2, -0x1
+    const/4 v1, -0x1
 
-    if-ge v2, v1, :cond_1
+    if-ge v1, p0, :cond_1
 
-    .line 1055
-    aget v2, v0, v1
+    .line 1058
+    aget v1, v0, p0
 
-    cmpg-float v2, v2, p1
+    .line 390
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    if-nez v2, :cond_0
+    move-result-object v2
+
+    invoke-interface {p1, v2}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Boolean;
+
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
 
     return v1
 
     :cond_0
-    add-int/lit8 v1, v1, -0x1
+    add-int/lit8 p0, p0, -0x1
+
+    goto :goto_0
+
+    .line 394
+    :cond_1
+    new-instance p0, Ljava/util/NoSuchElementException;
+
+    const-string p1, "FloatList contains no element matching the predicate."
+
+    invoke-direct {p0, p1}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public final lastIndexOf(F)I
+    .locals 2
+
+    .line 1062
+    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
+
+    .line 1063
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
+
+    add-int/lit8 p0, p0, -0x1
+
+    :goto_0
+    const/4 v1, -0x1
+
+    if-ge v1, p0, :cond_1
+
+    .line 1064
+    aget v1, v0, p0
+
+    cmpg-float v1, v1, p1
+
+    if-nez v1, :cond_0
+
+    return p0
+
+    :cond_0
+    add-int/lit8 p0, p0, -0x1
 
     goto :goto_0
 
     :cond_1
-    return v2
+    return v1
 .end method
 
 .method public final none()Z
-    .locals 1
+    .locals 0
 
-    .line 81
-    invoke-virtual {p0}, Landroidx/collection/FloatList;->isEmpty()Z
+    .line 977
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
 
-    move-result v0
+    if-nez p0, :cond_0
 
-    return v0
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
 .method public final reversedAny(Lkotlin/jvm/functions/Function1;)Z
-    .locals 4
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2690,62 +2793,62 @@
         }
     .end annotation
 
-    const-string v0, "predicate"
+    const-string/jumbo v0, "predicate"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 977
+    .line 986
     iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
 
-    .line 978
-    iget v1, p0, Landroidx/collection/FloatList;->_size:I
+    .line 987
+    iget p0, p0, Landroidx/collection/FloatList;->_size:I
 
-    const/4 v2, 0x1
+    const/4 v1, 0x1
 
-    sub-int/2addr v1, v2
+    sub-int/2addr p0, v1
 
     :goto_0
-    const/4 v3, -0x1
+    const/4 v2, -0x1
 
-    if-ge v3, v1, :cond_1
+    if-ge v2, p0, :cond_1
 
-    .line 979
-    aget v3, v0, v1
+    .line 988
+    aget v2, v0, p0
 
-    .line 111
-    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    .line 104
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-interface {p1, v3}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v2}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object v2
 
-    check-cast v3, Ljava/lang/Boolean;
+    check-cast v2, Ljava/lang/Boolean;
 
-    invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result v3
+    move-result v2
 
-    if-eqz v3, :cond_0
+    if-eqz v2, :cond_0
 
-    return v2
+    return v1
 
     :cond_0
-    add-int/lit8 v1, v1, -0x1
+    add-int/lit8 p0, p0, -0x1
 
     goto :goto_0
 
     :cond_1
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 9
 
-    .line 522
+    .line 536
     const-string v0, "["
 
     move-object v3, v0
@@ -2772,7 +2875,7 @@
 
     invoke-static/range {v1 .. v8}, Landroidx/collection/FloatList;->joinToString$default(Landroidx/collection/FloatList;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

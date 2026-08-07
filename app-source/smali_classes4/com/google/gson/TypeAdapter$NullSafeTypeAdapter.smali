@@ -76,19 +76,19 @@
     .line 311
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->nextNull()V
 
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return-object p1
+    return-object p0
 
     .line 314
     :cond_0
-    iget-object v0, p0, Lcom/google/gson/TypeAdapter$NullSafeTypeAdapter;->this$0:Lcom/google/gson/TypeAdapter;
+    iget-object p0, p0, Lcom/google/gson/TypeAdapter$NullSafeTypeAdapter;->this$0:Lcom/google/gson/TypeAdapter;
 
-    invoke-virtual {v0, p1}, Lcom/google/gson/TypeAdapter;->read(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lcom/google/gson/TypeAdapter;->read(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public toString()Ljava/lang/String;
@@ -101,23 +101,23 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/google/gson/TypeAdapter$NullSafeTypeAdapter;->this$0:Lcom/google/gson/TypeAdapter;
+    iget-object p0, p0, Lcom/google/gson/TypeAdapter$NullSafeTypeAdapter;->this$0:Lcom/google/gson/TypeAdapter;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, "]"
+    const-string p0, "]"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public write(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -141,9 +141,9 @@
 
     .line 304
     :cond_0
-    iget-object v0, p0, Lcom/google/gson/TypeAdapter$NullSafeTypeAdapter;->this$0:Lcom/google/gson/TypeAdapter;
+    iget-object p0, p0, Lcom/google/gson/TypeAdapter$NullSafeTypeAdapter;->this$0:Lcom/google/gson/TypeAdapter;
 
-    invoke-virtual {v0, p1, p2}, Lcom/google/gson/TypeAdapter;->write(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
+    invoke-virtual {p0, p1, p2}, Lcom/google/gson/TypeAdapter;->write(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
 
     return-void
 .end method

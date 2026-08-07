@@ -29,7 +29,7 @@
 
 # virtual methods
 .method public readNumber(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Number;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -37,13 +37,13 @@
     .end annotation
 
     .line 54
-    new-instance v0, Lcom/google/gson/internal/LazilyParsedNumber;
+    new-instance p0, Lcom/google/gson/internal/LazilyParsedNumber;
 
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->nextString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {v0, p1}, Lcom/google/gson/internal/LazilyParsedNumber;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcom/google/gson/internal/LazilyParsedNumber;-><init>(Ljava/lang/String;)V
 
-    return-object v0
+    return-object p0
 .end method

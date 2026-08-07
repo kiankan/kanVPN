@@ -25,21 +25,21 @@
 
 # virtual methods
 .method getCount()I
-    .locals 1
+    .locals 0
 
     .line 34
-    iget v0, p0, Lcom/google/zxing/oned/rss/Pair;->count:I
+    iget p0, p0, Lcom/google/zxing/oned/rss/Pair;->count:I
 
-    return v0
+    return p0
 .end method
 
 .method getFinderPattern()Lcom/google/zxing/oned/rss/FinderPattern;
-    .locals 1
+    .locals 0
 
     .line 30
-    iget-object v0, p0, Lcom/google/zxing/oned/rss/Pair;->finderPattern:Lcom/google/zxing/oned/rss/FinderPattern;
+    iget-object p0, p0, Lcom/google/zxing/oned/rss/Pair;->finderPattern:Lcom/google/zxing/oned/rss/FinderPattern;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method incrementCount()V

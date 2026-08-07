@@ -13,7 +13,7 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .line 40
+    .line 41
     :try_start_0
     const-class v0, Landroid/media/ImageWriter;
 
@@ -42,7 +42,7 @@
     :catch_0
     move-exception v0
 
-    .line 43
+    .line 44
     const-string v1, "ImageWriterCompatApi26"
 
     const-string v2, "Unable to initialize via reflection."

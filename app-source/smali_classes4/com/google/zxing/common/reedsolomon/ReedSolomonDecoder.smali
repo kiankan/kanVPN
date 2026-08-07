@@ -40,13 +40,13 @@
     .line 163
     invoke-virtual {p1, v1}, Lcom/google/zxing/common/reedsolomon/GenericGFPoly;->getCoefficient(I)I
 
-    move-result p1
+    move-result p0
 
-    filled-new-array {p1}, [I
+    filled-new-array {p0}, [I
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 165
     :cond_0
@@ -96,13 +96,13 @@
 
     .line 174
     :cond_3
-    new-instance p1, Lcom/google/zxing/common/reedsolomon/ReedSolomonException;
+    new-instance p0, Lcom/google/zxing/common/reedsolomon/ReedSolomonException;
 
-    const-string v0, "Error locator degree does not match number of roots"
+    const-string p1, "Error locator degree does not match number of roots"
 
-    invoke-direct {p1, v0}, Lcom/google/zxing/common/reedsolomon/ReedSolomonException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcom/google/zxing/common/reedsolomon/ReedSolomonException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method private findErrorMagnitudes(Lcom/google/zxing/common/reedsolomon/GenericGFPoly;[I)[I
@@ -408,39 +408,39 @@
 
     .line 143
     :cond_2
-    new-instance p3, Ljava/lang/IllegalStateException;
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance p3, Ljava/lang/StringBuilder;
 
-    const-string v1, "Division algorithm failed to reduce polynomial? r: "
+    const-string v0, "Division algorithm failed to reduce polynomial? r: "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string p2, ", rLast: "
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {p3, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p3
+    throw p0
 
     .line 127
     :cond_3
-    new-instance p1, Lcom/google/zxing/common/reedsolomon/ReedSolomonException;
+    new-instance p0, Lcom/google/zxing/common/reedsolomon/ReedSolomonException;
 
-    const-string p2, "r_{i-1} was zero"
+    const-string p1, "r_{i-1} was zero"
 
-    invoke-direct {p1, p2}, Lcom/google/zxing/common/reedsolomon/ReedSolomonException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcom/google/zxing/common/reedsolomon/ReedSolomonException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
     :cond_4
     const/4 p2, 0x0
@@ -453,42 +453,42 @@
     if-eqz p3, :cond_5
 
     .line 153
-    iget-object v1, p0, Lcom/google/zxing/common/reedsolomon/ReedSolomonDecoder;->field:Lcom/google/zxing/common/reedsolomon/GenericGF;
+    iget-object p0, p0, Lcom/google/zxing/common/reedsolomon/ReedSolomonDecoder;->field:Lcom/google/zxing/common/reedsolomon/GenericGF;
 
-    invoke-virtual {v1, p3}, Lcom/google/zxing/common/reedsolomon/GenericGF;->inverse(I)I
+    invoke-virtual {p0, p3}, Lcom/google/zxing/common/reedsolomon/GenericGF;->inverse(I)I
 
-    move-result p3
+    move-result p0
 
     .line 154
-    invoke-virtual {v0, p3}, Lcom/google/zxing/common/reedsolomon/GenericGFPoly;->multiply(I)Lcom/google/zxing/common/reedsolomon/GenericGFPoly;
+    invoke-virtual {v0, p0}, Lcom/google/zxing/common/reedsolomon/GenericGFPoly;->multiply(I)Lcom/google/zxing/common/reedsolomon/GenericGFPoly;
 
-    move-result-object v0
+    move-result-object p3
 
     .line 155
-    invoke-virtual {p1, p3}, Lcom/google/zxing/common/reedsolomon/GenericGFPoly;->multiply(I)Lcom/google/zxing/common/reedsolomon/GenericGFPoly;
+    invoke-virtual {p1, p0}, Lcom/google/zxing/common/reedsolomon/GenericGFPoly;->multiply(I)Lcom/google/zxing/common/reedsolomon/GenericGFPoly;
 
-    move-result-object p1
+    move-result-object p0
 
     .line 156
-    new-array p3, v3, [Lcom/google/zxing/common/reedsolomon/GenericGFPoly;
+    new-array p1, v3, [Lcom/google/zxing/common/reedsolomon/GenericGFPoly;
 
-    aput-object v0, p3, p2
+    aput-object p3, p1, p2
 
     const/4 p2, 0x1
 
-    aput-object p1, p3, p2
+    aput-object p0, p1, p2
 
-    return-object p3
+    return-object p1
 
     .line 150
     :cond_5
-    new-instance p1, Lcom/google/zxing/common/reedsolomon/ReedSolomonException;
+    new-instance p0, Lcom/google/zxing/common/reedsolomon/ReedSolomonException;
 
-    const-string p2, "sigmaTilde(0) was zero"
+    const-string p1, "sigmaTilde(0) was zero"
 
-    invoke-direct {p1, p2}, Lcom/google/zxing/common/reedsolomon/ReedSolomonException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcom/google/zxing/common/reedsolomon/ReedSolomonException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 
@@ -650,17 +650,17 @@
 
     .line 96
     :cond_3
-    new-instance p1, Lcom/google/zxing/common/reedsolomon/ReedSolomonException;
+    new-instance p0, Lcom/google/zxing/common/reedsolomon/ReedSolomonException;
 
-    const-string p2, "Bad error location"
+    const-string p1, "Bad error location"
 
-    invoke-direct {p1, p2}, Lcom/google/zxing/common/reedsolomon/ReedSolomonException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcom/google/zxing/common/reedsolomon/ReedSolomonException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
     .line 100
     :cond_4
-    array-length p1, v0
+    array-length p0, v0
 
-    return p1
+    return p0
 .end method

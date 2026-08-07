@@ -15,7 +15,7 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u00000\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010 \n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u000f\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0002\u0008\u0086\u0008\u0018\u00002\u00020\u0001B5\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u000c\u0010\u0004\u001a\u0008\u0012\u0004\u0012\u00020\u00030\u0005\u0012\n\u0008\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010\u0007\u001a\u0004\u0018\u00010\u0008\u00a2\u0006\u0004\u0008\t\u0010\nJ\t\u0010\u0012\u001a\u00020\u0003H\u00c6\u0003J\u000f\u0010\u0013\u001a\u0008\u0012\u0004\u0012\u00020\u00030\u0005H\u00c6\u0003J\u000b\u0010\u0014\u001a\u0004\u0018\u00010\u0003H\u00c6\u0003J\u000b\u0010\u0015\u001a\u0004\u0018\u00010\u0008H\u00c6\u0003J;\u0010\u0016\u001a\u00020\u00002\u0008\u0008\u0002\u0010\u0002\u001a\u00020\u00032\u000e\u0008\u0002\u0010\u0004\u001a\u0008\u0012\u0004\u0012\u00020\u00030\u00052\n\u0008\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u00032\n\u0008\u0002\u0010\u0007\u001a\u0004\u0018\u00010\u0008H\u00c6\u0001J\u0014\u0010\u0017\u001a\u00020\u00182\u0008\u0010\u0019\u001a\u0004\u0018\u00010\u0001H\u00d6\u0083\u0004J\n\u0010\u001a\u001a\u00020\u001bH\u00d6\u0081\u0004J\n\u0010\u001c\u001a\u00020\u0003H\u00d6\u0081\u0004R\u0011\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u000b\u0010\u000cR\u0017\u0010\u0004\u001a\u0008\u0012\u0004\u0012\u00020\u00030\u0005\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\r\u0010\u000eR\u0013\u0010\u0006\u001a\u0004\u0018\u00010\u0003\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u000f\u0010\u000cR\u0013\u0010\u0007\u001a\u0004\u0018\u00010\u0008\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0010\u0010\u0011\u00a8\u0006\u001d"
+        "\u00006\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010 \n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u000f\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\u0008\u0087\u0008\u0018\u00002\u00020\u0001B5\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u000c\u0010\u0004\u001a\u0008\u0012\u0004\u0012\u00020\u00030\u0005\u0012\n\u0008\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010\u0007\u001a\u0004\u0018\u00010\u0008\u00a2\u0006\u0004\u0008\t\u0010\nJ\t\u0010\u0012\u001a\u00020\u0003H\u00c6\u0003J\u000f\u0010\u0013\u001a\u0008\u0012\u0004\u0012\u00020\u00030\u0005H\u00c6\u0003J\u000b\u0010\u0014\u001a\u0004\u0018\u00010\u0003H\u00c6\u0003J\u000b\u0010\u0015\u001a\u0004\u0018\u00010\u0008H\u00c6\u0003J;\u0010\u0016\u001a\u00020\u00002\u0008\u0008\u0002\u0010\u0002\u001a\u00020\u00032\u000e\u0008\u0002\u0010\u0004\u001a\u0008\u0012\u0004\u0012\u00020\u00030\u00052\n\u0008\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u00032\n\u0008\u0002\u0010\u0007\u001a\u0004\u0018\u00010\u0008H\u00c6\u0001J\u0014\u0010\u0017\u001a\u00020\u00182\u0008\u0010\u0019\u001a\u0004\u0018\u00010\u0001H\u00d6\u0083\u0004J\n\u0010\u001a\u001a\u00020\u001bH\u00d6\u0081\u0004J\n\u0010\u001c\u001a\u00020\u0003H\u00d6\u0081\u0004R\u0011\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u000b\u0010\u000cR\u0017\u0010\u0004\u001a\u0008\u0012\u0004\u0012\u00020\u00030\u0005\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\r\u0010\u000eR\u0013\u0010\u0006\u001a\u0004\u0018\u00010\u0003\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u000f\u0010\u000cR\u0013\u0010\u0007\u001a\u0004\u0018\u00010\u0008\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0010\u0010\u0011\u00ca\u0001\u000c\u0008\u001e\u0012\u0008\u0008\u001f\u0012\u0004\u0008\u0003\u0010\u0002\u00a8\u0006\u001d"
     }
     d2 = {
         "Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;",
@@ -47,16 +47,22 @@
         "hashCode",
         "",
         "toString",
-        "app_playstoreRelease"
+        "v2rayNG:app_playstoreRelease",
+        "Landroidx/compose/runtime/internal/StabilityInferred;",
+        "parameters"
     }
     k = 0x1
     mv = {
         0x2,
-        0x3,
+        0x4,
         0x0
     }
     xi = 0x30
 .end annotation
+
+
+# static fields
+.field public static final $stable:I
 
 
 # instance fields
@@ -78,6 +84,12 @@
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 0
+
+    return-void
+.end method
+
 .method public constructor <init>(Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategyObject;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
@@ -101,19 +113,19 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 426
+    .line 384
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 427
+    .line 385
     iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;->tag:Ljava/lang/String;
 
-    .line 428
+    .line 386
     iput-object p2, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;->selector:Ljava/util/List;
 
-    .line 429
+    .line 387
     iput-object p3, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;->fallbackTag:Ljava/lang/String;
 
-    .line 430
+    .line 388
     iput-object p4, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;->strategy:Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategyObject;
 
     return-void
@@ -137,7 +149,7 @@
 
     move-object p4, v0
 
-    .line 426
+    .line 384
     :cond_1
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategyObject;)V
 
@@ -185,15 +197,15 @@
 
 # virtual methods
 .method public final component1()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;->tag:Ljava/lang/String;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;->tag:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component2()Ljava/util/List;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -203,29 +215,29 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;->selector:Ljava/util/List;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;->selector:Ljava/util/List;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component3()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;->fallbackTag:Ljava/lang/String;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;->fallbackTag:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component4()Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategyObject;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;->strategy:Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategyObject;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;->strategy:Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategyObject;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final copy(Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategyObject;)Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -240,19 +252,19 @@
         }
     .end annotation
 
-    const-string v0, "tag"
+    const-string p0, "tag"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "selector"
+    const-string p0, "selector"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    new-instance v0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;
+    new-instance p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;
 
-    invoke-direct {v0, p1, p2, p3, p4}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategyObject;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategyObject;)V
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -315,15 +327,15 @@
     return v2
 
     :cond_4
-    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;->strategy:Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategyObject;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;->strategy:Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategyObject;
 
     iget-object p1, p1, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;->strategy:Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategyObject;
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result p0
 
-    if-nez p1, :cond_5
+    if-nez p0, :cond_5
 
     return v2
 
@@ -332,16 +344,16 @@
 .end method
 
 .method public final getFallbackTag()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    .line 429
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;->fallbackTag:Ljava/lang/String;
+    .line 387
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;->fallbackTag:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getSelector()Ljava/util/List;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -351,28 +363,28 @@
         }
     .end annotation
 
-    .line 428
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;->selector:Ljava/util/List;
+    .line 386
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;->selector:Ljava/util/List;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getStrategy()Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategyObject;
-    .locals 1
+    .locals 0
 
-    .line 430
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;->strategy:Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategyObject;
+    .line 388
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;->strategy:Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategyObject;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getTag()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    .line 427
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;->tag:Ljava/lang/String;
+    .line 385
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;->tag:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public hashCode()I
@@ -416,14 +428,14 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;->strategy:Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategyObject;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;->strategy:Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategyObject;
 
-    if-nez v1, :cond_1
+    if-nez p0, :cond_1
 
     goto :goto_1
 
     :cond_1
-    invoke-virtual {v1}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategyObject;->hashCode()I
+    invoke-virtual {p0}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategyObject;->hashCode()I
 
     move-result v2
 
@@ -434,7 +446,7 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 6
+    .locals 5
 
     iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;->tag:Ljava/lang/String;
 
@@ -442,41 +454,41 @@
 
     iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;->fallbackTag:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;->strategy:Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategyObject;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;->strategy:Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategyObject;
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    const-string v5, "BalancerBean(tag="
+    const-string v4, "BalancerBean(tag="
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v0, ", selector="
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v0, ", fallbackTag="
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v0, ", strategy="
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v0, ")"
+    const-string p0, ")"
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

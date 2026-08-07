@@ -474,10 +474,10 @@
     invoke-virtual {p1, v1}, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->signalEncoderChange(I)V
 
     :cond_1
-    const/16 v1, 0x1f
+    const/16 p0, 0x1f
 
     .line 48
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     .line 49
     invoke-static {p1, v0}, Lcom/google/zxing/datamatrix/encoder/EdifactEncoder;->handleEOD(Lcom/google/zxing/datamatrix/encoder/EncoderContext;Ljava/lang/CharSequence;)V
@@ -486,9 +486,9 @@
 .end method
 
 .method public getEncodingMode()I
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x4
+    const/4 p0, 0x4
 
-    return v0
+    return p0
 .end method

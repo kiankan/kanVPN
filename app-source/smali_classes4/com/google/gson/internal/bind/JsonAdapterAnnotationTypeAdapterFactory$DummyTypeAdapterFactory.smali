@@ -54,11 +54,11 @@
     .end annotation
 
     .line 41
-    new-instance p1, Ljava/lang/AssertionError;
+    new-instance p0, Ljava/lang/AssertionError;
 
-    const-string p2, "Factory should not be used"
+    const-string p1, "Factory should not be used"
 
-    invoke-direct {p1, p2}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+    invoke-direct {p0, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
 
-    throw p1
+    throw p0
 .end method

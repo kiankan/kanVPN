@@ -142,12 +142,12 @@
 .end method
 
 .method private readResolve()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
     .line 253
-    iget-object v0, p0, Lj$/time/chrono/Ser;->object:Ljava/lang/Object;
+    iget-object p0, p0, Lj$/time/chrono/Ser;->object:Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method private static writeInternal(BLjava/lang/Object;Ljava/io/ObjectOutput;)V
@@ -276,14 +276,14 @@
 .end method
 
 .method public writeExternal(Ljava/io/ObjectOutput;)V
-    .locals 2
+    .locals 1
 
     .line 157
     iget-byte v0, p0, Lj$/time/chrono/Ser;->type:B
 
-    iget-object v1, p0, Lj$/time/chrono/Ser;->object:Ljava/lang/Object;
+    iget-object p0, p0, Lj$/time/chrono/Ser;->object:Ljava/lang/Object;
 
-    invoke-static {v0, v1, p1}, Lj$/time/chrono/Ser;->writeInternal(BLjava/lang/Object;Ljava/io/ObjectOutput;)V
+    invoke-static {v0, p0, p1}, Lj$/time/chrono/Ser;->writeInternal(BLjava/lang/Object;Ljava/io/ObjectOutput;)V
 
     return-void
 .end method

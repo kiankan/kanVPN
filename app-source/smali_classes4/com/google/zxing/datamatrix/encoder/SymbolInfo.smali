@@ -717,100 +717,100 @@
 .end method
 
 .method private getHorizontalDataRegions()I
-    .locals 3
+    .locals 2
 
     .line 156
-    iget v0, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->dataRegions:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->dataRegions:I
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    if-eq v0, v1, :cond_2
+    if-eq p0, v0, :cond_2
 
-    const/4 v1, 0x2
+    const/4 v0, 0x2
 
-    if-eq v0, v1, :cond_2
-
-    const/4 v2, 0x4
-
-    if-eq v0, v2, :cond_2
-
-    const/16 v1, 0x10
-
-    if-eq v0, v1, :cond_1
-
-    const/16 v1, 0x24
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x6
-
-    return v0
-
-    .line 167
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Cannot handle this number of data regions"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    return v2
-
-    :cond_2
-    return v1
-.end method
-
-.method private getVerticalDataRegions()I
-    .locals 3
-
-    .line 172
-    iget v0, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->dataRegions:I
-
-    const/4 v1, 0x1
-
-    if-eq v0, v1, :cond_3
-
-    const/4 v2, 0x2
-
-    if-eq v0, v2, :cond_3
+    if-eq p0, v0, :cond_2
 
     const/4 v1, 0x4
 
-    if-eq v0, v1, :cond_2
+    if-eq p0, v1, :cond_2
 
-    const/16 v2, 0x10
+    const/16 v0, 0x10
 
-    if-eq v0, v2, :cond_1
+    if-eq p0, v0, :cond_1
 
-    const/16 v1, 0x24
+    const/16 v0, 0x24
 
-    if-ne v0, v1, :cond_0
+    if-ne p0, v0, :cond_0
 
-    const/4 v0, 0x6
+    const/4 p0, 0x6
 
-    return v0
+    return p0
 
-    .line 183
+    .line 167
     :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    const-string v1, "Cannot handle this number of data regions"
+    const-string v0, "Cannot handle this number of data regions"
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw v0
+    throw p0
 
     :cond_1
     return v1
 
     :cond_2
-    return v2
+    return v0
+.end method
+
+.method private getVerticalDataRegions()I
+    .locals 2
+
+    .line 172
+    iget p0, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->dataRegions:I
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_3
+
+    const/4 v1, 0x2
+
+    if-eq p0, v1, :cond_3
+
+    const/4 v0, 0x4
+
+    if-eq p0, v0, :cond_2
+
+    const/16 v1, 0x10
+
+    if-eq p0, v1, :cond_1
+
+    const/16 v0, 0x24
+
+    if-ne p0, v0, :cond_0
+
+    const/4 p0, 0x6
+
+    return p0
+
+    .line 183
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Cannot handle this number of data regions"
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    return v0
+
+    :cond_2
+    return v1
 
     :cond_3
-    return v1
+    return v0
 .end method
 
 .method public static lookup(I)Lcom/google/zxing/datamatrix/encoder/SymbolInfo;
@@ -1022,99 +1022,99 @@
 
 # virtual methods
 .method public getCodewordCount()I
-    .locals 2
+    .locals 1
 
     .line 204
     iget v0, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->dataCapacity:I
 
-    iget v1, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->errorCodewords:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->errorCodewords:I
 
-    add-int/2addr v0, v1
+    add-int/2addr v0, p0
 
     return v0
 .end method
 
 .method public final getDataCapacity()I
-    .locals 1
+    .locals 0
 
     .line 212
-    iget v0, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->dataCapacity:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->dataCapacity:I
 
-    return v0
+    return p0
 .end method
 
 .method public getDataLengthForInterleavedBlock(I)I
     .locals 0
 
     .line 220
-    iget p1, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->rsBlockData:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->rsBlockData:I
 
-    return p1
+    return p0
 .end method
 
 .method public final getErrorCodewords()I
-    .locals 1
+    .locals 0
 
     .line 216
-    iget v0, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->errorCodewords:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->errorCodewords:I
 
-    return v0
+    return p0
 .end method
 
 .method public final getErrorLengthForInterleavedBlock(I)I
     .locals 0
 
     .line 224
-    iget p1, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->rsBlockError:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->rsBlockError:I
 
-    return p1
+    return p0
 .end method
 
 .method public getInterleavedBlockCount()I
-    .locals 2
+    .locals 1
 
     .line 208
     iget v0, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->dataCapacity:I
 
-    iget v1, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->rsBlockData:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->rsBlockData:I
 
-    div-int/2addr v0, v1
+    div-int/2addr v0, p0
 
     return v0
 .end method
 
 .method public final getSymbolDataHeight()I
-    .locals 2
+    .locals 1
 
     .line 192
     invoke-direct {p0}, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->getVerticalDataRegions()I
 
     move-result v0
 
-    iget v1, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->matrixHeight:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->matrixHeight:I
 
-    mul-int/2addr v0, v1
+    mul-int/2addr v0, p0
 
     return v0
 .end method
 
 .method public final getSymbolDataWidth()I
-    .locals 2
+    .locals 1
 
     .line 188
     invoke-direct {p0}, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->getHorizontalDataRegions()I
 
     move-result v0
 
-    iget v1, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->matrixWidth:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->matrixWidth:I
 
-    mul-int/2addr v0, v1
+    mul-int/2addr v0, p0
 
     return v0
 .end method
 
 .method public final getSymbolHeight()I
-    .locals 2
+    .locals 1
 
     .line 200
     invoke-virtual {p0}, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->getSymbolDataHeight()I
@@ -1123,17 +1123,17 @@
 
     invoke-direct {p0}, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->getVerticalDataRegions()I
 
-    move-result v1
+    move-result p0
 
-    mul-int/lit8 v1, v1, 0x2
+    mul-int/lit8 p0, p0, 0x2
 
-    add-int/2addr v0, v1
+    add-int/2addr v0, p0
 
     return v0
 .end method
 
 .method public final getSymbolWidth()I
-    .locals 2
+    .locals 1
 
     .line 196
     invoke-virtual {p0}, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->getSymbolDataWidth()I
@@ -1142,11 +1142,11 @@
 
     invoke-direct {p0}, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->getHorizontalDataRegions()I
 
-    move-result v1
+    move-result p0
 
-    mul-int/lit8 v1, v1, 0x2
+    mul-int/lit8 p0, p0, 0x2
 
-    add-int/2addr v0, v1
+    add-int/2addr v0, p0
 
     return v0
 .end method
@@ -1156,8 +1156,6 @@
 
     .line 229
     new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     iget-boolean v1, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->rectangular:Z
 
@@ -1171,7 +1169,7 @@
     const-string v1, "Square Symbol:"
 
     :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     const-string v1, " data region "
 
@@ -1239,13 +1237,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->errorCodewords:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->errorCodewords:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

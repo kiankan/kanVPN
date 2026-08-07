@@ -6,7 +6,7 @@
 # annotations
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u00004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0015\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\u0018\u00002\u00020\u0001B\u0007\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J \u0010\u0004\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010\u0008\u001a\u00020\t2\u0006\u0010\n\u001a\u00020\u000bH\u0016J(\u0010\u000c\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010\u0008\u001a\u00020\t2\u0006\u0010\n\u001a\u00020\u000b2\u0006\u0010\r\u001a\u00020\u000eH\u0002J\u0018\u0010\u000f\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010\u0010\u001a\u00020\u0011H\u0016\u00a8\u0006\u0012"
+        "\u0000:\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0015\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\u0008\u0007\u0018\u00002\u00020\u0001B\u0007\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J \u0010\u0004\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010\u0008\u001a\u00020\t2\u0006\u0010\n\u001a\u00020\u000bH\u0016J(\u0010\u000c\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010\u0008\u001a\u00020\t2\u0006\u0010\n\u001a\u00020\u000b2\u0006\u0010\r\u001a\u00020\u000eH\u0002J\u0018\u0010\u000f\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010\u0010\u001a\u00020\u0011H\u0016\u00ca\u0001\u000c\u0008\u0013\u0012\u0008\u0008\u0014\u0012\u0004\u0008\u0003\u0010\u0000\u00a8\u0006\u0012"
     }
     d2 = {
         "Lcom/v2ray/ang/receiver/WidgetProvider;",
@@ -27,108 +27,120 @@
         "onReceive",
         "intent",
         "Landroid/content/Intent;",
-        "app_playstoreRelease"
+        "v2rayNG:app_playstoreRelease",
+        "Landroidx/compose/runtime/internal/StabilityInferred;",
+        "parameters"
     }
     k = 0x1
     mv = {
         0x2,
-        0x3,
+        0x4,
         0x0
     }
     xi = 0x30
 .end annotation
 
 
+# static fields
+.field public static final $stable:I = 0x8
+
+
 # direct methods
+.method static constructor <clinit>()V
+    .locals 0
+
+    return-void
+.end method
+
 .method public constructor <init>()V
     .locals 0
 
-    .line 14
+    .line 15
     invoke-direct {p0}, Landroid/appwidget/AppWidgetProvider;-><init>()V
 
     return-void
 .end method
 
 .method private final updateWidgetBackground(Landroid/content/Context;Landroid/appwidget/AppWidgetManager;[IZ)V
-    .locals 4
+    .locals 3
 
-    .line 37
-    new-instance v0, Landroid/widget/RemoteViews;
+    .line 38
+    new-instance p0, Landroid/widget/RemoteViews;
 
     invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    sget v2, Lcom/v2ray/ang/R$layout;->widget_switch:I
+    sget v1, Lcom/v2ray/ang/R$layout;->widget_switch:I
 
-    invoke-direct {v0, v1, v2}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
-
-    .line 38
-    new-instance v1, Landroid/content/Intent;
-
-    const-class v2, Lcom/v2ray/ang/receiver/WidgetProvider;
-
-    invoke-direct {v1, p1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    invoke-direct {p0, v0, v1}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
     .line 39
-    const-string v2, "com.kanvpn.client.action.widget.click"
+    new-instance v0, Landroid/content/Intent;
 
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+    const-class v1, Lcom/v2ray/ang/receiver/WidgetProvider;
 
-    .line 42
-    sget v2, Lcom/v2ray/ang/R$id;->layout_switch:I
-
-    const/high16 v3, 0xc000000
+    invoke-direct {v0, p1, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 40
-    invoke-static {p1, v2, v1, v3}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+    const-string v1, "com.kanvpn.client.action.widget.click"
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 43
+    sget v1, Lcom/v2ray/ang/R$id;->layout_switch:I
+
+    const/high16 v2, 0xc000000
+
+    .line 41
+    invoke-static {p1, v1, v0, v2}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object p1
 
-    .line 46
-    sget v1, Lcom/v2ray/ang/R$id;->layout_switch:I
-
-    invoke-virtual {v0, v1, p1}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
-
     .line 47
+    sget v0, Lcom/v2ray/ang/R$id;->layout_switch:I
+
+    invoke-virtual {p0, v0, p1}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
+
+    .line 48
     const-string p1, "setBackgroundResource"
 
-    const-string v1, "setImageResource"
+    const-string v0, "setImageResource"
 
     if-eqz p4, :cond_0
 
-    .line 48
+    .line 49
     sget p4, Lcom/v2ray/ang/R$id;->image_switch:I
 
-    sget v2, Lcom/v2ray/ang/R$drawable;->ic_stop_24dp:I
+    sget v1, Lcom/v2ray/ang/R$drawable;->ic_stop_24dp:I
 
-    invoke-virtual {v0, p4, v1, v2}, Landroid/widget/RemoteViews;->setInt(ILjava/lang/String;I)V
+    invoke-virtual {p0, p4, v0, v1}, Landroid/widget/RemoteViews;->setInt(ILjava/lang/String;I)V
 
-    .line 49
+    .line 50
     sget p4, Lcom/v2ray/ang/R$id;->layout_background:I
 
-    sget v1, Lcom/v2ray/ang/R$drawable;->ic_rounded_corner_active:I
+    sget v0, Lcom/v2ray/ang/R$drawable;->ic_rounded_corner_active:I
 
-    invoke-virtual {v0, p4, p1, v1}, Landroid/widget/RemoteViews;->setInt(ILjava/lang/String;I)V
+    invoke-virtual {p0, p4, p1, v0}, Landroid/widget/RemoteViews;->setInt(ILjava/lang/String;I)V
 
     goto :goto_0
 
-    .line 51
+    .line 52
     :cond_0
     sget p4, Lcom/v2ray/ang/R$id;->image_switch:I
 
-    sget v2, Lcom/v2ray/ang/R$drawable;->ic_play_24dp:I
+    sget v1, Lcom/v2ray/ang/R$drawable;->ic_play_24dp:I
 
-    invoke-virtual {v0, p4, v1, v2}, Landroid/widget/RemoteViews;->setInt(ILjava/lang/String;I)V
+    invoke-virtual {p0, p4, v0, v1}, Landroid/widget/RemoteViews;->setInt(ILjava/lang/String;I)V
 
-    .line 52
+    .line 53
     sget p4, Lcom/v2ray/ang/R$id;->layout_background:I
 
-    sget v1, Lcom/v2ray/ang/R$drawable;->ic_rounded_corner_inactive:I
+    sget v0, Lcom/v2ray/ang/R$drawable;->ic_rounded_corner_inactive:I
 
-    invoke-virtual {v0, p4, p1, v1}, Landroid/widget/RemoteViews;->setInt(ILjava/lang/String;I)V
+    invoke-virtual {p0, p4, p1, v0}, Landroid/widget/RemoteViews;->setInt(ILjava/lang/String;I)V
 
-    .line 55
+    .line 56
     :goto_0
     array-length p1, p3
 
@@ -137,10 +149,10 @@
     :goto_1
     if-ge p4, p1, :cond_1
 
-    aget v1, p3, p4
+    aget v0, p3, p4
 
-    .line 56
-    invoke-virtual {p2, v1, v0}, Landroid/appwidget/AppWidgetManager;->updateAppWidget(ILandroid/widget/RemoteViews;)V
+    .line 57
+    invoke-virtual {p2, v0, p0}, Landroid/appwidget/AppWidgetManager;->updateAppWidget(ILandroid/widget/RemoteViews;)V
 
     add-int/lit8 p4, p4, 0x1
 
@@ -163,10 +175,10 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 68
+    .line 69
     invoke-super {p0, p1, p2}, Landroid/appwidget/AppWidgetProvider;->onReceive(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 69
+    .line 70
     const-string v0, "com.kanvpn.client.action.widget.click"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -179,31 +191,31 @@
 
     if-eqz v0, :cond_1
 
-    .line 70
-    sget-object p2, Lcom/v2ray/ang/handler/V2RayServiceManager;->INSTANCE:Lcom/v2ray/ang/handler/V2RayServiceManager;
-
-    invoke-virtual {p2}, Lcom/v2ray/ang/handler/V2RayServiceManager;->isRunning()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
     .line 71
-    sget-object p2, Lcom/v2ray/ang/handler/V2RayServiceManager;->INSTANCE:Lcom/v2ray/ang/handler/V2RayServiceManager;
+    sget-object p0, Lcom/v2ray/ang/core/CoreServiceManager;->INSTANCE:Lcom/v2ray/ang/core/CoreServiceManager;
 
-    invoke-virtual {p2, p1}, Lcom/v2ray/ang/handler/V2RayServiceManager;->stopVService(Landroid/content/Context;)V
+    invoke-virtual {p0}, Lcom/v2ray/ang/core/CoreServiceManager;->isRunning()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    .line 72
+    sget-object p0, Lcom/v2ray/ang/core/LauncherManager;->INSTANCE:Lcom/v2ray/ang/core/LauncherManager;
+
+    invoke-virtual {p0, p1}, Lcom/v2ray/ang/core/LauncherManager;->stopService(Landroid/content/Context;)V
 
     return-void
 
-    .line 73
+    .line 74
     :cond_0
-    sget-object p2, Lcom/v2ray/ang/handler/V2RayServiceManager;->INSTANCE:Lcom/v2ray/ang/handler/V2RayServiceManager;
+    sget-object p0, Lcom/v2ray/ang/core/LauncherManager;->INSTANCE:Lcom/v2ray/ang/core/LauncherManager;
 
-    invoke-virtual {p2, p1}, Lcom/v2ray/ang/handler/V2RayServiceManager;->startVServiceFromToggle(Landroid/content/Context;)Z
+    invoke-virtual {p0, p1}, Lcom/v2ray/ang/core/LauncherManager;->startServiceFromToggle(Landroid/content/Context;)Z
 
     return-void
 
-    .line 75
+    .line 76
     :cond_1
     const-string v0, "com.kanvpn.client.action.activity"
 
@@ -217,14 +229,14 @@
 
     if-eqz v0, :cond_4
 
-    .line 76
+    .line 77
     invoke-static {p1}, Landroid/appwidget/AppWidgetManager;->getInstance(Landroid/content/Context;)Landroid/appwidget/AppWidgetManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_4
 
-    .line 77
+    .line 78
     const-string v1, "key"
 
     const/4 v2, 0x0
@@ -259,7 +271,7 @@
 
     goto :goto_0
 
-    .line 87
+    .line 88
     :cond_2
     new-instance p2, Landroid/content/ComponentName;
 
@@ -271,12 +283,12 @@
 
     invoke-static {p2, v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 86
+    .line 87
     invoke-direct {p0, p1, v0, p2, v2}, Lcom/v2ray/ang/receiver/WidgetProvider;->updateWidgetBackground(Landroid/content/Context;Landroid/appwidget/AppWidgetManager;[IZ)V
 
     return-void
 
-    .line 80
+    .line 81
     :cond_3
     new-instance p2, Landroid/content/ComponentName;
 
@@ -290,7 +302,7 @@
 
     const/4 v1, 0x1
 
-    .line 79
+    .line 80
     invoke-direct {p0, p1, v0, p2, v1}, Lcom/v2ray/ang/receiver/WidgetProvider;->updateWidgetBackground(Landroid/content/Context;Landroid/appwidget/AppWidgetManager;[IZ)V
 
     :cond_4
@@ -313,13 +325,13 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 24
+    .line 25
     invoke-super {p0, p1, p2, p3}, Landroid/appwidget/AppWidgetProvider;->onUpdate(Landroid/content/Context;Landroid/appwidget/AppWidgetManager;[I)V
 
-    .line 25
-    sget-object v0, Lcom/v2ray/ang/handler/V2RayServiceManager;->INSTANCE:Lcom/v2ray/ang/handler/V2RayServiceManager;
+    .line 26
+    sget-object v0, Lcom/v2ray/ang/core/CoreServiceManager;->INSTANCE:Lcom/v2ray/ang/core/CoreServiceManager;
 
-    invoke-virtual {v0}, Lcom/v2ray/ang/handler/V2RayServiceManager;->isRunning()Z
+    invoke-virtual {v0}, Lcom/v2ray/ang/core/CoreServiceManager;->isRunning()Z
 
     move-result v0
 

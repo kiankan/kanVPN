@@ -35,7 +35,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -69,32 +69,32 @@
 
 # virtual methods
 .method public final resultCodeToString(I)Ljava/lang/String;
-    .locals 1
+    .locals 0
     .annotation runtime Lkotlin/jvm/JvmStatic;
     .end annotation
 
-    const/4 v0, -0x1
+    const/4 p0, -0x1
 
-    if-eq p1, v0, :cond_1
+    if-eq p1, p0, :cond_1
 
     if-eqz p1, :cond_0
 
     .line 71
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 70
     :cond_0
-    const-string p1, "RESULT_CANCELED"
+    const-string p0, "RESULT_CANCELED"
 
-    return-object p1
+    return-object p0
 
     .line 69
     :cond_1
-    const-string p1, "RESULT_OK"
+    const-string p0, "RESULT_OK"
 
-    return-object p1
+    return-object p0
 .end method

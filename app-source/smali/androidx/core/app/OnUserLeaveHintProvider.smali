@@ -16,12 +16,12 @@
         "listener",
         "Ljava/lang/Runnable;",
         "removeOnUserLeaveHintListener",
-        "core_release"
+        "core"
     }
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30

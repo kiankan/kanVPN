@@ -32,7 +32,7 @@
 .method private static synthetic $values()[Landroidx/camera/core/impl/CameraCaptureFailure$Reason;
     .locals 1
 
-    .line 50
+    .line 49
     sget-object v0, Landroidx/camera/core/impl/CameraCaptureFailure$Reason;->ERROR:Landroidx/camera/core/impl/CameraCaptureFailure$Reason;
 
     filled-new-array {v0}, [Landroidx/camera/core/impl/CameraCaptureFailure$Reason;
@@ -45,7 +45,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 51
+    .line 50
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureFailure$Reason;
 
     const-string v1, "ERROR"
@@ -56,7 +56,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureFailure$Reason;->ERROR:Landroidx/camera/core/impl/CameraCaptureFailure$Reason;
 
-    .line 50
+    .line 49
     invoke-static {}, Landroidx/camera/core/impl/CameraCaptureFailure$Reason;->$values()[Landroidx/camera/core/impl/CameraCaptureFailure$Reason;
 
     move-result-object v0
@@ -85,7 +85,7 @@
         }
     .end annotation
 
-    .line 50
+    .line 49
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -102,7 +102,7 @@
         }
     .end annotation
 
-    .line 50
+    .line 49
     const-class v0, Landroidx/camera/core/impl/CameraCaptureFailure$Reason;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -117,7 +117,7 @@
 .method public static values()[Landroidx/camera/core/impl/CameraCaptureFailure$Reason;
     .locals 1
 
-    .line 50
+    .line 49
     sget-object v0, Landroidx/camera/core/impl/CameraCaptureFailure$Reason;->$VALUES:[Landroidx/camera/core/impl/CameraCaptureFailure$Reason;
 
     invoke-virtual {v0}, [Landroidx/camera/core/impl/CameraCaptureFailure$Reason;->clone()Ljava/lang/Object;

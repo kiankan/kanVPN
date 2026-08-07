@@ -51,17 +51,17 @@
     .end annotation
 
     .line 321
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    const-string p2, "Records are not supported on this JVM, this method should not be called"
+    const-string p1, "Records are not supported on this JVM, this method should not be called"
 
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method getCanonicalRecordConstructor(Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -75,17 +75,17 @@
     .end annotation
 
     .line 315
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    const-string v0, "Records are not supported on this JVM, this method should not be called"
+    const-string p1, "Records are not supported on this JVM, this method should not be called"
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method getRecordComponentNames(Ljava/lang/Class;)[Ljava/lang/String;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -96,13 +96,13 @@
     .end annotation
 
     .line 309
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    const-string v0, "Records are not supported on this JVM, this method should not be called"
+    const-string p1, "Records are not supported on this JVM, this method should not be called"
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method isRecord(Ljava/lang/Class;)Z
@@ -115,7 +115,7 @@
         }
     .end annotation
 
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method

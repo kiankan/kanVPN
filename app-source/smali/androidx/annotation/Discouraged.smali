@@ -8,7 +8,7 @@
 
 # annotations
 .annotation runtime Ljava/lang/annotation/Retention;
-    value = .enum Ljava/lang/annotation/RetentionPolicy;->SOURCE:Ljava/lang/annotation/RetentionPolicy;
+    value = .enum Ljava/lang/annotation/RetentionPolicy;->CLASS:Ljava/lang/annotation/RetentionPolicy;
 .end annotation
 
 .annotation runtime Ljava/lang/annotation/Target;
@@ -36,15 +36,15 @@
     }
     k = 0x1
     mv = {
+        0x2,
         0x1,
-        0x9,
         0x0
     }
     xi = 0x30
 .end annotation
 
 .annotation runtime Lkotlin/annotation/Retention;
-    value = .enum Lkotlin/annotation/AnnotationRetention;->SOURCE:Lkotlin/annotation/AnnotationRetention;
+    value = .enum Lkotlin/annotation/AnnotationRetention;->BINARY:Lkotlin/annotation/AnnotationRetention;
 .end annotation
 
 .annotation runtime Lkotlin/annotation/Target;

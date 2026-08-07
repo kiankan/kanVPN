@@ -20,7 +20,7 @@
 
 # virtual methods
 .method public parseInformation()Ljava/lang/String;
-    .locals 3
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/google/zxing/NotFoundException;,
@@ -36,13 +36,13 @@
     .line 48
     invoke-virtual {p0}, Lcom/google/zxing/oned/rss/expanded/decoders/AnyAIDecoder;->getGeneralDecoder()Lcom/google/zxing/oned/rss/expanded/decoders/GeneralAppIdDecoder;
 
-    move-result-object v1
+    move-result-object p0
 
-    const/4 v2, 0x5
+    const/4 v1, 0x5
 
-    invoke-virtual {v1, v0, v2}, Lcom/google/zxing/oned/rss/expanded/decoders/GeneralAppIdDecoder;->decodeAllCodes(Ljava/lang/StringBuilder;I)Ljava/lang/String;
+    invoke-virtual {p0, v0, v1}, Lcom/google/zxing/oned/rss/expanded/decoders/GeneralAppIdDecoder;->decodeAllCodes(Ljava/lang/StringBuilder;I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

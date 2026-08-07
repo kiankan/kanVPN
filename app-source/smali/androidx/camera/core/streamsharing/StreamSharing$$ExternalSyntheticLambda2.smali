@@ -25,14 +25,14 @@
 
 # virtual methods
 .method public final jpegSnapshot(II)Lcom/google/common/util/concurrent/ListenableFuture;
-    .locals 1
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Landroidx/camera/core/streamsharing/StreamSharing$$ExternalSyntheticLambda2;->f$0:Landroidx/camera/core/streamsharing/StreamSharing;
+    iget-object p0, p0, Landroidx/camera/core/streamsharing/StreamSharing$$ExternalSyntheticLambda2;->f$0:Landroidx/camera/core/streamsharing/StreamSharing;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/camera/core/streamsharing/StreamSharing;->lambda$new$0$androidx-camera-core-streamsharing-StreamSharing(II)Lcom/google/common/util/concurrent/ListenableFuture;
+    invoke-virtual {p0, p1, p2}, Landroidx/camera/core/streamsharing/StreamSharing;->lambda$new$0$androidx-camera-core-streamsharing-StreamSharing(II)Lcom/google/common/util/concurrent/ListenableFuture;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

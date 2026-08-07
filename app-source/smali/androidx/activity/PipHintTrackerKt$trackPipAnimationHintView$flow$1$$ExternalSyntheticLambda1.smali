@@ -29,14 +29,14 @@
 
 # virtual methods
 .method public final onScrollChanged()V
-    .locals 2
+    .locals 1
 
     .line 0
     iget-object v0, p0, Landroidx/activity/PipHintTrackerKt$trackPipAnimationHintView$flow$1$$ExternalSyntheticLambda1;->f$0:Lkotlinx/coroutines/channels/ProducerScope;
 
-    iget-object v1, p0, Landroidx/activity/PipHintTrackerKt$trackPipAnimationHintView$flow$1$$ExternalSyntheticLambda1;->f$1:Landroid/view/View;
+    iget-object p0, p0, Landroidx/activity/PipHintTrackerKt$trackPipAnimationHintView$flow$1$$ExternalSyntheticLambda1;->f$1:Landroid/view/View;
 
-    invoke-static {v0, v1}, Landroidx/activity/PipHintTrackerKt$trackPipAnimationHintView$flow$1;->$r8$lambda$noXGr5XZ6ZQiw0NE_bFNhh3sxIQ(Lkotlinx/coroutines/channels/ProducerScope;Landroid/view/View;)V
+    invoke-static {v0, p0}, Landroidx/activity/PipHintTrackerKt$trackPipAnimationHintView$flow$1;->invokeSuspend$lambda$1(Lkotlinx/coroutines/channels/ProducerScope;Landroid/view/View;)V
 
     return-void
 .end method

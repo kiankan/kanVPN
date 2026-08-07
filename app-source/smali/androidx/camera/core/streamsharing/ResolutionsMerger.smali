@@ -58,7 +58,7 @@
 
     const-wide v0, 0x4002f684bda12f68L    # 2.3703703703703702
 
-    .line 71
+    .line 72
     invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v0
@@ -81,7 +81,7 @@
         }
     .end annotation
 
-    .line 96
+    .line 90
     new-instance v0, Landroidx/camera/core/internal/SupportedOutputSizesSorter;
 
     invoke-direct {v0, p2, p1}, Landroidx/camera/core/internal/SupportedOutputSizesSorter;-><init>(Landroidx/camera/core/impl/CameraInfoInternal;Landroid/util/Size;)V
@@ -106,40 +106,40 @@
         }
     .end annotation
 
-    .line 103
+    .line 97
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 85
+    .line 80
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mChildSizesCache:Ljava/util/Map;
 
-    .line 104
+    .line 98
     iput-object p1, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mSensorSize:Landroid/util/Size;
 
-    .line 105
+    .line 99
     invoke-static {p1}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->getSensorAspectRatio(Landroid/util/Size;)Landroid/util/Rational;
 
     move-result-object p1
 
     iput-object p1, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mSensorAspectRatio:Landroid/util/Rational;
 
-    .line 106
+    .line 100
     invoke-static {p1}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->getFallbackAspectRatio(Landroid/util/Rational;)Landroid/util/Rational;
 
     move-result-object p1
 
     iput-object p1, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mFallbackAspectRatio:Landroid/util/Rational;
 
-    .line 107
+    .line 101
     iput-object p2, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mCameraInfo:Landroidx/camera/core/impl/CameraInfoInternal;
 
-    .line 108
+    .line 102
     iput-object p3, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mChildrenConfigs:Ljava/util/Set;
 
-    .line 109
+    .line 103
     iput-object p4, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mSizeSorter:Landroidx/camera/core/internal/SupportedOutputSizesSorter;
 
     return-void
@@ -157,12 +157,12 @@
         }
     .end annotation
 
-    .line 90
-    invoke-interface {p1}, Landroidx/camera/core/impl/CameraInternal;->getCameraControlInternal()Landroidx/camera/core/impl/CameraControlInternal;
+    .line 84
+    invoke-interface {p1}, Landroidx/camera/core/impl/CameraInternal;->getCameraInfoInternal()Landroidx/camera/core/impl/CameraInfoInternal;
 
     move-result-object v0
 
-    invoke-interface {v0}, Landroidx/camera/core/impl/CameraControlInternal;->getSensorRect()Landroid/graphics/Rect;
+    invoke-interface {v0}, Landroidx/camera/core/impl/CameraInfoInternal;->getSensorRect()Landroid/graphics/Rect;
 
     move-result-object v0
 
@@ -170,12 +170,12 @@
 
     move-result-object v0
 
-    .line 91
+    .line 85
     invoke-interface {p1}, Landroidx/camera/core/impl/CameraInternal;->getCameraInfoInternal()Landroidx/camera/core/impl/CameraInfoInternal;
 
     move-result-object p1
 
-    .line 90
+    .line 84
     invoke-direct {p0, v0, p1, p2}, Landroidx/camera/core/streamsharing/ResolutionsMerger;-><init>(Landroid/util/Size;Landroidx/camera/core/impl/CameraInfoInternal;Ljava/util/Set;)V
 
     return-void
@@ -184,7 +184,7 @@
 .method static synthetic access$000(Landroid/util/Rational;Landroid/util/Rational;)F
     .locals 0
 
-    .line 67
+    .line 68
     invoke-static {p0, p1}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->computeAreaOverlapping(Landroid/util/Rational;Landroid/util/Rational;)F
 
     move-result p0
@@ -193,53 +193,53 @@
 .end method
 
 .method private areCroppingInDifferentDirection(FFF)Z
-    .locals 3
+    .locals 2
 
-    cmpl-float p1, p1, p2
+    cmpl-float p0, p1, p2
 
-    const/4 v0, 0x0
+    const/4 p1, 0x0
 
-    if-eqz p1, :cond_3
+    if-eqz p0, :cond_3
 
-    cmpl-float v1, p2, p3
+    cmpl-float v0, p2, p3
 
-    if-nez v1, :cond_0
+    if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 v2, 0x1
+    const/4 v1, 0x1
 
-    if-lez p1, :cond_2
+    if-lez p0, :cond_2
 
-    cmpg-float p1, p2, p3
+    cmpg-float p0, p2, p3
 
-    if-gez p1, :cond_1
+    if-gez p0, :cond_1
 
-    return v2
+    return v1
 
     :cond_1
-    return v0
+    return p1
 
     :cond_2
-    if-lez v1, :cond_3
+    if-lez v0, :cond_3
 
-    return v2
+    return v1
 
     :cond_3
     :goto_0
-    return v0
+    return p1
 .end method
 
 .method private static computeAreaOverlapping(Landroid/util/Rational;Landroid/util/Rational;)F
     .locals 1
 
-    .line 849
+    .line 866
     invoke-virtual {p0}, Landroid/util/Rational;->floatValue()F
 
     move-result p0
 
-    .line 850
+    .line 867
     invoke-virtual {p1}, Landroid/util/Rational;->floatValue()F
 
     move-result p1
@@ -273,12 +273,12 @@
         }
     .end annotation
 
-    .line 499
+    .line 529
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 500
+    .line 530
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -297,14 +297,14 @@
 
     check-cast v1, Landroid/util/Size;
 
-    .line 501
+    .line 531
     invoke-direct {p0, p1, v1}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->isDoubleCropping(Landroid/util/Rational;Landroid/util/Size;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 502
+    .line 532
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -327,17 +327,17 @@
         }
     .end annotation
 
-    .line 728
+    .line 748
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 729
+    .line 749
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 730
+    .line 750
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -356,7 +356,7 @@
 
     check-cast v2, Landroid/util/Size;
 
-    .line 733
+    .line 753
     invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v3
@@ -378,7 +378,7 @@
 
     check-cast v4, Landroid/util/Rational;
 
-    .line 734
+    .line 754
     invoke-static {v2, v4}, Landroidx/camera/core/impl/utils/AspectRatioUtil;->hasMatchingAspectRatio(Landroid/util/Size;Landroid/util/Rational;)Z
 
     move-result v5
@@ -393,7 +393,7 @@
     :goto_1
     if-eqz v4, :cond_3
 
-    .line 742
+    .line 762
     invoke-interface {v0, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
@@ -406,7 +406,7 @@
 
     check-cast v3, Landroid/util/Size;
 
-    .line 743
+    .line 763
     invoke-virtual {v2}, Landroid/util/Size;->getHeight()I
 
     move-result v5
@@ -417,7 +417,7 @@
 
     if-gt v5, v6, :cond_0
 
-    .line 744
+    .line 764
     invoke-virtual {v2}, Landroid/util/Size;->getWidth()I
 
     move-result v5
@@ -428,7 +428,7 @@
 
     if-gt v5, v6, :cond_0
 
-    .line 745
+    .line 765
     invoke-virtual {v2}, Landroid/util/Size;->getWidth()I
 
     move-result v5
@@ -439,7 +439,7 @@
 
     if-ne v5, v6, :cond_4
 
-    .line 746
+    .line 766
     invoke-virtual {v2}, Landroid/util/Size;->getHeight()I
 
     move-result v5
@@ -452,17 +452,17 @@
 
     goto :goto_0
 
-    .line 750
+    .line 770
     :cond_3
     invoke-static {v2}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->toRational(Landroid/util/Size;)Landroid/util/Rational;
 
     move-result-object v4
 
-    .line 753
+    .line 773
     :cond_4
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 754
+    .line 774
     invoke-interface {v0, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
@@ -488,7 +488,7 @@
         }
     .end annotation
 
-    .line 706
+    .line 726
     invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
 
     move-result v0
@@ -503,13 +503,13 @@
 
     goto :goto_1
 
-    .line 710
+    .line 730
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 711
+    .line 731
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -528,14 +528,14 @@
 
     check-cast v1, Landroid/util/Size;
 
-    .line 712
+    .line 732
     invoke-static {p0, v1}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->isAnyChildSizeCanBeCroppedOutWithoutUpscalingParent(Ljava/util/Collection;Landroid/util/Size;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 713
+    .line 733
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -543,7 +543,7 @@
     :cond_2
     return-object v0
 
-    .line 707
+    .line 727
     :cond_3
     :goto_1
     new-instance p0, Ljava/util/ArrayList;
@@ -568,12 +568,12 @@
         }
     .end annotation
 
-    .line 684
+    .line 705
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 685
+    .line 706
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -592,14 +592,14 @@
 
     check-cast v1, Landroid/util/Size;
 
-    .line 686
+    .line 707
     invoke-static {v1, p0}, Landroidx/camera/core/impl/utils/AspectRatioUtil;->hasMatchingAspectRatio(Landroid/util/Size;Landroid/util/Rational;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 687
+    .line 708
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -611,7 +611,7 @@
 .method private static findCloserAspectRatio(Landroid/util/Size;)Landroid/util/Rational;
     .locals 4
 
-    .line 598
+    .line 624
     invoke-virtual {p0}, Landroid/util/Size;->getWidth()I
 
     move-result v0
@@ -626,19 +626,19 @@
 
     div-double/2addr v0, v2
 
-    .line 600
+    .line 626
     sget-wide v2, Landroidx/camera/core/streamsharing/ResolutionsMerger;->SAME_AREA_WIDTH_HEIGHT_RATIO:D
 
     cmpl-double p0, v0, v2
 
     if-lez p0, :cond_0
 
-    .line 601
+    .line 627
     sget-object p0, Landroidx/camera/core/impl/utils/AspectRatioUtil;->ASPECT_RATIO_16_9:Landroid/util/Rational;
 
     return-object p0
 
-    .line 603
+    .line 629
     :cond_0
     sget-object p0, Landroidx/camera/core/impl/utils/AspectRatioUtil;->ASPECT_RATIO_4_3:Landroid/util/Rational;
 
@@ -646,7 +646,7 @@
 .end method
 
 .method private getCameraSupportedHighResolutions()Ljava/util/List;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -656,20 +656,20 @@
         }
     .end annotation
 
-    .line 277
-    iget-object v0, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mCameraInfo:Landroidx/camera/core/impl/CameraInfoInternal;
+    .line 271
+    iget-object p0, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mCameraInfo:Landroidx/camera/core/impl/CameraInfoInternal;
 
-    const/16 v1, 0x22
+    const/16 v0, 0x22
 
-    invoke-interface {v0, v1}, Landroidx/camera/core/impl/CameraInfoInternal;->getSupportedHighResolutions(I)Ljava/util/List;
+    invoke-interface {p0, v0}, Landroidx/camera/core/impl/CameraInfoInternal;->getSupportedHighResolutions(I)Ljava/util/List;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method private getCameraSupportedResolutions()Ljava/util/List;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -679,37 +679,37 @@
         }
     .end annotation
 
-    .line 272
-    iget-object v0, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mCameraInfo:Landroidx/camera/core/impl/CameraInfoInternal;
+    .line 267
+    iget-object p0, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mCameraInfo:Landroidx/camera/core/impl/CameraInfoInternal;
 
-    const/16 v1, 0x22
+    const/16 v0, 0x22
 
-    invoke-interface {v0, v1}, Landroidx/camera/core/impl/CameraInfoInternal;->getSupportedResolutions(I)Ljava/util/List;
+    invoke-interface {p0, v0}, Landroidx/camera/core/impl/CameraInfoInternal;->getSupportedResolutions(I)Ljava/util/List;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method private static getCenterCroppedRectangle(Landroid/util/Rational;Landroid/util/Size;)Landroid/graphics/Rect;
     .locals 4
 
-    .line 617
+    .line 641
     invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
 
     move-result v0
 
-    .line 618
+    .line 642
     invoke-virtual {p1}, Landroid/util/Size;->getHeight()I
 
     move-result v1
 
-    .line 619
+    .line 643
     invoke-static {p1}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->toRational(Landroid/util/Size;)Landroid/util/Rational;
 
     move-result-object p1
 
-    .line 622
+    .line 646
     invoke-virtual {p0}, Landroid/util/Rational;->floatValue()F
 
     move-result v2
@@ -724,7 +724,7 @@
 
     if-nez v2, :cond_0
 
-    .line 623
+    .line 647
     new-instance p0, Landroid/graphics/RectF;
 
     int-to-float p1, v0
@@ -735,7 +735,7 @@
 
     goto :goto_1
 
-    .line 624
+    .line 648
     :cond_0
     invoke-virtual {p0}, Landroid/util/Rational;->floatValue()F
 
@@ -753,7 +753,7 @@
 
     int-to-float p1, v0
 
-    .line 625
+    .line 649
     invoke-virtual {p0}, Landroid/util/Rational;->floatValue()F
 
     move-result p0
@@ -766,7 +766,7 @@
 
     div-float/2addr v0, v2
 
-    .line 627
+    .line 651
     new-instance v1, Landroid/graphics/RectF;
 
     add-float/2addr p0, v0
@@ -778,7 +778,7 @@
     :cond_1
     int-to-float p1, v1
 
-    .line 629
+    .line 653
     invoke-virtual {p0}, Landroid/util/Rational;->floatValue()F
 
     move-result p0
@@ -791,7 +791,7 @@
 
     div-float/2addr v0, v2
 
-    .line 631
+    .line 655
     new-instance v1, Landroid/graphics/RectF;
 
     add-float/2addr p0, v0
@@ -801,13 +801,13 @@
     :goto_0
     move-object p0, v1
 
-    .line 635
+    .line 659
     :goto_1
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
-    .line 636
+    .line 660
     invoke-virtual {p0, p1}, Landroid/graphics/RectF;->round(Landroid/graphics/Rect;)V
 
     return-object p1
@@ -824,12 +824,12 @@
         }
     .end annotation
 
-    .line 487
+    .line 518
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 488
+    .line 519
     iget-object v1, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mChildrenConfigs:Ljava/util/Set;
 
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -849,12 +849,12 @@
 
     check-cast v2, Landroidx/camera/core/impl/UseCaseConfig;
 
-    .line 489
+    .line 520
     invoke-direct {p0, v2}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->getSortedChildSizes(Landroidx/camera/core/impl/UseCaseConfig;)Ljava/util/List;
 
     move-result-object v2
 
-    .line 490
+    .line 521
     invoke-interface {v0, v2}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
     goto :goto_0
@@ -866,12 +866,12 @@
 .method static getCropRectOfReferenceAspectRatio(Landroid/util/Size;Landroid/util/Size;)Landroid/graphics/Rect;
     .locals 0
 
-    .line 564
+    .line 593
     invoke-static {p1}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->toRational(Landroid/util/Size;)Landroid/util/Rational;
 
     move-result-object p1
 
-    .line 565
+    .line 594
     invoke-static {p1, p0}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->getCenterCroppedRectangle(Landroid/util/Rational;Landroid/util/Size;)Landroid/graphics/Rect;
 
     move-result-object p0
@@ -882,7 +882,7 @@
 .method private static getFallbackAspectRatio(Landroid/util/Rational;)Landroid/util/Rational;
     .locals 3
 
-    .line 649
+    .line 672
     sget-object v0, Landroidx/camera/core/impl/utils/AspectRatioUtil;->ASPECT_RATIO_4_3:Landroid/util/Rational;
 
     invoke-virtual {p0, v0}, Landroid/util/Rational;->equals(Ljava/lang/Object;)Z
@@ -891,12 +891,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 650
+    .line 673
     sget-object p0, Landroidx/camera/core/impl/utils/AspectRatioUtil;->ASPECT_RATIO_16_9:Landroid/util/Rational;
 
     return-object p0
 
-    .line 651
+    .line 674
     :cond_0
     sget-object v0, Landroidx/camera/core/impl/utils/AspectRatioUtil;->ASPECT_RATIO_16_9:Landroid/util/Rational;
 
@@ -906,12 +906,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 652
+    .line 675
     sget-object p0, Landroidx/camera/core/impl/utils/AspectRatioUtil;->ASPECT_RATIO_4_3:Landroid/util/Rational;
 
     return-object p0
 
-    .line 654
+    .line 677
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -949,7 +949,7 @@
         }
     .end annotation
 
-    .line 783
+    .line 802
     invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
 
     move-result v0
@@ -964,18 +964,18 @@
 
     goto :goto_1
 
-    .line 789
+    .line 808
     :cond_0
     invoke-static {p1}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->removeDuplicates(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p1
 
-    .line 791
+    .line 810
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 792
+    .line 811
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -994,19 +994,19 @@
 
     check-cast v1, Landroid/util/Size;
 
-    .line 793
+    .line 812
     invoke-static {p0, v1}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->isAllChildSizesCanBeCroppedOutWithoutUpscalingParent(Ljava/util/Collection;Landroid/util/Size;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 794
+    .line 813
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 800
+    .line 819
     :cond_2
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
@@ -1014,7 +1014,7 @@
 
     if-nez p0, :cond_3
 
-    .line 801
+    .line 820
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result p0
@@ -1026,7 +1026,7 @@
     :cond_3
     return-object v0
 
-    .line 784
+    .line 803
     :cond_4
     :goto_1
     new-instance p0, Ljava/util/ArrayList;
@@ -1036,7 +1036,7 @@
     return-object p0
 .end method
 
-.method private getPreferredChildSizePairInternal(Landroid/graphics/Rect;Landroidx/camera/core/impl/UseCaseConfig;Z)Landroid/util/Pair;
+.method private getPreferredChildSizeInternal(Landroid/graphics/Rect;Landroidx/camera/core/impl/UseCaseConfig;Z)Landroidx/camera/core/streamsharing/PreferredChildSize;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1044,48 +1044,57 @@
             "Landroid/graphics/Rect;",
             "Landroidx/camera/core/impl/UseCaseConfig<",
             "*>;Z)",
-            "Landroid/util/Pair<",
-            "Landroid/graphics/Rect;",
-            "Landroid/util/Size;",
-            ">;"
+            "Landroidx/camera/core/streamsharing/PreferredChildSize;"
         }
     .end annotation
 
     if-eqz p3, :cond_0
 
-    .line 192
+    .line 187
     invoke-static {p1}, Landroidx/camera/core/impl/utils/TransformUtils;->rectToSize(Landroid/graphics/Rect;)Landroid/util/Size;
 
     move-result-object p3
 
-    .line 193
-    invoke-virtual {p0, p3, p2}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->getPreferredChildSizeForViewport(Landroid/util/Size;Landroidx/camera/core/impl/UseCaseConfig;)Landroid/util/Size;
+    .line 188
+    invoke-virtual {p0, p3, p2}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->getPreferredChildSizeForViewport(Landroid/util/Size;Landroidx/camera/core/impl/UseCaseConfig;)Landroid/util/Pair;
 
-    move-result-object p2
+    move-result-object p0
+
+    .line 189
+    iget-object p2, p0, Landroid/util/Pair;->first:Ljava/lang/Object;
+
+    check-cast p2, Landroid/util/Size;
+
+    .line 190
+    iget-object p0, p0, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    check-cast p0, Landroid/util/Size;
 
     goto :goto_0
 
-    .line 195
+    .line 192
     :cond_0
     invoke-static {p1}, Landroidx/camera/core/impl/utils/TransformUtils;->rectToSize(Landroid/graphics/Rect;)Landroid/util/Size;
 
     move-result-object p1
 
-    .line 196
+    .line 193
     invoke-virtual {p0, p1, p2}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->getPreferredChildSize(Landroid/util/Size;Landroidx/camera/core/impl/UseCaseConfig;)Landroid/util/Size;
 
     move-result-object p2
 
-    .line 197
+    .line 194
     invoke-static {p1, p2}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->getCropRectOfReferenceAspectRatio(Landroid/util/Size;Landroid/util/Size;)Landroid/graphics/Rect;
 
     move-result-object p1
 
-    .line 200
-    :goto_0
-    new-instance p3, Landroid/util/Pair;
+    move-object p0, p2
 
-    invoke-direct {p3, p1, p2}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    .line 197
+    :goto_0
+    new-instance p3, Landroidx/camera/core/streamsharing/PreferredChildSize;
+
+    invoke-direct {p3, p1, p0, p2}, Landroidx/camera/core/streamsharing/PreferredChildSize;-><init>(Landroid/graphics/Rect;Landroid/util/Size;Landroid/util/Size;)V
 
     return-object p3
 .end method
@@ -1093,12 +1102,12 @@
 .method private static getSensorAspectRatio(Landroid/util/Size;)Landroid/util/Rational;
     .locals 3
 
-    .line 589
+    .line 616
     invoke-static {p0}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->findCloserAspectRatio(Landroid/util/Size;)Landroid/util/Rational;
 
     move-result-object v0
 
-    .line 590
+    .line 617
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "The closer aspect ratio to the sensor size ("
@@ -1129,7 +1138,7 @@
 .end method
 
 .method private getSortedChildSizes(Landroidx/camera/core/impl/UseCaseConfig;)Ljava/util/List;
-    .locals 3
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1141,7 +1150,7 @@
         }
     .end annotation
 
-    .line 458
+    .line 490
     iget-object v0, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mChildrenConfigs:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -1150,7 +1159,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 464
+    .line 496
     iget-object v0, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mChildSizesCache:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -1159,24 +1168,24 @@
 
     if-eqz v0, :cond_0
 
-    .line 465
-    iget-object v0, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mChildSizesCache:Ljava/util/Map;
+    .line 497
+    iget-object p0, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mChildSizesCache:Ljava/util/Map;
 
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Ljava/util/List;
+    check-cast p0, Ljava/util/List;
 
-    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Ljava/util/List;
+    check-cast p0, Ljava/util/List;
 
-    return-object p1
+    return-object p0
 
-    .line 468
+    .line 500
     :cond_0
     iget-object v0, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mSizeSorter:Landroidx/camera/core/internal/SupportedOutputSizesSorter;
 
@@ -1184,37 +1193,37 @@
 
     move-result-object v0
 
-    .line 469
+    .line 501
     invoke-static {v0}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->filterOutChildSizesThatWillNeverBeSelected(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 470
-    iget-object v1, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mChildSizesCache:Ljava/util/Map;
+    .line 502
+    iget-object p0, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mChildSizesCache:Ljava/util/Map;
 
-    invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object v0
 
-    .line 459
+    .line 491
     :cond_1
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v2, "Invalid child config: "
+    const-string v1, "Invalid child config: "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw v0
+    throw p0
 .end method
 
 .method private static getSupportedPrivResolutions(Ljava/util/List;)Ljava/util/List;
@@ -1234,7 +1243,7 @@
         }
     .end annotation
 
-    .line 571
+    .line 599
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -1252,7 +1261,7 @@
 
     check-cast v0, Landroid/util/Pair;
 
-    .line 572
+    .line 600
     iget-object v1, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/Integer;
@@ -1269,7 +1278,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 573
+    .line 601
     iget-object p0, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast p0, [Landroid/util/Size;
@@ -1280,7 +1289,7 @@
 
     return-object p0
 
-    .line 577
+    .line 605
     :cond_1
     new-instance p0, Ljava/util/ArrayList;
 
@@ -1290,7 +1299,7 @@
 .end method
 
 .method private groupSizesByAspectRatio(Ljava/util/List;)Ljava/util/Map;
-    .locals 6
+    .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1305,45 +1314,45 @@
         }
     .end annotation
 
-    .line 410
-    new-instance v0, Ljava/util/HashMap;
+    .line 443
+    new-instance p0, Ljava/util/HashMap;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
 
-    .line 413
-    sget-object v1, Landroidx/camera/core/impl/utils/AspectRatioUtil;->ASPECT_RATIO_4_3:Landroid/util/Rational;
+    .line 446
+    sget-object v0, Landroidx/camera/core/impl/utils/AspectRatioUtil;->ASPECT_RATIO_4_3:Landroid/util/Rational;
 
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 414
-    sget-object v1, Landroidx/camera/core/impl/utils/AspectRatioUtil;->ASPECT_RATIO_16_9:Landroid/util/Rational;
-
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 417
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 418
-    sget-object v2, Landroidx/camera/core/impl/utils/AspectRatioUtil;->ASPECT_RATIO_4_3:Landroid/util/Rational;
+    invoke-interface {p0, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    .line 447
+    sget-object v0, Landroidx/camera/core/impl/utils/AspectRatioUtil;->ASPECT_RATIO_16_9:Landroid/util/Rational;
 
-    .line 419
-    sget-object v2, Landroidx/camera/core/impl/utils/AspectRatioUtil;->ASPECT_RATIO_16_9:Landroid/util/Rational;
+    new-instance v1, Ljava/util/ArrayList;
 
-    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 422
+    invoke-interface {p0, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 450
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    .line 451
+    sget-object v1, Landroidx/camera/core/impl/utils/AspectRatioUtil;->ASPECT_RATIO_4_3:Landroid/util/Rational;
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 452
+    sget-object v1, Landroidx/camera/core/impl/utils/AspectRatioUtil;->ASPECT_RATIO_16_9:Landroid/util/Rational;
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 455
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -1351,102 +1360,102 @@
     :goto_0
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_4
+    if-eqz v1, :cond_4
 
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v1
 
-    check-cast v2, Landroid/util/Size;
+    check-cast v1, Landroid/util/Size;
 
-    .line 423
-    invoke-virtual {v2}, Landroid/util/Size;->getHeight()I
+    .line 456
+    invoke-virtual {v1}, Landroid/util/Size;->getHeight()I
 
-    move-result v3
+    move-result v2
 
-    if-gtz v3, :cond_0
+    if-gtz v2, :cond_0
 
     goto :goto_0
 
-    .line 429
+    .line 462
     :cond_0
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_1
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
 
-    :cond_1
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+    check-cast v3, Landroid/util/Rational;
+
+    .line 463
+    invoke-static {v1, v3}, Landroidx/camera/core/impl/utils/AspectRatioUtil;->hasMatchingAspectRatio(Landroid/util/Size;Landroid/util/Rational;)Z
 
     move-result v4
 
-    if-eqz v4, :cond_2
+    if-eqz v4, :cond_1
 
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 464
+    invoke-interface {p0, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v2
 
-    check-cast v4, Landroid/util/Rational;
-
-    .line 430
-    invoke-static {v2, v4}, Landroidx/camera/core/impl/utils/AspectRatioUtil;->hasMatchingAspectRatio(Landroid/util/Size;Landroid/util/Rational;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_1
-
-    .line 431
-    invoke-interface {v0, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/util/List;
+    check-cast v2, Ljava/util/List;
 
     goto :goto_1
 
     :cond_2
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
     :goto_1
-    if-nez v3, :cond_3
+    if-nez v2, :cond_3
 
-    .line 438
-    new-instance v3, Ljava/util/ArrayList;
+    .line 471
+    new-instance v2, Ljava/util/ArrayList;
 
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 439
-    invoke-static {v2}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->toRational(Landroid/util/Size;)Landroid/util/Rational;
-
-    move-result-object v4
-
-    .line 440
-    invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 441
-    invoke-interface {v0, v4, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 444
-    :cond_3
-    invoke-static {v3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 472
+    invoke-static {v1}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->toRational(Landroid/util/Size;)Landroid/util/Rational;
 
     move-result-object v3
 
-    check-cast v3, Ljava/util/List;
+    .line 473
+    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    .line 474
+    invoke-interface {p0, v3, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 477
+    :cond_3
+    invoke-static {v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/List;
+
+    invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
     :cond_4
-    return-object v0
+    return-object p0
 .end method
 
 .method static hasUpscaling(Landroid/util/Size;Landroid/util/Size;)Z
     .locals 2
 
-    .line 824
+    .line 843
     invoke-virtual {p0}, Landroid/util/Size;->getHeight()I
 
     move-result v0
@@ -1457,7 +1466,7 @@
 
     if-gt v0, v1, :cond_1
 
-    .line 825
+    .line 844
     invoke-virtual {p0}, Landroid/util/Size;->getWidth()I
 
     move-result p0
@@ -1495,7 +1504,7 @@
         }
     .end annotation
 
-    .line 809
+    .line 828
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -1513,7 +1522,7 @@
 
     check-cast v0, Landroid/util/Size;
 
-    .line 810
+    .line 829
     invoke-static {v0, p1}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->hasUpscaling(Landroid/util/Size;Landroid/util/Size;)Z
 
     move-result v0
@@ -1543,7 +1552,7 @@
         }
     .end annotation
 
-    .line 762
+    .line 782
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -1561,7 +1570,7 @@
 
     check-cast v0, Landroid/util/Size;
 
-    .line 763
+    .line 783
     invoke-static {v0, p1}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->hasUpscaling(Landroid/util/Size;Landroid/util/Size;)Z
 
     move-result v0
@@ -1581,7 +1590,7 @@
 .method private isDoubleCropping(Landroid/util/Rational;Landroid/util/Size;)Z
     .locals 1
 
-    .line 512
+    .line 542
     iget-object v0, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mSensorAspectRatio:Landroid/util/Rational;
 
     invoke-virtual {v0, p1}, Landroid/util/Rational;->equals(Ljava/lang/Object;)Z
@@ -1598,21 +1607,21 @@
 
     goto :goto_0
 
-    .line 519
+    .line 549
     :cond_0
     iget-object v0, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mSensorAspectRatio:Landroid/util/Rational;
 
-    .line 520
+    .line 550
     invoke-virtual {v0}, Landroid/util/Rational;->floatValue()F
 
     move-result v0
 
-    .line 521
+    .line 551
     invoke-virtual {p1}, Landroid/util/Rational;->floatValue()F
 
     move-result p1
 
-    .line 522
+    .line 552
     invoke-static {p2}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->toRationalWithMod16Considered(Landroid/util/Size;)Landroid/util/Rational;
 
     move-result-object p2
@@ -1621,40 +1630,40 @@
 
     move-result p2
 
-    .line 519
+    .line 549
     invoke-direct {p0, v0, p1, p2}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->areCroppingInDifferentDirection(FFF)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 
     :cond_1
     :goto_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method private isDoubleCropping(Landroid/util/Size;Landroid/util/Size;)Z
     .locals 0
 
-    .line 527
+    .line 557
     invoke-static {p1}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->toRationalWithMod16Considered(Landroid/util/Size;)Landroid/util/Rational;
 
     move-result-object p1
 
-    .line 528
+    .line 558
     invoke-direct {p0, p1, p2}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->isDoubleCropping(Landroid/util/Rational;Landroid/util/Size;)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method private needToAddSensorResolutions()Z
     .locals 3
 
-    .line 477
+    .line 509
     invoke-direct {p0}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->getChildrenRequiredResolutions()Ljava/util/Set;
 
     move-result-object v0
@@ -1676,7 +1685,7 @@
 
     check-cast v1, Landroid/util/Size;
 
-    .line 478
+    .line 510
     iget-object v2, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mFallbackAspectRatio:Landroid/util/Rational;
 
     invoke-static {v1, v2}, Landroidx/camera/core/impl/utils/AspectRatioUtil;->hasMatchingAspectRatio(Landroid/util/Size;Landroid/util/Rational;)Z
@@ -1685,14 +1694,14 @@
 
     if-nez v1, :cond_0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 
     :cond_1
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method private static removeDuplicates(Ljava/util/List;)Ljava/util/List;
@@ -1709,7 +1718,7 @@
         }
     .end annotation
 
-    .line 669
+    .line 691
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
@@ -1718,7 +1727,7 @@
 
     return-object p0
 
-    .line 672
+    .line 694
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -1734,7 +1743,7 @@
 .method static reverseRect(Landroid/graphics/Rect;)Landroid/graphics/Rect;
     .locals 4
 
-    .line 611
+    .line 636
     new-instance v0, Landroid/graphics/Rect;
 
     iget v1, p0, Landroid/graphics/Rect;->top:I
@@ -1764,12 +1773,12 @@
         }
     .end annotation
 
-    .line 386
+    .line 420
     invoke-direct {p0, p1}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->groupSizesByAspectRatio(Ljava/util/List;)Ljava/util/Map;
 
     move-result-object p1
 
-    .line 390
+    .line 424
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-interface {p1}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -1778,15 +1787,15 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 391
+    .line 425
     invoke-direct {p0, v0}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->sortByFov(Ljava/util/List;)V
 
-    .line 395
+    .line 429
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 396
+    .line 430
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -1805,7 +1814,7 @@
 
     check-cast v2, Landroid/util/Rational;
 
-    .line 397
+    .line 431
     sget-object v3, Landroidx/camera/core/impl/utils/AspectRatioUtil;->ASPECT_RATIO_16_9:Landroid/util/Rational;
 
     invoke-virtual {v2, v3}, Landroid/util/Rational;->equals(Ljava/lang/Object;)Z
@@ -1824,7 +1833,7 @@
 
     goto :goto_0
 
-    .line 401
+    .line 435
     :cond_1
     invoke-interface {p1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1838,7 +1847,7 @@
 
     check-cast v3, Ljava/util/List;
 
-    .line 402
+    .line 436
     invoke-direct {p0, v2, v3, p2}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->selectParentResolutionsByAspectRatio(Landroid/util/Rational;Ljava/util/List;Z)Ljava/util/List;
 
     move-result-object v2
@@ -1852,7 +1861,7 @@
 .end method
 
 .method private selectParentResolutions(Ljava/util/List;)Ljava/util/List;
-    .locals 3
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1865,12 +1874,12 @@
         }
     .end annotation
 
-    .line 316
+    .line 349
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 319
+    .line 352
     invoke-direct {p0}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->needToAddSensorResolutions()Z
 
     move-result v1
@@ -1879,7 +1888,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 320
+    .line 353
     iget-object v1, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mSensorAspectRatio:Landroid/util/Rational;
 
     invoke-direct {p0, v1, p1, v2}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->selectParentResolutionsByAspectRatio(Landroid/util/Rational;Ljava/util/List;Z)Ljava/util/List;
@@ -1888,61 +1897,77 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 325
+    .line 358
     :cond_0
-    iget-object v1, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mFallbackAspectRatio:Landroid/util/Rational;
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    invoke-direct {p0, v1, p1, v2}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->selectParentResolutionsByAspectRatio(Landroid/util/Rational;Ljava/util/List;Z)Ljava/util/List;
+    move-result v1
 
-    move-result-object v1
+    .line 359
+    invoke-direct {p0}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->shouldPrioritizeFallbackAspectRatio()Z
 
-    invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+    move-result v3
 
-    .line 329
+    if-eqz v3, :cond_1
+
+    move v1, v2
+
+    :cond_1
+    iget-object v3, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mFallbackAspectRatio:Landroid/util/Rational;
+
+    .line 360
+    invoke-direct {p0, v3, p1, v2}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->selectParentResolutionsByAspectRatio(Landroid/util/Rational;Ljava/util/List;Z)Ljava/util/List;
+
+    move-result-object v3
+
+    .line 359
+    invoke-interface {v0, v1, v3}, Ljava/util/List;->addAll(ILjava/util/Collection;)Z
+
+    .line 364
     invoke-direct {p0, p1, v2}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->selectOtherAspectRatioParentResolutionsWithFovPriority(Ljava/util/List;Z)Ljava/util/List;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 332
+    .line 367
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
 
     const-string v2, "ResolutionsMerger"
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
-    .line 337
+    .line 372
     const-string v1, "Failed to find a parent resolution that does not result in double-cropping, this might due to camera not supporting 4:3 and 16:9resolutions or a strict ResolutionSelector settings. Starting resolution selection process with resolutions that might have a smaller FOV."
 
     invoke-static {v2, v1}, Landroidx/camera/core/Logger;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v1, 0x1
 
-    .line 341
+    .line 376
     invoke-direct {p0, p1, v1}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->selectOtherAspectRatioParentResolutionsWithFovPriority(Ljava/util/List;Z)Ljava/util/List;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-interface {v0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+    invoke-interface {v0, p0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 345
-    :cond_1
-    new-instance p1, Ljava/lang/StringBuilder;
+    .line 380
+    :cond_2
+    new-instance p0, Ljava/lang/StringBuilder;
 
-    const-string v1, "Parent resolutions: "
+    const-string p1, "Parent resolutions: "
 
-    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-static {v2, p1}, Landroidx/camera/core/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, p0}, Landroidx/camera/core/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -1962,20 +1987,20 @@
         }
     .end annotation
 
-    .line 352
+    .line 387
     invoke-static {p1, p2}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->filterResolutionsByAspectRatio(Landroid/util/Rational;Ljava/util/List;)Ljava/util/List;
 
     move-result-object p2
 
-    .line 354
+    .line 389
     invoke-static {p2}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->sortInDescendingOrder(Ljava/util/List;)V
 
-    .line 357
+    .line 392
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0, p2}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    .line 358
+    .line 393
     iget-object v1, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mChildrenConfigs:Ljava/util/Set;
 
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -1995,19 +2020,19 @@
 
     check-cast v2, Landroidx/camera/core/impl/UseCaseConfig;
 
-    .line 359
+    .line 394
     invoke-direct {p0, v2}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->getSortedChildSizes(Landroidx/camera/core/impl/UseCaseConfig;)Ljava/util/List;
 
     move-result-object v2
 
     if-nez p3, :cond_0
 
-    .line 361
+    .line 396
     invoke-direct {p0, p1, v2}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->filterOutChildSizesCausingDoubleCropping(Landroid/util/Rational;Ljava/util/List;)Ljava/util/List;
 
     move-result-object v2
 
-    .line 363
+    .line 398
     :cond_0
     invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
 
@@ -2015,20 +2040,20 @@
 
     if-eqz v3, :cond_1
 
-    .line 366
-    new-instance p1, Ljava/util/ArrayList;
+    .line 401
+    new-instance p0, Ljava/util/ArrayList;
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
-    return-object p1
+    return-object p0
 
-    .line 369
+    .line 404
     :cond_1
     invoke-static {v2, p2}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->filterOutParentSizeThatIsTooSmall(Ljava/util/Collection;Ljava/util/List;)Ljava/util/List;
 
     move-result-object p2
 
-    .line 370
+    .line 405
     invoke-static {v2, p2}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->getParentSizesThatAreTooLarge(Ljava/util/Collection;Ljava/util/List;)Ljava/util/List;
 
     move-result-object v2
@@ -2037,115 +2062,216 @@
 
     goto :goto_0
 
-    .line 374
+    .line 409
     :cond_2
-    new-instance p1, Ljava/util/ArrayList;
+    new-instance p0, Ljava/util/ArrayList;
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 375
+    .line 410
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object p2
+    move-result-object p1
 
     :cond_3
     :goto_1
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_4
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/util/Size;
+
+    .line 411
+    invoke-interface {v0, p2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result p3
 
-    if-eqz p3, :cond_4
+    if-nez p3, :cond_3
 
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, Landroid/util/Size;
-
-    .line 376
-    invoke-interface {v0, p3}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    .line 377
-    invoke-interface {p1, p3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    .line 412
+    invoke-interface {p0, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
     :cond_4
-    return-object p1
+    return-object p0
 .end method
 
 .method private shouldIncludeHighResolutions()Z
-    .locals 3
+    .locals 2
+
+    .line 277
+    iget-object p0, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mChildrenConfigs:Ljava/util/Set;
+
+    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :cond_0
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/camera/core/impl/UseCaseConfig;
+
+    .line 278
+    invoke-interface {v0, v1}, Landroidx/camera/core/impl/UseCaseConfig;->isHighResolutionDisabled(Z)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    goto :goto_0
+
+    .line 282
+    :cond_1
+    instance-of v1, v0, Landroidx/camera/core/impl/ImageOutputConfig;
+
+    if-eqz v1, :cond_0
 
     .line 283
+    check-cast v0, Landroidx/camera/core/impl/ImageOutputConfig;
+
+    const/4 v1, 0x0
+
+    .line 284
+    invoke-interface {v0, v1}, Landroidx/camera/core/impl/ImageOutputConfig;->getResolutionSelector(Landroidx/camera/core/resolutionselector/ResolutionSelector;)Landroidx/camera/core/resolutionselector/ResolutionSelector;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 285
+    invoke-virtual {v0}, Landroidx/camera/core/resolutionselector/ResolutionSelector;->getAllowedResolutionMode()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    :cond_2
+    return v1
+.end method
+
+.method private shouldPrioritizeFallbackAspectRatio()Z
+    .locals 8
+
+    .line 307
+    iget-object v0, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mChildrenConfigs:Ljava/util/Set;
+
+    invoke-interface {v0}, Ljava/util/Set;->isEmpty()Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    return v1
+
+    .line 311
+    :cond_0
     iget-object v0, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mChildrenConfigs:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    :cond_0
-    :goto_0
+    :cond_1
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroidx/camera/core/impl/UseCaseConfig;
-
-    .line 284
-    invoke-interface {v1, v2}, Landroidx/camera/core/impl/UseCaseConfig;->isHighResolutionDisabled(Z)Z
 
     move-result v2
 
-    if-eqz v2, :cond_1
+    const/4 v3, 0x1
+
+    if-eqz v2, :cond_6
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroidx/camera/core/impl/UseCaseConfig;
+
+    .line 312
+    invoke-direct {p0, v2}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->getSortedChildSizes(Landroidx/camera/core/impl/UseCaseConfig;)Ljava/util/List;
+
+    move-result-object v2
+
+    .line 315
+    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    move v4, v1
+
+    move v5, v4
+
+    :cond_2
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_5
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Landroid/util/Size;
+
+    .line 316
+    iget-object v7, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mFallbackAspectRatio:Landroid/util/Rational;
+
+    invoke-static {v6, v7}, Landroidx/camera/core/impl/utils/AspectRatioUtil;->hasMatchingAspectRatio(Landroid/util/Size;Landroid/util/Rational;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_3
+
+    move v4, v3
+
+    :cond_3
+    if-eqz v5, :cond_4
+
+    if-eqz v6, :cond_4
+
+    return v1
+
+    :cond_4
+    if-nez v6, :cond_2
+
+    move v5, v3
 
     goto :goto_0
 
-    .line 288
-    :cond_1
-    instance-of v2, v1, Landroidx/camera/core/impl/ImageOutputConfig;
+    :cond_5
+    if-nez v4, :cond_1
 
-    if-eqz v2, :cond_0
+    return v1
 
-    .line 289
-    check-cast v1, Landroidx/camera/core/impl/ImageOutputConfig;
-
-    const/4 v2, 0x0
-
-    .line 290
-    invoke-interface {v1, v2}, Landroidx/camera/core/impl/ImageOutputConfig;->getResolutionSelector(Landroidx/camera/core/resolutionselector/ResolutionSelector;)Landroidx/camera/core/resolutionselector/ResolutionSelector;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    .line 291
-    invoke-virtual {v1}, Landroidx/camera/core/resolutionselector/ResolutionSelector;->getAllowedResolutionMode()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    if-ne v1, v2, :cond_0
-
-    :cond_2
-    return v2
+    :cond_6
+    return v3
 .end method
 
 .method private sortByFov(Ljava/util/List;)V
-    .locals 3
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2155,21 +2281,21 @@
         }
     .end annotation
 
-    .line 552
-    iget-object v0, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mSensorSize:Landroid/util/Size;
+    .line 582
+    iget-object p0, p0, Landroidx/camera/core/streamsharing/ResolutionsMerger;->mSensorSize:Landroid/util/Size;
 
-    invoke-static {v0}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->toRational(Landroid/util/Size;)Landroid/util/Rational;
+    invoke-static {p0}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->toRational(Landroid/util/Size;)Landroid/util/Rational;
 
-    move-result-object v0
+    move-result-object p0
 
-    .line 553
-    new-instance v1, Landroidx/camera/core/streamsharing/ResolutionsMerger$CompareAspectRatioByOverlappingAreaToReference;
+    .line 583
+    new-instance v0, Landroidx/camera/core/streamsharing/ResolutionsMerger$CompareAspectRatioByOverlappingAreaToReference;
 
-    const/4 v2, 0x1
+    const/4 v1, 0x1
 
-    invoke-direct {v1, v0, v2}, Landroidx/camera/core/streamsharing/ResolutionsMerger$CompareAspectRatioByOverlappingAreaToReference;-><init>(Landroid/util/Rational;Z)V
+    invoke-direct {v0, p0, v1}, Landroidx/camera/core/streamsharing/ResolutionsMerger$CompareAspectRatioByOverlappingAreaToReference;-><init>(Landroid/util/Rational;Z)V
 
-    invoke-static {p1, v1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
+    invoke-static {p1, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
     return-void
 .end method
@@ -2185,7 +2311,7 @@
         }
     .end annotation
 
-    .line 663
+    .line 686
     new-instance v0, Landroidx/camera/core/impl/utils/CompareSizesByArea;
 
     const/4 v1, 0x1
@@ -2200,7 +2326,7 @@
 .method private static toRational(Landroid/util/Size;)Landroid/util/Rational;
     .locals 2
 
-    .line 844
+    .line 861
     new-instance v0, Landroid/util/Rational;
 
     invoke-virtual {p0}, Landroid/util/Size;->getWidth()I
@@ -2219,7 +2345,7 @@
 .method private static toRationalWithMod16Considered(Landroid/util/Size;)Landroid/util/Rational;
     .locals 1
 
-    .line 833
+    .line 851
     sget-object v0, Landroidx/camera/core/impl/utils/AspectRatioUtil;->ASPECT_RATIO_4_3:Landroid/util/Rational;
 
     invoke-static {p0, v0}, Landroidx/camera/core/impl/utils/AspectRatioUtil;->hasMatchingAspectRatio(Landroid/util/Size;Landroid/util/Rational;)Z
@@ -2228,12 +2354,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 834
+    .line 852
     sget-object p0, Landroidx/camera/core/impl/utils/AspectRatioUtil;->ASPECT_RATIO_4_3:Landroid/util/Rational;
 
     return-object p0
 
-    .line 835
+    .line 853
     :cond_0
     sget-object v0, Landroidx/camera/core/impl/utils/AspectRatioUtil;->ASPECT_RATIO_16_9:Landroid/util/Rational;
 
@@ -2243,12 +2369,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 836
+    .line 854
     sget-object p0, Landroidx/camera/core/impl/utils/AspectRatioUtil;->ASPECT_RATIO_16_9:Landroid/util/Rational;
 
     return-object p0
 
-    .line 838
+    .line 856
     :cond_1
     invoke-static {p0}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->toRational(Landroid/util/Size;)Landroid/util/Rational;
 
@@ -2272,24 +2398,24 @@
         }
     .end annotation
 
-    .line 120
+    .line 113
     invoke-direct {p0}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->getCameraSupportedResolutions()Ljava/util/List;
 
     move-result-object v0
 
-    .line 123
+    .line 116
     invoke-direct {p0}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->shouldIncludeHighResolutions()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 124
+    .line 117
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 125
+    .line 118
     invoke-direct {p0}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->getCameraSupportedHighResolutions()Ljava/util/List;
 
     move-result-object v0
@@ -2298,13 +2424,13 @@
 
     move-object v0, v1
 
-    .line 130
+    .line 123
     :cond_0
     sget-object v1, Landroidx/camera/core/impl/ImageOutputConfig;->OPTION_SUPPORTED_RESOLUTIONS:Landroidx/camera/core/impl/Config$Option;
 
     const/4 v2, 0x0
 
-    .line 131
+    .line 124
     invoke-interface {p1, v1, v2}, Landroidx/camera/core/impl/MutableConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -2313,18 +2439,18 @@
 
     if-eqz p1, :cond_1
 
-    .line 133
+    .line 126
     invoke-static {p1}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->getSupportedPrivResolutions(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 136
+    .line 129
     :cond_1
     invoke-direct {p0, v0}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->selectParentResolutions(Ljava/util/List;)Ljava/util/List;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method getPreferredChildSize(Landroid/util/Size;Landroidx/camera/core/impl/UseCaseConfig;)Landroid/util/Size;
@@ -2339,12 +2465,12 @@
         }
     .end annotation
 
-    .line 218
+    .line 215
     invoke-direct {p0, p2}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->getSortedChildSizes(Landroidx/camera/core/impl/UseCaseConfig;)Ljava/util/List;
 
     move-result-object p2
 
-    .line 219
+    .line 216
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -2363,7 +2489,7 @@
 
     check-cast v1, Landroid/util/Size;
 
-    .line 220
+    .line 217
     invoke-direct {p0, p1, v1}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->isDoubleCropping(Landroid/util/Size;Landroid/util/Size;)Z
 
     move-result v2
@@ -2372,7 +2498,7 @@
 
     goto :goto_0
 
-    .line 224
+    .line 221
     :cond_1
     invoke-static {v1, p1}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->hasUpscaling(Landroid/util/Size;Landroid/util/Size;)Z
 
@@ -2382,97 +2508,39 @@
 
     return-object v1
 
-    .line 233
+    .line 230
     :cond_2
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object p2
+    move-result-object p0
 
     :cond_3
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_4
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/util/Size;
+
+    .line 231
+    invoke-static {p2, p1}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->hasUpscaling(Landroid/util/Size;Landroid/util/Size;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-nez v0, :cond_3
 
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/util/Size;
-
-    .line 234
-    invoke-static {v0, p1}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->hasUpscaling(Landroid/util/Size;Landroid/util/Size;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return-object v0
+    return-object p2
 
     :cond_4
     return-object p1
 .end method
 
-.method getPreferredChildSizeForViewport(Landroid/util/Size;Landroidx/camera/core/impl/UseCaseConfig;)Landroid/util/Size;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/util/Size;",
-            "Landroidx/camera/core/impl/UseCaseConfig<",
-            "*>;)",
-            "Landroid/util/Size;"
-        }
-    .end annotation
-
-    .line 256
-    invoke-direct {p0, p2}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->getSortedChildSizes(Landroidx/camera/core/impl/UseCaseConfig;)Ljava/util/List;
-
-    move-result-object p2
-
-    .line 258
-    invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p2
-
-    :cond_0
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/util/Size;
-
-    .line 260
-    invoke-static {v0, p1}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->getCropRectOfReferenceAspectRatio(Landroid/util/Size;Landroid/util/Size;)Landroid/graphics/Rect;
-
-    move-result-object v0
-
-    .line 259
-    invoke-static {v0}, Landroidx/camera/core/impl/utils/TransformUtils;->rectToSize(Landroid/graphics/Rect;)Landroid/util/Size;
-
-    move-result-object v0
-
-    .line 262
-    invoke-static {v0, p1}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->hasUpscaling(Landroid/util/Size;Landroid/util/Size;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    return-object v0
-
-    :cond_1
-    return-object p1
-.end method
-
-.method getPreferredChildSizePair(Landroidx/camera/core/impl/UseCaseConfig;Landroid/graphics/Rect;IZ)Landroid/util/Pair;
+.method getPreferredChildSize(Landroidx/camera/core/impl/UseCaseConfig;Landroid/graphics/Rect;IZ)Landroidx/camera/core/streamsharing/PreferredChildSize;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -2481,21 +2549,18 @@
             "*>;",
             "Landroid/graphics/Rect;",
             "IZ)",
-            "Landroid/util/Pair<",
-            "Landroid/graphics/Rect;",
-            "Landroid/util/Size;",
-            ">;"
+            "Landroidx/camera/core/streamsharing/PreferredChildSize;"
         }
     .end annotation
 
-    .line 160
+    .line 155
     invoke-static {p3}, Landroidx/camera/core/impl/utils/TransformUtils;->is90or270(I)Z
 
     move-result p3
 
     if-eqz p3, :cond_0
 
-    .line 161
+    .line 156
     invoke-static {p2}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->reverseRect(Landroid/graphics/Rect;)Landroid/graphics/Rect;
 
     move-result-object p2
@@ -2507,39 +2572,115 @@
     :cond_0
     const/4 p3, 0x0
 
-    .line 166
+    .line 161
     :goto_0
-    invoke-direct {p0, p2, p1, p4}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->getPreferredChildSizePairInternal(Landroid/graphics/Rect;Landroidx/camera/core/impl/UseCaseConfig;Z)Landroid/util/Pair;
+    invoke-direct {p0, p2, p1, p4}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->getPreferredChildSizeInternal(Landroid/graphics/Rect;Landroidx/camera/core/impl/UseCaseConfig;Z)Landroidx/camera/core/streamsharing/PreferredChildSize;
 
-    move-result-object p1
-
-    .line 168
-    iget-object p2, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
-
-    check-cast p2, Landroid/graphics/Rect;
-
-    .line 169
-    iget-object p1, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
-
-    check-cast p1, Landroid/util/Size;
+    move-result-object p0
 
     if-eqz p3, :cond_1
 
-    .line 173
-    invoke-static {p1}, Landroidx/camera/core/impl/utils/TransformUtils;->reverseSize(Landroid/util/Size;)Landroid/util/Size;
+    .line 166
+    new-instance p1, Landroidx/camera/core/streamsharing/PreferredChildSize;
 
-    move-result-object p1
+    .line 167
+    invoke-virtual {p0}, Landroidx/camera/core/streamsharing/PreferredChildSize;->getCropRectBeforeScaling()Landroid/graphics/Rect;
 
-    .line 174
+    move-result-object p2
+
     invoke-static {p2}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->reverseRect(Landroid/graphics/Rect;)Landroid/graphics/Rect;
 
     move-result-object p2
 
-    .line 177
+    .line 168
+    invoke-virtual {p0}, Landroidx/camera/core/streamsharing/PreferredChildSize;->getChildSizeToScale()Landroid/util/Size;
+
+    move-result-object p3
+
+    invoke-static {p3}, Landroidx/camera/core/impl/utils/TransformUtils;->reverseSize(Landroid/util/Size;)Landroid/util/Size;
+
+    move-result-object p3
+
+    .line 169
+    invoke-virtual {p0}, Landroidx/camera/core/streamsharing/PreferredChildSize;->getOriginalSelectedChildSize()Landroid/util/Size;
+
+    move-result-object p0
+
+    invoke-direct {p1, p2, p3, p0}, Landroidx/camera/core/streamsharing/PreferredChildSize;-><init>(Landroid/graphics/Rect;Landroid/util/Size;Landroid/util/Size;)V
+
+    return-object p1
+
     :cond_1
-    new-instance p3, Landroid/util/Pair;
+    return-object p0
+.end method
 
-    invoke-direct {p3, p2, p1}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+.method getPreferredChildSizeForViewport(Landroid/util/Size;Landroidx/camera/core/impl/UseCaseConfig;)Landroid/util/Pair;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/util/Size;",
+            "Landroidx/camera/core/impl/UseCaseConfig<",
+            "*>;)",
+            "Landroid/util/Pair<",
+            "Landroid/util/Size;",
+            "Landroid/util/Size;",
+            ">;"
+        }
+    .end annotation
 
-    return-object p3
+    .line 252
+    invoke-direct {p0, p2}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->getSortedChildSizes(Landroidx/camera/core/impl/UseCaseConfig;)Ljava/util/List;
+
+    move-result-object p0
+
+    .line 254
+    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :cond_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_1
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/util/Size;
+
+    .line 256
+    invoke-static {p2, p1}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->getCropRectOfReferenceAspectRatio(Landroid/util/Size;Landroid/util/Size;)Landroid/graphics/Rect;
+
+    move-result-object v0
+
+    .line 255
+    invoke-static {v0}, Landroidx/camera/core/impl/utils/TransformUtils;->rectToSize(Landroid/graphics/Rect;)Landroid/util/Size;
+
+    move-result-object v0
+
+    .line 258
+    invoke-static {v0, p1}, Landroidx/camera/core/streamsharing/ResolutionsMerger;->hasUpscaling(Landroid/util/Size;Landroid/util/Size;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 259
+    invoke-static {p2, v0}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
+
+    move-result-object p0
+
+    return-object p0
+
+    .line 263
+    :cond_1
+    invoke-static {p1, p1}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
+
+    move-result-object p0
+
+    return-object p0
 .end method

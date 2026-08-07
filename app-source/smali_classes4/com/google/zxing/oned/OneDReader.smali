@@ -344,10 +344,8 @@
 
     goto/16 :goto_3
 
-    :cond_7
-    move-object/from16 v13, p0
-
     .line 174
+    :cond_7
     invoke-static {}, Lcom/google/zxing/NotFoundException;->getNotFoundInstance()Lcom/google/zxing/NotFoundException;
 
     move-result-object v0
@@ -624,13 +622,13 @@
     .line 46
     invoke-virtual {p0, p1, v0}, Lcom/google/zxing/oned/OneDReader;->decode(Lcom/google/zxing/BinaryBitmap;Ljava/util/Map;)Lcom/google/zxing/Result;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public decode(Lcom/google/zxing/BinaryBitmap;Ljava/util/Map;)Lcom/google/zxing/Result;
-    .locals 5
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -653,11 +651,11 @@
     :try_start_0
     invoke-direct {p0, p1, p2}, Lcom/google/zxing/oned/OneDReader;->doDecode(Lcom/google/zxing/BinaryBitmap;Ljava/util/Map;)Lcom/google/zxing/Result;
 
-    move-result-object p1
+    move-result-object p0
     :try_end_0
     .catch Lcom/google/zxing/NotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object p1
+    return-object p0
 
     :catch_0
     move-exception v0
@@ -688,107 +686,107 @@
     .line 59
     invoke-direct {p0, p1, p2}, Lcom/google/zxing/oned/OneDReader;->doDecode(Lcom/google/zxing/BinaryBitmap;Ljava/util/Map;)Lcom/google/zxing/Result;
 
-    move-result-object p2
+    move-result-object p0
 
     .line 61
-    invoke-virtual {p2}, Lcom/google/zxing/Result;->getResultMetadata()Ljava/util/Map;
+    invoke-virtual {p0}, Lcom/google/zxing/Result;->getResultMetadata()Ljava/util/Map;
 
-    move-result-object v0
+    move-result-object p2
 
-    const/16 v1, 0x10e
+    const/16 v0, 0x10e
 
-    if-eqz v0, :cond_0
+    if-eqz p2, :cond_0
 
     .line 63
-    sget-object v2, Lcom/google/zxing/ResultMetadataType;->ORIENTATION:Lcom/google/zxing/ResultMetadataType;
+    sget-object v1, Lcom/google/zxing/ResultMetadataType;->ORIENTATION:Lcom/google/zxing/ResultMetadataType;
 
-    invoke-interface {v0, v2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+    invoke-interface {p2, v1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_0
+    if-eqz v1, :cond_0
 
     .line 65
-    sget-object v2, Lcom/google/zxing/ResultMetadataType;->ORIENTATION:Lcom/google/zxing/ResultMetadataType;
+    sget-object v1, Lcom/google/zxing/ResultMetadataType;->ORIENTATION:Lcom/google/zxing/ResultMetadataType;
 
     .line 66
-    invoke-interface {v0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p2
 
-    check-cast v0, Ljava/lang/Integer;
+    check-cast p2, Ljava/lang/Integer;
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
-    move-result v0
+    move-result p2
 
-    add-int/2addr v0, v1
+    add-int/2addr p2, v0
 
-    rem-int/lit16 v1, v0, 0x168
+    rem-int/lit16 v0, p2, 0x168
 
     .line 68
     :cond_0
-    sget-object v0, Lcom/google/zxing/ResultMetadataType;->ORIENTATION:Lcom/google/zxing/ResultMetadataType;
+    sget-object p2, Lcom/google/zxing/ResultMetadataType;->ORIENTATION:Lcom/google/zxing/ResultMetadataType;
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {p2, v0, v1}, Lcom/google/zxing/Result;->putMetadata(Lcom/google/zxing/ResultMetadataType;Ljava/lang/Object;)V
-
-    .line 70
-    invoke-virtual {p2}, Lcom/google/zxing/Result;->getResultPoints()[Lcom/google/zxing/ResultPoint;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    invoke-virtual {p0, p2, v0}, Lcom/google/zxing/Result;->putMetadata(Lcom/google/zxing/ResultMetadataType;Ljava/lang/Object;)V
+
+    .line 70
+    invoke-virtual {p0}, Lcom/google/zxing/Result;->getResultPoints()[Lcom/google/zxing/ResultPoint;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_1
 
     .line 72
     invoke-virtual {p1}, Lcom/google/zxing/BinaryBitmap;->getHeight()I
 
     move-result p1
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
     .line 73
     :goto_0
-    array-length v2, v0
+    array-length v1, p2
 
-    if-ge v1, v2, :cond_1
+    if-ge v0, v1, :cond_1
 
     .line 74
-    new-instance v2, Lcom/google/zxing/ResultPoint;
+    new-instance v1, Lcom/google/zxing/ResultPoint;
 
-    int-to-float v3, p1
+    int-to-float v2, p1
 
-    aget-object v4, v0, v1
+    aget-object v3, p2, v0
 
-    invoke-virtual {v4}, Lcom/google/zxing/ResultPoint;->getY()F
+    invoke-virtual {v3}, Lcom/google/zxing/ResultPoint;->getY()F
 
-    move-result v4
+    move-result v3
 
-    sub-float/2addr v3, v4
+    sub-float/2addr v2, v3
 
-    const/high16 v4, 0x3f800000    # 1.0f
+    const/high16 v3, 0x3f800000    # 1.0f
 
-    sub-float/2addr v3, v4
+    sub-float/2addr v2, v3
 
-    aget-object v4, v0, v1
+    aget-object v3, p2, v0
 
-    invoke-virtual {v4}, Lcom/google/zxing/ResultPoint;->getX()F
+    invoke-virtual {v3}, Lcom/google/zxing/ResultPoint;->getX()F
 
-    move-result v4
+    move-result v3
 
-    invoke-direct {v2, v3, v4}, Lcom/google/zxing/ResultPoint;-><init>(FF)V
+    invoke-direct {v1, v2, v3}, Lcom/google/zxing/ResultPoint;-><init>(FF)V
 
-    aput-object v2, v0, v1
+    aput-object v1, p2, v0
 
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
     :cond_1
-    return-object p2
+    return-object p0
 
     .line 79
     :cond_2

@@ -21,7 +21,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 60
+    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,14 +30,14 @@
 .method public static computeCropRectFromAspectRatio(Landroid/util/Size;Landroid/util/Rational;)Landroid/graphics/Rect;
     .locals 7
 
-    .line 359
+    .line 353
     invoke-static {p1}, Landroidx/camera/core/internal/utils/ImageUtil;->isAspectRatioValid(Landroid/util/Rational;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 360
+    .line 354
     const-string p0, "ImageUtil"
 
     const-string p1, "Invalid view ratio."
@@ -48,13 +48,13 @@
 
     return-object p0
 
-    .line 364
+    .line 358
     :cond_0
     invoke-virtual {p0}, Landroid/util/Size;->getWidth()I
 
     move-result v0
 
-    .line 365
+    .line 359
     invoke-virtual {p0}, Landroid/util/Size;->getHeight()I
 
     move-result p0
@@ -65,17 +65,17 @@
 
     div-float v3, v1, v2
 
-    .line 371
+    .line 365
     invoke-virtual {p1}, Landroid/util/Rational;->getNumerator()I
 
     move-result v4
 
-    .line 372
+    .line 366
     invoke-virtual {p1}, Landroid/util/Rational;->getDenominator()I
 
     move-result v5
 
-    .line 374
+    .line 368
     invoke-virtual {p1}, Landroid/util/Rational;->floatValue()F
 
     move-result p1
@@ -94,14 +94,14 @@
 
     mul-float/2addr v1, p1
 
-    .line 375
+    .line 369
     invoke-static {v1}, Ljava/lang/Math;->round(F)I
 
     move-result p1
 
     sub-int/2addr p0, p1
 
-    .line 376
+    .line 370
     div-int/lit8 p0, p0, 0x2
 
     move v6, p1
@@ -121,14 +121,14 @@
 
     mul-float/2addr v2, p1
 
-    .line 378
+    .line 372
     invoke-static {v2}, Ljava/lang/Math;->round(F)I
 
     move-result p1
 
     sub-int/2addr v0, p1
 
-    .line 379
+    .line 373
     div-int/lit8 v0, v0, 0x2
 
     move v6, v0
@@ -139,7 +139,7 @@
 
     move v3, v6
 
-    .line 382
+    .line 376
     :goto_0
     new-instance v1, Landroid/graphics/Rect;
 
@@ -155,7 +155,7 @@
 .method public static computeCropRectFromDispatchInfo(Landroid/graphics/Rect;ILandroid/util/Size;I)Landroid/graphics/Rect;
     .locals 4
 
-    .line 408
+    .line 401
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
@@ -164,20 +164,20 @@
 
     int-to-float p1, p3
 
-    .line 410
+    .line 403
     invoke-virtual {v0, p1}, Landroid/graphics/Matrix;->setRotate(F)V
 
-    .line 413
+    .line 406
     invoke-static {p2}, Landroidx/camera/core/internal/utils/ImageUtil;->sizeToVertexes(Landroid/util/Size;)[F
 
     move-result-object p1
 
-    .line 414
+    .line 407
     invoke-virtual {v0, p1}, Landroid/graphics/Matrix;->mapPoints([F)V
 
     const/4 p2, 0x0
 
-    .line 415
+    .line 408
     aget p2, p1, p2
 
     const/4 p3, 0x2
@@ -198,7 +198,7 @@
 
     const/4 p3, 0x1
 
-    .line 416
+    .line 409
     aget p3, p1, p3
 
     const/4 v1, 0x3
@@ -221,33 +221,33 @@
 
     neg-float p1, p1
 
-    .line 417
+    .line 410
     invoke-virtual {v0, p2, p1}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    .line 419
+    .line 412
     invoke-virtual {v0, v0}, Landroid/graphics/Matrix;->invert(Landroid/graphics/Matrix;)Z
 
-    .line 422
+    .line 415
     new-instance p1, Landroid/graphics/RectF;
 
     invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
 
-    .line 423
+    .line 416
     new-instance p2, Landroid/graphics/RectF;
 
     invoke-direct {p2, p0}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V
 
     invoke-virtual {v0, p1, p2}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;Landroid/graphics/RectF;)Z
 
-    .line 424
+    .line 417
     invoke-virtual {p1}, Landroid/graphics/RectF;->sort()V
 
-    .line 425
+    .line 418
     new-instance p0, Landroid/graphics/Rect;
 
     invoke-direct {p0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 426
+    .line 419
     invoke-virtual {p1, p0}, Landroid/graphics/RectF;->round(Landroid/graphics/Rect;)V
 
     return-object p0
@@ -337,12 +337,12 @@
 .method private static createBitmapFromJpegImage(Landroidx/camera/core/ImageProxy;)Landroid/graphics/Bitmap;
     .locals 3
 
-    .line 465
+    .line 456
     invoke-static {p0}, Landroidx/camera/core/internal/utils/ImageUtil;->jpegImageToJpegByteArray(Landroidx/camera/core/ImageProxy;)[B
 
     move-result-object p0
 
-    .line 466
+    .line 457
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -357,7 +357,7 @@
 
     return-object p0
 
-    .line 468
+    .line 459
     :cond_0
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -371,7 +371,7 @@
 .method public static createBitmapFromPlane([Landroidx/camera/core/ImageProxy$PlaneProxy;II)Landroid/graphics/Bitmap;
     .locals 4
 
-    .line 101
+    .line 100
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -392,7 +392,7 @@
 
     invoke-static {v0, v3}, Landroidx/core/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
-    .line 102
+    .line 101
     aget-object v0, p0, v1
 
     invoke-interface {v0}, Landroidx/camera/core/ImageProxy$PlaneProxy;->getPixelStride()I
@@ -415,10 +415,10 @@
 
     invoke-static {v0, v3}, Landroidx/core/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
-    .line 104
+    .line 103
     aget-object v0, p0, v1
 
-    .line 105
+    .line 104
     invoke-interface {v0}, Landroidx/camera/core/ImageProxy$PlaneProxy;->getRowStride()I
 
     move-result v0
@@ -435,17 +435,17 @@
     :goto_2
     const-string v0, "Expect rowStride=width*4"
 
-    .line 104
+    .line 103
     invoke-static {v2, v0}, Landroidx/core/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
-    .line 107
+    .line 106
     sget-object v0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     invoke-static {p1, p2, v0}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
-    .line 109
+    .line 108
     aget-object p2, p0, v1
 
     invoke-interface {p2}, Landroidx/camera/core/ImageProxy$PlaneProxy;->getBuffer()Ljava/nio/ByteBuffer;
@@ -454,7 +454,7 @@
 
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
-    .line 110
+    .line 109
     aget-object p2, p0, v1
 
     invoke-interface {p2}, Landroidx/camera/core/ImageProxy$PlaneProxy;->getBuffer()Ljava/nio/ByteBuffer;
@@ -463,12 +463,12 @@
 
     aget-object p0, p0, v1
 
-    .line 111
+    .line 110
     invoke-interface {p0}, Landroidx/camera/core/ImageProxy$PlaneProxy;->getRowStride()I
 
     move-result p0
 
-    .line 110
+    .line 109
     invoke-static {p1, p2, p0}, Landroidx/camera/core/ImageProcessingUtil;->copyByteBufferToBitmap(Landroid/graphics/Bitmap;Ljava/nio/ByteBuffer;I)V
 
     return-object p1
@@ -477,24 +477,24 @@
 .method private static createBitmapFromRgbaImage(Landroidx/camera/core/ImageProxy;)Landroid/graphics/Bitmap;
     .locals 3
 
-    .line 453
+    .line 445
     invoke-interface {p0}, Landroidx/camera/core/ImageProxy;->getWidth()I
 
     move-result v0
 
-    .line 454
+    .line 446
     invoke-interface {p0}, Landroidx/camera/core/ImageProxy;->getHeight()I
 
     move-result v1
 
     sget-object v2, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
-    .line 453
+    .line 445
     invoke-static {v0, v1, v2}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 457
+    .line 449
     invoke-interface {p0}, Landroidx/camera/core/ImageProxy;->getPlanes()[Landroidx/camera/core/ImageProxy$PlaneProxy;
 
     move-result-object v1
@@ -509,7 +509,7 @@
 
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
-    .line 458
+    .line 450
     invoke-interface {p0}, Landroidx/camera/core/ImageProxy;->getPlanes()[Landroidx/camera/core/ImageProxy$PlaneProxy;
 
     move-result-object v1
@@ -520,7 +520,7 @@
 
     move-result-object v1
 
-    .line 459
+    .line 451
     invoke-interface {p0}, Landroidx/camera/core/ImageProxy;->getPlanes()[Landroidx/camera/core/ImageProxy$PlaneProxy;
 
     move-result-object p0
@@ -531,7 +531,7 @@
 
     move-result p0
 
-    .line 458
+    .line 450
     invoke-static {v0, v1, p0}, Landroidx/camera/core/ImageProcessingUtil;->copyByteBufferToBitmap(Landroid/graphics/Bitmap;Ljava/nio/ByteBuffer;I)V
 
     return-object v0
@@ -540,7 +540,7 @@
 .method public static createDirectByteBuffer(Landroid/graphics/Bitmap;)Ljava/nio/ByteBuffer;
     .locals 2
 
-    .line 131
+    .line 128
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object v0
@@ -561,7 +561,7 @@
 
     invoke-static {v0, v1}, Landroidx/core/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
-    .line 133
+    .line 130
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getAllocationByteCount()I
 
     move-result v0
@@ -570,14 +570,14 @@
 
     move-result-object v0
 
-    .line 134
+    .line 131
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getRowBytes()I
 
     move-result v1
 
     invoke-static {p0, v0, v1}, Landroidx/camera/core/ImageProcessingUtil;->copyBitmapToByteBuffer(Landroid/graphics/Bitmap;Ljava/nio/ByteBuffer;I)V
 
-    .line 135
+    .line 132
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
     return-object v0
@@ -591,7 +591,7 @@
         }
     .end annotation
 
-    .line 305
+    .line 295
     const-string v0, "Decode byte array failed."
 
     :try_start_0
@@ -603,7 +603,7 @@
 
     move-result-object p0
 
-    .line 307
+    .line 297
     new-instance v1, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v1}, Landroid/graphics/BitmapFactory$Options;-><init>()V
@@ -612,7 +612,7 @@
 
     move-result-object p1
 
-    .line 308
+    .line 298
     invoke-virtual {p0}, Landroid/graphics/BitmapRegionDecoder;->recycle()V
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
@@ -620,12 +620,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 322
+    .line 312
     new-instance p0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {p0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 323
+    .line 313
     sget-object v0, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
     invoke-virtual {p1, v0, p2, p0}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
@@ -634,17 +634,17 @@
 
     if-eqz p2, :cond_0
 
-    .line 328
+    .line 318
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 330
+    .line 320
     invoke-virtual {p0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p0
 
     return-object p0
 
-    .line 325
+    .line 315
     :cond_0
     new-instance p0, Landroidx/camera/core/internal/utils/ImageUtil$CodecFailedException;
 
@@ -656,7 +656,7 @@
 
     throw p0
 
-    .line 318
+    .line 308
     :cond_1
     new-instance p0, Landroidx/camera/core/internal/utils/ImageUtil$CodecFailedException;
 
@@ -666,7 +666,7 @@
 
     throw p0
 
-    .line 313
+    .line 303
     :catch_0
     new-instance p0, Landroidx/camera/core/internal/utils/ImageUtil$CodecFailedException;
 
@@ -679,7 +679,7 @@
     :catch_1
     move-exception p0
 
-    .line 310
+    .line 300
     new-instance p1, Landroidx/camera/core/internal/utils/ImageUtil$CodecFailedException;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -714,7 +714,7 @@
 
     goto :goto_0
 
-    .line 166
+    .line 161
     :cond_0
     new-instance p0, Landroid/util/Rational;
 
@@ -730,7 +730,7 @@
 
     return-object p0
 
-    .line 163
+    .line 158
     :cond_1
     :goto_0
     invoke-static {p1}, Landroidx/camera/core/internal/utils/ImageUtil;->inverseRational(Landroid/util/Rational;)Landroid/util/Rational;
@@ -747,16 +747,16 @@
 
     return-object p0
 
-    .line 445
+    .line 438
     :cond_0
     new-instance v0, Landroid/util/Rational;
 
-    .line 446
+    .line 439
     invoke-virtual {p0}, Landroid/util/Rational;->getDenominator()I
 
     move-result v1
 
-    .line 447
+    .line 440
     invoke-virtual {p0}, Landroid/util/Rational;->getNumerator()I
 
     move-result p0
@@ -771,7 +771,7 @@
 
     if-eqz p0, :cond_0
 
-    .line 335
+    .line 325
     invoke-virtual {p0}, Landroid/util/Rational;->floatValue()F
 
     move-result v0
@@ -803,7 +803,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 347
+    .line 342
     invoke-virtual {p1}, Landroid/util/Rational;->floatValue()F
 
     move-result v0
@@ -814,14 +814,14 @@
 
     if-lez v0, :cond_0
 
-    .line 348
+    .line 343
     invoke-static {p0, p1}, Landroidx/camera/core/internal/utils/ImageUtil;->isCropAspectRatioHasEffect(Landroid/util/Size;Landroid/util/Rational;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    .line 349
+    .line 344
     invoke-virtual {p1}, Landroid/util/Rational;->isNaN()Z
 
     move-result p0
@@ -841,22 +841,22 @@
 .method private static isCropAspectRatioHasEffect(Landroid/util/Size;Landroid/util/Rational;)Z
     .locals 3
 
-    .line 432
+    .line 425
     invoke-virtual {p0}, Landroid/util/Size;->getWidth()I
 
     move-result v0
 
-    .line 433
+    .line 426
     invoke-virtual {p0}, Landroid/util/Size;->getHeight()I
 
     move-result p0
 
-    .line 434
+    .line 427
     invoke-virtual {p1}, Landroid/util/Rational;->getNumerator()I
 
     move-result v1
 
-    .line 435
+    .line 428
     invoke-virtual {p1}, Landroid/util/Rational;->getDenominator()I
 
     move-result p1
@@ -871,7 +871,7 @@
 
     mul-float/2addr v2, p1
 
-    .line 437
+    .line 430
     invoke-static {v2}, Ljava/lang/Math;->round(F)I
 
     move-result v2
@@ -884,7 +884,7 @@
 
     mul-float/2addr p0, v1
 
-    .line 438
+    .line 431
     invoke-static {p0}, Ljava/lang/Math;->round(F)I
 
     move-result p0
@@ -930,10 +930,27 @@
     return p0
 .end method
 
+.method public static isRawFormats(I)Z
+    .locals 1
+
+    const/16 v0, 0x20
+
+    if-ne p0, v0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
 .method public static jpegImageToJpegByteArray(Landroidx/camera/core/ImageProxy;)[B
     .locals 3
 
-    .line 174
+    .line 168
     invoke-interface {p0}, Landroidx/camera/core/ImageProxy;->getFormat()I
 
     move-result v0
@@ -944,36 +961,36 @@
 
     if-eqz v0, :cond_0
 
-    .line 179
+    .line 173
     invoke-interface {p0}, Landroidx/camera/core/ImageProxy;->getPlanes()[Landroidx/camera/core/ImageProxy$PlaneProxy;
 
     move-result-object p0
 
     const/4 v0, 0x0
 
-    .line 180
+    .line 174
     aget-object p0, p0, v0
 
     invoke-interface {p0}, Landroidx/camera/core/ImageProxy$PlaneProxy;->getBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object p0
 
-    .line 181
+    .line 175
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->capacity()I
 
     move-result v0
 
     new-array v0, v0, [B
 
-    .line 182
+    .line 176
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
-    .line 183
+    .line 177
     invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
     return-object v0
 
-    .line 175
+    .line 169
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -983,7 +1000,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 176
+    .line 170
     invoke-interface {p0}, Landroidx/camera/core/ImageProxy;->getFormat()I
 
     move-result p0
@@ -1007,7 +1024,7 @@
         }
     .end annotation
 
-    .line 196
+    .line 189
     invoke-interface {p0}, Landroidx/camera/core/ImageProxy;->getFormat()I
 
     move-result v0
@@ -1018,19 +1035,19 @@
 
     if-eqz v0, :cond_0
 
-    .line 201
+    .line 194
     invoke-static {p0}, Landroidx/camera/core/internal/utils/ImageUtil;->jpegImageToJpegByteArray(Landroidx/camera/core/ImageProxy;)[B
 
     move-result-object p0
 
-    .line 202
+    .line 195
     invoke-static {p0, p1, p2}, Landroidx/camera/core/internal/utils/ImageUtil;->cropJpegByteArray([BLandroid/graphics/Rect;I)[B
 
     move-result-object p0
 
     return-object p0
 
-    .line 197
+    .line 190
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -1040,7 +1057,7 @@
 
     invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 198
+    .line 191
     invoke-interface {p0}, Landroidx/camera/core/ImageProxy;->getFormat()I
 
     move-result p0
@@ -1059,7 +1076,7 @@
 .method public static min(FFFF)F
     .locals 0
 
-    .line 152
+    .line 148
     invoke-static {p0, p1}, Ljava/lang/Math;->min(FF)F
 
     move-result p0
@@ -1078,17 +1095,17 @@
 .method public static rotateBitmap(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
     .locals 7
 
-    .line 120
+    .line 118
     new-instance v5, Landroid/graphics/Matrix;
 
     invoke-direct {v5}, Landroid/graphics/Matrix;-><init>()V
 
     int-to-float p1, p1
 
-    .line 121
+    .line 119
     invoke-virtual {v5, p1}, Landroid/graphics/Matrix;->postRotate(F)Z
 
-    .line 122
+    .line 120
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v3
@@ -1136,7 +1153,7 @@
 .method public static shouldCropImage(Landroidx/camera/core/ImageProxy;)Z
     .locals 3
 
-    .line 477
+    .line 468
     invoke-interface {p0}, Landroidx/camera/core/ImageProxy;->getWidth()I
 
     move-result v0
@@ -1153,7 +1170,7 @@
 
     move-result v2
 
-    .line 478
+    .line 469
     invoke-interface {p0}, Landroidx/camera/core/ImageProxy;->getCropRect()Landroid/graphics/Rect;
 
     move-result-object p0
@@ -1162,7 +1179,7 @@
 
     move-result p0
 
-    .line 477
+    .line 468
     invoke-static {v0, v1, v2, p0}, Landroidx/camera/core/internal/utils/ImageUtil;->shouldCropImage(IIII)Z
 
     move-result p0
@@ -1173,7 +1190,7 @@
 .method public static sizeToVertexes(Landroid/util/Size;)[F
     .locals 6
 
-    .line 144
+    .line 140
     invoke-virtual {p0}, Landroid/util/Size;->getWidth()I
 
     move-result v0
@@ -1192,7 +1209,7 @@
 
     int-to-float v2, v2
 
-    .line 145
+    .line 141
     invoke-virtual {p0}, Landroid/util/Size;->getHeight()I
 
     move-result p0
@@ -1248,7 +1265,7 @@
         }
     .end annotation
 
-    .line 219
+    .line 211
     invoke-interface {p0}, Landroidx/camera/core/ImageProxy;->getFormat()I
 
     move-result v0
@@ -1257,12 +1274,12 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 224
+    .line 216
     invoke-static {p0}, Landroidx/camera/core/internal/utils/ImageUtil;->yuv_420_888toNv21(Landroidx/camera/core/ImageProxy;)[B
 
     move-result-object v3
 
-    .line 225
+    .line 217
     new-instance v2, Landroid/graphics/YuvImage;
 
     invoke-interface {p0}, Landroidx/camera/core/ImageProxy;->getWidth()I
@@ -1279,15 +1296,15 @@
 
     invoke-direct/range {v2 .. v7}, Landroid/graphics/YuvImage;-><init>([BIII[I)V
 
-    .line 228
+    .line 220
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 229
+    .line 221
     new-instance v1, Landroidx/camera/core/impl/utils/ExifOutputStream;
 
-    .line 230
+    .line 222
     invoke-static {p0, p3}, Landroidx/camera/core/impl/utils/ExifData;->create(Landroidx/camera/core/ImageProxy;I)Landroidx/camera/core/impl/utils/ExifData;
 
     move-result-object p3
@@ -1296,7 +1313,7 @@
 
     if-nez p1, :cond_0
 
-    .line 232
+    .line 224
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-interface {p0}, Landroidx/camera/core/ImageProxy;->getWidth()I
@@ -1311,7 +1328,7 @@
 
     invoke-direct {p1, v3, v3, p3, p0}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 235
+    .line 227
     :cond_0
     invoke-virtual {v2, p1, p2, v1}, Landroid/graphics/YuvImage;->compressToJpeg(Landroid/graphics/Rect;ILjava/io/OutputStream;)Z
 
@@ -1319,14 +1336,14 @@
 
     if-eqz p0, :cond_1
 
-    .line 240
+    .line 232
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p0
 
     return-object p0
 
-    .line 237
+    .line 229
     :cond_1
     new-instance p0, Landroidx/camera/core/internal/utils/ImageUtil$CodecFailedException;
 
@@ -1338,7 +1355,7 @@
 
     throw p0
 
-    .line 220
+    .line 212
     :cond_2
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -1348,7 +1365,7 @@
 
     invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 221
+    .line 213
     invoke-interface {p0}, Landroidx/camera/core/ImageProxy;->getFormat()I
 
     move-result p0
@@ -1367,7 +1384,7 @@
 .method public static yuv_420_888toNv21(Landroidx/camera/core/ImageProxy;)[B
     .locals 19
 
-    .line 246
+    .line 237
     invoke-interface/range {p0 .. p0}, Landroidx/camera/core/ImageProxy;->getPlanes()[Landroidx/camera/core/ImageProxy$PlaneProxy;
 
     move-result-object v0
@@ -1376,7 +1393,7 @@
 
     aget-object v0, v0, v1
 
-    .line 247
+    .line 238
     invoke-interface/range {p0 .. p0}, Landroidx/camera/core/ImageProxy;->getPlanes()[Landroidx/camera/core/ImageProxy$PlaneProxy;
 
     move-result-object v2
@@ -1385,7 +1402,7 @@
 
     aget-object v2, v2, v3
 
-    .line 248
+    .line 239
     invoke-interface/range {p0 .. p0}, Landroidx/camera/core/ImageProxy;->getPlanes()[Landroidx/camera/core/ImageProxy$PlaneProxy;
 
     move-result-object v3
@@ -1394,36 +1411,36 @@
 
     aget-object v3, v3, v4
 
-    .line 250
+    .line 241
     invoke-interface {v0}, Landroidx/camera/core/ImageProxy$PlaneProxy;->getBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object v5
 
-    .line 251
+    .line 242
     invoke-interface {v2}, Landroidx/camera/core/ImageProxy$PlaneProxy;->getBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object v6
 
-    .line 252
+    .line 243
     invoke-interface {v3}, Landroidx/camera/core/ImageProxy$PlaneProxy;->getBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object v7
 
-    .line 253
+    .line 244
     invoke-virtual {v5}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
-    .line 254
+    .line 245
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
-    .line 255
+    .line 246
     invoke-virtual {v7}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
-    .line 257
+    .line 248
     invoke-virtual {v5}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v8
 
-    .line 261
+    .line 252
     invoke-interface/range {p0 .. p0}, Landroidx/camera/core/ImageProxy;->getWidth()I
 
     move-result v9
@@ -1444,7 +1461,7 @@
 
     move v11, v10
 
-    .line 264
+    .line 255
     :goto_0
     invoke-interface/range {p0 .. p0}, Landroidx/camera/core/ImageProxy;->getHeight()I
 
@@ -1452,21 +1469,21 @@
 
     if-ge v10, v12, :cond_0
 
-    .line 265
+    .line 256
     invoke-interface/range {p0 .. p0}, Landroidx/camera/core/ImageProxy;->getWidth()I
 
     move-result v12
 
     invoke-virtual {v5, v9, v11, v12}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
-    .line 266
+    .line 257
     invoke-interface/range {p0 .. p0}, Landroidx/camera/core/ImageProxy;->getWidth()I
 
     move-result v12
 
     add-int/2addr v11, v12
 
-    .line 268
+    .line 259
     invoke-virtual {v5}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v12
@@ -1487,14 +1504,14 @@
 
     move-result v12
 
-    .line 267
+    .line 258
     invoke-virtual {v5, v12}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_0
 
-    .line 271
+    .line 262
     :cond_0
     invoke-interface/range {p0 .. p0}, Landroidx/camera/core/ImageProxy;->getHeight()I
 
@@ -1502,37 +1519,37 @@
 
     div-int/2addr v0, v4
 
-    .line 272
+    .line 263
     invoke-interface/range {p0 .. p0}, Landroidx/camera/core/ImageProxy;->getWidth()I
 
     move-result v5
 
     div-int/2addr v5, v4
 
-    .line 273
+    .line 264
     invoke-interface {v3}, Landroidx/camera/core/ImageProxy$PlaneProxy;->getRowStride()I
 
     move-result v4
 
-    .line 274
+    .line 265
     invoke-interface {v2}, Landroidx/camera/core/ImageProxy$PlaneProxy;->getRowStride()I
 
     move-result v8
 
-    .line 275
+    .line 266
     invoke-interface {v3}, Landroidx/camera/core/ImageProxy$PlaneProxy;->getPixelStride()I
 
     move-result v3
 
-    .line 276
+    .line 267
     invoke-interface {v2}, Landroidx/camera/core/ImageProxy$PlaneProxy;->getPixelStride()I
 
     move-result v2
 
-    .line 280
+    .line 271
     new-array v10, v4, [B
 
-    .line 281
+    .line 272
     new-array v12, v8, [B
 
     move v13, v1
@@ -1540,7 +1557,7 @@
     :goto_1
     if-ge v13, v0, :cond_2
 
-    .line 283
+    .line 274
     invoke-virtual {v7}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v14
@@ -1551,7 +1568,7 @@
 
     invoke-virtual {v7, v10, v1, v14}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
-    .line 284
+    .line 275
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v14
@@ -1573,14 +1590,14 @@
 
     add-int/lit8 v17, v11, 0x1
 
-    .line 288
+    .line 279
     aget-byte v18, v10, v15
 
     aput-byte v18, v9, v11
 
     add-int/lit8 v11, v11, 0x2
 
-    .line 289
+    .line 280
     aget-byte v18, v12, v16
 
     aput-byte v18, v9, v17

@@ -1645,77 +1645,77 @@
 
 # virtual methods
 .method public getDataRegionSizeColumns()I
-    .locals 1
+    .locals 0
 
     .line 79
-    iget v0, p0, Lcom/google/zxing/datamatrix/decoder/Version;->dataRegionSizeColumns:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/decoder/Version;->dataRegionSizeColumns:I
 
-    return v0
+    return p0
 .end method
 
 .method public getDataRegionSizeRows()I
-    .locals 1
+    .locals 0
 
     .line 75
-    iget v0, p0, Lcom/google/zxing/datamatrix/decoder/Version;->dataRegionSizeRows:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/decoder/Version;->dataRegionSizeRows:I
 
-    return v0
+    return p0
 .end method
 
 .method getECBlocks()Lcom/google/zxing/datamatrix/decoder/Version$ECBlocks;
-    .locals 1
+    .locals 0
 
     .line 87
-    iget-object v0, p0, Lcom/google/zxing/datamatrix/decoder/Version;->ecBlocks:Lcom/google/zxing/datamatrix/decoder/Version$ECBlocks;
+    iget-object p0, p0, Lcom/google/zxing/datamatrix/decoder/Version;->ecBlocks:Lcom/google/zxing/datamatrix/decoder/Version$ECBlocks;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getSymbolSizeColumns()I
-    .locals 1
+    .locals 0
 
     .line 71
-    iget v0, p0, Lcom/google/zxing/datamatrix/decoder/Version;->symbolSizeColumns:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/decoder/Version;->symbolSizeColumns:I
 
-    return v0
+    return p0
 .end method
 
 .method public getSymbolSizeRows()I
-    .locals 1
+    .locals 0
 
     .line 67
-    iget v0, p0, Lcom/google/zxing/datamatrix/decoder/Version;->symbolSizeRows:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/decoder/Version;->symbolSizeRows:I
 
-    return v0
+    return p0
 .end method
 
 .method public getTotalCodewords()I
-    .locals 1
+    .locals 0
 
     .line 83
-    iget v0, p0, Lcom/google/zxing/datamatrix/decoder/Version;->totalCodewords:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/decoder/Version;->totalCodewords:I
 
-    return v0
+    return p0
 .end method
 
 .method public getVersionNumber()I
-    .locals 1
+    .locals 0
 
     .line 63
-    iget v0, p0, Lcom/google/zxing/datamatrix/decoder/Version;->versionNumber:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/decoder/Version;->versionNumber:I
 
-    return v0
+    return p0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 166
-    iget v0, p0, Lcom/google/zxing/datamatrix/decoder/Version;->versionNumber:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/decoder/Version;->versionNumber:I
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

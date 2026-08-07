@@ -40,6 +40,14 @@
     return-object v0
 .end method
 
+.method static bridge synthetic -$$Nest$smensureIso(Lj$/time/temporal/TemporalAccessor;)V
+    .locals 0
+
+    invoke-static {p0}, Lj$/time/temporal/IsoFields$Field;->ensureIso(Lj$/time/temporal/TemporalAccessor;)V
+
+    return-void
+.end method
+
 .method static bridge synthetic -$$Nest$smgetWeek(Lj$/time/LocalDate;)I
     .locals 0
 
@@ -181,6 +189,27 @@
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lj$/time/temporal/IsoFields$Field;-><init>(Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method private static ensureIso(Lj$/time/temporal/TemporalAccessor;)V
+    .locals 0
+
+    .line 590
+    invoke-static {p0}, Lj$/time/temporal/IsoFields;->isIso(Lj$/time/temporal/TemporalAccessor;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    return-void
+
+    .line 591
+    :cond_0
+    const-string p0, "Resolve requires IsoChronology"
+
+    invoke-static {p0}, Lj$/time/Year$3;->m(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -461,19 +490,19 @@
 
 # virtual methods
 .method public isDateBased()Z
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 .end method
 
 .method public isTimeBased()Z
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public rangeRefinedBy(Lj$/time/temporal/TemporalAccessor;)Lj$/time/temporal/ValueRange;
@@ -482,7 +511,7 @@
     .line 582
     invoke-interface {p0}, Lj$/time/temporal/TemporalField;->range()Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

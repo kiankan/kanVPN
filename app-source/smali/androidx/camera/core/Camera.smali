@@ -16,9 +16,9 @@
 .method public varargs isUseCasesCombinationSupported(Z[Landroidx/camera/core/UseCase;)Z
     .locals 0
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 .end method
 
 .method public varargs isUseCasesCombinationSupported([Landroidx/camera/core/UseCase;)Z
@@ -26,12 +26,12 @@
 
     const/4 v0, 0x1
 
-    .line 78
+    .line 76
     invoke-interface {p0, v0, p1}, Landroidx/camera/core/Camera;->isUseCasesCombinationSupported(Z[Landroidx/camera/core/UseCase;)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public varargs isUseCasesCombinationSupportedByFramework([Landroidx/camera/core/UseCase;)Z
@@ -39,10 +39,10 @@
 
     const/4 v0, 0x0
 
-    .line 93
+    .line 91
     invoke-interface {p0, v0, p1}, Landroidx/camera/core/Camera;->isUseCasesCombinationSupported(Z[Landroidx/camera/core/UseCase;)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method

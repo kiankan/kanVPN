@@ -37,62 +37,44 @@
     return p0
 .end method
 
-.method public static bridge synthetic m(Landroid/app/ActivityOptions;)I
+.method public static bridge synthetic m(Landroid/graphics/ColorSpace$Named;)I
     .locals 0
 
     .line 0
-    invoke-virtual {p0}, Landroid/app/ActivityOptions;->getLaunchDisplayId()I
+    invoke-virtual {p0}, Landroid/graphics/ColorSpace$Named;->ordinal()I
 
     move-result p0
 
     return p0
 .end method
 
-.method public static bridge synthetic m(Landroid/app/job/JobScheduler;Landroid/app/job/JobInfo;Landroid/app/job/JobWorkItem;)I
+.method public static bridge synthetic m(Landroid/hardware/camera2/CameraDevice;)I
     .locals 0
 
     .line 0
-    invoke-virtual {p0, p1, p2}, Landroid/app/job/JobScheduler;->enqueue(Landroid/app/job/JobInfo;Landroid/app/job/JobWorkItem;)I
+    invoke-virtual {p0}, Landroid/hardware/camera2/CameraDevice;->getCameraAudioRestriction()I
 
     move-result p0
 
     return p0
 .end method
 
-.method public static bridge synthetic m(Landroid/content/res/Configuration;)I
+.method public static bridge synthetic m(Landroid/hardware/camera2/CameraExtensionSession;Landroid/hardware/camera2/CaptureRequest;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraExtensionSession$ExtensionCaptureCallback;)I
     .locals 0
 
     .line 0
-    iget p0, p0, Landroid/content/res/Configuration;->colorMode:I
-
-    return p0
-.end method
-
-.method public static bridge synthetic m(Landroid/graphics/Insets;)I
-    .locals 0
-
-    .line 0
-    iget p0, p0, Landroid/graphics/Insets;->left:I
-
-    return p0
-.end method
-
-.method public static bridge synthetic m(Landroid/view/inspector/PropertyMapper;Ljava/lang/String;I)I
-    .locals 0
-
-    .line 0
-    invoke-interface {p0, p1, p2}, Landroid/view/inspector/PropertyMapper;->mapObject(Ljava/lang/String;I)I
+    invoke-virtual {p0, p1, p2, p3}, Landroid/hardware/camera2/CameraExtensionSession;->setRepeatingRequest(Landroid/hardware/camera2/CaptureRequest;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraExtensionSession$ExtensionCaptureCallback;)I
 
     move-result p0
 
     return p0
 .end method
 
-.method public static bridge synthetic m(Landroid/view/inspector/PropertyMapper;Ljava/lang/String;ILjava/util/function/IntFunction;)I
+.method public static bridge synthetic m(Landroid/hardware/camera2/params/OutputConfiguration;)I
     .locals 0
 
     .line 0
-    invoke-interface {p0, p1, p2, p3}, Landroid/view/inspector/PropertyMapper;->mapIntEnum(Ljava/lang/String;ILjava/util/function/IntFunction;)I
+    invoke-virtual {p0}, Landroid/hardware/camera2/params/OutputConfiguration;->getMaxSharedSurfaceCount()I
 
     move-result p0
 
@@ -121,234 +103,22 @@
     return-wide v0
 .end method
 
-.method public static bridge synthetic m(Landroid/app/ActivityOptions;I)Landroid/app/ActivityOptions;
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0, p1}, Landroid/app/ActivityOptions;->setLaunchDisplayId(I)Landroid/app/ActivityOptions;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic m(Landroid/app/ActivityOptions;Z)Landroid/app/ActivityOptions;
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0, p1}, Landroid/app/ActivityOptions;->setShareIdentityEnabled(Z)Landroid/app/ActivityOptions;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic m()Landroid/app/Notification$ProgressStyle;
+.method public static bridge synthetic m()Landroid/graphics/ColorSpace$Named;
     .locals 1
 
     .line 0
-    new-instance v0, Landroid/app/Notification$ProgressStyle;
-
-    invoke-direct {v0}, Landroid/app/Notification$ProgressStyle;-><init>()V
+    sget-object v0, Landroid/graphics/ColorSpace$Named;->SRGB:Landroid/graphics/ColorSpace$Named;
 
     return-object v0
 .end method
 
-.method public static bridge synthetic m(Ljava/lang/Object;)Landroid/app/NotificationChannel;
+.method public static bridge synthetic m(Landroid/media/Image;)Landroid/hardware/HardwareBuffer;
     .locals 0
 
     .line 0
-    check-cast p0, Landroid/app/NotificationChannel;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic m(Ljava/lang/Object;)Landroid/app/NotificationChannelGroup;
-    .locals 0
-
-    .line 0
-    check-cast p0, Landroid/app/NotificationChannelGroup;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic m(Ljava/lang/Object;)Landroid/app/Person;
-    .locals 0
-
-    .line 0
-    check-cast p0, Landroid/app/Person;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic m(Landroid/app/job/JobParameters;)Landroid/app/job/JobWorkItem;
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0}, Landroid/app/job/JobParameters;->dequeueWork()Landroid/app/job/JobWorkItem;
+    invoke-virtual {p0}, Landroid/media/Image;->getHardwareBuffer()Landroid/hardware/HardwareBuffer;
 
     move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic m(Landroid/content/Intent;)Landroid/app/job/JobWorkItem;
-    .locals 1
-
-    .line 0
-    new-instance v0, Landroid/app/job/JobWorkItem;
-
-    invoke-direct {v0, p0}, Landroid/app/job/JobWorkItem;-><init>(Landroid/content/Intent;)V
-
-    return-object v0
-.end method
-
-.method public static bridge synthetic m(Landroid/app/job/JobWorkItem;)Landroid/content/Intent;
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0}, Landroid/app/job/JobWorkItem;->getIntent()Landroid/content/Intent;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic m(Landroid/content/Context;Ljava/lang/String;)Landroid/content/pm/ShortcutInfo$Builder;
-    .locals 1
-
-    .line 0
-    new-instance v0, Landroid/content/pm/ShortcutInfo$Builder;
-
-    invoke-direct {v0, p0, p1}, Landroid/content/pm/ShortcutInfo$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public static bridge synthetic m(Landroid/content/pm/ShortcutInfo$Builder;I)Landroid/content/pm/ShortcutInfo$Builder;
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0, p1}, Landroid/content/pm/ShortcutInfo$Builder;->setRank(I)Landroid/content/pm/ShortcutInfo$Builder;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic m(Landroid/content/pm/ShortcutInfo$Builder;Landroid/content/ComponentName;)Landroid/content/pm/ShortcutInfo$Builder;
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0, p1}, Landroid/content/pm/ShortcutInfo$Builder;->setActivity(Landroid/content/ComponentName;)Landroid/content/pm/ShortcutInfo$Builder;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic m(Landroid/content/pm/ShortcutInfo$Builder;Landroid/graphics/drawable/Icon;)Landroid/content/pm/ShortcutInfo$Builder;
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0, p1}, Landroid/content/pm/ShortcutInfo$Builder;->setIcon(Landroid/graphics/drawable/Icon;)Landroid/content/pm/ShortcutInfo$Builder;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic m(Landroid/content/pm/ShortcutInfo$Builder;Landroid/os/PersistableBundle;)Landroid/content/pm/ShortcutInfo$Builder;
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0, p1}, Landroid/content/pm/ShortcutInfo$Builder;->setExtras(Landroid/os/PersistableBundle;)Landroid/content/pm/ShortcutInfo$Builder;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic m(Landroid/content/pm/ShortcutInfo$Builder;Ljava/lang/CharSequence;)Landroid/content/pm/ShortcutInfo$Builder;
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0, p1}, Landroid/content/pm/ShortcutInfo$Builder;->setShortLabel(Ljava/lang/CharSequence;)Landroid/content/pm/ShortcutInfo$Builder;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic m(Landroid/content/pm/ShortcutInfo$Builder;Ljava/util/Set;)Landroid/content/pm/ShortcutInfo$Builder;
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0, p1}, Landroid/content/pm/ShortcutInfo$Builder;->setCategories(Ljava/util/Set;)Landroid/content/pm/ShortcutInfo$Builder;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic m(Landroid/content/pm/ShortcutInfo$Builder;Z)Landroid/content/pm/ShortcutInfo$Builder;
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0, p1}, Landroid/content/pm/ShortcutInfo$Builder;->setLongLived(Z)Landroid/content/pm/ShortcutInfo$Builder;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic m(Landroid/content/pm/ShortcutInfo$Builder;[Landroid/app/Person;)Landroid/content/pm/ShortcutInfo$Builder;
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0, p1}, Landroid/content/pm/ShortcutInfo$Builder;->setPersons([Landroid/app/Person;)Landroid/content/pm/ShortcutInfo$Builder;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic m(Landroid/content/pm/ShortcutInfo$Builder;[Landroid/content/Intent;)Landroid/content/pm/ShortcutInfo$Builder;
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0, p1}, Landroid/content/pm/ShortcutInfo$Builder;->setIntents([Landroid/content/Intent;)Landroid/content/pm/ShortcutInfo$Builder;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic m(Landroid/content/pm/ShortcutInfo$Builder;)Landroid/content/pm/ShortcutInfo;
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0}, Landroid/content/pm/ShortcutInfo$Builder;->build()Landroid/content/pm/ShortcutInfo;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic m(Ljava/lang/Object;)Landroid/content/pm/ShortcutInfo;
-    .locals 0
-
-    .line 0
-    check-cast p0, Landroid/content/pm/ShortcutInfo;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic m(Landroid/content/pm/PackageInfo;)Landroid/content/pm/SigningInfo;
-    .locals 0
-
-    .line 0
-    iget-object p0, p0, Landroid/content/pm/PackageInfo;->signingInfo:Landroid/content/pm/SigningInfo;
 
     return-object p0
 .end method
@@ -357,9 +127,47 @@
     .locals 1
 
     .line 0
-    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->CONTROL_ZOOM_RATIO_RANGE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->INFO_SESSION_CONFIGURATION_QUERY_VERSION:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
     return-object v0
+.end method
+
+.method public static bridge synthetic m(Ljava/lang/Object;)Landroid/hardware/camera2/CameraExtensionSession$ExtensionCaptureCallback;
+    .locals 0
+
+    .line 0
+    check-cast p0, Landroid/hardware/camera2/CameraExtensionSession$ExtensionCaptureCallback;
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic m(Ljava/lang/Object;)Landroid/hardware/camera2/CameraExtensionSession$StateCallback;
+    .locals 0
+
+    .line 0
+    check-cast p0, Landroid/hardware/camera2/CameraExtensionSession$StateCallback;
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic m(Landroid/hardware/camera2/CameraExtensionSession;)Landroid/hardware/camera2/CameraExtensionSession$StillCaptureLatency;
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0}, Landroid/hardware/camera2/CameraExtensionSession;->getRealtimeStillCaptureLatency()Landroid/hardware/camera2/CameraExtensionSession$StillCaptureLatency;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic m(Ljava/lang/Object;)Landroid/hardware/camera2/CameraExtensionSession;
+    .locals 0
+
+    .line 0
+    check-cast p0, Landroid/hardware/camera2/CameraExtensionSession;
+
+    return-object p0
 .end method
 
 .method public static bridge synthetic m()Landroid/hardware/camera2/CaptureRequest$Key;
@@ -371,11 +179,60 @@
     return-object v0
 .end method
 
+.method public static bridge synthetic m()Landroid/hardware/camera2/CaptureResult$Key;
+    .locals 1
+
+    .line 0
+    sget-object v0, Landroid/hardware/camera2/CaptureResult;->LOGICAL_MULTI_CAMERA_ACTIVE_PHYSICAL_ID:Landroid/hardware/camera2/CaptureResult$Key;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic m(Ljava/lang/Object;)Landroid/hardware/camera2/params/ColorSpaceProfiles;
+    .locals 0
+
+    .line 0
+    check-cast p0, Landroid/hardware/camera2/params/ColorSpaceProfiles;
+
+    return-object p0
+.end method
+
 .method public static bridge synthetic m(Ljava/lang/Object;)Landroid/hardware/camera2/params/DynamicRangeProfiles;
     .locals 0
 
     .line 0
     check-cast p0, Landroid/hardware/camera2/params/DynamicRangeProfiles;
+
+    return-object p0
+.end method
+
+.method public static synthetic m(ILjava/util/List;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraExtensionSession$StateCallback;)Landroid/hardware/camera2/params/ExtensionSessionConfiguration;
+    .locals 1
+
+    .line 0
+    new-instance v0, Landroid/hardware/camera2/params/ExtensionSessionConfiguration;
+
+    invoke-direct {v0, p0, p1, p2, p3}, Landroid/hardware/camera2/params/ExtensionSessionConfiguration;-><init>(ILjava/util/List;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraExtensionSession$StateCallback;)V
+
+    return-object v0
+.end method
+
+.method public static synthetic m(Ljava/util/Collection;I)Landroid/hardware/camera2/params/InputConfiguration;
+    .locals 1
+
+    .line 0
+    new-instance v0, Landroid/hardware/camera2/params/InputConfiguration;
+
+    invoke-direct {v0, p0, p1}, Landroid/hardware/camera2/params/InputConfiguration;-><init>(Ljava/util/Collection;I)V
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic m(Ljava/lang/Object;)Landroid/hardware/camera2/params/MultiResolutionStreamConfigurationMap;
+    .locals 0
+
+    .line 0
+    check-cast p0, Landroid/hardware/camera2/params/MultiResolutionStreamConfigurationMap;
 
     return-object p0
 .end method
@@ -398,6 +255,17 @@
     new-instance v0, Landroid/hardware/camera2/params/OutputConfiguration;
 
     invoke-direct {v0, p0, p1}, Landroid/hardware/camera2/params/OutputConfiguration;-><init>(Landroid/util/Size;Ljava/lang/Class;)V
+
+    return-object v0
+.end method
+
+.method public static synthetic m(ILjava/util/List;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraCaptureSession$StateCallback;)Landroid/hardware/camera2/params/SessionConfiguration;
+    .locals 1
+
+    .line 0
+    new-instance v0, Landroid/hardware/camera2/params/SessionConfiguration;
+
+    invoke-direct {v0, p0, p1, p2, p3}, Landroid/hardware/camera2/params/SessionConfiguration;-><init>(ILjava/util/List;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraCaptureSession$StateCallback;)V
 
     return-object v0
 .end method
@@ -435,26 +303,26 @@
     return-object p0
 .end method
 
-.method public static bridge synthetic m(Landroid/widget/TextView;)Landroid/text/TextDirectionHeuristic;
+.method public static bridge synthetic m(IIIIJ)Landroid/media/ImageReader;
     .locals 0
 
     .line 0
-    invoke-virtual {p0}, Landroid/widget/TextView;->getTextDirectionHeuristic()Landroid/text/TextDirectionHeuristic;
+    invoke-static/range {p0 .. p5}, Landroid/media/ImageReader;->newInstance(IIIIJ)Landroid/media/ImageReader;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic m()Landroid/view/inspector/InspectionCompanion$UninitializedPropertyMapException;
-    .locals 1
+.method public static bridge synthetic m(Landroid/view/Surface;II)Landroid/media/ImageWriter;
+    .locals 0
 
     .line 0
-    new-instance v0, Landroid/view/inspector/InspectionCompanion$UninitializedPropertyMapException;
+    invoke-static {p0, p1, p2}, Landroid/media/ImageWriter;->newInstance(Landroid/view/Surface;II)Landroid/media/ImageWriter;
 
-    invoke-direct {v0}, Landroid/view/inspector/InspectionCompanion$UninitializedPropertyMapException;-><init>()V
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public static synthetic m(FFFI)Landroid/window/BackEvent;
@@ -489,26 +357,6 @@
     return-object v0
 .end method
 
-.method public static bridge synthetic m(Ljava/lang/Object;)Landroid/window/OnBackInvokedCallback;
-    .locals 0
-
-    .line 0
-    check-cast p0, Landroid/window/OnBackInvokedCallback;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic m(Landroid/app/Activity;)Landroid/window/OnBackInvokedDispatcher;
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0}, Landroid/app/Activity;->getOnBackInvokedDispatcher()Landroid/window/OnBackInvokedDispatcher;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 .method public static bridge synthetic m(Landroidx/activity/ComponentDialog;)Landroid/window/OnBackInvokedDispatcher;
     .locals 0
 
@@ -520,20 +368,11 @@
     return-object p0
 .end method
 
-.method public static bridge synthetic m(Ljava/lang/Object;)Landroid/window/OnBackInvokedDispatcher;
-    .locals 0
-
-    .line 0
-    check-cast p0, Landroid/window/OnBackInvokedDispatcher;
-
-    return-object p0
-.end method
-
 .method public static bridge synthetic m()Ljava/lang/Class;
     .locals 1
 
     .line 0
-    const-class v0, Landroid/app/Notification$ProgressStyle;
+    const-class v0, Landroid/hardware/camera2/CameraExtensionSession;
 
     return-object v0
 .end method
@@ -547,11 +386,55 @@
     return-object v0
 .end method
 
-.method public static bridge synthetic m(Landroid/content/Context;)Ljava/lang/String;
+.method public static bridge synthetic m(Landroid/hardware/camera2/CameraCharacteristics;)Ljava/util/List;
     .locals 0
 
     .line 0
-    invoke-virtual {p0}, Landroid/content/Context;->getOpPackageName()Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/hardware/camera2/CameraCharacteristics;->getAvailablePhysicalCameraRequestKeys()Ljava/util/List;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic m(Landroid/hardware/camera2/params/OutputConfiguration;)Ljava/util/List;
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0}, Landroid/hardware/camera2/params/OutputConfiguration;->getSurfaces()Ljava/util/List;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic m(Landroid/hardware/camera2/TotalCaptureResult;)Ljava/util/Map;
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0}, Landroid/hardware/camera2/TotalCaptureResult;->getPhysicalCameraResults()Ljava/util/Map;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic m(Landroid/hardware/camera2/CameraCharacteristics;)Ljava/util/Set;
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0}, Landroid/hardware/camera2/CameraCharacteristics;->getPhysicalCameraIds()Ljava/util/Set;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic m(Landroid/hardware/camera2/CameraManager;)Ljava/util/Set;
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0}, Landroid/hardware/camera2/CameraManager;->getConcurrentCameraIds()Ljava/util/Set;
 
     move-result-object p0
 
@@ -578,38 +461,11 @@
     return-void
 .end method
 
-.method public static bridge synthetic m(Landroid/app/ActivityOptions;Z)V
+.method public static bridge synthetic m(Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;JJ)V
     .locals 0
 
     .line 0
-    invoke-virtual {p0, p1}, Landroid/app/ActivityOptions;->setPendingIntentBackgroundActivityLaunchAllowed(Z)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic m(Landroid/app/Notification$CallStyle;Landroid/app/Notification$Builder;)V
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0, p1}, Landroid/app/Notification$CallStyle;->setBuilder(Landroid/app/Notification$Builder;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic m(Landroid/app/job/JobParameters;Landroid/app/job/JobWorkItem;)V
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0, p1}, Landroid/app/job/JobParameters;->completeWork(Landroid/app/job/JobWorkItem;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic m(Landroid/content/res/Configuration;I)V
-    .locals 0
-
-    .line 0
-    iput p1, p0, Landroid/content/res/Configuration;->colorMode:I
+    invoke-virtual/range {p0 .. p6}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onReadoutStarted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;JJ)V
 
     return-void
 .end method
@@ -623,11 +479,65 @@
     return-void
 .end method
 
-.method public static bridge synthetic m(Landroid/hardware/camera2/CameraManager$AvailabilityCallback;)V
+.method public static bridge synthetic m(Landroid/hardware/camera2/CameraCaptureSession;Ljava/util/List;)V
     .locals 0
 
     .line 0
-    invoke-virtual {p0}, Landroid/hardware/camera2/CameraManager$AvailabilityCallback;->onCameraAccessPrioritiesChanged()V
+    invoke-virtual {p0, p1}, Landroid/hardware/camera2/CameraCaptureSession;->finalizeOutputConfigurations(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic m(Landroid/hardware/camera2/CameraDevice;I)V
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0, p1}, Landroid/hardware/camera2/CameraDevice;->setCameraAudioRestriction(I)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic m(Landroid/hardware/camera2/CameraDevice;Landroid/hardware/camera2/params/SessionConfiguration;)V
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0, p1}, Landroid/hardware/camera2/CameraDevice;->createCaptureSession(Landroid/hardware/camera2/params/SessionConfiguration;)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic m(Landroid/hardware/camera2/CameraExtensionSession;)V
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0}, Landroid/hardware/camera2/CameraExtensionSession;->stopRepeating()V
+
+    return-void
+.end method
+
+.method public static bridge synthetic m(Landroid/hardware/camera2/CameraManager;Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraDevice$StateCallback;)V
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0, p1, p2, p3}, Landroid/hardware/camera2/CameraManager;->openCamera(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraDevice$StateCallback;)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic m(Landroid/hardware/camera2/CameraManager;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraManager$AvailabilityCallback;)V
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0, p1, p2}, Landroid/hardware/camera2/CameraManager;->registerAvailabilityCallback(Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraManager$AvailabilityCallback;)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic m(Landroid/hardware/camera2/params/OutputConfiguration;)V
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0}, Landroid/hardware/camera2/params/OutputConfiguration;->enableSurfaceSharing()V
 
     return-void
 .end method
@@ -637,6 +547,42 @@
 
     .line 0
     invoke-virtual {p0, p1}, Landroid/hardware/camera2/params/OutputConfiguration;->addSurface(Landroid/view/Surface;)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic m(Landroid/hardware/camera2/params/OutputConfiguration;Ljava/lang/String;)V
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0, p1}, Landroid/hardware/camera2/params/OutputConfiguration;->setPhysicalCameraId(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic m(Landroid/hardware/camera2/params/SessionConfiguration;Landroid/hardware/camera2/CaptureRequest;)V
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0, p1}, Landroid/hardware/camera2/params/SessionConfiguration;->setSessionParameters(Landroid/hardware/camera2/CaptureRequest;)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic m(Landroid/hardware/camera2/params/SessionConfiguration;Landroid/hardware/camera2/params/InputConfiguration;)V
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0, p1}, Landroid/hardware/camera2/params/SessionConfiguration;->setInputConfiguration(Landroid/hardware/camera2/params/InputConfiguration;)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic m(Landroid/media/ImageReader;)V
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0}, Landroid/media/ImageReader;->discardFreeBuffers()V
 
     return-void
 .end method
@@ -659,78 +605,15 @@
     return-void
 .end method
 
-.method public static bridge synthetic m(Landroid/view/inspector/PropertyReader;IF)V
-    .locals 0
+.method public static bridge synthetic m()[Landroid/graphics/ColorSpace$Named;
+    .locals 1
 
     .line 0
-    invoke-interface {p0, p1, p2}, Landroid/view/inspector/PropertyReader;->readFloat(IF)V
+    invoke-static {}, Landroid/graphics/ColorSpace$Named;->values()[Landroid/graphics/ColorSpace$Named;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public static bridge synthetic m(Landroid/view/inspector/PropertyReader;II)V
-    .locals 0
-
-    .line 0
-    invoke-interface {p0, p1, p2}, Landroid/view/inspector/PropertyReader;->readInt(II)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic m(Landroid/view/inspector/PropertyReader;ILjava/lang/Object;)V
-    .locals 0
-
-    .line 0
-    invoke-interface {p0, p1, p2}, Landroid/view/inspector/PropertyReader;->readObject(ILjava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic m(Landroid/view/inspector/PropertyReader;IZ)V
-    .locals 0
-
-    .line 0
-    invoke-interface {p0, p1, p2}, Landroid/view/inspector/PropertyReader;->readBoolean(IZ)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic m(Landroid/window/OnBackInvokedDispatcher;ILandroid/window/OnBackInvokedCallback;)V
-    .locals 0
-
-    .line 0
-    invoke-interface {p0, p1, p2}, Landroid/window/OnBackInvokedDispatcher;->registerOnBackInvokedCallback(ILandroid/window/OnBackInvokedCallback;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic m(Landroid/window/OnBackInvokedDispatcher;Landroid/window/OnBackInvokedCallback;)V
-    .locals 0
-
-    .line 0
-    invoke-interface {p0, p1}, Landroid/window/OnBackInvokedDispatcher;->unregisterOnBackInvokedCallback(Landroid/window/OnBackInvokedCallback;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic m(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
-    .locals 0
-
-    .line 0
-    invoke-virtual/range {p0 .. p6}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->saveAttributeDataForStyleable(Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic m(Landroid/widget/TextView;)Z
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0}, Landroid/widget/TextView;->isHorizontallyScrollable()Z
-
-    move-result p0
-
-    return p0
+    return-object v0
 .end method
 
 .method public static bridge synthetic m$1(Landroid/window/BackEvent;)F
@@ -744,64 +627,31 @@
     return p0
 .end method
 
-.method public static bridge synthetic m$1(Landroid/graphics/Insets;)I
+.method public static bridge synthetic m$1(Landroid/hardware/camera2/CameraExtensionSession;Landroid/hardware/camera2/CaptureRequest;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraExtensionSession$ExtensionCaptureCallback;)I
     .locals 0
 
     .line 0
-    iget p0, p0, Landroid/graphics/Insets;->top:I
-
-    return p0
-.end method
-
-.method public static bridge synthetic m$1(Landroid/view/inspector/PropertyMapper;Ljava/lang/String;I)I
-    .locals 0
-
-    .line 0
-    invoke-interface {p0, p1, p2}, Landroid/view/inspector/PropertyMapper;->mapInt(Ljava/lang/String;I)I
+    invoke-virtual {p0, p1, p2, p3}, Landroid/hardware/camera2/CameraExtensionSession;->capture(Landroid/hardware/camera2/CaptureRequest;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraExtensionSession$ExtensionCaptureCallback;)I
 
     move-result p0
 
     return p0
 .end method
 
-.method public static bridge synthetic m$1(Landroid/view/inspector/PropertyMapper;Ljava/lang/String;ILjava/util/function/IntFunction;)I
-    .locals 0
+.method public static bridge synthetic m$1()Landroid/graphics/ColorSpace$Named;
+    .locals 1
 
     .line 0
-    invoke-interface {p0, p1, p2, p3}, Landroid/view/inspector/PropertyMapper;->mapIntFlag(Ljava/lang/String;ILjava/util/function/IntFunction;)I
+    sget-object v0, Landroid/graphics/ColorSpace$Named;->PRO_PHOTO_RGB:Landroid/graphics/ColorSpace$Named;
 
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic m$1(Landroid/app/ActivityOptions;I)Landroid/app/ActivityOptions;
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0, p1}, Landroid/app/ActivityOptions;->setPendingIntentBackgroundActivityStartMode(I)Landroid/app/ActivityOptions;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic m$1(Landroid/content/pm/ShortcutInfo$Builder;Ljava/lang/CharSequence;)Landroid/content/pm/ShortcutInfo$Builder;
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0, p1}, Landroid/content/pm/ShortcutInfo$Builder;->setLongLabel(Ljava/lang/CharSequence;)Landroid/content/pm/ShortcutInfo$Builder;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method
 
 .method public static bridge synthetic m$1()Landroid/hardware/camera2/CameraCharacteristics$Key;
     .locals 1
 
     .line 0
-    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SCALER_AVAILABLE_STREAM_USE_CASES:Landroid/hardware/camera2/CameraCharacteristics$Key;
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SCALER_STREAM_CONFIGURATION_MAP_MAXIMUM_RESOLUTION:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
     return-object v0
 .end method
@@ -811,6 +661,15 @@
 
     .line 0
     sget-object v0, Landroid/hardware/camera2/CaptureRequest;->CONTROL_SETTINGS_OVERRIDE:Landroid/hardware/camera2/CaptureRequest$Key;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic m$1()Landroid/hardware/camera2/CaptureResult$Key;
+    .locals 1
+
+    .line 0
+    sget-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_LOW_LIGHT_BOOST_STATE:Landroid/hardware/camera2/CaptureResult$Key;
 
     return-object v0
 .end method
@@ -826,20 +685,60 @@
     return-object p0
 .end method
 
-.method public static bridge synthetic m$1()Ljava/lang/String;
+.method public static bridge synthetic m$1()Ljava/lang/Class;
     .locals 1
 
     .line 0
-    sget-object v0, Landroid/os/Build;->SOC_MODEL:Ljava/lang/String;
+    const-class v0, Landroid/hardware/HardwareBuffer;
 
     return-object v0
+.end method
+
+.method public static bridge synthetic m$1(Landroid/hardware/camera2/CameraCharacteristics;)Ljava/util/List;
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0}, Landroid/hardware/camera2/CameraCharacteristics;->getAvailableSessionKeys()Ljava/util/List;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic m$1(Landroid/hardware/camera2/TotalCaptureResult;)Ljava/util/Map;
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0}, Landroid/hardware/camera2/TotalCaptureResult;->getPhysicalCameraTotalResults()Ljava/util/Map;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method public static synthetic m$1()V
     .locals 1
 
     .line 0
-    new-instance v0, Landroid/hardware/camera2/params/MultiResolutionStreamInfo;
+    new-instance v0, Landroid/hardware/camera2/params/InputConfiguration;
+
+    return-void
+.end method
+
+.method public static bridge synthetic m$1(Landroid/hardware/camera2/CameraExtensionSession;)V
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0}, Landroid/hardware/camera2/CameraExtensionSession;->close()V
+
+    return-void
+.end method
+
+.method public static bridge synthetic m$1(Landroid/hardware/camera2/params/OutputConfiguration;Landroid/view/Surface;)V
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0, p1}, Landroid/hardware/camera2/params/OutputConfiguration;->removeSurface(Landroid/view/Surface;)V
 
     return-void
 .end method
@@ -853,13 +752,76 @@
     return-void
 .end method
 
-.method public static bridge synthetic m$1(Landroid/view/inspector/PropertyReader;II)V
-    .locals 0
+.method public static bridge synthetic m$10()Landroid/graphics/ColorSpace$Named;
+    .locals 1
 
     .line 0
-    invoke-interface {p0, p1, p2}, Landroid/view/inspector/PropertyReader;->readIntEnum(II)V
+    sget-object v0, Landroid/graphics/ColorSpace$Named;->LINEAR_EXTENDED_SRGB:Landroid/graphics/ColorSpace$Named;
 
-    return-void
+    return-object v0
+.end method
+
+.method public static bridge synthetic m$11()Landroid/graphics/ColorSpace$Named;
+    .locals 1
+
+    .line 0
+    sget-object v0, Landroid/graphics/ColorSpace$Named;->BT709:Landroid/graphics/ColorSpace$Named;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic m$12()Landroid/graphics/ColorSpace$Named;
+    .locals 1
+
+    .line 0
+    sget-object v0, Landroid/graphics/ColorSpace$Named;->BT2020:Landroid/graphics/ColorSpace$Named;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic m$13()Landroid/graphics/ColorSpace$Named;
+    .locals 1
+
+    .line 0
+    sget-object v0, Landroid/graphics/ColorSpace$Named;->DCI_P3:Landroid/graphics/ColorSpace$Named;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic m$14()Landroid/graphics/ColorSpace$Named;
+    .locals 1
+
+    .line 0
+    sget-object v0, Landroid/graphics/ColorSpace$Named;->DISPLAY_P3:Landroid/graphics/ColorSpace$Named;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic m$15()Landroid/graphics/ColorSpace$Named;
+    .locals 1
+
+    .line 0
+    sget-object v0, Landroid/graphics/ColorSpace$Named;->NTSC_1953:Landroid/graphics/ColorSpace$Named;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic m$16()Landroid/graphics/ColorSpace$Named;
+    .locals 1
+
+    .line 0
+    sget-object v0, Landroid/graphics/ColorSpace$Named;->SMPTE_C:Landroid/graphics/ColorSpace$Named;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic m$17()Landroid/graphics/ColorSpace$Named;
+    .locals 1
+
+    .line 0
+    sget-object v0, Landroid/graphics/ColorSpace$Named;->ADOBE_RGB:Landroid/graphics/ColorSpace$Named;
+
+    return-object v0
 .end method
 
 .method public static bridge synthetic m$2(Landroid/window/BackEvent;)F
@@ -873,123 +835,16 @@
     return p0
 .end method
 
-.method public static bridge synthetic m$2(Landroid/graphics/Insets;)I
-    .locals 0
+.method public static bridge synthetic m$2()Landroid/graphics/ColorSpace$Named;
+    .locals 1
 
     .line 0
-    iget p0, p0, Landroid/graphics/Insets;->right:I
+    sget-object v0, Landroid/graphics/ColorSpace$Named;->ACES:Landroid/graphics/ColorSpace$Named;
 
-    return p0
-.end method
-
-.method public static bridge synthetic m$2(Landroid/view/inspector/PropertyMapper;Ljava/lang/String;I)I
-    .locals 0
-
-    .line 0
-    invoke-interface {p0, p1, p2}, Landroid/view/inspector/PropertyMapper;->mapBoolean(Ljava/lang/String;I)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic m$2(Landroid/content/pm/ShortcutInfo$Builder;Ljava/lang/CharSequence;)Landroid/content/pm/ShortcutInfo$Builder;
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0, p1}, Landroid/content/pm/ShortcutInfo$Builder;->setDisabledMessage(Ljava/lang/CharSequence;)Landroid/content/pm/ShortcutInfo$Builder;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method
 
 .method public static bridge synthetic m$2()Landroid/hardware/camera2/CameraCharacteristics$Key;
-    .locals 1
-
-    .line 0
-    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SCALER_STREAM_CONFIGURATION_MAP_MAXIMUM_RESOLUTION:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    return-object v0
-.end method
-
-.method public static bridge synthetic m$2()Landroid/hardware/camera2/CaptureRequest$Key;
-    .locals 1
-
-    .line 0
-    sget-object v0, Landroid/hardware/camera2/CaptureRequest;->CONTROL_ENABLE_ZSL:Landroid/hardware/camera2/CaptureRequest$Key;
-
-    return-object v0
-.end method
-
-.method public static synthetic m$2()V
-    .locals 1
-
-    .line 0
-    new-instance v0, Landroid/content/pm/ShortcutInfo$Builder;
-
-    return-void
-.end method
-
-.method public static bridge synthetic m$2(Landroid/view/inspector/PropertyReader;II)V
-    .locals 0
-
-    .line 0
-    invoke-interface {p0, p1, p2}, Landroid/view/inspector/PropertyReader;->readIntFlag(II)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic m$3(Landroid/graphics/Insets;)I
-    .locals 0
-
-    .line 0
-    iget p0, p0, Landroid/graphics/Insets;->bottom:I
-
-    return p0
-.end method
-
-.method public static bridge synthetic m$3(Landroid/view/inspector/PropertyMapper;Ljava/lang/String;I)I
-    .locals 0
-
-    .line 0
-    invoke-interface {p0, p1, p2}, Landroid/view/inspector/PropertyMapper;->mapGravity(Ljava/lang/String;I)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic m$3()Landroid/hardware/camera2/CameraCharacteristics$Key;
-    .locals 1
-
-    .line 0
-    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->CONTROL_AVAILABLE_SETTINGS_OVERRIDES:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    return-object v0
-.end method
-
-.method public static bridge synthetic m$3(Landroid/view/inspector/PropertyReader;II)V
-    .locals 0
-
-    .line 0
-    invoke-interface {p0, p1, p2}, Landroid/view/inspector/PropertyReader;->readGravity(II)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic m$4(Landroid/view/inspector/PropertyMapper;Ljava/lang/String;I)I
-    .locals 0
-
-    .line 0
-    invoke-interface {p0, p1, p2}, Landroid/view/inspector/PropertyMapper;->mapFloat(Ljava/lang/String;I)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic m$4()Landroid/hardware/camera2/CameraCharacteristics$Key;
     .locals 1
 
     .line 0
@@ -998,22 +853,137 @@
     return-object v0
 .end method
 
-.method public static bridge synthetic m$4(Landroid/view/inspector/PropertyReader;II)V
-    .locals 0
+.method public static bridge synthetic m$2()Landroid/hardware/camera2/CaptureRequest$Key;
+    .locals 1
 
     .line 0
-    invoke-interface {p0, p1, p2}, Landroid/view/inspector/PropertyReader;->readResourceId(II)V
+    sget-object v0, Landroid/hardware/camera2/CaptureRequest;->FLASH_STRENGTH_LEVEL:Landroid/hardware/camera2/CaptureRequest$Key;
+
+    return-object v0
+.end method
+
+.method public static synthetic m$2()V
+    .locals 1
+
+    .line 0
+    new-instance v0, Landroid/hardware/camera2/params/MultiResolutionStreamInfo;
 
     return-void
 .end method
 
-.method public static bridge synthetic m$5(Landroid/view/inspector/PropertyMapper;Ljava/lang/String;I)I
-    .locals 0
+.method public static bridge synthetic m$3()Landroid/graphics/ColorSpace$Named;
+    .locals 1
 
     .line 0
-    invoke-interface {p0, p1, p2}, Landroid/view/inspector/PropertyMapper;->mapResourceId(Ljava/lang/String;I)I
+    sget-object v0, Landroid/graphics/ColorSpace$Named;->ACESCG:Landroid/graphics/ColorSpace$Named;
 
-    move-result p0
+    return-object v0
+.end method
 
-    return p0
+.method public static bridge synthetic m$3()Landroid/hardware/camera2/CameraCharacteristics$Key;
+    .locals 1
+
+    .line 0
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->CONTROL_ZOOM_RATIO_RANGE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic m$3()Landroid/hardware/camera2/CaptureRequest$Key;
+    .locals 1
+
+    .line 0
+    sget-object v0, Landroid/hardware/camera2/CaptureRequest;->CONTROL_ENABLE_ZSL:Landroid/hardware/camera2/CaptureRequest$Key;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic m$4()Landroid/graphics/ColorSpace$Named;
+    .locals 1
+
+    .line 0
+    sget-object v0, Landroid/graphics/ColorSpace$Named;->CIE_XYZ:Landroid/graphics/ColorSpace$Named;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic m$4()Landroid/hardware/camera2/CameraCharacteristics$Key;
+    .locals 1
+
+    .line 0
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SCALER_AVAILABLE_STREAM_USE_CASES:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic m$4()Landroid/hardware/camera2/CaptureRequest$Key;
+    .locals 1
+
+    .line 0
+    sget-object v0, Landroid/hardware/camera2/CaptureRequest;->EXTENSION_STRENGTH:Landroid/hardware/camera2/CaptureRequest$Key;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic m$5()Landroid/graphics/ColorSpace$Named;
+    .locals 1
+
+    .line 0
+    sget-object v0, Landroid/graphics/ColorSpace$Named;->CIE_LAB:Landroid/graphics/ColorSpace$Named;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic m$5()Landroid/hardware/camera2/CameraCharacteristics$Key;
+    .locals 1
+
+    .line 0
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->REQUEST_AVAILABLE_COLOR_SPACE_PROFILES:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic m$6()Landroid/graphics/ColorSpace$Named;
+    .locals 1
+
+    .line 0
+    sget-object v0, Landroid/graphics/ColorSpace$Named;->BT2020_HLG:Landroid/graphics/ColorSpace$Named;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic m$6()Landroid/hardware/camera2/CameraCharacteristics$Key;
+    .locals 1
+
+    .line 0
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SCALER_MULTI_RESOLUTION_STREAM_CONFIGURATION_MAP:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic m$7()Landroid/graphics/ColorSpace$Named;
+    .locals 1
+
+    .line 0
+    sget-object v0, Landroid/graphics/ColorSpace$Named;->BT2020_PQ:Landroid/graphics/ColorSpace$Named;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic m$8()Landroid/graphics/ColorSpace$Named;
+    .locals 1
+
+    .line 0
+    sget-object v0, Landroid/graphics/ColorSpace$Named;->LINEAR_SRGB:Landroid/graphics/ColorSpace$Named;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic m$9()Landroid/graphics/ColorSpace$Named;
+    .locals 1
+
+    .line 0
+    sget-object v0, Landroid/graphics/ColorSpace$Named;->EXTENDED_SRGB:Landroid/graphics/ColorSpace$Named;
+
+    return-object v0
 .end method

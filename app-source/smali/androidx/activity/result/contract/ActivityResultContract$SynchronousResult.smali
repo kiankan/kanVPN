@@ -41,7 +41,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -78,7 +78,7 @@
 
 # virtual methods
 .method public final getValue()Ljava/lang/Object;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TT;"
@@ -86,7 +86,7 @@
     .end annotation
 
     .line 51
-    iget-object v0, p0, Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;->value:Ljava/lang/Object;
+    iget-object p0, p0, Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;->value:Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method

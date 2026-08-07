@@ -33,16 +33,16 @@
 
 # virtual methods
 .method public final run()V
-    .locals 3
+    .locals 2
 
     .line 0
     iget-object v0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor$$ExternalSyntheticLambda7;->f$0:Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;
 
     iget-object v1, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor$$ExternalSyntheticLambda7;->f$1:Ljava/lang/Runnable;
 
-    iget-object v2, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor$$ExternalSyntheticLambda7;->f$2:Ljava/lang/Runnable;
+    iget-object p0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor$$ExternalSyntheticLambda7;->f$2:Ljava/lang/Runnable;
 
-    invoke-virtual {v0, v1, v2}, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->lambda$executeSafely$8$androidx-camera-core-processing-concurrent-DualSurfaceProcessor(Ljava/lang/Runnable;Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1, p0}, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->lambda$executeSafely$8$androidx-camera-core-processing-concurrent-DualSurfaceProcessor(Ljava/lang/Runnable;Ljava/lang/Runnable;)V
 
     return-void
 .end method

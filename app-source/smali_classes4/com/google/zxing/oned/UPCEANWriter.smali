@@ -16,9 +16,9 @@
 
 # virtual methods
 .method public getDefaultMargin()I
-    .locals 1
+    .locals 0
 
-    const/16 v0, 0x9
+    const/16 p0, 0x9
 
-    return v0
+    return p0
 .end method

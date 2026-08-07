@@ -25,14 +25,14 @@
 
 # virtual methods
 .method public final invoke()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Landroidx/activity/result/ActivityResultCallerLauncher$$ExternalSyntheticLambda0;->f$0:Landroidx/activity/result/ActivityResultCallerLauncher;
+    iget-object p0, p0, Landroidx/activity/result/ActivityResultCallerLauncher$$ExternalSyntheticLambda0;->f$0:Landroidx/activity/result/ActivityResultCallerLauncher;
 
-    invoke-static {v0}, Landroidx/activity/result/ActivityResultCallerLauncher;->$r8$lambda$Ch0g-owsUD3RY0ZHQNvP1kLq24A(Landroidx/activity/result/ActivityResultCallerLauncher;)Landroidx/activity/result/ActivityResultCallerLauncher$resultContract$2$1;
+    invoke-static {p0}, Landroidx/activity/result/ActivityResultCallerLauncher;->resultContract_delegate$lambda$0(Landroidx/activity/result/ActivityResultCallerLauncher;)Landroidx/activity/result/ActivityResultCallerLauncher$resultContract$2$1;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

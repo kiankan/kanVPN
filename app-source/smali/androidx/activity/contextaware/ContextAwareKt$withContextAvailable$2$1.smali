@@ -34,7 +34,7 @@
     k = 0x3
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0xb0
@@ -70,22 +70,22 @@
 
     invoke-virtual {p0, p1}, Landroidx/activity/contextaware/ContextAwareKt$withContextAvailable$2$1;->invoke(Ljava/lang/Throwable;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final invoke(Ljava/lang/Throwable;)V
-    .locals 1
+    .locals 0
 
     .line 84
     iget-object p1, p0, Landroidx/activity/contextaware/ContextAwareKt$withContextAvailable$2$1;->$this_withContextAvailable:Landroidx/activity/contextaware/ContextAware;
 
-    iget-object v0, p0, Landroidx/activity/contextaware/ContextAwareKt$withContextAvailable$2$1;->$listener:Landroidx/activity/contextaware/ContextAwareKt$withContextAvailable$2$listener$1;
+    iget-object p0, p0, Landroidx/activity/contextaware/ContextAwareKt$withContextAvailable$2$1;->$listener:Landroidx/activity/contextaware/ContextAwareKt$withContextAvailable$2$listener$1;
 
-    check-cast v0, Landroidx/activity/contextaware/OnContextAvailableListener;
+    check-cast p0, Landroidx/activity/contextaware/OnContextAvailableListener;
 
-    invoke-interface {p1, v0}, Landroidx/activity/contextaware/ContextAware;->removeOnContextAvailableListener(Landroidx/activity/contextaware/OnContextAvailableListener;)V
+    invoke-interface {p1, p0}, Landroidx/activity/contextaware/ContextAware;->removeOnContextAvailableListener(Landroidx/activity/contextaware/OnContextAvailableListener;)V
 
     return-void
 .end method

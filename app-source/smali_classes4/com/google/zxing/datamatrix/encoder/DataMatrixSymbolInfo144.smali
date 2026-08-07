@@ -34,26 +34,26 @@
 
 # virtual methods
 .method public getDataLengthForInterleavedBlock(I)I
-    .locals 1
+    .locals 0
 
-    const/16 v0, 0x8
+    const/16 p0, 0x8
 
-    if-gt p1, v0, :cond_0
+    if-gt p1, p0, :cond_0
 
-    const/16 p1, 0x9c
+    const/16 p0, 0x9c
 
-    return p1
+    return p0
 
     :cond_0
-    const/16 p1, 0x9b
+    const/16 p0, 0x9b
 
-    return p1
+    return p0
 .end method
 
 .method public getInterleavedBlockCount()I
-    .locals 1
+    .locals 0
 
-    const/16 v0, 0xa
+    const/16 p0, 0xa
 
-    return v0
+    return p0
 .end method

@@ -60,7 +60,7 @@
 .end method
 
 .method public static of(I)Lj$/time/chrono/ThaiBuddhistEra;
-    .locals 3
+    .locals 1
 
     if-eqz p0, :cond_1
 
@@ -75,25 +75,13 @@
 
     .line 144
     :cond_0
-    new-instance v0, Lj$/time/DateTimeException;
+    const-string v0, "Invalid era: "
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-static {v0, p0}, Lj$/time/Month$0;->m(Ljava/lang/String;I)V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 p0, 0x0
 
-    const-string v2, "Invalid era: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-object p0
 
     .line 140
     :cond_1
@@ -135,12 +123,12 @@
 
 # virtual methods
 .method public getValue()I
-    .locals 1
+    .locals 0
 
     .line 158
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method

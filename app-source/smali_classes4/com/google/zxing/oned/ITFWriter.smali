@@ -99,157 +99,157 @@
 
 # virtual methods
 .method public encode(Ljava/lang/String;)[Z
-    .locals 13
+    .locals 12
 
     .line 60
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
-    move-result v0
+    move-result p0
 
     .line 61
-    rem-int/lit8 v1, v0, 0x2
+    rem-int/lit8 v0, p0, 0x2
 
-    if-nez v1, :cond_3
+    if-nez v0, :cond_3
 
-    const/16 v1, 0x50
+    const/16 v0, 0x50
 
-    if-gt v0, v1, :cond_2
+    if-gt p0, v0, :cond_2
 
     .line 69
     invoke-static {p1}, Lcom/google/zxing/oned/ITFWriter;->checkNumeric(Ljava/lang/String;)V
 
-    mul-int/lit8 v1, v0, 0x9
+    mul-int/lit8 v0, p0, 0x9
 
-    add-int/lit8 v1, v1, 0x9
+    add-int/lit8 v0, v0, 0x9
 
     .line 71
-    new-array v1, v1, [Z
+    new-array v0, v0, [Z
 
     .line 72
-    sget-object v2, Lcom/google/zxing/oned/ITFWriter;->START_PATTERN:[I
+    sget-object v1, Lcom/google/zxing/oned/ITFWriter;->START_PATTERN:[I
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    const/4 v4, 0x1
+    const/4 v3, 0x1
 
-    invoke-static {v1, v3, v2, v4}, Lcom/google/zxing/oned/ITFWriter;->appendPattern([ZI[IZ)I
+    invoke-static {v0, v2, v1, v3}, Lcom/google/zxing/oned/ITFWriter;->appendPattern([ZI[IZ)I
 
-    move-result v2
+    move-result v1
 
-    move v5, v3
+    move v4, v2
 
     :goto_0
-    if-ge v5, v0, :cond_1
+    if-ge v4, p0, :cond_1
 
     .line 74
-    invoke-virtual {p1, v5}, Ljava/lang/String;->charAt(I)C
+    invoke-virtual {p1, v4}, Ljava/lang/String;->charAt(I)C
 
-    move-result v6
+    move-result v5
 
-    const/16 v7, 0xa
+    const/16 v6, 0xa
 
-    invoke-static {v6, v7}, Ljava/lang/Character;->digit(CI)I
+    invoke-static {v5, v6}, Ljava/lang/Character;->digit(CI)I
 
-    move-result v6
+    move-result v5
 
-    add-int/lit8 v8, v5, 0x1
+    add-int/lit8 v7, v4, 0x1
 
     .line 75
-    invoke-virtual {p1, v8}, Ljava/lang/String;->charAt(I)C
+    invoke-virtual {p1, v7}, Ljava/lang/String;->charAt(I)C
 
-    move-result v8
+    move-result v7
 
-    invoke-static {v8, v7}, Ljava/lang/Character;->digit(CI)I
+    invoke-static {v7, v6}, Ljava/lang/Character;->digit(CI)I
 
-    move-result v8
+    move-result v7
 
     .line 76
-    new-array v7, v7, [I
+    new-array v6, v6, [I
 
-    move v9, v3
+    move v8, v2
 
     :goto_1
-    const/4 v10, 0x5
+    const/4 v9, 0x5
 
-    if-ge v9, v10, :cond_0
+    if-ge v8, v9, :cond_0
 
-    mul-int/lit8 v10, v9, 0x2
+    mul-int/lit8 v9, v8, 0x2
 
     .line 78
-    sget-object v11, Lcom/google/zxing/oned/ITFWriter;->PATTERNS:[[I
+    sget-object v10, Lcom/google/zxing/oned/ITFWriter;->PATTERNS:[[I
 
-    aget-object v12, v11, v6
+    aget-object v11, v10, v5
 
-    aget v12, v12, v9
+    aget v11, v11, v8
 
-    aput v12, v7, v10
+    aput v11, v6, v9
 
-    add-int/2addr v10, v4
+    add-int/2addr v9, v3
 
     .line 79
-    aget-object v11, v11, v8
+    aget-object v10, v10, v7
 
-    aget v11, v11, v9
+    aget v10, v10, v8
 
-    aput v11, v7, v10
+    aput v10, v6, v9
 
-    add-int/lit8 v9, v9, 0x1
+    add-int/lit8 v8, v8, 0x1
 
     goto :goto_1
 
     .line 81
     :cond_0
-    invoke-static {v1, v2, v7, v4}, Lcom/google/zxing/oned/ITFWriter;->appendPattern([ZI[IZ)I
+    invoke-static {v0, v1, v6, v3}, Lcom/google/zxing/oned/ITFWriter;->appendPattern([ZI[IZ)I
 
-    move-result v6
+    move-result v5
 
-    add-int/2addr v2, v6
+    add-int/2addr v1, v5
 
-    add-int/lit8 v5, v5, 0x2
+    add-int/lit8 v4, v4, 0x2
 
     goto :goto_0
 
     .line 83
     :cond_1
-    sget-object p1, Lcom/google/zxing/oned/ITFWriter;->END_PATTERN:[I
+    sget-object p0, Lcom/google/zxing/oned/ITFWriter;->END_PATTERN:[I
 
-    invoke-static {v1, v2, p1, v4}, Lcom/google/zxing/oned/ITFWriter;->appendPattern([ZI[IZ)I
+    invoke-static {v0, v1, p0, v3}, Lcom/google/zxing/oned/ITFWriter;->appendPattern([ZI[IZ)I
 
-    return-object v1
+    return-object v0
 
     .line 65
     :cond_2
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v2, "Requested contents should be less than 80 digits long, but got "
+    const-string v1, "Requested contents should be less than 80 digits long, but got "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p1
 
     .line 62
     :cond_3
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const-string v0, "The length of the input should be even"
+    const-string p1, "The length of the input should be even"
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method protected getSupportedWriteFormats()Ljava/util/Collection;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -260,11 +260,11 @@
     .end annotation
 
     .line 55
-    sget-object v0, Lcom/google/zxing/BarcodeFormat;->ITF:Lcom/google/zxing/BarcodeFormat;
+    sget-object p0, Lcom/google/zxing/BarcodeFormat;->ITF:Lcom/google/zxing/BarcodeFormat;
 
-    invoke-static {v0}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+    invoke-static {p0}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

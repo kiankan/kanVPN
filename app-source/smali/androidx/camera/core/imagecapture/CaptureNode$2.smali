@@ -52,7 +52,7 @@
         }
     .end annotation
 
-    .line 277
+    .line 343
     iput-object p1, p0, Landroidx/camera/core/imagecapture/CaptureNode$2;->this$0:Landroidx/camera/core/imagecapture/CaptureNode;
 
     iput-object p2, p0, Landroidx/camera/core/imagecapture/CaptureNode$2;->val$request:Landroidx/camera/core/imagecapture/ProcessingRequest;
@@ -67,10 +67,10 @@
 .method public onFailure(Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 285
+    .line 351
     invoke-static {}, Landroidx/camera/core/impl/utils/Threads;->checkMainThread()V
 
-    .line 286
+    .line 352
     iget-object p1, p0, Landroidx/camera/core/imagecapture/CaptureNode$2;->val$request:Landroidx/camera/core/imagecapture/ProcessingRequest;
 
     iget-object v0, p0, Landroidx/camera/core/imagecapture/CaptureNode$2;->this$0:Landroidx/camera/core/imagecapture/CaptureNode;
@@ -79,10 +79,10 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 287
+    .line 353
     new-instance p1, Ljava/lang/StringBuilder;
 
-    const-string v0, "request aborted, id="
+    const-string/jumbo v0, "request aborted, id="
 
     invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -104,7 +104,7 @@
 
     invoke-static {v0, p1}, Landroidx/camera/core/Logger;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 288
+    .line 354
     iget-object p1, p0, Landroidx/camera/core/imagecapture/CaptureNode$2;->this$0:Landroidx/camera/core/imagecapture/CaptureNode;
 
     invoke-static {p1}, Landroidx/camera/core/imagecapture/CaptureNode;->access$000(Landroidx/camera/core/imagecapture/CaptureNode;)Landroidx/camera/core/imagecapture/NoMetadataImageReader;
@@ -113,7 +113,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 289
+    .line 355
     iget-object p1, p0, Landroidx/camera/core/imagecapture/CaptureNode$2;->this$0:Landroidx/camera/core/imagecapture/CaptureNode;
 
     invoke-static {p1}, Landroidx/camera/core/imagecapture/CaptureNode;->access$000(Landroidx/camera/core/imagecapture/CaptureNode;)Landroidx/camera/core/imagecapture/NoMetadataImageReader;
@@ -122,13 +122,13 @@
 
     invoke-virtual {p1}, Landroidx/camera/core/imagecapture/NoMetadataImageReader;->clearProcessingRequest()V
 
-    .line 291
+    .line 357
     :cond_0
-    iget-object p1, p0, Landroidx/camera/core/imagecapture/CaptureNode$2;->this$0:Landroidx/camera/core/imagecapture/CaptureNode;
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/CaptureNode$2;->this$0:Landroidx/camera/core/imagecapture/CaptureNode;
 
-    const/4 v0, 0x0
+    const/4 p1, 0x0
 
-    iput-object v0, p1, Landroidx/camera/core/imagecapture/CaptureNode;->mCurrentRequest:Landroidx/camera/core/imagecapture/ProcessingRequest;
+    iput-object p1, p0, Landroidx/camera/core/imagecapture/CaptureNode;->mCurrentRequest:Landroidx/camera/core/imagecapture/ProcessingRequest;
 
     :cond_1
     return-void
@@ -145,7 +145,7 @@
         }
     .end annotation
 
-    .line 277
+    .line 343
     check-cast p1, Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Landroidx/camera/core/imagecapture/CaptureNode$2;->onSuccess(Ljava/lang/Void;)V

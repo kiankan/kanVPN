@@ -37,7 +37,7 @@
         }
     .end annotation
 
-    .line 35
+    .line 36
     iput-object p1, p0, Landroidx/camera/core/impl/utils/executor/HighPriorityExecutor$1;->this$0:Landroidx/camera/core/impl/utils/executor/HighPriorityExecutor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,22 +48,22 @@
 
 # virtual methods
 .method public newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
-    .locals 1
+    .locals 0
 
-    .line 42
-    new-instance v0, Ljava/lang/Thread;
+    .line 43
+    new-instance p0, Ljava/lang/Thread;
 
-    invoke-direct {v0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+    invoke-direct {p0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
     const/16 p1, 0xa
 
-    .line 43
-    invoke-virtual {v0, p1}, Ljava/lang/Thread;->setPriority(I)V
-
     .line 44
+    invoke-virtual {p0, p1}, Ljava/lang/Thread;->setPriority(I)V
+
+    .line 45
     const-string p1, "CameraX-camerax_high_priority"
 
-    invoke-virtual {v0, p1}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
 
-    return-object v0
+    return-object p0
 .end method

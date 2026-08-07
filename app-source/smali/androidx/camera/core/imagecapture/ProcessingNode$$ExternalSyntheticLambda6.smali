@@ -9,11 +9,11 @@
 # instance fields
 .field public final synthetic f$0:Landroidx/camera/core/imagecapture/ProcessingRequest;
 
-.field public final synthetic f$1:Landroid/graphics/Bitmap;
+.field public final synthetic f$1:Landroidx/camera/core/ImageCapture$OutputFileResults;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/camera/core/imagecapture/ProcessingRequest;Landroid/graphics/Bitmap;)V
+.method public synthetic constructor <init>(Landroidx/camera/core/imagecapture/ProcessingRequest;Landroidx/camera/core/ImageCapture$OutputFileResults;)V
     .locals 0
 
     .line 0
@@ -21,7 +21,7 @@
 
     iput-object p1, p0, Landroidx/camera/core/imagecapture/ProcessingNode$$ExternalSyntheticLambda6;->f$0:Landroidx/camera/core/imagecapture/ProcessingRequest;
 
-    iput-object p2, p0, Landroidx/camera/core/imagecapture/ProcessingNode$$ExternalSyntheticLambda6;->f$1:Landroid/graphics/Bitmap;
+    iput-object p2, p0, Landroidx/camera/core/imagecapture/ProcessingNode$$ExternalSyntheticLambda6;->f$1:Landroidx/camera/core/ImageCapture$OutputFileResults;
 
     return-void
 .end method
@@ -29,14 +29,14 @@
 
 # virtual methods
 .method public final run()V
-    .locals 2
+    .locals 1
 
     .line 0
     iget-object v0, p0, Landroidx/camera/core/imagecapture/ProcessingNode$$ExternalSyntheticLambda6;->f$0:Landroidx/camera/core/imagecapture/ProcessingRequest;
 
-    iget-object v1, p0, Landroidx/camera/core/imagecapture/ProcessingNode$$ExternalSyntheticLambda6;->f$1:Landroid/graphics/Bitmap;
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/ProcessingNode$$ExternalSyntheticLambda6;->f$1:Landroidx/camera/core/ImageCapture$OutputFileResults;
 
-    invoke-static {v0, v1}, Landroidx/camera/core/imagecapture/ProcessingNode;->lambda$processPostviewInputPacket$6(Landroidx/camera/core/imagecapture/ProcessingRequest;Landroid/graphics/Bitmap;)V
+    invoke-static {v0, p0}, Landroidx/camera/core/imagecapture/ProcessingNode;->lambda$processInputPacket$5(Landroidx/camera/core/imagecapture/ProcessingRequest;Landroidx/camera/core/ImageCapture$OutputFileResults;)V
 
     return-void
 .end method

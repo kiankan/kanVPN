@@ -1,10 +1,111 @@
 .class public final Landroidx/camera/camera2/internal/StreamUseCaseUtil;
 .super Ljava/lang/Object;
-.source "StreamUseCaseUtil.java"
+.source "StreamUseCaseUtil.kt"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/camera/camera2/internal/StreamUseCaseUtil$WhenMappings;
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/SourceDebugExtension;
+    value = "SMAP\nStreamUseCaseUtil.kt\nKotlin\n*S Kotlin\n*F\n+ 1 StreamUseCaseUtil.kt\nandroidx/camera/camera2/internal/StreamUseCaseUtil\n+ 2 Camera2Logger.kt\nandroidx/camera/camera2/impl/Camera2Logger\n*L\n1#1,634:1\n136#2,4:635\n85#2,4:639\n*S KotlinDebug\n*F\n+ 1 StreamUseCaseUtil.kt\nandroidx/camera/camera2/internal/StreamUseCaseUtil\n*L\n122#1:635,4\n167#1:639,4\n*E\n"
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u0090\u0001\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0010\t\n\u0002\u0008\u0004\n\u0002\u0010$\n\u0002\u0010\"\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u001e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010%\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0010\u0008\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u000f\u0008\u00c6\u0002\u0018\u00002\u00020\u0001B\t\u0008\u0002\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J:\u0010\u000f\u001a\u00020\u00102\u000c\u0010\u0011\u001a\u0008\u0012\u0004\u0012\u00020\u00130\u00122\u0010\u0010\u0014\u001a\u000c\u0012\u0008\u0012\u0006\u0012\u0002\u0008\u00030\u00150\u00122\u0012\u0010\u0016\u001a\u000e\u0012\u0004\u0012\u00020\u0018\u0012\u0004\u0012\u00020\u00060\u0017J\u0012\u0010\u0019\u001a\u00020\u001a2\n\u0010\u001b\u001a\u0006\u0012\u0002\u0008\u00030\u0015J\u000e\u0010\u001c\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001fJ\u000e\u0010 \u001a\u00020\u001d2\u0006\u0010!\u001a\u00020\"JH\u0010#\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001f2\u000c\u0010$\u001a\u0008\u0012\u0004\u0012\u00020&0%2\u0016\u0010\'\u001a\u0012\u0012\u0008\u0012\u0006\u0012\u0002\u0008\u00030\u0015\u0012\u0004\u0012\u00020(0\u00172\u0012\u0010)\u001a\u000e\u0012\u0004\u0012\u00020&\u0012\u0004\u0012\u00020(0\u0017J\u001c\u0010*\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001f2\u000c\u0010+\u001a\u0008\u0012\u0004\u0012\u00020,0%J&\u0010-\u001a\u00020\u001d2\u0006\u0010.\u001a\u00020\r2\u0006\u0010/\u001a\u00020\u00062\u000c\u00100\u001a\u0008\u0012\u0004\u0012\u00020\r0%H\u0002JB\u00101\u001a\u00020\u001d2\u0014\u00102\u001a\u0010\u0012\u0004\u0012\u000203\u0012\u0006\u0012\u0004\u0018\u00010&0\u000b2\u0016\u00104\u001a\u0012\u0012\u0004\u0012\u000203\u0012\u0008\u0012\u0006\u0012\u0002\u0008\u00030\u00150\u000b2\u000c\u00105\u001a\u0008\u0012\u0004\u0012\u00020,0%Jl\u00106\u001a\u00020\u00102\u0016\u0010\'\u001a\u0012\u0012\u0008\u0012\u0006\u0012\u0002\u0008\u00030\u0015\u0012\u0004\u0012\u00020(0\u00172\u0012\u0010)\u001a\u000e\u0012\u0004\u0012\u00020&\u0012\u0004\u0012\u00020(0\u00172\u0012\u00102\u001a\u000e\u0012\u0004\u0012\u000203\u0012\u0004\u0012\u00020&0\u000b2\u0016\u00104\u001a\u0012\u0012\u0004\u0012\u000203\u0012\u0008\u0012\u0006\u0012\u0002\u0008\u00030\u00150\u000b2\u000c\u00105\u001a\u0008\u0012\u0004\u0012\u00020,0%J!\u00107\u001a\u0004\u0018\u0001082\u0006\u00109\u001a\u0002082\u0008\u0010/\u001a\u0004\u0018\u00010\u0006H\u0002\u00a2\u0006\u0002\u0010:J&\u0010;\u001a\u00020\u001d2\u000c\u0010$\u001a\u0008\u0012\u0004\u0012\u00020&0%2\u0010\u0010<\u001a\u000c\u0012\u0008\u0012\u0006\u0012\u0002\u0008\u00030\u00150%J\u0018\u0010=\u001a\u00020\u001d2\u0006\u0010>\u001a\u0002082\u0006\u0010.\u001a\u00020\rH\u0002J$\u0010?\u001a\u00020\u001d2\u000c\u0010@\u001a\u0008\u0012\u0004\u0012\u00020\u00060\u000c2\u000c\u0010A\u001a\u0008\u0012\u0004\u0012\u00020\u00060\u000cH\u0002J\u0008\u0010B\u001a\u00020\u0010H\u0002J6\u0010C\u001a\u00020\u001d2\u000c\u0010$\u001a\u0008\u0012\u0004\u0012\u00020&0%2\u0010\u0010<\u001a\u000c\u0012\u0008\u0012\u0006\u0012\u0002\u0008\u00030\u00150%2\u000c\u0010D\u001a\u0008\u0012\u0004\u0012\u00020\u00060\u000cH\u0002J\u0018\u0010E\u001a\u0002032\u0006\u0010.\u001a\u00020\r2\u0006\u0010F\u001a\u000203H\u0003R\"\u0010\u0004\u001a\u0008\u0012\u0004\u0012\u00020\u00060\u00058\u0006X\u0087\u0004\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008\u0007\u0010\u0003\u001a\u0004\u0008\u0008\u0010\tR \u0010\n\u001a\u0014\u0012\u0004\u0012\u00020\u0006\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\r0\u000c0\u000bX\u0082\u0004\u00a2\u0006\u0002\n\u0000R \u0010\u000e\u001a\u0014\u0012\u0004\u0012\u00020\u0006\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\r0\u000c0\u000bX\u0082\u0004\u00a2\u0006\u0002\n\u0000\u00a8\u0006G"
+    }
+    d2 = {
+        "Landroidx/camera/camera2/internal/StreamUseCaseUtil;",
+        "",
+        "<init>",
+        "()V",
+        "STREAM_USE_CASE_STREAM_SPEC_OPTION",
+        "Landroidx/camera/core/impl/Config$Option;",
+        "",
+        "getSTREAM_USE_CASE_STREAM_SPEC_OPTION$annotations",
+        "getSTREAM_USE_CASE_STREAM_SPEC_OPTION",
+        "()Landroidx/camera/core/impl/Config$Option;",
+        "STREAM_USE_CASE_TO_ELIGIBLE_CAPTURE_TYPES_MAP",
+        "",
+        "",
+        "Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;",
+        "STREAM_USE_CASE_TO_ELIGIBLE_STREAM_SHARING_CHILDREN_TYPES_MAP",
+        "populateSurfaceToStreamUseCaseMapping",
+        "",
+        "sessionConfigs",
+        "",
+        "Landroidx/camera/core/impl/SessionConfig;",
+        "useCaseConfigs",
+        "Landroidx/camera/core/impl/UseCaseConfig;",
+        "streamUseCaseMap",
+        "",
+        "Landroidx/camera/core/impl/DeferrableSurface;",
+        "getStreamSpecImplementationOptions",
+        "Landroidx/camera/camera2/impl/Camera2ImplConfig;",
+        "useCaseConfig",
+        "isStreamUseCaseSupported",
+        "",
+        "cameraMetadata",
+        "Landroidx/camera/camera2/pipe/CameraMetadata;",
+        "shouldUseStreamUseCase",
+        "featureSettings",
+        "Landroidx/camera/camera2/adapter/SupportedSurfaceCombination$FeatureSettings;",
+        "populateStreamUseCaseStreamSpecOptionWithInteropOverride",
+        "attachedSurfaces",
+        "",
+        "Landroidx/camera/core/impl/AttachedSurfaceInfo;",
+        "suggestedStreamSpecMap",
+        "Landroidx/camera/core/impl/StreamSpec;",
+        "attachedSurfaceStreamSpecMap",
+        "areStreamUseCasesAvailableForSurfaceConfigs",
+        "surfaceConfigs",
+        "Landroidx/camera/core/impl/SurfaceConfig;",
+        "isEligibleCaptureType",
+        "captureType",
+        "streamUseCase",
+        "streamSharingTypes",
+        "areCaptureTypesEligible",
+        "surfaceConfigIndexAttachedSurfaceInfoMap",
+        "",
+        "surfaceConfigIndexUseCaseConfigMap",
+        "surfaceConfigsWithStreamUseCase",
+        "populateStreamUseCaseStreamSpecOptionWithSupportedSurfaceConfigs",
+        "getUpdatedImplementationOptionsWithUseCaseStreamSpecOption",
+        "Landroidx/camera/core/impl/Config;",
+        "oldImplementationOptions",
+        "(Landroidx/camera/core/impl/Config;Ljava/lang/Long;)Landroidx/camera/core/impl/Config;",
+        "containsZslUseCase",
+        "newUseCaseConfigs",
+        "isZslUseCase",
+        "config",
+        "areStreamUseCasesAvailable",
+        "availableStreamUseCasesSet",
+        "streamUseCases",
+        "throwInvalidCamera2InteropOverrideException",
+        "isValidCamera2InteropOverride",
+        "availableStreamUseCases",
+        "getSessionConfigTemplateType",
+        "captureMode",
+        "camera-camera2"
+    }
+    k = 0x1
+    mv = {
+        0x2,
+        0x1,
+        0x0
+    }
+    xi = 0x30
+.end annotation
 
 
 # static fields
-.field public static final STREAM_USE_CASE_STREAM_SPEC_OPTION:Landroidx/camera/core/impl/Config$Option;
+.field public static final INSTANCE:Landroidx/camera/camera2/internal/StreamUseCaseUtil;
+
+.field private static final STREAM_USE_CASE_STREAM_SPEC_OPTION:Landroidx/camera/core/impl/Config$Option;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/camera/core/impl/Config$Option<",
@@ -38,393 +139,232 @@
     .end annotation
 .end field
 
-.field private static final TAG:Ljava/lang/String; = "StreamUseCaseUtil"
-
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 8
+    .locals 11
 
-    .line 63
-    const-string v0, "camera2.streamSpec.streamUseCase"
+    new-instance v0, Landroidx/camera/camera2/internal/StreamUseCaseUtil;
 
-    sget-object v1, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
+    invoke-direct {v0}, Landroidx/camera/camera2/internal/StreamUseCaseUtil;-><init>()V
 
-    .line 64
-    invoke-static {v0, v1}, Landroidx/camera/core/impl/Config$Option;->create(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$Option;
+    sput-object v0, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->INSTANCE:Landroidx/camera/camera2/internal/StreamUseCaseUtil;
+
+    .line 55
+    sget-object v0, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
+
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    const-string v1, "camera2.streamSpec.streamUseCase"
+
+    invoke-static {v1, v0}, Landroidx/camera/core/impl/Config$Option;->create(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$Option;
 
     move-result-object v0
 
+    const-string v1, "create(...)"
+
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
     sput-object v0, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->STREAM_USE_CASE_STREAM_SPEC_OPTION:Landroidx/camera/core/impl/Config$Option;
 
-    .line 67
-    new-instance v0, Ljava/util/HashMap;
+    .line 57
+    invoke-static {}, Lkotlin/collections/MapsKt;->createMapBuilder()Ljava/util/Map;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    move-result-object v0
 
-    sput-object v0, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->STREAM_USE_CASE_TO_ELIGIBLE_CAPTURE_TYPES_MAP:Ljava/util/Map;
+    .line 58
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 70
-    new-instance v1, Ljava/util/HashMap;
+    const-wide/16 v2, 0x3
 
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+    .line 80
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    sput-object v1, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->STREAM_USE_CASE_TO_ELIGIBLE_STREAM_SHARING_CHILDREN_TYPES_MAP:Ljava/util/Map;
-
-    .line 73
-    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v3, 0x21
-
-    if-lt v2, v3, :cond_0
-
-    .line 74
-    new-instance v2, Ljava/util/HashSet;
-
-    invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
-
-    .line 75
-    sget-object v3, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->PREVIEW:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
-
-    invoke-interface {v2, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    .line 76
-    sget-object v3, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->METERING_REPEATING:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
-
-    invoke-interface {v2, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    move-result-object v2
 
     const-wide/16 v3, 0x4
 
-    .line 78
+    .line 60
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v5
+    move-result-object v3
+
+    const/4 v4, 0x3
+
+    const/4 v5, 0x2
+
+    const/4 v6, 0x1
+
+    const/4 v7, 0x0
+
+    const/16 v8, 0x21
+
+    if-lt v1, v8, :cond_0
+
+    .line 62
+    new-array v1, v4, [Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
+
+    sget-object v9, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->PREVIEW:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
+
+    aput-object v9, v1, v7
+
+    .line 63
+    sget-object v9, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->METERING_REPEATING:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
+
+    aput-object v9, v1, v6
+
+    .line 64
+    sget-object v9, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->IMAGE_ANALYSIS:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
+
+    aput-object v9, v1, v5
+
+    .line 61
+    invoke-static {v1}, Lkotlin/collections/SetsKt;->setOf([Ljava/lang/Object;)Ljava/util/Set;
+
+    move-result-object v1
+
+    .line 59
+    invoke-interface {v0, v3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-wide/16 v9, 0x1
+
+    .line 68
+    invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    .line 70
+    new-array v9, v4, [Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
+
+    sget-object v10, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->PREVIEW:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
+
+    aput-object v10, v9, v7
+
+    .line 71
+    sget-object v10, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->METERING_REPEATING:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
+
+    aput-object v10, v9, v6
+
+    .line 72
+    sget-object v10, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->IMAGE_ANALYSIS:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
+
+    aput-object v10, v9, v5
+
+    .line 69
+    invoke-static {v9}, Lkotlin/collections/SetsKt;->setOf([Ljava/lang/Object;)Ljava/util/Set;
+
+    move-result-object v9
+
+    .line 67
+    invoke-interface {v0, v1, v9}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-wide/16 v9, 0x2
+
+    .line 76
+    invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
 
     .line 77
-    invoke-interface {v0, v5, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object v9, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->IMAGE_CAPTURE:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
+
+    invoke-static {v9}, Lkotlin/collections/SetsKt;->setOf(Ljava/lang/Object;)Ljava/util/Set;
+
+    move-result-object v9
+
+    .line 75
+    invoke-interface {v0, v1, v9}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 81
-    new-instance v2, Ljava/util/HashSet;
+    sget-object v1, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->VIDEO_CAPTURE:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
 
-    invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
+    invoke-static {v1}, Lkotlin/collections/SetsKt;->setOf(Ljava/lang/Object;)Ljava/util/Set;
 
-    .line 82
-    sget-object v5, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->PREVIEW:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
+    move-result-object v1
 
-    invoke-interface {v2, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    .line 79
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 83
-    sget-object v5, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->METERING_REPEATING:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
+    .line 57
+    :cond_0
+    invoke-static {v0}, Lkotlin/collections/MapsKt;->build(Ljava/util/Map;)Ljava/util/Map;
 
-    invoke-interface {v2, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    move-result-object v0
 
-    .line 84
-    sget-object v5, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->IMAGE_ANALYSIS:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
-
-    invoke-interface {v2, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    const-wide/16 v5, 0x1
-
-    .line 86
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v5
-
-    .line 85
-    invoke-interface {v0, v5, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    sput-object v0, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->STREAM_USE_CASE_TO_ELIGIBLE_CAPTURE_TYPES_MAP:Ljava/util/Map;
 
     .line 88
-    new-instance v2, Ljava/util/HashSet;
+    invoke-static {}, Lkotlin/collections/MapsKt;->createMapBuilder()Ljava/util/Map;
 
-    invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
+    move-result-object v0
 
     .line 89
-    sget-object v5, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->IMAGE_CAPTURE:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-interface {v2, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    if-lt v1, v8, :cond_1
 
-    const-wide/16 v5, 0x2
+    .line 92
+    new-array v1, v4, [Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
 
-    .line 91
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    sget-object v4, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->PREVIEW:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
 
-    move-result-object v5
+    aput-object v4, v1, v7
+
+    sget-object v4, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->IMAGE_CAPTURE:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
+
+    aput-object v4, v1, v6
+
+    sget-object v4, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->VIDEO_CAPTURE:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
+
+    aput-object v4, v1, v5
+
+    invoke-static {v1}, Lkotlin/collections/SetsKt;->setOf([Ljava/lang/Object;)Ljava/util/Set;
+
+    move-result-object v1
 
     .line 90
-    invoke-interface {v0, v5, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 93
-    new-instance v2, Ljava/util/HashSet;
-
-    invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
-
-    .line 94
-    sget-object v5, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->VIDEO_CAPTURE:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
-
-    invoke-interface {v2, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    const-wide/16 v5, 0x3
+    invoke-interface {v0, v3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 96
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    new-array v1, v5, [Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
 
-    move-result-object v7
+    sget-object v3, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->PREVIEW:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
 
-    .line 95
-    invoke-interface {v0, v7, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    aput-object v3, v1, v7
 
-    .line 99
-    new-instance v0, Ljava/util/HashSet;
+    sget-object v3, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->VIDEO_CAPTURE:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
 
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+    aput-object v3, v1, v6
 
-    .line 100
-    sget-object v2, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->PREVIEW:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
+    invoke-static {v1}, Lkotlin/collections/SetsKt;->setOf([Ljava/lang/Object;)Ljava/util/Set;
 
-    invoke-interface {v0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    move-result-object v1
 
-    .line 101
-    sget-object v2, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->IMAGE_CAPTURE:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
+    .line 94
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-interface {v0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    .line 88
+    :cond_1
+    invoke-static {v0}, Lkotlin/collections/MapsKt;->build(Ljava/util/Map;)Ljava/util/Map;
 
-    .line 102
-    sget-object v2, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->VIDEO_CAPTURE:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
+    move-result-object v0
 
-    invoke-interface {v0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    sput-object v0, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->STREAM_USE_CASE_TO_ELIGIBLE_STREAM_SHARING_CHILDREN_TYPES_MAP:Ljava/util/Map;
 
-    .line 103
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 106
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    .line 107
-    sget-object v2, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->PREVIEW:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
-
-    invoke-interface {v0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    .line 108
-    sget-object v2, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->VIDEO_CAPTURE:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
-
-    invoke-interface {v0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    .line 109
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
     return-void
 .end method
 
 .method private constructor <init>()V
     .locals 0
 
-    .line 115
+    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static areCaptureTypesEligible(Ljava/util/Map;Ljava/util/Map;Ljava/util/List;)Z
-    .locals 8
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Map<",
-            "Ljava/lang/Integer;",
-            "Landroidx/camera/core/impl/AttachedSurfaceInfo;",
-            ">;",
-            "Ljava/util/Map<",
-            "Ljava/lang/Integer;",
-            "Landroidx/camera/core/impl/UseCaseConfig<",
-            "*>;>;",
-            "Ljava/util/List<",
-            "Landroidx/camera/core/impl/SurfaceConfig;",
-            ">;)Z"
-        }
-    .end annotation
-
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    .line 393
-    :goto_0
-    invoke-interface {p2}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    const/4 v3, 0x1
-
-    if-ge v1, v2, :cond_5
-
-    .line 395
-    invoke-interface {p2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroidx/camera/core/impl/SurfaceConfig;
-
-    invoke-virtual {v2}, Landroidx/camera/core/impl/SurfaceConfig;->getStreamUseCase()J
-
-    move-result-wide v4
-
-    .line 396
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-interface {p0, v2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    .line 398
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-interface {p0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroidx/camera/core/impl/AttachedSurfaceInfo;
-
-    .line 399
-    invoke-virtual {v2}, Landroidx/camera/core/impl/AttachedSurfaceInfo;->getCaptureTypes()Ljava/util/List;
-
-    move-result-object v6
-
-    invoke-interface {v6}, Ljava/util/List;->size()I
-
-    move-result v6
-
-    if-ne v6, v3, :cond_0
-
-    .line 400
-    invoke-virtual {v2}, Landroidx/camera/core/impl/AttachedSurfaceInfo;->getCaptureTypes()Ljava/util/List;
-
-    move-result-object v3
-
-    invoke-interface {v3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
-
-    goto :goto_1
-
-    .line 401
-    :cond_0
-    sget-object v3, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->STREAM_SHARING:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
-
-    .line 402
-    :goto_1
-    invoke-virtual {v2}, Landroidx/camera/core/impl/AttachedSurfaceInfo;->getCaptureTypes()Ljava/util/List;
-
-    move-result-object v2
-
-    .line 399
-    invoke-static {v3, v4, v5, v2}, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->isEligibleCaptureType(Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;JLjava/util/List;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_3
-
-    return v0
-
-    .line 405
-    :cond_1
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-interface {p1, v2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    .line 407
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-interface {p1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroidx/camera/core/impl/UseCaseConfig;
-
-    .line 408
-    invoke-interface {v2}, Landroidx/camera/core/impl/UseCaseConfig;->getCaptureType()Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
-
-    move-result-object v3
-
-    .line 409
-    invoke-interface {v2}, Landroidx/camera/core/impl/UseCaseConfig;->getCaptureType()Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
-
-    move-result-object v6
-
-    sget-object v7, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->STREAM_SHARING:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
-
-    if-ne v6, v7, :cond_2
-
-    .line 411
-    check-cast v2, Landroidx/camera/core/streamsharing/StreamSharingConfig;
-
-    invoke-virtual {v2}, Landroidx/camera/core/streamsharing/StreamSharingConfig;->getCaptureTypes()Ljava/util/List;
-
-    move-result-object v2
-
-    goto :goto_2
-
-    .line 412
-    :cond_2
-    sget-object v2, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    .line 408
-    :goto_2
-    invoke-static {v3, v4, v5, v2}, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->isEligibleCaptureType(Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;JLjava/util/List;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_3
-
-    return v0
-
-    :cond_3
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    .line 416
-    :cond_4
-    new-instance p0, Ljava/lang/AssertionError;
-
-    const-string p1, "SurfaceConfig does not map to any use case"
-
-    invoke-direct {p0, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw p0
-
-    :cond_5
-    return v3
-.end method
-
-.method private static areStreamUseCasesAvailable(Ljava/util/Set;Ljava/util/Set;)Z
-    .locals 1
+.method private final areStreamUseCasesAvailable(Ljava/util/Set;Ljava/util/Set;)Z
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -437,30 +377,38 @@
         }
     .end annotation
 
-    .line 550
-    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    .line 542
+    invoke-interface {p2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    move-result-object p1
+    move-result-object p0
 
     :cond_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v0
+    move-result p2
 
-    if-eqz v0, :cond_1
+    if-eqz p2, :cond_1
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p2
 
-    check-cast v0, Ljava/lang/Long;
+    check-cast p2, Ljava/lang/Number;
 
-    .line 551
-    invoke-interface {p0, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+    invoke-virtual {p2}, Ljava/lang/Number;->longValue()J
 
-    move-result v0
+    move-result-wide v0
 
-    if-nez v0, :cond_0
+    .line 543
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    invoke-interface {p1, p2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
 
     const/4 p0, 0x0
 
@@ -472,371 +420,74 @@
     return p0
 .end method
 
-.method public static areStreamUseCasesAvailableForSurfaceConfigs(Landroidx/camera/camera2/internal/compat/CameraCharacteristicsCompat;Ljava/util/List;)Z
-    .locals 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroidx/camera/camera2/internal/compat/CameraCharacteristicsCompat;",
-            "Ljava/util/List<",
-            "Landroidx/camera/core/impl/SurfaceConfig;",
-            ">;)Z"
-        }
-    .end annotation
+.method public static synthetic getSTREAM_USE_CASE_STREAM_SPEC_OPTION$annotations()V
+    .locals 0
 
-    .line 321
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    return-void
+.end method
 
-    const/16 v1, 0x21
+.method private final getSessionConfigTemplateType(Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;I)I
+    .locals 1
 
-    const/4 v2, 0x0
+    .line 621
+    sget-object p0, Landroidx/camera/camera2/internal/StreamUseCaseUtil$WhenMappings;->$EnumSwitchMapping$0:[I
 
-    if-ge v0, v1, :cond_0
+    invoke-virtual {p1}, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->ordinal()I
 
-    return v2
+    move-result p1
 
-    .line 324
+    aget p0, p0, p1
+
+    const/4 p1, 0x2
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_1
+
+    const/4 p2, 0x3
+
+    if-eq p0, p1, :cond_0
+
+    if-eq p0, p2, :cond_0
+
+    return v0
+
     :cond_0
-    invoke-static {}, Landroidx/activity/BackEventCompat$$ExternalSyntheticApiModelOutline0;->m$1()Landroid/hardware/camera2/CameraCharacteristics$Key;
+    return p2
 
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Landroidx/camera/camera2/internal/compat/CameraCharacteristicsCompat;->get(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, [J
-
-    if-eqz p0, :cond_5
-
-    .line 326
-    array-length v0, p0
-
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    .line 329
     :cond_1
-    new-instance v0, Ljava/util/HashSet;
+    if-ne p2, p1, :cond_2
 
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    .line 330
-    array-length v1, p0
-
-    move v3, v2
-
-    :goto_0
-    if-ge v3, v1, :cond_2
-
-    aget-wide v4, p0, v3
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v4
-
-    .line 331
-    invoke-interface {v0, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    .line 333
-    :cond_2
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_3
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_4
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/camera/core/impl/SurfaceConfig;
-
-    .line 334
-    invoke-virtual {p1}, Landroidx/camera/core/impl/SurfaceConfig;->getStreamUseCase()J
-
-    move-result-wide v3
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_4
-    const/4 p0, 0x1
+    const/4 p0, 0x5
 
     return p0
 
-    :cond_5
-    :goto_1
-    return v2
+    :cond_2
+    return v0
 .end method
 
-.method public static containsZslUseCase(Ljava/util/List;Ljava/util/List;)Z
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Landroidx/camera/core/impl/AttachedSurfaceInfo;",
-            ">;",
-            "Ljava/util/List<",
-            "Landroidx/camera/core/impl/UseCaseConfig<",
-            "*>;>;)Z"
-        }
-    .end annotation
+.method private final getUpdatedImplementationOptionsWithUseCaseStreamSpecOption(Landroidx/camera/core/impl/Config;Ljava/lang/Long;)Landroidx/camera/core/impl/Config;
+    .locals 1
 
-    .line 508
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    .line 490
+    sget-object p0, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->STREAM_USE_CASE_STREAM_SPEC_OPTION:Landroidx/camera/core/impl/Config$Option;
 
-    move-result-object p0
-
-    :cond_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/camera/core/impl/AttachedSurfaceInfo;
-
-    .line 510
-    invoke-virtual {v0}, Landroidx/camera/core/impl/AttachedSurfaceInfo;->getCaptureTypes()Ljava/util/List;
-
-    move-result-object v3
-
-    .line 511
-    invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
-
-    .line 513
-    invoke-virtual {v0}, Landroidx/camera/core/impl/AttachedSurfaceInfo;->getImplementationOptions()Landroidx/camera/core/impl/Config;
-
-    move-result-object v0
-
-    .line 512
-    invoke-static {v0, v2}, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->isZslUseCase(Landroidx/camera/core/impl/Config;Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;)Z
+    invoke-interface {p1, p0}, Landroidx/camera/core/impl/Config;->containsOption(Landroidx/camera/core/impl/Config$Option;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    return v1
-
-    .line 518
-    :cond_1
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_2
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/camera/core/impl/UseCaseConfig;
-
-    .line 519
-    invoke-interface {p1}, Landroidx/camera/core/impl/UseCaseConfig;->getCaptureType()Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
-
-    move-result-object v0
-
-    invoke-static {p1, v0}, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->isZslUseCase(Landroidx/camera/core/impl/Config;Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v1
-
-    :cond_3
-    return v2
-.end method
-
-.method public static getStreamSpecImplementationOptions(Landroidx/camera/core/impl/UseCaseConfig;)Landroidx/camera/camera2/impl/Camera2ImplConfig;
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroidx/camera/core/impl/UseCaseConfig<",
-            "*>;)",
-            "Landroidx/camera/camera2/impl/Camera2ImplConfig;"
-        }
-    .end annotation
-
-    .line 183
-    invoke-static {}, Landroidx/camera/core/impl/MutableOptionsBundle;->create()Landroidx/camera/core/impl/MutableOptionsBundle;
-
-    move-result-object v0
-
-    .line 184
-    sget-object v1, Landroidx/camera/camera2/impl/Camera2ImplConfig;->STREAM_USE_CASE_OPTION:Landroidx/camera/core/impl/Config$Option;
-
-    invoke-interface {p0, v1}, Landroidx/camera/core/impl/UseCaseConfig;->containsOption(Landroidx/camera/core/impl/Config$Option;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 185
-    sget-object v1, Landroidx/camera/camera2/impl/Camera2ImplConfig;->STREAM_USE_CASE_OPTION:Landroidx/camera/core/impl/Config$Option;
-
-    sget-object v2, Landroidx/camera/camera2/impl/Camera2ImplConfig;->STREAM_USE_CASE_OPTION:Landroidx/camera/core/impl/Config$Option;
-
-    .line 187
-    invoke-interface {p0, v2}, Landroidx/camera/core/impl/UseCaseConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Long;
-
-    .line 185
-    invoke-virtual {v0, v1, v2}, Landroidx/camera/core/impl/MutableOptionsBundle;->insertOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)V
-
-    .line 190
-    :cond_0
-    sget-object v1, Landroidx/camera/core/impl/UseCaseConfig;->OPTION_ZSL_DISABLED:Landroidx/camera/core/impl/Config$Option;
-
-    invoke-interface {p0, v1}, Landroidx/camera/core/impl/UseCaseConfig;->containsOption(Landroidx/camera/core/impl/Config$Option;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    .line 191
-    sget-object v1, Landroidx/camera/core/impl/UseCaseConfig;->OPTION_ZSL_DISABLED:Landroidx/camera/core/impl/Config$Option;
-
-    sget-object v2, Landroidx/camera/core/impl/UseCaseConfig;->OPTION_ZSL_DISABLED:Landroidx/camera/core/impl/Config$Option;
-
-    .line 193
-    invoke-interface {p0, v2}, Landroidx/camera/core/impl/UseCaseConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Boolean;
-
-    .line 191
-    invoke-virtual {v0, v1, v2}, Landroidx/camera/core/impl/MutableOptionsBundle;->insertOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)V
-
-    .line 196
-    :cond_1
-    sget-object v1, Landroidx/camera/core/impl/ImageCaptureConfig;->OPTION_IMAGE_CAPTURE_MODE:Landroidx/camera/core/impl/Config$Option;
-
-    invoke-interface {p0, v1}, Landroidx/camera/core/impl/UseCaseConfig;->containsOption(Landroidx/camera/core/impl/Config$Option;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    .line 197
-    sget-object v1, Landroidx/camera/core/impl/ImageCaptureConfig;->OPTION_IMAGE_CAPTURE_MODE:Landroidx/camera/core/impl/Config$Option;
-
-    sget-object v2, Landroidx/camera/core/impl/ImageCaptureConfig;->OPTION_IMAGE_CAPTURE_MODE:Landroidx/camera/core/impl/Config$Option;
-
-    .line 200
-    invoke-interface {p0, v2}, Landroidx/camera/core/impl/UseCaseConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Integer;
-
-    .line 197
-    invoke-virtual {v0, v1, v2}, Landroidx/camera/core/impl/MutableOptionsBundle;->insertOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)V
-
-    .line 203
-    :cond_2
-    sget-object v1, Landroidx/camera/core/impl/UseCaseConfig;->OPTION_INPUT_FORMAT:Landroidx/camera/core/impl/Config$Option;
-
-    invoke-interface {p0, v1}, Landroidx/camera/core/impl/UseCaseConfig;->containsOption(Landroidx/camera/core/impl/Config$Option;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    .line 204
-    sget-object v1, Landroidx/camera/core/impl/UseCaseConfig;->OPTION_INPUT_FORMAT:Landroidx/camera/core/impl/Config$Option;
-
-    sget-object v2, Landroidx/camera/core/impl/UseCaseConfig;->OPTION_INPUT_FORMAT:Landroidx/camera/core/impl/Config$Option;
-
-    .line 207
-    invoke-interface {p0, v2}, Landroidx/camera/core/impl/UseCaseConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Integer;
-
-    .line 204
-    invoke-virtual {v0, v1, p0}, Landroidx/camera/core/impl/MutableOptionsBundle;->insertOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)V
-
-    .line 210
-    :cond_3
-    new-instance p0, Landroidx/camera/camera2/impl/Camera2ImplConfig;
-
-    invoke-direct {p0, v0}, Landroidx/camera/camera2/impl/Camera2ImplConfig;-><init>(Landroidx/camera/core/impl/Config;)V
-
-    return-object p0
-.end method
-
-.method private static getUpdatedImplementationOptionsWithUseCaseStreamSpecOption(Landroidx/camera/core/impl/Config;J)Landroidx/camera/core/impl/Config;
-    .locals 3
-
-    .line 490
-    sget-object v0, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->STREAM_USE_CASE_STREAM_SPEC_OPTION:Landroidx/camera/core/impl/Config$Option;
-
-    invoke-interface {p0, v0}, Landroidx/camera/core/impl/Config;->containsOption(Landroidx/camera/core/impl/Config$Option;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
     .line 491
-    invoke-interface {p0, v0}, Landroidx/camera/core/impl/Config;->retrieveOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
+    invoke-interface {p1, p0}, Landroidx/camera/core/impl/Config;->retrieveOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v0
 
-    check-cast v1, Ljava/lang/Long;
+    invoke-static {v0, p2}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
+    move-result v0
 
-    move-result-wide v1
-
-    cmp-long v1, v1, p1
-
-    if-nez v1, :cond_0
+    if-eqz v0, :cond_0
 
     const/4 p0, 0x0
 
@@ -844,89 +495,95 @@
 
     .line 497
     :cond_0
-    invoke-static {p0}, Landroidx/camera/core/impl/MutableOptionsBundle;->from(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/MutableOptionsBundle;
-
-    move-result-object p0
-
-    .line 498
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {p1}, Landroidx/camera/core/impl/MutableOptionsBundle;->from(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/MutableOptionsBundle;
 
     move-result-object p1
 
-    invoke-virtual {p0, v0, p1}, Landroidx/camera/core/impl/MutableOptionsBundle;->insertOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)V
+    const-string v0, "from(...)"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 498
+    invoke-virtual {p1, p0, p2}, Landroidx/camera/core/impl/MutableOptionsBundle;->insertOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)V
 
     .line 499
-    new-instance p1, Landroidx/camera/camera2/impl/Camera2ImplConfig;
+    new-instance p0, Landroidx/camera/camera2/impl/Camera2ImplConfig;
 
-    invoke-direct {p1, p0}, Landroidx/camera/camera2/impl/Camera2ImplConfig;-><init>(Landroidx/camera/core/impl/Config;)V
+    check-cast p1, Landroidx/camera/core/impl/Config;
 
-    return-object p1
+    invoke-direct {p0, p1}, Landroidx/camera/camera2/impl/Camera2ImplConfig;-><init>(Landroidx/camera/core/impl/Config;)V
+
+    check-cast p0, Landroidx/camera/core/impl/Config;
+
+    return-object p0
 .end method
 
-.method private static isEligibleCaptureType(Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;JLjava/util/List;)Z
-    .locals 3
+.method private final isEligibleCaptureType(Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;JLjava/util/List;)Z
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;",
             "J",
             "Ljava/util/List<",
+            "+",
             "Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;",
             ">;)Z"
         }
     .end annotation
 
+    .line 345
+    sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v0, 0x21
+
+    const/4 v1, 0x0
+
+    if-ge p0, v0, :cond_0
+
+    return v1
+
     .line 348
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x21
-
-    const/4 v2, 0x0
-
-    if-ge v0, v1, :cond_0
-
-    return v2
-
-    .line 351
     :cond_0
-    sget-object v0, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->STREAM_SHARING:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
+    sget-object p0, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->STREAM_SHARING:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    if-ne p0, v0, :cond_5
+    if-ne p1, p0, :cond_5
 
-    .line 352
+    .line 350
     sget-object p0, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->STREAM_USE_CASE_TO_ELIGIBLE_STREAM_SHARING_CHILDREN_TYPES_MAP:Ljava/util/Map;
 
-    .line 353
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    .line 352
-    invoke-interface {p0, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    return v2
-
-    .line 358
-    :cond_1
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    .line 351
+    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
 
+    .line 350
+    invoke-interface {p0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    return v1
+
     .line 357
+    :cond_1
+    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
     invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
     check-cast p0, Ljava/util/Set;
 
-    .line 359
-    invoke-interface {p3}, Ljava/util/List;->size()I
+    .line 358
+    invoke-interface {p4}, Ljava/util/List;->size()I
 
     move-result p1
 
@@ -936,11 +593,11 @@
 
     if-eq p1, p2, :cond_2
 
-    return v2
+    return v1
 
-    .line 362
+    .line 361
     :cond_2
-    invoke-interface {p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-interface {p4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
@@ -957,109 +614,68 @@
 
     check-cast p2, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
 
-    .line 363
+    .line 362
     invoke-interface {p0, p2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-nez p2, :cond_3
 
-    return v2
-
-    :cond_4
     return v1
 
-    .line 369
+    :cond_4
+    return v0
+
+    .line 368
     :cond_5
-    sget-object p3, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->STREAM_USE_CASE_TO_ELIGIBLE_CAPTURE_TYPES_MAP:Ljava/util/Map;
+    sget-object p0, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->STREAM_USE_CASE_TO_ELIGIBLE_CAPTURE_TYPES_MAP:Ljava/util/Map;
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v0
+    move-result-object p4
 
-    invoke-interface {p3, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+    invoke-interface {p0, p4}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result p4
 
-    if-eqz v0, :cond_6
+    if-eqz p4, :cond_6
 
-    .line 370
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    .line 369
+    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object p1
+    move-result-object p2
 
-    invoke-interface {p3, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Ljava/util/Set;
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    invoke-interface {p1, p0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+    check-cast p0, Ljava/util/Set;
+
+    invoke-interface {p0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_6
 
-    return v1
+    return v0
 
     :cond_6
-    return v2
+    return v1
 .end method
 
-.method public static isStreamUseCaseSupported(Landroidx/camera/camera2/internal/compat/CameraCharacteristicsCompat;)Z
-    .locals 3
-
-    .line 219
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x21
-
-    const/4 v2, 0x0
-
-    if-ge v0, v1, :cond_0
-
-    return v2
-
-    .line 222
-    :cond_0
-    invoke-static {}, Landroidx/activity/BackEventCompat$$ExternalSyntheticApiModelOutline0;->m$1()Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Landroidx/camera/camera2/internal/compat/CameraCharacteristicsCompat;->get(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, [J
-
-    if-eqz p0, :cond_2
-
-    .line 224
-    array-length p0, p0
-
-    if-nez p0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_2
-    :goto_0
-    return v2
-.end method
-
-.method private static isValidCamera2InteropOverride(Ljava/util/List;Ljava/util/List;Ljava/util/Set;)Z
+.method private final isValidCamera2InteropOverride(Ljava/util/List;Ljava/util/List;Ljava/util/Set;)Z
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
+            "+",
             "Landroidx/camera/core/impl/AttachedSurfaceInfo;",
             ">;",
             "Ljava/util/List<",
+            "+",
             "Landroidx/camera/core/impl/UseCaseConfig<",
             "*>;>;",
             "Ljava/util/Set<",
@@ -1068,17 +684,19 @@
         }
     .end annotation
 
-    .line 572
-    new-instance v0, Ljava/util/HashSet;
+    .line 566
+    new-instance v0, Ljava/util/LinkedHashSet;
 
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
-    .line 575
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    check-cast v0, Ljava/util/Set;
 
-    move-result-object p0
+    .line 569
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
@@ -1090,19 +708,23 @@
 
     if-eqz v1, :cond_2
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Landroidx/camera/core/impl/AttachedSurfaceInfo;
+    check-cast p1, Landroidx/camera/core/impl/AttachedSurfaceInfo;
 
-    .line 576
-    invoke-virtual {p0}, Landroidx/camera/core/impl/AttachedSurfaceInfo;->getImplementationOptions()Landroidx/camera/core/impl/Config;
+    .line 571
+    invoke-virtual {p1}, Landroidx/camera/core/impl/AttachedSurfaceInfo;->getImplementationOptions()Landroidx/camera/core/impl/Config;
 
     move-result-object v1
 
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    .line 572
     sget-object v6, Landroidx/camera/camera2/impl/Camera2ImplConfig;->STREAM_USE_CASE_OPTION:Landroidx/camera/core/impl/Config$Option;
 
+    .line 571
     invoke-interface {v1, v6}, Landroidx/camera/core/impl/Config;->containsOption(Landroidx/camera/core/impl/Config$Option;)Z
 
     move-result v1
@@ -1112,67 +734,72 @@
     :goto_0
     move v1, v4
 
-    move p0, v5
+    move p1, v5
 
     goto :goto_1
 
-    .line 582
+    .line 579
     :cond_0
-    invoke-virtual {p0}, Landroidx/camera/core/impl/AttachedSurfaceInfo;->getImplementationOptions()Landroidx/camera/core/impl/Config;
+    invoke-virtual {p1}, Landroidx/camera/core/impl/AttachedSurfaceInfo;->getImplementationOptions()Landroidx/camera/core/impl/Config;
 
-    move-result-object p0
+    move-result-object p1
 
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    .line 580
     sget-object v1, Landroidx/camera/camera2/impl/Camera2ImplConfig;->STREAM_USE_CASE_OPTION:Landroidx/camera/core/impl/Config$Option;
 
-    .line 583
-    invoke-interface {p0, v1}, Landroidx/camera/core/impl/Config;->retrieveOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
+    .line 579
+    invoke-interface {p1, v1}, Landroidx/camera/core/impl/Config;->retrieveOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Ljava/lang/Long;
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
 
     move-result-wide v6
 
-    cmp-long p0, v6, v2
+    cmp-long p1, v6, v2
 
-    if-nez p0, :cond_1
+    if-nez p1, :cond_1
 
     goto :goto_0
 
     :cond_1
-    move p0, v4
+    move p1, v4
 
     move v1, v5
 
     goto :goto_1
 
     :cond_2
-    move p0, v5
+    move p1, v5
 
-    move v1, p0
+    move v1, p1
 
-    .line 592
+    .line 589
     :goto_1
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object p1
+    move-result-object p2
 
     :goto_2
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v6
 
     if-eqz v6, :cond_7
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, Landroidx/camera/core/impl/UseCaseConfig;
 
-    .line 593
+    .line 590
     sget-object v7, Landroidx/camera/camera2/impl/Camera2ImplConfig;->STREAM_USE_CASE_OPTION:Landroidx/camera/core/impl/Config$Option;
 
     invoke-interface {v6, v7}, Landroidx/camera/core/impl/UseCaseConfig;->containsOption(Landroidx/camera/core/impl/Config$Option;)Z
@@ -1181,10 +808,10 @@
 
     if-nez v7, :cond_4
 
-    if-eqz p0, :cond_3
+    if-eqz p1, :cond_3
 
-    .line 596
-    invoke-static {}, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->throwInvalidCamera2InteropOverrideException()V
+    .line 593
+    invoke-direct {p0}, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->throwInvalidCamera2InteropOverrideException()V
 
     :cond_3
     :goto_3
@@ -1192,51 +819,56 @@
 
     goto :goto_2
 
-    .line 599
+    .line 597
     :cond_4
     sget-object v7, Landroidx/camera/camera2/impl/Camera2ImplConfig;->STREAM_USE_CASE_OPTION:Landroidx/camera/core/impl/Config$Option;
 
-    .line 600
     invoke-interface {v6, v7}, Landroidx/camera/core/impl/UseCaseConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
 
     move-result-object v6
 
-    check-cast v6, Ljava/lang/Long;
+    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    invoke-virtual {v6}, Ljava/lang/Long;->longValue()J
+    check-cast v6, Ljava/lang/Number;
 
-    move-result-wide v7
+    invoke-virtual {v6}, Ljava/lang/Number;->longValue()J
 
-    cmp-long v7, v7, v2
+    move-result-wide v6
 
-    if-nez v7, :cond_5
+    cmp-long v8, v6, v2
 
-    if-eqz p0, :cond_3
+    if-nez v8, :cond_5
 
-    .line 605
-    invoke-static {}, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->throwInvalidCamera2InteropOverrideException()V
+    if-eqz p1, :cond_3
+
+    .line 601
+    invoke-direct {p0}, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->throwInvalidCamera2InteropOverrideException()V
 
     goto :goto_3
 
     :cond_5
     if-eqz v1, :cond_6
 
-    .line 610
-    invoke-static {}, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->throwInvalidCamera2InteropOverrideException()V
+    .line 606
+    invoke-direct {p0}, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->throwInvalidCamera2InteropOverrideException()V
 
-    .line 612
+    .line 608
     :cond_6
-    invoke-interface {v0, v6}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move p0, v4
+    move-result-object p1
+
+    invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    move p1, v4
 
     goto :goto_2
 
     :cond_7
     if-nez v1, :cond_8
 
-    .line 617
-    invoke-static {p2, v0}, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->areStreamUseCasesAvailable(Ljava/util/Set;Ljava/util/Set;)Z
+    .line 613
+    invoke-direct {p0, p3, v0}, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->areStreamUseCasesAvailable(Ljava/util/Set;Ljava/util/Set;)Z
 
     move-result p0
 
@@ -1248,10 +880,10 @@
     return v5
 .end method
 
-.method private static isZslUseCase(Landroidx/camera/core/impl/Config;Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;)Z
+.method private final isZslUseCase(Landroidx/camera/core/impl/Config;Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;)Z
     .locals 3
 
-    .line 531
+    .line 524
     sget-object v0, Landroidx/camera/core/impl/UseCaseConfig;->OPTION_ZSL_DISABLED:Landroidx/camera/core/impl/Config$Option;
 
     const/4 v1, 0x0
@@ -1260,9 +892,11 @@
 
     move-result-object v2
 
-    invoke-interface {p0, v0, v2}, Landroidx/camera/core/impl/Config;->retrieveOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0, v2}, Landroidx/camera/core/impl/Config;->retrieveOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
+
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
     check-cast v0, Ljava/lang/Boolean;
 
@@ -1274,11 +908,11 @@
 
     return v1
 
-    .line 535
+    .line 528
     :cond_0
     sget-object v0, Landroidx/camera/core/impl/ImageCaptureConfig;->OPTION_IMAGE_CAPTURE_MODE:Landroidx/camera/core/impl/Config$Option;
 
-    invoke-interface {p0, v0}, Landroidx/camera/core/impl/Config;->containsOption(Landroidx/camera/core/impl/Config$Option;)Z
+    invoke-interface {p1, v0}, Landroidx/camera/core/impl/Config;->containsOption(Landroidx/camera/core/impl/Config$Option;)Z
 
     move-result v0
 
@@ -1286,23 +920,24 @@
 
     return v1
 
-    .line 539
+    .line 532
     :cond_1
     sget-object v0, Landroidx/camera/core/impl/ImageCaptureConfig;->OPTION_IMAGE_CAPTURE_MODE:Landroidx/camera/core/impl/Config$Option;
 
-    .line 540
-    invoke-interface {p0, v0}, Landroidx/camera/core/impl/Config;->retrieveOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Landroidx/camera/core/impl/Config;->retrieveOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Ljava/lang/Integer;
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
+    check-cast p1, Ljava/lang/Number;
 
-    move-result p0
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
 
-    .line 541
-    invoke-static {p1, p0}, Landroidx/camera/camera2/internal/TemplateTypeUtil;->getSessionConfigTemplateType(Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;I)I
+    move-result p1
+
+    .line 533
+    invoke-direct {p0, p2, p1}, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->getSessionConfigTemplateType(Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;I)I
 
     move-result p0
 
@@ -1318,13 +953,714 @@
     return v1
 .end method
 
-.method public static populateStreamUseCaseStreamSpecOptionWithInteropOverride(Landroidx/camera/camera2/internal/compat/CameraCharacteristicsCompat;Ljava/util/List;Ljava/util/Map;Ljava/util/Map;)Z
+.method private final throwInvalidCamera2InteropOverrideException()V
+    .locals 1
+
+    .line 551
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    .line 552
+    const-string v0, "Either all use cases must have non-default stream use case assigned or none should have it"
+
+    .line 551
+    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+
+# virtual methods
+.method public final areCaptureTypesEligible(Ljava/util/Map;Ljava/util/Map;Ljava/util/List;)Z
+    .locals 10
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "Ljava/lang/Integer;",
+            "+",
+            "Landroidx/camera/core/impl/AttachedSurfaceInfo;",
+            ">;",
+            "Ljava/util/Map<",
+            "Ljava/lang/Integer;",
+            "+",
+            "Landroidx/camera/core/impl/UseCaseConfig<",
+            "*>;>;",
+            "Ljava/util/List<",
+            "Landroidx/camera/core/impl/SurfaceConfig;",
+            ">;)Z"
+        }
+    .end annotation
+
+    const-string/jumbo v0, "surfaceConfigIndexAttachedSurfaceInfoMap"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string/jumbo v0, "surfaceConfigIndexUseCaseConfigMap"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string/jumbo v0, "surfaceConfigsWithStreamUseCase"
+
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 390
+    move-object v0, p3
+
+    check-cast v0, Ljava/util/Collection;
+
+    invoke-interface {v0}, Ljava/util/Collection;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_0
+    const/4 v3, 0x1
+
+    if-ge v2, v0, :cond_5
+
+    .line 392
+    invoke-interface {p3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroidx/camera/core/impl/SurfaceConfig;
+
+    invoke-virtual {v4}, Landroidx/camera/core/impl/SurfaceConfig;->getStreamUseCase()Landroidx/camera/core/impl/StreamUseCase;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroidx/camera/core/impl/StreamUseCase;->getValue()J
+
+    move-result-wide v4
+
+    .line 393
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    invoke-interface {p1, v6}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    const-string v7, "getCaptureTypes(...)"
+
+    if-eqz v6, :cond_1
+
+    .line 394
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    invoke-interface {p1, v6}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Landroidx/camera/core/impl/AttachedSurfaceInfo;
+
+    .line 397
+    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    invoke-virtual {v6}, Landroidx/camera/core/impl/AttachedSurfaceInfo;->getCaptureTypes()Ljava/util/List;
+
+    move-result-object v8
+
+    invoke-interface {v8}, Ljava/util/List;->size()I
+
+    move-result v8
+
+    if-ne v8, v3, :cond_0
+
+    .line 398
+    invoke-virtual {v6}, Landroidx/camera/core/impl/AttachedSurfaceInfo;->getCaptureTypes()Ljava/util/List;
+
+    move-result-object v3
+
+    invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
+
+    goto :goto_1
+
+    .line 399
+    :cond_0
+    sget-object v3, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->STREAM_SHARING:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
+
+    .line 398
+    :goto_1
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    .line 401
+    invoke-virtual {v6}, Landroidx/camera/core/impl/AttachedSurfaceInfo;->getCaptureTypes()Ljava/util/List;
+
+    move-result-object v6
+
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 396
+    invoke-direct {p0, v3, v4, v5, v6}, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->isEligibleCaptureType(Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;JLjava/util/List;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_3
+
+    return v1
+
+    .line 406
+    :cond_1
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-interface {p2, v3}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_4
+
+    .line 407
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-interface {p2, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    check-cast v3, Landroidx/camera/core/impl/UseCaseConfig;
+
+    .line 410
+    invoke-interface {v3}, Landroidx/camera/core/impl/UseCaseConfig;->getCaptureType()Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
+
+    move-result-object v6
+
+    const-string v8, "getCaptureType(...)"
+
+    invoke-static {v6, v8}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 412
+    invoke-interface {v3}, Landroidx/camera/core/impl/UseCaseConfig;->getCaptureType()Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
+
+    move-result-object v8
+
+    sget-object v9, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->STREAM_SHARING:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
+
+    if-ne v8, v9, :cond_2
+
+    .line 413
+    check-cast v3, Landroidx/camera/core/streamsharing/StreamSharingConfig;
+
+    invoke-virtual {v3}, Landroidx/camera/core/streamsharing/StreamSharingConfig;->getCaptureTypes()Ljava/util/List;
+
+    move-result-object v3
+
+    invoke-static {v3, v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    goto :goto_2
+
+    .line 414
+    :cond_2
+    invoke-static {}, Lkotlin/collections/CollectionsKt;->emptyList()Ljava/util/List;
+
+    move-result-object v3
+
+    .line 409
+    :goto_2
+    invoke-direct {p0, v6, v4, v5, v3}, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->isEligibleCaptureType(Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;JLjava/util/List;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_3
+
+    return v1
+
+    :cond_3
+    add-int/lit8 v2, v2, 0x1
+
+    goto/16 :goto_0
+
+    .line 420
+    :cond_4
+    new-instance p0, Ljava/lang/AssertionError;
+
+    const-string p1, "SurfaceConfig does not map to any use case"
+
+    invoke-direct {p0, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw p0
+
+    :cond_5
+    return v3
+.end method
+
+.method public final areStreamUseCasesAvailableForSurfaceConfigs(Landroidx/camera/camera2/pipe/CameraMetadata;Ljava/util/List;)Z
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/camera/camera2/pipe/CameraMetadata;",
+            "Ljava/util/List<",
+            "Landroidx/camera/core/impl/SurfaceConfig;",
+            ">;)Z"
+        }
+    .end annotation
+
+    const-string p0, "cameraMetadata"
+
+    invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string/jumbo p0, "surfaceConfigs"
+
+    invoke-static {p2, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 315
+    sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v0, 0x21
+
+    const/4 v1, 0x0
+
+    if-ge p0, v0, :cond_0
+
+    return v1
+
+    .line 319
+    :cond_0
+    invoke-static {}, Landroidx/activity/BackEventCompat$$ExternalSyntheticApiModelOutline0;->m$4()Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    move-result-object p0
+
+    const-string v0, "SCALER_AVAILABLE_STREAM_USE_CASES"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-interface {p1, p0}, Landroidx/camera/camera2/pipe/CameraMetadata;->get(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, [J
+
+    if-eqz p0, :cond_5
+
+    .line 320
+    array-length p1, p0
+
+    if-nez p1, :cond_1
+
+    goto :goto_1
+
+    .line 323
+    :cond_1
+    new-instance p1, Ljava/util/HashSet;
+
+    invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
+
+    check-cast p1, Ljava/util/Set;
+
+    .line 324
+    array-length v0, p0
+
+    move v2, v1
+
+    :goto_0
+    if-ge v2, v0, :cond_2
+
+    aget-wide v3, p0, v2
+
+    .line 325
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    invoke-interface {p1, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    .line 327
+    :cond_2
+    invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :cond_3
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_4
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Landroidx/camera/core/impl/SurfaceConfig;
+
+    .line 328
+    invoke-virtual {p2}, Landroidx/camera/core/impl/SurfaceConfig;->getStreamUseCase()Landroidx/camera/core/impl/StreamUseCase;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroidx/camera/core/impl/StreamUseCase;->getValue()J
+
+    move-result-wide v2
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    invoke-interface {p1, p2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_3
+
+    return v1
+
+    :cond_4
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_5
+    :goto_1
+    return v1
+.end method
+
+.method public final containsZslUseCase(Ljava/util/List;Ljava/util/List;)Z
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "+",
+            "Landroidx/camera/core/impl/AttachedSurfaceInfo;",
+            ">;",
+            "Ljava/util/List<",
+            "+",
+            "Landroidx/camera/core/impl/UseCaseConfig<",
+            "*>;>;)Z"
+        }
+    .end annotation
+
+    const-string v0, "attachedSurfaces"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "newUseCaseConfigs"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 507
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/camera/core/impl/AttachedSurfaceInfo;
+
+    .line 508
+    invoke-virtual {v0}, Landroidx/camera/core/impl/AttachedSurfaceInfo;->getCaptureTypes()Ljava/util/List;
+
+    move-result-object v3
+
+    const-string v4, "getCaptureTypes(...)"
+
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 509
+    invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
+
+    .line 510
+    invoke-virtual {v0}, Landroidx/camera/core/impl/AttachedSurfaceInfo;->getImplementationOptions()Landroidx/camera/core/impl/Config;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    invoke-direct {p0, v0, v2}, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->isZslUseCase(Landroidx/camera/core/impl/Config;Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return v1
+
+    .line 514
+    :cond_1
+    invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_2
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_3
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Landroidx/camera/core/impl/UseCaseConfig;
+
+    .line 515
+    move-object v0, p2
+
+    check-cast v0, Landroidx/camera/core/impl/Config;
+
+    invoke-interface {p2}, Landroidx/camera/core/impl/UseCaseConfig;->getCaptureType()Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
+
+    move-result-object p2
+
+    const-string v3, "getCaptureType(...)"
+
+    invoke-static {p2, v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-direct {p0, v0, p2}, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->isZslUseCase(Landroidx/camera/core/impl/Config;Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    return v1
+
+    :cond_3
+    return v2
+.end method
+
+.method public final getSTREAM_USE_CASE_STREAM_SPEC_OPTION()Landroidx/camera/core/impl/Config$Option;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Landroidx/camera/core/impl/Config$Option<",
+            "Ljava/lang/Long;",
+            ">;"
+        }
+    .end annotation
+
+    .line 54
+    sget-object p0, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->STREAM_USE_CASE_STREAM_SPEC_OPTION:Landroidx/camera/core/impl/Config$Option;
+
+    return-object p0
+.end method
+
+.method public final getStreamSpecImplementationOptions(Landroidx/camera/core/impl/UseCaseConfig;)Landroidx/camera/camera2/impl/Camera2ImplConfig;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/camera/core/impl/UseCaseConfig<",
+            "*>;)",
+            "Landroidx/camera/camera2/impl/Camera2ImplConfig;"
+        }
+    .end annotation
+
+    const-string/jumbo p0, "useCaseConfig"
+
+    invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 179
+    invoke-static {}, Landroidx/camera/core/impl/MutableOptionsBundle;->create()Landroidx/camera/core/impl/MutableOptionsBundle;
+
+    move-result-object p0
+
+    const-string v0, "create(...)"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 180
+    sget-object v0, Landroidx/camera/camera2/impl/Camera2ImplConfig;->STREAM_USE_CASE_OPTION:Landroidx/camera/core/impl/Config$Option;
+
+    invoke-interface {p1, v0}, Landroidx/camera/core/impl/UseCaseConfig;->containsOption(Landroidx/camera/core/impl/Config$Option;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 182
+    sget-object v0, Landroidx/camera/camera2/impl/Camera2ImplConfig;->STREAM_USE_CASE_OPTION:Landroidx/camera/core/impl/Config$Option;
+
+    .line 183
+    sget-object v1, Landroidx/camera/camera2/impl/Camera2ImplConfig;->STREAM_USE_CASE_OPTION:Landroidx/camera/core/impl/Config$Option;
+
+    invoke-interface {p1, v1}, Landroidx/camera/core/impl/UseCaseConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    .line 181
+    invoke-virtual {p0, v0, v1}, Landroidx/camera/core/impl/MutableOptionsBundle;->insertOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)V
+
+    .line 186
+    :cond_0
+    sget-object v0, Landroidx/camera/core/impl/UseCaseConfig;->OPTION_ZSL_DISABLED:Landroidx/camera/core/impl/Config$Option;
+
+    invoke-interface {p1, v0}, Landroidx/camera/core/impl/UseCaseConfig;->containsOption(Landroidx/camera/core/impl/Config$Option;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 188
+    sget-object v0, Landroidx/camera/core/impl/UseCaseConfig;->OPTION_ZSL_DISABLED:Landroidx/camera/core/impl/Config$Option;
+
+    .line 189
+    sget-object v1, Landroidx/camera/core/impl/UseCaseConfig;->OPTION_ZSL_DISABLED:Landroidx/camera/core/impl/Config$Option;
+
+    invoke-interface {p1, v1}, Landroidx/camera/core/impl/UseCaseConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    .line 187
+    invoke-virtual {p0, v0, v1}, Landroidx/camera/core/impl/MutableOptionsBundle;->insertOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)V
+
+    .line 192
+    :cond_1
+    sget-object v0, Landroidx/camera/core/impl/ImageCaptureConfig;->OPTION_IMAGE_CAPTURE_MODE:Landroidx/camera/core/impl/Config$Option;
+
+    invoke-interface {p1, v0}, Landroidx/camera/core/impl/UseCaseConfig;->containsOption(Landroidx/camera/core/impl/Config$Option;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 194
+    sget-object v0, Landroidx/camera/core/impl/ImageCaptureConfig;->OPTION_IMAGE_CAPTURE_MODE:Landroidx/camera/core/impl/Config$Option;
+
+    .line 195
+    sget-object v1, Landroidx/camera/core/impl/ImageCaptureConfig;->OPTION_IMAGE_CAPTURE_MODE:Landroidx/camera/core/impl/Config$Option;
+
+    invoke-interface {p1, v1}, Landroidx/camera/core/impl/UseCaseConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    .line 193
+    invoke-virtual {p0, v0, v1}, Landroidx/camera/core/impl/MutableOptionsBundle;->insertOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)V
+
+    .line 198
+    :cond_2
+    sget-object v0, Landroidx/camera/core/impl/UseCaseConfig;->OPTION_INPUT_FORMAT:Landroidx/camera/core/impl/Config$Option;
+
+    invoke-interface {p1, v0}, Landroidx/camera/core/impl/UseCaseConfig;->containsOption(Landroidx/camera/core/impl/Config$Option;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    .line 200
+    sget-object v0, Landroidx/camera/core/impl/UseCaseConfig;->OPTION_INPUT_FORMAT:Landroidx/camera/core/impl/Config$Option;
+
+    .line 201
+    sget-object v1, Landroidx/camera/core/impl/UseCaseConfig;->OPTION_INPUT_FORMAT:Landroidx/camera/core/impl/Config$Option;
+
+    invoke-interface {p1, v1}, Landroidx/camera/core/impl/UseCaseConfig;->retrieveOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    .line 199
+    invoke-virtual {p0, v0, p1}, Landroidx/camera/core/impl/MutableOptionsBundle;->insertOption(Landroidx/camera/core/impl/Config$Option;Ljava/lang/Object;)V
+
+    .line 204
+    :cond_3
+    new-instance p1, Landroidx/camera/camera2/impl/Camera2ImplConfig;
+
+    check-cast p0, Landroidx/camera/core/impl/Config;
+
+    invoke-direct {p1, p0}, Landroidx/camera/camera2/impl/Camera2ImplConfig;-><init>(Landroidx/camera/core/impl/Config;)V
+
+    return-object p1
+.end method
+
+.method public final isStreamUseCaseSupported(Landroidx/camera/camera2/pipe/CameraMetadata;)Z
+    .locals 2
+
+    const-string p0, "cameraMetadata"
+
+    invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 209
+    sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v0, 0x21
+
+    const/4 v1, 0x0
+
+    if-ge p0, v0, :cond_0
+
+    return v1
+
+    .line 213
+    :cond_0
+    invoke-static {}, Landroidx/activity/BackEventCompat$$ExternalSyntheticApiModelOutline0;->m$4()Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    move-result-object p0
+
+    const-string v0, "SCALER_AVAILABLE_STREAM_USE_CASES"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-interface {p1, p0}, Landroidx/camera/camera2/pipe/CameraMetadata;->get(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, [J
+
+    if-eqz p0, :cond_2
+
+    .line 214
+    array-length p0, p0
+
+    if-nez p0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_2
+    :goto_0
+    return v1
+.end method
+
+.method public final populateStreamUseCaseStreamSpecOptionWithInteropOverride(Landroidx/camera/camera2/pipe/CameraMetadata;Ljava/util/List;Ljava/util/Map;Ljava/util/Map;)Z
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Landroidx/camera/camera2/internal/compat/CameraCharacteristicsCompat;",
+            "Landroidx/camera/camera2/pipe/CameraMetadata;",
             "Ljava/util/List<",
+            "+",
             "Landroidx/camera/core/impl/AttachedSurfaceInfo;",
             ">;",
             "Ljava/util/Map<",
@@ -1339,7 +1675,23 @@
         }
     .end annotation
 
-    .line 259
+    const-string v0, "cameraMetadata"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "attachedSurfaces"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string/jumbo v0, "suggestedStreamSpecMap"
+
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "attachedSurfaceStreamSpecMap"
+
+    invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 246
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x21
@@ -1350,18 +1702,22 @@
 
     return v2
 
-    .line 262
+    .line 250
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
-    invoke-interface {p2}, Ljava/util/Map;->keySet()Ljava/util/Set;
+    invoke-interface {p3}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v1
 
+    check-cast v1, Ljava/util/Collection;
+
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 264
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    check-cast v0, Ljava/util/List;
+
+    .line 252
+    invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
@@ -1370,7 +1726,9 @@
 
     move-result v3
 
-    if-eqz v3, :cond_1
+    const-string v4, "Required value was null."
+
+    if-eqz v3, :cond_2
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1378,17 +1736,28 @@
 
     check-cast v3, Landroidx/camera/core/impl/AttachedSurfaceInfo;
 
-    .line 265
+    .line 253
     invoke-virtual {v3}, Landroidx/camera/core/impl/AttachedSurfaceInfo;->getImplementationOptions()Landroidx/camera/core/impl/Config;
 
     move-result-object v3
 
-    invoke-static {v3}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v3, :cond_1
 
     goto :goto_0
 
-    .line 268
     :cond_1
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    .line 256
+    :cond_2
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -1398,7 +1767,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_2
+    if-eqz v3, :cond_5
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1406,225 +1775,243 @@
 
     check-cast v3, Landroidx/camera/core/impl/UseCaseConfig;
 
-    .line 270
-    invoke-interface {p2, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 257
+    invoke-interface {p3, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Landroidx/camera/core/impl/StreamSpec;
-
-    .line 269
-    invoke-static {v3}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
+    if-eqz v3, :cond_4
 
     check-cast v3, Landroidx/camera/core/impl/StreamSpec;
 
-    .line 270
     invoke-virtual {v3}, Landroidx/camera/core/impl/StreamSpec;->getImplementationOptions()Landroidx/camera/core/impl/Config;
 
     move-result-object v3
 
-    .line 269
-    invoke-static {v3}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v3, :cond_3
 
     goto :goto_1
 
-    .line 272
-    :cond_2
-    invoke-static {}, Landroidx/activity/BackEventCompat$$ExternalSyntheticApiModelOutline0;->m$1()Landroid/hardware/camera2/CameraCharacteristics$Key;
+    :cond_3
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_4
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    .line 260
+    :cond_5
+    invoke-static {}, Landroidx/activity/BackEventCompat$$ExternalSyntheticApiModelOutline0;->m$4()Landroid/hardware/camera2/CameraCharacteristics$Key;
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Landroidx/camera/camera2/internal/compat/CameraCharacteristicsCompat;->get(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+    const-string v3, "SCALER_AVAILABLE_STREAM_USE_CASES"
 
-    move-result-object p0
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast p0, [J
+    invoke-interface {p1, v1}, Landroidx/camera/camera2/pipe/CameraMetadata;->get(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
 
-    if-eqz p0, :cond_9
+    move-result-object p1
 
-    .line 274
-    array-length v1, p0
+    check-cast p1, [J
 
-    if-nez v1, :cond_3
+    if-eqz p1, :cond_c
+
+    .line 261
+    array-length v1, p1
+
+    if-nez v1, :cond_6
 
     goto/16 :goto_5
 
-    .line 277
-    :cond_3
+    .line 264
+    :cond_6
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
-    .line 278
-    array-length v3, p0
+    check-cast v1, Ljava/util/Set;
+
+    .line 265
+    array-length v3, p1
 
     move v4, v2
 
     :goto_2
-    if-ge v4, v3, :cond_4
+    if-ge v4, v3, :cond_7
 
-    aget-wide v5, p0, v4
+    aget-wide v5, p1, v4
 
+    .line 266
     invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v5
 
-    .line 279
     invoke-interface {v1, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
-    .line 281
-    :cond_4
-    invoke-static {p1, v0, v1}, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->isValidCamera2InteropOverride(Ljava/util/List;Ljava/util/List;Ljava/util/Set;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_9
-
-    .line 283
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_5
-    :goto_3
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    .line 269
+    :cond_7
+    invoke-direct {p0, p2, v0, v1}, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->isValidCamera2InteropOverride(Ljava/util/List;Ljava/util/List;Ljava/util/Set;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_6
+    if-eqz p1, :cond_c
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 275
+    invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    check-cast p1, Landroidx/camera/core/impl/AttachedSurfaceInfo;
+    :cond_8
+    :goto_3
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 284
-    invoke-virtual {p1}, Landroidx/camera/core/impl/AttachedSurfaceInfo;->getImplementationOptions()Landroidx/camera/core/impl/Config;
+    move-result p2
+
+    if-eqz p2, :cond_9
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Landroidx/camera/core/impl/AttachedSurfaceInfo;
+
+    .line 276
+    invoke-virtual {p2}, Landroidx/camera/core/impl/AttachedSurfaceInfo;->getImplementationOptions()Landroidx/camera/core/impl/Config;
 
     move-result-object v1
 
-    .line 285
+    .line 278
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    .line 280
     sget-object v2, Landroidx/camera/camera2/impl/Camera2ImplConfig;->STREAM_USE_CASE_OPTION:Landroidx/camera/core/impl/Config$Option;
 
-    .line 288
+    .line 279
     invoke-interface {v1, v2}, Landroidx/camera/core/impl/Config;->retrieveOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/Long;
 
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    .line 286
-    invoke-static {v1, v2, v3}, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->getUpdatedImplementationOptionsWithUseCaseStreamSpecOption(Landroidx/camera/core/impl/Config;J)Landroidx/camera/core/impl/Config;
+    .line 277
+    invoke-direct {p0, v1, v2}, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->getUpdatedImplementationOptionsWithUseCaseStreamSpecOption(Landroidx/camera/core/impl/Config;Ljava/lang/Long;)Landroidx/camera/core/impl/Config;
 
     move-result-object v1
 
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_8
 
-    .line 292
-    invoke-virtual {p1, v1}, Landroidx/camera/core/impl/AttachedSurfaceInfo;->toStreamSpec(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/StreamSpec;
+    .line 285
+    invoke-virtual {p2, v1}, Landroidx/camera/core/impl/AttachedSurfaceInfo;->toStreamSpec(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/StreamSpec;
 
     move-result-object v1
 
-    .line 291
-    invoke-interface {p3, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p4, p2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_3
 
-    .line 295
-    :cond_6
+    .line 288
+    :cond_9
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_7
-    :goto_4
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_8
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Landroidx/camera/core/impl/UseCaseConfig;
+    :cond_a
+    :goto_4
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 296
-    invoke-interface {p2, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result p2
 
-    move-result-object p3
+    if-eqz p2, :cond_b
 
-    check-cast p3, Landroidx/camera/core/impl/StreamSpec;
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 297
-    invoke-virtual {p3}, Landroidx/camera/core/impl/StreamSpec;->getImplementationOptions()Landroidx/camera/core/impl/Config;
+    move-result-object p2
+
+    check-cast p2, Landroidx/camera/core/impl/UseCaseConfig;
+
+    .line 289
+    invoke-interface {p3, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p4
+
+    check-cast p4, Landroidx/camera/core/impl/StreamSpec;
+
+    .line 290
+    invoke-static {p4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    invoke-virtual {p4}, Landroidx/camera/core/impl/StreamSpec;->getImplementationOptions()Landroidx/camera/core/impl/Config;
 
     move-result-object v0
 
-    .line 298
+    .line 292
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    .line 294
     sget-object v1, Landroidx/camera/camera2/impl/Camera2ImplConfig;->STREAM_USE_CASE_OPTION:Landroidx/camera/core/impl/Config$Option;
 
-    .line 300
+    .line 293
     invoke-interface {v0, v1}, Landroidx/camera/core/impl/Config;->retrieveOption(Landroidx/camera/core/impl/Config$Option;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/Long;
 
-    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v1
-
-    .line 299
-    invoke-static {v0, v1, v2}, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->getUpdatedImplementationOptionsWithUseCaseStreamSpecOption(Landroidx/camera/core/impl/Config;J)Landroidx/camera/core/impl/Config;
+    .line 291
+    invoke-direct {p0, v0, v1}, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->getUpdatedImplementationOptionsWithUseCaseStreamSpecOption(Landroidx/camera/core/impl/Config;Ljava/lang/Long;)Landroidx/camera/core/impl/Config;
 
     move-result-object v0
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_a
 
-    .line 304
-    invoke-virtual {p3}, Landroidx/camera/core/impl/StreamSpec;->toBuilder()Landroidx/camera/core/impl/StreamSpec$Builder;
+    .line 299
+    invoke-virtual {p4}, Landroidx/camera/core/impl/StreamSpec;->toBuilder()Landroidx/camera/core/impl/StreamSpec$Builder;
 
-    move-result-object p3
+    move-result-object p4
 
-    invoke-virtual {p3, v0}, Landroidx/camera/core/impl/StreamSpec$Builder;->setImplementationOptions(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/StreamSpec$Builder;
+    invoke-virtual {p4, v0}, Landroidx/camera/core/impl/StreamSpec$Builder;->setImplementationOptions(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/StreamSpec$Builder;
 
-    move-result-object p3
+    move-result-object p4
 
-    .line 305
-    invoke-virtual {p3}, Landroidx/camera/core/impl/StreamSpec$Builder;->build()Landroidx/camera/core/impl/StreamSpec;
+    invoke-virtual {p4}, Landroidx/camera/core/impl/StreamSpec$Builder;->build()Landroidx/camera/core/impl/StreamSpec;
 
-    move-result-object p3
+    move-result-object p4
 
-    .line 306
-    invoke-interface {p2, p1, p3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, p2, p4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_4
 
-    :cond_8
+    :cond_b
     const/4 p0, 0x1
 
     return p0
 
-    :cond_9
+    :cond_c
     :goto_5
     return v2
 .end method
 
-.method public static populateStreamUseCaseStreamSpecOptionWithSupportedSurfaceConfigs(Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/List;)V
-    .locals 6
+.method public final populateStreamUseCaseStreamSpecOptionWithSupportedSurfaceConfigs(Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/List;)V
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1639,10 +2026,12 @@
             ">;",
             "Ljava/util/Map<",
             "Ljava/lang/Integer;",
+            "+",
             "Landroidx/camera/core/impl/AttachedSurfaceInfo;",
             ">;",
             "Ljava/util/Map<",
             "Ljava/lang/Integer;",
+            "+",
             "Landroidx/camera/core/impl/UseCaseConfig<",
             "*>;>;",
             "Ljava/util/List<",
@@ -1651,137 +2040,192 @@
         }
     .end annotation
 
-    const/4 v0, 0x0
+    const-string/jumbo v0, "suggestedStreamSpecMap"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "attachedSurfaceStreamSpecMap"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string/jumbo v0, "surfaceConfigIndexAttachedSurfaceInfoMap"
+
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string/jumbo v0, "surfaceConfigIndexUseCaseConfigMap"
+
+    invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string/jumbo v0, "surfaceConfigsWithStreamUseCase"
+
+    invoke-static {p5, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 445
+    move-object v0, p5
+
+    check-cast v0, Ljava/util/Collection;
+
+    invoke-interface {v0}, Ljava/util/Collection;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_3
 
     .line 446
-    :goto_0
-    invoke-interface {p4}, Ljava/util/List;->size()I
+    invoke-interface {p5, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result v1
+    move-result-object v2
 
-    if-ge v0, v1, :cond_3
+    check-cast v2, Landroidx/camera/core/impl/SurfaceConfig;
+
+    invoke-virtual {v2}, Landroidx/camera/core/impl/SurfaceConfig;->getStreamUseCase()Landroidx/camera/core/impl/StreamUseCase;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroidx/camera/core/impl/StreamUseCase;->getValue()J
+
+    move-result-wide v2
 
     .line 447
-    invoke-interface {p4, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroidx/camera/core/impl/SurfaceConfig;
-
-    invoke-virtual {v1}, Landroidx/camera/core/impl/SurfaceConfig;->getStreamUseCase()J
-
-    move-result-wide v1
-
-    .line 448
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-interface {p2, v3}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    .line 450
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-interface {p2, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Landroidx/camera/core/impl/AttachedSurfaceInfo;
-
-    .line 451
-    invoke-virtual {v3}, Landroidx/camera/core/impl/AttachedSurfaceInfo;->getImplementationOptions()Landroidx/camera/core/impl/Config;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
 
+    invoke-interface {p3, v4}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    .line 448
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    invoke-interface {p3, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroidx/camera/core/impl/AttachedSurfaceInfo;
+
+    .line 449
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    invoke-virtual {v4}, Landroidx/camera/core/impl/AttachedSurfaceInfo;->getImplementationOptions()Landroidx/camera/core/impl/Config;
+
+    move-result-object v5
+
+    .line 452
+    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
     .line 453
-    invoke-static {v4, v1, v2}, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->getUpdatedImplementationOptionsWithUseCaseStreamSpecOption(Landroidx/camera/core/impl/Config;J)Landroidx/camera/core/impl/Config;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v1
+    move-result-object v2
 
-    if-eqz v1, :cond_1
+    .line 451
+    invoke-direct {p0, v5, v2}, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->getUpdatedImplementationOptionsWithUseCaseStreamSpecOption(Landroidx/camera/core/impl/Config;Ljava/lang/Long;)Landroidx/camera/core/impl/Config;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_1
 
     .line 457
-    invoke-virtual {v3, v1}, Landroidx/camera/core/impl/AttachedSurfaceInfo;->toStreamSpec(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/StreamSpec;
+    invoke-virtual {v4, v2}, Landroidx/camera/core/impl/AttachedSurfaceInfo;->toStreamSpec(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/StreamSpec;
 
-    move-result-object v1
+    move-result-object v2
 
-    .line 456
-    invoke-interface {p1, v3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_1
 
     .line 459
     :cond_0
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-interface {p3, v3}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    .line 461
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-interface {p3, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Landroidx/camera/core/impl/UseCaseConfig;
-
-    .line 462
-    invoke-interface {p0, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
 
-    check-cast v4, Landroidx/camera/core/impl/StreamSpec;
+    invoke-interface {p4, v4}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
-    .line 463
-    invoke-virtual {v4}, Landroidx/camera/core/impl/StreamSpec;->getImplementationOptions()Landroidx/camera/core/impl/Config;
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    .line 460
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    invoke-interface {p4, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    check-cast v4, Landroidx/camera/core/impl/UseCaseConfig;
+
+    .line 461
+    invoke-interface {p1, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v5
 
+    check-cast v5, Landroidx/camera/core/impl/StreamSpec;
+
+    .line 462
+    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    invoke-virtual {v5}, Landroidx/camera/core/impl/StreamSpec;->getImplementationOptions()Landroidx/camera/core/impl/Config;
+
+    move-result-object v6
+
     .line 465
-    invoke-static {v5, v1, v2}, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->getUpdatedImplementationOptionsWithUseCaseStreamSpecOption(Landroidx/camera/core/impl/Config;J)Landroidx/camera/core/impl/Config;
+    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    .line 469
-    invoke-virtual {v4}, Landroidx/camera/core/impl/StreamSpec;->toBuilder()Landroidx/camera/core/impl/StreamSpec$Builder;
+    .line 466
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Landroidx/camera/core/impl/StreamSpec$Builder;->setImplementationOptions(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/StreamSpec$Builder;
+    .line 464
+    invoke-direct {p0, v6, v2}, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->getUpdatedImplementationOptionsWithUseCaseStreamSpecOption(Landroidx/camera/core/impl/Config;Ljava/lang/Long;)Landroidx/camera/core/impl/Config;
 
-    move-result-object v1
+    move-result-object v2
 
-    .line 470
-    invoke-virtual {v1}, Landroidx/camera/core/impl/StreamSpec$Builder;->build()Landroidx/camera/core/impl/StreamSpec;
-
-    move-result-object v1
+    if-eqz v2, :cond_1
 
     .line 471
-    invoke-interface {p0, v3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v5}, Landroidx/camera/core/impl/StreamSpec;->toBuilder()Landroidx/camera/core/impl/StreamSpec$Builder;
+
+    move-result-object v3
+
+    .line 472
+    invoke-virtual {v3, v2}, Landroidx/camera/core/impl/StreamSpec$Builder;->setImplementationOptions(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/StreamSpec$Builder;
+
+    move-result-object v2
+
+    .line 473
+    invoke-virtual {v2}, Landroidx/camera/core/impl/StreamSpec$Builder;->build()Landroidx/camera/core/impl/StreamSpec;
+
+    move-result-object v2
+
+    .line 472
+    const-string v3, "build(...)"
+
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 474
+    invoke-interface {p1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
     :goto_1
-    add-int/lit8 v0, v0, 0x1
+    add-int/lit8 v1, v1, 0x1
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    .line 475
+    .line 477
     :cond_2
     new-instance p0, Ljava/lang/AssertionError;
 
@@ -1795,7 +2239,7 @@
     return-void
 .end method
 
-.method public static populateSurfaceToStreamUseCaseMapping(Ljava/util/Collection;Ljava/util/Collection;Ljava/util/Map;)V
+.method public final populateSurfaceToStreamUseCaseMapping(Ljava/util/Collection;Ljava/util/Collection;Ljava/util/Map;)V
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1804,6 +2248,7 @@
             "Landroidx/camera/core/impl/SessionConfig;",
             ">;",
             "Ljava/util/Collection<",
+            "+",
             "Landroidx/camera/core/impl/UseCaseConfig<",
             "*>;>;",
             "Ljava/util/Map<",
@@ -1813,36 +2258,52 @@
         }
     .end annotation
 
-    .line 132
-    new-instance v0, Ljava/util/ArrayList;
+    const-string/jumbo p0, "sessionConfigs"
 
-    invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 133
-    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    const-string/jumbo p0, "useCaseConfigs"
 
-    move-result-object p1
+    invoke-static {p2, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string/jumbo p0, "streamUseCaseMap"
+
+    invoke-static {p3, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 115
+    new-instance p0, Ljava/util/ArrayList;
+
+    invoke-direct {p0, p2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    .line 116
+    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object p2
 
     :cond_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_4
+    const-string v1, "CXCP"
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    if-eqz v0, :cond_4
 
-    move-result-object v1
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    check-cast v1, Landroidx/camera/core/impl/SessionConfig;
+    move-result-object v0
 
-    .line 134
-    invoke-virtual {v1}, Landroidx/camera/core/impl/SessionConfig;->getImplementationOptions()Landroidx/camera/core/impl/Config;
+    check-cast v0, Landroidx/camera/core/impl/SessionConfig;
+
+    .line 118
+    invoke-virtual {v0}, Landroidx/camera/core/impl/SessionConfig;->getImplementationOptions()Landroidx/camera/core/impl/Config;
 
     move-result-object v2
 
+    .line 119
     sget-object v3, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->STREAM_USE_CASE_STREAM_SPEC_OPTION:Landroidx/camera/core/impl/Config$Option;
 
+    .line 118
     invoke-interface {v2, v3}, Landroidx/camera/core/impl/Config;->containsOption(Landroidx/camera/core/impl/Config$Option;)Z
 
     move-result v2
@@ -1851,8 +2312,8 @@
 
     if-eqz v2, :cond_1
 
-    .line 136
-    invoke-virtual {v1}, Landroidx/camera/core/impl/SessionConfig;->getSurfaces()Ljava/util/List;
+    .line 120
+    invoke-virtual {v0}, Landroidx/camera/core/impl/SessionConfig;->getSurfaces()Ljava/util/List;
 
     move-result-object v2
 
@@ -1862,72 +2323,91 @@
 
     if-eq v2, v4, :cond_1
 
-    .line 139
-    invoke-virtual {v1}, Landroidx/camera/core/impl/SessionConfig;->getSurfaces()Ljava/util/List;
+    .line 122
+    sget-object p0, Landroidx/camera/camera2/impl/Camera2Logger;->INSTANCE:Landroidx/camera/camera2/impl/Camera2Logger;
 
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/List;->size()I
+    .line 635
+    invoke-static {v1}, Landroidx/camera/core/Logger;->isErrorEnabled(Ljava/lang/String;)Z
 
     move-result p0
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    if-eqz p0, :cond_5
+
+    .line 636
+    invoke-static {}, Landroidx/camera/camera2/impl/Camera2Logger;->access$getTRUNCATED_TAG$p()Ljava/lang/String;
 
     move-result-object p0
 
-    filled-new-array {p0}, [Ljava/lang/Object;
+    .line 123
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    const-string p2, "StreamUseCaseUtil: SessionConfig has stream use case but also contains "
 
-    .line 137
-    const-string p1, "SessionConfig has stream use case but also contains %d surfaces, abort populateSurfaceToStreamUseCaseMapping()."
+    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p1, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    .line 124
+    invoke-virtual {v0}, Landroidx/camera/core/impl/SessionConfig;->getSurfaces()Ljava/util/List;
 
-    move-result-object p0
+    move-result-object p2
 
-    const-string p1, "StreamUseCaseUtil"
+    invoke-interface {p2}, Ljava/util/List;->size()I
 
-    invoke-static {p1, p0}, Landroidx/camera/core/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V
+    move-result p2
+
+    .line 123
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 124
+    const-string p2, " surfaces, abort populateSurfaceToStreamUseCaseMapping()."
+
+    .line 123
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 636
+    invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 142
+    .line 130
     :cond_1
-    invoke-virtual {v1}, Landroidx/camera/core/impl/SessionConfig;->getImplementationOptions()Landroidx/camera/core/impl/Config;
+    invoke-virtual {v0}, Landroidx/camera/core/impl/SessionConfig;->getImplementationOptions()Landroidx/camera/core/impl/Config;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-interface {v1, v3}, Landroidx/camera/core/impl/Config;->containsOption(Landroidx/camera/core/impl/Config$Option;)Z
+    invoke-interface {v0, v3}, Landroidx/camera/core/impl/Config;->containsOption(Landroidx/camera/core/impl/Config$Option;)Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_0
 
-    .line 150
-    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    .line 139
+    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
-    move-result-object p0
+    move-result-object p1
 
-    const/4 p1, 0x0
+    const/4 p2, 0x0
 
-    move v1, p1
+    move v0, p2
 
     :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
     if-eqz v2, :cond_4
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroidx/camera/core/impl/SessionConfig;
 
-    .line 151
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    .line 141
+    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -1939,83 +2419,92 @@
 
     sget-object v5, Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;->METERING_REPEATING:Landroidx/camera/core/impl/UseCaseConfigFactory$CaptureType;
 
+    const-string v6, "getSurfaces(...)"
+
     if-ne v3, v5, :cond_2
 
-    .line 156
+    .line 147
     invoke-virtual {v2}, Landroidx/camera/core/impl/SessionConfig;->getSurfaces()Ljava/util/List;
 
     move-result-object v3
 
-    invoke-interface {v3}, Ljava/util/List;->isEmpty()Z
+    invoke-static {v3, v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast v3, Ljava/util/Collection;
+
+    invoke-interface {v3}, Ljava/util/Collection;->isEmpty()Z
 
     move-result v3
 
     xor-int/2addr v3, v4
 
+    .line 148
     const-string v5, "MeteringRepeating should contain a surface"
 
+    .line 146
     invoke-static {v3, v5}, Landroidx/core/util/Preconditions;->checkState(ZLjava/lang/String;)V
 
-    .line 158
+    .line 150
     invoke-virtual {v2}, Landroidx/camera/core/impl/SessionConfig;->getSurfaces()Ljava/util/List;
 
     move-result-object v2
 
-    invoke-interface {v2, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v2, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Landroidx/camera/core/impl/DeferrableSurface;
-
     const-wide/16 v5, 0x1
 
-    .line 159
+    .line 151
     invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
-    .line 158
-    invoke-interface {p2, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_1
 
-    .line 161
+    .line 153
     :cond_2
     invoke-virtual {v2}, Landroidx/camera/core/impl/SessionConfig;->getImplementationOptions()Landroidx/camera/core/impl/Config;
 
     move-result-object v3
 
+    .line 154
     sget-object v5, Landroidx/camera/camera2/internal/StreamUseCaseUtil;->STREAM_USE_CASE_STREAM_SPEC_OPTION:Landroidx/camera/core/impl/Config$Option;
 
+    .line 153
     invoke-interface {v3, v5}, Landroidx/camera/core/impl/Config;->containsOption(Landroidx/camera/core/impl/Config$Option;)Z
 
     move-result v3
 
     if-eqz v3, :cond_3
 
-    .line 163
+    .line 157
     invoke-virtual {v2}, Landroidx/camera/core/impl/SessionConfig;->getSurfaces()Ljava/util/List;
 
     move-result-object v3
 
-    invoke-interface {v3}, Ljava/util/List;->isEmpty()Z
+    invoke-static {v3, v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast v3, Ljava/util/Collection;
+
+    invoke-interface {v3}, Ljava/util/Collection;->isEmpty()Z
 
     move-result v3
 
     if-nez v3, :cond_3
 
-    .line 164
+    .line 158
     invoke-virtual {v2}, Landroidx/camera/core/impl/SessionConfig;->getSurfaces()Ljava/util/List;
 
     move-result-object v3
 
-    invoke-interface {v3, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v3, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Landroidx/camera/core/impl/DeferrableSurface;
-
-    .line 165
+    .line 159
     invoke-virtual {v2}, Landroidx/camera/core/impl/SessionConfig;->getImplementationOptions()Landroidx/camera/core/impl/Config;
 
     move-result-object v2
@@ -2024,39 +2513,81 @@
 
     move-result-object v2
 
-    check-cast v2, Ljava/lang/Long;
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    .line 164
-    invoke-interface {p2, v3, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, v3, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_3
     :goto_1
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    .line 167
     :cond_4
+    sget-object p0, Landroidx/camera/camera2/impl/Camera2Logger;->INSTANCE:Landroidx/camera/camera2/impl/Camera2Logger;
+
+    .line 639
+    invoke-static {v1}, Landroidx/camera/core/Logger;->isDebugEnabled(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_5
+
+    .line 640
+    invoke-static {}, Landroidx/camera/camera2/impl/Camera2Logger;->access$getTRUNCATED_TAG$p()Ljava/lang/String;
+
+    move-result-object p0
+
+    .line 168
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string/jumbo p2, "populateSurfaceToStreamUseCaseMapping() - streamUseCaseMap = "
+
+    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 640
+    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_5
     return-void
 .end method
 
-.method public static shouldUseStreamUseCase(Landroidx/camera/camera2/internal/SupportedSurfaceCombination$FeatureSettings;)Z
+.method public final shouldUseStreamUseCase(Landroidx/camera/camera2/adapter/SupportedSurfaceCombination$FeatureSettings;)Z
     .locals 1
 
-    .line 235
-    invoke-virtual {p0}, Landroidx/camera/camera2/internal/SupportedSurfaceCombination$FeatureSettings;->getCameraMode()I
+    const-string p0, "featureSettings"
 
-    move-result v0
+    invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    if-nez v0, :cond_0
+    .line 221
+    invoke-virtual {p1}, Landroidx/camera/camera2/adapter/SupportedSurfaceCombination$FeatureSettings;->getCameraMode()I
 
-    .line 236
-    invoke-virtual {p0}, Landroidx/camera/camera2/internal/SupportedSurfaceCombination$FeatureSettings;->getRequiredMaxBitDepth()I
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    .line 222
+    invoke-virtual {p1}, Landroidx/camera/camera2/adapter/SupportedSurfaceCombination$FeatureSettings;->getRequiredMaxBitDepth()I
 
     move-result p0
 
     const/16 v0, 0x8
 
     if-ne p0, v0, :cond_0
+
+    .line 223
+    invoke-virtual {p1}, Landroidx/camera/camera2/adapter/SupportedSurfaceCombination$FeatureSettings;->isHighSpeedOn()Z
+
+    move-result p0
+
+    if-nez p0, :cond_0
 
     const/4 p0, 0x1
 
@@ -2066,17 +2597,4 @@
     const/4 p0, 0x0
 
     return p0
-.end method
-
-.method private static throwInvalidCamera2InteropOverrideException()V
-    .locals 2
-
-    .line 559
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Either all use cases must have non-default stream use case assigned or none should have it"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method

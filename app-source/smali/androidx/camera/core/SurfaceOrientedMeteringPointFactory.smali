@@ -13,13 +13,13 @@
 .method public constructor <init>(FF)V
     .locals 0
 
-    .line 67
+    .line 68
     invoke-direct {p0}, Landroidx/camera/core/MeteringPointFactory;-><init>()V
 
-    .line 68
+    .line 69
     iput p1, p0, Landroidx/camera/core/SurfaceOrientedMeteringPointFactory;->mWidth:F
 
-    .line 69
+    .line 70
     iput p2, p0, Landroidx/camera/core/SurfaceOrientedMeteringPointFactory;->mHeight:F
 
     return-void
@@ -28,17 +28,17 @@
 .method public constructor <init>(FFLandroidx/camera/core/UseCase;)V
     .locals 0
 
-    .line 91
+    .line 92
     invoke-static {p3}, Landroidx/camera/core/SurfaceOrientedMeteringPointFactory;->getUseCaseAspectRatio(Landroidx/camera/core/UseCase;)Landroid/util/Rational;
 
     move-result-object p3
 
     invoke-direct {p0, p3}, Landroidx/camera/core/MeteringPointFactory;-><init>(Landroid/util/Rational;)V
 
-    .line 92
+    .line 93
     iput p1, p0, Landroidx/camera/core/SurfaceOrientedMeteringPointFactory;->mWidth:F
 
-    .line 93
+    .line 94
     iput p2, p0, Landroidx/camera/core/SurfaceOrientedMeteringPointFactory;->mHeight:F
 
     return-void
@@ -106,16 +106,16 @@
 .method protected convertPoint(FF)Landroid/graphics/PointF;
     .locals 2
 
-    .line 119
+    .line 118
     new-instance v0, Landroid/graphics/PointF;
 
     iget v1, p0, Landroidx/camera/core/SurfaceOrientedMeteringPointFactory;->mWidth:F
 
     div-float/2addr p1, v1
 
-    iget v1, p0, Landroidx/camera/core/SurfaceOrientedMeteringPointFactory;->mHeight:F
+    iget p0, p0, Landroidx/camera/core/SurfaceOrientedMeteringPointFactory;->mHeight:F
 
-    div-float/2addr p2, v1
+    div-float/2addr p2, p0
 
     invoke-direct {v0, p1, p2}, Landroid/graphics/PointF;-><init>(FF)V
 

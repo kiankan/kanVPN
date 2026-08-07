@@ -25,12 +25,12 @@
 
 # virtual methods
 .method public final onError(Landroidx/camera/core/impl/SessionConfig;Landroidx/camera/core/impl/SessionConfig$SessionError;)V
-    .locals 1
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Landroidx/camera/core/Preview$$ExternalSyntheticLambda3;->f$0:Landroidx/camera/core/Preview;
+    iget-object p0, p0, Landroidx/camera/core/Preview$$ExternalSyntheticLambda3;->f$0:Landroidx/camera/core/Preview;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/camera/core/Preview;->lambda$addCameraSurfaceAndErrorListener$1$androidx-camera-core-Preview(Landroidx/camera/core/impl/SessionConfig;Landroidx/camera/core/impl/SessionConfig$SessionError;)V
+    invoke-virtual {p0, p1, p2}, Landroidx/camera/core/Preview;->lambda$addCameraSurfaceAndErrorListener$1$androidx-camera-core-Preview(Landroidx/camera/core/impl/SessionConfig;Landroidx/camera/core/impl/SessionConfig$SessionError;)V
 
     return-void
 .end method

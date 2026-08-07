@@ -36,7 +36,7 @@
 .method private static synthetic $values()[Landroidx/camera/core/processing/util/GLUtils$InputFormat;
     .locals 3
 
-    .line 203
+    .line 201
     sget-object v0, Landroidx/camera/core/processing/util/GLUtils$InputFormat;->UNKNOWN:Landroidx/camera/core/processing/util/GLUtils$InputFormat;
 
     sget-object v1, Landroidx/camera/core/processing/util/GLUtils$InputFormat;->DEFAULT:Landroidx/camera/core/processing/util/GLUtils$InputFormat;
@@ -53,7 +53,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 212
+    .line 210
     new-instance v0, Landroidx/camera/core/processing/util/GLUtils$InputFormat;
 
     const-string v1, "UNKNOWN"
@@ -64,7 +64,7 @@
 
     sput-object v0, Landroidx/camera/core/processing/util/GLUtils$InputFormat;->UNKNOWN:Landroidx/camera/core/processing/util/GLUtils$InputFormat;
 
-    .line 220
+    .line 218
     new-instance v0, Landroidx/camera/core/processing/util/GLUtils$InputFormat;
 
     const-string v1, "DEFAULT"
@@ -75,7 +75,7 @@
 
     sput-object v0, Landroidx/camera/core/processing/util/GLUtils$InputFormat;->DEFAULT:Landroidx/camera/core/processing/util/GLUtils$InputFormat;
 
-    .line 227
+    .line 225
     new-instance v0, Landroidx/camera/core/processing/util/GLUtils$InputFormat;
 
     const-string v1, "YUV"
@@ -86,7 +86,7 @@
 
     sput-object v0, Landroidx/camera/core/processing/util/GLUtils$InputFormat;->YUV:Landroidx/camera/core/processing/util/GLUtils$InputFormat;
 
-    .line 203
+    .line 201
     invoke-static {}, Landroidx/camera/core/processing/util/GLUtils$InputFormat;->$values()[Landroidx/camera/core/processing/util/GLUtils$InputFormat;
 
     move-result-object v0
@@ -115,7 +115,7 @@
         }
     .end annotation
 
-    .line 203
+    .line 201
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -132,7 +132,7 @@
         }
     .end annotation
 
-    .line 203
+    .line 201
     const-class v0, Landroidx/camera/core/processing/util/GLUtils$InputFormat;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -147,7 +147,7 @@
 .method public static values()[Landroidx/camera/core/processing/util/GLUtils$InputFormat;
     .locals 1
 
-    .line 203
+    .line 201
     sget-object v0, Landroidx/camera/core/processing/util/GLUtils$InputFormat;->$VALUES:[Landroidx/camera/core/processing/util/GLUtils$InputFormat;
 
     invoke-virtual {v0}, [Landroidx/camera/core/processing/util/GLUtils$InputFormat;->clone()Ljava/lang/Object;

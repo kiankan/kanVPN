@@ -34,7 +34,7 @@
 .method static constructor <clinit>()V
     .locals 32
 
-    .line 44
+    .line 45
     new-instance v0, Ljava/util/HashSet;
 
     const-string v30, "SM-S901B/DS"
@@ -111,7 +111,7 @@
 
     sput-object v0, Landroidx/camera/core/internal/compat/quirk/LargeJpegImageQuirk;->SAMSUNG_DEVICE_MODELS:Ljava/util/Set;
 
-    .line 87
+    .line 88
     new-instance v0, Ljava/util/HashSet;
 
     const-string v1, "V2045"
@@ -138,7 +138,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 40
+    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -147,7 +147,7 @@
 .method private static isSamsungDevice()Z
     .locals 2
 
-    .line 106
+    .line 107
     const-string v0, "Samsung"
 
     sget-object v1, Landroid/os/Build;->BRAND:Ljava/lang/String;
@@ -162,7 +162,7 @@
 .method private static isSamsungProblematicDevice()Z
     .locals 3
 
-    .line 101
+    .line 102
     const-string v0, "Samsung"
 
     sget-object v1, Landroid/os/Build;->BRAND:Ljava/lang/String;
@@ -179,12 +179,12 @@
 
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    .line 102
+    .line 103
     invoke-virtual {v1, v2}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 101
+    .line 102
     invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v0
@@ -204,7 +204,7 @@
 .method private static isVivoProblematicDevice()Z
     .locals 3
 
-    .line 110
+    .line 111
     const-string v0, "Vivo"
 
     sget-object v1, Landroid/os/Build;->BRAND:Ljava/lang/String;
@@ -221,12 +221,12 @@
 
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    .line 111
+    .line 112
     invoke-virtual {v1, v2}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 110
+    .line 111
     invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v0
@@ -246,7 +246,7 @@
 .method static load()Z
     .locals 1
 
-    .line 97
+    .line 98
     invoke-static {}, Landroidx/camera/core/internal/compat/quirk/LargeJpegImageQuirk;->isSamsungDevice()Z
 
     move-result v0
@@ -276,41 +276,41 @@
 
 # virtual methods
 .method public shouldCheckInvalidJpegData([B)Z
-    .locals 2
+    .locals 1
 
-    .line 119
+    .line 120
     invoke-static {}, Landroidx/camera/core/internal/compat/quirk/LargeJpegImageQuirk;->isSamsungProblematicDevice()Z
 
-    move-result v0
+    move-result p0
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    if-nez v0, :cond_2
+    if-nez p0, :cond_2
 
     invoke-static {}, Landroidx/camera/core/internal/compat/quirk/LargeJpegImageQuirk;->isVivoProblematicDevice()Z
 
-    move-result v0
+    move-result p0
 
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
     goto :goto_0
 
-    .line 123
+    .line 124
     :cond_0
-    array-length p1, p1
+    array-length p0, p1
 
-    const v0, 0x989680
+    const p1, 0x989680
 
-    if-le p1, v0, :cond_1
+    if-le p0, p1, :cond_1
 
-    return v1
+    return v0
 
     :cond_1
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 
     :cond_2
     :goto_0
-    return v1
+    return v0
 .end method

@@ -69,7 +69,7 @@
 
     sput-object v0, Landroidx/camera/core/DynamicRange;->UNSPECIFIED:Landroidx/camera/core/DynamicRange;
 
-    .line 126
+    .line 125
     new-instance v0, Landroidx/camera/core/DynamicRange;
 
     const/4 v1, 0x1
@@ -80,7 +80,7 @@
 
     sput-object v0, Landroidx/camera/core/DynamicRange;->SDR:Landroidx/camera/core/DynamicRange;
 
-    .line 142
+    .line 140
     new-instance v0, Landroidx/camera/core/DynamicRange;
 
     const/4 v1, 0x2
@@ -91,7 +91,7 @@
 
     sput-object v0, Landroidx/camera/core/DynamicRange;->HDR_UNSPECIFIED_10_BIT:Landroidx/camera/core/DynamicRange;
 
-    .line 155
+    .line 152
     new-instance v0, Landroidx/camera/core/DynamicRange;
 
     const/4 v1, 0x3
@@ -100,7 +100,7 @@
 
     sput-object v0, Landroidx/camera/core/DynamicRange;->HLG_10_BIT:Landroidx/camera/core/DynamicRange;
 
-    .line 167
+    .line 164
     new-instance v0, Landroidx/camera/core/DynamicRange;
 
     const/4 v1, 0x4
@@ -109,7 +109,7 @@
 
     sput-object v0, Landroidx/camera/core/DynamicRange;->HDR10_10_BIT:Landroidx/camera/core/DynamicRange;
 
-    .line 180
+    .line 176
     new-instance v0, Landroidx/camera/core/DynamicRange;
 
     const/4 v1, 0x5
@@ -118,7 +118,7 @@
 
     sput-object v0, Landroidx/camera/core/DynamicRange;->HDR10_PLUS_10_BIT:Landroidx/camera/core/DynamicRange;
 
-    .line 193
+    .line 188
     new-instance v0, Landroidx/camera/core/DynamicRange;
 
     const/4 v1, 0x6
@@ -127,7 +127,7 @@
 
     sput-object v0, Landroidx/camera/core/DynamicRange;->DOLBY_VISION_10_BIT:Landroidx/camera/core/DynamicRange;
 
-    .line 206
+    .line 200
     new-instance v0, Landroidx/camera/core/DynamicRange;
 
     invoke-direct {v0, v1, v2}, Landroidx/camera/core/DynamicRange;-><init>(II)V
@@ -140,13 +140,13 @@
 .method public constructor <init>(II)V
     .locals 0
 
-    .line 224
+    .line 218
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 225
+    .line 219
     iput p1, p0, Landroidx/camera/core/DynamicRange;->mEncoding:I
 
-    .line 226
+    .line 220
     iput p2, p0, Landroidx/camera/core/DynamicRange;->mBitDepth:I
 
     return-void
@@ -157,48 +157,48 @@
 
     packed-switch p0, :pswitch_data_0
 
-    .line 321
+    .line 313
     const-string p0, "<Unknown>"
 
     return-object p0
 
-    .line 318
+    .line 310
     :pswitch_0
     const-string p0, "DOLBY_VISION"
 
     return-object p0
 
-    .line 317
+    .line 309
     :pswitch_1
     const-string p0, "HDR10_PLUS"
 
     return-object p0
 
-    .line 316
+    .line 308
     :pswitch_2
     const-string p0, "HDR10"
 
     return-object p0
 
-    .line 315
+    .line 307
     :pswitch_3
     const-string p0, "HLG"
 
     return-object p0
 
-    .line 314
+    .line 306
     :pswitch_4
     const-string p0, "HDR_UNSPECIFIED"
 
     return-object p0
 
-    .line 313
+    .line 305
     :pswitch_5
     const-string p0, "SDR"
 
     return-object p0
 
-    .line 312
+    .line 304
     :pswitch_6
     const-string p0, "UNSPECIFIED"
 
@@ -229,7 +229,7 @@
 
     return v0
 
-    .line 291
+    .line 284
     :cond_0
     instance-of v1, p1, Landroidx/camera/core/DynamicRange;
 
@@ -237,10 +237,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 292
+    .line 285
     check-cast p1, Landroidx/camera/core/DynamicRange;
 
-    .line 293
+    .line 286
     iget v1, p0, Landroidx/camera/core/DynamicRange;->mEncoding:I
 
     invoke-virtual {p1}, Landroidx/camera/core/DynamicRange;->getEncoding()I
@@ -249,14 +249,14 @@
 
     if-ne v1, v3, :cond_1
 
-    iget v1, p0, Landroidx/camera/core/DynamicRange;->mBitDepth:I
+    iget p0, p0, Landroidx/camera/core/DynamicRange;->mBitDepth:I
 
-    .line 294
+    .line 287
     invoke-virtual {p1}, Landroidx/camera/core/DynamicRange;->getBitDepth()I
 
     move-result p1
 
-    if-ne v1, p1, :cond_1
+    if-ne p0, p1, :cond_1
 
     return v0
 
@@ -265,27 +265,27 @@
 .end method
 
 .method public getBitDepth()I
-    .locals 1
+    .locals 0
 
-    .line 252
-    iget v0, p0, Landroidx/camera/core/DynamicRange;->mBitDepth:I
+    .line 246
+    iget p0, p0, Landroidx/camera/core/DynamicRange;->mBitDepth:I
 
-    return v0
+    return p0
 .end method
 
 .method public getEncoding()I
-    .locals 1
+    .locals 0
 
-    .line 238
-    iget v0, p0, Landroidx/camera/core/DynamicRange;->mEncoding:I
+    .line 232
+    iget p0, p0, Landroidx/camera/core/DynamicRange;->mEncoding:I
 
-    return v0
+    return p0
 .end method
 
 .method public hashCode()I
     .locals 2
 
-    .line 303
+    .line 296
     iget v0, p0, Landroidx/camera/core/DynamicRange;->mEncoding:I
 
     const v1, 0xf4243
@@ -294,18 +294,18 @@
 
     mul-int/2addr v0, v1
 
-    .line 305
-    iget v1, p0, Landroidx/camera/core/DynamicRange;->mBitDepth:I
+    .line 298
+    iget p0, p0, Landroidx/camera/core/DynamicRange;->mBitDepth:I
 
-    xor-int/2addr v0, v1
+    xor-int/2addr p0, v0
 
-    return v0
+    return p0
 .end method
 
 .method public is10BitHdr()Z
-    .locals 3
+    .locals 2
 
-    .line 273
+    .line 267
     invoke-virtual {p0}, Landroidx/camera/core/DynamicRange;->isFullySpecified()Z
 
     move-result v0
@@ -320,34 +320,34 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 274
+    .line 268
     invoke-virtual {p0}, Landroidx/camera/core/DynamicRange;->getBitDepth()I
 
-    move-result v0
+    move-result p0
 
-    const/16 v2, 0xa
+    const/16 v0, 0xa
 
-    if-ne v0, v2, :cond_0
+    if-ne p0, v0, :cond_0
 
     return v1
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public isFullySpecified()Z
     .locals 2
 
-    .line 260
+    .line 254
     invoke-virtual {p0}, Landroidx/camera/core/DynamicRange;->getEncoding()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 261
+    .line 255
     invoke-virtual {p0}, Landroidx/camera/core/DynamicRange;->getEncoding()I
 
     move-result v0
@@ -356,27 +356,27 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 262
+    .line 256
     invoke-virtual {p0}, Landroidx/camera/core/DynamicRange;->getBitDepth()I
 
-    move-result v0
+    move-result p0
 
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 280
+    .line 273
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "DynamicRange@"
@@ -393,13 +393,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, "{encoding="
+    const-string/jumbo v1, "{encoding="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Landroidx/camera/core/DynamicRange;->mEncoding:I
 
-    .line 281
+    .line 274
     invoke-static {v1}, Landroidx/camera/core/DynamicRange;->getEncodingLabel(I)Ljava/lang/String;
 
     move-result-object v1
@@ -410,17 +410,17 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Landroidx/camera/core/DynamicRange;->mBitDepth:I
+    iget p0, p0, Landroidx/camera/core/DynamicRange;->mBitDepth:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v1, "}"
+    const-string/jumbo p0, "}"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

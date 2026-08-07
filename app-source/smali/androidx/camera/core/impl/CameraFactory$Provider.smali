@@ -15,7 +15,7 @@
 
 
 # virtual methods
-.method public abstract newInstance(Landroid/content/Context;Landroidx/camera/core/impl/CameraThreadConfig;Landroidx/camera/core/CameraSelector;J)Landroidx/camera/core/impl/CameraFactory;
+.method public abstract newInstance(Landroid/content/Context;Landroidx/camera/core/impl/CameraThreadConfig;Landroidx/camera/core/CameraSelector;JLandroidx/camera/core/CameraXConfig;Landroidx/camera/core/internal/StreamSpecsCalculator;)Landroidx/camera/core/impl/CameraFactory;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroidx/camera/core/InitializationException;

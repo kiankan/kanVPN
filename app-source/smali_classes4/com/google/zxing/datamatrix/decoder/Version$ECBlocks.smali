@@ -92,19 +92,19 @@
 
 # virtual methods
 .method getECBlocks()[Lcom/google/zxing/datamatrix/decoder/Version$ECB;
-    .locals 1
+    .locals 0
 
     .line 137
-    iget-object v0, p0, Lcom/google/zxing/datamatrix/decoder/Version$ECBlocks;->ecBlocks:[Lcom/google/zxing/datamatrix/decoder/Version$ECB;
+    iget-object p0, p0, Lcom/google/zxing/datamatrix/decoder/Version$ECBlocks;->ecBlocks:[Lcom/google/zxing/datamatrix/decoder/Version$ECB;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method getECCodewords()I
-    .locals 1
+    .locals 0
 
     .line 133
-    iget v0, p0, Lcom/google/zxing/datamatrix/decoder/Version$ECBlocks;->ecCodewords:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/decoder/Version$ECBlocks;->ecCodewords:I
 
-    return v0
+    return p0
 .end method

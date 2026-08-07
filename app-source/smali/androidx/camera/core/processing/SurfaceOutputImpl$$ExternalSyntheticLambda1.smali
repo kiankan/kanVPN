@@ -29,14 +29,14 @@
 
 # virtual methods
 .method public final run()V
-    .locals 2
+    .locals 1
 
     .line 0
     iget-object v0, p0, Landroidx/camera/core/processing/SurfaceOutputImpl$$ExternalSyntheticLambda1;->f$0:Landroidx/camera/core/processing/SurfaceOutputImpl;
 
-    iget-object v1, p0, Landroidx/camera/core/processing/SurfaceOutputImpl$$ExternalSyntheticLambda1;->f$1:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object p0, p0, Landroidx/camera/core/processing/SurfaceOutputImpl$$ExternalSyntheticLambda1;->f$1:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-virtual {v0, v1}, Landroidx/camera/core/processing/SurfaceOutputImpl;->lambda$requestClose$1$androidx-camera-core-processing-SurfaceOutputImpl(Ljava/util/concurrent/atomic/AtomicReference;)V
+    invoke-virtual {v0, p0}, Landroidx/camera/core/processing/SurfaceOutputImpl;->lambda$requestClose$1$androidx-camera-core-processing-SurfaceOutputImpl(Ljava/util/concurrent/atomic/AtomicReference;)V
 
     return-void
 .end method

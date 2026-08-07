@@ -29,14 +29,14 @@
 
 # virtual methods
 .method public final run()V
-    .locals 2
+    .locals 1
 
     .line 0
     iget-object v0, p0, Landroidx/camera/core/impl/utils/Threads$$ExternalSyntheticLambda0;->f$0:Ljava/lang/Runnable;
 
-    iget-object v1, p0, Landroidx/camera/core/impl/utils/Threads$$ExternalSyntheticLambda0;->f$1:Ljava/util/concurrent/CountDownLatch;
+    iget-object p0, p0, Landroidx/camera/core/impl/utils/Threads$$ExternalSyntheticLambda0;->f$1:Ljava/util/concurrent/CountDownLatch;
 
-    invoke-static {v0, v1}, Landroidx/camera/core/impl/utils/Threads;->lambda$runOnMainSync$0(Ljava/lang/Runnable;Ljava/util/concurrent/CountDownLatch;)V
+    invoke-static {v0, p0}, Landroidx/camera/core/impl/utils/Threads;->lambda$runOnMainSync$0(Ljava/lang/Runnable;Ljava/util/concurrent/CountDownLatch;)V
 
     return-void
 .end method

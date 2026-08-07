@@ -16,7 +16,7 @@
 .method public static create(Ljava/util/concurrent/Executor;Landroid/os/Handler;)Landroidx/camera/core/impl/CameraThreadConfig;
     .locals 1
 
-    .line 46
+    .line 45
     new-instance v0, Landroidx/camera/core/impl/AutoValue_CameraThreadConfig;
 
     invoke-direct {v0, p0, p1}, Landroidx/camera/core/impl/AutoValue_CameraThreadConfig;-><init>(Ljava/util/concurrent/Executor;Landroid/os/Handler;)V

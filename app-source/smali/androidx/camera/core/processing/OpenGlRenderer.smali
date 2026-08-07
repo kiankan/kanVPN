@@ -57,10 +57,10 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 88
+    .line 89
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 92
+    .line 93
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -69,7 +69,7 @@
 
     iput-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mInitialized:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 93
+    .line 94
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -81,66 +81,66 @@
 
     iput-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
-    .line 98
+    .line 97
     sget-object v0, Landroid/opengl/EGL14;->EGL_NO_CONTEXT:Landroid/opengl/EGLContext;
 
     iput-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglContext:Landroid/opengl/EGLContext;
 
-    .line 100
+    .line 98
     sget-object v0, Landroidx/camera/core/processing/util/GLUtils;->EMPTY_ATTRIBS:[I
 
     iput-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mSurfaceAttrib:[I
 
-    .line 104
+    .line 100
     sget-object v0, Landroid/opengl/EGL14;->EGL_NO_SURFACE:Landroid/opengl/EGLSurface;
 
     iput-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mTempSurface:Landroid/opengl/EGLSurface;
 
-    .line 109
+    .line 102
     sget-object v0, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
 
     iput-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mProgramHandles:Ljava/util/Map;
 
     const/4 v0, 0x0
 
-    .line 110
+    .line 103
     iput-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mCurrentProgram:Landroidx/camera/core/processing/util/GLUtils$Program2D;
 
-    .line 112
+    .line 104
     sget-object v0, Landroidx/camera/core/processing/util/GLUtils$InputFormat;->UNKNOWN:Landroidx/camera/core/processing/util/GLUtils$InputFormat;
 
     iput-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mCurrentInputformat:Landroidx/camera/core/processing/util/GLUtils$InputFormat;
 
     const/4 v0, -0x1
 
-    .line 115
+    .line 106
     iput v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mExternalTextureId:I
 
     return-void
 .end method
 
 .method private activateExternalTexture(I)V
-    .locals 1
+    .locals 0
 
-    const v0, 0x84c0
+    const p0, 0x84c0
 
-    .line 254
-    invoke-static {v0}, Landroid/opengl/GLES20;->glActiveTexture(I)V
+    .line 243
+    invoke-static {p0}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
-    .line 255
-    const-string v0, "glActiveTexture"
+    .line 244
+    const-string p0, "glActiveTexture"
 
-    invoke-static {v0}, Landroidx/camera/core/processing/util/GLUtils;->checkGlErrorOrThrow(Ljava/lang/String;)V
+    invoke-static {p0}, Landroidx/camera/core/processing/util/GLUtils;->checkGlErrorOrThrow(Ljava/lang/String;)V
 
-    const v0, 0x8d65
+    const p0, 0x8d65
 
-    .line 257
-    invoke-static {v0, p1}, Landroid/opengl/GLES20;->glBindTexture(II)V
+    .line 246
+    invoke-static {p0, p1}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 258
-    const-string p1, "glBindTexture"
+    .line 247
+    const-string p0, "glBindTexture"
 
-    invoke-static {p1}, Landroidx/camera/core/processing/util/GLUtils;->checkGlErrorOrThrow(Ljava/lang/String;)V
+    invoke-static {p0}, Landroidx/camera/core/processing/util/GLUtils;->checkGlErrorOrThrow(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -154,14 +154,14 @@
 
     const/4 v2, 0x0
 
-    .line 438
+    .line 425
     invoke-static {v2}, Landroid/opengl/EGL14;->eglGetDisplay(I)Landroid/opengl/EGLDisplay;
 
     move-result-object v3
 
     iput-object v3, v0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
-    .line 439
+    .line 426
     sget-object v4, Landroid/opengl/EGL14;->EGL_NO_DISPLAY:Landroid/opengl/EGLDisplay;
 
     invoke-static {v3, v4}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -172,10 +172,10 @@
 
     const/4 v3, 0x2
 
-    .line 442
+    .line 429
     new-array v4, v3, [I
 
-    .line 443
+    .line 430
     iget-object v5, v0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
     const/4 v6, 0x1
@@ -188,7 +188,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 449
+    .line 436
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -211,7 +211,7 @@
 
     invoke-virtual {v1, v4}, Landroidx/camera/core/processing/util/GraphicDeviceInfo$Builder;->setEglVersion(Ljava/lang/String;)Landroidx/camera/core/processing/util/GraphicDeviceInfo$Builder;
 
-    .line 452
+    .line 439
     :cond_0
     invoke-virtual/range {p1 .. p1}, Landroidx/camera/core/DynamicRange;->is10BitHdr()Z
 
@@ -230,7 +230,7 @@
     :cond_1
     move v8, v4
 
-    .line 453
+    .line 440
     :goto_0
     invoke-virtual/range {p1 .. p1}, Landroidx/camera/core/DynamicRange;->is10BitHdr()Z
 
@@ -245,7 +245,7 @@
     :cond_2
     move v14, v4
 
-    .line 454
+    .line 441
     :goto_1
     invoke-virtual/range {p1 .. p1}, Landroidx/camera/core/DynamicRange;->is10BitHdr()Z
 
@@ -263,7 +263,7 @@
     :goto_2
     move/from16 v20, v1
 
-    .line 459
+    .line 446
     invoke-virtual/range {p1 .. p1}, Landroidx/camera/core/DynamicRange;->is10BitHdr()Z
 
     move-result v1
@@ -310,20 +310,20 @@
 
     move v12, v8
 
-    .line 460
+    .line 447
     filled-new-array/range {v7 .. v25}, [I
 
     move-result-object v27
 
     const/4 v1, 0x1
 
-    .line 472
+    .line 459
     new-array v4, v1, [Landroid/opengl/EGLConfig;
 
-    .line 473
+    .line 460
     new-array v5, v6, [I
 
-    .line 474
+    .line 461
     iget-object v7, v0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
     const/16 v30, 0x0
@@ -346,10 +346,10 @@
 
     if-eqz v1, :cond_6
 
-    .line 478
+    .line 465
     aget-object v1, v29, v2
 
-    .line 480
+    .line 467
     invoke-virtual/range {p1 .. p1}, Landroidx/camera/core/DynamicRange;->is10BitHdr()Z
 
     move-result v4
@@ -367,7 +367,7 @@
 
     move-result-object v3
 
-    .line 483
+    .line 470
     iget-object v4, v0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
     sget-object v7, Landroid/opengl/EGL14;->EGL_NO_CONTEXT:Landroid/opengl/EGLContext;
@@ -376,86 +376,86 @@
 
     move-result-object v3
 
-    .line 485
+    .line 472
     const-string v4, "eglCreateContext"
 
     invoke-static {v4}, Landroidx/camera/core/processing/util/GLUtils;->checkEglErrorOrThrow(Ljava/lang/String;)V
 
-    .line 486
+    .line 473
     iput-object v1, v0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglConfig:Landroid/opengl/EGLConfig;
 
-    .line 487
+    .line 474
     iput-object v3, v0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglContext:Landroid/opengl/EGLContext;
 
-    .line 490
+    .line 477
     new-array v1, v6, [I
 
-    .line 491
-    iget-object v4, v0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglDisplay:Landroid/opengl/EGLDisplay;
+    .line 478
+    iget-object v0, v0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
-    invoke-static {v4, v3, v5, v1, v2}, Landroid/opengl/EGL14;->eglQueryContext(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLContext;I[II)Z
+    invoke-static {v0, v3, v5, v1, v2}, Landroid/opengl/EGL14;->eglQueryContext(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLContext;I[II)Z
 
-    .line 493
-    new-instance v3, Ljava/lang/StringBuilder;
+    .line 480
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v4, "EGLContext created, client version "
+    const-string v3, "EGLContext created, client version "
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     aget v1, v1, v2
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    const-string v2, "OpenGlRenderer"
+    const-string v1, "OpenGlRenderer"
 
-    invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 476
+    .line 463
     :cond_6
-    new-instance v1, Ljava/lang/IllegalStateException;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string v2, "Unable to find a suitable EGLConfig"
+    const-string v1, "Unable to find a suitable EGLConfig"
 
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw v1
+    throw v0
 
-    .line 444
+    .line 431
     :cond_7
     sget-object v1, Landroid/opengl/EGL14;->EGL_NO_DISPLAY:Landroid/opengl/EGLDisplay;
 
     iput-object v1, v0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
-    .line 445
-    new-instance v1, Ljava/lang/IllegalStateException;
+    .line 432
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string v2, "Unable to initialize EGL14"
+    const-string v1, "Unable to initialize EGL14"
 
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw v1
+    throw v0
 
-    .line 440
+    .line 427
     :cond_8
-    new-instance v1, Ljava/lang/IllegalStateException;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string v2, "Unable to get EGL14 display"
+    const-string v1, "Unable to get EGL14 display"
 
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw v1
+    throw v0
 .end method
 
 .method private createTempSurface()V
     .locals 3
 
-    .line 497
+    .line 484
     iget-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
     iget-object v1, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglConfig:Landroid/opengl/EGLConfig;
@@ -491,13 +491,13 @@
         }
     .end annotation
 
-    .line 418
+    .line 405
     const-string v0, ""
 
     .line 0
     const-string v1, "Failed to get GL or EGL extensions: "
 
-    .line 418
+    .line 405
     iget-object v2, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mInitialized:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v3, 0x0
@@ -506,26 +506,26 @@
 
     const/4 v2, 0x0
 
-    .line 420
+    .line 407
     :try_start_0
     invoke-direct {p0, p1, v2}, Landroidx/camera/core/processing/OpenGlRenderer;->createEglContext(Landroidx/camera/core/DynamicRange;Landroidx/camera/core/processing/util/GraphicDeviceInfo$Builder;)V
 
-    .line 421
+    .line 408
     invoke-direct {p0}, Landroidx/camera/core/processing/OpenGlRenderer;->createTempSurface()V
 
-    .line 422
+    .line 409
     iget-object p1, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mTempSurface:Landroid/opengl/EGLSurface;
 
     invoke-virtual {p0, p1}, Landroidx/camera/core/processing/OpenGlRenderer;->makeCurrent(Landroid/opengl/EGLSurface;)V
 
     const/16 p1, 0x1f03
 
-    .line 424
+    .line 411
     invoke-static {p1}, Landroid/opengl/GLES20;->glGetString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 425
+    .line 412
     iget-object v2, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
     const/16 v3, 0x3055
@@ -534,7 +534,7 @@
 
     move-result-object v2
 
-    .line 426
+    .line 413
     new-instance v3, Landroidx/core/util/Pair;
 
     if-eqz p1, :cond_0
@@ -552,14 +552,14 @@
     :cond_1
     move-object v2, v0
 
-    .line 427
+    .line 414
     :goto_1
     invoke-direct {v3, p1, v2}, Landroidx/core/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 432
+    .line 419
     invoke-direct {p0}, Landroidx/camera/core/processing/OpenGlRenderer;->releaseInternal()V
 
     return-object v3
@@ -572,7 +572,7 @@
     :catch_0
     move-exception p1
 
-    .line 429
+    .line 416
     :try_start_1
     const-string v2, "OpenGlRenderer"
 
@@ -592,14 +592,14 @@
 
     invoke-static {v2, v1, p1}, Landroidx/camera/core/Logger;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 430
+    .line 417
     new-instance p1, Landroidx/core/util/Pair;
 
     invoke-direct {p1, v0, v0}, Landroidx/core/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 432
+    .line 419
     invoke-direct {p0}, Landroidx/camera/core/processing/OpenGlRenderer;->releaseInternal()V
 
     return-object p1
@@ -607,14 +607,14 @@
     :goto_2
     invoke-direct {p0}, Landroidx/camera/core/processing/OpenGlRenderer;->releaseInternal()V
 
-    .line 433
+    .line 420
     throw p1
 .end method
 
 .method private releaseInternal()V
     .locals 5
 
-    .line 528
+    .line 515
     iget-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mProgramHandles:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -638,12 +638,12 @@
 
     check-cast v1, Landroidx/camera/core/processing/util/GLUtils$Program2D;
 
-    .line 529
+    .line 516
     invoke-virtual {v1}, Landroidx/camera/core/processing/util/GLUtils$Program2D;->delete()V
 
     goto :goto_0
 
-    .line 531
+    .line 518
     :cond_0
     sget-object v0, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
 
@@ -651,10 +651,10 @@
 
     const/4 v0, 0x0
 
-    .line 532
+    .line 519
     iput-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mCurrentProgram:Landroidx/camera/core/processing/util/GLUtils$Program2D;
 
-    .line 534
+    .line 521
     iget-object v1, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
     sget-object v2, Landroid/opengl/EGL14;->EGL_NO_DISPLAY:Landroid/opengl/EGLDisplay;
@@ -665,7 +665,7 @@
 
     if-nez v1, :cond_5
 
-    .line 535
+    .line 522
     iget-object v1, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
     sget-object v2, Landroid/opengl/EGL14;->EGL_NO_SURFACE:Landroid/opengl/EGLSurface;
@@ -676,7 +676,7 @@
 
     invoke-static {v1, v2, v3, v4}, Landroid/opengl/EGL14;->eglMakeCurrent(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;Landroid/opengl/EGLSurface;Landroid/opengl/EGLContext;)Z
 
-    .line 539
+    .line 526
     iget-object v1, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mOutputSurfaceMap:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -701,7 +701,7 @@
 
     check-cast v2, Landroidx/camera/core/processing/util/OutputSurface;
 
-    .line 540
+    .line 527
     invoke-virtual {v2}, Landroidx/camera/core/processing/util/OutputSurface;->getEglSurface()Landroid/opengl/EGLSurface;
 
     move-result-object v3
@@ -714,7 +714,7 @@
 
     if-nez v3, :cond_1
 
-    .line 541
+    .line 528
     iget-object v3, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
     invoke-virtual {v2}, Landroidx/camera/core/processing/util/OutputSurface;->getEglSurface()Landroid/opengl/EGLSurface;
@@ -727,20 +727,20 @@
 
     if-nez v2, :cond_1
 
-    .line 542
+    .line 529
     const-string v2, "eglDestroySurface"
 
     invoke-static {v2}, Landroidx/camera/core/processing/util/GLUtils;->checkEglErrorOrLog(Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 546
+    .line 533
     :cond_2
     iget-object v1, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mOutputSurfaceMap:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->clear()V
 
-    .line 549
+    .line 536
     iget-object v1, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mTempSurface:Landroid/opengl/EGLSurface;
 
     sget-object v2, Landroid/opengl/EGL14;->EGL_NO_SURFACE:Landroid/opengl/EGLSurface;
@@ -751,19 +751,19 @@
 
     if-nez v1, :cond_3
 
-    .line 550
+    .line 537
     iget-object v1, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
     iget-object v2, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mTempSurface:Landroid/opengl/EGLSurface;
 
     invoke-static {v1, v2}, Landroid/opengl/EGL14;->eglDestroySurface(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;)Z
 
-    .line 551
+    .line 538
     sget-object v1, Landroid/opengl/EGL14;->EGL_NO_SURFACE:Landroid/opengl/EGLSurface;
 
     iput-object v1, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mTempSurface:Landroid/opengl/EGLSurface;
 
-    .line 555
+    .line 542
     :cond_3
     iget-object v1, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglContext:Landroid/opengl/EGLContext;
 
@@ -775,50 +775,50 @@
 
     if-nez v1, :cond_4
 
-    .line 556
+    .line 543
     iget-object v1, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
     iget-object v2, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglContext:Landroid/opengl/EGLContext;
 
     invoke-static {v1, v2}, Landroid/opengl/EGL14;->eglDestroyContext(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLContext;)Z
 
-    .line 557
+    .line 544
     sget-object v1, Landroid/opengl/EGL14;->EGL_NO_CONTEXT:Landroid/opengl/EGLContext;
 
     iput-object v1, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglContext:Landroid/opengl/EGLContext;
 
-    .line 559
+    .line 546
     :cond_4
     invoke-static {}, Landroid/opengl/EGL14;->eglReleaseThread()Z
 
-    .line 560
+    .line 547
     iget-object v1, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
     invoke-static {v1}, Landroid/opengl/EGL14;->eglTerminate(Landroid/opengl/EGLDisplay;)Z
 
-    .line 561
+    .line 548
     sget-object v1, Landroid/opengl/EGL14;->EGL_NO_DISPLAY:Landroid/opengl/EGLDisplay;
 
     iput-object v1, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
-    .line 565
+    .line 552
     :cond_5
     iput-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglConfig:Landroid/opengl/EGLConfig;
 
     const/4 v1, -0x1
 
-    .line 566
+    .line 553
     iput v1, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mExternalTextureId:I
 
-    .line 567
+    .line 554
     sget-object v1, Landroidx/camera/core/processing/util/GLUtils$InputFormat;->UNKNOWN:Landroidx/camera/core/processing/util/GLUtils$InputFormat;
 
     iput-object v1, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mCurrentInputformat:Landroidx/camera/core/processing/util/GLUtils$InputFormat;
 
-    .line 568
+    .line 555
     iput-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mCurrentSurface:Landroid/view/Surface;
 
-    .line 569
+    .line 556
     iput-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mGlThread:Ljava/lang/Thread;
 
     return-void
@@ -829,7 +829,7 @@
 
     move-object/from16 v0, p0
 
-    .line 350
+    .line 338
     invoke-virtual/range {p1 .. p1}, Ljava/nio/ByteBuffer;->capacity()I
 
     move-result v1
@@ -864,7 +864,7 @@
 
     invoke-static {v1, v2}, Landroidx/core/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
-    .line 352
+    .line 340
     invoke-virtual/range {p1 .. p1}, Ljava/nio/ByteBuffer;->isDirect()Z
 
     move-result v1
@@ -873,37 +873,37 @@
 
     invoke-static {v1, v2}, Landroidx/core/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
-    .line 355
+    .line 343
     invoke-static {}, Landroidx/camera/core/processing/util/GLUtils;->generateTexture()I
 
     move-result v1
 
     const v2, 0x84c1
 
-    .line 356
+    .line 344
     invoke-static {v2}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
-    .line 357
+    .line 345
     const-string v2, "glActiveTexture"
 
     invoke-static {v2}, Landroidx/camera/core/processing/util/GLUtils;->checkGlErrorOrThrow(Ljava/lang/String;)V
 
     const/16 v5, 0xde1
 
-    .line 358
+    .line 346
     invoke-static {v5, v1}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 359
+    .line 347
     const-string v6, "glBindTexture"
 
     invoke-static {v6}, Landroidx/camera/core/processing/util/GLUtils;->checkGlErrorOrThrow(Ljava/lang/String;)V
 
-    .line 361
+    .line 349
     invoke-virtual/range {p2 .. p2}, Landroid/util/Size;->getWidth()I
 
     move-result v10
 
-    .line 362
+    .line 350
     invoke-virtual/range {p2 .. p2}, Landroid/util/Size;->getHeight()I
 
     move-result v11
@@ -922,10 +922,10 @@
 
     const/16 v13, 0x1907
 
-    .line 361
+    .line 349
     invoke-static/range {v7 .. v15}, Landroid/opengl/GLES20;->glTexImage2D(IIIIIIIILjava/nio/Buffer;)V
 
-    .line 363
+    .line 351
     const-string v7, "glTexImage2D"
 
     invoke-static {v7}, Landroidx/camera/core/processing/util/GLUtils;->checkGlErrorOrThrow(Ljava/lang/String;)V
@@ -934,63 +934,63 @@
 
     const/16 v8, 0x2601
 
-    .line 364
+    .line 352
     invoke-static {v5, v7, v8}, Landroid/opengl/GLES20;->glTexParameteri(III)V
 
     const/16 v7, 0x2801
 
-    .line 366
+    .line 354
     invoke-static {v5, v7, v8}, Landroid/opengl/GLES20;->glTexParameteri(III)V
 
-    .line 370
+    .line 358
     invoke-static {}, Landroidx/camera/core/processing/util/GLUtils;->generateFbo()I
 
     move-result v7
 
     const v8, 0x8d40
 
-    .line 371
+    .line 359
     invoke-static {v8, v7}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
 
-    .line 372
+    .line 360
     const-string v9, "glBindFramebuffer"
 
     invoke-static {v9}, Landroidx/camera/core/processing/util/GLUtils;->checkGlErrorOrThrow(Ljava/lang/String;)V
 
     const v9, 0x8ce0
 
-    .line 375
+    .line 363
     invoke-static {v8, v9, v5, v1, v4}, Landroid/opengl/GLES20;->glFramebufferTexture2D(IIIII)V
 
-    .line 377
+    .line 365
     const-string v5, "glFramebufferTexture2D"
 
     invoke-static {v5}, Landroidx/camera/core/processing/util/GLUtils;->checkGlErrorOrThrow(Ljava/lang/String;)V
 
     const v5, 0x84c0
 
-    .line 380
+    .line 368
     invoke-static {v5}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
-    .line 381
+    .line 369
     invoke-static {v2}, Landroidx/camera/core/processing/util/GLUtils;->checkGlErrorOrThrow(Ljava/lang/String;)V
 
     const v2, 0x8d65
 
-    .line 382
+    .line 370
     iget v5, v0, Landroidx/camera/core/processing/OpenGlRenderer;->mExternalTextureId:I
 
     invoke-static {v2, v5}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 383
+    .line 371
     invoke-static {v6}, Landroidx/camera/core/processing/util/GLUtils;->checkGlErrorOrThrow(Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
-    .line 386
+    .line 374
     iput-object v2, v0, Landroidx/camera/core/processing/OpenGlRenderer;->mCurrentSurface:Landroid/view/Surface;
 
-    .line 387
+    .line 375
     invoke-virtual/range {p2 .. p2}, Landroid/util/Size;->getWidth()I
 
     move-result v2
@@ -1001,7 +1001,7 @@
 
     invoke-static {v4, v4, v2, v5}, Landroid/opengl/GLES20;->glViewport(IIII)V
 
-    .line 388
+    .line 376
     invoke-virtual/range {p2 .. p2}, Landroid/util/Size;->getWidth()I
 
     move-result v2
@@ -1012,7 +1012,7 @@
 
     invoke-static {v4, v4, v2, v5}, Landroid/opengl/GLES20;->glScissor(IIII)V
 
-    .line 390
+    .line 378
     iget-object v2, v0, Landroidx/camera/core/processing/OpenGlRenderer;->mCurrentProgram:Landroidx/camera/core/processing/util/GLUtils$Program2D;
 
     invoke-static {v2}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1021,12 +1021,12 @@
 
     check-cast v2, Landroidx/camera/core/processing/util/GLUtils$Program2D;
 
-    .line 391
+    .line 379
     instance-of v5, v2, Landroidx/camera/core/processing/util/GLUtils$SamplerShaderProgram;
 
     if-eqz v5, :cond_1
 
-    .line 393
+    .line 381
     check-cast v2, Landroidx/camera/core/processing/util/GLUtils$SamplerShaderProgram;
 
     move-object/from16 v5, p3
@@ -1036,15 +1036,15 @@
     :cond_1
     const/4 v2, 0x5
 
-    .line 397
+    .line 385
     invoke-static {v2, v4, v3}, Landroid/opengl/GLES20;->glDrawArrays(III)V
 
-    .line 398
+    .line 386
     const-string v2, "glDrawArrays"
 
     invoke-static {v2}, Landroidx/camera/core/processing/util/GLUtils;->checkGlErrorOrThrow(Ljava/lang/String;)V
 
-    .line 401
+    .line 389
     invoke-virtual/range {p2 .. p2}, Landroid/util/Size;->getWidth()I
 
     move-result v11
@@ -1065,21 +1065,21 @@
 
     invoke-static/range {v9 .. v15}, Landroid/opengl/GLES20;->glReadPixels(IIIIIILjava/nio/Buffer;)V
 
-    .line 404
+    .line 392
     const-string v2, "glReadPixels"
 
     invoke-static {v2}, Landroidx/camera/core/processing/util/GLUtils;->checkGlErrorOrThrow(Ljava/lang/String;)V
 
-    .line 407
+    .line 395
     invoke-static {v8, v4}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
 
-    .line 408
+    .line 396
     invoke-static {v1}, Landroidx/camera/core/processing/util/GLUtils;->deleteTexture(I)V
 
-    .line 409
+    .line 397
     invoke-static {v7}, Landroidx/camera/core/processing/util/GLUtils;->deleteFbo(I)V
 
-    .line 411
+    .line 399
     iget v1, v0, Landroidx/camera/core/processing/OpenGlRenderer;->mExternalTextureId:I
 
     invoke-direct {v0, v1}, Landroidx/camera/core/processing/OpenGlRenderer;->activateExternalTexture(I)V
@@ -1092,7 +1092,7 @@
 .method protected createOutputSurfaceInternal(Landroid/view/Surface;)Landroidx/camera/core/processing/util/OutputSurface;
     .locals 3
 
-    .line 584
+    .line 569
     :try_start_0
     iget-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
@@ -1110,70 +1110,64 @@
 
     move-result-object p1
     :try_end_0
-    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 591
-    iget-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglDisplay:Landroid/opengl/EGLDisplay;
+    .line 576
+    iget-object p0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
-    invoke-static {v0, p1}, Landroidx/camera/core/processing/util/GLUtils;->getSurfaceSize(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;)Landroid/util/Size;
+    invoke-static {p0, p1}, Landroidx/camera/core/processing/util/GLUtils;->getSurfaceSize(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;)Landroid/util/Size;
 
-    move-result-object v0
+    move-result-object p0
 
-    .line 592
-    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
-
-    move-result v1
-
-    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
+    .line 577
+    invoke-virtual {p0}, Landroid/util/Size;->getWidth()I
 
     move-result v0
 
-    invoke-static {p1, v1, v0}, Landroidx/camera/core/processing/util/OutputSurface;->of(Landroid/opengl/EGLSurface;II)Landroidx/camera/core/processing/util/OutputSurface;
+    invoke-virtual {p0}, Landroid/util/Size;->getHeight()I
 
-    move-result-object p1
+    move-result p0
 
-    return-object p1
+    invoke-static {p1, v0, p0}, Landroidx/camera/core/processing/util/OutputSurface;->of(Landroid/opengl/EGLSurface;II)Landroidx/camera/core/processing/util/OutputSurface;
+
+    move-result-object p0
+
+    return-object p0
 
     :catch_0
-    move-exception p1
+    move-exception p0
 
-    goto :goto_0
+    .line 572
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    :catch_1
-    move-exception p1
+    const-string v0, "Failed to create EGL surface: "
 
-    .line 587
-    :goto_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const-string v1, "Failed to create EGL surface: "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Ljava/lang/RuntimeException;->getMessage()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/RuntimeException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "OpenGlRenderer"
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v1, v0, p1}, Landroidx/camera/core/Logger;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const/4 p1, 0x0
+    move-result-object p1
 
-    return-object p1
+    const-string v0, "OpenGlRenderer"
+
+    invoke-static {v0, p1, p0}, Landroidx/camera/core/Logger;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const/4 p0, 0x0
+
+    return-object p0
 .end method
 
 .method protected getOutSurfaceOrThrow(Landroid/view/Surface;)Landroidx/camera/core/processing/util/OutputSurface;
     .locals 2
 
-    .line 574
+    .line 560
     iget-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mOutputSurfaceMap:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -1184,56 +1178,56 @@
 
     invoke-static {v0, v1}, Landroidx/core/util/Preconditions;->checkState(ZLjava/lang/String;)V
 
-    .line 577
-    iget-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mOutputSurfaceMap:Ljava/util/Map;
+    .line 563
+    iget-object p0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mOutputSurfaceMap:Ljava/util/Map;
 
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Landroidx/camera/core/processing/util/OutputSurface;
+    check-cast p0, Landroidx/camera/core/processing/util/OutputSurface;
 
-    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Landroidx/camera/core/processing/util/OutputSurface;
+    check-cast p0, Landroidx/camera/core/processing/util/OutputSurface;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public getTextureName()I
     .locals 2
 
-    .line 228
+    .line 217
     iget-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mInitialized:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Landroidx/camera/core/processing/util/GLUtils;->checkInitializedOrThrow(Ljava/util/concurrent/atomic/AtomicBoolean;Z)V
 
-    .line 229
+    .line 218
     iget-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mGlThread:Ljava/lang/Thread;
 
     invoke-static {v0}, Landroidx/camera/core/processing/util/GLUtils;->checkGlThreadOrThrow(Ljava/lang/Thread;)V
 
-    .line 231
-    iget v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mExternalTextureId:I
+    .line 220
+    iget p0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mExternalTextureId:I
 
-    return v0
+    return p0
 .end method
 
 .method public init(Landroidx/camera/core/DynamicRange;)Landroidx/camera/core/processing/util/GraphicDeviceInfo;
     .locals 1
 
-    .line 125
+    .line 115
     sget-object v0, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
 
     invoke-virtual {p0, p1, v0}, Landroidx/camera/core/processing/OpenGlRenderer;->init(Landroidx/camera/core/DynamicRange;Ljava/util/Map;)Landroidx/camera/core/processing/util/GraphicDeviceInfo;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public init(Landroidx/camera/core/DynamicRange;Ljava/util/Map;)Landroidx/camera/core/processing/util/GraphicDeviceInfo;
@@ -1250,19 +1244,19 @@
         }
     .end annotation
 
-    .line 148
+    .line 137
     iget-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mInitialized:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Landroidx/camera/core/processing/util/GLUtils;->checkInitializedOrThrow(Ljava/util/concurrent/atomic/AtomicBoolean;Z)V
 
-    .line 149
+    .line 138
     invoke-static {}, Landroidx/camera/core/processing/util/GraphicDeviceInfo;->builder()Landroidx/camera/core/processing/util/GraphicDeviceInfo$Builder;
 
     move-result-object v0
 
-    .line 151
+    .line 140
     :try_start_0
     invoke-virtual {p1}, Landroidx/camera/core/DynamicRange;->is10BitHdr()Z
 
@@ -1270,12 +1264,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 152
+    .line 141
     invoke-direct {p0, p1}, Landroidx/camera/core/processing/OpenGlRenderer;->getExtensionsBeforeInitialized(Landroidx/camera/core/DynamicRange;)Landroidx/core/util/Pair;
 
     move-result-object v1
 
-    .line 153
+    .line 142
     iget-object v2, v1, Landroidx/core/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v2, Ljava/lang/String;
@@ -1286,7 +1280,7 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 154
+    .line 143
     iget-object v1, v1, Landroidx/core/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/String;
@@ -1297,7 +1291,7 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 155
+    .line 144
     const-string v3, "GL_EXT_YUV_target"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -1306,17 +1300,17 @@
 
     if-nez v3, :cond_0
 
-    .line 156
+    .line 145
     const-string p1, "OpenGlRenderer"
 
     const-string v3, "Device does not support GL_EXT_YUV_target. Fallback to SDR."
 
     invoke-static {p1, v3}, Landroidx/camera/core/Logger;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 157
+    .line 146
     sget-object p1, Landroidx/camera/core/DynamicRange;->SDR:Landroidx/camera/core/DynamicRange;
 
-    .line 159
+    .line 148
     :cond_0
     invoke-static {v1, p1}, Landroidx/camera/core/processing/util/GLUtils;->chooseSurfaceAttrib(Ljava/lang/String;Landroidx/camera/core/DynamicRange;)[I
 
@@ -1324,71 +1318,71 @@
 
     iput-object v3, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mSurfaceAttrib:[I
 
-    .line 160
+    .line 149
     invoke-virtual {v0, v2}, Landroidx/camera/core/processing/util/GraphicDeviceInfo$Builder;->setGlExtensions(Ljava/lang/String;)Landroidx/camera/core/processing/util/GraphicDeviceInfo$Builder;
 
-    .line 161
+    .line 150
     invoke-virtual {v0, v1}, Landroidx/camera/core/processing/util/GraphicDeviceInfo$Builder;->setEglExtensions(Ljava/lang/String;)Landroidx/camera/core/processing/util/GraphicDeviceInfo$Builder;
 
-    .line 163
+    .line 152
     :cond_1
     invoke-direct {p0, p1, v0}, Landroidx/camera/core/processing/OpenGlRenderer;->createEglContext(Landroidx/camera/core/DynamicRange;Landroidx/camera/core/processing/util/GraphicDeviceInfo$Builder;)V
 
-    .line 164
+    .line 153
     invoke-direct {p0}, Landroidx/camera/core/processing/OpenGlRenderer;->createTempSurface()V
 
-    .line 165
+    .line 154
     iget-object v1, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mTempSurface:Landroid/opengl/EGLSurface;
 
     invoke-virtual {p0, v1}, Landroidx/camera/core/processing/OpenGlRenderer;->makeCurrent(Landroid/opengl/EGLSurface;)V
 
-    .line 166
+    .line 155
     invoke-static {}, Landroidx/camera/core/processing/util/GLUtils;->getGlVersionNumber()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroidx/camera/core/processing/util/GraphicDeviceInfo$Builder;->setGlVersion(Ljava/lang/String;)Landroidx/camera/core/processing/util/GraphicDeviceInfo$Builder;
 
-    .line 167
+    .line 156
     invoke-static {p1, p2}, Landroidx/camera/core/processing/util/GLUtils;->createPrograms(Landroidx/camera/core/DynamicRange;Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object p1
 
     iput-object p1, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mProgramHandles:Ljava/util/Map;
 
-    .line 168
+    .line 157
     invoke-static {}, Landroidx/camera/core/processing/util/GLUtils;->createTexture()I
 
     move-result p1
 
     iput p1, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mExternalTextureId:I
 
-    .line 169
+    .line 158
     invoke-virtual {p0, p1}, Landroidx/camera/core/processing/OpenGlRenderer;->useAndConfigureProgramWithTexture(I)V
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 174
+    .line 163
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object p1
 
     iput-object p1, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mGlThread:Ljava/lang/Thread;
 
-    .line 175
-    iget-object p1, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mInitialized:Ljava/util/concurrent/atomic/AtomicBoolean;
+    .line 164
+    iget-object p0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mInitialized:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    const/4 p2, 0x1
+    const/4 p1, 0x1
 
-    invoke-virtual {p1, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 176
+    .line 165
     invoke-virtual {v0}, Landroidx/camera/core/processing/util/GraphicDeviceInfo$Builder;->build()Landroidx/camera/core/processing/util/GraphicDeviceInfo;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     :catch_0
     move-exception p1
@@ -1398,67 +1392,67 @@
     :catch_1
     move-exception p1
 
-    .line 171
+    .line 160
     :goto_0
     invoke-direct {p0}, Landroidx/camera/core/processing/OpenGlRenderer;->releaseInternal()V
 
-    .line 172
+    .line 161
     throw p1
 .end method
 
 .method protected makeCurrent(Landroid/opengl/EGLSurface;)V
-    .locals 2
+    .locals 1
 
-    .line 502
+    .line 489
     iget-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
     invoke-static {v0}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 503
+    .line 490
     iget-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglContext:Landroid/opengl/EGLContext;
 
     invoke-static {v0}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 504
+    .line 491
     iget-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
-    iget-object v1, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglContext:Landroid/opengl/EGLContext;
+    iget-object p0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglContext:Landroid/opengl/EGLContext;
 
-    invoke-static {v0, p1, p1, v1}, Landroid/opengl/EGL14;->eglMakeCurrent(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;Landroid/opengl/EGLSurface;Landroid/opengl/EGLContext;)Z
+    invoke-static {v0, p1, p1, p0}, Landroid/opengl/EGL14;->eglMakeCurrent(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;Landroid/opengl/EGLSurface;Landroid/opengl/EGLContext;)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_0
+    if-eqz p0, :cond_0
 
     return-void
 
-    .line 505
+    .line 492
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    const-string v0, "eglMakeCurrent failed"
+    const-string p1, "eglMakeCurrent failed"
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method public registerOutputSurface(Landroid/view/Surface;)V
     .locals 2
 
-    .line 199
+    .line 188
     iget-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mInitialized:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Landroidx/camera/core/processing/util/GLUtils;->checkInitializedOrThrow(Ljava/util/concurrent/atomic/AtomicBoolean;Z)V
 
-    .line 200
+    .line 189
     iget-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mGlThread:Ljava/lang/Thread;
 
     invoke-static {v0}, Landroidx/camera/core/processing/util/GLUtils;->checkGlThreadOrThrow(Ljava/lang/Thread;)V
 
-    .line 202
+    .line 191
     iget-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mOutputSurfaceMap:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -1467,12 +1461,12 @@
 
     if-nez v0, :cond_0
 
-    .line 203
-    iget-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mOutputSurfaceMap:Ljava/util/Map;
+    .line 192
+    iget-object p0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mOutputSurfaceMap:Ljava/util/Map;
 
-    sget-object v1, Landroidx/camera/core/processing/util/GLUtils;->NO_OUTPUT_SURFACE:Landroidx/camera/core/processing/util/OutputSurface;
+    sget-object v0, Landroidx/camera/core/processing/util/GLUtils;->NO_OUTPUT_SURFACE:Landroidx/camera/core/processing/util/OutputSurface;
 
-    invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void
@@ -1481,7 +1475,7 @@
 .method public release()V
     .locals 2
 
-    .line 185
+    .line 174
     iget-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mInitialized:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -1494,13 +1488,13 @@
 
     return-void
 
-    .line 188
+    .line 177
     :cond_0
     iget-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mGlThread:Ljava/lang/Thread;
 
     invoke-static {v0}, Landroidx/camera/core/processing/util/GLUtils;->checkGlThreadOrThrow(Ljava/lang/Thread;)V
 
-    .line 189
+    .line 178
     invoke-direct {p0}, Landroidx/camera/core/processing/OpenGlRenderer;->releaseInternal()V
 
     return-void
@@ -1509,28 +1503,29 @@
 .method protected removeOutputSurfaceInternal(Landroid/view/Surface;Z)V
     .locals 1
 
-    .line 597
+    .line 582
     iget-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mCurrentSurface:Landroid/view/Surface;
 
     if-ne v0, p1, :cond_0
 
     const/4 v0, 0x0
 
-    .line 598
+    .line 583
     iput-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mCurrentSurface:Landroid/view/Surface;
 
-    .line 599
+    .line 584
     iget-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mTempSurface:Landroid/opengl/EGLSurface;
 
     invoke-virtual {p0, v0}, Landroidx/camera/core/processing/OpenGlRenderer;->makeCurrent(Landroid/opengl/EGLSurface;)V
 
+    .line 592
     :cond_0
+    iget-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mOutputSurfaceMap:Ljava/util/Map;
+
     if-eqz p2, :cond_1
 
-    .line 605
-    iget-object p2, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mOutputSurfaceMap:Ljava/util/Map;
-
-    invoke-interface {p2, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 590
+    invoke-interface {v0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -1538,13 +1533,11 @@
 
     goto :goto_0
 
-    .line 607
+    .line 592
     :cond_1
-    iget-object p2, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mOutputSurfaceMap:Ljava/util/Map;
+    sget-object p2, Landroidx/camera/core/processing/util/GLUtils;->NO_OUTPUT_SURFACE:Landroidx/camera/core/processing/util/OutputSurface;
 
-    sget-object v0, Landroidx/camera/core/processing/util/GLUtils;->NO_OUTPUT_SURFACE:Landroidx/camera/core/processing/util/OutputSurface;
-
-    invoke-interface {p2, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -1553,48 +1546,48 @@
     :goto_0
     if-eqz p1, :cond_2
 
-    .line 611
+    .line 596
     sget-object p2, Landroidx/camera/core/processing/util/GLUtils;->NO_OUTPUT_SURFACE:Landroidx/camera/core/processing/util/OutputSurface;
 
     if-eq p1, p2, :cond_2
 
-    .line 613
+    .line 598
     :try_start_0
-    iget-object p2, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglDisplay:Landroid/opengl/EGLDisplay;
+    iget-object p0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
     invoke-virtual {p1}, Landroidx/camera/core/processing/util/OutputSurface;->getEglSurface()Landroid/opengl/EGLSurface;
 
     move-result-object p1
 
-    invoke-static {p2, p1}, Landroid/opengl/EGL14;->eglDestroySurface(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;)Z
+    invoke-static {p0, p1}, Landroid/opengl/EGL14;->eglDestroySurface(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;)Z
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
 
     :catch_0
-    move-exception p1
+    move-exception p0
 
-    .line 615
-    new-instance p2, Ljava/lang/StringBuilder;
+    .line 600
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    const-string v0, "Failed to destroy EGL surface: "
+    const-string p2, "Failed to destroy EGL surface: "
 
-    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Ljava/lang/RuntimeException;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/RuntimeException;->getMessage()Ljava/lang/String;
 
     move-result-object p2
 
-    const-string v0, "OpenGlRenderer"
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, p2, p1}, Landroidx/camera/core/Logger;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "OpenGlRenderer"
+
+    invoke-static {p2, p1, p0}, Landroidx/camera/core/Logger;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_2
     return-void
@@ -1603,29 +1596,29 @@
 .method public render(J[FLandroid/view/Surface;)V
     .locals 4
 
-    .line 270
+    .line 259
     iget-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mInitialized:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Landroidx/camera/core/processing/util/GLUtils;->checkInitializedOrThrow(Ljava/util/concurrent/atomic/AtomicBoolean;Z)V
 
-    .line 271
+    .line 260
     iget-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mGlThread:Ljava/lang/Thread;
 
     invoke-static {v0}, Landroidx/camera/core/processing/util/GLUtils;->checkGlThreadOrThrow(Ljava/lang/Thread;)V
 
-    .line 273
+    .line 262
     invoke-virtual {p0, p4}, Landroidx/camera/core/processing/OpenGlRenderer;->getOutSurfaceOrThrow(Landroid/view/Surface;)Landroidx/camera/core/processing/util/OutputSurface;
 
     move-result-object v0
 
-    .line 276
+    .line 265
     sget-object v1, Landroidx/camera/core/processing/util/GLUtils;->NO_OUTPUT_SURFACE:Landroidx/camera/core/processing/util/OutputSurface;
 
     if-ne v0, v1, :cond_1
 
-    .line 277
+    .line 266
     invoke-virtual {p0, p4}, Landroidx/camera/core/processing/OpenGlRenderer;->createOutputSurfaceInternal(Landroid/view/Surface;)Landroidx/camera/core/processing/util/OutputSurface;
 
     move-result-object v0
@@ -1634,13 +1627,13 @@
 
     goto :goto_0
 
-    .line 282
+    .line 271
     :cond_0
     iget-object v1, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mOutputSurfaceMap:Ljava/util/Map;
 
     invoke-interface {v1, p4, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 286
+    .line 275
     :cond_1
     iget-object v1, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mCurrentSurface:Landroid/view/Surface;
 
@@ -1648,17 +1641,17 @@
 
     if-eq p4, v1, :cond_2
 
-    .line 287
+    .line 276
     invoke-virtual {v0}, Landroidx/camera/core/processing/util/OutputSurface;->getEglSurface()Landroid/opengl/EGLSurface;
 
     move-result-object v1
 
     invoke-virtual {p0, v1}, Landroidx/camera/core/processing/OpenGlRenderer;->makeCurrent(Landroid/opengl/EGLSurface;)V
 
-    .line 288
+    .line 277
     iput-object p4, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mCurrentSurface:Landroid/view/Surface;
 
-    .line 289
+    .line 278
     invoke-virtual {v0}, Landroidx/camera/core/processing/util/OutputSurface;->getWidth()I
 
     move-result v1
@@ -1669,7 +1662,7 @@
 
     invoke-static {v2, v2, v1, v3}, Landroid/opengl/GLES20;->glViewport(IIII)V
 
-    .line 290
+    .line 279
     invoke-virtual {v0}, Landroidx/camera/core/processing/util/OutputSurface;->getWidth()I
 
     move-result v1
@@ -1680,7 +1673,7 @@
 
     invoke-static {v2, v2, v1, v3}, Landroid/opengl/GLES20;->glScissor(IIII)V
 
-    .line 294
+    .line 283
     :cond_2
     iget-object v1, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mCurrentProgram:Landroidx/camera/core/processing/util/GLUtils$Program2D;
 
@@ -1690,12 +1683,12 @@
 
     check-cast v1, Landroidx/camera/core/processing/util/GLUtils$Program2D;
 
-    .line 295
+    .line 284
     instance-of v3, v1, Landroidx/camera/core/processing/util/GLUtils$SamplerShaderProgram;
 
     if-eqz v3, :cond_3
 
-    .line 297
+    .line 286
     check-cast v1, Landroidx/camera/core/processing/util/GLUtils$SamplerShaderProgram;
 
     invoke-virtual {v1, p3}, Landroidx/camera/core/processing/util/GLUtils$SamplerShaderProgram;->updateTextureMatrix([F)V
@@ -1705,15 +1698,15 @@
 
     const/4 v1, 0x4
 
-    .line 301
+    .line 290
     invoke-static {p3, v2, v1}, Landroid/opengl/GLES20;->glDrawArrays(III)V
 
-    .line 302
+    .line 291
     const-string p3, "glDrawArrays"
 
     invoke-static {p3}, Landroidx/camera/core/processing/util/GLUtils;->checkGlErrorOrThrow(Ljava/lang/String;)V
 
-    .line 305
+    .line 294
     iget-object p3, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
     invoke-virtual {v0}, Landroidx/camera/core/processing/util/OutputSurface;->getEglSurface()Landroid/opengl/EGLSurface;
@@ -1722,7 +1715,7 @@
 
     invoke-static {p3, v1, p1, p2}, Landroid/opengl/EGLExt;->eglPresentationTimeANDROID(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;J)Z
 
-    .line 308
+    .line 297
     iget-object p1, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mEglDisplay:Landroid/opengl/EGLDisplay;
 
     invoke-virtual {v0}, Landroidx/camera/core/processing/util/OutputSurface;->getEglSurface()Landroid/opengl/EGLSurface;
@@ -1735,19 +1728,19 @@
 
     if-nez p1, :cond_4
 
-    .line 309
+    .line 298
     new-instance p1, Ljava/lang/StringBuilder;
 
     const-string p2, "Failed to swap buffers with EGL error: 0x"
 
     invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 310
+    .line 299
     invoke-static {}, Landroid/opengl/EGL14;->eglGetError()I
 
     move-result p2
 
-    .line 309
+    .line 298
     invoke-static {p2}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object p2
@@ -1762,7 +1755,7 @@
 
     invoke-static {p2, p1}, Landroidx/camera/core/Logger;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 311
+    .line 300
     invoke-virtual {p0, p4, v2}, Landroidx/camera/core/processing/OpenGlRenderer;->removeOutputSurfaceInternal(Landroid/view/Surface;Z)V
 
     :cond_4
@@ -1773,27 +1766,27 @@
 .method public setInputFormat(Landroidx/camera/core/processing/util/GLUtils$InputFormat;)V
     .locals 2
 
-    .line 244
+    .line 233
     iget-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mInitialized:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Landroidx/camera/core/processing/util/GLUtils;->checkInitializedOrThrow(Ljava/util/concurrent/atomic/AtomicBoolean;Z)V
 
-    .line 245
+    .line 234
     iget-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mGlThread:Ljava/lang/Thread;
 
     invoke-static {v0}, Landroidx/camera/core/processing/util/GLUtils;->checkGlThreadOrThrow(Ljava/lang/Thread;)V
 
-    .line 247
+    .line 236
     iget-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mCurrentInputformat:Landroidx/camera/core/processing/util/GLUtils$InputFormat;
 
     if-eq v0, p1, :cond_0
 
-    .line 248
+    .line 237
     iput-object p1, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mCurrentInputformat:Landroidx/camera/core/processing/util/GLUtils$InputFormat;
 
-    .line 249
+    .line 238
     iget p1, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mExternalTextureId:I
 
     invoke-virtual {p0, p1}, Landroidx/camera/core/processing/OpenGlRenderer;->useAndConfigureProgramWithTexture(I)V
@@ -1803,9 +1796,9 @@
 .end method
 
 .method public snapshot(Landroid/util/Size;[F)Landroid/graphics/Bitmap;
-    .locals 3
+    .locals 2
 
-    .line 326
+    .line 314
     invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
 
     move-result v0
@@ -1818,61 +1811,61 @@
 
     mul-int/lit8 v0, v0, 0x4
 
-    .line 325
+    .line 313
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 328
+    .line 316
     invoke-direct {p0, v0, p1, p2}, Landroidx/camera/core/processing/OpenGlRenderer;->snapshot(Ljava/nio/ByteBuffer;Landroid/util/Size;[F)V
 
-    .line 331
+    .line 319
     invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
 
-    move-result p2
+    move-result p0
 
     invoke-virtual {p1}, Landroid/util/Size;->getHeight()I
 
-    move-result v1
+    move-result p2
 
-    sget-object v2, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+    sget-object v1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
-    .line 330
-    invoke-static {p2, v1, v2}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+    .line 318
+    invoke-static {p0, p2, v1}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
-    move-result-object p2
+    move-result-object p0
 
-    .line 332
+    .line 320
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
-    .line 333
+    .line 321
     invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
 
     move-result p1
 
     mul-int/lit8 p1, p1, 0x4
 
-    invoke-static {p2, v0, p1}, Landroidx/camera/core/ImageProcessingUtil;->copyByteBufferToBitmap(Landroid/graphics/Bitmap;Ljava/nio/ByteBuffer;I)V
+    invoke-static {p0, v0, p1}, Landroidx/camera/core/ImageProcessingUtil;->copyByteBufferToBitmap(Landroid/graphics/Bitmap;Ljava/nio/ByteBuffer;I)V
 
-    return-object p2
+    return-object p0
 .end method
 
 .method public unregisterOutputSurface(Landroid/view/Surface;)V
     .locals 2
 
-    .line 214
+    .line 203
     iget-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mInitialized:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Landroidx/camera/core/processing/util/GLUtils;->checkInitializedOrThrow(Ljava/util/concurrent/atomic/AtomicBoolean;Z)V
 
-    .line 215
+    .line 204
     iget-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mGlThread:Ljava/lang/Thread;
 
     invoke-static {v0}, Landroidx/camera/core/processing/util/GLUtils;->checkGlThreadOrThrow(Ljava/lang/Thread;)V
 
-    .line 217
+    .line 206
     invoke-virtual {p0, p1, v1}, Landroidx/camera/core/processing/OpenGlRenderer;->removeOutputSurfaceInternal(Landroid/view/Surface;Z)V
 
     return-void
@@ -1881,7 +1874,7 @@
 .method protected useAndConfigureProgramWithTexture(I)V
     .locals 2
 
-    .line 510
+    .line 497
     iget-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mProgramHandles:Ljava/util/Map;
 
     iget-object v1, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mCurrentInputformat:Landroidx/camera/core/processing/util/GLUtils$InputFormat;
@@ -1894,18 +1887,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 515
+    .line 502
     iget-object v1, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mCurrentProgram:Landroidx/camera/core/processing/util/GLUtils$Program2D;
 
     if-eq v1, v0, :cond_0
 
-    .line 516
+    .line 503
     iput-object v0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mCurrentProgram:Landroidx/camera/core/processing/util/GLUtils$Program2D;
 
-    .line 517
+    .line 504
     invoke-virtual {v0}, Landroidx/camera/core/processing/util/GLUtils$Program2D;->use()V
 
-    .line 518
+    .line 505
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "Using program for input format "
@@ -1932,13 +1925,13 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 523
+    .line 510
     :cond_0
     invoke-direct {p0, p1}, Landroidx/camera/core/processing/OpenGlRenderer;->activateExternalTexture(I)V
 
     return-void
 
-    .line 512
+    .line 499
     :cond_1
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -1948,15 +1941,15 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mCurrentInputformat:Landroidx/camera/core/processing/util/GLUtils$InputFormat;
+    iget-object p0, p0, Landroidx/camera/core/processing/OpenGlRenderer;->mCurrentInputformat:Landroidx/camera/core/processing/util/GLUtils$InputFormat;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p1
 .end method

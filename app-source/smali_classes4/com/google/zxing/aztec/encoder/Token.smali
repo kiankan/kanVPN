@@ -69,10 +69,10 @@
 .end method
 
 .method final getPrevious()Lcom/google/zxing/aztec/encoder/Token;
-    .locals 1
+    .locals 0
 
     .line 32
-    iget-object v0, p0, Lcom/google/zxing/aztec/encoder/Token;->previous:Lcom/google/zxing/aztec/encoder/Token;
+    iget-object p0, p0, Lcom/google/zxing/aztec/encoder/Token;->previous:Lcom/google/zxing/aztec/encoder/Token;
 
-    return-object v0
+    return-object p0
 .end method

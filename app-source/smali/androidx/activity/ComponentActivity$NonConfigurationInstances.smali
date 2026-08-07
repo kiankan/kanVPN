@@ -38,7 +38,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -55,7 +55,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 130
+    .line 132
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -64,27 +64,27 @@
 
 # virtual methods
 .method public final getCustom()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    .line 131
-    iget-object v0, p0, Landroidx/activity/ComponentActivity$NonConfigurationInstances;->custom:Ljava/lang/Object;
+    .line 133
+    iget-object p0, p0, Landroidx/activity/ComponentActivity$NonConfigurationInstances;->custom:Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getViewModelStore()Landroidx/lifecycle/ViewModelStore;
-    .locals 1
+    .locals 0
 
-    .line 132
-    iget-object v0, p0, Landroidx/activity/ComponentActivity$NonConfigurationInstances;->viewModelStore:Landroidx/lifecycle/ViewModelStore;
+    .line 134
+    iget-object p0, p0, Landroidx/activity/ComponentActivity$NonConfigurationInstances;->viewModelStore:Landroidx/lifecycle/ViewModelStore;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final setCustom(Ljava/lang/Object;)V
     .locals 0
 
-    .line 131
+    .line 133
     iput-object p1, p0, Landroidx/activity/ComponentActivity$NonConfigurationInstances;->custom:Ljava/lang/Object;
 
     return-void
@@ -93,7 +93,7 @@
 .method public final setViewModelStore(Landroidx/lifecycle/ViewModelStore;)V
     .locals 0
 
-    .line 132
+    .line 134
     iput-object p1, p0, Landroidx/activity/ComponentActivity$NonConfigurationInstances;->viewModelStore:Landroidx/lifecycle/ViewModelStore;
 
     return-void

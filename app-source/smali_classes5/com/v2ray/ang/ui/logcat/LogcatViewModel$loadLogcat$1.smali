@@ -1,0 +1,378 @@
+.class final Lcom/v2ray/ang/ui/logcat/LogcatViewModel$loadLogcat$1;
+.super Lkotlin/coroutines/jvm/internal/SuspendLambda;
+.source "LogcatViewModel.kt"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function2;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/v2ray/ang/ui/logcat/LogcatViewModel;->loadLogcat()V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/coroutines/jvm/internal/SuspendLambda;",
+        "Lkotlin/jvm/functions/Function2<",
+        "Lkotlinx/coroutines/CoroutineScope;",
+        "Lkotlin/coroutines/Continuation<",
+        "-",
+        "Lkotlin/Unit;",
+        ">;",
+        "Ljava/lang/Object;",
+        ">;"
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/SourceDebugExtension;
+    value = "SMAP\nLogcatViewModel.kt\nKotlin\n*S Kotlin\n*F\n+ 1 LogcatViewModel.kt\ncom/v2ray/ang/ui/logcat/LogcatViewModel$loadLogcat$1\n+ 2 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,76:1\n37#2,2:77\n1#3:79\n*S KotlinDebug\n*F\n+ 1 LogcatViewModel.kt\ncom/v2ray/ang/ui/logcat/LogcatViewModel$loadLogcat$1\n*L\n31#1:77,2\n*E\n"
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\n\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\u0010\u0000\u001a\u00020\u0001*\u00020\u0002H\n"
+    }
+    d2 = {
+        "<anonymous>",
+        "",
+        "Lkotlinx/coroutines/CoroutineScope;"
+    }
+    k = 0x3
+    mv = {
+        0x2,
+        0x4,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+.annotation runtime Lkotlin/coroutines/jvm/internal/DebugMetadata;
+    c = "com.v2ray.ang.ui.logcat.LogcatViewModel$loadLogcat$1"
+    f = "LogcatViewModel.kt"
+    i = {}
+    l = {}
+    m = "invokeSuspend"
+    n = {}
+    nl = {}
+    s = {}
+    v = 0x2
+.end annotation
+
+
+# instance fields
+.field label:I
+
+.field final synthetic this$0:Lcom/v2ray/ang/ui/logcat/LogcatViewModel;
+
+
+# direct methods
+.method constructor <init>(Lcom/v2ray/ang/ui/logcat/LogcatViewModel;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/v2ray/ang/ui/logcat/LogcatViewModel;",
+            "Lkotlin/coroutines/Continuation<",
+            "-",
+            "Lcom/v2ray/ang/ui/logcat/LogcatViewModel$loadLogcat$1;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lcom/v2ray/ang/ui/logcat/LogcatViewModel$loadLogcat$1;->this$0:Lcom/v2ray/ang/ui/logcat/LogcatViewModel;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final create(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Object;",
+            "Lkotlin/coroutines/Continuation<",
+            "*>;)",
+            "Lkotlin/coroutines/Continuation<",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance p1, Lcom/v2ray/ang/ui/logcat/LogcatViewModel$loadLogcat$1;
+
+    iget-object p0, p0, Lcom/v2ray/ang/ui/logcat/LogcatViewModel$loadLogcat$1;->this$0:Lcom/v2ray/ang/ui/logcat/LogcatViewModel;
+
+    invoke-direct {p1, p0, p2}, Lcom/v2ray/ang/ui/logcat/LogcatViewModel$loadLogcat$1;-><init>(Lcom/v2ray/ang/ui/logcat/LogcatViewModel;Lkotlin/coroutines/Continuation;)V
+
+    check-cast p1, Lkotlin/coroutines/Continuation;
+
+    return-object p1
+.end method
+
+.method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lkotlinx/coroutines/CoroutineScope;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lcom/v2ray/ang/ui/logcat/LogcatViewModel$loadLogcat$1;->invoke(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final invoke(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlinx/coroutines/CoroutineScope;",
+            "Lkotlin/coroutines/Continuation<",
+            "-",
+            "Lkotlin/Unit;",
+            ">;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1, p2}, Lcom/v2ray/ang/ui/logcat/LogcatViewModel$loadLogcat$1;->create(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/v2ray/ang/ui/logcat/LogcatViewModel$loadLogcat$1;
+
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    invoke-virtual {p0, p1}, Lcom/v2ray/ang/ui/logcat/LogcatViewModel$loadLogcat$1;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
+
+    .line 22
+    iget v0, p0, Lcom/v2ray/ang/ui/logcat/LogcatViewModel$loadLogcat$1;->label:I
+
+    if-nez v0, :cond_1
+
+    invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+
+    .line 24
+    :try_start_0
+    new-instance p1, Ljava/util/LinkedHashSet;
+
+    invoke-direct {p1}, Ljava/util/LinkedHashSet;-><init>()V
+
+    .line 25
+    const-string v0, "logcat"
+
+    invoke-virtual {p1, v0}, Ljava/util/LinkedHashSet;->add(Ljava/lang/Object;)Z
+
+    .line 26
+    const-string v0, "-d"
+
+    invoke-virtual {p1, v0}, Ljava/util/LinkedHashSet;->add(Ljava/lang/Object;)Z
+
+    .line 27
+    const-string v0, "-v"
+
+    invoke-virtual {p1, v0}, Ljava/util/LinkedHashSet;->add(Ljava/lang/Object;)Z
+
+    .line 28
+    const-string v0, "time"
+
+    invoke-virtual {p1, v0}, Ljava/util/LinkedHashSet;->add(Ljava/lang/Object;)Z
+
+    .line 29
+    const-string v0, "-s"
+
+    invoke-virtual {p1, v0}, Ljava/util/LinkedHashSet;->add(Ljava/lang/Object;)Z
+
+    .line 30
+    const-string v0, "GoLog,com.v2ray.ang,AndroidRuntime,System.err"
+
+    invoke-virtual {p1, v0}, Ljava/util/LinkedHashSet;->add(Ljava/lang/Object;)Z
+
+    .line 31
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+
+    move-result-object v0
+
+    check-cast p1, Ljava/util/Collection;
+
+    const/4 v1, 0x0
+
+    .line 78
+    new-array v1, v1, [Ljava/lang/String;
+
+    invoke-interface {p1, v1}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [Ljava/lang/String;
+
+    .line 31
+    invoke-virtual {v0, p1}, Ljava/lang/Runtime;->exec([Ljava/lang/String;)Ljava/lang/Process;
+
+    move-result-object p1
+
+    .line 32
+    invoke-virtual {p1}, Ljava/lang/Process;->getInputStream()Ljava/io/InputStream;
+
+    move-result-object p1
+
+    const-string v0, "getInputStream(...)"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    sget-object v0, Lkotlin/text/Charsets;->UTF_8:Ljava/nio/charset/Charset;
+
+    new-instance v1, Ljava/io/InputStreamReader;
+
+    invoke-direct {v1, p1, v0}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
+
+    check-cast v1, Ljava/io/Reader;
+
+    instance-of p1, v1, Ljava/io/BufferedReader;
+
+    if-eqz p1, :cond_0
+
+    check-cast v1, Ljava/io/BufferedReader;
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/io/BufferedReader;
+
+    const/16 v0, 0x2000
+
+    invoke-direct {p1, v1, v0}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;I)V
+
+    move-object v1, p1
+
+    :goto_0
+    check-cast v1, Ljava/io/Closeable;
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :try_start_1
+    move-object p1, v1
+
+    check-cast p1, Ljava/io/BufferedReader;
+
+    check-cast p1, Ljava/io/Reader;
+
+    invoke-static {p1}, Lkotlin/io/TextStreamsKt;->readLines(Ljava/io/Reader;)Ljava/util/List;
+
+    move-result-object p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    const/4 v0, 0x0
+
+    :try_start_2
+    invoke-static {v1, v0}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    check-cast p1, Ljava/lang/Iterable;
+
+    invoke-static {p1}, Lkotlin/collections/CollectionsKt;->reversed(Ljava/lang/Iterable;)Ljava/util/List;
+
+    move-result-object p1
+
+    .line 34
+    iget-object v0, p0, Lcom/v2ray/ang/ui/logcat/LogcatViewModel$loadLogcat$1;->this$0:Lcom/v2ray/ang/ui/logcat/LogcatViewModel;
+
+    invoke-static {v0}, Lcom/v2ray/ang/ui/logcat/LogcatViewModel;->access$getLogsetsAll$p(Lcom/v2ray/ang/ui/logcat/LogcatViewModel;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
+    .line 35
+    iget-object v0, p0, Lcom/v2ray/ang/ui/logcat/LogcatViewModel$loadLogcat$1;->this$0:Lcom/v2ray/ang/ui/logcat/LogcatViewModel;
+
+    invoke-static {v0}, Lcom/v2ray/ang/ui/logcat/LogcatViewModel;->access$getLogsetsAll$p(Lcom/v2ray/ang/ui/logcat/LogcatViewModel;)Ljava/util/List;
+
+    move-result-object v0
+
+    check-cast p1, Ljava/util/Collection;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+
+    .line 36
+    iget-object p0, p0, Lcom/v2ray/ang/ui/logcat/LogcatViewModel$loadLogcat$1;->this$0:Lcom/v2ray/ang/ui/logcat/LogcatViewModel;
+
+    invoke-static {p0}, Lcom/v2ray/ang/ui/logcat/LogcatViewModel;->access$applyFilter(Lcom/v2ray/ang/ui/logcat/LogcatViewModel;)V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p0
+
+    .line 32
+    :try_start_3
+    throw p0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    :catchall_1
+    move-exception p1
+
+    :try_start_4
+    invoke-static {v1, p0}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    throw p1
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
+
+    :catch_0
+    move-exception p0
+
+    .line 38
+    sget-object p1, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
+
+    const-string v0, "Failed to get logcat"
+
+    check-cast p0, Ljava/lang/Throwable;
+
+    const-string v1, "com.kanvpn.client"
+
+    invoke-virtual {p1, v1, v0, p0}, Lcom/v2ray/ang/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 40
+    :goto_1
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    return-object p0
+
+    .line 22
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method

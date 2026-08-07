@@ -16,7 +16,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/google/gson/TypeAdapter<",
-        "Ljava/net/InetAddress;",
+        "Ljava/net/URI;",
         ">;"
     }
 .end annotation
@@ -26,7 +26,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 623
+    .line 713
     invoke-direct {p0}, Lcom/google/gson/TypeAdapter;-><init>()V
 
     return-void
@@ -42,15 +42,15 @@
         }
     .end annotation
 
-    .line 623
-    invoke-virtual {p0, p1}, Lcom/google/gson/internal/bind/TypeAdapters$23;->read(Lcom/google/gson/stream/JsonReader;)Ljava/net/InetAddress;
+    .line 713
+    invoke-virtual {p0, p1}, Lcom/google/gson/internal/bind/TypeAdapters$23;->read(Lcom/google/gson/stream/JsonReader;)Ljava/net/URI;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
-.method public read(Lcom/google/gson/stream/JsonReader;)Ljava/net/InetAddress;
+.method public read(Lcom/google/gson/stream/JsonReader;)Ljava/net/URI;
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -58,33 +58,58 @@
         }
     .end annotation
 
-    .line 626
+    .line 716
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->peek()Lcom/google/gson/stream/JsonToken;
 
-    move-result-object v0
+    move-result-object p0
 
-    sget-object v1, Lcom/google/gson/stream/JsonToken;->NULL:Lcom/google/gson/stream/JsonToken;
+    sget-object v0, Lcom/google/gson/stream/JsonToken;->NULL:Lcom/google/gson/stream/JsonToken;
 
-    if-ne v0, v1, :cond_0
+    const/4 v1, 0x0
 
-    .line 627
+    if-ne p0, v0, :cond_0
+
+    .line 717
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->nextNull()V
 
-    const/4 p1, 0x0
+    return-object v1
 
-    return-object p1
-
-    .line 634
+    .line 721
     :cond_0
+    :try_start_0
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->nextString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-static {p1}, Ljava/net/InetAddress;->getByName(Ljava/lang/String;)Ljava/net/InetAddress;
+    .line 722
+    const-string p1, "null"
 
-    move-result-object p1
+    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    return-object v1
+
+    :cond_1
+    new-instance p1, Ljava/net/URI;
+
+    invoke-direct {p1, p0}, Ljava/net/URI;-><init>(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/net/URISyntaxException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-object p1
+
+    :catch_0
+    move-exception p0
+
+    .line 724
+    new-instance p1, Lcom/google/gson/JsonIOException;
+
+    invoke-direct {p1, p0}, Lcom/google/gson/JsonIOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw p1
 .end method
 
 .method public bridge synthetic write(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
@@ -95,15 +120,15 @@
         }
     .end annotation
 
-    .line 623
-    check-cast p2, Ljava/net/InetAddress;
+    .line 713
+    check-cast p2, Ljava/net/URI;
 
-    invoke-virtual {p0, p1, p2}, Lcom/google/gson/internal/bind/TypeAdapters$23;->write(Lcom/google/gson/stream/JsonWriter;Ljava/net/InetAddress;)V
+    invoke-virtual {p0, p1, p2}, Lcom/google/gson/internal/bind/TypeAdapters$23;->write(Lcom/google/gson/stream/JsonWriter;Ljava/net/URI;)V
 
     return-void
 .end method
 
-.method public write(Lcom/google/gson/stream/JsonWriter;Ljava/net/InetAddress;)V
+.method public write(Lcom/google/gson/stream/JsonWriter;Ljava/net/URI;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -113,18 +138,18 @@
 
     if-nez p2, :cond_0
 
-    const/4 p2, 0x0
+    const/4 p0, 0x0
 
     goto :goto_0
 
-    .line 640
+    .line 730
     :cond_0
-    invoke-virtual {p2}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/net/URI;->toASCIIString()Ljava/lang/String;
 
-    move-result-object p2
+    move-result-object p0
 
     :goto_0
-    invoke-virtual {p1, p2}, Lcom/google/gson/stream/JsonWriter;->value(Ljava/lang/String;)Lcom/google/gson/stream/JsonWriter;
+    invoke-virtual {p1, p0}, Lcom/google/gson/stream/JsonWriter;->value(Ljava/lang/String;)Lcom/google/gson/stream/JsonWriter;
 
     return-void
 .end method

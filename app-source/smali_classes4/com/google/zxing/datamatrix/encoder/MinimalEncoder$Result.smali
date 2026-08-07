@@ -557,10 +557,10 @@
 
 # virtual methods
 .method public getBytes()[B
-    .locals 1
+    .locals 0
 
     .line 1020
-    iget-object v0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Result;->bytes:[B
+    iget-object p0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Result;->bytes:[B
 
-    return-object v0
+    return-object p0
 .end method

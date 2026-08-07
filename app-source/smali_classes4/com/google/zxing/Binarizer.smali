@@ -42,36 +42,36 @@
 .end method
 
 .method public final getHeight()I
-    .locals 1
+    .locals 0
 
     .line 84
-    iget-object v0, p0, Lcom/google/zxing/Binarizer;->source:Lcom/google/zxing/LuminanceSource;
+    iget-object p0, p0, Lcom/google/zxing/Binarizer;->source:Lcom/google/zxing/LuminanceSource;
 
-    invoke-virtual {v0}, Lcom/google/zxing/LuminanceSource;->getHeight()I
+    invoke-virtual {p0}, Lcom/google/zxing/LuminanceSource;->getHeight()I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public final getLuminanceSource()Lcom/google/zxing/LuminanceSource;
-    .locals 1
+    .locals 0
 
     .line 39
-    iget-object v0, p0, Lcom/google/zxing/Binarizer;->source:Lcom/google/zxing/LuminanceSource;
+    iget-object p0, p0, Lcom/google/zxing/Binarizer;->source:Lcom/google/zxing/LuminanceSource;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getWidth()I
-    .locals 1
+    .locals 0
 
     .line 80
-    iget-object v0, p0, Lcom/google/zxing/Binarizer;->source:Lcom/google/zxing/LuminanceSource;
+    iget-object p0, p0, Lcom/google/zxing/Binarizer;->source:Lcom/google/zxing/LuminanceSource;
 
-    invoke-virtual {v0}, Lcom/google/zxing/LuminanceSource;->getWidth()I
+    invoke-virtual {p0}, Lcom/google/zxing/LuminanceSource;->getWidth()I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method

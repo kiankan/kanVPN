@@ -29,98 +29,98 @@
     .line 31
     invoke-virtual {p0, p1}, Lcom/google/zxing/client/result/SMSTOMMSTOResultParser;->parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/SMSParsedResult;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/SMSParsedResult;
-    .locals 4
+    .locals 3
 
     .line 35
     invoke-static {p1}, Lcom/google/zxing/client/result/SMSTOMMSTOResultParser;->getMassagedText(Lcom/google/zxing/Result;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
     .line 36
-    const-string v0, "smsto:"
+    const-string p1, "smsto:"
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result p1
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    if-nez v0, :cond_0
+    if-nez p1, :cond_0
 
-    const-string v0, "SMSTO:"
+    const-string p1, "SMSTO:"
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result p1
 
-    if-nez v0, :cond_0
+    if-nez p1, :cond_0
 
-    const-string v0, "mmsto:"
+    const-string p1, "mmsto:"
 
     .line 37
-    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result p1
 
-    if-nez v0, :cond_0
+    if-nez p1, :cond_0
 
-    const-string v0, "MMSTO:"
+    const-string p1, "MMSTO:"
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result p1
 
-    if-nez v0, :cond_0
+    if-nez p1, :cond_0
 
-    return-object v1
+    return-object v0
 
     :cond_0
-    const/4 v0, 0x6
+    const/4 p1, 0x6
 
     .line 42
-    invoke-virtual {p1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    const/16 v0, 0x3a
+    const/16 p1, 0x3a
 
     .line 44
-    invoke-virtual {p1, v0}, Ljava/lang/String;->indexOf(I)I
+    invoke-virtual {p0, p1}, Ljava/lang/String;->indexOf(I)I
 
-    move-result v0
+    move-result p1
 
-    if-ltz v0, :cond_1
+    if-ltz p1, :cond_1
 
-    add-int/lit8 v2, v0, 0x1
+    add-int/lit8 v1, p1, 0x1
 
     .line 46
-    invoke-virtual {p1, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
     .line 47
-    invoke-virtual {p1, v3, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    invoke-virtual {p0, v2, p1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
     goto :goto_0
 
     :cond_1
-    move-object v2, v1
+    move-object v1, v0
 
     .line 49
     :goto_0
-    new-instance v0, Lcom/google/zxing/client/result/SMSParsedResult;
+    new-instance p1, Lcom/google/zxing/client/result/SMSParsedResult;
 
-    invoke-direct {v0, p1, v1, v1, v2}, Lcom/google/zxing/client/result/SMSParsedResult;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p1, p0, v0, v0, v1}, Lcom/google/zxing/client/result/SMSParsedResult;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    return-object v0
+    return-object p1
 .end method

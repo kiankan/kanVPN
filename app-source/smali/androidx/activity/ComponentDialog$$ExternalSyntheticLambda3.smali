@@ -25,14 +25,14 @@
 
 # virtual methods
 .method public final invoke()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Landroidx/activity/ComponentDialog$$ExternalSyntheticLambda3;->f$0:Landroidx/activity/ComponentDialog;
+    iget-object p0, p0, Landroidx/activity/ComponentDialog$$ExternalSyntheticLambda3;->f$0:Landroidx/activity/ComponentDialog;
 
-    invoke-static {v0}, Landroidx/activity/ComponentDialog;->$r8$lambda$qS1cldBgQdRb0InzIVn5XXJnx0Q(Landroidx/activity/ComponentDialog;)Landroidx/activity/OnBackPressedDispatcher;
+    invoke-static {p0}, Landroidx/activity/ComponentDialog;->onBackPressedDispatcher_delegate$lambda$0(Landroidx/activity/ComponentDialog;)Landroidx/activity/OnBackPressedDispatcher;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

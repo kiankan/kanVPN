@@ -126,47 +126,47 @@
     invoke-static {v1, v0}, Lcom/google/zxing/client/result/URIParsedResult;->maybeAppend(Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 57
-    iget-object v1, p0, Lcom/google/zxing/client/result/URIParsedResult;->uri:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/URIParsedResult;->uri:Ljava/lang/String;
 
-    invoke-static {v1, v0}, Lcom/google/zxing/client/result/URIParsedResult;->maybeAppend(Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {p0, v0}, Lcom/google/zxing/client/result/URIParsedResult;->maybeAppend(Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 58
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getTitle()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 40
-    iget-object v0, p0, Lcom/google/zxing/client/result/URIParsedResult;->title:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/URIParsedResult;->title:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getURI()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 36
-    iget-object v0, p0, Lcom/google/zxing/client/result/URIParsedResult;->uri:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/URIParsedResult;->uri:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public isPossiblyMaliciousURI()Z
-    .locals 1
+    .locals 0
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     .line 50
-    iget-object v0, p0, Lcom/google/zxing/client/result/URIParsedResult;->uri:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/URIParsedResult;->uri:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/google/zxing/client/result/URIResultParser;->isPossiblyMaliciousURI(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/google/zxing/client/result/URIResultParser;->isPossiblyMaliciousURI(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method

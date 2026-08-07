@@ -25,70 +25,75 @@
         }
     .end annotation
 
-    .line 43
+    .line 44
     invoke-direct {p0, p1, p2}, Landroidx/camera/core/internal/utils/ArrayRingBuffer;-><init>(ILandroidx/camera/core/internal/utils/RingBuffer$OnRemoveCallback;)V
 
     return-void
 .end method
 
 .method private isValidZslFrame(Landroidx/camera/core/ImageInfo;)Z
-    .locals 3
+    .locals 2
 
-    .line 57
+    .line 58
     invoke-static {p1}, Landroidx/camera/core/impl/CameraCaptureResults;->retrieveCameraCaptureResult(Landroidx/camera/core/ImageInfo;)Landroidx/camera/core/impl/CameraCaptureResult;
 
-    move-result-object p1
+    move-result-object p0
 
-    .line 59
-    invoke-interface {p1}, Landroidx/camera/core/impl/CameraCaptureResult;->getAfState()Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
+    const/4 p1, 0x0
+
+    if-nez p0, :cond_0
+
+    return p1
+
+    .line 63
+    :cond_0
+    invoke-interface {p0}, Landroidx/camera/core/impl/CameraCaptureResult;->getAfState()Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
 
     move-result-object v0
 
     sget-object v1, Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;->LOCKED_FOCUSED:Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
 
-    const/4 v2, 0x0
+    if-eq v0, v1, :cond_1
 
-    if-eq v0, v1, :cond_0
-
-    .line 60
-    invoke-interface {p1}, Landroidx/camera/core/impl/CameraCaptureResult;->getAfState()Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
+    .line 64
+    invoke-interface {p0}, Landroidx/camera/core/impl/CameraCaptureResult;->getAfState()Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
 
     move-result-object v0
 
     sget-object v1, Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;->PASSIVE_FOCUSED:Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
 
-    if-eq v0, v1, :cond_0
+    if-eq v0, v1, :cond_1
 
-    return v2
+    return p1
 
-    .line 64
-    :cond_0
-    invoke-interface {p1}, Landroidx/camera/core/impl/CameraCaptureResult;->getAeState()Landroidx/camera/core/impl/CameraCaptureMetaData$AeState;
+    .line 68
+    :cond_1
+    invoke-interface {p0}, Landroidx/camera/core/impl/CameraCaptureResult;->getAeState()Landroidx/camera/core/impl/CameraCaptureMetaData$AeState;
 
     move-result-object v0
 
     sget-object v1, Landroidx/camera/core/impl/CameraCaptureMetaData$AeState;->CONVERGED:Landroidx/camera/core/impl/CameraCaptureMetaData$AeState;
 
-    if-eq v0, v1, :cond_1
+    if-eq v0, v1, :cond_2
 
-    return v2
+    return p1
 
-    .line 68
-    :cond_1
-    invoke-interface {p1}, Landroidx/camera/core/impl/CameraCaptureResult;->getAwbState()Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;
+    .line 72
+    :cond_2
+    invoke-interface {p0}, Landroidx/camera/core/impl/CameraCaptureResult;->getAwbState()Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;
 
-    move-result-object p1
+    move-result-object p0
 
     sget-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;->CONVERGED:Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;
 
-    if-eq p1, v0, :cond_2
-
-    return v2
-
-    :cond_2
-    const/4 p1, 0x1
+    if-eq p0, v0, :cond_3
 
     return p1
+
+    :cond_3
+    const/4 p0, 0x1
+
+    return p0
 .end method
 
 
@@ -96,7 +101,7 @@
 .method public enqueue(Landroidx/camera/core/ImageProxy;)V
     .locals 1
 
-    .line 48
+    .line 49
     invoke-interface {p1}, Landroidx/camera/core/ImageProxy;->getImageInfo()Landroidx/camera/core/ImageInfo;
 
     move-result-object v0
@@ -107,16 +112,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 49
+    .line 50
     invoke-super {p0, p1}, Landroidx/camera/core/internal/utils/ArrayRingBuffer;->enqueue(Ljava/lang/Object;)V
 
     return-void
 
-    .line 51
+    .line 52
     :cond_0
-    iget-object v0, p0, Landroidx/camera/core/internal/utils/ZslRingBuffer;->mOnRemoveCallback:Landroidx/camera/core/internal/utils/RingBuffer$OnRemoveCallback;
+    iget-object p0, p0, Landroidx/camera/core/internal/utils/ZslRingBuffer;->mOnRemoveCallback:Landroidx/camera/core/internal/utils/RingBuffer$OnRemoveCallback;
 
-    invoke-interface {v0, p1}, Landroidx/camera/core/internal/utils/RingBuffer$OnRemoveCallback;->onRemove(Ljava/lang/Object;)V
+    invoke-interface {p0, p1}, Landroidx/camera/core/internal/utils/RingBuffer$OnRemoveCallback;->onRemove(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -132,7 +137,7 @@
         }
     .end annotation
 
-    .line 39
+    .line 40
     check-cast p1, Landroidx/camera/core/ImageProxy;
 
     invoke-virtual {p0, p1}, Landroidx/camera/core/internal/utils/ZslRingBuffer;->enqueue(Landroidx/camera/core/ImageProxy;)V

@@ -11,10 +11,10 @@
 .method private constructor <init>(Z)V
     .locals 0
 
-    .line 40
+    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
+    .line 40
     iput-boolean p1, p0, Landroidx/camera/core/FocusMeteringResult;->mIsFocusSuccessful:Z
 
     return-void
@@ -23,7 +23,7 @@
 .method public static create(Z)Landroidx/camera/core/FocusMeteringResult;
     .locals 1
 
-    .line 37
+    .line 36
     new-instance v0, Landroidx/camera/core/FocusMeteringResult;
 
     invoke-direct {v0, p0}, Landroidx/camera/core/FocusMeteringResult;-><init>(Z)V
@@ -47,10 +47,10 @@
 
 # virtual methods
 .method public isFocusSuccessful()Z
-    .locals 1
+    .locals 0
 
-    .line 51
-    iget-boolean v0, p0, Landroidx/camera/core/FocusMeteringResult;->mIsFocusSuccessful:Z
+    .line 50
+    iget-boolean p0, p0, Landroidx/camera/core/FocusMeteringResult;->mIsFocusSuccessful:Z
 
-    return v0
+    return p0
 .end method

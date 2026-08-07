@@ -26,7 +26,7 @@
     const-string v2, "Australia/Darwin"
 
     .line 226
-    invoke-static {v1, v2}, Lj$/time/ZoneId$$ExternalSyntheticBackport0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
+    invoke-static {v1, v2}, Lj$/time/ZoneId$0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v1
 
@@ -39,7 +39,7 @@
     const-string v2, "Australia/Sydney"
 
     .line 227
-    invoke-static {v1, v2}, Lj$/time/ZoneId$$ExternalSyntheticBackport0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
+    invoke-static {v1, v2}, Lj$/time/ZoneId$0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v1
 
@@ -52,7 +52,7 @@
     const-string v2, "America/Argentina/Buenos_Aires"
 
     .line 228
-    invoke-static {v1, v2}, Lj$/time/ZoneId$$ExternalSyntheticBackport0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
+    invoke-static {v1, v2}, Lj$/time/ZoneId$0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v1
 
@@ -65,7 +65,7 @@
     const-string v2, "Africa/Cairo"
 
     .line 229
-    invoke-static {v1, v2}, Lj$/time/ZoneId$$ExternalSyntheticBackport0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
+    invoke-static {v1, v2}, Lj$/time/ZoneId$0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v1
 
@@ -78,7 +78,7 @@
     const-string v2, "America/Anchorage"
 
     .line 230
-    invoke-static {v1, v2}, Lj$/time/ZoneId$$ExternalSyntheticBackport0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
+    invoke-static {v1, v2}, Lj$/time/ZoneId$0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v1
 
@@ -91,7 +91,7 @@
     const-string v2, "America/Sao_Paulo"
 
     .line 231
-    invoke-static {v1, v2}, Lj$/time/ZoneId$$ExternalSyntheticBackport0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
+    invoke-static {v1, v2}, Lj$/time/ZoneId$0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v1
 
@@ -104,7 +104,7 @@
     const-string v2, "Asia/Dhaka"
 
     .line 232
-    invoke-static {v1, v2}, Lj$/time/ZoneId$$ExternalSyntheticBackport0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
+    invoke-static {v1, v2}, Lj$/time/ZoneId$0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v1
 
@@ -117,7 +117,7 @@
     const-string v2, "Africa/Harare"
 
     .line 233
-    invoke-static {v1, v2}, Lj$/time/ZoneId$$ExternalSyntheticBackport0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
+    invoke-static {v1, v2}, Lj$/time/ZoneId$0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v1
 
@@ -130,7 +130,7 @@
     const-string v2, "America/St_Johns"
 
     .line 234
-    invoke-static {v1, v2}, Lj$/time/ZoneId$$ExternalSyntheticBackport0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
+    invoke-static {v1, v2}, Lj$/time/ZoneId$0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v1
 
@@ -143,7 +143,7 @@
     const-string v2, "America/Chicago"
 
     .line 235
-    invoke-static {v1, v2}, Lj$/time/ZoneId$$ExternalSyntheticBackport0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
+    invoke-static {v1, v2}, Lj$/time/ZoneId$0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v1
 
@@ -156,7 +156,7 @@
     const-string v2, "Asia/Shanghai"
 
     .line 236
-    invoke-static {v1, v2}, Lj$/time/ZoneId$$ExternalSyntheticBackport0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
+    invoke-static {v1, v2}, Lj$/time/ZoneId$0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v1
 
@@ -169,7 +169,7 @@
     const-string v2, "Africa/Addis_Ababa"
 
     .line 237
-    invoke-static {v1, v2}, Lj$/time/ZoneId$$ExternalSyntheticBackport0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
+    invoke-static {v1, v2}, Lj$/time/ZoneId$0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v1
 
@@ -182,7 +182,7 @@
     const-string v2, "Europe/Paris"
 
     .line 238
-    invoke-static {v1, v2}, Lj$/time/ZoneId$$ExternalSyntheticBackport0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
+    invoke-static {v1, v2}, Lj$/time/ZoneId$0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v1
 
@@ -195,7 +195,7 @@
     const-string v2, "America/Indiana/Indianapolis"
 
     .line 239
-    invoke-static {v1, v2}, Lj$/time/ZoneId$$ExternalSyntheticBackport0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
+    invoke-static {v1, v2}, Lj$/time/ZoneId$0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v1
 
@@ -208,7 +208,7 @@
     const-string v2, "Asia/Kolkata"
 
     .line 240
-    invoke-static {v1, v2}, Lj$/time/ZoneId$$ExternalSyntheticBackport0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
+    invoke-static {v1, v2}, Lj$/time/ZoneId$0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v1
 
@@ -221,7 +221,7 @@
     const-string v2, "Asia/Tokyo"
 
     .line 241
-    invoke-static {v1, v2}, Lj$/time/ZoneId$$ExternalSyntheticBackport0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
+    invoke-static {v1, v2}, Lj$/time/ZoneId$0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v1
 
@@ -234,7 +234,7 @@
     const-string v2, "Pacific/Apia"
 
     .line 242
-    invoke-static {v1, v2}, Lj$/time/ZoneId$$ExternalSyntheticBackport0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
+    invoke-static {v1, v2}, Lj$/time/ZoneId$0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v1
 
@@ -247,7 +247,7 @@
     const-string v2, "Asia/Yerevan"
 
     .line 243
-    invoke-static {v1, v2}, Lj$/time/ZoneId$$ExternalSyntheticBackport0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
+    invoke-static {v1, v2}, Lj$/time/ZoneId$0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v1
 
@@ -260,7 +260,7 @@
     const-string v2, "Pacific/Auckland"
 
     .line 244
-    invoke-static {v1, v2}, Lj$/time/ZoneId$$ExternalSyntheticBackport0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
+    invoke-static {v1, v2}, Lj$/time/ZoneId$0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v1
 
@@ -273,7 +273,7 @@
     const-string v2, "Asia/Karachi"
 
     .line 245
-    invoke-static {v1, v2}, Lj$/time/ZoneId$$ExternalSyntheticBackport0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
+    invoke-static {v1, v2}, Lj$/time/ZoneId$0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v1
 
@@ -286,7 +286,7 @@
     const-string v2, "America/Phoenix"
 
     .line 246
-    invoke-static {v1, v2}, Lj$/time/ZoneId$$ExternalSyntheticBackport0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
+    invoke-static {v1, v2}, Lj$/time/ZoneId$0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v1
 
@@ -299,7 +299,7 @@
     const-string v2, "America/Puerto_Rico"
 
     .line 247
-    invoke-static {v1, v2}, Lj$/time/ZoneId$$ExternalSyntheticBackport0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
+    invoke-static {v1, v2}, Lj$/time/ZoneId$0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v1
 
@@ -312,7 +312,7 @@
     const-string v2, "America/Los_Angeles"
 
     .line 248
-    invoke-static {v1, v2}, Lj$/time/ZoneId$$ExternalSyntheticBackport0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
+    invoke-static {v1, v2}, Lj$/time/ZoneId$0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v1
 
@@ -325,7 +325,7 @@
     const-string v2, "Pacific/Guadalcanal"
 
     .line 249
-    invoke-static {v1, v2}, Lj$/time/ZoneId$$ExternalSyntheticBackport0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
+    invoke-static {v1, v2}, Lj$/time/ZoneId$0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v1
 
@@ -338,7 +338,7 @@
     const-string v2, "Asia/Ho_Chi_Minh"
 
     .line 250
-    invoke-static {v1, v2}, Lj$/time/ZoneId$$ExternalSyntheticBackport0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
+    invoke-static {v1, v2}, Lj$/time/ZoneId$0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v1
 
@@ -351,7 +351,7 @@
     const-string v2, "-05:00"
 
     .line 251
-    invoke-static {v1, v2}, Lj$/time/ZoneId$$ExternalSyntheticBackport0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
+    invoke-static {v1, v2}, Lj$/time/ZoneId$0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v1
 
@@ -364,7 +364,7 @@
     const-string v2, "-07:00"
 
     .line 252
-    invoke-static {v1, v2}, Lj$/time/ZoneId$$ExternalSyntheticBackport0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
+    invoke-static {v1, v2}, Lj$/time/ZoneId$0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v1
 
@@ -377,7 +377,7 @@
     const-string v2, "-10:00"
 
     .line 253
-    invoke-static {v1, v2}, Lj$/time/ZoneId$$ExternalSyntheticBackport0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
+    invoke-static {v1, v2}, Lj$/time/ZoneId$0;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v1
 
@@ -386,7 +386,7 @@
     aput-object v1, v0, v2
 
     .line 225
-    invoke-static {v0}, Lj$/time/ZoneId$$ExternalSyntheticBackport1;->m([Ljava/util/Map$Entry;)Ljava/util/Map;
+    invoke-static {v0}, Lj$/time/ZoneId$2;->m([Ljava/util/Map$Entry;)Ljava/util/Map;
 
     move-result-object v0
 
@@ -412,27 +412,74 @@
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v0
+    move-result-object p0
 
-    const-class v1, Lj$/time/ZoneRegion;
+    const-class v0, Lj$/time/ZoneRegion;
 
-    if-ne v0, v1, :cond_0
+    if-ne p0, v0, :cond_0
 
     goto :goto_0
 
     .line 475
     :cond_0
-    new-instance v0, Ljava/lang/AssertionError;
+    new-instance p0, Ljava/lang/AssertionError;
 
-    const-string v1, "Invalid subclass"
+    const-string v0, "Invalid subclass"
 
-    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+    invoke-direct {p0, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
 
-    throw v0
+    throw p0
 
     :cond_1
     :goto_0
     return-void
+.end method
+
+.method public static of(Ljava/lang/String;)Lj$/time/ZoneId;
+    .locals 1
+
+    const/4 v0, 0x1
+
+    .line 357
+    invoke-static {p0, v0}, Lj$/time/ZoneId;->of(Ljava/lang/String;Z)Lj$/time/ZoneId;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static of(Ljava/lang/String;Ljava/util/Map;)Lj$/time/ZoneId;
+    .locals 1
+
+    .line 310
+    const-string v0, "zoneId"
+
+    invoke-static {p0, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 311
+    const-string v0, "aliasMap"
+
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 312
+    invoke-interface {p1, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/String;
+
+    invoke-static {p1, p0}, Lj$/time/ZoneId$3;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/lang/String;
+
+    .line 313
+    invoke-static {p0}, Lj$/time/ZoneId;->of(Ljava/lang/String;)Lj$/time/ZoneId;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method static of(Ljava/lang/String;Z)Lj$/time/ZoneId;
@@ -539,7 +586,7 @@
 .end method
 
 .method public static ofOffset(Ljava/lang/String;Lj$/time/ZoneOffset;)Lj$/time/ZoneId;
-    .locals 2
+    .locals 1
 
     .line 374
     const-string v0, "prefix"
@@ -592,17 +639,9 @@
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "prefix should be GMT, UTC or UT, is: "
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "prefix should be GMT, UTC or UT, is: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -734,17 +773,9 @@
     :goto_0
     new-instance p2, Lj$/time/DateTimeException;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "Invalid ID for offset-based ZoneId: "
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "Invalid ID for offset-based ZoneId: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -754,16 +785,31 @@
 .end method
 
 .method private readObject(Ljava/io/ObjectInputStream;)V
-    .locals 1
+    .locals 0
 
     .line 629
-    new-instance p1, Ljava/io/InvalidObjectException;
+    new-instance p0, Ljava/io/InvalidObjectException;
 
-    const-string v0, "Deserialization via serialization delegate"
+    const-string p1, "Deserialization via serialization delegate"
 
-    invoke-direct {p1, v0}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
+.end method
+
+.method public static systemDefault()Lj$/time/ZoneId;
+    .locals 1
+
+    .line 273
+    invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lj$/util/TimeZoneRetargetClass;->toZoneId(Ljava/util/TimeZone;)Lj$/time/ZoneId;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method private writeReplace()Ljava/lang/Object;
@@ -786,9 +832,9 @@
 
     if-ne p0, p1, :cond_0
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     .line 604
     :cond_0
@@ -802,22 +848,22 @@
     .line 606
     invoke-virtual {p0}, Lj$/time/ZoneId;->getId()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
     invoke-virtual {p1}, Lj$/time/ZoneId;->getId()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 
     :cond_1
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method public abstract getId()Ljava/lang/String;
@@ -827,18 +873,18 @@
 .end method
 
 .method public hashCode()I
-    .locals 1
+    .locals 0
 
     .line 618
     invoke-virtual {p0}, Lj$/time/ZoneId;->getId()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public normalized()Lj$/time/ZoneId;
@@ -862,11 +908,9 @@
 
     invoke-virtual {v0, v1}, Lj$/time/zone/ZoneRules;->getOffset(Lj$/time/Instant;)Lj$/time/ZoneOffset;
 
-    move-result-object v0
+    move-result-object p0
     :try_end_0
     .catch Lj$/time/zone/ZoneRulesException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v0
 
     :catch_0
     :cond_0
@@ -874,14 +918,14 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 639
     invoke-virtual {p0}, Lj$/time/ZoneId;->getId()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method abstract write(Ljava/io/DataOutput;)V

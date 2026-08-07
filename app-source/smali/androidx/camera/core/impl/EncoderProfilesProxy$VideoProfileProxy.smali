@@ -41,7 +41,7 @@
 .method public static create(ILjava/lang/String;IIIIIIII)Landroidx/camera/core/impl/EncoderProfilesProxy$VideoProfileProxy;
     .locals 11
 
-    .line 110
+    .line 109
     new-instance v0, Landroidx/camera/core/impl/AutoValue_EncoderProfilesProxy_VideoProfileProxy;
 
     move v1, p0
@@ -96,6 +96,25 @@
 .end method
 
 .method public abstract getProfile()I
+.end method
+
+.method public getResolution()Landroid/util/Size;
+    .locals 2
+
+    .line 157
+    new-instance v0, Landroid/util/Size;
+
+    invoke-virtual {p0}, Landroidx/camera/core/impl/EncoderProfilesProxy$VideoProfileProxy;->getWidth()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroidx/camera/core/impl/EncoderProfilesProxy$VideoProfileProxy;->getHeight()I
+
+    move-result p0
+
+    invoke-direct {v0, v1, p0}, Landroid/util/Size;-><init>(II)V
+
+    return-object v0
 .end method
 
 .method public abstract getWidth()I

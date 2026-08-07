@@ -18,7 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 278
+    .line 289
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +38,7 @@
         }
     .end annotation
 
-    .line 314
+    .line 321
     new-instance v0, Landroidx/camera/core/processing/concurrent/AutoValue_DualSurfaceProcessorNode_In;
 
     invoke-direct {v0, p0, p1, p2}, Landroidx/camera/core/processing/concurrent/AutoValue_DualSurfaceProcessorNode_In;-><init>(Landroidx/camera/core/processing/SurfaceEdge;Landroidx/camera/core/processing/SurfaceEdge;Ljava/util/List;)V

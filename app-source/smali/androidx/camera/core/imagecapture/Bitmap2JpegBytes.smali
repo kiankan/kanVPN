@@ -1,4 +1,4 @@
-.class Landroidx/camera/core/imagecapture/Bitmap2JpegBytes;
+.class public Landroidx/camera/core/imagecapture/Bitmap2JpegBytes;
 .super Ljava/lang/Object;
 .source "Bitmap2JpegBytes.java"
 
@@ -26,10 +26,10 @@
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 40
+    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +38,7 @@
 .method private static getOutputFormat(Landroid/graphics/Bitmap;)I
     .locals 2
 
-    .line 60
+    .line 62
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x22
@@ -64,7 +64,7 @@
 
 # virtual methods
 .method public apply(Landroidx/camera/core/imagecapture/Bitmap2JpegBytes$In;)Landroidx/camera/core/processing/Packet;
-    .locals 12
+    .locals 11
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -81,38 +81,38 @@
         }
     .end annotation
 
-    .line 45
+    .line 47
     invoke-virtual {p1}, Landroidx/camera/core/imagecapture/Bitmap2JpegBytes$In;->getPacket()Landroidx/camera/core/processing/Packet;
 
-    move-result-object v0
+    move-result-object p0
 
-    .line 46
-    new-instance v1, Ljava/io/ByteArrayOutputStream;
+    .line 48
+    new-instance v0, Ljava/io/ByteArrayOutputStream;
 
-    invoke-direct {v1}, Ljava/io/ByteArrayOutputStream;-><init>()V
+    invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 47
-    invoke-virtual {v0}, Landroidx/camera/core/processing/Packet;->getData()Ljava/lang/Object;
+    .line 49
+    invoke-virtual {p0}, Landroidx/camera/core/processing/Packet;->getData()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v1
 
-    check-cast v2, Landroid/graphics/Bitmap;
+    check-cast v1, Landroid/graphics/Bitmap;
 
-    sget-object v3, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
+    sget-object v2, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
     invoke-virtual {p1}, Landroidx/camera/core/imagecapture/Bitmap2JpegBytes$In;->getJpegQuality()I
 
     move-result p1
 
-    invoke-virtual {v2, v3, p1, v1}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
+    invoke-virtual {v1, v2, p1, v0}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    .line 49
-    invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+    .line 51
+    invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
-    move-result-object v4
+    move-result-object v3
 
-    .line 50
-    invoke-virtual {v0}, Landroidx/camera/core/processing/Packet;->getExif()Landroidx/camera/core/impl/utils/Exif;
+    .line 52
+    invoke-virtual {p0}, Landroidx/camera/core/processing/Packet;->getExif()Landroidx/camera/core/impl/utils/Exif;
 
     move-result-object p1
 
@@ -120,12 +120,12 @@
 
     move-result-object p1
 
-    move-object v5, p1
+    move-object v4, p1
 
-    check-cast v5, Landroidx/camera/core/impl/utils/Exif;
+    check-cast v4, Landroidx/camera/core/impl/utils/Exif;
 
-    .line 51
-    invoke-virtual {v0}, Landroidx/camera/core/processing/Packet;->getData()Ljava/lang/Object;
+    .line 53
+    invoke-virtual {p0}, Landroidx/camera/core/processing/Packet;->getData()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -133,39 +133,39 @@
 
     invoke-static {p1}, Landroidx/camera/core/imagecapture/Bitmap2JpegBytes;->getOutputFormat(Landroid/graphics/Bitmap;)I
 
-    move-result v6
+    move-result v5
 
-    .line 52
-    invoke-virtual {v0}, Landroidx/camera/core/processing/Packet;->getSize()Landroid/util/Size;
+    .line 54
+    invoke-virtual {p0}, Landroidx/camera/core/processing/Packet;->getSize()Landroid/util/Size;
+
+    move-result-object v6
+
+    .line 55
+    invoke-virtual {p0}, Landroidx/camera/core/processing/Packet;->getCropRect()Landroid/graphics/Rect;
 
     move-result-object v7
 
-    .line 53
-    invoke-virtual {v0}, Landroidx/camera/core/processing/Packet;->getCropRect()Landroid/graphics/Rect;
+    .line 56
+    invoke-virtual {p0}, Landroidx/camera/core/processing/Packet;->getRotationDegrees()I
 
-    move-result-object v8
+    move-result v8
 
-    .line 54
-    invoke-virtual {v0}, Landroidx/camera/core/processing/Packet;->getRotationDegrees()I
+    .line 57
+    invoke-virtual {p0}, Landroidx/camera/core/processing/Packet;->getSensorToBufferTransform()Landroid/graphics/Matrix;
 
-    move-result v9
+    move-result-object v9
 
-    .line 55
-    invoke-virtual {v0}, Landroidx/camera/core/processing/Packet;->getSensorToBufferTransform()Landroid/graphics/Matrix;
+    .line 58
+    invoke-virtual {p0}, Landroidx/camera/core/processing/Packet;->getCameraCaptureResult()Landroidx/camera/core/impl/CameraCaptureResult;
 
     move-result-object v10
 
-    .line 56
-    invoke-virtual {v0}, Landroidx/camera/core/processing/Packet;->getCameraCaptureResult()Landroidx/camera/core/impl/CameraCaptureResult;
+    .line 51
+    invoke-static/range {v3 .. v10}, Landroidx/camera/core/processing/Packet;->of([BLandroidx/camera/core/impl/utils/Exif;ILandroid/util/Size;Landroid/graphics/Rect;ILandroid/graphics/Matrix;Landroidx/camera/core/impl/CameraCaptureResult;)Landroidx/camera/core/processing/Packet;
 
-    move-result-object v11
+    move-result-object p0
 
-    .line 49
-    invoke-static/range {v4 .. v11}, Landroidx/camera/core/processing/Packet;->of([BLandroidx/camera/core/impl/utils/Exif;ILandroid/util/Size;Landroid/graphics/Rect;ILandroid/graphics/Matrix;Landroidx/camera/core/impl/CameraCaptureResult;)Landroidx/camera/core/processing/Packet;
-
-    move-result-object p1
-
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
@@ -185,12 +185,12 @@
         }
     .end annotation
 
-    .line 40
+    .line 42
     check-cast p1, Landroidx/camera/core/imagecapture/Bitmap2JpegBytes$In;
 
     invoke-virtual {p0, p1}, Landroidx/camera/core/imagecapture/Bitmap2JpegBytes;->apply(Landroidx/camera/core/imagecapture/Bitmap2JpegBytes$In;)Landroidx/camera/core/processing/Packet;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

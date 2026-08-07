@@ -36,7 +36,7 @@
 
     return v0
 
-    .line 46
+    .line 45
     :cond_0
     instance-of v1, p1, Landroidx/camera/core/CameraState$StateError;
 
@@ -44,10 +44,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 47
+    .line 46
     check-cast p1, Landroidx/camera/core/CameraState$StateError;
 
-    .line 48
+    .line 47
     iget v1, p0, Landroidx/camera/core/AutoValue_CameraState_StateError;->code:I
 
     invoke-virtual {p1}, Landroidx/camera/core/CameraState$StateError;->getCode()I
@@ -56,16 +56,16 @@
 
     if-ne v1, v3, :cond_2
 
-    iget-object v1, p0, Landroidx/camera/core/AutoValue_CameraState_StateError;->cause:Ljava/lang/Throwable;
+    iget-object p0, p0, Landroidx/camera/core/AutoValue_CameraState_StateError;->cause:Ljava/lang/Throwable;
 
-    if-nez v1, :cond_1
+    if-nez p0, :cond_1
 
-    .line 49
+    .line 48
     invoke-virtual {p1}, Landroidx/camera/core/CameraState$StateError;->getCause()Ljava/lang/Throwable;
 
-    move-result-object p1
+    move-result-object p0
 
-    if-nez p1, :cond_2
+    if-nez p0, :cond_2
 
     goto :goto_0
 
@@ -74,11 +74,11 @@
 
     move-result-object p1
 
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_2
+    if-eqz p0, :cond_2
 
     :goto_0
     return v0
@@ -88,27 +88,27 @@
 .end method
 
 .method public getCause()Ljava/lang/Throwable;
-    .locals 1
+    .locals 0
 
-    .line 30
-    iget-object v0, p0, Landroidx/camera/core/AutoValue_CameraState_StateError;->cause:Ljava/lang/Throwable;
+    .line 29
+    iget-object p0, p0, Landroidx/camera/core/AutoValue_CameraState_StateError;->cause:Ljava/lang/Throwable;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getCode()I
-    .locals 1
+    .locals 0
 
     .line 24
-    iget v0, p0, Landroidx/camera/core/AutoValue_CameraState_StateError;->code:I
+    iget p0, p0, Landroidx/camera/core/AutoValue_CameraState_StateError;->code:I
 
-    return v0
+    return p0
 .end method
 
 .method public hashCode()I
     .locals 2
 
-    .line 58
+    .line 57
     iget v0, p0, Landroidx/camera/core/AutoValue_CameraState_StateError;->code:I
 
     const v1, 0xf4243
@@ -117,30 +117,30 @@
 
     mul-int/2addr v0, v1
 
-    .line 60
-    iget-object v1, p0, Landroidx/camera/core/AutoValue_CameraState_StateError;->cause:Ljava/lang/Throwable;
+    .line 59
+    iget-object p0, p0, Landroidx/camera/core/AutoValue_CameraState_StateError;->cause:Ljava/lang/Throwable;
 
-    if-nez v1, :cond_0
+    if-nez p0, :cond_0
 
-    const/4 v1, 0x0
+    const/4 p0, 0x0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
-    move-result v1
+    move-result p0
 
     :goto_0
-    xor-int/2addr v0, v1
+    xor-int/2addr p0, v0
 
-    return v0
+    return p0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 35
+    .line 34
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "StateError{code="
@@ -155,17 +155,17 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Landroidx/camera/core/AutoValue_CameraState_StateError;->cause:Ljava/lang/Throwable;
+    iget-object p0, p0, Landroidx/camera/core/AutoValue_CameraState_StateError;->cause:Ljava/lang/Throwable;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, "}"
+    const-string/jumbo p0, "}"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

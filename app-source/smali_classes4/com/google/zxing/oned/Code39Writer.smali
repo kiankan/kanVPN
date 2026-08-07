@@ -327,40 +327,40 @@
 
 # virtual methods
 .method public encode(Ljava/lang/String;)[Z
-    .locals 12
+    .locals 11
 
     .line 39
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
-    move-result v0
+    move-result p0
 
     .line 40
-    const-string v1, "Requested contents should be less than 80 digits long, but got "
+    const-string v0, "Requested contents should be less than 80 digits long, but got "
 
-    const/16 v2, 0x50
+    const/16 v1, 0x50
 
-    if-gt v0, v2, :cond_4
+    if-gt p0, v1, :cond_4
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    move v4, v3
+    move v3, v2
 
     .line 45
     :goto_0
-    const-string v5, "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ-. $/+%"
+    const-string v4, "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ-. $/+%"
 
-    if-ge v4, v0, :cond_2
+    if-ge v3, p0, :cond_2
 
     .line 46
-    invoke-virtual {p1, v4}, Ljava/lang/String;->charAt(I)C
+    invoke-virtual {p1, v3}, Ljava/lang/String;->charAt(I)C
 
-    move-result v6
+    move-result v5
 
-    invoke-virtual {v5, v6}, Ljava/lang/String;->indexOf(I)I
+    invoke-virtual {v4, v5}, Ljava/lang/String;->indexOf(I)I
 
-    move-result v6
+    move-result v5
 
-    if-gez v6, :cond_1
+    if-gez v5, :cond_1
 
     .line 48
     invoke-static {p1}, Lcom/google/zxing/oned/Code39Writer;->tryToConvertToExtendedMode(Ljava/lang/String;)Ljava/lang/String;
@@ -370,9 +370,9 @@
     .line 49
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
-    move-result v0
+    move-result p0
 
-    if-gt v0, v2, :cond_0
+    if-gt p0, v1, :cond_0
 
     goto :goto_1
 
@@ -380,136 +380,136 @@
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v0, " (extended full ASCII mode)"
+    const-string p0, " (extended full ASCII mode)"
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p1
 
     :cond_1
-    add-int/lit8 v4, v4, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_2
     :goto_1
-    const/16 v1, 0x9
+    const/16 v0, 0x9
 
     .line 58
-    new-array v1, v1, [I
+    new-array v0, v0, [I
 
-    mul-int/lit8 v2, v0, 0xd
+    mul-int/lit8 v1, p0, 0xd
 
-    add-int/lit8 v2, v2, 0x19
+    add-int/lit8 v1, v1, 0x19
 
     .line 60
-    new-array v2, v2, [Z
+    new-array v1, v1, [Z
 
-    const/16 v4, 0x94
+    const/16 v3, 0x94
 
     .line 61
-    invoke-static {v4, v1}, Lcom/google/zxing/oned/Code39Writer;->toIntArray(I[I)V
+    invoke-static {v3, v0}, Lcom/google/zxing/oned/Code39Writer;->toIntArray(I[I)V
 
-    const/4 v6, 0x1
+    const/4 v5, 0x1
 
     .line 62
-    invoke-static {v2, v3, v1, v6}, Lcom/google/zxing/oned/Code39Writer;->appendPattern([ZI[IZ)I
+    invoke-static {v1, v2, v0, v5}, Lcom/google/zxing/oned/Code39Writer;->appendPattern([ZI[IZ)I
 
-    move-result v7
+    move-result v6
 
     .line 63
-    filled-new-array {v6}, [I
+    filled-new-array {v5}, [I
 
-    move-result-object v8
+    move-result-object v7
 
     .line 64
-    invoke-static {v2, v7, v8, v3}, Lcom/google/zxing/oned/Code39Writer;->appendPattern([ZI[IZ)I
+    invoke-static {v1, v6, v7, v2}, Lcom/google/zxing/oned/Code39Writer;->appendPattern([ZI[IZ)I
+
+    move-result v8
+
+    add-int/2addr v6, v8
+
+    move v8, v2
+
+    :goto_2
+    if-ge v8, p0, :cond_3
+
+    .line 67
+    invoke-virtual {p1, v8}, Ljava/lang/String;->charAt(I)C
 
     move-result v9
 
-    add-int/2addr v7, v9
+    invoke-virtual {v4, v9}, Ljava/lang/String;->indexOf(I)I
 
-    move v9, v3
-
-    :goto_2
-    if-ge v9, v0, :cond_3
-
-    .line 67
-    invoke-virtual {p1, v9}, Ljava/lang/String;->charAt(I)C
-
-    move-result v10
-
-    invoke-virtual {v5, v10}, Ljava/lang/String;->indexOf(I)I
-
-    move-result v10
+    move-result v9
 
     .line 68
-    sget-object v11, Lcom/google/zxing/oned/Code39Reader;->CHARACTER_ENCODINGS:[I
+    sget-object v10, Lcom/google/zxing/oned/Code39Reader;->CHARACTER_ENCODINGS:[I
 
-    aget v10, v11, v10
+    aget v9, v10, v9
 
-    invoke-static {v10, v1}, Lcom/google/zxing/oned/Code39Writer;->toIntArray(I[I)V
+    invoke-static {v9, v0}, Lcom/google/zxing/oned/Code39Writer;->toIntArray(I[I)V
 
     .line 69
-    invoke-static {v2, v7, v1, v6}, Lcom/google/zxing/oned/Code39Writer;->appendPattern([ZI[IZ)I
+    invoke-static {v1, v6, v0, v5}, Lcom/google/zxing/oned/Code39Writer;->appendPattern([ZI[IZ)I
 
-    move-result v10
+    move-result v9
 
-    add-int/2addr v7, v10
+    add-int/2addr v6, v9
 
     .line 70
-    invoke-static {v2, v7, v8, v3}, Lcom/google/zxing/oned/Code39Writer;->appendPattern([ZI[IZ)I
+    invoke-static {v1, v6, v7, v2}, Lcom/google/zxing/oned/Code39Writer;->appendPattern([ZI[IZ)I
 
-    move-result v10
+    move-result v9
 
-    add-int/2addr v7, v10
+    add-int/2addr v6, v9
 
-    add-int/lit8 v9, v9, 0x1
+    add-int/lit8 v8, v8, 0x1
 
     goto :goto_2
 
     .line 72
     :cond_3
-    invoke-static {v4, v1}, Lcom/google/zxing/oned/Code39Writer;->toIntArray(I[I)V
+    invoke-static {v3, v0}, Lcom/google/zxing/oned/Code39Writer;->toIntArray(I[I)V
 
     .line 73
-    invoke-static {v2, v7, v1, v6}, Lcom/google/zxing/oned/Code39Writer;->appendPattern([ZI[IZ)I
+    invoke-static {v1, v6, v0, v5}, Lcom/google/zxing/oned/Code39Writer;->appendPattern([ZI[IZ)I
 
-    return-object v2
+    return-object v1
 
     .line 41
     :cond_4
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p1
 .end method
 
 .method protected getSupportedWriteFormats()Ljava/util/Collection;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -520,11 +520,11 @@
     .end annotation
 
     .line 34
-    sget-object v0, Lcom/google/zxing/BarcodeFormat;->CODE_39:Lcom/google/zxing/BarcodeFormat;
+    sget-object p0, Lcom/google/zxing/BarcodeFormat;->CODE_39:Lcom/google/zxing/BarcodeFormat;
 
-    invoke-static {v0}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+    invoke-static {p0}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

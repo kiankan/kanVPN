@@ -45,7 +45,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -71,16 +71,6 @@
 
 
 # direct methods
-.method public static synthetic $r8$lambda$Exo1Z5q5y2pqqGK3kDcOXUK9u98()Landroidx/activity/ImmLeaksCleaner$Cleaner;
-    .locals 1
-
-    invoke-static {}, Landroidx/activity/ImmLeaksCleaner;->cleaner_delegate$lambda$0()Landroidx/activity/ImmLeaksCleaner$Cleaner;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method static constructor <clinit>()V
     .locals 2
 
@@ -130,7 +120,7 @@
     return-object v0
 .end method
 
-.method private static final cleaner_delegate$lambda$0()Landroidx/activity/ImmLeaksCleaner$Cleaner;
+.method static final cleaner_delegate$lambda$0()Landroidx/activity/ImmLeaksCleaner$Cleaner;
     .locals 5
 
     .line 113
@@ -195,9 +185,9 @@
 
 # virtual methods
 .method public onStateChanged(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;)V
-    .locals 2
+    .locals 1
 
-    const-string v0, "source"
+    const-string/jumbo v0, "source"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -214,97 +204,97 @@
 
     .line 34
     :cond_0
-    iget-object p1, p0, Landroidx/activity/ImmLeaksCleaner;->activity:Landroid/app/Activity;
+    iget-object p0, p0, Landroidx/activity/ImmLeaksCleaner;->activity:Landroid/app/Activity;
 
-    const-string p2, "input_method"
+    const-string p1, "input_method"
 
-    invoke-virtual {p1, p2}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    const-string p1, "null cannot be cast to non-null type android.view.inputmethod.InputMethodManager"
+
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast p0, Landroid/view/inputmethod/InputMethodManager;
+
+    .line 35
+    sget-object p1, Landroidx/activity/ImmLeaksCleaner;->Companion:Landroidx/activity/ImmLeaksCleaner$Companion;
+
+    invoke-virtual {p1}, Landroidx/activity/ImmLeaksCleaner$Companion;->getCleaner()Landroidx/activity/ImmLeaksCleaner$Cleaner;
 
     move-result-object p1
 
-    const-string p2, "null cannot be cast to non-null type android.view.inputmethod.InputMethodManager"
-
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
-
-    check-cast p1, Landroid/view/inputmethod/InputMethodManager;
-
-    .line 35
-    sget-object p2, Landroidx/activity/ImmLeaksCleaner;->Companion:Landroidx/activity/ImmLeaksCleaner$Companion;
-
-    invoke-virtual {p2}, Landroidx/activity/ImmLeaksCleaner$Companion;->getCleaner()Landroidx/activity/ImmLeaksCleaner$Cleaner;
+    .line 36
+    invoke-virtual {p1, p0}, Landroidx/activity/ImmLeaksCleaner$Cleaner;->getLock(Landroid/view/inputmethod/InputMethodManager;)Ljava/lang/Object;
 
     move-result-object p2
 
-    .line 36
-    invoke-virtual {p2, p1}, Landroidx/activity/ImmLeaksCleaner$Cleaner;->getLock(Landroid/view/inputmethod/InputMethodManager;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-nez v0, :cond_1
+    if-nez p2, :cond_1
 
     goto :goto_0
 
     .line 38
     :cond_1
-    monitor-enter v0
+    monitor-enter p2
 
     .line 39
     :try_start_0
-    invoke-virtual {p2, p1}, Landroidx/activity/ImmLeaksCleaner$Cleaner;->getServedView(Landroid/view/inputmethod/InputMethodManager;)Landroid/view/View;
+    invoke-virtual {p1, p0}, Landroidx/activity/ImmLeaksCleaner$Cleaner;->getServedView(Landroid/view/inputmethod/InputMethodManager;)Landroid/view/View;
 
-    move-result-object v1
+    move-result-object v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-nez v1, :cond_2
+    if-nez v0, :cond_2
 
     .line 38
-    monitor-exit v0
+    monitor-exit p2
 
     return-void
 
     .line 40
     :cond_2
     :try_start_1
-    invoke-virtual {v1}, Landroid/view/View;->isAttachedToWindow()Z
+    invoke-virtual {v0}, Landroid/view/View;->isAttachedToWindow()Z
 
-    move-result v1
+    move-result v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    if-eqz v1, :cond_3
+    if-eqz v0, :cond_3
 
     .line 38
-    monitor-exit v0
+    monitor-exit p2
 
     return-void
 
     .line 46
     :cond_3
     :try_start_2
-    invoke-virtual {p2, p1}, Landroidx/activity/ImmLeaksCleaner$Cleaner;->clearNextServedView(Landroid/view/inputmethod/InputMethodManager;)Z
+    invoke-virtual {p1, p0}, Landroidx/activity/ImmLeaksCleaner$Cleaner;->clearNextServedView(Landroid/view/inputmethod/InputMethodManager;)Z
 
-    move-result p2
+    move-result p1
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 38
-    monitor-exit v0
+    monitor-exit p2
 
-    if-eqz p2, :cond_4
+    if-eqz p1, :cond_4
 
     .line 51
-    invoke-virtual {p1}, Landroid/view/inputmethod/InputMethodManager;->isActive()Z
+    invoke-virtual {p0}, Landroid/view/inputmethod/InputMethodManager;->isActive()Z
 
     :cond_4
     :goto_0
     return-void
 
     :catchall_0
-    move-exception p1
+    move-exception p0
 
     .line 38
-    monitor-exit v0
+    monitor-exit p2
 
-    throw p1
+    throw p0
 .end method

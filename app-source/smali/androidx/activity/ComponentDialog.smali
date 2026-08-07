@@ -84,7 +84,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -102,32 +102,12 @@
 
 
 # direct methods
-.method public static synthetic $r8$lambda$50PeDeOZ7xBZFvhmt63acaX0YUk(Landroidx/activity/ComponentDialog;)Landroidx/navigationevent/DirectNavigationEventInput;
-    .locals 0
-
-    invoke-static {p0}, Landroidx/activity/ComponentDialog;->onBackPressedInput_delegate$lambda$0(Landroidx/activity/ComponentDialog;)Landroidx/navigationevent/DirectNavigationEventInput;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 .method public static synthetic $r8$lambda$XxpmZzi8FNPM2sJJA30VCt2mBcQ(Landroidx/activity/ComponentDialog;)V
     .locals 0
 
     invoke-static {p0}, Landroidx/activity/ComponentDialog;->onBackPressedDispatcher_delegate$lambda$0$0(Landroidx/activity/ComponentDialog;)V
 
     return-void
-.end method
-
-.method public static synthetic $r8$lambda$qS1cldBgQdRb0InzIVn5XXJnx0Q(Landroidx/activity/ComponentDialog;)Landroidx/activity/OnBackPressedDispatcher;
-    .locals 0
-
-    invoke-static {p0}, Landroidx/activity/ComponentDialog;->onBackPressedDispatcher_delegate$lambda$0(Landroidx/activity/ComponentDialog;)Landroidx/activity/OnBackPressedDispatcher;
-
-    move-result-object p0
-
-    return-object p0
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
@@ -241,21 +221,21 @@
 .end method
 
 .method private final getOnBackPressedInput()Landroidx/navigationevent/DirectNavigationEventInput;
-    .locals 1
+    .locals 0
 
     .line 64
-    iget-object v0, p0, Landroidx/activity/ComponentDialog;->onBackPressedInput$delegate:Lkotlin/Lazy;
+    iget-object p0, p0, Landroidx/activity/ComponentDialog;->onBackPressedInput$delegate:Lkotlin/Lazy;
 
-    invoke-interface {v0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Landroidx/navigationevent/DirectNavigationEventInput;
+    check-cast p0, Landroidx/navigationevent/DirectNavigationEventInput;
 
-    return-object v0
+    return-object p0
 .end method
 
-.method private static final onBackPressedDispatcher_delegate$lambda$0(Landroidx/activity/ComponentDialog;)Landroidx/activity/OnBackPressedDispatcher;
+.method static final onBackPressedDispatcher_delegate$lambda$0(Landroidx/activity/ComponentDialog;)Landroidx/activity/OnBackPressedDispatcher;
     .locals 2
 
     .line 107
@@ -279,7 +259,7 @@
     return-void
 .end method
 
-.method private static final onBackPressedInput_delegate$lambda$0(Landroidx/activity/ComponentDialog;)Landroidx/navigationevent/DirectNavigationEventInput;
+.method static final onBackPressedInput_delegate$lambda$0(Landroidx/activity/ComponentDialog;)Landroidx/navigationevent/DirectNavigationEventInput;
     .locals 2
 
     .line 65
@@ -306,7 +286,7 @@
 .method public addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
     .locals 1
 
-    const-string v0, "view"
+    const-string/jumbo v0, "view"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -320,59 +300,59 @@
 .end method
 
 .method public getLifecycle()Landroidx/lifecycle/Lifecycle;
-    .locals 1
+    .locals 0
 
     .line 60
     invoke-direct {p0}, Landroidx/activity/ComponentDialog;->getLifecycleRegistry()Landroidx/lifecycle/LifecycleRegistry;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Landroidx/lifecycle/Lifecycle;
+    check-cast p0, Landroidx/lifecycle/Lifecycle;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getNavigationEventDispatcher()Landroidx/navigationevent/NavigationEventDispatcher;
-    .locals 1
+    .locals 0
 
     .line 118
     invoke-virtual {p0}, Landroidx/activity/ComponentDialog;->getOnBackPressedDispatcher()Landroidx/activity/OnBackPressedDispatcher;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-virtual {v0}, Landroidx/activity/OnBackPressedDispatcher;->getEventDispatcher$activity()Landroidx/navigationevent/NavigationEventDispatcher;
+    invoke-virtual {p0}, Landroidx/activity/OnBackPressedDispatcher;->getEventDispatcher$activity()Landroidx/navigationevent/NavigationEventDispatcher;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getOnBackPressedDispatcher()Landroidx/activity/OnBackPressedDispatcher;
-    .locals 1
+    .locals 0
 
     .line 106
-    iget-object v0, p0, Landroidx/activity/ComponentDialog;->onBackPressedDispatcher$delegate:Lkotlin/Lazy;
+    iget-object p0, p0, Landroidx/activity/ComponentDialog;->onBackPressedDispatcher$delegate:Lkotlin/Lazy;
 
-    invoke-interface {v0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Landroidx/activity/OnBackPressedDispatcher;
+    check-cast p0, Landroidx/activity/OnBackPressedDispatcher;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getSavedStateRegistry()Landroidx/savedstate/SavedStateRegistry;
-    .locals 1
+    .locals 0
 
     .line 57
-    iget-object v0, p0, Landroidx/activity/ComponentDialog;->savedStateRegistryController:Landroidx/savedstate/SavedStateRegistryController;
+    iget-object p0, p0, Landroidx/activity/ComponentDialog;->savedStateRegistryController:Landroidx/savedstate/SavedStateRegistryController;
 
-    invoke-virtual {v0}, Landroidx/savedstate/SavedStateRegistryController;->getSavedStateRegistry()Landroidx/savedstate/SavedStateRegistry;
+    invoke-virtual {p0}, Landroidx/savedstate/SavedStateRegistryController;->getSavedStateRegistry()Landroidx/savedstate/SavedStateRegistry;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public initializeViewTreeOwners()V
@@ -450,17 +430,15 @@
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-object v1, p0
+    check-cast p0, Landroidx/navigationevent/NavigationEventDispatcherOwner;
 
-    check-cast v1, Landroidx/navigationevent/NavigationEventDispatcherOwner;
-
-    invoke-static {v0, v1}, Landroidx/navigationevent/ViewTreeNavigationEventDispatcherOwner;->set(Landroid/view/View;Landroidx/navigationevent/NavigationEventDispatcherOwner;)V
+    invoke-static {v0, p0}, Landroidx/navigationevent/ViewTreeNavigationEventDispatcherOwner;->set(Landroid/view/View;Landroidx/navigationevent/NavigationEventDispatcherOwner;)V
 
     return-void
 .end method
 
 .method public onBackPressed()V
-    .locals 1
+    .locals 0
     .annotation runtime Lkotlin/Deprecated;
         message = "This method has been deprecated in favor of using the\n      {@link OnBackPressedDispatcher} via {@link #getOnBackPressedDispatcher()}.\n      The OnBackPressedDispatcher controls how back button events are dispatched\n      to one or more {@link OnBackPressedCallback} objects."
     .end annotation
@@ -468,9 +446,9 @@
     .line 128
     invoke-direct {p0}, Landroidx/activity/ComponentDialog;->getOnBackPressedInput()Landroidx/navigationevent/DirectNavigationEventInput;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-virtual {v0}, Landroidx/navigationevent/DirectNavigationEventInput;->backCompleted()V
+    invoke-virtual {p0}, Landroidx/navigationevent/DirectNavigationEventInput;->backCompleted()V
 
     return-void
 .end method
@@ -512,11 +490,11 @@
     .line 83
     invoke-direct {p0}, Landroidx/activity/ComponentDialog;->getLifecycleRegistry()Landroidx/lifecycle/LifecycleRegistry;
 
-    move-result-object p1
+    move-result-object p0
 
-    sget-object v0, Landroidx/lifecycle/Lifecycle$Event;->ON_CREATE:Landroidx/lifecycle/Lifecycle$Event;
+    sget-object p1, Landroidx/lifecycle/Lifecycle$Event;->ON_CREATE:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {p1, v0}, Landroidx/lifecycle/LifecycleRegistry;->handleLifecycleEvent(Landroidx/lifecycle/Lifecycle$Event;)V
+    invoke-virtual {p0, p1}, Landroidx/lifecycle/LifecycleRegistry;->handleLifecycleEvent(Landroidx/lifecycle/Lifecycle$Event;)V
 
     return-void
 .end method
@@ -534,15 +512,15 @@
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 72
-    iget-object v1, p0, Landroidx/activity/ComponentDialog;->savedStateRegistryController:Landroidx/savedstate/SavedStateRegistryController;
+    iget-object p0, p0, Landroidx/activity/ComponentDialog;->savedStateRegistryController:Landroidx/savedstate/SavedStateRegistryController;
 
-    invoke-virtual {v1, v0}, Landroidx/savedstate/SavedStateRegistryController;->performSave(Landroid/os/Bundle;)V
+    invoke-virtual {p0, v0}, Landroidx/savedstate/SavedStateRegistryController;->performSave(Landroid/os/Bundle;)V
 
     return-object v0
 .end method
 
 .method protected onStart()V
-    .locals 2
+    .locals 1
 
     .line 88
     invoke-super {p0}, Landroid/app/Dialog;->onStart()V
@@ -550,11 +528,11 @@
     .line 89
     invoke-direct {p0}, Landroidx/activity/ComponentDialog;->getLifecycleRegistry()Landroidx/lifecycle/LifecycleRegistry;
 
-    move-result-object v0
+    move-result-object p0
 
-    sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_RESUME:Landroidx/lifecycle/Lifecycle$Event;
+    sget-object v0, Landroidx/lifecycle/Lifecycle$Event;->ON_RESUME:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {v0, v1}, Landroidx/lifecycle/LifecycleRegistry;->handleLifecycleEvent(Landroidx/lifecycle/Lifecycle$Event;)V
+    invoke-virtual {p0, v0}, Landroidx/lifecycle/LifecycleRegistry;->handleLifecycleEvent(Landroidx/lifecycle/Lifecycle$Event;)V
 
     return-void
 .end method
@@ -597,7 +575,7 @@
 .method public setContentView(Landroid/view/View;)V
     .locals 1
 
-    const-string v0, "view"
+    const-string/jumbo v0, "view"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -613,7 +591,7 @@
 .method public setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
     .locals 1
 
-    const-string v0, "view"
+    const-string/jumbo v0, "view"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

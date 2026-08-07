@@ -15,7 +15,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 73
+    .line 72
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,7 +33,7 @@
         }
     .end annotation
 
-    .line 50
+    .line 49
     new-instance v0, Landroidx/camera/core/CaptureBundles$CaptureBundleImpl;
 
     invoke-direct {v0, p0}, Landroidx/camera/core/CaptureBundles$CaptureBundleImpl;-><init>(Ljava/util/List;)V
@@ -44,7 +44,7 @@
 .method static varargs createCaptureBundle([Landroidx/camera/core/impl/CaptureStage;)Landroidx/camera/core/impl/CaptureBundle;
     .locals 1
 
-    .line 44
+    .line 43
     new-instance v0, Landroidx/camera/core/CaptureBundles$CaptureBundleImpl;
 
     invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;

@@ -3,6 +3,16 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum<",
+        "Lj$/time/format/TextStyle;",
+        ">;"
+    }
+.end annotation
+
+
 # static fields
 .field private static final synthetic $VALUES:[Lj$/time/format/TextStyle;
 
@@ -154,4 +164,15 @@
     check-cast v0, [Lj$/time/format/TextStyle;
 
     return-object v0
+.end method
+
+
+# virtual methods
+.method zoneNameStyleIndex()I
+    .locals 0
+
+    .line 175
+    iget p0, p0, Lj$/time/format/TextStyle;->zoneNameStyleIndex:I
+
+    return p0
 .end method

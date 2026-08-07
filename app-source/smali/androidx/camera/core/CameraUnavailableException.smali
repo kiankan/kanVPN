@@ -35,10 +35,10 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 97
+    .line 98
     invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
-    .line 98
+    .line 99
     iput p1, p0, Landroidx/camera/core/CameraUnavailableException;->mReason:I
 
     return-void
@@ -47,10 +47,10 @@
 .method public constructor <init>(ILjava/lang/String;)V
     .locals 0
 
-    .line 102
+    .line 103
     invoke-direct {p0, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 103
+    .line 104
     iput p1, p0, Landroidx/camera/core/CameraUnavailableException;->mReason:I
 
     return-void
@@ -59,10 +59,10 @@
 .method public constructor <init>(ILjava/lang/String;Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 108
+    .line 109
     invoke-direct {p0, p2, p3}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 109
+    .line 110
     iput p1, p0, Landroidx/camera/core/CameraUnavailableException;->mReason:I
 
     return-void
@@ -71,10 +71,10 @@
 .method public constructor <init>(ILjava/lang/Throwable;)V
     .locals 0
 
-    .line 113
+    .line 114
     invoke-direct {p0, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
 
-    .line 114
+    .line 115
     iput p1, p0, Landroidx/camera/core/CameraUnavailableException;->mReason:I
 
     return-void
@@ -83,10 +83,10 @@
 
 # virtual methods
 .method public getReason()I
-    .locals 1
+    .locals 0
 
-    .line 120
-    iget v0, p0, Landroidx/camera/core/CameraUnavailableException;->mReason:I
+    .line 121
+    iget p0, p0, Landroidx/camera/core/CameraUnavailableException;->mReason:I
 
-    return v0
+    return p0
 .end method

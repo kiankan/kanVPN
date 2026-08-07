@@ -15,7 +15,7 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000&\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0006\n\u0002\u0008\u000f\n\u0002\u0010\u0008\n\u0002\u0008\u0002\u0008\u0086\u0008\u0018\u00002\u00020\u0001B!\u0012\u0008\u0008\u0002\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u00a2\u0006\u0004\u0008\u0008\u0010\tJ\t\u0010\u0010\u001a\u00020\u0003H\u00c6\u0003J\t\u0010\u0011\u001a\u00020\u0005H\u00c6\u0003J\t\u0010\u0012\u001a\u00020\u0007H\u00c6\u0003J\'\u0010\u0013\u001a\u00020\u00002\u0008\u0008\u0002\u0010\u0002\u001a\u00020\u00032\u0008\u0008\u0002\u0010\u0004\u001a\u00020\u00052\u0008\u0008\u0002\u0010\u0006\u001a\u00020\u0007H\u00c6\u0001J\u0014\u0010\u0014\u001a\u00020\u00032\u0008\u0010\u0015\u001a\u0004\u0018\u00010\u0001H\u00d6\u0083\u0004J\n\u0010\u0016\u001a\u00020\u0017H\u00d6\u0081\u0004J\n\u0010\u0018\u001a\u00020\u0005H\u00d6\u0081\u0004R\u0011\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\n\u0010\u000bR\u0011\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u000c\u0010\rR\u0011\u0010\u0006\u001a\u00020\u0007\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u000e\u0010\u000f\u00a8\u0006\u0019"
+        "\u0000,\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0006\n\u0002\u0008\u000f\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\u0008\u0087\u0008\u0018\u00002\u00020\u0001B!\u0012\u0008\u0008\u0002\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u00a2\u0006\u0004\u0008\u0008\u0010\tJ\t\u0010\u0010\u001a\u00020\u0003H\u00c6\u0003J\t\u0010\u0011\u001a\u00020\u0005H\u00c6\u0003J\t\u0010\u0012\u001a\u00020\u0007H\u00c6\u0003J\'\u0010\u0013\u001a\u00020\u00002\u0008\u0008\u0002\u0010\u0002\u001a\u00020\u00032\u0008\u0008\u0002\u0010\u0004\u001a\u00020\u00052\u0008\u0008\u0002\u0010\u0006\u001a\u00020\u0007H\u00c6\u0001J\u0014\u0010\u0014\u001a\u00020\u00032\u0008\u0010\u0015\u001a\u0004\u0018\u00010\u0001H\u00d6\u0083\u0004J\n\u0010\u0016\u001a\u00020\u0017H\u00d6\u0081\u0004J\n\u0010\u0018\u001a\u00020\u0005H\u00d6\u0081\u0004R\u0011\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\n\u0010\u000bR\u0011\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u000c\u0010\rR\u0011\u0010\u0006\u001a\u00020\u0007\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u000e\u0010\u000f\u00ca\u0001\u000c\u0008\u001a\u0012\u0008\u0008\u001b\u0012\u0004\u0008\u0003\u0010\u0002\u00a8\u0006\u0019"
     }
     d2 = {
         "Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$CostObject;",
@@ -43,16 +43,22 @@
         "hashCode",
         "",
         "toString",
-        "app_playstoreRelease"
+        "v2rayNG:app_playstoreRelease",
+        "Landroidx/compose/runtime/internal/StabilityInferred;",
+        "parameters"
     }
     k = 0x1
     mv = {
         0x2,
-        0x3,
+        0x4,
         0x0
     }
     xi = 0x30
 .end annotation
+
+
+# static fields
+.field public static final $stable:I
 
 
 # instance fields
@@ -64,6 +70,12 @@
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 0
+
+    return-void
+.end method
+
 .method public constructor <init>(ZLjava/lang/String;D)V
     .locals 1
 
@@ -71,16 +83,16 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 446
+    .line 404
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 447
+    .line 405
     iput-boolean p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$CostObject;->regexp:Z
 
-    .line 448
+    .line 406
     iput-object p2, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$CostObject;->match:Ljava/lang/String;
 
-    .line 449
+    .line 407
     iput-wide p3, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$CostObject;->value:D
 
     return-void
@@ -95,7 +107,7 @@
 
     const/4 p1, 0x0
 
-    .line 446
+    .line 404
     :cond_0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$CostObject;-><init>(ZLjava/lang/String;D)V
 
@@ -136,19 +148,19 @@
 
 # virtual methods
 .method public final component1()Z
-    .locals 1
+    .locals 0
 
-    iget-boolean v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$CostObject;->regexp:Z
+    iget-boolean p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$CostObject;->regexp:Z
 
-    return v0
+    return p0
 .end method
 
 .method public final component2()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$CostObject;->match:Ljava/lang/String;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$CostObject;->match:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component3()D
@@ -160,21 +172,21 @@
 .end method
 
 .method public final copy(ZLjava/lang/String;D)Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$CostObject;
-    .locals 1
+    .locals 0
 
-    const-string v0, "match"
+    const-string p0, "match"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    new-instance v0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$CostObject;
+    new-instance p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$CostObject;
 
-    invoke-direct {v0, p1, p2, p3, p4}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$CostObject;-><init>(ZLjava/lang/String;D)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$CostObject;-><init>(ZLjava/lang/String;D)V
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
-    .locals 7
+    .locals 5
 
     const/4 v0, 0x1
 
@@ -218,13 +230,13 @@
     :cond_3
     iget-wide v3, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$CostObject;->value:D
 
-    iget-wide v5, p1, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$CostObject;->value:D
+    iget-wide p0, p1, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$CostObject;->value:D
 
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+    invoke-static {v3, v4, p0, p1}, Ljava/lang/Double;->compare(DD)I
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_4
+    if-eqz p0, :cond_4
 
     return v2
 
@@ -233,27 +245,27 @@
 .end method
 
 .method public final getMatch()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    .line 448
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$CostObject;->match:Ljava/lang/String;
+    .line 406
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$CostObject;->match:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getRegexp()Z
-    .locals 1
+    .locals 0
 
-    .line 447
-    iget-boolean v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$CostObject;->regexp:Z
+    .line 405
+    iget-boolean p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$CostObject;->regexp:Z
 
-    return v0
+    return p0
 .end method
 
 .method public final getValue()D
     .locals 2
 
-    .line 449
+    .line 407
     iget-wide v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$CostObject;->value:D
 
     return-wide v0
@@ -284,15 +296,15 @@
 
     invoke-static {v1, v2}, Ljava/lang/Double;->hashCode(D)I
 
-    move-result v1
+    move-result p0
 
-    add-int/2addr v0, v1
+    add-int/2addr v0, p0
 
     return v0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 6
+    .locals 5
 
     iget-boolean v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$CostObject;->regexp:Z
 
@@ -300,33 +312,33 @@
 
     iget-wide v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$CostObject;->value:D
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    new-instance p0, Ljava/lang/StringBuilder;
 
-    const-string v5, "CostObject(regexp="
+    const-string v4, "CostObject(regexp="
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     const-string v0, ", match="
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v0, ", value="
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     const-string v0, ")"
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

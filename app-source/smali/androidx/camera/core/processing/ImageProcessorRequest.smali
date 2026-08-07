@@ -31,19 +31,19 @@
 
 # virtual methods
 .method public getInputImage()Landroidx/camera/core/ImageProxy;
-    .locals 1
+    .locals 0
 
-    .line 40
-    iget-object v0, p0, Landroidx/camera/core/processing/ImageProcessorRequest;->mImageProxy:Landroidx/camera/core/ImageProxy;
+    .line 39
+    iget-object p0, p0, Landroidx/camera/core/processing/ImageProcessorRequest;->mImageProxy:Landroidx/camera/core/ImageProxy;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getOutputFormat()I
-    .locals 1
+    .locals 0
 
-    .line 45
-    iget v0, p0, Landroidx/camera/core/processing/ImageProcessorRequest;->mOutputFormat:I
+    .line 44
+    iget p0, p0, Landroidx/camera/core/processing/ImageProcessorRequest;->mOutputFormat:I
 
-    return v0
+    return p0
 .end method

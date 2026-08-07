@@ -150,46 +150,24 @@
 
     .line 151
     :cond_8
-    new-instance v0, Lj$/time/DateTimeException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-direct {v0, p0}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    invoke-static {p0}, Lj$/time/Year$3;->m(Ljava/lang/String;)V
 
     :cond_9
     return-void
 
     .line 138
     :cond_a
-    new-instance v0, Lj$/time/DateTimeException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-direct {v0, p0}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
+    invoke-static {p0}, Lj$/time/Year$3;->m(Ljava/lang/String;)V
 
-    throw v0
+    return-void
 .end method
 
 .method static ofId(Ljava/lang/String;Z)Lj$/time/ZoneRegion;
@@ -254,16 +232,16 @@
 .end method
 
 .method private readObject(Ljava/io/ObjectInputStream;)V
-    .locals 1
+    .locals 0
 
     .line 203
-    new-instance p1, Ljava/io/InvalidObjectException;
+    new-instance p0, Ljava/io/InvalidObjectException;
 
-    const-string v0, "Deserialization via serialization delegate"
+    const-string p1, "Deserialization via serialization delegate"
 
-    invoke-direct {p1, v0}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method private writeReplace()Ljava/lang/Object;
@@ -282,16 +260,16 @@
 
 # virtual methods
 .method public getId()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 170
-    iget-object v0, p0, Lj$/time/ZoneRegion;->id:Ljava/lang/String;
+    iget-object p0, p0, Lj$/time/ZoneRegion;->id:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getRules()Lj$/time/zone/ZoneRules;
-    .locals 2
+    .locals 1
 
     .line 177
     iget-object v0, p0, Lj$/time/ZoneRegion;->rules:Lj$/time/zone/ZoneRules;
@@ -301,15 +279,15 @@
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lj$/time/ZoneRegion;->id:Ljava/lang/String;
+    iget-object p0, p0, Lj$/time/ZoneRegion;->id:Ljava/lang/String;
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    invoke-static {v0, v1}, Lj$/time/zone/ZoneRulesProvider;->getRules(Ljava/lang/String;Z)Lj$/time/zone/ZoneRules;
+    invoke-static {p0, v0}, Lj$/time/zone/ZoneRulesProvider;->getRules(Ljava/lang/String;Z)Lj$/time/zone/ZoneRules;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method write(Ljava/io/DataOutput;)V
@@ -327,12 +305,12 @@
 .end method
 
 .method writeExternal(Ljava/io/DataOutput;)V
-    .locals 1
+    .locals 0
 
     .line 213
-    iget-object v0, p0, Lj$/time/ZoneRegion;->id:Ljava/lang/String;
+    iget-object p0, p0, Lj$/time/ZoneRegion;->id:Ljava/lang/String;
 
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeUTF(Ljava/lang/String;)V
+    invoke-interface {p1, p0}, Ljava/io/DataOutput;->writeUTF(Ljava/lang/String;)V
 
     return-void
 .end method

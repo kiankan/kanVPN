@@ -24,9 +24,9 @@
     .line 0
     check-cast p1, Ljava/util/List;
 
-    invoke-static {p1}, Landroidx/camera/core/ImageCapture;->lambda$submitStillCaptureRequest$4(Ljava/util/List;)Ljava/lang/Void;
+    invoke-static {p1}, Landroidx/camera/core/ImageCapture;->lambda$submitStillCaptureRequest$5(Ljava/util/List;)Ljava/lang/Void;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

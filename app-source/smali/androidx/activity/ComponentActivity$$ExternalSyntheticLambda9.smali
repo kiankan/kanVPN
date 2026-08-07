@@ -25,12 +25,12 @@
 
 # virtual methods
 .method public final onContextAvailable(Landroid/content/Context;)V
-    .locals 1
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Landroidx/activity/ComponentActivity$$ExternalSyntheticLambda9;->f$0:Landroidx/activity/ComponentActivity;
+    iget-object p0, p0, Landroidx/activity/ComponentActivity$$ExternalSyntheticLambda9;->f$0:Landroidx/activity/ComponentActivity;
 
-    invoke-static {v0, p1}, Landroidx/activity/ComponentActivity;->$r8$lambda$yPQlaAoRiY-RJ3IY_TqzUUTrVH0(Landroidx/activity/ComponentActivity;Landroid/content/Context;)V
+    invoke-static {p0, p1}, Landroidx/activity/ComponentActivity;->_init_$lambda$4(Landroidx/activity/ComponentActivity;Landroid/content/Context;)V
 
     return-void
 .end method

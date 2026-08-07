@@ -31,7 +31,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 441
+    .line 439
     new-instance v0, Landroidx/camera/core/processing/DefaultSurfaceProcessor$Factory$$ExternalSyntheticLambda0;
 
     invoke-direct {v0}, Landroidx/camera/core/processing/DefaultSurfaceProcessor$Factory$$ExternalSyntheticLambda0;-><init>()V
@@ -44,7 +44,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 438
+    .line 436
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -53,7 +53,7 @@
 .method public static newInstance(Landroidx/camera/core/DynamicRange;)Landroidx/camera/core/processing/SurfaceProcessorInternal;
     .locals 1
 
-    .line 449
+    .line 447
     sget-object v0, Landroidx/camera/core/processing/DefaultSurfaceProcessor$Factory;->sSupplier:Landroidx/arch/core/util/Function;
 
     invoke-interface {v0, p0}, Landroidx/arch/core/util/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
@@ -77,7 +77,7 @@
         }
     .end annotation
 
-    .line 458
+    .line 456
     sput-object p0, Landroidx/camera/core/processing/DefaultSurfaceProcessor$Factory;->sSupplier:Landroidx/arch/core/util/Function;
 
     return-void

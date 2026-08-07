@@ -94,7 +94,7 @@
 
     return v0
 
-    .line 93
+    .line 89
     :cond_0
     instance-of v1, p1, Landroidx/camera/core/impl/SessionConfig$OutputConfig;
 
@@ -102,10 +102,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 94
+    .line 90
     check-cast p1, Landroidx/camera/core/impl/SessionConfig$OutputConfig;
 
-    .line 95
+    .line 91
     iget-object v1, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig;->surface:Landroidx/camera/core/impl/DeferrableSurface;
 
     invoke-virtual {p1}, Landroidx/camera/core/impl/SessionConfig$OutputConfig;->getSurface()Landroidx/camera/core/impl/DeferrableSurface;
@@ -120,7 +120,7 @@
 
     iget-object v1, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig;->sharedSurfaces:Ljava/util/List;
 
-    .line 96
+    .line 92
     invoke-virtual {p1}, Landroidx/camera/core/impl/SessionConfig$OutputConfig;->getSharedSurfaces()Ljava/util/List;
 
     move-result-object v3
@@ -135,7 +135,7 @@
 
     if-nez v1, :cond_1
 
-    .line 97
+    .line 93
     invoke-virtual {p1}, Landroidx/camera/core/impl/SessionConfig$OutputConfig;->getPhysicalCameraId()Ljava/lang/String;
 
     move-result-object v1
@@ -158,7 +158,7 @@
     :goto_0
     iget v1, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig;->mirrorMode:I
 
-    .line 98
+    .line 94
     invoke-virtual {p1}, Landroidx/camera/core/impl/SessionConfig$OutputConfig;->getMirrorMode()I
 
     move-result v3
@@ -167,25 +167,25 @@
 
     iget v1, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig;->surfaceGroupId:I
 
-    .line 99
+    .line 95
     invoke-virtual {p1}, Landroidx/camera/core/impl/SessionConfig$OutputConfig;->getSurfaceGroupId()I
 
     move-result v3
 
     if-ne v1, v3, :cond_2
 
-    iget-object v1, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig;->dynamicRange:Landroidx/camera/core/DynamicRange;
+    iget-object p0, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig;->dynamicRange:Landroidx/camera/core/DynamicRange;
 
-    .line 100
+    .line 96
     invoke-virtual {p1}, Landroidx/camera/core/impl/SessionConfig$OutputConfig;->getDynamicRange()Landroidx/camera/core/DynamicRange;
 
     move-result-object p1
 
-    invoke-virtual {v1, p1}, Landroidx/camera/core/DynamicRange;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Landroidx/camera/core/DynamicRange;->equals(Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_2
+    if-eqz p0, :cond_2
 
     return v0
 
@@ -194,34 +194,34 @@
 .end method
 
 .method public getDynamicRange()Landroidx/camera/core/DynamicRange;
-    .locals 1
+    .locals 0
 
-    .line 73
-    iget-object v0, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig;->dynamicRange:Landroidx/camera/core/DynamicRange;
+    .line 69
+    iget-object p0, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig;->dynamicRange:Landroidx/camera/core/DynamicRange;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getMirrorMode()I
-    .locals 1
+    .locals 0
 
-    .line 62
-    iget v0, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig;->mirrorMode:I
+    .line 59
+    iget p0, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig;->mirrorMode:I
 
-    return v0
+    return p0
 .end method
 
 .method public getPhysicalCameraId()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    .line 56
-    iget-object v0, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig;->physicalCameraId:Ljava/lang/String;
+    .line 53
+    iget-object p0, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig;->physicalCameraId:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getSharedSurfaces()Ljava/util/List;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -231,34 +231,34 @@
         }
     .end annotation
 
-    .line 50
-    iget-object v0, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig;->sharedSurfaces:Ljava/util/List;
+    .line 48
+    iget-object p0, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig;->sharedSurfaces:Ljava/util/List;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getSurface()Landroidx/camera/core/impl/DeferrableSurface;
-    .locals 1
+    .locals 0
 
-    .line 44
-    iget-object v0, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig;->surface:Landroidx/camera/core/impl/DeferrableSurface;
+    .line 43
+    iget-object p0, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig;->surface:Landroidx/camera/core/impl/DeferrableSurface;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getSurfaceGroupId()I
-    .locals 1
+    .locals 0
 
-    .line 67
-    iget v0, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig;->surfaceGroupId:I
+    .line 64
+    iget p0, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig;->surfaceGroupId:I
 
-    return v0
+    return p0
 .end method
 
 .method public hashCode()I
     .locals 3
 
-    .line 109
+    .line 105
     iget-object v0, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig;->surface:Landroidx/camera/core/impl/DeferrableSurface;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -271,7 +271,7 @@
 
     mul-int/2addr v0, v1
 
-    .line 111
+    .line 107
     iget-object v2, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig;->sharedSurfaces:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->hashCode()I
@@ -282,7 +282,7 @@
 
     mul-int/2addr v0, v1
 
-    .line 113
+    .line 109
     iget-object v2, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig;->physicalCameraId:Ljava/lang/String;
 
     if-nez v2, :cond_0
@@ -301,36 +301,36 @@
 
     mul-int/2addr v0, v1
 
-    .line 115
+    .line 111
     iget v2, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig;->mirrorMode:I
 
     xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
-    .line 117
+    .line 113
     iget v2, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig;->surfaceGroupId:I
 
     xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
-    .line 119
-    iget-object v1, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig;->dynamicRange:Landroidx/camera/core/DynamicRange;
+    .line 115
+    iget-object p0, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig;->dynamicRange:Landroidx/camera/core/DynamicRange;
 
-    invoke-virtual {v1}, Landroidx/camera/core/DynamicRange;->hashCode()I
+    invoke-virtual {p0}, Landroidx/camera/core/DynamicRange;->hashCode()I
 
-    move-result v1
+    move-result p0
 
-    xor-int/2addr v0, v1
+    xor-int/2addr p0, v0
 
-    return v0
+    return p0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 78
+    .line 74
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "OutputConfig{surface="
@@ -377,17 +377,17 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig;->dynamicRange:Landroidx/camera/core/DynamicRange;
+    iget-object p0, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig;->dynamicRange:Landroidx/camera/core/DynamicRange;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, "}"
+    const-string/jumbo p0, "}"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

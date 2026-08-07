@@ -61,15 +61,15 @@
     .line 183
     :cond_0
     :try_start_0
-    iget-object v0, p0, Lcom/google/zxing/qrcode/decoder/Decoder;->rsDecoder:Lcom/google/zxing/common/reedsolomon/ReedSolomonDecoder;
+    iget-object p0, p0, Lcom/google/zxing/qrcode/decoder/Decoder;->rsDecoder:Lcom/google/zxing/common/reedsolomon/ReedSolomonDecoder;
 
-    array-length v3, p1
+    array-length v0, p1
 
-    sub-int/2addr v3, p2
+    sub-int/2addr v0, p2
 
-    invoke-virtual {v0, v1, v3}, Lcom/google/zxing/common/reedsolomon/ReedSolomonDecoder;->decodeWithECCount([II)I
+    invoke-virtual {p0, v1, v0}, Lcom/google/zxing/common/reedsolomon/ReedSolomonDecoder;->decodeWithECCount([II)I
 
-    move-result v0
+    move-result p0
     :try_end_0
     .catch Lcom/google/zxing/common/reedsolomon/ReedSolomonException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -77,26 +77,26 @@
     if-ge v2, p2, :cond_1
 
     .line 190
-    aget v3, v1, v2
+    aget v0, v1, v2
 
-    int-to-byte v3, v3
+    int-to-byte v0, v0
 
-    aput-byte v3, p1, v2
+    aput-byte v0, p1, v2
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
     :cond_1
-    return v0
+    return p0
 
     .line 185
     :catch_0
     invoke-static {}, Lcom/google/zxing/ChecksumException;->getChecksumInstance()Lcom/google/zxing/ChecksumException;
 
-    move-result-object p1
+    move-result-object p0
 
-    throw p1
+    throw p0
 .end method
 
 .method private decode(Lcom/google/zxing/qrcode/decoder/BitMatrixParser;Ljava/util/Map;)Lcom/google/zxing/common/DecoderResult;
@@ -230,16 +230,16 @@
     :cond_2
     invoke-static {v2, v0, v1, p2}, Lcom/google/zxing/qrcode/decoder/DecodedBitStreamParser;->decode([BLcom/google/zxing/qrcode/decoder/Version;Lcom/google/zxing/qrcode/decoder/ErrorCorrectionLevel;Ljava/util/Map;)Lcom/google/zxing/common/DecoderResult;
 
-    move-result-object p1
+    move-result-object p0
 
     .line 161
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object p2
+    move-result-object p1
 
-    invoke-virtual {p1, p2}, Lcom/google/zxing/common/DecoderResult;->setErrorsCorrected(Ljava/lang/Integer;)V
+    invoke-virtual {p0, p1}, Lcom/google/zxing/common/DecoderResult;->setErrorsCorrected(Ljava/lang/Integer;)V
 
-    return-object p1
+    return-object p0
 .end method
 
 
@@ -258,9 +258,9 @@
     .line 64
     invoke-virtual {p0, p1, v0}, Lcom/google/zxing/qrcode/decoder/Decoder;->decode(Lcom/google/zxing/common/BitMatrix;Ljava/util/Map;)Lcom/google/zxing/common/DecoderResult;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public decode(Lcom/google/zxing/common/BitMatrix;Ljava/util/Map;)Lcom/google/zxing/common/DecoderResult;
@@ -294,12 +294,12 @@
     :try_start_0
     invoke-direct {p0, v0, p2}, Lcom/google/zxing/qrcode/decoder/Decoder;->decode(Lcom/google/zxing/qrcode/decoder/BitMatrixParser;Ljava/util/Map;)Lcom/google/zxing/common/DecoderResult;
 
-    move-result-object p1
+    move-result-object p0
     :try_end_0
     .catch Lcom/google/zxing/FormatException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Lcom/google/zxing/ChecksumException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object p1
+    return-object p0
 
     :catch_0
     move-exception v1
@@ -337,19 +337,19 @@
     .line 114
     invoke-direct {p0, v0, p2}, Lcom/google/zxing/qrcode/decoder/Decoder;->decode(Lcom/google/zxing/qrcode/decoder/BitMatrixParser;Ljava/util/Map;)Lcom/google/zxing/common/DecoderResult;
 
-    move-result-object p2
+    move-result-object p0
 
     .line 117
-    new-instance v0, Lcom/google/zxing/qrcode/decoder/QRCodeDecoderMetaData;
+    new-instance p2, Lcom/google/zxing/qrcode/decoder/QRCodeDecoderMetaData;
 
-    invoke-direct {v0, v2}, Lcom/google/zxing/qrcode/decoder/QRCodeDecoderMetaData;-><init>(Z)V
+    invoke-direct {p2, v2}, Lcom/google/zxing/qrcode/decoder/QRCodeDecoderMetaData;-><init>(Z)V
 
-    invoke-virtual {p2, v0}, Lcom/google/zxing/common/DecoderResult;->setOther(Ljava/lang/Object;)V
+    invoke-virtual {p0, p2}, Lcom/google/zxing/common/DecoderResult;->setOther(Ljava/lang/Object;)V
     :try_end_1
     .catch Lcom/google/zxing/FormatException; {:try_start_1 .. :try_end_1} :catch_2
     .catch Lcom/google/zxing/ChecksumException; {:try_start_1 .. :try_end_1} :catch_2
 
-    return-object p2
+    return-object p0
 
     :catch_2
     if-eqz p1, :cond_0
@@ -376,9 +376,9 @@
     .line 45
     invoke-virtual {p0, p1, v0}, Lcom/google/zxing/qrcode/decoder/Decoder;->decode([[ZLjava/util/Map;)Lcom/google/zxing/common/DecoderResult;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public decode([[ZLjava/util/Map;)Lcom/google/zxing/common/DecoderResult;
@@ -407,7 +407,7 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/google/zxing/qrcode/decoder/Decoder;->decode(Lcom/google/zxing/common/BitMatrix;Ljava/util/Map;)Lcom/google/zxing/common/DecoderResult;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

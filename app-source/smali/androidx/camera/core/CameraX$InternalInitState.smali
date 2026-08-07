@@ -40,7 +40,7 @@
 .method private static synthetic $values()[Landroidx/camera/core/CameraX$InternalInitState;
     .locals 5
 
-    .line 571
+    .line 674
     sget-object v0, Landroidx/camera/core/CameraX$InternalInitState;->UNINITIALIZED:Landroidx/camera/core/CameraX$InternalInitState;
 
     sget-object v1, Landroidx/camera/core/CameraX$InternalInitState;->INITIALIZING:Landroidx/camera/core/CameraX$InternalInitState;
@@ -61,7 +61,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 573
+    .line 676
     new-instance v0, Landroidx/camera/core/CameraX$InternalInitState;
 
     const-string v1, "UNINITIALIZED"
@@ -72,7 +72,7 @@
 
     sput-object v0, Landroidx/camera/core/CameraX$InternalInitState;->UNINITIALIZED:Landroidx/camera/core/CameraX$InternalInitState;
 
-    .line 576
+    .line 679
     new-instance v0, Landroidx/camera/core/CameraX$InternalInitState;
 
     const-string v1, "INITIALIZING"
@@ -83,7 +83,7 @@
 
     sput-object v0, Landroidx/camera/core/CameraX$InternalInitState;->INITIALIZING:Landroidx/camera/core/CameraX$InternalInitState;
 
-    .line 579
+    .line 682
     new-instance v0, Landroidx/camera/core/CameraX$InternalInitState;
 
     const-string v1, "INITIALIZING_ERROR"
@@ -94,7 +94,7 @@
 
     sput-object v0, Landroidx/camera/core/CameraX$InternalInitState;->INITIALIZING_ERROR:Landroidx/camera/core/CameraX$InternalInitState;
 
-    .line 582
+    .line 685
     new-instance v0, Landroidx/camera/core/CameraX$InternalInitState;
 
     const-string v1, "INITIALIZED"
@@ -105,7 +105,7 @@
 
     sput-object v0, Landroidx/camera/core/CameraX$InternalInitState;->INITIALIZED:Landroidx/camera/core/CameraX$InternalInitState;
 
-    .line 589
+    .line 692
     new-instance v0, Landroidx/camera/core/CameraX$InternalInitState;
 
     const-string v1, "SHUTDOWN"
@@ -116,7 +116,7 @@
 
     sput-object v0, Landroidx/camera/core/CameraX$InternalInitState;->SHUTDOWN:Landroidx/camera/core/CameraX$InternalInitState;
 
-    .line 571
+    .line 674
     invoke-static {}, Landroidx/camera/core/CameraX$InternalInitState;->$values()[Landroidx/camera/core/CameraX$InternalInitState;
 
     move-result-object v0
@@ -145,7 +145,7 @@
         }
     .end annotation
 
-    .line 571
+    .line 674
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -162,7 +162,7 @@
         }
     .end annotation
 
-    .line 571
+    .line 674
     const-class v0, Landroidx/camera/core/CameraX$InternalInitState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -177,7 +177,7 @@
 .method public static values()[Landroidx/camera/core/CameraX$InternalInitState;
     .locals 1
 
-    .line 571
+    .line 674
     sget-object v0, Landroidx/camera/core/CameraX$InternalInitState;->$VALUES:[Landroidx/camera/core/CameraX$InternalInitState;
 
     invoke-virtual {v0}, [Landroidx/camera/core/CameraX$InternalInitState;->clone()Ljava/lang/Object;

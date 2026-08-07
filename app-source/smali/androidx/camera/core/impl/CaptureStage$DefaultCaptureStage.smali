@@ -25,15 +25,15 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 41
+    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
+    .line 41
     new-instance v0, Landroidx/camera/core/impl/CaptureConfig$Builder;
 
     invoke-direct {v0}, Landroidx/camera/core/impl/CaptureConfig$Builder;-><init>()V
 
-    .line 43
+    .line 42
     invoke-virtual {v0}, Landroidx/camera/core/impl/CaptureConfig$Builder;->build()Landroidx/camera/core/impl/CaptureConfig;
 
     move-result-object v0
@@ -46,18 +46,18 @@
 
 # virtual methods
 .method public getCaptureConfig()Landroidx/camera/core/impl/CaptureConfig;
-    .locals 1
+    .locals 0
 
-    .line 53
-    iget-object v0, p0, Landroidx/camera/core/impl/CaptureStage$DefaultCaptureStage;->mCaptureConfig:Landroidx/camera/core/impl/CaptureConfig;
+    .line 52
+    iget-object p0, p0, Landroidx/camera/core/impl/CaptureStage$DefaultCaptureStage;->mCaptureConfig:Landroidx/camera/core/impl/CaptureConfig;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getId()I
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method

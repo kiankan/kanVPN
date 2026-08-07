@@ -21,6 +21,8 @@
     <string-array name="policy_group_type">
         <item>最低延迟</item>
         <item>最稳定</item>
+        <item>随机选择</item>
+        <item>轮询</item>
     </string-array>
     <string-array name="preset_rulesets">
         <item>绕过大陆 (Whitelist)</item>
@@ -28,18 +30,6 @@
         <item>全局 (Global)</item>
         <item>伊朗 (Iran)</item>
         <item>俄罗斯白名单 (Russia Whitelist)</item>
-    </string-array>
-    <string-array name="share_method">
-        <item>二维码</item>
-        <item>导出至剪贴板</item>
-        <item>导出完整配置至剪贴板</item>
-    </string-array>
-    <string-array name="share_method_more">
-        <item>二维码</item>
-        <item>导出至剪贴板</item>
-        <item>导出完整配置至剪贴板</item>
-        <item>编辑</item>
-        <item>删除</item>
     </string-array>
     <string-array name="share_sub_method">
         <item>二维码</item>

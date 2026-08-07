@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 220
+    .line 213
     iput p1, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy$1;->val$rowStride:I
 
     iput p2, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy$1;->val$pixelStride:I
@@ -49,28 +49,28 @@
 
 # virtual methods
 .method public getBuffer()Ljava/nio/ByteBuffer;
-    .locals 1
+    .locals 0
 
-    .line 234
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy$1;->val$byteBuffer:Ljava/nio/ByteBuffer;
+    .line 226
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy$1;->val$byteBuffer:Ljava/nio/ByteBuffer;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getPixelStride()I
-    .locals 1
+    .locals 0
 
-    .line 228
-    iget v0, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy$1;->val$pixelStride:I
+    .line 221
+    iget p0, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy$1;->val$pixelStride:I
 
-    return v0
+    return p0
 .end method
 
 .method public getRowStride()I
-    .locals 1
+    .locals 0
 
-    .line 223
-    iget v0, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy$1;->val$rowStride:I
+    .line 216
+    iget p0, p0, Landroidx/camera/core/imagecapture/RgbaImageProxy$1;->val$rowStride:I
 
-    return v0
+    return p0
 .end method

@@ -67,9 +67,9 @@
 
     if-nez v2, :cond_0
 
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return-object p1
+    return-object p0
 
     .line 50
     :cond_0
@@ -94,16 +94,16 @@
     const/4 p1, 0x0
 
     .line 57
-    iget-object v0, p0, Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory;->constructorConstructor:Lcom/google/gson/internal/ConstructorConstructor;
+    iget-object p0, p0, Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory;->constructorConstructor:Lcom/google/gson/internal/ConstructorConstructor;
 
-    invoke-virtual {v0, p2, p1}, Lcom/google/gson/internal/ConstructorConstructor;->get(Lcom/google/gson/reflect/TypeToken;Z)Lcom/google/gson/internal/ObjectConstructor;
+    invoke-virtual {p0, p2, p1}, Lcom/google/gson/internal/ConstructorConstructor;->get(Lcom/google/gson/reflect/TypeToken;Z)Lcom/google/gson/internal/ObjectConstructor;
 
-    move-result-object p1
+    move-result-object p0
 
     .line 60
-    new-instance p2, Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter;
+    new-instance p1, Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter;
 
-    invoke-direct {p2, v2, p1}, Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter;-><init>(Lcom/google/gson/TypeAdapter;Lcom/google/gson/internal/ObjectConstructor;)V
+    invoke-direct {p1, v2, p0}, Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter;-><init>(Lcom/google/gson/TypeAdapter;Lcom/google/gson/internal/ObjectConstructor;)V
 
-    return-object p2
+    return-object p1
 .end method

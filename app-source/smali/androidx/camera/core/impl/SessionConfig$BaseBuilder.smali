@@ -70,38 +70,38 @@
 .method constructor <init>()V
     .locals 1
 
-    .line 438
+    .line 420
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 440
+    .line 422
     new-instance v0, Ljava/util/LinkedHashSet;
 
     invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
     iput-object v0, p0, Landroidx/camera/core/impl/SessionConfig$BaseBuilder;->mOutputConfigs:Ljava/util/Set;
 
-    .line 441
+    .line 423
     new-instance v0, Landroidx/camera/core/impl/CaptureConfig$Builder;
 
     invoke-direct {v0}, Landroidx/camera/core/impl/CaptureConfig$Builder;-><init>()V
 
     iput-object v0, p0, Landroidx/camera/core/impl/SessionConfig$BaseBuilder;->mCaptureConfigBuilder:Landroidx/camera/core/impl/CaptureConfig$Builder;
 
-    .line 442
+    .line 424
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroidx/camera/core/impl/SessionConfig$BaseBuilder;->mDeviceStateCallbacks:Ljava/util/List;
 
-    .line 443
+    .line 425
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroidx/camera/core/impl/SessionConfig$BaseBuilder;->mSessionStateCallbacks:Ljava/util/List;
 
-    .line 444
+    .line 426
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -110,7 +110,7 @@
 
     const/4 v0, 0x0
 
-    .line 449
+    .line 429
     iput v0, p0, Landroidx/camera/core/impl/SessionConfig$BaseBuilder;->mSessionType:I
 
     return-void

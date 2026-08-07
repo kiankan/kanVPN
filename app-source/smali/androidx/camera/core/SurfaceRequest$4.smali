@@ -56,7 +56,7 @@
         }
     .end annotation
 
-    .line 437
+    .line 455
     iput-object p1, p0, Landroidx/camera/core/SurfaceRequest$4;->this$0:Landroidx/camera/core/SurfaceRequest;
 
     iput-object p2, p0, Landroidx/camera/core/SurfaceRequest$4;->val$resultListener:Landroidx/core/util/Consumer;
@@ -73,7 +73,7 @@
 .method public onFailure(Ljava/lang/Throwable;)V
     .locals 3
 
-    .line 446
+    .line 464
     instance-of v0, p1, Landroidx/camera/core/SurfaceRequest$RequestCancelledException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -90,18 +90,18 @@
 
     invoke-static {v0, p1}, Landroidx/core/util/Preconditions;->checkState(ZLjava/lang/String;)V
 
-    .line 449
+    .line 467
     iget-object p1, p0, Landroidx/camera/core/SurfaceRequest$4;->val$resultListener:Landroidx/core/util/Consumer;
 
     const/4 v0, 0x1
 
-    iget-object v1, p0, Landroidx/camera/core/SurfaceRequest$4;->val$surface:Landroid/view/Surface;
+    iget-object p0, p0, Landroidx/camera/core/SurfaceRequest$4;->val$surface:Landroid/view/Surface;
 
-    invoke-static {v0, v1}, Landroidx/camera/core/SurfaceRequest$Result;->of(ILandroid/view/Surface;)Landroidx/camera/core/SurfaceRequest$Result;
+    invoke-static {v0, p0}, Landroidx/camera/core/SurfaceRequest$Result;->of(ILandroid/view/Surface;)Landroidx/camera/core/SurfaceRequest$Result;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-interface {p1, v0}, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V
+    invoke-interface {p1, p0}, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -117,7 +117,7 @@
         }
     .end annotation
 
-    .line 437
+    .line 455
     check-cast p1, Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Landroidx/camera/core/SurfaceRequest$4;->onSuccess(Ljava/lang/Void;)V
@@ -126,20 +126,20 @@
 .end method
 
 .method public onSuccess(Ljava/lang/Void;)V
-    .locals 2
+    .locals 1
 
-    .line 440
+    .line 458
     iget-object p1, p0, Landroidx/camera/core/SurfaceRequest$4;->val$resultListener:Landroidx/core/util/Consumer;
 
     const/4 v0, 0x0
 
-    iget-object v1, p0, Landroidx/camera/core/SurfaceRequest$4;->val$surface:Landroid/view/Surface;
+    iget-object p0, p0, Landroidx/camera/core/SurfaceRequest$4;->val$surface:Landroid/view/Surface;
 
-    invoke-static {v0, v1}, Landroidx/camera/core/SurfaceRequest$Result;->of(ILandroid/view/Surface;)Landroidx/camera/core/SurfaceRequest$Result;
+    invoke-static {v0, p0}, Landroidx/camera/core/SurfaceRequest$Result;->of(ILandroid/view/Surface;)Landroidx/camera/core/SurfaceRequest$Result;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-interface {p1, v0}, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V
+    invoke-interface {p1, p0}, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V
 
     return-void
 .end method

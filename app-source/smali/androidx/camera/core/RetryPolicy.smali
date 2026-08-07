@@ -34,10 +34,10 @@
 
     sput-object v0, Landroidx/camera/core/RetryPolicy;->NEVER:Landroidx/camera/core/RetryPolicy;
 
-    .line 121
+    .line 120
     new-instance v0, Landroidx/camera/core/impl/CameraProviderInitRetryPolicy$Legacy;
 
-    .line 122
+    .line 121
     invoke-static {}, Landroidx/camera/core/RetryPolicy;->getDefaultRetryTimeoutInMillis()J
 
     move-result-wide v1
@@ -46,10 +46,10 @@
 
     sput-object v0, Landroidx/camera/core/RetryPolicy;->DEFAULT:Landroidx/camera/core/RetryPolicy;
 
-    .line 140
+    .line 138
     new-instance v0, Landroidx/camera/core/impl/CameraProviderInitRetryPolicy;
 
-    .line 141
+    .line 139
     invoke-static {}, Landroidx/camera/core/RetryPolicy;->getDefaultRetryTimeoutInMillis()J
 
     move-result-wide v1

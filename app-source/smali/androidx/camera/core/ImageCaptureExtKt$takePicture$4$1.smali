@@ -18,31 +18,31 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000/\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000*\u0001\u0000\u0008\n\u0018\u00002\u00020\u0001J\u0010\u0010\u0002\u001a\u00020\u00032\u0006\u0010\u0004\u001a\u00020\u0005H\u0016J\u0008\u0010\u0006\u001a\u00020\u0003H\u0016J\u0010\u0010\u0007\u001a\u00020\u00032\u0006\u0010\u0008\u001a\u00020\tH\u0016J\u0010\u0010\n\u001a\u00020\u00032\u0006\u0010\u000b\u001a\u00020\u000cH\u0016J\u0010\u0010\r\u001a\u00020\u00032\u0006\u0010\u000e\u001a\u00020\u000fH\u0016\u00a8\u0006\u0010"
+        "\u00001\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000*\u0001\u0000\u0008\n\u0018\u00002\u00020\u0001J\u0008\u0010\u0002\u001a\u00020\u0003H\u0016J\u0010\u0010\u0004\u001a\u00020\u00032\u0006\u0010\u0005\u001a\u00020\u0006H\u0016J\u0010\u0010\u0007\u001a\u00020\u00032\u0006\u0010\u0008\u001a\u00020\tH\u0016J\u0010\u0010\n\u001a\u00020\u00032\u0006\u0010\u000b\u001a\u00020\u000cH\u0016J\u0010\u0010\r\u001a\u00020\u00032\u0006\u0010\u000e\u001a\u00020\u000fH\u0016\u00a8\u0006\u0010"
     }
     d2 = {
         "androidx/camera/core/ImageCaptureExtKt$takePicture$4$1",
         "Landroidx/camera/core/ImageCapture$OnImageSavedCallback;",
-        "onCaptureProcessProgressed",
+        "onCaptureStarted",
         "",
+        "onCaptureProcessProgressed",
         "progress",
         "",
-        "onCaptureStarted",
-        "onError",
-        "exception",
-        "Landroidx/camera/core/ImageCaptureException;",
-        "onImageSaved",
-        "outputFileResults",
-        "Landroidx/camera/core/ImageCapture$OutputFileResults;",
         "onPostviewBitmapAvailable",
         "bitmap",
         "Landroid/graphics/Bitmap;",
-        "camera-core_release"
+        "onImageSaved",
+        "outputFileResults",
+        "Landroidx/camera/core/ImageCapture$OutputFileResults;",
+        "onError",
+        "exception",
+        "Landroidx/camera/core/ImageCaptureException;",
+        "camera-core"
     }
     k = 0x1
     mv = {
+        0x2,
         0x1,
-        0x8,
         0x0
     }
     xi = 0x30
@@ -151,39 +151,39 @@
 
 # virtual methods
 .method public onCaptureProcessProgressed(I)V
-    .locals 1
+    .locals 0
 
     .line 114
-    iget-object v0, p0, Landroidx/camera/core/ImageCaptureExtKt$takePicture$4$1;->$onCaptureProcessProgressed:Lkotlin/jvm/functions/Function1;
+    iget-object p0, p0, Landroidx/camera/core/ImageCaptureExtKt$takePicture$4$1;->$onCaptureProcessProgressed:Lkotlin/jvm/functions/Function1;
 
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, p1}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void
 .end method
 
 .method public onCaptureStarted()V
-    .locals 1
+    .locals 0
 
     .line 110
-    iget-object v0, p0, Landroidx/camera/core/ImageCaptureExtKt$takePicture$4$1;->$onCaptureStarted:Lkotlin/jvm/functions/Function0;
+    iget-object p0, p0, Landroidx/camera/core/ImageCaptureExtKt$takePicture$4$1;->$onCaptureStarted:Lkotlin/jvm/functions/Function0;
 
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
-    invoke-interface {v0}, Lkotlin/jvm/functions/Function0;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lkotlin/jvm/functions/Function0;->invoke()Ljava/lang/Object;
 
     :cond_0
     return-void
 .end method
 
 .method public onError(Landroidx/camera/core/ImageCaptureException;)V
-    .locals 2
+    .locals 1
 
     const-string v0, "exception"
 
@@ -215,11 +215,11 @@
     invoke-virtual {v0}, Landroidx/camera/core/DelegatingImageSavedCallback;->dispose()V
 
     .line 128
-    iget-object v0, p0, Landroidx/camera/core/ImageCaptureExtKt$takePicture$4$1;->$continuation:Lkotlinx/coroutines/CancellableContinuation;
+    iget-object p0, p0, Landroidx/camera/core/ImageCaptureExtKt$takePicture$4$1;->$continuation:Lkotlinx/coroutines/CancellableContinuation;
 
-    check-cast v0, Lkotlin/coroutines/Continuation;
+    check-cast p0, Lkotlin/coroutines/Continuation;
 
-    sget-object v1, Lkotlin/Result;->Companion:Lkotlin/Result$Companion;
+    sget-object v0, Lkotlin/Result;->Companion:Lkotlin/Result$Companion;
 
     check-cast p1, Ljava/lang/Throwable;
 
@@ -231,15 +231,15 @@
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
+    invoke-interface {p0, p1}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 .method public onImageSaved(Landroidx/camera/core/ImageCapture$OutputFileResults;)V
-    .locals 2
+    .locals 1
 
-    const-string v0, "outputFileResults"
+    const-string/jumbo v0, "outputFileResults"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -269,17 +269,17 @@
     invoke-virtual {v0}, Landroidx/camera/core/DelegatingImageSavedCallback;->dispose()V
 
     .line 123
-    iget-object v0, p0, Landroidx/camera/core/ImageCaptureExtKt$takePicture$4$1;->$continuation:Lkotlinx/coroutines/CancellableContinuation;
+    iget-object p0, p0, Landroidx/camera/core/ImageCaptureExtKt$takePicture$4$1;->$continuation:Lkotlinx/coroutines/CancellableContinuation;
 
-    check-cast v0, Lkotlin/coroutines/Continuation;
+    check-cast p0, Lkotlin/coroutines/Continuation;
 
-    sget-object v1, Lkotlin/Result;->Companion:Lkotlin/Result$Companion;
+    sget-object v0, Lkotlin/Result;->Companion:Lkotlin/Result$Companion;
 
     invoke-static {p1}, Lkotlin/Result;->constructor-impl(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
+    invoke-interface {p0, p1}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -292,11 +292,11 @@
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 118
-    iget-object v0, p0, Landroidx/camera/core/ImageCaptureExtKt$takePicture$4$1;->$onPostviewBitmapAvailable:Lkotlin/jvm/functions/Function1;
+    iget-object p0, p0, Landroidx/camera/core/ImageCaptureExtKt$takePicture$4$1;->$onPostviewBitmapAvailable:Lkotlin/jvm/functions/Function1;
 
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, p1}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void

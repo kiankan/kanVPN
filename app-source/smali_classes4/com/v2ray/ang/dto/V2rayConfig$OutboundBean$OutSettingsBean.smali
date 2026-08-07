@@ -15,69 +15,43 @@
 
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$FragmentBean;,
-        Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$NoiseBean;,
-        Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$Response;,
-        Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$ServersBean;,
-        Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$VnextBean;,
         Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$WireGuardBean;
     }
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000L\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008G\n\u0002\u0010\u000b\n\u0002\u0008\n\u0008\u0086\u0008\u0018\u00002\u00020\u0001:\u0006defghiB\u00fd\u0001\u0012\u0010\u0008\u0002\u0010\u0002\u001a\n\u0012\u0004\u0012\u00020\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u0006\u0012\u0010\u0008\u0002\u0010\u0007\u001a\n\u0012\u0004\u0012\u00020\u0008\u0018\u00010\u0003\u0012\u0010\u0008\u0002\u0010\t\u001a\n\u0012\u0004\u0012\u00020\n\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010\u000b\u001a\u0004\u0018\u00010\u000c\u0012\n\u0008\u0002\u0010\r\u001a\u0004\u0018\u00010\u000e\u0012\n\u0008\u0002\u0010\u000f\u001a\u0004\u0018\u00010\u0001\u0012\n\u0008\u0002\u0010\u0010\u001a\u0004\u0018\u00010\u0011\u0012\n\u0008\u0002\u0010\u0012\u001a\u0004\u0018\u00010\u000e\u0012\n\u0008\u0002\u0010\u0013\u001a\u0004\u0018\u00010\u000e\u0012\n\u0008\u0002\u0010\u0014\u001a\u0004\u0018\u00010\u0011\u0012\n\u0008\u0002\u0010\u0015\u001a\u0004\u0018\u00010\u000e\u0012\n\u0008\u0002\u0010\u0016\u001a\u0004\u0018\u00010\u000e\u0012\u0010\u0008\u0002\u0010\u0017\u001a\n\u0012\u0004\u0012\u00020\u0018\u0018\u00010\u0003\u0012\u0010\u0008\u0002\u0010\u0019\u001a\n\u0012\u0004\u0012\u00020\u0011\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010\u001a\u001a\u0004\u0018\u00010\u0011\u0012\n\u0008\u0002\u0010\u001b\u001a\u0004\u0018\u00010\u000e\u0012\n\u0008\u0002\u0010\u001c\u001a\u0004\u0018\u00010\u0011\u00a2\u0006\u0004\u0008\u001d\u0010\u001eJ\u0011\u0010K\u001a\n\u0012\u0004\u0012\u00020\u0004\u0018\u00010\u0003H\u00c6\u0003J\u000b\u0010L\u001a\u0004\u0018\u00010\u0006H\u00c6\u0003J\u0011\u0010M\u001a\n\u0012\u0004\u0012\u00020\u0008\u0018\u00010\u0003H\u00c6\u0003J\u0011\u0010N\u001a\n\u0012\u0004\u0012\u00020\n\u0018\u00010\u0003H\u00c6\u0003J\u000b\u0010O\u001a\u0004\u0018\u00010\u000cH\u00c6\u0003J\u000b\u0010P\u001a\u0004\u0018\u00010\u000eH\u00c6\u0003J\u000b\u0010Q\u001a\u0004\u0018\u00010\u0001H\u00c6\u0003J\u0010\u0010R\u001a\u0004\u0018\u00010\u0011H\u00c6\u0003\u00a2\u0006\u0002\u00106J\u000b\u0010S\u001a\u0004\u0018\u00010\u000eH\u00c6\u0003J\u000b\u0010T\u001a\u0004\u0018\u00010\u000eH\u00c6\u0003J\u0010\u0010U\u001a\u0004\u0018\u00010\u0011H\u00c6\u0003\u00a2\u0006\u0002\u00106J\u000b\u0010V\u001a\u0004\u0018\u00010\u000eH\u00c6\u0003J\u000b\u0010W\u001a\u0004\u0018\u00010\u000eH\u00c6\u0003J\u0011\u0010X\u001a\n\u0012\u0004\u0012\u00020\u0018\u0018\u00010\u0003H\u00c6\u0003J\u0011\u0010Y\u001a\n\u0012\u0004\u0012\u00020\u0011\u0018\u00010\u0003H\u00c6\u0003J\u0010\u0010Z\u001a\u0004\u0018\u00010\u0011H\u00c6\u0003\u00a2\u0006\u0002\u00106J\u000b\u0010[\u001a\u0004\u0018\u00010\u000eH\u00c6\u0003J\u0010\u0010\\\u001a\u0004\u0018\u00010\u0011H\u00c6\u0003\u00a2\u0006\u0002\u00106J\u0084\u0002\u0010]\u001a\u00020\u00002\u0010\u0008\u0002\u0010\u0002\u001a\n\u0012\u0004\u0012\u00020\u0004\u0018\u00010\u00032\n\u0008\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u00062\u0010\u0008\u0002\u0010\u0007\u001a\n\u0012\u0004\u0012\u00020\u0008\u0018\u00010\u00032\u0010\u0008\u0002\u0010\t\u001a\n\u0012\u0004\u0012\u00020\n\u0018\u00010\u00032\n\u0008\u0002\u0010\u000b\u001a\u0004\u0018\u00010\u000c2\n\u0008\u0002\u0010\r\u001a\u0004\u0018\u00010\u000e2\n\u0008\u0002\u0010\u000f\u001a\u0004\u0018\u00010\u00012\n\u0008\u0002\u0010\u0010\u001a\u0004\u0018\u00010\u00112\n\u0008\u0002\u0010\u0012\u001a\u0004\u0018\u00010\u000e2\n\u0008\u0002\u0010\u0013\u001a\u0004\u0018\u00010\u000e2\n\u0008\u0002\u0010\u0014\u001a\u0004\u0018\u00010\u00112\n\u0008\u0002\u0010\u0015\u001a\u0004\u0018\u00010\u000e2\n\u0008\u0002\u0010\u0016\u001a\u0004\u0018\u00010\u000e2\u0010\u0008\u0002\u0010\u0017\u001a\n\u0012\u0004\u0012\u00020\u0018\u0018\u00010\u00032\u0010\u0008\u0002\u0010\u0019\u001a\n\u0012\u0004\u0012\u00020\u0011\u0018\u00010\u00032\n\u0008\u0002\u0010\u001a\u001a\u0004\u0018\u00010\u00112\n\u0008\u0002\u0010\u001b\u001a\u0004\u0018\u00010\u000e2\n\u0008\u0002\u0010\u001c\u001a\u0004\u0018\u00010\u0011H\u00c6\u0001\u00a2\u0006\u0002\u0010^J\u0014\u0010_\u001a\u00020`2\u0008\u0010a\u001a\u0004\u0018\u00010\u0001H\u00d6\u0083\u0004J\n\u0010b\u001a\u00020\u0011H\u00d6\u0081\u0004J\n\u0010c\u001a\u00020\u000eH\u00d6\u0081\u0004R\"\u0010\u0002\u001a\n\u0012\u0004\u0012\u00020\u0004\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u001f\u0010 \"\u0004\u0008!\u0010\"R\u001c\u0010\u0005\u001a\u0004\u0018\u00010\u0006X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008#\u0010$\"\u0004\u0008%\u0010&R\"\u0010\u0007\u001a\n\u0012\u0004\u0012\u00020\u0008\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\'\u0010 \"\u0004\u0008(\u0010\"R\"\u0010\t\u001a\n\u0012\u0004\u0012\u00020\n\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008)\u0010 \"\u0004\u0008*\u0010\"R\u001c\u0010\u000b\u001a\u0004\u0018\u00010\u000cX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008+\u0010,\"\u0004\u0008-\u0010.R\u0013\u0010\r\u001a\u0004\u0018\u00010\u000e\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008/\u00100R\u001c\u0010\u000f\u001a\u0004\u0018\u00010\u0001X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u00081\u00102\"\u0004\u00083\u00104R\u001e\u0010\u0010\u001a\u0004\u0018\u00010\u0011X\u0086\u000e\u00a2\u0006\u0010\n\u0002\u00109\u001a\u0004\u00085\u00106\"\u0004\u00087\u00108R\u001c\u0010\u0012\u001a\u0004\u0018\u00010\u000eX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008:\u00100\"\u0004\u0008;\u0010<R\u0013\u0010\u0013\u001a\u0004\u0018\u00010\u000e\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008=\u00100R\u0015\u0010\u0014\u001a\u0004\u0018\u00010\u0011\u00a2\u0006\n\n\u0002\u00109\u001a\u0004\u0008>\u00106R\u0013\u0010\u0015\u001a\u0004\u0018\u00010\u000e\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008?\u00100R\u001c\u0010\u0016\u001a\u0004\u0018\u00010\u000eX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008@\u00100\"\u0004\u0008A\u0010<R\u0019\u0010\u0017\u001a\n\u0012\u0004\u0012\u00020\u0018\u0018\u00010\u0003\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008B\u0010 R\"\u0010\u0019\u001a\n\u0012\u0004\u0012\u00020\u0011\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008C\u0010 \"\u0004\u0008D\u0010\"R\u001e\u0010\u001a\u001a\u0004\u0018\u00010\u0011X\u0086\u000e\u00a2\u0006\u0010\n\u0002\u00109\u001a\u0004\u0008E\u00106\"\u0004\u0008F\u00108R\u001c\u0010\u001b\u001a\u0004\u0018\u00010\u000eX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008G\u00100\"\u0004\u0008H\u0010<R\u001e\u0010\u001c\u001a\u0004\u0018\u00010\u0011X\u0086\u000e\u00a2\u0006\u0010\n\u0002\u00109\u001a\u0004\u0008I\u00106\"\u0004\u0008J\u00108\u00a8\u0006j"
+        "\u0000>\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0002\u0008\u0003\n\u0002\u0010$\n\u0002\u0008\t\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\u0008K\n\u0002\u0010\u000b\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0000\u0008\u0087\u0008\u0018\u00002\u00020\u0001:\u0001fB\u0083\u0002\u0012\n\u0008\u0002\u0010\u0002\u001a\u0004\u0018\u00010\u0001\u0012\n\u0008\u0002\u0010\u0003\u001a\u0004\u0018\u00010\u0004\u0012\n\u0008\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u0004\u0012\n\u0008\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u0007\u0012\n\u0008\u0002\u0010\u0008\u001a\u0004\u0018\u00010\u0007\u0012\n\u0008\u0002\u0010\t\u001a\u0004\u0018\u00010\u0007\u0012\u0016\u0008\u0002\u0010\n\u001a\u0010\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\u0007\u0018\u00010\u000b\u0012\n\u0008\u0002\u0010\u000c\u001a\u0004\u0018\u00010\u0007\u0012\n\u0008\u0002\u0010\r\u001a\u0004\u0018\u00010\u0007\u0012\n\u0008\u0002\u0010\u000e\u001a\u0004\u0018\u00010\u0007\u0012\n\u0008\u0002\u0010\u000f\u001a\u0004\u0018\u00010\u0007\u0012\n\u0008\u0002\u0010\u0010\u001a\u0004\u0018\u00010\u0007\u0012\n\u0008\u0002\u0010\u0011\u001a\u0004\u0018\u00010\u0007\u0012\n\u0008\u0002\u0010\u0012\u001a\u0004\u0018\u00010\u0004\u0012\n\u0008\u0002\u0010\u0013\u001a\u0004\u0018\u00010\u0007\u0012\u0010\u0008\u0002\u0010\u0014\u001a\n\u0012\u0004\u0012\u00020\u0016\u0018\u00010\u0015\u0012\u0010\u0008\u0002\u0010\u0017\u001a\n\u0012\u0004\u0012\u00020\u0004\u0018\u00010\u0015\u0012\n\u0008\u0002\u0010\u0018\u001a\u0004\u0018\u00010\u0004\u0012\n\u0008\u0002\u0010\u0019\u001a\u0004\u0018\u00010\u0007\u00a2\u0006\u0004\u0008\u001a\u0010\u001bJ\u000b\u0010L\u001a\u0004\u0018\u00010\u0001H\u00c6\u0003J\u0010\u0010M\u001a\u0004\u0018\u00010\u0004H\u00c6\u0003\u00a2\u0006\u0002\u0010!J\u0010\u0010N\u001a\u0004\u0018\u00010\u0004H\u00c6\u0003\u00a2\u0006\u0002\u0010!J\u000b\u0010O\u001a\u0004\u0018\u00010\u0007H\u00c6\u0003J\u000b\u0010P\u001a\u0004\u0018\u00010\u0007H\u00c6\u0003J\u000b\u0010Q\u001a\u0004\u0018\u00010\u0007H\u00c6\u0003J\u0017\u0010R\u001a\u0010\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\u0007\u0018\u00010\u000bH\u00c6\u0003J\u000b\u0010S\u001a\u0004\u0018\u00010\u0007H\u00c6\u0003J\u000b\u0010T\u001a\u0004\u0018\u00010\u0007H\u00c6\u0003J\u000b\u0010U\u001a\u0004\u0018\u00010\u0007H\u00c6\u0003J\u000b\u0010V\u001a\u0004\u0018\u00010\u0007H\u00c6\u0003J\u000b\u0010W\u001a\u0004\u0018\u00010\u0007H\u00c6\u0003J\u000b\u0010X\u001a\u0004\u0018\u00010\u0007H\u00c6\u0003J\u0010\u0010Y\u001a\u0004\u0018\u00010\u0004H\u00c6\u0003\u00a2\u0006\u0002\u0010!J\u000b\u0010Z\u001a\u0004\u0018\u00010\u0007H\u00c6\u0003J\u0011\u0010[\u001a\n\u0012\u0004\u0012\u00020\u0016\u0018\u00010\u0015H\u00c6\u0003J\u0011\u0010\\\u001a\n\u0012\u0004\u0012\u00020\u0004\u0018\u00010\u0015H\u00c6\u0003J\u0010\u0010]\u001a\u0004\u0018\u00010\u0004H\u00c6\u0003\u00a2\u0006\u0002\u0010!J\u000b\u0010^\u001a\u0004\u0018\u00010\u0007H\u00c6\u0003J\u008a\u0002\u0010_\u001a\u00020\u00002\n\u0008\u0002\u0010\u0002\u001a\u0004\u0018\u00010\u00012\n\u0008\u0002\u0010\u0003\u001a\u0004\u0018\u00010\u00042\n\u0008\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u00042\n\u0008\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u00072\n\u0008\u0002\u0010\u0008\u001a\u0004\u0018\u00010\u00072\n\u0008\u0002\u0010\t\u001a\u0004\u0018\u00010\u00072\u0016\u0008\u0002\u0010\n\u001a\u0010\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\u0007\u0018\u00010\u000b2\n\u0008\u0002\u0010\u000c\u001a\u0004\u0018\u00010\u00072\n\u0008\u0002\u0010\r\u001a\u0004\u0018\u00010\u00072\n\u0008\u0002\u0010\u000e\u001a\u0004\u0018\u00010\u00072\n\u0008\u0002\u0010\u000f\u001a\u0004\u0018\u00010\u00072\n\u0008\u0002\u0010\u0010\u001a\u0004\u0018\u00010\u00072\n\u0008\u0002\u0010\u0011\u001a\u0004\u0018\u00010\u00072\n\u0008\u0002\u0010\u0012\u001a\u0004\u0018\u00010\u00042\n\u0008\u0002\u0010\u0013\u001a\u0004\u0018\u00010\u00072\u0010\u0008\u0002\u0010\u0014\u001a\n\u0012\u0004\u0012\u00020\u0016\u0018\u00010\u00152\u0010\u0008\u0002\u0010\u0017\u001a\n\u0012\u0004\u0012\u00020\u0004\u0018\u00010\u00152\n\u0008\u0002\u0010\u0018\u001a\u0004\u0018\u00010\u00042\n\u0008\u0002\u0010\u0019\u001a\u0004\u0018\u00010\u0007H\u00c6\u0001\u00a2\u0006\u0002\u0010`J\u0014\u0010a\u001a\u00020b2\u0008\u0010c\u001a\u0004\u0018\u00010\u0001H\u00d6\u0083\u0004J\n\u0010d\u001a\u00020\u0004H\u00d6\u0081\u0004J\n\u0010e\u001a\u00020\u0007H\u00d6\u0081\u0004R\u001c\u0010\u0002\u001a\u0004\u0018\u00010\u0001X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u001c\u0010\u001d\"\u0004\u0008\u001e\u0010\u001fR\u001e\u0010\u0003\u001a\u0004\u0018\u00010\u0004X\u0086\u000e\u00a2\u0006\u0010\n\u0002\u0010$\u001a\u0004\u0008 \u0010!\"\u0004\u0008\"\u0010#R\u001e\u0010\u0005\u001a\u0004\u0018\u00010\u0004X\u0086\u000e\u00a2\u0006\u0010\n\u0002\u0010$\u001a\u0004\u0008%\u0010!\"\u0004\u0008&\u0010#R\u001c\u0010\u0006\u001a\u0004\u0018\u00010\u0007X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\'\u0010(\"\u0004\u0008)\u0010*R\u001c\u0010\u0008\u001a\u0004\u0018\u00010\u0007X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008+\u0010(\"\u0004\u0008,\u0010*R\u001c\u0010\t\u001a\u0004\u0018\u00010\u0007X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008-\u0010(\"\u0004\u0008.\u0010*R(\u0010\n\u001a\u0010\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\u0007\u0018\u00010\u000bX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008/\u00100\"\u0004\u00081\u00102R\u001c\u0010\u000c\u001a\u0004\u0018\u00010\u0007X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u00083\u0010(\"\u0004\u00084\u0010*R\u001c\u0010\r\u001a\u0004\u0018\u00010\u0007X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u00085\u0010(\"\u0004\u00086\u0010*R\u001c\u0010\u000e\u001a\u0004\u0018\u00010\u0007X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u00087\u0010(\"\u0004\u00088\u0010*R\u001c\u0010\u000f\u001a\u0004\u0018\u00010\u0007X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u00089\u0010(\"\u0004\u0008:\u0010*R\u001c\u0010\u0010\u001a\u0004\u0018\u00010\u0007X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008;\u0010(\"\u0004\u0008<\u0010*R\u001c\u0010\u0011\u001a\u0004\u0018\u00010\u0007X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008=\u0010(\"\u0004\u0008>\u0010*R\u001e\u0010\u0012\u001a\u0004\u0018\u00010\u0004X\u0086\u000e\u00a2\u0006\u0010\n\u0002\u0010$\u001a\u0004\u0008?\u0010!\"\u0004\u0008@\u0010#R\u001c\u0010\u0013\u001a\u0004\u0018\u00010\u0007X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008A\u0010(\"\u0004\u0008B\u0010*R\u0019\u0010\u0014\u001a\n\u0012\u0004\u0012\u00020\u0016\u0018\u00010\u0015\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008C\u0010DR\"\u0010\u0017\u001a\n\u0012\u0004\u0012\u00020\u0004\u0018\u00010\u0015X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008E\u0010D\"\u0004\u0008F\u0010GR\u001e\u0010\u0018\u001a\u0004\u0018\u00010\u0004X\u0086\u000e\u00a2\u0006\u0010\n\u0002\u0010$\u001a\u0004\u0008H\u0010!\"\u0004\u0008I\u0010#R\u001c\u0010\u0019\u001a\u0004\u0018\u00010\u0007X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008J\u0010(\"\u0004\u0008K\u0010*\u00ca\u0001\u000c\u0008h\u0012\u0008\u0008i\u0012\u0004\u0008\u0003\u0010\u0000\u00a8\u0006g"
     }
     d2 = {
         "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;",
         "",
-        "vnext",
-        "",
-        "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$VnextBean;",
-        "fragment",
-        "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$FragmentBean;",
-        "noises",
-        "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$NoiseBean;",
-        "servers",
-        "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$ServersBean;",
-        "response",
-        "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$Response;",
-        "network",
-        "",
         "address",
         "port",
         "",
-        "domainStrategy",
-        "redirect",
-        "userLevel",
-        "inboundTag",
+        "level",
+        "email",
+        "",
+        "user",
+        "pass",
+        "headers",
+        "",
+        "id",
+        "security",
+        "encryption",
+        "flow",
+        "password",
+        "method",
+        "version",
         "secretKey",
         "peers",
+        "",
         "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$WireGuardBean;",
         "reserved",
         "mtu",
-        "obfsPassword",
-        "version",
+        "domainStrategy",
         "<init>",
-        "(Ljava/util/List;Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$FragmentBean;Ljava/util/List;Ljava/util/List;Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$Response;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;)V",
-        "getVnext",
-        "()Ljava/util/List;",
-        "setVnext",
-        "(Ljava/util/List;)V",
-        "getFragment",
-        "()Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$FragmentBean;",
-        "setFragment",
-        "(Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$FragmentBean;)V",
-        "getNoises",
-        "setNoises",
-        "getServers",
-        "setServers",
-        "getResponse",
-        "()Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$Response;",
-        "setResponse",
-        "(Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$Response;)V",
-        "getNetwork",
-        "()Ljava/lang/String;",
+        "(Ljava/lang/Object;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/String;)V",
         "getAddress",
         "()Ljava/lang/Object;",
         "setAddress",
@@ -87,23 +61,45 @@
         "setPort",
         "(Ljava/lang/Integer;)V",
         "Ljava/lang/Integer;",
-        "getDomainStrategy",
-        "setDomainStrategy",
+        "getLevel",
+        "setLevel",
+        "getEmail",
+        "()Ljava/lang/String;",
+        "setEmail",
         "(Ljava/lang/String;)V",
-        "getRedirect",
-        "getUserLevel",
-        "getInboundTag",
+        "getUser",
+        "setUser",
+        "getPass",
+        "setPass",
+        "getHeaders",
+        "()Ljava/util/Map;",
+        "setHeaders",
+        "(Ljava/util/Map;)V",
+        "getId",
+        "setId",
+        "getSecurity",
+        "setSecurity",
+        "getEncryption",
+        "setEncryption",
+        "getFlow",
+        "setFlow",
+        "getPassword",
+        "setPassword",
+        "getMethod",
+        "setMethod",
+        "getVersion",
+        "setVersion",
         "getSecretKey",
         "setSecretKey",
         "getPeers",
+        "()Ljava/util/List;",
         "getReserved",
         "setReserved",
+        "(Ljava/util/List;)V",
         "getMtu",
         "setMtu",
-        "getObfsPassword",
-        "setObfsPassword",
-        "getVersion",
-        "setVersion",
+        "getDomainStrategy",
+        "setDomainStrategy",
         "component1",
         "component2",
         "component3",
@@ -122,29 +118,31 @@
         "component16",
         "component17",
         "component18",
+        "component19",
         "copy",
-        "(Ljava/util/List;Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$FragmentBean;Ljava/util/List;Ljava/util/List;Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$Response;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;)Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;",
+        "(Ljava/lang/Object;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/String;)Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;",
         "equals",
         "",
         "other",
         "hashCode",
         "toString",
-        "VnextBean",
-        "FragmentBean",
-        "NoiseBean",
-        "ServersBean",
-        "Response",
         "WireGuardBean",
-        "app_playstoreRelease"
+        "v2rayNG:app_playstoreRelease",
+        "Landroidx/compose/runtime/internal/StabilityInferred;",
+        "parameters"
     }
     k = 0x1
     mv = {
         0x2,
-        0x3,
+        0x4,
         0x0
     }
     xi = 0x30
 .end annotation
+
+
+# static fields
+.field public static final $stable:I = 0x8
 
 
 # instance fields
@@ -152,25 +150,34 @@
 
 .field private domainStrategy:Ljava/lang/String;
 
-.field private fragment:Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$FragmentBean;
+.field private email:Ljava/lang/String;
 
-.field private final inboundTag:Ljava/lang/String;
+.field private encryption:Ljava/lang/String;
 
-.field private mtu:Ljava/lang/Integer;
+.field private flow:Ljava/lang/String;
 
-.field private final network:Ljava/lang/String;
-
-.field private noises:Ljava/util/List;
+.field private headers:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljava/util/List<",
-            "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$NoiseBean;",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private obfsPassword:Ljava/lang/String;
+.field private id:Ljava/lang/String;
+
+.field private level:Ljava/lang/Integer;
+
+.field private method:Ljava/lang/String;
+
+.field private mtu:Ljava/lang/Integer;
+
+.field private pass:Ljava/lang/String;
+
+.field private password:Ljava/lang/String;
 
 .field private final peers:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -184,8 +191,6 @@
 
 .field private port:Ljava/lang/Integer;
 
-.field private final redirect:Ljava/lang/String;
-
 .field private reserved:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -196,42 +201,28 @@
     .end annotation
 .end field
 
-.field private response:Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$Response;
-
 .field private secretKey:Ljava/lang/String;
 
-.field private servers:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$ServersBean;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private security:Ljava/lang/String;
 
-.field private final userLevel:Ljava/lang/Integer;
+.field private user:Ljava/lang/String;
 
 .field private version:Ljava/lang/Integer;
 
-.field private vnext:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$VnextBean;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 0
+
+    return-void
+.end method
+
 .method public constructor <init>()V
-    .locals 21
+    .locals 22
 
-    const v19, 0x3ffff
+    const v20, 0x7ffff
 
-    const/16 v20, 0x0
+    const/16 v21, 0x0
 
     const/4 v1, 0x0
 
@@ -269,36 +260,37 @@
 
     const/16 v18, 0x0
 
+    const/16 v19, 0x0
+
     move-object/from16 v0, p0
 
-    invoke-direct/range {v0 .. v20}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;-><init>(Ljava/util/List;Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$FragmentBean;Ljava/util/List;Ljava/util/List;Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$Response;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v21}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;-><init>(Ljava/lang/Object;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/List;Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$FragmentBean;Ljava/util/List;Ljava/util/List;Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$Response;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;)V
+.method public constructor <init>(Ljava/lang/Object;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/String;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ljava/util/List<",
-            "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$VnextBean;",
-            ">;",
-            "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$FragmentBean;",
-            "Ljava/util/List<",
-            "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$NoiseBean;",
-            ">;",
-            "Ljava/util/List<",
-            "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$ServersBean;",
-            ">;",
-            "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$Response;",
-            "Ljava/lang/String;",
             "Ljava/lang/Object;",
             "Ljava/lang/Integer;",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             "Ljava/lang/Integer;",
-            "Ljava/lang/String;",
             "Ljava/lang/String;",
             "Ljava/util/List<",
             "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$WireGuardBean;",
@@ -308,81 +300,85 @@
             ">;",
             "Ljava/lang/Integer;",
             "Ljava/lang/String;",
-            "Ljava/lang/Integer;",
             ")V"
         }
     .end annotation
 
-    .line 68
+    .line 74
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 69
-    iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->vnext:Ljava/util/List;
-
-    .line 70
-    iput-object p2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->fragment:Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$FragmentBean;
-
-    .line 71
-    iput-object p3, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->noises:Ljava/util/List;
-
-    .line 72
-    iput-object p4, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->servers:Ljava/util/List;
-
-    .line 74
-    iput-object p5, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->response:Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$Response;
-
     .line 76
-    iput-object p6, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->network:Ljava/lang/String;
+    iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->address:Ljava/lang/Object;
 
     .line 77
-    iput-object p7, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->address:Ljava/lang/Object;
+    iput-object p2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->port:Ljava/lang/Integer;
 
     .line 78
-    iput-object p8, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->port:Ljava/lang/Integer;
+    iput-object p3, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->level:Ljava/lang/Integer;
 
-    .line 80
-    iput-object p9, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->domainStrategy:Ljava/lang/String;
+    .line 79
+    iput-object p4, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->email:Ljava/lang/String;
 
     .line 81
-    iput-object p10, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->redirect:Ljava/lang/String;
+    iput-object p5, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->user:Ljava/lang/String;
 
     .line 82
-    iput-object p11, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->userLevel:Ljava/lang/Integer;
+    iput-object p6, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->pass:Ljava/lang/String;
 
-    .line 84
-    iput-object p12, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->inboundTag:Ljava/lang/String;
+    .line 83
+    iput-object p7, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->headers:Ljava/util/Map;
+
+    .line 85
+    iput-object p8, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->id:Ljava/lang/String;
 
     .line 86
-    iput-object p13, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->secretKey:Ljava/lang/String;
+    iput-object p9, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->security:Ljava/lang/String;
 
     .line 87
-    iput-object p14, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->peers:Ljava/util/List;
+    iput-object p10, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->encryption:Ljava/lang/String;
 
-    .line 88
-    iput-object p15, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->reserved:Ljava/util/List;
+    .line 89
+    iput-object p11, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->flow:Ljava/lang/String;
+
+    .line 91
+    iput-object p12, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->password:Ljava/lang/String;
+
+    .line 93
+    iput-object p13, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->method:Ljava/lang/String;
+
+    .line 95
+    iput-object p14, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->version:Ljava/lang/Integer;
+
+    .line 97
+    iput-object p15, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->secretKey:Ljava/lang/String;
 
     move-object/from16 p1, p16
 
-    .line 89
-    iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->mtu:Ljava/lang/Integer;
+    .line 98
+    iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->peers:Ljava/util/List;
 
     move-object/from16 p1, p17
 
-    .line 90
-    iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->obfsPassword:Ljava/lang/String;
+    .line 99
+    iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->reserved:Ljava/util/List;
 
     move-object/from16 p1, p18
 
-    .line 91
-    iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->version:Ljava/lang/Integer;
+    .line 100
+    iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->mtu:Ljava/lang/Integer;
+
+    move-object/from16 p1, p19
+
+    .line 101
+    iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->domainStrategy:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/util/List;Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$FragmentBean;Ljava/util/List;Ljava/util/List;Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$Response;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-    .locals 19
+.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    .locals 20
 
-    move/from16 v0, p19
+    move/from16 v0, p20
 
     and-int/lit8 v1, v0, 0x1
 
@@ -594,18 +590,32 @@
     :goto_10
     const/high16 v18, 0x20000
 
-    and-int v0, v0, v18
+    and-int v18, v0, v18
 
-    if-eqz v0, :cond_11
+    if-eqz v18, :cond_11
 
-    const/16 p19, 0x0
+    const/16 v18, 0x0
 
     goto :goto_11
 
     :cond_11
-    move-object/from16 p19, p18
+    move-object/from16 v18, p18
 
     :goto_11
+    const/high16 v19, 0x40000
+
+    and-int v0, v0, v19
+
+    if-eqz v0, :cond_12
+
+    const/16 p20, 0x0
+
+    goto :goto_12
+
+    :cond_12
+    move-object/from16 p20, p19
+
+    :goto_12
     move-object/from16 p1, p0
 
     move-object/from16 p2, v1
@@ -642,24 +652,26 @@
 
     move-object/from16 p18, v17
 
-    .line 68
-    invoke-direct/range {p1 .. p19}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;-><init>(Ljava/util/List;Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$FragmentBean;Ljava/util/List;Ljava/util/List;Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$Response;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;)V
+    move-object/from16 p19, v18
+
+    .line 74
+    invoke-direct/range {p1 .. p20}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;-><init>(Ljava/lang/Object;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public static synthetic copy$default(Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;Ljava/util/List;Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$FragmentBean;Ljava/util/List;Ljava/util/List;Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$Response;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;ILjava/lang/Object;)Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;
+.method public static synthetic copy$default(Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;Ljava/lang/Object;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/String;ILjava/lang/Object;)Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;
     .locals 17
 
     move-object/from16 v0, p0
 
-    move/from16 v1, p19
+    move/from16 v1, p20
 
     and-int/lit8 v2, v1, 0x1
 
     if-eqz v2, :cond_0
 
-    iget-object v2, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->vnext:Ljava/util/List;
+    iget-object v2, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->address:Ljava/lang/Object;
 
     goto :goto_0
 
@@ -671,7 +683,7 @@
 
     if-eqz v3, :cond_1
 
-    iget-object v3, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->fragment:Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$FragmentBean;
+    iget-object v3, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->port:Ljava/lang/Integer;
 
     goto :goto_1
 
@@ -683,7 +695,7 @@
 
     if-eqz v4, :cond_2
 
-    iget-object v4, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->noises:Ljava/util/List;
+    iget-object v4, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->level:Ljava/lang/Integer;
 
     goto :goto_2
 
@@ -695,7 +707,7 @@
 
     if-eqz v5, :cond_3
 
-    iget-object v5, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->servers:Ljava/util/List;
+    iget-object v5, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->email:Ljava/lang/String;
 
     goto :goto_3
 
@@ -707,7 +719,7 @@
 
     if-eqz v6, :cond_4
 
-    iget-object v6, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->response:Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$Response;
+    iget-object v6, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->user:Ljava/lang/String;
 
     goto :goto_4
 
@@ -719,7 +731,7 @@
 
     if-eqz v7, :cond_5
 
-    iget-object v7, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->network:Ljava/lang/String;
+    iget-object v7, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->pass:Ljava/lang/String;
 
     goto :goto_5
 
@@ -731,7 +743,7 @@
 
     if-eqz v8, :cond_6
 
-    iget-object v8, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->address:Ljava/lang/Object;
+    iget-object v8, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->headers:Ljava/util/Map;
 
     goto :goto_6
 
@@ -743,7 +755,7 @@
 
     if-eqz v9, :cond_7
 
-    iget-object v9, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->port:Ljava/lang/Integer;
+    iget-object v9, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->id:Ljava/lang/String;
 
     goto :goto_7
 
@@ -755,7 +767,7 @@
 
     if-eqz v10, :cond_8
 
-    iget-object v10, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->domainStrategy:Ljava/lang/String;
+    iget-object v10, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->security:Ljava/lang/String;
 
     goto :goto_8
 
@@ -767,7 +779,7 @@
 
     if-eqz v11, :cond_9
 
-    iget-object v11, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->redirect:Ljava/lang/String;
+    iget-object v11, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->encryption:Ljava/lang/String;
 
     goto :goto_9
 
@@ -779,7 +791,7 @@
 
     if-eqz v12, :cond_a
 
-    iget-object v12, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->userLevel:Ljava/lang/Integer;
+    iget-object v12, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->flow:Ljava/lang/String;
 
     goto :goto_a
 
@@ -791,7 +803,7 @@
 
     if-eqz v13, :cond_b
 
-    iget-object v13, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->inboundTag:Ljava/lang/String;
+    iget-object v13, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->password:Ljava/lang/String;
 
     goto :goto_b
 
@@ -803,7 +815,7 @@
 
     if-eqz v14, :cond_c
 
-    iget-object v14, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->secretKey:Ljava/lang/String;
+    iget-object v14, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->method:Ljava/lang/String;
 
     goto :goto_c
 
@@ -815,7 +827,7 @@
 
     if-eqz v15, :cond_d
 
-    iget-object v15, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->peers:Ljava/util/List;
+    iget-object v15, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->version:Ljava/lang/Integer;
 
     goto :goto_d
 
@@ -829,7 +841,7 @@
 
     if-eqz v2, :cond_e
 
-    iget-object v2, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->reserved:Ljava/util/List;
+    iget-object v2, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->secretKey:Ljava/lang/String;
 
     goto :goto_e
 
@@ -843,7 +855,7 @@
 
     if-eqz v16, :cond_f
 
-    iget-object v1, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->mtu:Ljava/lang/Integer;
+    iget-object v1, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->peers:Ljava/util/List;
 
     goto :goto_f
 
@@ -853,13 +865,13 @@
     :goto_f
     const/high16 v16, 0x10000
 
-    and-int v16, p19, v16
+    and-int v16, p20, v16
 
     move-object/from16 p2, v1
 
     if-eqz v16, :cond_10
 
-    iget-object v1, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->obfsPassword:Ljava/lang/String;
+    iget-object v1, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->reserved:Ljava/util/List;
 
     goto :goto_10
 
@@ -869,27 +881,45 @@
     :goto_10
     const/high16 v16, 0x20000
 
-    and-int v16, p19, v16
-
-    if-eqz v16, :cond_11
+    and-int v16, p20, v16
 
     move-object/from16 p3, v1
 
-    iget-object v1, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->version:Ljava/lang/Integer;
+    if-eqz v16, :cond_11
 
-    move-object/from16 p18, p3
-
-    move-object/from16 p19, v1
+    iget-object v1, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->mtu:Ljava/lang/Integer;
 
     goto :goto_11
 
     :cond_11
-    move-object/from16 p19, p18
-
-    move-object/from16 p18, v1
+    move-object/from16 v1, p18
 
     :goto_11
+    const/high16 v16, 0x40000
+
+    and-int v16, p20, v16
+
+    if-eqz v16, :cond_12
+
+    move-object/from16 p4, v1
+
+    iget-object v1, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->domainStrategy:Ljava/lang/String;
+
+    move-object/from16 p19, p4
+
+    move-object/from16 p20, v1
+
+    goto :goto_12
+
+    :cond_12
+    move-object/from16 p20, p19
+
+    move-object/from16 p19, v1
+
+    :goto_12
     move-object/from16 p17, p2
+
+    move-object/from16 p18, p3
 
     move-object/from16 p16, v2
 
@@ -923,7 +953,7 @@
 
     move-object/from16 p1, v0
 
-    invoke-virtual/range {p1 .. p19}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->copy(Ljava/util/List;Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$FragmentBean;Ljava/util/List;Ljava/util/List;Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$Response;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;)Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;
+    invoke-virtual/range {p1 .. p20}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->copy(Ljava/lang/Object;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/String;)Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;
 
     move-result-object v0
 
@@ -932,56 +962,64 @@
 
 
 # virtual methods
-.method public final component1()Ljava/util/List;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List<",
-            "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$VnextBean;",
-            ">;"
-        }
-    .end annotation
+.method public final component1()Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->vnext:Ljava/util/List;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->address:Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component10()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->redirect:Ljava/lang/String;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->encryption:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
-.method public final component11()Ljava/lang/Integer;
-    .locals 1
+.method public final component11()Ljava/lang/String;
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->userLevel:Ljava/lang/Integer;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->flow:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component12()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->inboundTag:Ljava/lang/String;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->password:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component13()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->secretKey:Ljava/lang/String;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->method:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
-.method public final component14()Ljava/util/List;
-    .locals 1
+.method public final component14()Ljava/lang/Integer;
+    .locals 0
+
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->version:Ljava/lang/Integer;
+
+    return-object p0
+.end method
+
+.method public final component15()Ljava/lang/String;
+    .locals 0
+
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->secretKey:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public final component16()Ljava/util/List;
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -991,13 +1029,13 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->peers:Ljava/util/List;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->peers:Ljava/util/List;
 
-    return-object v0
+    return-object p0
 .end method
 
-.method public final component15()Ljava/util/List;
-    .locals 1
+.method public final component17()Ljava/util/List;
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -1007,138 +1045,122 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->reserved:Ljava/util/List;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->reserved:Ljava/util/List;
 
-    return-object v0
-.end method
-
-.method public final component16()Ljava/lang/Integer;
-    .locals 1
-
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->mtu:Ljava/lang/Integer;
-
-    return-object v0
-.end method
-
-.method public final component17()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->obfsPassword:Ljava/lang/String;
-
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component18()Ljava/lang/Integer;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->version:Ljava/lang/Integer;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->mtu:Ljava/lang/Integer;
 
-    return-object v0
+    return-object p0
 .end method
 
-.method public final component2()Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$FragmentBean;
-    .locals 1
+.method public final component19()Ljava/lang/String;
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->fragment:Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$FragmentBean;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->domainStrategy:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
-.method public final component3()Ljava/util/List;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List<",
-            "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$NoiseBean;",
-            ">;"
-        }
-    .end annotation
+.method public final component2()Ljava/lang/Integer;
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->noises:Ljava/util/List;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->port:Ljava/lang/Integer;
 
-    return-object v0
+    return-object p0
 .end method
 
-.method public final component4()Ljava/util/List;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List<",
-            "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$ServersBean;",
-            ">;"
-        }
-    .end annotation
+.method public final component3()Ljava/lang/Integer;
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->servers:Ljava/util/List;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->level:Ljava/lang/Integer;
 
-    return-object v0
+    return-object p0
 .end method
 
-.method public final component5()Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$Response;
-    .locals 1
+.method public final component4()Ljava/lang/String;
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->response:Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$Response;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->email:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
+.end method
+
+.method public final component5()Ljava/lang/String;
+    .locals 0
+
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->user:Ljava/lang/String;
+
+    return-object p0
 .end method
 
 .method public final component6()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->network:Ljava/lang/String;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->pass:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
-.method public final component7()Ljava/lang/Object;
-    .locals 1
+.method public final component7()Ljava/util/Map;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->address:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->headers:Ljava/util/Map;
 
-    return-object v0
+    return-object p0
 .end method
 
-.method public final component8()Ljava/lang/Integer;
-    .locals 1
+.method public final component8()Ljava/lang/String;
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->port:Ljava/lang/Integer;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->id:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component9()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->domainStrategy:Ljava/lang/String;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->security:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
-.method public final copy(Ljava/util/List;Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$FragmentBean;Ljava/util/List;Ljava/util/List;Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$Response;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;)Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;
-    .locals 19
+.method public final copy(Ljava/lang/Object;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/String;)Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;
+    .locals 20
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ljava/util/List<",
-            "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$VnextBean;",
-            ">;",
-            "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$FragmentBean;",
-            "Ljava/util/List<",
-            "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$NoiseBean;",
-            ">;",
-            "Ljava/util/List<",
-            "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$ServersBean;",
-            ">;",
-            "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$Response;",
-            "Ljava/lang/String;",
             "Ljava/lang/Object;",
             "Ljava/lang/Integer;",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             "Ljava/lang/Integer;",
-            "Ljava/lang/String;",
             "Ljava/lang/String;",
             "Ljava/util/List<",
             "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$WireGuardBean;",
@@ -1148,7 +1170,6 @@
             ">;",
             "Ljava/lang/Integer;",
             "Ljava/lang/String;",
-            "Ljava/lang/Integer;",
             ")",
             "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;"
         }
@@ -1192,7 +1213,9 @@
 
     move-object/from16 v18, p18
 
-    invoke-direct/range {v0 .. v18}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;-><init>(Ljava/util/List;Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$FragmentBean;Ljava/util/List;Ljava/util/List;Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$Response;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;)V
+    move-object/from16 v19, p19
+
+    invoke-direct/range {v0 .. v19}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;-><init>(Ljava/lang/Object;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -1218,9 +1241,9 @@
     :cond_1
     check-cast p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;
 
-    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->vnext:Ljava/util/List;
+    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->address:Ljava/lang/Object;
 
-    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->vnext:Ljava/util/List;
+    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->address:Ljava/lang/Object;
 
     invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -1231,9 +1254,9 @@
     return v2
 
     :cond_2
-    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->fragment:Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$FragmentBean;
+    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->port:Ljava/lang/Integer;
 
-    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->fragment:Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$FragmentBean;
+    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->port:Ljava/lang/Integer;
 
     invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -1244,9 +1267,9 @@
     return v2
 
     :cond_3
-    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->noises:Ljava/util/List;
+    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->level:Ljava/lang/Integer;
 
-    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->noises:Ljava/util/List;
+    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->level:Ljava/lang/Integer;
 
     invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -1257,9 +1280,9 @@
     return v2
 
     :cond_4
-    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->servers:Ljava/util/List;
+    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->email:Ljava/lang/String;
 
-    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->servers:Ljava/util/List;
+    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->email:Ljava/lang/String;
 
     invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -1270,9 +1293,9 @@
     return v2
 
     :cond_5
-    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->response:Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$Response;
+    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->user:Ljava/lang/String;
 
-    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->response:Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$Response;
+    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->user:Ljava/lang/String;
 
     invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -1283,9 +1306,9 @@
     return v2
 
     :cond_6
-    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->network:Ljava/lang/String;
+    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->pass:Ljava/lang/String;
 
-    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->network:Ljava/lang/String;
+    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->pass:Ljava/lang/String;
 
     invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -1296,9 +1319,9 @@
     return v2
 
     :cond_7
-    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->address:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->headers:Ljava/util/Map;
 
-    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->address:Ljava/lang/Object;
+    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->headers:Ljava/util/Map;
 
     invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -1309,9 +1332,9 @@
     return v2
 
     :cond_8
-    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->port:Ljava/lang/Integer;
+    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->id:Ljava/lang/String;
 
-    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->port:Ljava/lang/Integer;
+    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->id:Ljava/lang/String;
 
     invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -1322,9 +1345,9 @@
     return v2
 
     :cond_9
-    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->domainStrategy:Ljava/lang/String;
+    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->security:Ljava/lang/String;
 
-    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->domainStrategy:Ljava/lang/String;
+    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->security:Ljava/lang/String;
 
     invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -1335,9 +1358,9 @@
     return v2
 
     :cond_a
-    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->redirect:Ljava/lang/String;
+    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->encryption:Ljava/lang/String;
 
-    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->redirect:Ljava/lang/String;
+    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->encryption:Ljava/lang/String;
 
     invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -1348,9 +1371,9 @@
     return v2
 
     :cond_b
-    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->userLevel:Ljava/lang/Integer;
+    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->flow:Ljava/lang/String;
 
-    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->userLevel:Ljava/lang/Integer;
+    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->flow:Ljava/lang/String;
 
     invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -1361,9 +1384,9 @@
     return v2
 
     :cond_c
-    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->inboundTag:Ljava/lang/String;
+    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->password:Ljava/lang/String;
 
-    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->inboundTag:Ljava/lang/String;
+    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->password:Ljava/lang/String;
 
     invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -1374,9 +1397,9 @@
     return v2
 
     :cond_d
-    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->secretKey:Ljava/lang/String;
+    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->method:Ljava/lang/String;
 
-    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->secretKey:Ljava/lang/String;
+    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->method:Ljava/lang/String;
 
     invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -1387,9 +1410,9 @@
     return v2
 
     :cond_e
-    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->peers:Ljava/util/List;
+    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->version:Ljava/lang/Integer;
 
-    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->peers:Ljava/util/List;
+    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->version:Ljava/lang/Integer;
 
     invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -1400,9 +1423,9 @@
     return v2
 
     :cond_f
-    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->reserved:Ljava/util/List;
+    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->secretKey:Ljava/lang/String;
 
-    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->reserved:Ljava/util/List;
+    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->secretKey:Ljava/lang/String;
 
     invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -1413,9 +1436,9 @@
     return v2
 
     :cond_10
-    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->mtu:Ljava/lang/Integer;
+    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->peers:Ljava/util/List;
 
-    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->mtu:Ljava/lang/Integer;
+    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->peers:Ljava/util/List;
 
     invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -1426,9 +1449,9 @@
     return v2
 
     :cond_11
-    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->obfsPassword:Ljava/lang/String;
+    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->reserved:Ljava/util/List;
 
-    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->obfsPassword:Ljava/lang/String;
+    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->reserved:Ljava/util/List;
 
     invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -1439,104 +1462,154 @@
     return v2
 
     :cond_12
-    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->version:Ljava/lang/Integer;
+    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->mtu:Ljava/lang/Integer;
 
-    iget-object p1, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->version:Ljava/lang/Integer;
+    iget-object v3, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->mtu:Ljava/lang/Integer;
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result v1
 
-    if-nez p1, :cond_13
+    if-nez v1, :cond_13
 
     return v2
 
     :cond_13
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->domainStrategy:Ljava/lang/String;
+
+    iget-object p1, p1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->domainStrategy:Ljava/lang/String;
+
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_14
+
+    return v2
+
+    :cond_14
     return v0
 .end method
 
 .method public final getAddress()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    .line 77
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->address:Ljava/lang/Object;
+    .line 76
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->address:Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getDomainStrategy()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    .line 80
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->domainStrategy:Ljava/lang/String;
+    .line 101
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->domainStrategy:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
-.method public final getFragment()Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$FragmentBean;
-    .locals 1
+.method public final getEmail()Ljava/lang/String;
+    .locals 0
 
-    .line 70
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->fragment:Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$FragmentBean;
+    .line 79
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->email:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
-.method public final getInboundTag()Ljava/lang/String;
-    .locals 1
+.method public final getEncryption()Ljava/lang/String;
+    .locals 0
 
-    .line 84
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->inboundTag:Ljava/lang/String;
+    .line 87
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->encryption:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
-.method public final getMtu()Ljava/lang/Integer;
-    .locals 1
+.method public final getFlow()Ljava/lang/String;
+    .locals 0
 
     .line 89
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->mtu:Ljava/lang/Integer;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->flow:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
-.method public final getNetwork()Ljava/lang/String;
-    .locals 1
-
-    .line 76
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->network:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final getNoises()Ljava/util/List;
-    .locals 1
+.method public final getHeaders()Ljava/util/Map;
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Ljava/util/List<",
-            "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$NoiseBean;",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
             ">;"
         }
     .end annotation
 
-    .line 71
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->noises:Ljava/util/List;
+    .line 83
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->headers:Ljava/util/Map;
 
-    return-object v0
+    return-object p0
 .end method
 
-.method public final getObfsPassword()Ljava/lang/String;
-    .locals 1
+.method public final getId()Ljava/lang/String;
+    .locals 0
 
-    .line 90
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->obfsPassword:Ljava/lang/String;
+    .line 85
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->id:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
+.end method
+
+.method public final getLevel()Ljava/lang/Integer;
+    .locals 0
+
+    .line 78
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->level:Ljava/lang/Integer;
+
+    return-object p0
+.end method
+
+.method public final getMethod()Ljava/lang/String;
+    .locals 0
+
+    .line 93
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->method:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public final getMtu()Ljava/lang/Integer;
+    .locals 0
+
+    .line 100
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->mtu:Ljava/lang/Integer;
+
+    return-object p0
+.end method
+
+.method public final getPass()Ljava/lang/String;
+    .locals 0
+
+    .line 82
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->pass:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public final getPassword()Ljava/lang/String;
+    .locals 0
+
+    .line 91
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->password:Ljava/lang/String;
+
+    return-object p0
 .end method
 
 .method public final getPeers()Ljava/util/List;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -1546,32 +1619,23 @@
         }
     .end annotation
 
-    .line 87
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->peers:Ljava/util/List;
+    .line 98
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->peers:Ljava/util/List;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getPort()Ljava/lang/Integer;
-    .locals 1
+    .locals 0
 
-    .line 78
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->port:Ljava/lang/Integer;
+    .line 77
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->port:Ljava/lang/Integer;
 
-    return-object v0
-.end method
-
-.method public final getRedirect()Ljava/lang/String;
-    .locals 1
-
-    .line 81
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->redirect:Ljava/lang/String;
-
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getReserved()Ljava/util/List;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -1581,86 +1645,52 @@
         }
     .end annotation
 
-    .line 88
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->reserved:Ljava/util/List;
+    .line 99
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->reserved:Ljava/util/List;
 
-    return-object v0
-.end method
-
-.method public final getResponse()Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$Response;
-    .locals 1
-
-    .line 74
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->response:Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$Response;
-
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getSecretKey()Ljava/lang/String;
-    .locals 1
+    .locals 0
+
+    .line 97
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->secretKey:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public final getSecurity()Ljava/lang/String;
+    .locals 0
 
     .line 86
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->secretKey:Ljava/lang/String;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->security:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
-.method public final getServers()Ljava/util/List;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List<",
-            "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$ServersBean;",
-            ">;"
-        }
-    .end annotation
+.method public final getUser()Ljava/lang/String;
+    .locals 0
 
-    .line 72
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->servers:Ljava/util/List;
+    .line 81
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->user:Ljava/lang/String;
 
-    return-object v0
-.end method
-
-.method public final getUserLevel()Ljava/lang/Integer;
-    .locals 1
-
-    .line 82
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->userLevel:Ljava/lang/Integer;
-
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getVersion()Ljava/lang/Integer;
-    .locals 1
+    .locals 0
 
-    .line 91
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->version:Ljava/lang/Integer;
+    .line 95
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->version:Ljava/lang/Integer;
 
-    return-object v0
-.end method
-
-.method public final getVnext()Ljava/util/List;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List<",
-            "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$VnextBean;",
-            ">;"
-        }
-    .end annotation
-
-    .line 69
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->vnext:Ljava/util/List;
-
-    return-object v0
+    return-object p0
 .end method
 
 .method public hashCode()I
     .locals 3
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->vnext:Ljava/util/List;
+    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->address:Ljava/lang/Object;
 
     const/4 v1, 0x0
 
@@ -1678,7 +1708,7 @@
     :goto_0
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->fragment:Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$FragmentBean;
+    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->port:Ljava/lang/Integer;
 
     if-nez v2, :cond_1
 
@@ -1687,7 +1717,7 @@
     goto :goto_1
 
     :cond_1
-    invoke-virtual {v2}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$FragmentBean;->hashCode()I
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
     move-result v2
 
@@ -1696,7 +1726,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->noises:Ljava/util/List;
+    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->level:Ljava/lang/Integer;
 
     if-nez v2, :cond_2
 
@@ -1714,7 +1744,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->servers:Ljava/util/List;
+    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->email:Ljava/lang/String;
 
     if-nez v2, :cond_3
 
@@ -1723,7 +1753,7 @@
     goto :goto_3
 
     :cond_3
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
 
     move-result v2
 
@@ -1732,7 +1762,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->response:Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$Response;
+    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->user:Ljava/lang/String;
 
     if-nez v2, :cond_4
 
@@ -1741,7 +1771,7 @@
     goto :goto_4
 
     :cond_4
-    invoke-virtual {v2}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$Response;->hashCode()I
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
 
     move-result v2
 
@@ -1750,7 +1780,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->network:Ljava/lang/String;
+    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->pass:Ljava/lang/String;
 
     if-nez v2, :cond_5
 
@@ -1768,7 +1798,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->address:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->headers:Ljava/util/Map;
 
     if-nez v2, :cond_6
 
@@ -1786,7 +1816,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->port:Ljava/lang/Integer;
+    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->id:Ljava/lang/String;
 
     if-nez v2, :cond_7
 
@@ -1795,7 +1825,7 @@
     goto :goto_7
 
     :cond_7
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
 
     move-result v2
 
@@ -1804,7 +1834,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->domainStrategy:Ljava/lang/String;
+    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->security:Ljava/lang/String;
 
     if-nez v2, :cond_8
 
@@ -1822,7 +1852,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->redirect:Ljava/lang/String;
+    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->encryption:Ljava/lang/String;
 
     if-nez v2, :cond_9
 
@@ -1840,7 +1870,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->userLevel:Ljava/lang/Integer;
+    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->flow:Ljava/lang/String;
 
     if-nez v2, :cond_a
 
@@ -1849,7 +1879,7 @@
     goto :goto_a
 
     :cond_a
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
 
     move-result v2
 
@@ -1858,7 +1888,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->inboundTag:Ljava/lang/String;
+    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->password:Ljava/lang/String;
 
     if-nez v2, :cond_b
 
@@ -1876,7 +1906,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->secretKey:Ljava/lang/String;
+    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->method:Ljava/lang/String;
 
     if-nez v2, :cond_c
 
@@ -1894,7 +1924,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->peers:Ljava/util/List;
+    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->version:Ljava/lang/Integer;
 
     if-nez v2, :cond_d
 
@@ -1912,7 +1942,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->reserved:Ljava/util/List;
+    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->secretKey:Ljava/lang/String;
 
     if-nez v2, :cond_e
 
@@ -1921,7 +1951,7 @@
     goto :goto_e
 
     :cond_e
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
 
     move-result v2
 
@@ -1930,7 +1960,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->mtu:Ljava/lang/Integer;
+    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->peers:Ljava/util/List;
 
     if-nez v2, :cond_f
 
@@ -1948,7 +1978,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->obfsPassword:Ljava/lang/String;
+    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->reserved:Ljava/util/List;
 
     if-nez v2, :cond_10
 
@@ -1957,7 +1987,7 @@
     goto :goto_10
 
     :cond_10
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
     move-result v2
 
@@ -1966,18 +1996,36 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->version:Ljava/lang/Integer;
+    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->mtu:Ljava/lang/Integer;
 
     if-nez v2, :cond_11
+
+    move v2, v1
 
     goto :goto_11
 
     :cond_11
     invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
-    move-result v1
+    move-result v2
 
     :goto_11
+    add-int/2addr v0, v2
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->domainStrategy:Ljava/lang/String;
+
+    if-nez p0, :cond_12
+
+    goto :goto_12
+
+    :cond_12
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    :goto_12
     add-int/2addr v0, v1
 
     return v0
@@ -1986,7 +2034,7 @@
 .method public final setAddress(Ljava/lang/Object;)V
     .locals 0
 
-    .line 77
+    .line 76
     iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->address:Ljava/lang/Object;
 
     return-void
@@ -1995,17 +2043,80 @@
 .method public final setDomainStrategy(Ljava/lang/String;)V
     .locals 0
 
-    .line 80
+    .line 101
     iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->domainStrategy:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public final setFragment(Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$FragmentBean;)V
+.method public final setEmail(Ljava/lang/String;)V
     .locals 0
 
-    .line 70
-    iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->fragment:Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$FragmentBean;
+    .line 79
+    iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->email:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public final setEncryption(Ljava/lang/String;)V
+    .locals 0
+
+    .line 87
+    iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->encryption:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public final setFlow(Ljava/lang/String;)V
+    .locals 0
+
+    .line 89
+    iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->flow:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public final setHeaders(Ljava/util/Map;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 83
+    iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->headers:Ljava/util/Map;
+
+    return-void
+.end method
+
+.method public final setId(Ljava/lang/String;)V
+    .locals 0
+
+    .line 85
+    iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->id:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public final setLevel(Ljava/lang/Integer;)V
+    .locals 0
+
+    .line 78
+    iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->level:Ljava/lang/Integer;
+
+    return-void
+.end method
+
+.method public final setMethod(Ljava/lang/String;)V
+    .locals 0
+
+    .line 93
+    iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->method:Ljava/lang/String;
 
     return-void
 .end method
@@ -2013,34 +2124,26 @@
 .method public final setMtu(Ljava/lang/Integer;)V
     .locals 0
 
-    .line 89
+    .line 100
     iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->mtu:Ljava/lang/Integer;
 
     return-void
 .end method
 
-.method public final setNoises(Ljava/util/List;)V
+.method public final setPass(Ljava/lang/String;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$NoiseBean;",
-            ">;)V"
-        }
-    .end annotation
 
-    .line 71
-    iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->noises:Ljava/util/List;
+    .line 82
+    iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->pass:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public final setObfsPassword(Ljava/lang/String;)V
+.method public final setPassword(Ljava/lang/String;)V
     .locals 0
 
-    .line 90
-    iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->obfsPassword:Ljava/lang/String;
+    .line 91
+    iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->password:Ljava/lang/String;
 
     return-void
 .end method
@@ -2048,7 +2151,7 @@
 .method public final setPort(Ljava/lang/Integer;)V
     .locals 0
 
-    .line 78
+    .line 77
     iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->port:Ljava/lang/Integer;
 
     return-void
@@ -2065,17 +2168,8 @@
         }
     .end annotation
 
-    .line 88
+    .line 99
     iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->reserved:Ljava/util/List;
-
-    return-void
-.end method
-
-.method public final setResponse(Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$Response;)V
-    .locals 0
-
-    .line 74
-    iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->response:Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$Response;
 
     return-void
 .end method
@@ -2083,25 +2177,26 @@
 .method public final setSecretKey(Ljava/lang/String;)V
     .locals 0
 
-    .line 86
+    .line 97
     iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->secretKey:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public final setServers(Ljava/util/List;)V
+.method public final setSecurity(Ljava/lang/String;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$ServersBean;",
-            ">;)V"
-        }
-    .end annotation
 
-    .line 72
-    iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->servers:Ljava/util/List;
+    .line 86
+    iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->security:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public final setUser(Ljava/lang/String;)V
+    .locals 0
+
+    .line 81
+    iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->user:Ljava/lang/String;
 
     return-void
 .end method
@@ -2109,25 +2204,8 @@
 .method public final setVersion(Ljava/lang/Integer;)V
     .locals 0
 
-    .line 91
+    .line 95
     iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->version:Ljava/lang/Integer;
-
-    return-void
-.end method
-
-.method public final setVnext(Ljava/util/List;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$VnextBean;",
-            ">;)V"
-        }
-    .end annotation
-
-    .line 69
-    iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->vnext:Ljava/util/List;
 
     return-void
 .end method
@@ -2137,145 +2215,149 @@
 
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->vnext:Ljava/util/List;
+    iget-object v1, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->address:Ljava/lang/Object;
 
-    iget-object v2, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->fragment:Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$FragmentBean;
+    iget-object v2, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->port:Ljava/lang/Integer;
 
-    iget-object v3, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->noises:Ljava/util/List;
+    iget-object v3, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->level:Ljava/lang/Integer;
 
-    iget-object v4, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->servers:Ljava/util/List;
+    iget-object v4, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->email:Ljava/lang/String;
 
-    iget-object v5, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->response:Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean$Response;
+    iget-object v5, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->user:Ljava/lang/String;
 
-    iget-object v6, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->network:Ljava/lang/String;
+    iget-object v6, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->pass:Ljava/lang/String;
 
-    iget-object v7, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->address:Ljava/lang/Object;
+    iget-object v7, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->headers:Ljava/util/Map;
 
-    iget-object v8, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->port:Ljava/lang/Integer;
+    iget-object v8, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->id:Ljava/lang/String;
 
-    iget-object v9, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->domainStrategy:Ljava/lang/String;
+    iget-object v9, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->security:Ljava/lang/String;
 
-    iget-object v10, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->redirect:Ljava/lang/String;
+    iget-object v10, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->encryption:Ljava/lang/String;
 
-    iget-object v11, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->userLevel:Ljava/lang/Integer;
+    iget-object v11, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->flow:Ljava/lang/String;
 
-    iget-object v12, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->inboundTag:Ljava/lang/String;
+    iget-object v12, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->password:Ljava/lang/String;
 
-    iget-object v13, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->secretKey:Ljava/lang/String;
+    iget-object v13, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->method:Ljava/lang/String;
 
-    iget-object v14, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->peers:Ljava/util/List;
+    iget-object v14, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->version:Ljava/lang/Integer;
 
-    iget-object v15, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->reserved:Ljava/util/List;
+    iget-object v15, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->secretKey:Ljava/lang/String;
 
     move-object/from16 v16, v15
 
-    iget-object v15, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->mtu:Ljava/lang/Integer;
+    iget-object v15, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->peers:Ljava/util/List;
 
     move-object/from16 v17, v15
 
-    iget-object v15, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->obfsPassword:Ljava/lang/String;
+    iget-object v15, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->reserved:Ljava/util/List;
 
     move-object/from16 v18, v15
 
-    iget-object v15, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->version:Ljava/lang/Integer;
+    iget-object v15, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->mtu:Ljava/lang/Integer;
+
+    iget-object v0, v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;->domainStrategy:Ljava/lang/String;
+
+    move-object/from16 p0, v0
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     move-object/from16 v19, v15
 
-    const-string v15, "OutSettingsBean(vnext="
+    const-string v15, "OutSettingsBean(address="
 
     invoke-direct {v0, v15}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", fragment="
+    const-string v1, ", port="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", noises="
+    const-string v1, ", level="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", servers="
+    const-string v1, ", email="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", response="
+    const-string v1, ", user="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", network="
+    const-string v1, ", pass="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", address="
+    const-string v1, ", headers="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", port="
+    const-string v1, ", id="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", domainStrategy="
+    const-string v1, ", security="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", redirect="
+    const-string v1, ", encryption="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", userLevel="
+    const-string v1, ", flow="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", inboundTag="
+    const-string v1, ", password="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", secretKey="
+    const-string v1, ", method="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", peers="
+    const-string v1, ", version="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", reserved="
+    const-string v1, ", secretKey="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-object/from16 v1, v16
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", mtu="
+    const-string v1, ", peers="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2283,21 +2365,29 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", obfsPassword="
+    const-string v1, ", reserved="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-object/from16 v1, v18
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", version="
+    const-string v1, ", mtu="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-object/from16 v1, v19
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", domainStrategy="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-object/from16 v1, p0
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 

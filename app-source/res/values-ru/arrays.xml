@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="browser_dialer_mode">
+        <item>Отключено</item>
+        <item>OkHttp</item>
+        <item>WebView</item>
+    </string-array>
     <string-array name="config_backup_options">
         <item>Локально</item>
         <item>WebDAV</item>
@@ -21,6 +26,8 @@
     <string-array name="policy_group_type">
         <item>Наименьшая задержка</item>
         <item>Наименьшая нагрузка</item>
+        <item>Случайно</item>
+        <item>По очереди</item>
     </string-array>
     <string-array name="preset_rulesets">
         <item>Белый список Китая</item>
@@ -28,18 +35,6 @@
         <item>Общие</item>
         <item>Белый список Ирана</item>
         <item>Белый список России</item>
-    </string-array>
-    <string-array name="share_method">
-        <item>QR-код</item>
-        <item>Экспорт в буфер обмена</item>
-        <item>Экспорт конфигурации в буфер обмена</item>
-    </string-array>
-    <string-array name="share_method_more">
-        <item>QR-код</item>
-        <item>Экспорт в буфер обмена</item>
-        <item>Экспорт конфигурации в буфер обмена</item>
-        <item>Изменить</item>
-        <item>Удалить</item>
     </string-array>
     <string-array name="share_sub_method">
         <item>QR-код</item>

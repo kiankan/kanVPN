@@ -28,48 +28,48 @@
 
 # virtual methods
 .method public getCodeWords()I
-    .locals 1
+    .locals 0
 
     .line 71
-    iget v0, p0, Lcom/google/zxing/aztec/encoder/AztecCode;->codeWords:I
+    iget p0, p0, Lcom/google/zxing/aztec/encoder/AztecCode;->codeWords:I
 
-    return v0
+    return p0
 .end method
 
 .method public getLayers()I
-    .locals 1
+    .locals 0
 
     .line 60
-    iget v0, p0, Lcom/google/zxing/aztec/encoder/AztecCode;->layers:I
+    iget p0, p0, Lcom/google/zxing/aztec/encoder/AztecCode;->layers:I
 
-    return v0
+    return p0
 .end method
 
 .method public getMatrix()Lcom/google/zxing/common/BitMatrix;
-    .locals 1
+    .locals 0
 
     .line 82
-    iget-object v0, p0, Lcom/google/zxing/aztec/encoder/AztecCode;->matrix:Lcom/google/zxing/common/BitMatrix;
+    iget-object p0, p0, Lcom/google/zxing/aztec/encoder/AztecCode;->matrix:Lcom/google/zxing/common/BitMatrix;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getSize()I
-    .locals 1
+    .locals 0
 
     .line 49
-    iget v0, p0, Lcom/google/zxing/aztec/encoder/AztecCode;->size:I
+    iget p0, p0, Lcom/google/zxing/aztec/encoder/AztecCode;->size:I
 
-    return v0
+    return p0
 .end method
 
 .method public isCompact()Z
-    .locals 1
+    .locals 0
 
     .line 38
-    iget-boolean v0, p0, Lcom/google/zxing/aztec/encoder/AztecCode;->compact:Z
+    iget-boolean p0, p0, Lcom/google/zxing/aztec/encoder/AztecCode;->compact:Z
 
-    return v0
+    return p0
 .end method
 
 .method public setCodeWords(I)V

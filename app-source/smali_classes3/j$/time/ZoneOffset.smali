@@ -9,6 +9,20 @@
 .implements Ljava/io/Serializable;
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lj$/time/ZoneId;",
+        "Lj$/time/temporal/TemporalAccessor;",
+        "Lj$/time/temporal/TemporalAdjuster;",
+        "Ljava/lang/Comparable<",
+        "Lj$/time/ZoneOffset;",
+        ">;",
+        "Ljava/io/Serializable;"
+    }
+.end annotation
+
+
 # static fields
 .field private static final ID_CACHE:Ljava/util/concurrent/ConcurrentMap;
 
@@ -121,8 +135,6 @@
     .line 449
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     .line 450
     div-int/lit16 v2, v0, 0xe10
 
@@ -141,8 +153,9 @@
     :cond_1
     const-string p0, "+"
 
+    .line 449
     :goto_0
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v1, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     const/16 p0, 0xa
 
@@ -205,7 +218,7 @@
 .end method
 
 .method public static of(Ljava/lang/String;)Lj$/time/ZoneOffset;
-    .locals 7
+    .locals 8
 
     .line 203
     const-string v0, "offsetId"
@@ -233,9 +246,11 @@
 
     const/4 v1, 0x2
 
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
 
     if-eq v0, v1, :cond_5
 
@@ -243,105 +258,95 @@
 
     if-eq v0, v1, :cond_6
 
-    const/4 v4, 0x5
+    const/4 v5, 0x5
 
-    if-eq v0, v4, :cond_4
+    if-eq v0, v5, :cond_4
 
-    const/4 v5, 0x6
+    const/4 v6, 0x6
 
-    const/4 v6, 0x4
+    const/4 v7, 0x4
 
-    if-eq v0, v5, :cond_3
+    if-eq v0, v6, :cond_3
 
-    const/4 v5, 0x7
+    const/4 v6, 0x7
 
-    if-eq v0, v5, :cond_2
+    if-eq v0, v6, :cond_2
 
     const/16 v1, 0x9
 
     if-ne v0, v1, :cond_1
 
     .line 236
-    invoke-static {p0, v2, v3}, Lj$/time/ZoneOffset;->parseNumber(Ljava/lang/CharSequence;IZ)I
+    invoke-static {p0, v3, v4}, Lj$/time/ZoneOffset;->parseNumber(Ljava/lang/CharSequence;IZ)I
 
     move-result v0
 
     .line 237
-    invoke-static {p0, v6, v2}, Lj$/time/ZoneOffset;->parseNumber(Ljava/lang/CharSequence;IZ)I
+    invoke-static {p0, v7, v3}, Lj$/time/ZoneOffset;->parseNumber(Ljava/lang/CharSequence;IZ)I
 
     move-result v1
 
     .line 238
-    invoke-static {p0, v5, v2}, Lj$/time/ZoneOffset;->parseNumber(Ljava/lang/CharSequence;IZ)I
+    invoke-static {p0, v6, v3}, Lj$/time/ZoneOffset;->parseNumber(Ljava/lang/CharSequence;IZ)I
 
-    move-result v2
+    move-result v3
 
     goto :goto_1
 
     .line 241
     :cond_1
-    new-instance v0, Lj$/time/DateTimeException;
+    const-string v0, "Invalid ID for ZoneOffset, invalid format: "
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Invalid ID for ZoneOffset, invalid format: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-direct {v0, p0}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
+    invoke-static {p0}, Lj$/time/Year$3;->m(Ljava/lang/String;)V
 
-    throw v0
+    return-object v2
 
     .line 231
     :cond_2
-    invoke-static {p0, v2, v3}, Lj$/time/ZoneOffset;->parseNumber(Ljava/lang/CharSequence;IZ)I
+    invoke-static {p0, v3, v4}, Lj$/time/ZoneOffset;->parseNumber(Ljava/lang/CharSequence;IZ)I
 
     move-result v0
 
     .line 232
-    invoke-static {p0, v1, v3}, Lj$/time/ZoneOffset;->parseNumber(Ljava/lang/CharSequence;IZ)I
+    invoke-static {p0, v1, v4}, Lj$/time/ZoneOffset;->parseNumber(Ljava/lang/CharSequence;IZ)I
 
     move-result v1
 
     .line 233
-    invoke-static {p0, v4, v3}, Lj$/time/ZoneOffset;->parseNumber(Ljava/lang/CharSequence;IZ)I
+    invoke-static {p0, v5, v4}, Lj$/time/ZoneOffset;->parseNumber(Ljava/lang/CharSequence;IZ)I
 
-    move-result v2
+    move-result v3
 
     goto :goto_1
 
     .line 226
     :cond_3
-    invoke-static {p0, v2, v3}, Lj$/time/ZoneOffset;->parseNumber(Ljava/lang/CharSequence;IZ)I
+    invoke-static {p0, v3, v4}, Lj$/time/ZoneOffset;->parseNumber(Ljava/lang/CharSequence;IZ)I
 
     move-result v0
 
     .line 227
-    invoke-static {p0, v6, v2}, Lj$/time/ZoneOffset;->parseNumber(Ljava/lang/CharSequence;IZ)I
+    invoke-static {p0, v7, v3}, Lj$/time/ZoneOffset;->parseNumber(Ljava/lang/CharSequence;IZ)I
 
     move-result v1
 
     :goto_0
-    move v2, v3
+    move v3, v4
 
     goto :goto_1
 
     .line 221
     :cond_4
-    invoke-static {p0, v2, v3}, Lj$/time/ZoneOffset;->parseNumber(Ljava/lang/CharSequence;IZ)I
+    invoke-static {p0, v3, v4}, Lj$/time/ZoneOffset;->parseNumber(Ljava/lang/CharSequence;IZ)I
 
     move-result v0
 
     .line 222
-    invoke-static {p0, v1, v3}, Lj$/time/ZoneOffset;->parseNumber(Ljava/lang/CharSequence;IZ)I
+    invoke-static {p0, v1, v4}, Lj$/time/ZoneOffset;->parseNumber(Ljava/lang/CharSequence;IZ)I
 
     move-result v1
 
@@ -349,11 +354,11 @@
 
     .line 214
     :cond_5
-    invoke-virtual {p0, v3}, Ljava/lang/String;->charAt(I)C
+    invoke-virtual {p0, v4}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
-    invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
+    invoke-virtual {p0, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result p0
 
@@ -375,61 +380,51 @@
 
     .line 216
     :cond_6
-    invoke-static {p0, v2, v3}, Lj$/time/ZoneOffset;->parseNumber(Ljava/lang/CharSequence;IZ)I
+    invoke-static {p0, v3, v4}, Lj$/time/ZoneOffset;->parseNumber(Ljava/lang/CharSequence;IZ)I
 
     move-result v0
 
-    move v1, v3
+    move v1, v4
 
-    move v2, v1
+    move v3, v1
 
     .line 243
     :goto_1
-    invoke-virtual {p0, v3}, Ljava/lang/String;->charAt(I)C
+    invoke-virtual {p0, v4}, Ljava/lang/String;->charAt(I)C
 
-    move-result v3
+    move-result v4
 
-    const/16 v4, 0x2b
+    const/16 v5, 0x2b
 
-    const/16 v5, 0x2d
+    const/16 v6, 0x2d
 
-    if-eq v3, v4, :cond_8
+    if-eq v4, v5, :cond_8
 
-    if-ne v3, v5, :cond_7
+    if-ne v4, v6, :cond_7
 
     goto :goto_2
 
     .line 245
     :cond_7
-    new-instance v0, Lj$/time/DateTimeException;
+    const-string v0, "Invalid ID for ZoneOffset, plus/minus not found when expected: "
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Invalid ID for ZoneOffset, plus/minus not found when expected: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-direct {v0, p0}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
+    invoke-static {p0}, Lj$/time/Year$3;->m(Ljava/lang/String;)V
 
-    throw v0
+    return-object v2
 
     :cond_8
     :goto_2
-    if-ne v3, v5, :cond_9
+    if-ne v4, v6, :cond_9
 
     neg-int p0, v0
 
     neg-int v0, v1
 
-    neg-int v1, v2
+    neg-int v1, v3
 
     .line 248
     invoke-static {p0, v0, v1}, Lj$/time/ZoneOffset;->ofHoursMinutesSeconds(III)Lj$/time/ZoneOffset;
@@ -440,7 +435,7 @@
 
     .line 250
     :cond_9
-    invoke-static {v0, v1, v2}, Lj$/time/ZoneOffset;->ofHoursMinutesSeconds(III)Lj$/time/ZoneOffset;
+    invoke-static {v0, v1, v3}, Lj$/time/ZoneOffset;->ofHoursMinutesSeconds(III)Lj$/time/ZoneOffset;
 
     move-result-object p0
 
@@ -537,17 +532,19 @@
 
     .line 415
     :cond_2
-    new-instance p0, Lj$/time/DateTimeException;
+    const-string p0, "Zone offset not in valid range: -18:00 to +18:00"
 
-    const-string v0, "Zone offset not in valid range: -18:00 to +18:00"
+    invoke-static {p0}, Lj$/time/Year$3;->m(Ljava/lang/String;)V
 
-    invoke-direct {p0, v0}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
+    const/4 p0, 0x0
 
-    throw p0
+    return-object p0
 .end method
 
 .method private static parseNumber(Ljava/lang/CharSequence;IZ)I
-    .locals 2
+    .locals 3
+
+    const/4 v0, 0x0
 
     if-eqz p2, :cond_1
 
@@ -558,33 +555,19 @@
 
     move-result p2
 
-    const/16 v0, 0x3a
+    const/16 v1, 0x3a
 
-    if-ne p2, v0, :cond_0
+    if-ne p2, v1, :cond_0
 
     goto :goto_0
 
     .line 264
     :cond_0
-    new-instance p1, Lj$/time/DateTimeException;
+    const-string p1, "Invalid ID for ZoneOffset, colon not found when expected: "
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    invoke-static {p1, p0}, Lj$/time/ZoneOffset$0;->m(Ljava/lang/String;Ljava/lang/Object;)V
 
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "Invalid ID for ZoneOffset, colon not found when expected: "
-
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {p1, p0}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return v0
 
     .line 266
     :cond_1
@@ -600,23 +583,23 @@
 
     move-result p1
 
-    const/16 v0, 0x30
+    const/16 v1, 0x30
 
-    if-lt p2, v0, :cond_2
+    if-lt p2, v1, :cond_2
 
-    const/16 v1, 0x39
+    const/16 v2, 0x39
 
-    if-gt p2, v1, :cond_2
+    if-gt p2, v2, :cond_2
 
-    if-lt p1, v0, :cond_2
+    if-lt p1, v1, :cond_2
 
-    if-gt p1, v1, :cond_2
+    if-gt p1, v2, :cond_2
 
-    sub-int/2addr p2, v0
+    sub-int/2addr p2, v1
 
     mul-int/lit8 p2, p2, 0xa
 
-    sub-int/2addr p1, v0
+    sub-int/2addr p1, v1
 
     add-int/2addr p2, p1
 
@@ -624,25 +607,11 @@
 
     .line 269
     :cond_2
-    new-instance p1, Lj$/time/DateTimeException;
+    const-string p1, "Invalid ID for ZoneOffset, non numeric characters found: "
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    invoke-static {p1, p0}, Lj$/time/ZoneOffset$0;->m(Ljava/lang/String;Ljava/lang/Object;)V
 
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "Invalid ID for ZoneOffset, non numeric characters found: "
-
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {p1, p0}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return v0
 .end method
 
 .method static readExternal(Ljava/io/DataInput;)Lj$/time/ZoneOffset;
@@ -679,16 +648,16 @@
 .end method
 
 .method private readObject(Ljava/io/ObjectInputStream;)V
-    .locals 1
+    .locals 0
 
     .line 777
-    new-instance p1, Ljava/io/InvalidObjectException;
+    new-instance p0, Ljava/io/InvalidObjectException;
 
-    const-string v0, "Deserialization via serialization delegate"
+    const-string p1, "Deserialization via serialization delegate"
 
-    invoke-direct {p1, v0}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method private static totalSeconds(III)I
@@ -726,13 +695,11 @@
 
     .line 369
     :cond_0
-    new-instance p0, Lj$/time/DateTimeException;
+    const-string p0, "Zone offset minutes and seconds must be positive because hours is positive"
 
-    const-string p1, "Zone offset minutes and seconds must be positive because hours is positive"
+    invoke-static {p0}, Lj$/time/Year$3;->m(Ljava/lang/String;)V
 
-    invoke-direct {p0, p1}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return-void
 
     :cond_1
     if-gez p0, :cond_3
@@ -745,13 +712,11 @@
 
     .line 373
     :cond_2
-    new-instance p0, Lj$/time/DateTimeException;
+    const-string p0, "Zone offset minutes and seconds must be negative because hours is negative"
 
-    const-string p1, "Zone offset minutes and seconds must be negative because hours is negative"
+    invoke-static {p0}, Lj$/time/Year$3;->m(Ljava/lang/String;)V
 
-    invoke-direct {p0, p1}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return-void
 
     :cond_3
     if-lez p1, :cond_4
@@ -767,13 +732,11 @@
 
     .line 376
     :cond_5
-    new-instance p0, Lj$/time/DateTimeException;
+    const-string p0, "Zone offset minutes and seconds must have the same sign"
 
-    const-string p1, "Zone offset minutes and seconds must have the same sign"
+    invoke-static {p0}, Lj$/time/Year$3;->m(Ljava/lang/String;)V
 
-    invoke-direct {p0, p1}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return-void
 
     .line 378
     :cond_6
@@ -807,13 +770,9 @@
 
     .line 387
     :cond_7
-    new-instance p0, Lj$/time/DateTimeException;
+    const-string p0, "Zone offset not in valid range: -18:00 to +18:00"
 
-    const-string p1, "Zone offset not in valid range: -18:00 to +18:00"
-
-    invoke-direct {p0, p1}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    invoke-static {p0}, Lj$/time/Year$3;->m(Ljava/lang/String;)V
 
     :cond_8
     :goto_1
@@ -821,77 +780,29 @@
 
     .line 383
     :cond_9
-    new-instance p0, Lj$/time/DateTimeException;
+    const-string p0, "Zone offset seconds not in valid range: value "
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    invoke-static {p0, p2, v1}, Lj$/time/LocalDate$5;->m(Ljava/lang/String;ILjava/lang/Object;)V
 
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "Zone offset seconds not in valid range: value "
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return-void
 
     .line 379
     :cond_a
-    new-instance p0, Lj$/time/DateTimeException;
+    const-string p0, "Zone offset minutes not in valid range: value "
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    invoke-static {p0, p1, v1}, Lj$/time/LocalDate$5;->m(Ljava/lang/String;ILjava/lang/Object;)V
 
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "Zone offset minutes not in valid range: value "
-
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return-void
 
     .line 364
     :cond_b
-    new-instance p1, Lj$/time/DateTimeException;
+    const-string p1, "Zone offset hours not in valid range: value "
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    const-string p2, " is not in the range -18 to 18"
 
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-static {p1, p0, p2}, Lj$/time/LocalDate$5;->m(Ljava/lang/String;ILjava/lang/Object;)V
 
-    const-string v0, "Zone offset hours not in valid range: value "
-
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p0, " is not in the range -18 to 18"
-
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {p1, p0}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-void
 .end method
 
 .method private writeReplace()Ljava/lang/Object;
@@ -915,26 +826,26 @@
     .line 685
     sget-object v0, Lj$/time/temporal/ChronoField;->OFFSET_SECONDS:Lj$/time/temporal/ChronoField;
 
-    iget v1, p0, Lj$/time/ZoneOffset;->totalSeconds:I
+    iget p0, p0, Lj$/time/ZoneOffset;->totalSeconds:I
 
-    int-to-long v1, v1
+    int-to-long v1, p0
 
     invoke-interface {p1, v0, v1, v2}, Lj$/time/temporal/Temporal;->with(Lj$/time/temporal/TemporalField;J)Lj$/time/temporal/Temporal;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public compareTo(Lj$/time/ZoneOffset;)I
-    .locals 1
+    .locals 0
 
     .line 705
     iget p1, p1, Lj$/time/ZoneOffset;->totalSeconds:I
 
-    iget v0, p0, Lj$/time/ZoneOffset;->totalSeconds:I
+    iget p0, p0, Lj$/time/ZoneOffset;->totalSeconds:I
 
-    sub-int/2addr p1, v0
+    sub-int/2addr p1, p0
 
     return p1
 .end method
@@ -947,9 +858,9 @@
 
     invoke-virtual {p0, p1}, Lj$/time/ZoneOffset;->compareTo(Lj$/time/ZoneOffset;)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -970,13 +881,13 @@
     if-eqz v1, :cond_1
 
     .line 724
-    iget v1, p0, Lj$/time/ZoneOffset;->totalSeconds:I
+    iget p0, p0, Lj$/time/ZoneOffset;->totalSeconds:I
 
     check-cast p1, Lj$/time/ZoneOffset;
 
     iget p1, p1, Lj$/time/ZoneOffset;->totalSeconds:I
 
-    if-ne v1, p1, :cond_1
+    if-ne p0, p1, :cond_1
 
     return v0
 
@@ -993,9 +904,9 @@
     if-ne p1, v0, :cond_0
 
     .line 592
-    iget p1, p0, Lj$/time/ZoneOffset;->totalSeconds:I
+    iget p0, p0, Lj$/time/ZoneOffset;->totalSeconds:I
 
-    return p1
+    return p0
 
     .line 593
     :cond_0
@@ -1014,44 +925,32 @@
 
     invoke-virtual {v0, v1, v2, p1}, Lj$/time/temporal/ValueRange;->checkValidIntValue(JLj$/time/temporal/TemporalField;)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 
     .line 594
     :cond_1
-    new-instance v0, Lj$/time/temporal/UnsupportedTemporalTypeException;
+    const-string p0, "Unsupported field: "
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-static {p0, p1}, Lj$/time/Year$2;->m(Ljava/lang/String;Ljava/lang/Object;)V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 p0, 0x0
 
-    const-string v2, "Unsupported field: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Lj$/time/temporal/UnsupportedTemporalTypeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return p0
 .end method
 
 .method public getId()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 492
-    iget-object v0, p0, Lj$/time/ZoneOffset;->id:Ljava/lang/String;
+    iget-object p0, p0, Lj$/time/ZoneOffset;->id:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getLong(Lj$/time/temporal/TemporalField;)J
-    .locals 3
+    .locals 1
 
     .line 623
     sget-object v0, Lj$/time/temporal/ChronoField;->OFFSET_SECONDS:Lj$/time/temporal/ChronoField;
@@ -1059,11 +958,11 @@
     if-ne p1, v0, :cond_0
 
     .line 624
-    iget p1, p0, Lj$/time/ZoneOffset;->totalSeconds:I
+    iget p0, p0, Lj$/time/ZoneOffset;->totalSeconds:I
 
-    int-to-long v0, p1
+    int-to-long p0, p0
 
-    return-wide v0
+    return-wide p0
 
     .line 625
     :cond_0
@@ -1074,60 +973,48 @@
     .line 628
     invoke-interface {p1, p0}, Lj$/time/temporal/TemporalField;->getFrom(Lj$/time/temporal/TemporalAccessor;)J
 
-    move-result-wide v0
+    move-result-wide p0
 
-    return-wide v0
+    return-wide p0
 
     .line 626
     :cond_1
-    new-instance v0, Lj$/time/temporal/UnsupportedTemporalTypeException;
+    const-string p0, "Unsupported field: "
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-static {p0, p1}, Lj$/time/Year$2;->m(Ljava/lang/String;Ljava/lang/Object;)V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const-wide/16 p0, 0x0
 
-    const-string v2, "Unsupported field: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Lj$/time/temporal/UnsupportedTemporalTypeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-wide p0
 .end method
 
 .method public getRules()Lj$/time/zone/ZoneRules;
-    .locals 1
+    .locals 0
 
     .line 505
     invoke-static {p0}, Lj$/time/zone/ZoneRules;->of(Lj$/time/ZoneOffset;)Lj$/time/zone/ZoneRules;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getTotalSeconds()I
-    .locals 1
+    .locals 0
 
     .line 474
-    iget v0, p0, Lj$/time/ZoneOffset;->totalSeconds:I
+    iget p0, p0, Lj$/time/ZoneOffset;->totalSeconds:I
 
-    return v0
+    return p0
 .end method
 
 .method public hashCode()I
-    .locals 1
+    .locals 0
 
     .line 736
-    iget v0, p0, Lj$/time/ZoneOffset;->totalSeconds:I
+    iget p0, p0, Lj$/time/ZoneOffset;->totalSeconds:I
 
-    return v0
+    return p0
 .end method
 
 .method public isSupported(Lj$/time/temporal/TemporalField;)Z
@@ -1143,9 +1030,9 @@
     if-eqz v0, :cond_1
 
     .line 531
-    sget-object v0, Lj$/time/temporal/ChronoField;->OFFSET_SECONDS:Lj$/time/temporal/ChronoField;
+    sget-object p0, Lj$/time/temporal/ChronoField;->OFFSET_SECONDS:Lj$/time/temporal/ChronoField;
 
-    if-ne p1, v0, :cond_0
+    if-ne p1, p0, :cond_0
 
     return v2
 
@@ -1158,9 +1045,9 @@
     .line 533
     invoke-interface {p1, p0}, Lj$/time/temporal/TemporalField;->isSupportedBy(Lj$/time/temporal/TemporalAccessor;)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_2
+    if-eqz p0, :cond_2
 
     return v2
 
@@ -1190,9 +1077,7 @@
     :cond_0
     invoke-super {p0, p1}, Lj$/time/temporal/TemporalAccessor;->query(Lj$/time/temporal/TemporalQuery;)Ljava/lang/Object;
 
-    move-result-object p1
-
-    return-object p1
+    move-result-object p0
 
     :cond_1
     :goto_0
@@ -1205,18 +1090,18 @@
     .line 561
     invoke-super {p0, p1}, Lj$/time/temporal/TemporalAccessor;->range(Lj$/time/temporal/TemporalField;)Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 747
-    iget-object v0, p0, Lj$/time/ZoneOffset;->id:Ljava/lang/String;
+    iget-object p0, p0, Lj$/time/ZoneOffset;->id:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method write(Ljava/io/DataOutput;)V
@@ -1234,33 +1119,33 @@
 .end method
 
 .method writeExternal(Ljava/io/DataOutput;)V
-    .locals 3
+    .locals 2
 
     .line 787
-    iget v0, p0, Lj$/time/ZoneOffset;->totalSeconds:I
+    iget p0, p0, Lj$/time/ZoneOffset;->totalSeconds:I
 
     .line 788
-    rem-int/lit16 v1, v0, 0x384
+    rem-int/lit16 v0, p0, 0x384
 
-    const/16 v2, 0x7f
+    const/16 v1, 0x7f
 
-    if-nez v1, :cond_0
+    if-nez v0, :cond_0
 
-    div-int/lit16 v1, v0, 0x384
+    div-int/lit16 v0, p0, 0x384
 
     goto :goto_0
 
     :cond_0
-    move v1, v2
+    move v0, v1
 
     .line 789
     :goto_0
-    invoke-interface {p1, v1}, Ljava/io/DataOutput;->writeByte(I)V
+    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeByte(I)V
 
-    if-ne v1, v2, :cond_1
+    if-ne v0, v1, :cond_1
 
     .line 791
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeInt(I)V
+    invoke-interface {p1, p0}, Ljava/io/DataOutput;->writeInt(I)V
 
     :cond_1
     return-void

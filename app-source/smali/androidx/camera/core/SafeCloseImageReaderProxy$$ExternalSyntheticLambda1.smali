@@ -25,12 +25,12 @@
 
 # virtual methods
 .method public final onImageClose(Landroidx/camera/core/ImageProxy;)V
-    .locals 1
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy$$ExternalSyntheticLambda1;->f$0:Landroidx/camera/core/SafeCloseImageReaderProxy;
+    iget-object p0, p0, Landroidx/camera/core/SafeCloseImageReaderProxy$$ExternalSyntheticLambda1;->f$0:Landroidx/camera/core/SafeCloseImageReaderProxy;
 
-    invoke-virtual {v0, p1}, Landroidx/camera/core/SafeCloseImageReaderProxy;->lambda$new$0$androidx-camera-core-SafeCloseImageReaderProxy(Landroidx/camera/core/ImageProxy;)V
+    invoke-virtual {p0, p1}, Landroidx/camera/core/SafeCloseImageReaderProxy;->lambda$new$0$androidx-camera-core-SafeCloseImageReaderProxy(Landroidx/camera/core/ImageProxy;)V
 
     return-void
 .end method

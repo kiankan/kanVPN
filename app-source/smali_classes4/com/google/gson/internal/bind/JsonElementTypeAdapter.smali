@@ -1,4 +1,4 @@
-.class Lcom/google/gson/internal/bind/JsonElementTypeAdapter;
+.class public Lcom/google/gson/internal/bind/JsonElementTypeAdapter;
 .super Lcom/google/gson/TypeAdapter;
 .source "JsonElementTypeAdapter.java"
 
@@ -14,7 +14,7 @@
 
 
 # static fields
-.field static final ADAPTER:Lcom/google/gson/internal/bind/JsonElementTypeAdapter;
+.field public static final ADAPTER:Lcom/google/gson/internal/bind/JsonElementTypeAdapter;
 
 
 # direct methods
@@ -41,7 +41,7 @@
 .end method
 
 .method private readTerminal(Lcom/google/gson/stream/JsonReader;Lcom/google/gson/stream/JsonToken;)Lcom/google/gson/JsonElement;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -49,61 +49,61 @@
     .end annotation
 
     .line 59
-    sget-object v0, Lcom/google/gson/internal/bind/JsonElementTypeAdapter$1;->$SwitchMap$com$google$gson$stream$JsonToken:[I
+    sget-object p0, Lcom/google/gson/internal/bind/JsonElementTypeAdapter$1;->$SwitchMap$com$google$gson$stream$JsonToken:[I
 
     invoke-virtual {p2}, Lcom/google/gson/stream/JsonToken;->ordinal()I
 
-    move-result v1
+    move-result v0
 
-    aget v0, v0, v1
+    aget p0, p0, v0
 
-    const/4 v1, 0x3
+    const/4 v0, 0x3
 
-    if-eq v0, v1, :cond_3
+    if-eq p0, v0, :cond_3
 
-    const/4 v1, 0x4
+    const/4 v0, 0x4
 
-    if-eq v0, v1, :cond_2
+    if-eq p0, v0, :cond_2
 
-    const/4 v1, 0x5
+    const/4 v0, 0x5
 
-    if-eq v0, v1, :cond_1
+    if-eq p0, v0, :cond_1
 
-    const/4 v1, 0x6
+    const/4 v0, 0x6
 
-    if-ne v0, v1, :cond_0
+    if-ne p0, v0, :cond_0
 
     .line 68
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->nextNull()V
 
     .line 69
-    sget-object p1, Lcom/google/gson/JsonNull;->INSTANCE:Lcom/google/gson/JsonNull;
+    sget-object p0, Lcom/google/gson/JsonNull;->INSTANCE:Lcom/google/gson/JsonNull;
 
-    return-object p1
+    return-object p0
 
     .line 72
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    const-string v1, "Unexpected token: "
+    const-string v0, "Unexpected token: "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p2
+    move-result-object p1
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
     .line 66
     :cond_1
-    new-instance p2, Lcom/google/gson/JsonPrimitive;
+    new-instance p0, Lcom/google/gson/JsonPrimitive;
 
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->nextBoolean()Z
 
@@ -113,42 +113,42 @@
 
     move-result-object p1
 
-    invoke-direct {p2, p1}, Lcom/google/gson/JsonPrimitive;-><init>(Ljava/lang/Boolean;)V
+    invoke-direct {p0, p1}, Lcom/google/gson/JsonPrimitive;-><init>(Ljava/lang/Boolean;)V
 
-    return-object p2
+    return-object p0
 
     .line 63
     :cond_2
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->nextString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
     .line 64
-    new-instance p2, Lcom/google/gson/JsonPrimitive;
+    new-instance p1, Lcom/google/gson/JsonPrimitive;
 
-    new-instance v0, Lcom/google/gson/internal/LazilyParsedNumber;
+    new-instance p2, Lcom/google/gson/internal/LazilyParsedNumber;
 
-    invoke-direct {v0, p1}, Lcom/google/gson/internal/LazilyParsedNumber;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, p0}, Lcom/google/gson/internal/LazilyParsedNumber;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {p2, v0}, Lcom/google/gson/JsonPrimitive;-><init>(Ljava/lang/Number;)V
+    invoke-direct {p1, p2}, Lcom/google/gson/JsonPrimitive;-><init>(Ljava/lang/Number;)V
 
-    return-object p2
+    return-object p1
 
     .line 61
     :cond_3
-    new-instance p2, Lcom/google/gson/JsonPrimitive;
+    new-instance p0, Lcom/google/gson/JsonPrimitive;
 
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->nextString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {p2, p1}, Lcom/google/gson/JsonPrimitive;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcom/google/gson/JsonPrimitive;-><init>(Ljava/lang/String;)V
 
-    return-object p2
+    return-object p0
 .end method
 
 .method private tryBeginNesting(Lcom/google/gson/stream/JsonReader;Lcom/google/gson/stream/JsonToken;)Lcom/google/gson/JsonElement;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -156,47 +156,47 @@
     .end annotation
 
     .line 45
-    sget-object v0, Lcom/google/gson/internal/bind/JsonElementTypeAdapter$1;->$SwitchMap$com$google$gson$stream$JsonToken:[I
+    sget-object p0, Lcom/google/gson/internal/bind/JsonElementTypeAdapter$1;->$SwitchMap$com$google$gson$stream$JsonToken:[I
 
     invoke-virtual {p2}, Lcom/google/gson/stream/JsonToken;->ordinal()I
 
     move-result p2
 
-    aget p2, v0, p2
+    aget p0, p0, p2
 
-    const/4 v0, 0x1
+    const/4 p2, 0x1
 
-    if-eq p2, v0, :cond_1
+    if-eq p0, p2, :cond_1
 
-    const/4 v0, 0x2
+    const/4 p2, 0x2
 
-    if-eq p2, v0, :cond_0
+    if-eq p0, p2, :cond_0
 
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return-object p1
+    return-object p0
 
     .line 50
     :cond_0
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->beginObject()V
 
     .line 51
-    new-instance p1, Lcom/google/gson/JsonObject;
+    new-instance p0, Lcom/google/gson/JsonObject;
 
-    invoke-direct {p1}, Lcom/google/gson/JsonObject;-><init>()V
+    invoke-direct {p0}, Lcom/google/gson/JsonObject;-><init>()V
 
-    return-object p1
+    return-object p0
 
     .line 47
     :cond_1
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->beginArray()V
 
     .line 48
-    new-instance p1, Lcom/google/gson/JsonArray;
+    new-instance p0, Lcom/google/gson/JsonArray;
 
-    invoke-direct {p1}, Lcom/google/gson/JsonArray;-><init>()V
+    invoke-direct {p0}, Lcom/google/gson/JsonArray;-><init>()V
 
-    return-object p1
+    return-object p0
 .end method
 
 
@@ -219,9 +219,9 @@
 
     invoke-virtual {p1}, Lcom/google/gson/internal/bind/JsonTreeReader;->nextJsonElement()Lcom/google/gson/JsonElement;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 85
     :cond_0
@@ -239,9 +239,9 @@
     .line 89
     invoke-direct {p0, p1, v0}, Lcom/google/gson/internal/bind/JsonElementTypeAdapter;->readTerminal(Lcom/google/gson/stream/JsonReader;Lcom/google/gson/stream/JsonToken;)Lcom/google/gson/JsonElement;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 92
     :cond_1
@@ -381,9 +381,9 @@
     .line 35
     invoke-virtual {p0, p1}, Lcom/google/gson/internal/bind/JsonElementTypeAdapter;->read(Lcom/google/gson/stream/JsonReader;)Lcom/google/gson/JsonElement;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public write(Lcom/google/gson/stream/JsonWriter;Lcom/google/gson/JsonElement;)V
@@ -416,48 +416,48 @@
     .line 143
     invoke-virtual {p2}, Lcom/google/gson/JsonElement;->getAsJsonPrimitive()Lcom/google/gson/JsonPrimitive;
 
-    move-result-object p2
+    move-result-object p0
 
     .line 144
-    invoke-virtual {p2}, Lcom/google/gson/JsonPrimitive;->isNumber()Z
+    invoke-virtual {p0}, Lcom/google/gson/JsonPrimitive;->isNumber()Z
 
-    move-result v0
+    move-result p2
 
-    if-eqz v0, :cond_1
+    if-eqz p2, :cond_1
 
     .line 145
-    invoke-virtual {p2}, Lcom/google/gson/JsonPrimitive;->getAsNumber()Ljava/lang/Number;
+    invoke-virtual {p0}, Lcom/google/gson/JsonPrimitive;->getAsNumber()Ljava/lang/Number;
 
-    move-result-object p2
+    move-result-object p0
 
-    invoke-virtual {p1, p2}, Lcom/google/gson/stream/JsonWriter;->value(Ljava/lang/Number;)Lcom/google/gson/stream/JsonWriter;
+    invoke-virtual {p1, p0}, Lcom/google/gson/stream/JsonWriter;->value(Ljava/lang/Number;)Lcom/google/gson/stream/JsonWriter;
 
     return-void
 
     .line 146
     :cond_1
-    invoke-virtual {p2}, Lcom/google/gson/JsonPrimitive;->isBoolean()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 147
-    invoke-virtual {p2}, Lcom/google/gson/JsonPrimitive;->getAsBoolean()Z
+    invoke-virtual {p0}, Lcom/google/gson/JsonPrimitive;->isBoolean()Z
 
     move-result p2
 
-    invoke-virtual {p1, p2}, Lcom/google/gson/stream/JsonWriter;->value(Z)Lcom/google/gson/stream/JsonWriter;
+    if-eqz p2, :cond_2
+
+    .line 147
+    invoke-virtual {p0}, Lcom/google/gson/JsonPrimitive;->getAsBoolean()Z
+
+    move-result p0
+
+    invoke-virtual {p1, p0}, Lcom/google/gson/stream/JsonWriter;->value(Z)Lcom/google/gson/stream/JsonWriter;
 
     return-void
 
     .line 149
     :cond_2
-    invoke-virtual {p2}, Lcom/google/gson/JsonPrimitive;->getAsString()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/google/gson/JsonPrimitive;->getAsString()Ljava/lang/String;
 
-    move-result-object p2
+    move-result-object p0
 
-    invoke-virtual {p1, p2}, Lcom/google/gson/stream/JsonWriter;->value(Ljava/lang/String;)Lcom/google/gson/stream/JsonWriter;
+    invoke-virtual {p1, p0}, Lcom/google/gson/stream/JsonWriter;->value(Ljava/lang/String;)Lcom/google/gson/stream/JsonWriter;
 
     return-void
 
@@ -570,27 +570,27 @@
 
     .line 168
     :cond_7
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    const-string v1, "Couldn\'t write "
+    const-string v0, "Couldn\'t write "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p2
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p2
+    move-result-object p1
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
     .line 141
     :cond_8

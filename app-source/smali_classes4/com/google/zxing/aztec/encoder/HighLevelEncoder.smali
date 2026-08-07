@@ -555,7 +555,7 @@
 .end method
 
 .method private updateStateForChar(Lcom/google/zxing/aztec/encoder/State;ILjava/util/Collection;)V
-    .locals 7
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -568,109 +568,109 @@
     .end annotation
 
     .line 235
-    iget-object v0, p0, Lcom/google/zxing/aztec/encoder/HighLevelEncoder;->text:[B
+    iget-object p0, p0, Lcom/google/zxing/aztec/encoder/HighLevelEncoder;->text:[B
 
-    aget-byte v0, v0, p2
+    aget-byte p0, p0, p2
 
-    and-int/lit16 v0, v0, 0xff
+    and-int/lit16 p0, p0, 0xff
 
-    int-to-char v0, v0
+    int-to-char p0, p0
 
     .line 236
-    sget-object v1, Lcom/google/zxing/aztec/encoder/HighLevelEncoder;->CHAR_MAP:[[I
+    sget-object v0, Lcom/google/zxing/aztec/encoder/HighLevelEncoder;->CHAR_MAP:[[I
 
     invoke-virtual {p1}, Lcom/google/zxing/aztec/encoder/State;->getMode()I
 
-    move-result v2
+    move-result v1
 
-    aget-object v1, v1, v2
+    aget-object v0, v0, v1
 
-    aget v1, v1, v0
+    aget v0, v0, p0
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    if-lez v1, :cond_0
+    if-lez v0, :cond_0
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
     goto :goto_0
 
     :cond_0
-    move v1, v2
+    move v0, v1
 
     :goto_0
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
     :goto_1
-    const/4 v4, 0x4
+    const/4 v3, 0x4
 
-    if-gt v2, v4, :cond_5
+    if-gt v1, v3, :cond_5
 
     .line 239
-    sget-object v4, Lcom/google/zxing/aztec/encoder/HighLevelEncoder;->CHAR_MAP:[[I
+    sget-object v3, Lcom/google/zxing/aztec/encoder/HighLevelEncoder;->CHAR_MAP:[[I
 
-    aget-object v4, v4, v2
+    aget-object v3, v3, v1
 
-    aget v4, v4, v0
+    aget v3, v3, p0
 
-    if-lez v4, :cond_4
+    if-lez v3, :cond_4
 
-    if-nez v3, :cond_1
+    if-nez v2, :cond_1
 
     .line 243
     invoke-virtual {p1, p2}, Lcom/google/zxing/aztec/encoder/State;->endBinaryShift(I)Lcom/google/zxing/aztec/encoder/State;
 
-    move-result-object v3
+    move-result-object v2
 
     :cond_1
-    if-eqz v1, :cond_2
+    if-eqz v0, :cond_2
 
     .line 246
     invoke-virtual {p1}, Lcom/google/zxing/aztec/encoder/State;->getMode()I
 
-    move-result v5
+    move-result v4
 
-    if-eq v2, v5, :cond_2
+    if-eq v1, v4, :cond_2
 
-    const/4 v5, 0x2
+    const/4 v4, 0x2
 
-    if-ne v2, v5, :cond_3
+    if-ne v1, v4, :cond_3
 
     .line 251
     :cond_2
-    invoke-virtual {v3, v2, v4}, Lcom/google/zxing/aztec/encoder/State;->latchAndAppend(II)Lcom/google/zxing/aztec/encoder/State;
-
-    move-result-object v5
-
-    .line 252
-    invoke-interface {p3, v5}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    :cond_3
-    if-nez v1, :cond_4
-
-    .line 255
-    sget-object v5, Lcom/google/zxing/aztec/encoder/HighLevelEncoder;->SHIFT_TABLE:[[I
-
-    invoke-virtual {p1}, Lcom/google/zxing/aztec/encoder/State;->getMode()I
-
-    move-result v6
-
-    aget-object v5, v5, v6
-
-    aget v5, v5, v2
-
-    if-ltz v5, :cond_4
-
-    .line 258
-    invoke-virtual {v3, v2, v4}, Lcom/google/zxing/aztec/encoder/State;->shiftAndAppend(II)Lcom/google/zxing/aztec/encoder/State;
+    invoke-virtual {v2, v1, v3}, Lcom/google/zxing/aztec/encoder/State;->latchAndAppend(II)Lcom/google/zxing/aztec/encoder/State;
 
     move-result-object v4
 
-    .line 259
+    .line 252
     invoke-interface {p3, v4}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
+    :cond_3
+    if-nez v0, :cond_4
+
+    .line 255
+    sget-object v4, Lcom/google/zxing/aztec/encoder/HighLevelEncoder;->SHIFT_TABLE:[[I
+
+    invoke-virtual {p1}, Lcom/google/zxing/aztec/encoder/State;->getMode()I
+
+    move-result v5
+
+    aget-object v4, v4, v5
+
+    aget v4, v4, v1
+
+    if-ltz v4, :cond_4
+
+    .line 258
+    invoke-virtual {v2, v1, v3}, Lcom/google/zxing/aztec/encoder/State;->shiftAndAppend(II)Lcom/google/zxing/aztec/encoder/State;
+
+    move-result-object v3
+
+    .line 259
+    invoke-interface {p3, v3}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
     :cond_4
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
@@ -678,21 +678,21 @@
     :cond_5
     invoke-virtual {p1}, Lcom/google/zxing/aztec/encoder/State;->getBinaryShiftByteCount()I
 
-    move-result v1
+    move-result v0
 
-    if-gtz v1, :cond_7
+    if-gtz v0, :cond_7
 
-    sget-object v1, Lcom/google/zxing/aztec/encoder/HighLevelEncoder;->CHAR_MAP:[[I
+    sget-object v0, Lcom/google/zxing/aztec/encoder/HighLevelEncoder;->CHAR_MAP:[[I
 
     invoke-virtual {p1}, Lcom/google/zxing/aztec/encoder/State;->getMode()I
 
-    move-result v2
+    move-result v1
 
-    aget-object v1, v1, v2
+    aget-object v0, v0, v1
 
-    aget v0, v1, v0
+    aget p0, v0, p0
 
-    if-nez v0, :cond_6
+    if-nez p0, :cond_6
 
     goto :goto_2
 
@@ -704,10 +704,10 @@
     :goto_2
     invoke-virtual {p1, p2}, Lcom/google/zxing/aztec/encoder/State;->addBinaryShiftChar(I)Lcom/google/zxing/aztec/encoder/State;
 
-    move-result-object p1
+    move-result-object p0
 
     .line 268
-    invoke-interface {p3, p1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+    invoke-interface {p3, p0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
@@ -852,9 +852,9 @@
     :cond_0
     invoke-static {v0}, Lcom/google/zxing/aztec/encoder/HighLevelEncoder;->simplifyStates(Ljava/lang/Iterable;)Ljava/util/Collection;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method private static updateStateListForPair(Ljava/lang/Iterable;II)Ljava/util/Collection;
@@ -949,15 +949,15 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/google/zxing/aztec/encoder/HighLevelEncoder;->charset:Ljava/nio/charset/Charset;
+    iget-object p0, p0, Lcom/google/zxing/aztec/encoder/HighLevelEncoder;->charset:Ljava/nio/charset/Charset;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
@@ -1085,11 +1085,11 @@
     check-cast v0, Lcom/google/zxing/aztec/encoder/State;
 
     .line 217
-    iget-object v1, p0, Lcom/google/zxing/aztec/encoder/HighLevelEncoder;->text:[B
+    iget-object p0, p0, Lcom/google/zxing/aztec/encoder/HighLevelEncoder;->text:[B
 
-    invoke-virtual {v0, v1}, Lcom/google/zxing/aztec/encoder/State;->toBitArray([B)Lcom/google/zxing/common/BitArray;
+    invoke-virtual {v0, p0}, Lcom/google/zxing/aztec/encoder/State;->toBitArray([B)Lcom/google/zxing/common/BitArray;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

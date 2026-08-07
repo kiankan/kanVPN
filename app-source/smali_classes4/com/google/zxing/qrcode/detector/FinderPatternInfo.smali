@@ -45,28 +45,28 @@
 
 # virtual methods
 .method public getBottomLeft()Lcom/google/zxing/qrcode/detector/FinderPattern;
-    .locals 1
+    .locals 0
 
     .line 38
-    iget-object v0, p0, Lcom/google/zxing/qrcode/detector/FinderPatternInfo;->bottomLeft:Lcom/google/zxing/qrcode/detector/FinderPattern;
+    iget-object p0, p0, Lcom/google/zxing/qrcode/detector/FinderPatternInfo;->bottomLeft:Lcom/google/zxing/qrcode/detector/FinderPattern;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getTopLeft()Lcom/google/zxing/qrcode/detector/FinderPattern;
-    .locals 1
+    .locals 0
 
     .line 42
-    iget-object v0, p0, Lcom/google/zxing/qrcode/detector/FinderPatternInfo;->topLeft:Lcom/google/zxing/qrcode/detector/FinderPattern;
+    iget-object p0, p0, Lcom/google/zxing/qrcode/detector/FinderPatternInfo;->topLeft:Lcom/google/zxing/qrcode/detector/FinderPattern;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getTopRight()Lcom/google/zxing/qrcode/detector/FinderPattern;
-    .locals 1
+    .locals 0
 
     .line 46
-    iget-object v0, p0, Lcom/google/zxing/qrcode/detector/FinderPatternInfo;->topRight:Lcom/google/zxing/qrcode/detector/FinderPattern;
+    iget-object p0, p0, Lcom/google/zxing/qrcode/detector/FinderPatternInfo;->topRight:Lcom/google/zxing/qrcode/detector/FinderPattern;
 
-    return-object v0
+    return-object p0
 .end method

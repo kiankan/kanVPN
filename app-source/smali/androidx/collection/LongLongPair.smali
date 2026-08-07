@@ -32,7 +32,7 @@
     k = 0x1
     mv = {
         0x1,
-        0x8,
+        0x9,
         0x0
     }
     xi = 0x30
@@ -64,7 +64,7 @@
 .method public final component1()J
     .locals 2
 
-    .line 37
+    .line 36
     invoke-virtual {p0}, Landroidx/collection/LongLongPair;->getFirst()J
 
     move-result-wide v0
@@ -75,7 +75,7 @@
 .method public final component2()J
     .locals 2
 
-    .line 49
+    .line 47
     invoke-virtual {p0}, Landroidx/collection/LongLongPair;->getSecond()J
 
     move-result-wide v0
@@ -86,7 +86,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 6
 
-    .line 58
+    .line 56
     instance-of v0, p1, Landroidx/collection/LongLongPair;
 
     const/4 v1, 0x0
@@ -95,7 +95,7 @@
 
     return v1
 
-    .line 61
+    .line 59
     :cond_0
     check-cast p1, Landroidx/collection/LongLongPair;
 
@@ -109,15 +109,15 @@
 
     iget-wide v2, p1, Landroidx/collection/LongLongPair;->second:J
 
-    iget-wide v4, p0, Landroidx/collection/LongLongPair;->second:J
+    iget-wide p0, p0, Landroidx/collection/LongLongPair;->second:J
 
-    cmp-long p1, v2, v4
+    cmp-long p0, v2, p0
 
-    if-nez p1, :cond_1
+    if-nez p0, :cond_1
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_1
     return v1
@@ -144,7 +144,7 @@
 .method public hashCode()I
     .locals 3
 
-    .line 70
+    .line 68
     iget-wide v0, p0, Landroidx/collection/LongLongPair;->first:J
 
     invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
@@ -155,17 +155,17 @@
 
     invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
 
-    move-result v1
+    move-result p0
 
-    xor-int/2addr v0, v1
+    xor-int/2addr p0, v0
 
-    return v0
+    return p0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 74
+    .line 72
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "("
@@ -184,13 +184,13 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const/16 v1, 0x29
+    const/16 p0, 0x29
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

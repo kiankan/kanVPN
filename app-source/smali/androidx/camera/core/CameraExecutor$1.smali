@@ -29,10 +29,10 @@
 .method constructor <init>()V
     .locals 2
 
-    .line 47
+    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
+    .line 69
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v1, 0x0
@@ -44,43 +44,66 @@
     return-void
 .end method
 
+.method static synthetic lambda$newThread$0(Ljava/lang/Runnable;)V
+    .locals 1
+
+    const/4 v0, -0x3
+
+    .line 75
+    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
+
+    .line 76
+    invoke-interface {p0}, Ljava/lang/Runnable;->run()V
+
+    return-void
+.end method
+
 
 # virtual methods
 .method public newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
-    .locals 3
+    .locals 2
 
-    .line 54
+    .line 74
     new-instance v0, Ljava/lang/Thread;
 
-    invoke-direct {v0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+    new-instance v1, Landroidx/camera/core/CameraExecutor$1$$ExternalSyntheticLambda0;
 
-    .line 55
+    invoke-direct {v1, p1}, Landroidx/camera/core/CameraExecutor$1$$ExternalSyntheticLambda0;-><init>(Ljava/lang/Runnable;)V
+
+    invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+
+    const/4 p1, 0x7
+
+    .line 78
+    invoke-virtual {v0, p1}, Ljava/lang/Thread;->setPriority(I)V
+
+    .line 79
     sget-object p1, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    iget-object v1, p0, Landroidx/camera/core/CameraExecutor$1;->mThreadId:Ljava/util/concurrent/atomic/AtomicInteger;
+    iget-object p0, p0, Landroidx/camera/core/CameraExecutor$1;->mThreadId:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 59
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+    .line 83
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
-    move-result v1
+    move-result p0
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v1
+    move-result-object p0
 
-    filled-new-array {v1}, [Ljava/lang/Object;
+    filled-new-array {p0}, [Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object p0
 
-    .line 56
-    const-string v2, "CameraX-core_camera_%d"
+    .line 80
+    const-string v1, "CameraX-core_camera_%d"
 
-    invoke-static {p1, v2, v1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p1, v1, p0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    .line 55
-    invoke-virtual {v0, p1}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
+    .line 79
+    invoke-virtual {v0, p0}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
 
     return-object v0
 .end method

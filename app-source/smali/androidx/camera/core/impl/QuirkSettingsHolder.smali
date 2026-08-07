@@ -33,14 +33,14 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 42
+    .line 43
     invoke-static {}, Landroidx/camera/core/impl/QuirkSettings;->withDefaultBehavior()Landroidx/camera/core/impl/QuirkSettings;
 
     move-result-object v0
 
     sput-object v0, Landroidx/camera/core/impl/QuirkSettingsHolder;->DEFAULT:Landroidx/camera/core/impl/QuirkSettings;
 
-    .line 43
+    .line 44
     new-instance v0, Landroidx/camera/core/impl/QuirkSettingsHolder;
 
     invoke-direct {v0}, Landroidx/camera/core/impl/QuirkSettingsHolder;-><init>()V
@@ -53,13 +53,13 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 35
+    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
+    .line 46
     sget-object v0, Landroidx/camera/core/impl/QuirkSettingsHolder;->DEFAULT:Landroidx/camera/core/impl/QuirkSettings;
 
-    .line 46
+    .line 47
     invoke-static {v0}, Landroidx/camera/core/impl/MutableStateObservable;->withInitialState(Ljava/lang/Object;)Landroidx/camera/core/impl/MutableStateObservable;
 
     move-result-object v0
@@ -81,48 +81,42 @@
 
 # virtual methods
 .method public get()Landroidx/camera/core/impl/QuirkSettings;
-    .locals 3
+    .locals 2
 
-    .line 66
+    .line 65
     :try_start_0
-    iget-object v0, p0, Landroidx/camera/core/impl/QuirkSettingsHolder;->mObservable:Landroidx/camera/core/impl/MutableStateObservable;
+    iget-object p0, p0, Landroidx/camera/core/impl/QuirkSettingsHolder;->mObservable:Landroidx/camera/core/impl/MutableStateObservable;
 
-    invoke-virtual {v0}, Landroidx/camera/core/impl/MutableStateObservable;->fetchData()Lcom/google/common/util/concurrent/ListenableFuture;
+    invoke-virtual {p0}, Landroidx/camera/core/impl/MutableStateObservable;->fetchData()Lcom/google/common/util/concurrent/ListenableFuture;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-interface {v0}, Lcom/google/common/util/concurrent/ListenableFuture;->get()Ljava/lang/Object;
+    invoke-interface {p0}, Lcom/google/common/util/concurrent/ListenableFuture;->get()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Landroidx/camera/core/impl/QuirkSettings;
+    check-cast p0, Landroidx/camera/core/impl/QuirkSettings;
     :try_end_0
-    .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object v0
+    return-object p0
 
     :catch_0
-    move-exception v0
+    move-exception p0
 
-    goto :goto_0
+    .line 67
+    new-instance v0, Ljava/lang/AssertionError;
 
-    :catch_1
-    move-exception v0
+    const-string v1, "Unexpected error in QuirkSettings StateObservable"
 
-    .line 68
-    :goto_0
-    new-instance v1, Ljava/lang/AssertionError;
+    invoke-direct {v0, v1, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    const-string v2, "Unexpected error in QuirkSettings StateObservable"
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v1
+    throw v0
 .end method
 
 .method public observe(Ljava/util/concurrent/Executor;Landroidx/core/util/Consumer;)V
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -133,43 +127,43 @@
         }
     .end annotation
 
-    .line 90
-    iget-object v0, p0, Landroidx/camera/core/impl/QuirkSettingsHolder;->mObservable:Landroidx/camera/core/impl/MutableStateObservable;
+    .line 89
+    iget-object p0, p0, Landroidx/camera/core/impl/QuirkSettingsHolder;->mObservable:Landroidx/camera/core/impl/MutableStateObservable;
 
-    new-instance v1, Landroidx/camera/core/impl/QuirkSettingsHolder$ObserverToConsumerAdapter;
+    new-instance v0, Landroidx/camera/core/impl/QuirkSettingsHolder$ObserverToConsumerAdapter;
 
-    invoke-direct {v1, p2}, Landroidx/camera/core/impl/QuirkSettingsHolder$ObserverToConsumerAdapter;-><init>(Landroidx/core/util/Consumer;)V
+    invoke-direct {v0, p2}, Landroidx/camera/core/impl/QuirkSettingsHolder$ObserverToConsumerAdapter;-><init>(Landroidx/core/util/Consumer;)V
 
-    invoke-virtual {v0, p1, v1}, Landroidx/camera/core/impl/MutableStateObservable;->addObserver(Ljava/util/concurrent/Executor;Landroidx/camera/core/impl/Observable$Observer;)V
+    invoke-virtual {p0, p1, v0}, Landroidx/camera/core/impl/MutableStateObservable;->addObserver(Ljava/util/concurrent/Executor;Landroidx/camera/core/impl/Observable$Observer;)V
 
     return-void
 .end method
 
 .method public reset()V
-    .locals 2
+    .locals 1
 
-    .line 102
+    .line 101
     iget-object v0, p0, Landroidx/camera/core/impl/QuirkSettingsHolder;->mObservable:Landroidx/camera/core/impl/MutableStateObservable;
 
     invoke-virtual {v0}, Landroidx/camera/core/impl/MutableStateObservable;->removeObservers()V
 
-    .line 103
-    iget-object v0, p0, Landroidx/camera/core/impl/QuirkSettingsHolder;->mObservable:Landroidx/camera/core/impl/MutableStateObservable;
+    .line 102
+    iget-object p0, p0, Landroidx/camera/core/impl/QuirkSettingsHolder;->mObservable:Landroidx/camera/core/impl/MutableStateObservable;
 
-    sget-object v1, Landroidx/camera/core/impl/QuirkSettingsHolder;->DEFAULT:Landroidx/camera/core/impl/QuirkSettings;
+    sget-object v0, Landroidx/camera/core/impl/QuirkSettingsHolder;->DEFAULT:Landroidx/camera/core/impl/QuirkSettings;
 
-    invoke-virtual {v0, v1}, Landroidx/camera/core/impl/MutableStateObservable;->setState(Ljava/lang/Object;)V
+    invoke-virtual {p0, v0}, Landroidx/camera/core/impl/MutableStateObservable;->setState(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 .method public set(Landroidx/camera/core/impl/QuirkSettings;)V
-    .locals 1
+    .locals 0
 
-    .line 78
-    iget-object v0, p0, Landroidx/camera/core/impl/QuirkSettingsHolder;->mObservable:Landroidx/camera/core/impl/MutableStateObservable;
+    .line 77
+    iget-object p0, p0, Landroidx/camera/core/impl/QuirkSettingsHolder;->mObservable:Landroidx/camera/core/impl/MutableStateObservable;
 
-    invoke-virtual {v0, p1}, Landroidx/camera/core/impl/MutableStateObservable;->setState(Ljava/lang/Object;)V
+    invoke-virtual {p0, p1}, Landroidx/camera/core/impl/MutableStateObservable;->setState(Ljava/lang/Object;)V
 
     return-void
 .end method

@@ -92,37 +92,46 @@
     if-eqz v0, :cond_0
 
     .line 564
-    iget-object v0, p0, Lj$/time/Clock$SystemClock;->zone:Lj$/time/ZoneId;
+    iget-object p0, p0, Lj$/time/Clock$SystemClock;->zone:Lj$/time/ZoneId;
 
     check-cast p1, Lj$/time/Clock$SystemClock;
 
     iget-object p1, p1, Lj$/time/Clock$SystemClock;->zone:Lj$/time/ZoneId;
 
-    invoke-virtual {v0, p1}, Lj$/time/ZoneId;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Lj$/time/ZoneId;->equals(Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
+.end method
+
+.method public getZone()Lj$/time/ZoneId;
+    .locals 0
+
+    .line 503
+    iget-object p0, p0, Lj$/time/Clock$SystemClock;->zone:Lj$/time/ZoneId;
+
+    return-object p0
 .end method
 
 .method public hashCode()I
-    .locals 1
+    .locals 0
 
     .line 570
-    iget-object v0, p0, Lj$/time/Clock$SystemClock;->zone:Lj$/time/ZoneId;
+    iget-object p0, p0, Lj$/time/Clock$SystemClock;->zone:Lj$/time/ZoneId;
 
-    invoke-virtual {v0}, Lj$/time/ZoneId;->hashCode()I
+    invoke-virtual {p0}, Lj$/time/ZoneId;->hashCode()I
 
-    move-result v0
+    move-result p0
 
-    add-int/lit8 v0, v0, 0x1
+    add-int/lit8 p0, p0, 0x1
 
-    return v0
+    return p0
 .end method
 
 .method public instant()Lj$/time/Instant;
@@ -135,9 +144,9 @@
 
     invoke-static {v0, v1}, Lj$/time/Instant;->ofEpochMilli(J)Lj$/time/Instant;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public millis()J
@@ -152,28 +161,26 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
     .line 574
-    iget-object v0, p0, Lj$/time/Clock$SystemClock;->zone:Lj$/time/ZoneId;
+    iget-object p0, p0, Lj$/time/Clock$SystemClock;->zone:Lj$/time/ZoneId;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v1, "SystemClock["
 
-    const-string v2, "SystemClock["
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string p0, "]"
 
-    const-string v0, "]"
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object p0
 
-    move-result-object v0
-
-    return-object v0
+    return-object p0
 .end method

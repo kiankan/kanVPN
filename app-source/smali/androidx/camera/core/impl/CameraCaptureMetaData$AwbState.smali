@@ -40,7 +40,7 @@
 .method private static synthetic $values()[Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;
     .locals 5
 
-    .line 104
+    .line 107
     sget-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;->UNKNOWN:Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;
 
     sget-object v1, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;->INACTIVE:Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;
@@ -61,7 +61,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 107
+    .line 110
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;
 
     const-string v1, "UNKNOWN"
@@ -72,7 +72,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;->UNKNOWN:Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;
 
-    .line 110
+    .line 113
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;
 
     const-string v1, "INACTIVE"
@@ -83,7 +83,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;->INACTIVE:Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;
 
-    .line 113
+    .line 116
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;
 
     const-string v1, "METERING"
@@ -94,7 +94,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;->METERING:Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;
 
-    .line 116
+    .line 119
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;
 
     const-string v1, "CONVERGED"
@@ -105,7 +105,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;->CONVERGED:Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;
 
-    .line 119
+    .line 122
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;
 
     const-string v1, "LOCKED"
@@ -116,7 +116,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;->LOCKED:Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;
 
-    .line 104
+    .line 107
     invoke-static {}, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;->$values()[Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;
 
     move-result-object v0
@@ -145,7 +145,7 @@
         }
     .end annotation
 
-    .line 104
+    .line 107
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -162,7 +162,7 @@
         }
     .end annotation
 
-    .line 104
+    .line 107
     const-class v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -177,7 +177,7 @@
 .method public static values()[Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;
     .locals 1
 
-    .line 104
+    .line 107
     sget-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;->$VALUES:[Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;
 
     invoke-virtual {v0}, [Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;->clone()Ljava/lang/Object;

@@ -23,36 +23,36 @@
 
     packed-switch p0, :pswitch_data_0
 
-    .line 299
+    .line 298
     const-string p0, "audio/none"
 
     return-object p0
 
-    .line 292
+    .line 291
     :pswitch_0
     const-string p0, "audio/opus"
 
     return-object p0
 
-    .line 294
+    .line 293
     :pswitch_1
     const-string p0, "audio/vorbis"
 
     return-object p0
 
-    .line 286
+    .line 285
     :pswitch_2
     const-string p0, "audio/mp4a-latm"
 
     return-object p0
 
-    .line 290
+    .line 289
     :pswitch_3
     const-string p0, "audio/amr-wb"
 
     return-object p0
 
-    .line 288
+    .line 287
     :pswitch_4
     const-string p0, "audio/3gpp"
 
@@ -111,57 +111,59 @@
     packed-switch p0, :pswitch_data_0
 
     .line 268
-    const-string p0, "video/none"
+    const-string/jumbo p0, "video/none"
 
     return-object p0
 
     .line 263
     :pswitch_0
-    const-string p0, "video/av01"
+    const-string/jumbo p0, "video/av01"
 
     return-object p0
 
     .line 261
     :pswitch_1
-    const-string p0, "video/dolby-vision"
+    const-string/jumbo p0, "video/dolby-vision"
 
     return-object p0
 
     .line 259
     :pswitch_2
-    const-string p0, "video/x-vnd.on2.vp9"
+    const-string/jumbo p0, "video/x-vnd.on2.vp9"
 
     return-object p0
 
     .line 253
     :pswitch_3
-    const-string p0, "video/hevc"
+    const-string/jumbo p0, "video/hevc"
 
     return-object p0
 
     .line 255
     :pswitch_4
-    const-string p0, "video/x-vnd.on2.vp8"
+    const-string/jumbo p0, "video/x-vnd.on2.vp8"
 
     return-object p0
 
     .line 257
     :pswitch_5
-    const-string p0, "video/mp4v-es"
+    const-string/jumbo p0, "video/mp4v-es"
 
     return-object p0
 
     .line 251
     :pswitch_6
-    const-string p0, "video/avc"
+    const-string/jumbo p0, "video/avc"
 
     return-object p0
 
     .line 249
     :pswitch_7
-    const-string p0, "video/3gpp"
+    const-string/jumbo p0, "video/3gpp"
 
     return-object p0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x1

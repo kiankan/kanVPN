@@ -4,12 +4,16 @@
 
 # interfaces
 .implements Ljava/util/concurrent/Executor;
+.implements Ljava/util/concurrent/ScheduledExecutorService;
+.implements Ljava/lang/AutoCloseable;
 
 
 # static fields
-.field private static final DEFAULT_CORE_THREADS:I = 0x1
+.field private static final CAMERA_THREAD_JAVA_PRIORITY:I = 0x7
 
-.field private static final DEFAULT_MAX_THREADS:I = 0x1
+.field private static final CAMERA_THREAD_PROCESS_PRIORITY:I = -0x3
+
+.field private static final DEFAULT_CORE_THREADS:I = 0x1
 
 .field private static final TAG:Ljava/lang/String; = "CameraExecutor"
 
@@ -19,14 +23,14 @@
 # instance fields
 .field private final mExecutorLock:Ljava/lang/Object;
 
-.field private mThreadPoolExecutor:Ljava/util/concurrent/ThreadPoolExecutor;
+.field private mThreadPoolExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 47
+    .line 66
     new-instance v0, Landroidx/camera/core/CameraExecutor$1;
 
     invoke-direct {v0}, Landroidx/camera/core/CameraExecutor$1;-><init>()V
@@ -39,54 +43,51 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 37
+    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
+    .line 62
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroidx/camera/core/CameraExecutor;->mExecutorLock:Ljava/lang/Object;
 
-    .line 45
-    invoke-static {}, Landroidx/camera/core/CameraExecutor;->createExecutor()Ljava/util/concurrent/ThreadPoolExecutor;
+    .line 64
+    invoke-static {}, Landroidx/camera/core/CameraExecutor;->createExecutor()Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/camera/core/CameraExecutor;->mThreadPoolExecutor:Ljava/util/concurrent/ThreadPoolExecutor;
+    iput-object v0, p0, Landroidx/camera/core/CameraExecutor;->mThreadPoolExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
     return-void
 .end method
 
-.method private static createExecutor()Ljava/util/concurrent/ThreadPoolExecutor;
-    .locals 8
+.method private static createExecutor()Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+    .locals 4
 
-    .line 117
-    new-instance v0, Ljava/util/concurrent/ThreadPoolExecutor;
-
-    sget-object v5, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    new-instance v6, Ljava/util/concurrent/LinkedBlockingQueue;
-
-    invoke-direct {v6}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
-
-    sget-object v7, Landroidx/camera/core/CameraExecutor;->THREAD_FACTORY:Ljava/util/concurrent/ThreadFactory;
+    .line 140
+    new-instance v0, Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
     const/4 v1, 0x1
 
-    const/4 v2, 0x1
+    sget-object v2, Landroidx/camera/core/CameraExecutor;->THREAD_FACTORY:Ljava/util/concurrent/ThreadFactory;
 
-    const-wide/16 v3, 0x0
+    invoke-direct {v0, v1, v2}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;-><init>(ILjava/util/concurrent/ThreadFactory;)V
 
-    invoke-direct/range {v0 .. v7}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
+    const-wide/16 v1, 0x0
 
-    .line 121
+    .line 142
+    sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v0, v1, v2, v3}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->setKeepAliveTime(JLjava/util/concurrent/TimeUnit;)V
+
+    .line 144
     new-instance v1, Landroidx/camera/core/CameraExecutor$$ExternalSyntheticLambda0;
 
     invoke-direct {v1}, Landroidx/camera/core/CameraExecutor$$ExternalSyntheticLambda0;-><init>()V
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/ThreadPoolExecutor;->setRejectedExecutionHandler(Ljava/util/concurrent/RejectedExecutionHandler;)V
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->setRejectedExecutionHandler(Ljava/util/concurrent/RejectedExecutionHandler;)V
 
     return-object v0
 .end method
@@ -94,127 +95,171 @@
 .method static synthetic lambda$createExecutor$0(Ljava/lang/Runnable;Ljava/util/concurrent/ThreadPoolExecutor;)V
     .locals 0
 
-    .line 121
+    .line 144
     const-string p0, "CameraExecutor"
 
     const-string p1, "A rejected execution occurred in CameraExecutor!"
 
-    invoke-static {p0, p1}, Landroidx/camera/core/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Landroidx/camera/core/Logger;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method deinit()V
-    .locals 2
+.method public awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/InterruptedException;
+        }
+    .end annotation
 
-    .line 95
+    .line 210
     iget-object v0, p0, Landroidx/camera/core/CameraExecutor;->mExecutorLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 96
+    .line 211
     :try_start_0
-    iget-object v1, p0, Landroidx/camera/core/CameraExecutor;->mThreadPoolExecutor:Ljava/util/concurrent/ThreadPoolExecutor;
+    iget-object p0, p0, Landroidx/camera/core/CameraExecutor;->mThreadPoolExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
-    invoke-virtual {v1}, Ljava/util/concurrent/ThreadPoolExecutor;->isShutdown()Z
+    invoke-virtual {p0, p1, p2, p3}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
+
+    move-result p0
+
+    monitor-exit v0
+
+    return p0
+
+    :catchall_0
+    move-exception p0
+
+    .line 212
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public synthetic close()V
+    .locals 0
+
+    invoke-static {p0}, Lkotlin/UByte$$ExternalSyntheticBackport0;->m(Ljava/util/concurrent/ExecutorService;)V
+
+    return-void
+.end method
+
+.method deinit()V
+    .locals 2
+
+    .line 118
+    iget-object v0, p0, Landroidx/camera/core/CameraExecutor;->mExecutorLock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 119
+    :try_start_0
+    iget-object v1, p0, Landroidx/camera/core/CameraExecutor;->mThreadPoolExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->isShutdown()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 97
-    iget-object v1, p0, Landroidx/camera/core/CameraExecutor;->mThreadPoolExecutor:Ljava/util/concurrent/ThreadPoolExecutor;
+    .line 120
+    iget-object p0, p0, Landroidx/camera/core/CameraExecutor;->mThreadPoolExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
-    invoke-virtual {v1}, Ljava/util/concurrent/ThreadPoolExecutor;->shutdown()V
+    invoke-virtual {p0}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->shutdown()V
 
-    .line 99
+    .line 122
     :cond_0
     monitor-exit v0
 
     return-void
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v1
+    throw p0
 .end method
 
 .method public execute(Ljava/lang/Runnable;)V
-    .locals 2
+    .locals 1
 
-    .line 109
+    .line 132
     invoke-static {p1}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 111
+    .line 134
     iget-object v0, p0, Landroidx/camera/core/CameraExecutor;->mExecutorLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 112
+    .line 135
     :try_start_0
-    iget-object v1, p0, Landroidx/camera/core/CameraExecutor;->mThreadPoolExecutor:Ljava/util/concurrent/ThreadPoolExecutor;
+    iget-object p0, p0, Landroidx/camera/core/CameraExecutor;->mThreadPoolExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
-    invoke-virtual {v1, p1}, Ljava/util/concurrent/ThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
+    invoke-virtual {p0, p1}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
 
-    .line 113
+    .line 136
     monitor-exit v0
 
     return-void
 
     :catchall_0
-    move-exception p1
+    move-exception p0
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p1
+    throw p0
 .end method
 
 .method init(Landroidx/camera/core/impl/CameraFactory;)V
     .locals 2
 
-    .line 70
+    .line 94
     invoke-static {p1}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 73
+    .line 97
     iget-object v0, p0, Landroidx/camera/core/CameraExecutor;->mExecutorLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 74
+    .line 98
     :try_start_0
-    iget-object v1, p0, Landroidx/camera/core/CameraExecutor;->mThreadPoolExecutor:Ljava/util/concurrent/ThreadPoolExecutor;
+    iget-object v1, p0, Landroidx/camera/core/CameraExecutor;->mThreadPoolExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
-    invoke-virtual {v1}, Ljava/util/concurrent/ThreadPoolExecutor;->isShutdown()Z
+    invoke-virtual {v1}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->isShutdown()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 75
-    invoke-static {}, Landroidx/camera/core/CameraExecutor;->createExecutor()Ljava/util/concurrent/ThreadPoolExecutor;
+    .line 99
+    invoke-static {}, Landroidx/camera/core/CameraExecutor;->createExecutor()Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
     move-result-object v1
 
-    iput-object v1, p0, Landroidx/camera/core/CameraExecutor;->mThreadPoolExecutor:Ljava/util/concurrent/ThreadPoolExecutor;
+    iput-object v1, p0, Landroidx/camera/core/CameraExecutor;->mThreadPoolExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
-    .line 77
+    .line 101
     :cond_0
-    iget-object v1, p0, Landroidx/camera/core/CameraExecutor;->mThreadPoolExecutor:Ljava/util/concurrent/ThreadPoolExecutor;
+    iget-object p0, p0, Landroidx/camera/core/CameraExecutor;->mThreadPoolExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
-    .line 78
+    .line 102
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 80
+    .line 104
     invoke-interface {p1}, Landroidx/camera/core/impl/CameraFactory;->getAvailableCameraIds()Ljava/util/Set;
 
     move-result-object p1
@@ -225,27 +270,657 @@
 
     const/4 v0, 0x1
 
-    .line 86
+    .line 110
     invoke-static {v0, p1}, Ljava/lang/Math;->max(II)I
 
     move-result p1
 
-    .line 87
-    invoke-virtual {v1, p1}, Ljava/util/concurrent/ThreadPoolExecutor;->setMaximumPoolSize(I)V
-
-    .line 88
-    invoke-virtual {v1, p1}, Ljava/util/concurrent/ThreadPoolExecutor;->setCorePoolSize(I)V
+    .line 111
+    invoke-virtual {p0, p1}, Ljava/util/concurrent/ThreadPoolExecutor;->setCorePoolSize(I)V
 
     return-void
 
     :catchall_0
-    move-exception p1
+    move-exception p0
 
-    .line 78
+    .line 102
     :try_start_1
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw p1
+    throw p0
+.end method
+
+.method public invokeAll(Ljava/util/Collection;)Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/util/Collection<",
+            "+",
+            "Ljava/util/concurrent/Callable<",
+            "TT;>;>;)",
+            "Ljava/util/List<",
+            "Ljava/util/concurrent/Future<",
+            "TT;>;>;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/InterruptedException;
+        }
+    .end annotation
+
+    .line 239
+    iget-object v0, p0, Landroidx/camera/core/CameraExecutor;->mExecutorLock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 240
+    :try_start_0
+    iget-object p0, p0, Landroidx/camera/core/CameraExecutor;->mThreadPoolExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+
+    invoke-virtual {p0, p1}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->invokeAll(Ljava/util/Collection;)Ljava/util/List;
+
+    move-result-object p0
+
+    monitor-exit v0
+
+    return-object p0
+
+    :catchall_0
+    move-exception p0
+
+    .line 241
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public invokeAll(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/util/Collection<",
+            "+",
+            "Ljava/util/concurrent/Callable<",
+            "TT;>;>;J",
+            "Ljava/util/concurrent/TimeUnit;",
+            ")",
+            "Ljava/util/List<",
+            "Ljava/util/concurrent/Future<",
+            "TT;>;>;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/InterruptedException;
+        }
+    .end annotation
+
+    .line 247
+    iget-object v0, p0, Landroidx/camera/core/CameraExecutor;->mExecutorLock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 248
+    :try_start_0
+    iget-object p0, p0, Landroidx/camera/core/CameraExecutor;->mThreadPoolExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+
+    invoke-virtual {p0, p1, p2, p3, p4}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->invokeAll(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/util/List;
+
+    move-result-object p0
+
+    monitor-exit v0
+
+    return-object p0
+
+    :catchall_0
+    move-exception p0
+
+    .line 249
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public invokeAny(Ljava/util/Collection;)Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/util/Collection<",
+            "+",
+            "Ljava/util/concurrent/Callable<",
+            "TT;>;>;)TT;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/util/concurrent/ExecutionException;,
+            Ljava/lang/InterruptedException;
+        }
+    .end annotation
+
+    .line 255
+    iget-object v0, p0, Landroidx/camera/core/CameraExecutor;->mExecutorLock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 256
+    :try_start_0
+    iget-object p0, p0, Landroidx/camera/core/CameraExecutor;->mThreadPoolExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+
+    invoke-virtual {p0, p1}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->invokeAny(Ljava/util/Collection;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    monitor-exit v0
+
+    return-object p0
+
+    :catchall_0
+    move-exception p0
+
+    .line 257
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public invokeAny(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/util/Collection<",
+            "+",
+            "Ljava/util/concurrent/Callable<",
+            "TT;>;>;J",
+            "Ljava/util/concurrent/TimeUnit;",
+            ")TT;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/util/concurrent/ExecutionException;,
+            Ljava/lang/InterruptedException;,
+            Ljava/util/concurrent/TimeoutException;
+        }
+    .end annotation
+
+    .line 263
+    iget-object v0, p0, Landroidx/camera/core/CameraExecutor;->mExecutorLock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 264
+    :try_start_0
+    iget-object p0, p0, Landroidx/camera/core/CameraExecutor;->mThreadPoolExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+
+    invoke-virtual {p0, p1, p2, p3, p4}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->invokeAny(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    monitor-exit v0
+
+    return-object p0
+
+    :catchall_0
+    move-exception p0
+
+    .line 265
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public isShutdown()Z
+    .locals 1
+
+    .line 196
+    iget-object v0, p0, Landroidx/camera/core/CameraExecutor;->mExecutorLock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 197
+    :try_start_0
+    iget-object p0, p0, Landroidx/camera/core/CameraExecutor;->mThreadPoolExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+
+    invoke-virtual {p0}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->isShutdown()Z
+
+    move-result p0
+
+    monitor-exit v0
+
+    return p0
+
+    :catchall_0
+    move-exception p0
+
+    .line 198
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public isTerminated()Z
+    .locals 1
+
+    .line 203
+    iget-object v0, p0, Landroidx/camera/core/CameraExecutor;->mExecutorLock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 204
+    :try_start_0
+    iget-object p0, p0, Landroidx/camera/core/CameraExecutor;->mThreadPoolExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+
+    invoke-virtual {p0}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->isTerminated()Z
+
+    move-result p0
+
+    monitor-exit v0
+
+    return p0
+
+    :catchall_0
+    move-exception p0
+
+    .line 205
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Runnable;",
+            "J",
+            "Ljava/util/concurrent/TimeUnit;",
+            ")",
+            "Ljava/util/concurrent/ScheduledFuture<",
+            "*>;"
+        }
+    .end annotation
+
+    .line 152
+    iget-object v0, p0, Landroidx/camera/core/CameraExecutor;->mExecutorLock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 153
+    :try_start_0
+    iget-object p0, p0, Landroidx/camera/core/CameraExecutor;->mThreadPoolExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+
+    invoke-virtual {p0, p1, p2, p3, p4}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    move-result-object p0
+
+    monitor-exit v0
+
+    return-object p0
+
+    :catchall_0
+    move-exception p0
+
+    .line 154
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<V:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/util/concurrent/Callable<",
+            "TV;>;J",
+            "Ljava/util/concurrent/TimeUnit;",
+            ")",
+            "Ljava/util/concurrent/ScheduledFuture<",
+            "TV;>;"
+        }
+    .end annotation
+
+    .line 159
+    iget-object v0, p0, Landroidx/camera/core/CameraExecutor;->mExecutorLock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 160
+    :try_start_0
+    iget-object p0, p0, Landroidx/camera/core/CameraExecutor;->mThreadPoolExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+
+    invoke-virtual {p0, p1, p2, p3, p4}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    move-result-object p0
+
+    monitor-exit v0
+
+    return-object p0
+
+    :catchall_0
+    move-exception p0
+
+    .line 161
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Runnable;",
+            "JJ",
+            "Ljava/util/concurrent/TimeUnit;",
+            ")",
+            "Ljava/util/concurrent/ScheduledFuture<",
+            "*>;"
+        }
+    .end annotation
+
+    .line 167
+    iget-object v1, p0, Landroidx/camera/core/CameraExecutor;->mExecutorLock:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    .line 168
+    :try_start_0
+    iget-object p0, p0, Landroidx/camera/core/CameraExecutor;->mThreadPoolExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+
+    invoke-virtual/range {p0 .. p6}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    move-result-object p0
+
+    monitor-exit v1
+
+    return-object p0
+
+    :catchall_0
+    move-exception v0
+
+    move-object p0, v0
+
+    .line 169
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public scheduleWithFixedDelay(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Runnable;",
+            "JJ",
+            "Ljava/util/concurrent/TimeUnit;",
+            ")",
+            "Ljava/util/concurrent/ScheduledFuture<",
+            "*>;"
+        }
+    .end annotation
+
+    .line 175
+    iget-object v1, p0, Landroidx/camera/core/CameraExecutor;->mExecutorLock:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    .line 176
+    :try_start_0
+    iget-object p0, p0, Landroidx/camera/core/CameraExecutor;->mThreadPoolExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+
+    invoke-virtual/range {p0 .. p6}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->scheduleWithFixedDelay(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    move-result-object p0
+
+    monitor-exit v1
+
+    return-object p0
+
+    :catchall_0
+    move-exception v0
+
+    move-object p0, v0
+
+    .line 177
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public shutdown()V
+    .locals 1
+
+    .line 182
+    iget-object v0, p0, Landroidx/camera/core/CameraExecutor;->mExecutorLock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 183
+    :try_start_0
+    iget-object p0, p0, Landroidx/camera/core/CameraExecutor;->mThreadPoolExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+
+    invoke-virtual {p0}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->shutdown()V
+
+    .line 184
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public shutdownNow()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Ljava/lang/Runnable;",
+            ">;"
+        }
+    .end annotation
+
+    .line 189
+    iget-object v0, p0, Landroidx/camera/core/CameraExecutor;->mExecutorLock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 190
+    :try_start_0
+    iget-object p0, p0, Landroidx/camera/core/CameraExecutor;->mThreadPoolExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+
+    invoke-virtual {p0}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->shutdownNow()Ljava/util/List;
+
+    move-result-object p0
+
+    monitor-exit v0
+
+    return-object p0
+
+    :catchall_0
+    move-exception p0
+
+    .line 191
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Runnable;",
+            ")",
+            "Ljava/util/concurrent/Future<",
+            "*>;"
+        }
+    .end annotation
+
+    .line 231
+    iget-object v0, p0, Landroidx/camera/core/CameraExecutor;->mExecutorLock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 232
+    :try_start_0
+    iget-object p0, p0, Landroidx/camera/core/CameraExecutor;->mThreadPoolExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+
+    invoke-virtual {p0, p1}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
+
+    move-result-object p0
+
+    monitor-exit v0
+
+    return-object p0
+
+    :catchall_0
+    move-exception p0
+
+    .line 233
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/lang/Runnable;",
+            "TT;)",
+            "Ljava/util/concurrent/Future<",
+            "TT;>;"
+        }
+    .end annotation
+
+    .line 224
+    iget-object v0, p0, Landroidx/camera/core/CameraExecutor;->mExecutorLock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 225
+    :try_start_0
+    iget-object p0, p0, Landroidx/camera/core/CameraExecutor;->mThreadPoolExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+
+    invoke-virtual {p0, p1, p2}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
+
+    move-result-object p0
+
+    monitor-exit v0
+
+    return-object p0
+
+    :catchall_0
+    move-exception p0
+
+    .line 226
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/util/concurrent/Callable<",
+            "TT;>;)",
+            "Ljava/util/concurrent/Future<",
+            "TT;>;"
+        }
+    .end annotation
+
+    .line 217
+    iget-object v0, p0, Landroidx/camera/core/CameraExecutor;->mExecutorLock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 218
+    :try_start_0
+    iget-object p0, p0, Landroidx/camera/core/CameraExecutor;->mThreadPoolExecutor:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+
+    invoke-virtual {p0, p1}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
+
+    move-result-object p0
+
+    monitor-exit v0
+
+    return-object p0
+
+    :catchall_0
+    move-exception p0
+
+    .line 219
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
 .end method

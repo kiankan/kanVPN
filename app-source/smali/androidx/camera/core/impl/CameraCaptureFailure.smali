@@ -31,18 +31,18 @@
 
 # virtual methods
 .method public getCaptureFailure()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getReason()Landroidx/camera/core/impl/CameraCaptureFailure$Reason;
-    .locals 1
+    .locals 0
 
-    .line 42
-    iget-object v0, p0, Landroidx/camera/core/impl/CameraCaptureFailure;->mReason:Landroidx/camera/core/impl/CameraCaptureFailure$Reason;
+    .line 41
+    iget-object p0, p0, Landroidx/camera/core/impl/CameraCaptureFailure;->mReason:Landroidx/camera/core/impl/CameraCaptureFailure$Reason;
 
-    return-object v0
+    return-object p0
 .end method

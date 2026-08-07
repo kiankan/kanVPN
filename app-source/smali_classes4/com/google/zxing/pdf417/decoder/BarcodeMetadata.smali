@@ -45,46 +45,46 @@
 
 # virtual methods
 .method getColumnCount()I
-    .locals 1
+    .locals 0
 
     .line 39
-    iget v0, p0, Lcom/google/zxing/pdf417/decoder/BarcodeMetadata;->columnCount:I
+    iget p0, p0, Lcom/google/zxing/pdf417/decoder/BarcodeMetadata;->columnCount:I
 
-    return v0
+    return p0
 .end method
 
 .method getErrorCorrectionLevel()I
-    .locals 1
+    .locals 0
 
     .line 43
-    iget v0, p0, Lcom/google/zxing/pdf417/decoder/BarcodeMetadata;->errorCorrectionLevel:I
+    iget p0, p0, Lcom/google/zxing/pdf417/decoder/BarcodeMetadata;->errorCorrectionLevel:I
 
-    return v0
+    return p0
 .end method
 
 .method getRowCount()I
-    .locals 1
+    .locals 0
 
     .line 47
-    iget v0, p0, Lcom/google/zxing/pdf417/decoder/BarcodeMetadata;->rowCount:I
+    iget p0, p0, Lcom/google/zxing/pdf417/decoder/BarcodeMetadata;->rowCount:I
 
-    return v0
+    return p0
 .end method
 
 .method getRowCountLowerPart()I
-    .locals 1
+    .locals 0
 
     .line 55
-    iget v0, p0, Lcom/google/zxing/pdf417/decoder/BarcodeMetadata;->rowCountLowerPart:I
+    iget p0, p0, Lcom/google/zxing/pdf417/decoder/BarcodeMetadata;->rowCountLowerPart:I
 
-    return v0
+    return p0
 .end method
 
 .method getRowCountUpperPart()I
-    .locals 1
+    .locals 0
 
     .line 51
-    iget v0, p0, Lcom/google/zxing/pdf417/decoder/BarcodeMetadata;->rowCountUpperPart:I
+    iget p0, p0, Lcom/google/zxing/pdf417/decoder/BarcodeMetadata;->rowCountUpperPart:I
 
-    return v0
+    return p0
 .end method

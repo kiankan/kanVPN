@@ -18,7 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 442
+    .line 472
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,7 +29,7 @@
 
     const/4 v0, 0x0
 
-    .line 451
+    .line 480
     invoke-static {p0, v0}, Landroidx/camera/core/CameraState$StateError;->create(ILjava/lang/Throwable;)Landroidx/camera/core/CameraState$StateError;
 
     move-result-object p0
@@ -40,7 +40,7 @@
 .method public static create(ILjava/lang/Throwable;)Landroidx/camera/core/CameraState$StateError;
     .locals 1
 
-    .line 461
+    .line 489
     new-instance v0, Landroidx/camera/core/AutoValue_CameraState_StateError;
 
     invoke-direct {v0, p0, p1}, Landroidx/camera/core/AutoValue_CameraState_StateError;-><init>(ILjava/lang/Throwable;)V
@@ -57,37 +57,37 @@
 .end method
 
 .method public getType()Landroidx/camera/core/CameraState$ErrorType;
-    .locals 2
+    .locals 1
 
-    .line 495
+    .line 522
     invoke-virtual {p0}, Landroidx/camera/core/CameraState$StateError;->getCode()I
 
-    move-result v0
+    move-result p0
 
-    const/4 v1, 0x2
+    const/4 v0, 0x2
 
-    if-eq v0, v1, :cond_1
+    if-eq p0, v0, :cond_1
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    if-eq v0, v1, :cond_1
+    if-eq p0, v0, :cond_1
 
-    const/4 v1, 0x3
+    const/4 v0, 0x3
 
-    if-ne v0, v1, :cond_0
+    if-ne p0, v0, :cond_0
 
     goto :goto_0
 
-    .line 500
+    .line 527
     :cond_0
-    sget-object v0, Landroidx/camera/core/CameraState$ErrorType;->CRITICAL:Landroidx/camera/core/CameraState$ErrorType;
+    sget-object p0, Landroidx/camera/core/CameraState$ErrorType;->CRITICAL:Landroidx/camera/core/CameraState$ErrorType;
 
-    return-object v0
+    return-object p0
 
-    .line 498
+    .line 525
     :cond_1
     :goto_0
-    sget-object v0, Landroidx/camera/core/CameraState$ErrorType;->RECOVERABLE:Landroidx/camera/core/CameraState$ErrorType;
+    sget-object p0, Landroidx/camera/core/CameraState$ErrorType;->RECOVERABLE:Landroidx/camera/core/CameraState$ErrorType;
 
-    return-object v0
+    return-object p0
 .end method

@@ -29,14 +29,14 @@
 
 # virtual methods
 .method public final run()V
-    .locals 2
+    .locals 1
 
     .line 0
     iget-object v0, p0, Landroidx/camera/core/imagecapture/TakePictureRequest$$ExternalSyntheticLambda0;->f$0:Landroidx/camera/core/imagecapture/TakePictureRequest;
 
-    iget-object v1, p0, Landroidx/camera/core/imagecapture/TakePictureRequest$$ExternalSyntheticLambda0;->f$1:Landroidx/camera/core/ImageProxy;
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/TakePictureRequest$$ExternalSyntheticLambda0;->f$1:Landroidx/camera/core/ImageProxy;
 
-    invoke-virtual {v0, v1}, Landroidx/camera/core/imagecapture/TakePictureRequest;->lambda$onResult$2$androidx-camera-core-imagecapture-TakePictureRequest(Landroidx/camera/core/ImageProxy;)V
+    invoke-virtual {v0, p0}, Landroidx/camera/core/imagecapture/TakePictureRequest;->lambda$onResult$2$androidx-camera-core-imagecapture-TakePictureRequest(Landroidx/camera/core/ImageProxy;)V
 
     return-void
 .end method

@@ -15,7 +15,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 28
+    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,7 +28,7 @@
 
     const/16 v1, 0x23
 
-    .line 35
+    .line 34
     invoke-static {v0, v1}, Landroidx/camera/core/ImageReaderFormatRecommender$FormatCombo;->create(II)Landroidx/camera/core/ImageReaderFormatRecommender$FormatCombo;
 
     move-result-object v0

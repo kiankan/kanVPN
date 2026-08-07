@@ -175,34 +175,61 @@
 
 # virtual methods
 .method getText(JLj$/time/format/TextStyle;)Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 655
-    iget-object v0, p0, Lj$/time/format/DateTimeTextProvider$LocaleStore;->valueTextMap:Ljava/util/Map;
+    iget-object p0, p0, Lj$/time/format/DateTimeTextProvider$LocaleStore;->valueTextMap:Ljava/util/Map;
 
-    invoke-interface {v0, p3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, p3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p3
+    move-result-object p0
 
-    check-cast p3, Ljava/util/Map;
+    check-cast p0, Ljava/util/Map;
 
-    if-eqz p3, :cond_0
+    if-eqz p0, :cond_0
 
     .line 656
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
 
-    invoke-interface {p3, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Ljava/lang/String;
+    check-cast p0, Ljava/lang/String;
 
-    return-object p1
+    return-object p0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return-object p1
+    return-object p0
+.end method
+
+.method getTextIterator(Lj$/time/format/TextStyle;)Ljava/util/Iterator;
+    .locals 0
+
+    .line 669
+    iget-object p0, p0, Lj$/time/format/DateTimeTextProvider$LocaleStore;->parsable:Ljava/util/Map;
+
+    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/util/List;
+
+    if-eqz p0, :cond_0
+
+    .line 670
+    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
 .end method

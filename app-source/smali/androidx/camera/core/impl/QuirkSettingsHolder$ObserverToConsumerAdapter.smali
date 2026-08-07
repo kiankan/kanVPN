@@ -54,10 +54,10 @@
         }
     .end annotation
 
-    .line 118
+    .line 117
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 119
+    .line 118
     iput-object p1, p0, Landroidx/camera/core/impl/QuirkSettingsHolder$ObserverToConsumerAdapter;->mDelegate:Landroidx/core/util/Consumer;
 
     return-void
@@ -66,30 +66,30 @@
 
 # virtual methods
 .method public onError(Ljava/lang/Throwable;)V
-    .locals 2
+    .locals 1
 
-    .line 129
-    const-string v0, "ObserverToConsumerAdapter"
+    .line 128
+    const-string p0, "ObserverToConsumerAdapter"
 
-    const-string v1, "Unexpected error in Observable"
+    const-string v0, "Unexpected error in Observable"
 
-    invoke-static {v0, v1, p1}, Landroidx/camera/core/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {p0, v0, p1}, Landroidx/camera/core/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
 .method public onNewData(Ljava/lang/Object;)V
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)V"
         }
     .end annotation
 
-    .line 124
-    iget-object v0, p0, Landroidx/camera/core/impl/QuirkSettingsHolder$ObserverToConsumerAdapter;->mDelegate:Landroidx/core/util/Consumer;
+    .line 123
+    iget-object p0, p0, Landroidx/camera/core/impl/QuirkSettingsHolder$ObserverToConsumerAdapter;->mDelegate:Landroidx/core/util/Consumer;
 
-    invoke-interface {v0, p1}, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V
+    invoke-interface {p0, p1}, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V
 
     return-void
 .end method

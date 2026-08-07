@@ -68,19 +68,19 @@
 .end method
 
 .method private getMacroId()I
-    .locals 1
+    .locals 0
 
     .line 1037
-    iget v0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->macroId:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->macroId:I
 
-    return v0
+    return p0
 .end method
 
 .method private getShapeHint()Lcom/google/zxing/datamatrix/encoder/SymbolShapeHint;
-    .locals 1
+    .locals 0
 
     .line 1041
-    iget-object v0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->shape:Lcom/google/zxing/datamatrix/encoder/SymbolShapeHint;
+    iget-object p0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->shape:Lcom/google/zxing/datamatrix/encoder/SymbolShapeHint;
 
-    return-object v0
+    return-object p0
 .end method

@@ -109,7 +109,7 @@
 .method public static withAllQuirksDisabled()Landroidx/camera/core/impl/QuirkSettings;
     .locals 2
 
-    .line 87
+    .line 85
     new-instance v0, Landroidx/camera/core/impl/QuirkSettings$Builder;
 
     invoke-direct {v0}, Landroidx/camera/core/impl/QuirkSettings$Builder;-><init>()V
@@ -130,7 +130,7 @@
 .method public static withDefaultBehavior()Landroidx/camera/core/impl/QuirkSettings;
     .locals 2
 
-    .line 77
+    .line 76
     new-instance v0, Landroidx/camera/core/impl/QuirkSettings$Builder;
 
     invoke-direct {v0}, Landroidx/camera/core/impl/QuirkSettings$Builder;-><init>()V
@@ -162,7 +162,7 @@
         }
     .end annotation
 
-    .line 111
+    .line 107
     new-instance v0, Landroidx/camera/core/impl/QuirkSettings$Builder;
 
     invoke-direct {v0}, Landroidx/camera/core/impl/QuirkSettings$Builder;-><init>()V
@@ -192,7 +192,7 @@
         }
     .end annotation
 
-    .line 99
+    .line 96
     new-instance v0, Landroidx/camera/core/impl/QuirkSettings$Builder;
 
     invoke-direct {v0}, Landroidx/camera/core/impl/QuirkSettings$Builder;-><init>()V
@@ -213,7 +213,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
 
-    .line 166
+    .line 160
     instance-of v0, p1, Landroidx/camera/core/impl/QuirkSettings;
 
     const/4 v1, 0x0
@@ -229,11 +229,11 @@
 
     return v0
 
-    .line 172
+    .line 166
     :cond_1
     check-cast p1, Landroidx/camera/core/impl/QuirkSettings;
 
-    .line 173
+    .line 167
     iget-boolean v2, p0, Landroidx/camera/core/impl/QuirkSettings;->mEnabledWhenDeviceHasQuirk:Z
 
     iget-boolean v3, p1, Landroidx/camera/core/impl/QuirkSettings;->mEnabledWhenDeviceHasQuirk:Z
@@ -244,23 +244,23 @@
 
     iget-object v3, p1, Landroidx/camera/core/impl/QuirkSettings;->mForceEnabledQuirks:Ljava/util/Set;
 
-    .line 174
+    .line 168
     invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    iget-object v2, p0, Landroidx/camera/core/impl/QuirkSettings;->mForceDisabledQuirks:Ljava/util/Set;
+    iget-object p0, p0, Landroidx/camera/core/impl/QuirkSettings;->mForceDisabledQuirks:Ljava/util/Set;
 
     iget-object p1, p1, Landroidx/camera/core/impl/QuirkSettings;->mForceDisabledQuirks:Ljava/util/Set;
 
-    .line 175
-    invoke-static {v2, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .line 169
+    invoke-static {p0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_2
+    if-eqz p0, :cond_2
 
     return v0
 
@@ -269,7 +269,7 @@
 .end method
 
 .method public getForceDisabledQuirks()Ljava/util/Set;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -281,18 +281,18 @@
         }
     .end annotation
 
-    .line 140
-    iget-object v0, p0, Landroidx/camera/core/impl/QuirkSettings;->mForceDisabledQuirks:Ljava/util/Set;
+    .line 134
+    iget-object p0, p0, Landroidx/camera/core/impl/QuirkSettings;->mForceDisabledQuirks:Ljava/util/Set;
 
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
+    invoke-static {p0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getForceEnabledQuirks()Ljava/util/Set;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -304,20 +304,20 @@
         }
     .end annotation
 
-    .line 130
-    iget-object v0, p0, Landroidx/camera/core/impl/QuirkSettings;->mForceEnabledQuirks:Ljava/util/Set;
+    .line 125
+    iget-object p0, p0, Landroidx/camera/core/impl/QuirkSettings;->mForceEnabledQuirks:Ljava/util/Set;
 
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
+    invoke-static {p0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public hashCode()I
-    .locals 3
+    .locals 2
 
-    .line 180
+    .line 174
     iget-boolean v0, p0, Landroidx/camera/core/impl/QuirkSettings;->mEnabledWhenDeviceHasQuirk:Z
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -326,26 +326,26 @@
 
     iget-object v1, p0, Landroidx/camera/core/impl/QuirkSettings;->mForceEnabledQuirks:Ljava/util/Set;
 
-    iget-object v2, p0, Landroidx/camera/core/impl/QuirkSettings;->mForceDisabledQuirks:Ljava/util/Set;
+    iget-object p0, p0, Landroidx/camera/core/impl/QuirkSettings;->mForceDisabledQuirks:Ljava/util/Set;
 
-    filled-new-array {v0, v1, v2}, [Ljava/lang/Object;
+    filled-new-array {v0, v1, p0}, [Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+    invoke-static {p0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public isEnabledWhenDeviceHasQuirk()Z
-    .locals 1
+    .locals 0
 
-    .line 120
-    iget-boolean v0, p0, Landroidx/camera/core/impl/QuirkSettings;->mEnabledWhenDeviceHasQuirk:Z
+    .line 116
+    iget-boolean p0, p0, Landroidx/camera/core/impl/QuirkSettings;->mEnabledWhenDeviceHasQuirk:Z
 
-    return v0
+    return p0
 .end method
 
 .method public shouldEnableQuirk(Ljava/lang/Class;Z)Z
@@ -360,7 +360,7 @@
         }
     .end annotation
 
-    .line 155
+    .line 149
     iget-object v0, p0, Landroidx/camera/core/impl/QuirkSettings;->mForceEnabledQuirks:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -373,7 +373,7 @@
 
     return v1
 
-    .line 157
+    .line 151
     :cond_0
     iget-object v0, p0, Landroidx/camera/core/impl/QuirkSettings;->mForceDisabledQuirks:Ljava/util/Set;
 
@@ -387,11 +387,11 @@
 
     return v0
 
-    .line 160
+    .line 154
     :cond_1
-    iget-boolean p1, p0, Landroidx/camera/core/impl/QuirkSettings;->mEnabledWhenDeviceHasQuirk:Z
+    iget-boolean p0, p0, Landroidx/camera/core/impl/QuirkSettings;->mEnabledWhenDeviceHasQuirk:Z
 
-    if-eqz p1, :cond_2
+    if-eqz p0, :cond_2
 
     if-eqz p2, :cond_2
 
@@ -404,7 +404,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 186
+    .line 179
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "QuirkSettings{enabledWhenDeviceHasQuirk="
@@ -427,17 +427,17 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Landroidx/camera/core/impl/QuirkSettings;->mForceDisabledQuirks:Ljava/util/Set;
+    iget-object p0, p0, Landroidx/camera/core/impl/QuirkSettings;->mForceDisabledQuirks:Ljava/util/Set;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/16 v1, 0x7d
+    const/16 p0, 0x7d
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

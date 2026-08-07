@@ -39,34 +39,34 @@
     .locals 4
 
     .line 155
-    const-class v0, Lj$/time/zone/ZoneRulesProvider;
+    const-string v0, "java.time.zone.DefaultZoneRulesProvider"
 
-    const-string v1, "java.time.zone.DefaultZoneRulesProvider"
+    invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-static {v1}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v1
-
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_0
 
     .line 160
     :try_start_0
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    const-class v1, Lj$/time/zone/ZoneRulesProvider;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v2
 
     const/4 v3, 0x1
 
-    invoke-static {v1, v3, v2}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
+    invoke-static {v0, v3, v2}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
 
-    move-result-object v1
+    move-result-object v0
 
     .line 161
-    invoke-virtual {v1}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -76,34 +76,34 @@
     invoke-static {v0}, Lj$/time/zone/ZoneRulesProvider;->registerProvider(Lj$/time/zone/ZoneRulesProvider;)V
 
     .line 163
-    iget-object v1, p0, Lj$/time/zone/ZoneRulesProvider$1;->val$loaded:Ljava/util/List;
+    iget-object p0, p0, Lj$/time/zone/ZoneRulesProvider$1;->val$loaded:Ljava/util/List;
 
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {p0, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
     :catch_0
-    move-exception v0
+    move-exception p0
 
     .line 165
-    new-instance v1, Ljava/lang/Error;
+    new-instance v0, Ljava/lang/Error;
 
-    invoke-direct {v1, v0}, Ljava/lang/Error;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {v0, p0}, Ljava/lang/Error;-><init>(Ljava/lang/Throwable;)V
 
-    throw v1
+    throw v0
 
     .line 170
     :cond_0
-    new-instance v0, Lj$/time/zone/ZoneRulesProvider$TimeZoneRulesProvider;
+    new-instance p0, Lj$/time/zone/ZoneRulesProvider$TimeZoneRulesProvider;
 
-    invoke-direct {v0}, Lj$/time/zone/ZoneRulesProvider$TimeZoneRulesProvider;-><init>()V
+    invoke-direct {p0}, Lj$/time/zone/ZoneRulesProvider$TimeZoneRulesProvider;-><init>()V
 
-    invoke-static {v0}, Lj$/time/zone/ZoneRulesProvider;->registerProvider(Lj$/time/zone/ZoneRulesProvider;)V
+    invoke-static {p0}, Lj$/time/zone/ZoneRulesProvider;->registerProvider(Lj$/time/zone/ZoneRulesProvider;)V
 
     :goto_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return-object v0
+    return-object p0
 .end method

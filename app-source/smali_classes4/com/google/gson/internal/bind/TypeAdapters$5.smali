@@ -26,7 +26,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 186
+    .line 190
     invoke-direct {p0}, Lcom/google/gson/TypeAdapter;-><init>()V
 
     return-void
@@ -35,95 +35,95 @@
 
 # virtual methods
 .method public read(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Number;
-    .locals 4
+    .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    .line 189
+    .line 193
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->peek()Lcom/google/gson/stream/JsonToken;
 
-    move-result-object v0
+    move-result-object p0
 
-    sget-object v1, Lcom/google/gson/stream/JsonToken;->NULL:Lcom/google/gson/stream/JsonToken;
+    sget-object v0, Lcom/google/gson/stream/JsonToken;->NULL:Lcom/google/gson/stream/JsonToken;
 
-    if-ne v0, v1, :cond_0
+    if-ne p0, v0, :cond_0
 
-    .line 190
+    .line 194
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->nextNull()V
 
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return-object p1
+    return-object p0
 
-    .line 196
+    .line 200
     :cond_0
     :try_start_0
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->nextInt()I
 
-    move-result v0
+    move-result p0
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    const/16 v1, 0xff
+    const/16 v0, 0xff
 
-    if-gt v0, v1, :cond_1
+    if-gt p0, v0, :cond_1
 
-    const/16 v1, -0x80
+    const/16 v0, -0x80
 
-    if-lt v0, v1, :cond_1
+    if-lt p0, v0, :cond_1
 
-    int-to-byte p1, v0
+    int-to-byte p0, p0
 
-    .line 205
-    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+    .line 209
+    invoke-static {p0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
-    .line 202
+    .line 206
     :cond_1
-    new-instance v1, Lcom/google/gson/JsonSyntaxException;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "Lossy conversion from "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v0, " to byte; at path "
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 203
-    invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->getPreviousPath()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v1, p1}, Lcom/google/gson/JsonSyntaxException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    :catch_0
-    move-exception p1
-
-    .line 198
     new-instance v0, Lcom/google/gson/JsonSyntaxException;
 
-    invoke-direct {v0, p1}, Lcom/google/gson/JsonSyntaxException;-><init>(Ljava/lang/Throwable;)V
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Lossy conversion from "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p0, " to byte; at path "
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 207
+    invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->getPreviousPath()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Lcom/google/gson/JsonSyntaxException;-><init>(Ljava/lang/String;)V
 
     throw v0
+
+    :catch_0
+    move-exception p0
+
+    .line 202
+    new-instance p1, Lcom/google/gson/JsonSyntaxException;
+
+    invoke-direct {p1, p0}, Lcom/google/gson/JsonSyntaxException;-><init>(Ljava/lang/Throwable;)V
+
+    throw p1
 .end method
 
 .method public bridge synthetic read(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;
@@ -134,12 +134,12 @@
         }
     .end annotation
 
-    .line 186
+    .line 190
     invoke-virtual {p0, p1}, Lcom/google/gson/internal/bind/TypeAdapters$5;->read(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Number;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public write(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Number;)V
@@ -152,18 +152,18 @@
 
     if-nez p2, :cond_0
 
-    .line 211
+    .line 215
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonWriter;->nullValue()Lcom/google/gson/stream/JsonWriter;
 
     return-void
 
-    .line 213
+    .line 217
     :cond_0
     invoke-virtual {p2}, Ljava/lang/Number;->byteValue()B
 
-    move-result p2
+    move-result p0
 
-    int-to-long v0, p2
+    int-to-long v0, p0
 
     invoke-virtual {p1, v0, v1}, Lcom/google/gson/stream/JsonWriter;->value(J)Lcom/google/gson/stream/JsonWriter;
 
@@ -178,7 +178,7 @@
         }
     .end annotation
 
-    .line 186
+    .line 190
     check-cast p2, Ljava/lang/Number;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/gson/internal/bind/TypeAdapters$5;->write(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Number;)V

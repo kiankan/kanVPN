@@ -292,19 +292,19 @@
 
 # virtual methods
 .method getCodewords()[B
-    .locals 1
+    .locals 0
 
     .line 119
-    iget-object v0, p0, Lcom/google/zxing/qrcode/decoder/DataBlock;->codewords:[B
+    iget-object p0, p0, Lcom/google/zxing/qrcode/decoder/DataBlock;->codewords:[B
 
-    return-object v0
+    return-object p0
 .end method
 
 .method getNumDataCodewords()I
-    .locals 1
+    .locals 0
 
     .line 115
-    iget v0, p0, Lcom/google/zxing/qrcode/decoder/DataBlock;->numDataCodewords:I
+    iget p0, p0, Lcom/google/zxing/qrcode/decoder/DataBlock;->numDataCodewords:I
 
-    return v0
+    return p0
 .end method

@@ -23,6 +23,31 @@
     .end annotation
 .end method
 
+.method public enableLowLightBoostAsync(Z)Lcom/google/common/util/concurrent/ListenableFuture;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(Z)",
+            "Lcom/google/common/util/concurrent/ListenableFuture<",
+            "Ljava/lang/Void;",
+            ">;"
+        }
+    .end annotation
+
+    .line 112
+    new-instance p0, Landroidx/camera/core/CameraControl$OperationCanceledException;
+
+    const-string p1, "Not supported!"
+
+    invoke-direct {p0, p1}, Landroidx/camera/core/CameraControl$OperationCanceledException;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p0}, Landroidx/camera/core/impl/utils/futures/Futures;->immediateFailedFuture(Ljava/lang/Throwable;)Lcom/google/common/util/concurrent/ListenableFuture;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method public abstract enableTorch(Z)Lcom/google/common/util/concurrent/ListenableFuture;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -54,6 +79,31 @@
             ">;"
         }
     .end annotation
+.end method
+
+.method public setTorchStrengthLevel(I)Lcom/google/common/util/concurrent/ListenableFuture;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)",
+            "Lcom/google/common/util/concurrent/ListenableFuture<",
+            "Ljava/lang/Void;",
+            ">;"
+        }
+    .end annotation
+
+    .line 252
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string p1, "Setting torch strength is not supported on the device."
+
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p0}, Landroidx/camera/core/impl/utils/futures/Futures;->immediateFailedFuture(Ljava/lang/Throwable;)Lcom/google/common/util/concurrent/ListenableFuture;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method public abstract setZoomRatio(F)Lcom/google/common/util/concurrent/ListenableFuture;

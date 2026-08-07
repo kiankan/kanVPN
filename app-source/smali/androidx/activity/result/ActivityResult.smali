@@ -46,7 +46,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -115,7 +115,7 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 2
 
-    const-string v0, "parcel"
+    const-string/jumbo v0, "parcel"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -168,29 +168,29 @@
 
 # virtual methods
 .method public describeContents()I
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public final getData()Landroid/content/Intent;
-    .locals 1
+    .locals 0
 
     .line 38
-    iget-object v0, p0, Landroidx/activity/result/ActivityResult;->data:Landroid/content/Intent;
+    iget-object p0, p0, Landroidx/activity/result/ActivityResult;->data:Landroid/content/Intent;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getResultCode()I
-    .locals 1
+    .locals 0
 
     .line 35
-    iget v0, p0, Landroidx/activity/result/ActivityResult;->resultCode:I
+    iget p0, p0, Landroidx/activity/result/ActivityResult;->resultCode:I
 
-    return v0
+    return p0
 .end method
 
 .method public toString()Ljava/lang/String;
@@ -217,19 +217,19 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Landroidx/activity/result/ActivityResult;->data:Landroid/content/Intent;
+    iget-object p0, p0, Landroidx/activity/result/ActivityResult;->data:Landroid/content/Intent;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/16 v1, 0x7d
+    const/16 p0, 0x7d
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
@@ -260,11 +260,11 @@
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 55
-    iget-object v0, p0, Landroidx/activity/result/ActivityResult;->data:Landroid/content/Intent;
+    iget-object p0, p0, Landroidx/activity/result/ActivityResult;->data:Landroid/content/Intent;
 
-    if-eqz v0, :cond_1
+    if-eqz p0, :cond_1
 
-    invoke-virtual {v0, p1, p2}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {p0, p1, p2}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
 
     :cond_1
     return-void

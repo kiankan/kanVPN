@@ -75,160 +75,152 @@
     :cond_0
     invoke-static {}, Lcom/google/zxing/FormatException;->getFormatInstance()Lcom/google/zxing/FormatException;
 
-    move-result-object p1
+    move-result-object p0
 
-    throw p1
+    throw p0
 .end method
 
 .method private extractDataRegion(Lcom/google/zxing/common/BitMatrix;)Lcom/google/zxing/common/BitMatrix;
-    .locals 16
-
-    move-object/from16 v0, p0
+    .locals 14
 
     .line 406
-    iget-object v1, v0, Lcom/google/zxing/datamatrix/decoder/BitMatrixParser;->version:Lcom/google/zxing/datamatrix/decoder/Version;
+    iget-object v0, p0, Lcom/google/zxing/datamatrix/decoder/BitMatrixParser;->version:Lcom/google/zxing/datamatrix/decoder/Version;
 
-    invoke-virtual {v1}, Lcom/google/zxing/datamatrix/decoder/Version;->getSymbolSizeRows()I
+    invoke-virtual {v0}, Lcom/google/zxing/datamatrix/decoder/Version;->getSymbolSizeRows()I
+
+    move-result v0
+
+    .line 407
+    iget-object v1, p0, Lcom/google/zxing/datamatrix/decoder/BitMatrixParser;->version:Lcom/google/zxing/datamatrix/decoder/Version;
+
+    invoke-virtual {v1}, Lcom/google/zxing/datamatrix/decoder/Version;->getSymbolSizeColumns()I
 
     move-result v1
 
-    .line 407
-    iget-object v2, v0, Lcom/google/zxing/datamatrix/decoder/BitMatrixParser;->version:Lcom/google/zxing/datamatrix/decoder/Version;
-
-    invoke-virtual {v2}, Lcom/google/zxing/datamatrix/decoder/Version;->getSymbolSizeColumns()I
+    .line 409
+    invoke-virtual {p1}, Lcom/google/zxing/common/BitMatrix;->getHeight()I
 
     move-result v2
 
-    .line 409
-    invoke-virtual/range {p1 .. p1}, Lcom/google/zxing/common/BitMatrix;->getHeight()I
-
-    move-result v3
-
-    if-ne v3, v1, :cond_5
+    if-ne v2, v0, :cond_5
 
     .line 413
-    iget-object v3, v0, Lcom/google/zxing/datamatrix/decoder/BitMatrixParser;->version:Lcom/google/zxing/datamatrix/decoder/Version;
+    iget-object v2, p0, Lcom/google/zxing/datamatrix/decoder/BitMatrixParser;->version:Lcom/google/zxing/datamatrix/decoder/Version;
 
-    invoke-virtual {v3}, Lcom/google/zxing/datamatrix/decoder/Version;->getDataRegionSizeRows()I
+    invoke-virtual {v2}, Lcom/google/zxing/datamatrix/decoder/Version;->getDataRegionSizeRows()I
 
-    move-result v3
+    move-result v2
 
     .line 414
-    iget-object v4, v0, Lcom/google/zxing/datamatrix/decoder/BitMatrixParser;->version:Lcom/google/zxing/datamatrix/decoder/Version;
+    iget-object p0, p0, Lcom/google/zxing/datamatrix/decoder/BitMatrixParser;->version:Lcom/google/zxing/datamatrix/decoder/Version;
 
-    invoke-virtual {v4}, Lcom/google/zxing/datamatrix/decoder/Version;->getDataRegionSizeColumns()I
+    invoke-virtual {p0}, Lcom/google/zxing/datamatrix/decoder/Version;->getDataRegionSizeColumns()I
 
-    move-result v4
+    move-result p0
 
     .line 416
-    div-int/2addr v1, v3
+    div-int/2addr v0, v2
 
     .line 417
-    div-int/2addr v2, v4
+    div-int/2addr v1, p0
 
-    mul-int v5, v1, v3
+    mul-int v3, v0, v2
 
-    mul-int v6, v2, v4
+    mul-int v4, v1, p0
 
     .line 422
-    new-instance v7, Lcom/google/zxing/common/BitMatrix;
+    new-instance v5, Lcom/google/zxing/common/BitMatrix;
 
-    invoke-direct {v7, v6, v5}, Lcom/google/zxing/common/BitMatrix;-><init>(II)V
+    invoke-direct {v5, v4, v3}, Lcom/google/zxing/common/BitMatrix;-><init>(II)V
 
-    const/4 v6, 0x0
+    const/4 v3, 0x0
+
+    move v4, v3
 
     :goto_0
-    if-ge v6, v1, :cond_4
+    if-ge v4, v0, :cond_4
 
-    mul-int v8, v6, v3
+    mul-int v6, v4, v2
 
-    const/4 v9, 0x0
+    move v7, v3
 
     :goto_1
-    if-ge v9, v2, :cond_3
+    if-ge v7, v1, :cond_3
 
-    mul-int v10, v9, v4
+    mul-int v8, v7, p0
 
-    const/4 v11, 0x0
+    move v9, v3
 
     :goto_2
-    if-ge v11, v3, :cond_2
+    if-ge v9, v2, :cond_2
 
-    add-int/lit8 v12, v3, 0x2
+    add-int/lit8 v10, v2, 0x2
 
-    mul-int/2addr v12, v6
+    mul-int/2addr v10, v4
 
-    add-int/lit8 v12, v12, 0x1
+    add-int/lit8 v10, v10, 0x1
 
-    add-int/2addr v12, v11
+    add-int/2addr v10, v9
 
-    add-int v13, v8, v11
+    add-int v11, v6, v9
 
-    const/4 v14, 0x0
+    move v12, v3
 
     :goto_3
-    if-ge v14, v4, :cond_1
+    if-ge v12, p0, :cond_1
 
-    add-int/lit8 v15, v4, 0x2
+    add-int/lit8 v13, p0, 0x2
 
-    mul-int/2addr v15, v9
+    mul-int/2addr v13, v7
 
-    add-int/lit8 v15, v15, 0x1
+    add-int/lit8 v13, v13, 0x1
 
-    add-int/2addr v15, v14
-
-    move-object/from16 v5, p1
+    add-int/2addr v13, v12
 
     .line 432
-    invoke-virtual {v5, v15, v12}, Lcom/google/zxing/common/BitMatrix;->get(II)Z
+    invoke-virtual {p1, v13, v10}, Lcom/google/zxing/common/BitMatrix;->get(II)Z
 
-    move-result v15
+    move-result v13
 
-    if-eqz v15, :cond_0
+    if-eqz v13, :cond_0
 
-    add-int v15, v10, v14
+    add-int v13, v8, v12
 
     .line 434
-    invoke-virtual {v7, v15, v13}, Lcom/google/zxing/common/BitMatrix;->set(II)V
+    invoke-virtual {v5, v13, v11}, Lcom/google/zxing/common/BitMatrix;->set(II)V
 
     :cond_0
-    add-int/lit8 v14, v14, 0x1
+    add-int/lit8 v12, v12, 0x1
 
     goto :goto_3
 
     :cond_1
-    move-object/from16 v5, p1
-
-    add-int/lit8 v11, v11, 0x1
+    add-int/lit8 v9, v9, 0x1
 
     goto :goto_2
 
     :cond_2
-    move-object/from16 v5, p1
-
-    add-int/lit8 v9, v9, 0x1
+    add-int/lit8 v7, v7, 0x1
 
     goto :goto_1
 
     :cond_3
-    move-object/from16 v5, p1
-
-    add-int/lit8 v6, v6, 0x1
+    add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
     :cond_4
-    return-object v7
+    return-object v5
 
     .line 410
     :cond_5
-    new-instance v1, Ljava/lang/IllegalArgumentException;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const-string v2, "Dimension of bitMatrix must match the version size"
+    const-string p1, "Dimension of bitMatrix must match the version size"
 
-    invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw v1
+    throw p0
 .end method
 
 .method private readCorner1(II)I
@@ -330,13 +322,13 @@
     .line 257
     invoke-direct {p0, v1, v2, p1, p2}, Lcom/google/zxing/datamatrix/decoder/BitMatrixParser;->readModule(IIII)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_6
+    if-eqz p0, :cond_6
 
-    or-int/lit8 p1, v0, 0x1
+    or-int/lit8 p0, v0, 0x1
 
-    return p1
+    return p0
 
     :cond_6
     return v0
@@ -445,13 +437,13 @@
     .line 302
     invoke-direct {p0, v2, v3, p1, p2}, Lcom/google/zxing/datamatrix/decoder/BitMatrixParser;->readModule(IIII)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_6
+    if-eqz p0, :cond_6
 
-    or-int/lit8 p1, v0, 0x1
+    or-int/lit8 p0, v0, 0x1
 
-    return p1
+    return p0
 
     :cond_6
     return v0
@@ -554,13 +546,13 @@
     .line 347
     invoke-direct {p0, v3, v4, p1, p2}, Lcom/google/zxing/datamatrix/decoder/BitMatrixParser;->readModule(IIII)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_6
+    if-eqz p0, :cond_6
 
-    or-int/lit8 p1, v0, 0x1
+    or-int/lit8 p0, v0, 0x1
 
-    return p1
+    return p0
 
     :cond_6
     return v0
@@ -669,13 +661,13 @@
     .line 392
     invoke-direct {p0, v1, v3, p1, p2}, Lcom/google/zxing/datamatrix/decoder/BitMatrixParser;->readModule(IIII)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_6
+    if-eqz p0, :cond_6
 
-    or-int/lit8 p1, v0, 0x1
+    or-int/lit8 p0, v0, 0x1
 
-    return p1
+    return p0
 
     :cond_6
     return v0
@@ -721,13 +713,13 @@
     invoke-virtual {p3, p2, p1}, Lcom/google/zxing/common/BitMatrix;->set(II)V
 
     .line 168
-    iget-object p3, p0, Lcom/google/zxing/datamatrix/decoder/BitMatrixParser;->mappingBitMatrix:Lcom/google/zxing/common/BitMatrix;
+    iget-object p0, p0, Lcom/google/zxing/datamatrix/decoder/BitMatrixParser;->mappingBitMatrix:Lcom/google/zxing/common/BitMatrix;
 
-    invoke-virtual {p3, p2, p1}, Lcom/google/zxing/common/BitMatrix;->get(II)Z
+    invoke-virtual {p0, p2, p1}, Lcom/google/zxing/common/BitMatrix;->get(II)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method private readUtah(IIII)I
@@ -823,13 +815,13 @@
     .line 212
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/zxing/datamatrix/decoder/BitMatrixParser;->readModule(IIII)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_6
+    if-eqz p0, :cond_6
 
-    or-int/lit8 p1, v0, 0x1
+    or-int/lit8 p0, v0, 0x1
 
-    return p1
+    return p0
 
     :cond_6
     return v0
@@ -864,12 +856,12 @@
 
 # virtual methods
 .method getVersion()Lcom/google/zxing/datamatrix/decoder/Version;
-    .locals 1
+    .locals 0
 
     .line 47
-    iget-object v0, p0, Lcom/google/zxing/datamatrix/decoder/BitMatrixParser;->version:Lcom/google/zxing/datamatrix/decoder/Version;
+    iget-object p0, p0, Lcom/google/zxing/datamatrix/decoder/BitMatrixParser;->version:Lcom/google/zxing/datamatrix/decoder/Version;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method readCodewords()[B
@@ -1160,13 +1152,13 @@
     if-lt v3, v2, :cond_0
 
     .line 139
-    iget-object v1, p0, Lcom/google/zxing/datamatrix/decoder/BitMatrixParser;->version:Lcom/google/zxing/datamatrix/decoder/Version;
+    iget-object p0, p0, Lcom/google/zxing/datamatrix/decoder/BitMatrixParser;->version:Lcom/google/zxing/datamatrix/decoder/Version;
 
-    invoke-virtual {v1}, Lcom/google/zxing/datamatrix/decoder/Version;->getTotalCodewords()I
+    invoke-virtual {p0}, Lcom/google/zxing/datamatrix/decoder/Version;->getTotalCodewords()I
 
-    move-result v1
+    move-result p0
 
-    if-ne v6, v1, :cond_b
+    if-ne v6, p0, :cond_b
 
     return-object v0
 
@@ -1174,7 +1166,7 @@
     :cond_b
     invoke-static {}, Lcom/google/zxing/FormatException;->getFormatInstance()Lcom/google/zxing/FormatException;
 
-    move-result-object v0
+    move-result-object p0
 
-    throw v0
+    throw p0
 .end method

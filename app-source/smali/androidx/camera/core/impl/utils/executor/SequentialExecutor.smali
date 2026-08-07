@@ -187,13 +187,13 @@
     return-void
 
     :catchall_0
-    move-exception v0
+    move-exception p0
 
     monitor-exit p1
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    throw v0
+    throw p0
 
     :catch_0
     move-exception p1
@@ -224,29 +224,29 @@
     if-ne v0, v2, :cond_4
 
     :cond_3
-    iget-object v0, p0, Landroidx/camera/core/impl/utils/executor/SequentialExecutor;->mQueue:Ljava/util/Deque;
+    iget-object p0, p0, Landroidx/camera/core/impl/utils/executor/SequentialExecutor;->mQueue:Ljava/util/Deque;
 
     .line 122
-    invoke-interface {v0, v3}, Ljava/util/Deque;->removeLastOccurrence(Ljava/lang/Object;)Z
+    invoke-interface {p0, v3}, Ljava/util/Deque;->removeLastOccurrence(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result p0
 
-    if-eqz v0, :cond_4
+    if-eqz p0, :cond_4
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
     goto :goto_1
 
     :cond_4
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
     .line 126
     :goto_1
-    instance-of v2, p1, Ljava/util/concurrent/RejectedExecutionException;
+    instance-of v0, p1, Ljava/util/concurrent/RejectedExecutionException;
 
-    if-eqz v2, :cond_5
+    if-eqz v0, :cond_5
 
-    if-nez v0, :cond_5
+    if-nez p0, :cond_5
 
     .line 129
     monitor-exit v1
@@ -258,22 +258,22 @@
     throw p1
 
     :catchall_1
-    move-exception p1
+    move-exception p0
 
     .line 129
     monitor-exit v1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    throw p1
+    throw p0
 
     .line 94
     :cond_6
     :goto_2
     :try_start_4
-    iget-object v1, p0, Landroidx/camera/core/impl/utils/executor/SequentialExecutor;->mQueue:Ljava/util/Deque;
+    iget-object p0, p0, Landroidx/camera/core/impl/utils/executor/SequentialExecutor;->mQueue:Ljava/util/Deque;
 
-    invoke-interface {v1, p1}, Ljava/util/Deque;->add(Ljava/lang/Object;)Z
+    invoke-interface {p0, p1}, Ljava/util/Deque;->add(Ljava/lang/Object;)Z
 
     .line 95
     monitor-exit v0
@@ -281,12 +281,12 @@
     return-void
 
     :catchall_2
-    move-exception p1
+    move-exception p0
 
     .line 114
     monitor-exit v0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    throw p1
+    throw p0
 .end method

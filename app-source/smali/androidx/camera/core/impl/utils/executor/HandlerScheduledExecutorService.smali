@@ -35,7 +35,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 51
+    .line 52
     new-instance v0, Landroidx/camera/core/impl/utils/executor/HandlerScheduledExecutorService$1;
 
     invoke-direct {v0}, Landroidx/camera/core/impl/utils/executor/HandlerScheduledExecutorService$1;-><init>()V
@@ -48,38 +48,38 @@
 .method constructor <init>(Landroid/os/Handler;)V
     .locals 0
 
-    .line 68
+    .line 69
     invoke-direct {p0}, Ljava/util/concurrent/AbstractExecutorService;-><init>()V
 
-    .line 69
+    .line 70
     iput-object p1, p0, Landroidx/camera/core/impl/utils/executor/HandlerScheduledExecutorService;->mHandler:Landroid/os/Handler;
 
     return-void
 .end method
 
 .method private createPostFailedException()Ljava/util/concurrent/RejectedExecutionException;
-    .locals 3
+    .locals 2
 
-    .line 182
+    .line 179
     new-instance v0, Ljava/util/concurrent/RejectedExecutionException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v2, p0, Landroidx/camera/core/impl/utils/executor/HandlerScheduledExecutorService;->mHandler:Landroid/os/Handler;
+    iget-object p0, p0, Landroidx/camera/core/impl/utils/executor/HandlerScheduledExecutorService;->mHandler:Landroid/os/Handler;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v2, " is shutting down"
+    const-string p0, " is shutting down"
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/RejectedExecutionException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Ljava/util/concurrent/RejectedExecutionException;-><init>(Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -87,7 +87,7 @@
 .method static currentThreadExecutor()Ljava/util/concurrent/ScheduledExecutorService;
     .locals 3
 
-    .line 76
+    .line 77
     sget-object v0, Landroidx/camera/core/impl/utils/executor/HandlerScheduledExecutorService;->sThreadLocalInstance:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -98,14 +98,14 @@
 
     if-nez v0, :cond_1
 
-    .line 78
+    .line 79
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 83
+    .line 84
     new-instance v1, Landroidx/camera/core/impl/utils/executor/HandlerScheduledExecutorService;
 
     new-instance v2, Landroid/os/Handler;
@@ -114,14 +114,14 @@
 
     invoke-direct {v1, v2}, Landroidx/camera/core/impl/utils/executor/HandlerScheduledExecutorService;-><init>(Landroid/os/Handler;)V
 
-    .line 84
+    .line 85
     sget-object v0, Landroidx/camera/core/impl/utils/executor/HandlerScheduledExecutorService;->sThreadLocalInstance:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0, v1}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
 
     return-object v1
 
-    .line 80
+    .line 81
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -140,15 +140,15 @@
 .method public awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
     .locals 0
 
-    .line 169
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    .line 166
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    .line 170
-    const-string p2, "HandlerScheduledExecutorService cannot be shut down. Use Looper.quitSafely()."
+    .line 167
+    const-string p1, "HandlerScheduledExecutorService cannot be shut down. Use Looper.quitSafely()."
 
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method public synthetic close()V
@@ -162,7 +162,7 @@
 .method public execute(Ljava/lang/Runnable;)V
     .locals 1
 
-    .line 176
+    .line 173
     iget-object v0, p0, Landroidx/camera/core/impl/utils/executor/HandlerScheduledExecutorService;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
@@ -173,29 +173,29 @@
 
     return-void
 
-    .line 177
+    .line 174
     :cond_0
     invoke-direct {p0}, Landroidx/camera/core/impl/utils/executor/HandlerScheduledExecutorService;->createPostFailedException()Ljava/util/concurrent/RejectedExecutionException;
 
-    move-result-object p1
+    move-result-object p0
 
-    throw p1
+    throw p0
 .end method
 
 .method public isShutdown()Z
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public isTerminated()Z
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
@@ -212,17 +212,17 @@
         }
     .end annotation
 
-    .line 95
+    .line 96
     new-instance v0, Landroidx/camera/core/impl/utils/executor/HandlerScheduledExecutorService$2;
 
     invoke-direct {v0, p0, p1}, Landroidx/camera/core/impl/utils/executor/HandlerScheduledExecutorService$2;-><init>(Landroidx/camera/core/impl/utils/executor/HandlerScheduledExecutorService;Ljava/lang/Runnable;)V
 
-    .line 102
+    .line 103
     invoke-virtual {p0, v0, p2, p3, p4}, Landroidx/camera/core/impl/utils/executor/HandlerScheduledExecutorService;->schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
@@ -276,13 +276,13 @@
     :cond_0
     invoke-direct {p0}, Landroidx/camera/core/impl/utils/executor/HandlerScheduledExecutorService;->createPostFailedException()Ljava/util/concurrent/RejectedExecutionException;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-static {p1}, Landroidx/camera/core/impl/utils/futures/Futures;->immediateFailedScheduledFuture(Ljava/lang/Throwable;)Ljava/util/concurrent/ScheduledFuture;
+    invoke-static {p0}, Landroidx/camera/core/impl/utils/futures/Futures;->immediateFailedScheduledFuture(Ljava/lang/Throwable;)Ljava/util/concurrent/ScheduledFuture;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
@@ -299,15 +299,15 @@
         }
     .end annotation
 
+    .line 127
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
     .line 128
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    const-string p1, "HandlerScheduledExecutorService does not yet support fixed-rate scheduling."
 
-    .line 129
-    const-string p2, "HandlerScheduledExecutorService does not yet support fixed-rate scheduling."
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    throw p0
 .end method
 
 .method public scheduleWithFixedDelay(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
@@ -324,33 +324,33 @@
         }
     .end annotation
 
-    .line 137
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    .line 135
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    .line 138
-    const-string p2, "HandlerScheduledExecutorService does not yet support fixed-delay scheduling."
+    .line 136
+    const-string p1, "HandlerScheduledExecutorService does not yet support fixed-delay scheduling."
 
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method public shutdown()V
-    .locals 2
+    .locals 1
 
-    .line 144
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    .line 142
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    .line 145
-    const-string v1, "HandlerScheduledExecutorService cannot be shut down. Use Looper.quitSafely()."
+    .line 143
+    const-string v0, "HandlerScheduledExecutorService cannot be shut down. Use Looper.quitSafely()."
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw v0
+    throw p0
 .end method
 
 .method public shutdownNow()Ljava/util/List;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -360,13 +360,13 @@
         }
     .end annotation
 
-    .line 152
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    .line 149
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    .line 153
-    const-string v1, "HandlerScheduledExecutorService cannot be shut down. Use Looper.quitSafely()."
+    .line 150
+    const-string v0, "HandlerScheduledExecutorService cannot be shut down. Use Looper.quitSafely()."
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw v0
+    throw p0
 .end method

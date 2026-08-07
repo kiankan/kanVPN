@@ -1,355 +1,98 @@
-.class public final Landroidx/camera/core/impl/CameraValidator;
+.class public interface abstract Landroidx/camera/core/impl/CameraValidator;
 .super Ljava/lang/Object;
-.source "CameraValidator.java"
+.source "CameraValidator.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/camera/core/impl/CameraValidator$Api34Impl;,
-        Landroidx/camera/core/impl/CameraValidator$CameraIdListIncorrectException;
+        Landroidx/camera/core/impl/CameraValidator$CameraIdListIncorrectException;,
+        Landroidx/camera/core/impl/CameraValidator$Companion;
     }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000.\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\"\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0008f\u0018\u0000 \u000e2\u00020\u0001:\u0002\r\u000eJ\u0010\u0010\u0002\u001a\u00020\u00032\u0006\u0010\u0004\u001a\u00020\u0005H&J$\u0010\u0006\u001a\u00020\u00072\u000c\u0010\u0008\u001a\u0008\u0012\u0004\u0012\u00020\n0\t2\u000c\u0010\u000b\u001a\u0008\u0012\u0004\u0012\u00020\u000c0\tH&\u00f8\u0001\u0000\u0082\u0002\u0006\n\u0004\u0008!0\u0001\u00a8\u0006\u000f\u00c0\u0006\u0001"
+    }
+    d2 = {
+        "Landroidx/camera/core/impl/CameraValidator;",
+        "",
+        "validateOnFirstInit",
+        "",
+        "cameraRepository",
+        "Landroidx/camera/core/impl/CameraRepository;",
+        "isChangeInvalid",
+        "",
+        "currentCameras",
+        "",
+        "Landroidx/camera/core/impl/CameraInternal;",
+        "removedCameras",
+        "Landroidx/camera/core/CameraIdentifier;",
+        "CameraIdListIncorrectException",
+        "Companion",
+        "camera-core"
+    }
+    k = 0x1
+    mv = {
+        0x2,
+        0x1,
+        0x0
+    }
+    xi = 0x30
 .end annotation
 
 
 # static fields
-.field private static final EXTERNAL_LENS_FACING:Landroidx/camera/core/CameraSelector;
-
-.field private static final TAG:Ljava/lang/String; = "CameraValidator"
+.field public static final Companion:Landroidx/camera/core/impl/CameraValidator$Companion;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    .line 43
-    new-instance v0, Landroidx/camera/core/CameraSelector$Builder;
+    sget-object v0, Landroidx/camera/core/impl/CameraValidator$Companion;->$$INSTANCE:Landroidx/camera/core/impl/CameraValidator$Companion;
 
-    invoke-direct {v0}, Landroidx/camera/core/CameraSelector$Builder;-><init>()V
-
-    const/4 v1, 0x2
-
-    .line 44
-    invoke-virtual {v0, v1}, Landroidx/camera/core/CameraSelector$Builder;->requireLensFacing(I)Landroidx/camera/core/CameraSelector$Builder;
-
-    move-result-object v0
-
-    .line 45
-    invoke-virtual {v0}, Landroidx/camera/core/CameraSelector$Builder;->build()Landroidx/camera/core/CameraSelector;
-
-    move-result-object v0
-
-    sput-object v0, Landroidx/camera/core/impl/CameraValidator;->EXTERNAL_LENS_FACING:Landroidx/camera/core/CameraSelector;
+    sput-object v0, Landroidx/camera/core/impl/CameraValidator;->Companion:Landroidx/camera/core/impl/CameraValidator$Companion;
 
     return-void
 .end method
 
-.method private constructor <init>()V
-    .locals 0
+.method public static create(Landroid/content/Context;Landroidx/camera/core/CameraSelector;)Landroidx/camera/core/impl/CameraValidator;
+    .locals 1
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
 
-    .line 39
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Landroidx/camera/core/impl/CameraValidator;->Companion:Landroidx/camera/core/impl/CameraValidator$Companion;
 
-    return-void
+    invoke-virtual {v0, p0, p1}, Landroidx/camera/core/impl/CameraValidator$Companion;->create(Landroid/content/Context;Landroidx/camera/core/CameraSelector;)Landroidx/camera/core/impl/CameraValidator;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method public static validateCameras(Landroid/content/Context;Landroidx/camera/core/impl/CameraRepository;Landroidx/camera/core/CameraSelector;)V
-    .locals 7
+
+# virtual methods
+.method public abstract isChangeInvalid(Ljava/util/Set;Ljava/util/Set;)Z
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Set<",
+            "+",
+            "Landroidx/camera/core/impl/CameraInternal;",
+            ">;",
+            "Ljava/util/Set<",
+            "Landroidx/camera/core/CameraIdentifier;",
+            ">;)Z"
+        }
+    .end annotation
+.end method
+
+.method public abstract validateOnFirstInit(Landroidx/camera/core/impl/CameraRepository;)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroidx/camera/core/impl/CameraValidator$CameraIdListIncorrectException;
         }
     .end annotation
-
-    .line 66
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x22
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const-string v4, "CameraValidator"
-
-    if-lt v0, v1, :cond_1
-
-    .line 67
-    invoke-static {p0}, Landroidx/camera/core/impl/CameraValidator$Api34Impl;->getDeviceId(Landroid/content/Context;)I
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 70
-    invoke-virtual {p1}, Landroidx/camera/core/impl/CameraRepository;->getCameras()Ljava/util/LinkedHashSet;
-
-    move-result-object p1
-
-    .line 71
-    invoke-interface {p1}, Ljava/util/Set;->isEmpty()Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    .line 77
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    const-string v0, "Virtual device with ID: "
-
-    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p0}, Landroidx/camera/core/impl/CameraValidator$Api34Impl;->getDeviceId(Landroid/content/Context;)I
-
-    move-result p0
-
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p0, " has "
-
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 78
-    invoke-interface {p1}, Ljava/util/Set;->size()I
-
-    move-result p0
-
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p0, " cameras. Skipping validation."
-
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    .line 77
-    invoke-static {v4, p0}, Landroidx/camera/core/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    .line 73
-    :cond_0
-    new-instance p0, Landroidx/camera/core/impl/CameraValidator$CameraIdListIncorrectException;
-
-    const-string p1, "No cameras available"
-
-    invoke-direct {p0, p1, v2, v3}, Landroidx/camera/core/impl/CameraValidator$CameraIdListIncorrectException;-><init>(Ljava/lang/String;ILjava/lang/Throwable;)V
-
-    throw p0
-
-    :cond_1
-    if-eqz p2, :cond_2
-
-    .line 85
-    :try_start_0
-    invoke-virtual {p2}, Landroidx/camera/core/CameraSelector;->getLensFacing()Ljava/lang/Integer;
-
-    move-result-object v0
-
-    if-nez v0, :cond_3
-
-    .line 86
-    const-string p0, "No lens facing info in the availableCamerasSelector, don\'t verify the camera lens facing."
-
-    invoke-static {v4, p0}, Landroidx/camera/core/Logger;->w(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception p0
-
-    .line 91
-    const-string p1, "Cannot get lens facing from the availableCamerasSelector don\'t verify the camera lens facing."
-
-    invoke-static {v4, p1, p0}, Landroidx/camera/core/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_2
-    move-object v0, v3
-
-    .line 96
-    :cond_3
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v5, "Verifying camera lens facing on "
-
-    invoke-direct {v1, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    sget-object v5, Landroid/os/Build;->DEVICE:Ljava/lang/String;
-
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v5, ", lensFacingInteger: "
-
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v4, v1}, Landroidx/camera/core/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 100
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object p0
-
-    .line 104
-    :try_start_1
-    const-string v1, "android.hardware.camera"
-
-    invoke-virtual {p0, v1}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    const/4 v1, 0x1
-
-    if-eqz p2, :cond_4
-
-    .line 106
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v5
-
-    if-ne v5, v1, :cond_5
-
-    .line 109
-    :cond_4
-    sget-object v5, Landroidx/camera/core/CameraSelector;->DEFAULT_BACK_CAMERA:Landroidx/camera/core/CameraSelector;
-
-    invoke-virtual {p1}, Landroidx/camera/core/impl/CameraRepository;->getCameras()Ljava/util/LinkedHashSet;
-
-    move-result-object v6
-
-    invoke-virtual {v5, v6}, Landroidx/camera/core/CameraSelector;->select(Ljava/util/LinkedHashSet;)Landroidx/camera/core/impl/CameraInternal;
-    :try_end_1
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_1
-
-    move v2, v1
-
-    goto :goto_0
-
-    :catch_1
-    move-exception v1
-
-    move-object v3, v1
-
-    .line 114
-    const-string v1, "Camera LENS_FACING_BACK verification failed"
-
-    invoke-static {v4, v1, v3}, Landroidx/camera/core/Logger;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    .line 118
-    :cond_5
-    :goto_0
-    :try_start_2
-    const-string v1, "android.hardware.camera.front"
-
-    invoke-virtual {p0, v1}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_7
-
-    if-eqz p2, :cond_6
-
-    .line 120
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result p0
-
-    if-nez p0, :cond_7
-
-    .line 123
-    :cond_6
-    sget-object p0, Landroidx/camera/core/CameraSelector;->DEFAULT_FRONT_CAMERA:Landroidx/camera/core/CameraSelector;
-
-    invoke-virtual {p1}, Landroidx/camera/core/impl/CameraRepository;->getCameras()Ljava/util/LinkedHashSet;
-
-    move-result-object p2
-
-    invoke-virtual {p0, p2}, Landroidx/camera/core/CameraSelector;->select(Ljava/util/LinkedHashSet;)Landroidx/camera/core/impl/CameraInternal;
-    :try_end_2
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_2 .. :try_end_2} :catch_2
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_1
-
-    :catch_2
-    move-exception p0
-
-    move-object v3, p0
-
-    .line 128
-    const-string p0, "Camera LENS_FACING_FRONT verification failed"
-
-    invoke-static {v4, p0, v3}, Landroidx/camera/core/Logger;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    .line 133
-    :cond_7
-    :goto_1
-    :try_start_3
-    sget-object p0, Landroidx/camera/core/impl/CameraValidator;->EXTERNAL_LENS_FACING:Landroidx/camera/core/CameraSelector;
-
-    invoke-virtual {p1}, Landroidx/camera/core/impl/CameraRepository;->getCameras()Ljava/util/LinkedHashSet;
-
-    move-result-object p2
-
-    invoke-virtual {p0, p2}, Landroidx/camera/core/CameraSelector;->select(Ljava/util/LinkedHashSet;)Landroidx/camera/core/impl/CameraInternal;
-
-    .line 134
-    const-string p0, "Found a LENS_FACING_EXTERNAL camera"
-
-    invoke-static {v4, p0}, Landroidx/camera/core/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_3
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_3 .. :try_end_3} :catch_3
-
-    add-int/lit8 v2, v2, 0x1
-
-    :catch_3
-    if-nez v3, :cond_8
-
-    return-void
-
-    .line 140
-    :cond_8
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    const-string p2, "Camera LensFacing verification failed, existing cameras: "
-
-    invoke-direct {p0, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 141
-    invoke-virtual {p1}, Landroidx/camera/core/impl/CameraRepository;->getCameras()Ljava/util/LinkedHashSet;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    .line 140
-    invoke-static {v4, p0}, Landroidx/camera/core/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 142
-    new-instance p0, Landroidx/camera/core/impl/CameraValidator$CameraIdListIncorrectException;
-
-    const-string p1, "Expected camera missing from device."
-
-    invoke-direct {p0, p1, v2, v3}, Landroidx/camera/core/impl/CameraValidator$CameraIdListIncorrectException;-><init>(Ljava/lang/String;ILjava/lang/Throwable;)V
-
-    throw p0
 .end method

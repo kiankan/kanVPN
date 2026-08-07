@@ -27,7 +27,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -63,7 +63,7 @@
 
     iput-object p2, p0, Landroidx/activity/OnBackPressedDispatcherKt$addCallback$callback$1;->$onBackPressed:Lkotlin/jvm/functions/Function1;
 
-    .line 323
+    .line 330
     invoke-direct {p0, p1}, Landroidx/activity/OnBackPressedCallback;-><init>(Z)V
 
     return-void
@@ -74,7 +74,7 @@
 .method public handleOnBackPressed()V
     .locals 1
 
-    .line 325
+    .line 332
     iget-object v0, p0, Landroidx/activity/OnBackPressedDispatcherKt$addCallback$callback$1;->$onBackPressed:Lkotlin/jvm/functions/Function1;
 
     invoke-interface {v0, p0}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;

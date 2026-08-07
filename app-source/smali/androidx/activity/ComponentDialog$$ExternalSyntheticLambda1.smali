@@ -25,12 +25,12 @@
 
 # virtual methods
 .method public final run()V
-    .locals 1
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Landroidx/activity/ComponentDialog$$ExternalSyntheticLambda1;->f$0:Landroidx/activity/ComponentDialog;
+    iget-object p0, p0, Landroidx/activity/ComponentDialog$$ExternalSyntheticLambda1;->f$0:Landroidx/activity/ComponentDialog;
 
-    invoke-static {v0}, Landroidx/activity/ComponentDialog;->$r8$lambda$XxpmZzi8FNPM2sJJA30VCt2mBcQ(Landroidx/activity/ComponentDialog;)V
+    invoke-static {p0}, Landroidx/activity/ComponentDialog;->$r8$lambda$XxpmZzi8FNPM2sJJA30VCt2mBcQ(Landroidx/activity/ComponentDialog;)V
 
     return-void
 .end method

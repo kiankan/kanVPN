@@ -7,21 +7,21 @@
 
 
 # instance fields
-.field public final synthetic f$0:Landroidx/camera/core/imagecapture/ProcessingRequest;
+.field public final synthetic f$0:Landroidx/camera/core/imagecapture/ProcessingNode;
 
-.field public final synthetic f$1:Landroidx/camera/core/ImageProxy;
+.field public final synthetic f$1:Landroidx/camera/core/imagecapture/ProcessingNode$InputPacket;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/camera/core/imagecapture/ProcessingRequest;Landroidx/camera/core/ImageProxy;)V
+.method public synthetic constructor <init>(Landroidx/camera/core/imagecapture/ProcessingNode;Landroidx/camera/core/imagecapture/ProcessingNode$InputPacket;)V
     .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/camera/core/imagecapture/ProcessingNode$$ExternalSyntheticLambda4;->f$0:Landroidx/camera/core/imagecapture/ProcessingRequest;
+    iput-object p1, p0, Landroidx/camera/core/imagecapture/ProcessingNode$$ExternalSyntheticLambda4;->f$0:Landroidx/camera/core/imagecapture/ProcessingNode;
 
-    iput-object p2, p0, Landroidx/camera/core/imagecapture/ProcessingNode$$ExternalSyntheticLambda4;->f$1:Landroidx/camera/core/ImageProxy;
+    iput-object p2, p0, Landroidx/camera/core/imagecapture/ProcessingNode$$ExternalSyntheticLambda4;->f$1:Landroidx/camera/core/imagecapture/ProcessingNode$InputPacket;
 
     return-void
 .end method
@@ -29,14 +29,14 @@
 
 # virtual methods
 .method public final run()V
-    .locals 2
+    .locals 1
 
     .line 0
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/ProcessingNode$$ExternalSyntheticLambda4;->f$0:Landroidx/camera/core/imagecapture/ProcessingRequest;
+    iget-object v0, p0, Landroidx/camera/core/imagecapture/ProcessingNode$$ExternalSyntheticLambda4;->f$0:Landroidx/camera/core/imagecapture/ProcessingNode;
 
-    iget-object v1, p0, Landroidx/camera/core/imagecapture/ProcessingNode$$ExternalSyntheticLambda4;->f$1:Landroidx/camera/core/ImageProxy;
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/ProcessingNode$$ExternalSyntheticLambda4;->f$1:Landroidx/camera/core/imagecapture/ProcessingNode$InputPacket;
 
-    invoke-static {v0, v1}, Landroidx/camera/core/imagecapture/ProcessingNode;->lambda$processInputPacket$4(Landroidx/camera/core/imagecapture/ProcessingRequest;Landroidx/camera/core/ImageProxy;)V
+    invoke-virtual {v0, p0}, Landroidx/camera/core/imagecapture/ProcessingNode;->lambda$processInputPacket$6$androidx-camera-core-imagecapture-ProcessingNode(Landroidx/camera/core/imagecapture/ProcessingNode$InputPacket;)V
 
     return-void
 .end method

@@ -53,24 +53,24 @@
 
 # virtual methods
 .method public clear(B)V
-    .locals 4
+    .locals 3
 
     .line 71
-    iget-object v0, p0, Lcom/google/zxing/qrcode/encoder/ByteMatrix;->bytes:[[B
+    iget-object p0, p0, Lcom/google/zxing/qrcode/encoder/ByteMatrix;->bytes:[[B
 
-    array-length v1, v0
+    array-length v0, p0
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
     :goto_0
-    if-ge v2, v1, :cond_0
+    if-ge v1, v0, :cond_0
 
-    aget-object v3, v0, v2
+    aget-object v2, p0, v1
 
     .line 72
-    invoke-static {v3, p1}, Ljava/util/Arrays;->fill([BB)V
+    invoke-static {v2, p1}, Ljava/util/Arrays;->fill([BB)V
 
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
@@ -79,84 +79,84 @@
 .end method
 
 .method public get(II)B
-    .locals 1
+    .locals 0
 
     .line 48
-    iget-object v0, p0, Lcom/google/zxing/qrcode/encoder/ByteMatrix;->bytes:[[B
+    iget-object p0, p0, Lcom/google/zxing/qrcode/encoder/ByteMatrix;->bytes:[[B
 
-    aget-object p2, v0, p2
+    aget-object p0, p0, p2
 
-    aget-byte p1, p2, p1
+    aget-byte p0, p0, p1
 
-    return p1
+    return p0
 .end method
 
 .method public getArray()[[B
-    .locals 1
+    .locals 0
 
     .line 55
-    iget-object v0, p0, Lcom/google/zxing/qrcode/encoder/ByteMatrix;->bytes:[[B
+    iget-object p0, p0, Lcom/google/zxing/qrcode/encoder/ByteMatrix;->bytes:[[B
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getHeight()I
-    .locals 1
+    .locals 0
 
     .line 40
-    iget v0, p0, Lcom/google/zxing/qrcode/encoder/ByteMatrix;->height:I
+    iget p0, p0, Lcom/google/zxing/qrcode/encoder/ByteMatrix;->height:I
 
-    return v0
+    return p0
 .end method
 
 .method public getWidth()I
-    .locals 1
+    .locals 0
 
     .line 44
-    iget v0, p0, Lcom/google/zxing/qrcode/encoder/ByteMatrix;->width:I
+    iget p0, p0, Lcom/google/zxing/qrcode/encoder/ByteMatrix;->width:I
 
-    return v0
+    return p0
 .end method
 
 .method public set(IIB)V
-    .locals 1
+    .locals 0
 
     .line 59
-    iget-object v0, p0, Lcom/google/zxing/qrcode/encoder/ByteMatrix;->bytes:[[B
+    iget-object p0, p0, Lcom/google/zxing/qrcode/encoder/ByteMatrix;->bytes:[[B
 
-    aget-object p2, v0, p2
+    aget-object p0, p0, p2
 
-    aput-byte p3, p2, p1
+    aput-byte p3, p0, p1
 
     return-void
 .end method
 
 .method public set(III)V
-    .locals 1
+    .locals 0
 
     .line 63
-    iget-object v0, p0, Lcom/google/zxing/qrcode/encoder/ByteMatrix;->bytes:[[B
+    iget-object p0, p0, Lcom/google/zxing/qrcode/encoder/ByteMatrix;->bytes:[[B
 
-    aget-object p2, v0, p2
+    aget-object p0, p0, p2
 
-    int-to-byte p3, p3
+    int-to-byte p2, p3
 
-    aput-byte p3, p2, p1
+    aput-byte p2, p0, p1
 
     return-void
 .end method
 
 .method public set(IIZ)V
-    .locals 1
+    .locals 0
 
     .line 67
-    iget-object v0, p0, Lcom/google/zxing/qrcode/encoder/ByteMatrix;->bytes:[[B
+    iget-object p0, p0, Lcom/google/zxing/qrcode/encoder/ByteMatrix;->bytes:[[B
 
-    aget-object p2, v0, p2
+    aget-object p0, p0, p2
 
-    int-to-byte p3, p3
+    int-to-byte p2, p3
 
-    aput-byte p3, p2, p1
+    aput-byte p2, p0, p1
 
     return-void
 .end method
@@ -251,7 +251,7 @@
     :cond_3
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

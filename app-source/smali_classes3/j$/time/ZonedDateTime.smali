@@ -8,6 +8,19 @@
 .implements Ljava/io/Serializable;
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lj$/time/temporal/Temporal;",
+        "Lj$/time/chrono/ChronoZonedDateTime<",
+        "Lj$/time/LocalDate;",
+        ">;",
+        "Ljava/io/Serializable;"
+    }
+.end annotation
+
+
 # static fields
 .field private static final serialVersionUID:J = -0x56e37a54888537c2L
 
@@ -377,50 +390,50 @@
 .end method
 
 .method private readObject(Ljava/io/ObjectInputStream;)V
-    .locals 1
+    .locals 0
 
     .line 2249
-    new-instance p1, Ljava/io/InvalidObjectException;
+    new-instance p0, Ljava/io/InvalidObjectException;
 
-    const-string v0, "Deserialization via serialization delegate"
+    const-string p1, "Deserialization via serialization delegate"
 
-    invoke-direct {p1, v0}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method private resolveInstant(Lj$/time/LocalDateTime;)Lj$/time/ZonedDateTime;
-    .locals 2
+    .locals 1
 
     .line 632
     iget-object v0, p0, Lj$/time/ZonedDateTime;->offset:Lj$/time/ZoneOffset;
 
-    iget-object v1, p0, Lj$/time/ZonedDateTime;->zone:Lj$/time/ZoneId;
+    iget-object p0, p0, Lj$/time/ZonedDateTime;->zone:Lj$/time/ZoneId;
 
-    invoke-static {p1, v0, v1}, Lj$/time/ZonedDateTime;->ofInstant(Lj$/time/LocalDateTime;Lj$/time/ZoneOffset;Lj$/time/ZoneId;)Lj$/time/ZonedDateTime;
+    invoke-static {p1, v0, p0}, Lj$/time/ZonedDateTime;->ofInstant(Lj$/time/LocalDateTime;Lj$/time/ZoneOffset;Lj$/time/ZoneId;)Lj$/time/ZonedDateTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method private resolveLocal(Lj$/time/LocalDateTime;)Lj$/time/ZonedDateTime;
-    .locals 2
+    .locals 1
 
     .line 622
     iget-object v0, p0, Lj$/time/ZonedDateTime;->zone:Lj$/time/ZoneId;
 
-    iget-object v1, p0, Lj$/time/ZonedDateTime;->offset:Lj$/time/ZoneOffset;
+    iget-object p0, p0, Lj$/time/ZonedDateTime;->offset:Lj$/time/ZoneOffset;
 
-    invoke-static {p1, v0, v1}, Lj$/time/ZonedDateTime;->ofLocal(Lj$/time/LocalDateTime;Lj$/time/ZoneId;Lj$/time/ZoneOffset;)Lj$/time/ZonedDateTime;
+    invoke-static {p1, v0, p0}, Lj$/time/ZonedDateTime;->ofLocal(Lj$/time/LocalDateTime;Lj$/time/ZoneId;Lj$/time/ZoneOffset;)Lj$/time/ZonedDateTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method private resolveOffset(Lj$/time/ZoneOffset;)Lj$/time/ZonedDateTime;
-    .locals 3
+    .locals 2
 
     .line 644
     iget-object v0, p0, Lj$/time/ZonedDateTime;->offset:Lj$/time/ZoneOffset;
@@ -450,9 +463,9 @@
 
     iget-object v1, p0, Lj$/time/ZonedDateTime;->dateTime:Lj$/time/LocalDateTime;
 
-    iget-object v2, p0, Lj$/time/ZonedDateTime;->zone:Lj$/time/ZoneId;
+    iget-object p0, p0, Lj$/time/ZonedDateTime;->zone:Lj$/time/ZoneId;
 
-    invoke-direct {v0, v1, p1, v2}, Lj$/time/ZonedDateTime;-><init>(Lj$/time/LocalDateTime;Lj$/time/ZoneOffset;Lj$/time/ZoneId;)V
+    invoke-direct {v0, v1, p1, p0}, Lj$/time/ZonedDateTime;-><init>(Lj$/time/LocalDateTime;Lj$/time/ZoneOffset;Lj$/time/ZoneId;)V
 
     return-object v0
 
@@ -517,16 +530,16 @@
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lj$/time/ZonedDateTime;->zone:Lj$/time/ZoneId;
+    iget-object p0, p0, Lj$/time/ZonedDateTime;->zone:Lj$/time/ZoneId;
 
     iget-object p1, p1, Lj$/time/ZonedDateTime;->zone:Lj$/time/ZoneId;
 
     .line 2189
-    invoke-virtual {v1, p1}, Lj$/time/ZoneId;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Lj$/time/ZoneId;->equals(Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_1
+    if-eqz p0, :cond_1
 
     return v0
 
@@ -564,43 +577,43 @@
     if-eq v0, v1, :cond_0
 
     .line 821
-    iget-object v0, p0, Lj$/time/ZonedDateTime;->dateTime:Lj$/time/LocalDateTime;
+    iget-object p0, p0, Lj$/time/ZonedDateTime;->dateTime:Lj$/time/LocalDateTime;
 
-    invoke-virtual {v0, p1}, Lj$/time/LocalDateTime;->get(Lj$/time/temporal/TemporalField;)I
+    invoke-virtual {p0, p1}, Lj$/time/LocalDateTime;->get(Lj$/time/temporal/TemporalField;)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 
     .line 819
     :cond_0
     invoke-virtual {p0}, Lj$/time/ZonedDateTime;->getOffset()Lj$/time/ZoneOffset;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-virtual {p1}, Lj$/time/ZoneOffset;->getTotalSeconds()I
+    invoke-virtual {p0}, Lj$/time/ZoneOffset;->getTotalSeconds()I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 
     .line 817
     :cond_1
-    new-instance p1, Lj$/time/temporal/UnsupportedTemporalTypeException;
+    new-instance p0, Lj$/time/temporal/UnsupportedTemporalTypeException;
 
-    const-string v0, "Invalid field \'InstantSeconds\' for get() method, use getLong() instead"
+    const-string p1, "Invalid field \'InstantSeconds\' for get() method, use getLong() instead"
 
-    invoke-direct {p1, v0}, Lj$/time/temporal/UnsupportedTemporalTypeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lj$/time/temporal/UnsupportedTemporalTypeException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
     .line 823
     :cond_2
     invoke-super {p0, p1}, Lj$/time/chrono/ChronoZonedDateTime;->get(Lj$/time/temporal/TemporalField;)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public getLong(Lj$/time/temporal/TemporalField;)J
@@ -633,78 +646,78 @@
     if-eq v0, v1, :cond_0
 
     .line 856
-    iget-object v0, p0, Lj$/time/ZonedDateTime;->dateTime:Lj$/time/LocalDateTime;
+    iget-object p0, p0, Lj$/time/ZonedDateTime;->dateTime:Lj$/time/LocalDateTime;
 
-    invoke-virtual {v0, p1}, Lj$/time/LocalDateTime;->getLong(Lj$/time/temporal/TemporalField;)J
+    invoke-virtual {p0, p1}, Lj$/time/LocalDateTime;->getLong(Lj$/time/temporal/TemporalField;)J
 
-    move-result-wide v0
+    move-result-wide p0
 
-    return-wide v0
+    return-wide p0
 
     .line 854
     :cond_0
     invoke-virtual {p0}, Lj$/time/ZonedDateTime;->getOffset()Lj$/time/ZoneOffset;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-virtual {p1}, Lj$/time/ZoneOffset;->getTotalSeconds()I
+    invoke-virtual {p0}, Lj$/time/ZoneOffset;->getTotalSeconds()I
 
-    move-result p1
+    move-result p0
 
-    int-to-long v0, p1
+    int-to-long p0, p0
 
-    return-wide v0
+    return-wide p0
 
     .line 853
     :cond_1
     invoke-interface {p0}, Lj$/time/chrono/ChronoZonedDateTime;->toEpochSecond()J
 
-    move-result-wide v0
+    move-result-wide p0
 
-    return-wide v0
+    return-wide p0
 
     .line 858
     :cond_2
     invoke-interface {p1, p0}, Lj$/time/temporal/TemporalField;->getFrom(Lj$/time/temporal/TemporalAccessor;)J
 
-    move-result-wide v0
+    move-result-wide p0
 
-    return-wide v0
+    return-wide p0
 .end method
 
 .method public getNano()I
-    .locals 1
+    .locals 0
 
     .line 1174
-    iget-object v0, p0, Lj$/time/ZonedDateTime;->dateTime:Lj$/time/LocalDateTime;
+    iget-object p0, p0, Lj$/time/ZonedDateTime;->dateTime:Lj$/time/LocalDateTime;
 
-    invoke-virtual {v0}, Lj$/time/LocalDateTime;->getNano()I
+    invoke-virtual {p0}, Lj$/time/LocalDateTime;->getNano()I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public getOffset()Lj$/time/ZoneOffset;
-    .locals 1
+    .locals 0
 
     .line 871
-    iget-object v0, p0, Lj$/time/ZonedDateTime;->offset:Lj$/time/ZoneOffset;
+    iget-object p0, p0, Lj$/time/ZonedDateTime;->offset:Lj$/time/ZoneOffset;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getZone()Lj$/time/ZoneId;
-    .locals 1
+    .locals 0
 
     .line 946
-    iget-object v0, p0, Lj$/time/ZonedDateTime;->zone:Lj$/time/ZoneId;
+    iget-object p0, p0, Lj$/time/ZonedDateTime;->zone:Lj$/time/ZoneId;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public hashCode()I
-    .locals 3
+    .locals 2
 
     .line 2201
     iget-object v0, p0, Lj$/time/ZonedDateTime;->dateTime:Lj$/time/LocalDateTime;
@@ -721,21 +734,21 @@
 
     xor-int/2addr v0, v1
 
-    iget-object v1, p0, Lj$/time/ZonedDateTime;->zone:Lj$/time/ZoneId;
+    iget-object p0, p0, Lj$/time/ZonedDateTime;->zone:Lj$/time/ZoneId;
 
-    invoke-virtual {v1}, Lj$/time/ZoneId;->hashCode()I
+    invoke-virtual {p0}, Lj$/time/ZoneId;->hashCode()I
 
-    move-result v1
+    move-result p0
 
-    const/4 v2, 0x3
+    const/4 v1, 0x3
 
-    invoke-static {v1, v2}, Ljava/lang/Integer;->rotateLeft(II)I
+    invoke-static {p0, v1}, Ljava/lang/Integer;->rotateLeft(II)I
 
-    move-result v1
+    move-result p0
 
-    xor-int/2addr v0, v1
+    xor-int/2addr p0, v0
 
-    return v0
+    return p0
 .end method
 
 .method public isSupported(Lj$/time/temporal/TemporalField;)Z
@@ -750,22 +763,22 @@
 
     invoke-interface {p1, p0}, Lj$/time/temporal/TemporalField;->isSupportedBy(Lj$/time/temporal/TemporalAccessor;)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_0
+    if-eqz p0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 
     :cond_1
     :goto_0
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 .end method
 
 .method public minus(JLj$/time/temporal/TemporalUnit;)Lj$/time/ZonedDateTime;
@@ -782,24 +795,21 @@
     .line 1854
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/ZonedDateTime;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/ZonedDateTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    const-wide/16 v0, 0x1
+    const-wide/16 p1, 0x1
 
-    invoke-virtual {p1, v0, v1, p3}, Lj$/time/ZonedDateTime;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/ZonedDateTime;
+    :goto_0
+    invoke-virtual {p0, p1, p2, p3}, Lj$/time/ZonedDateTime;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/ZonedDateTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     :cond_0
     neg-long p1, p1
 
-    invoke-virtual {p0, p1, p2, p3}, Lj$/time/ZonedDateTime;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/ZonedDateTime;
-
-    move-result-object p1
-
-    return-object p1
+    goto :goto_0
 .end method
 
 .method public bridge synthetic minus(JLj$/time/temporal/TemporalUnit;)Lj$/time/chrono/ChronoZonedDateTime;
@@ -808,9 +818,9 @@
     .line 164
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/ZonedDateTime;->minus(JLj$/time/temporal/TemporalUnit;)Lj$/time/ZonedDateTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic minus(JLj$/time/temporal/TemporalUnit;)Lj$/time/temporal/Temporal;
@@ -819,13 +829,13 @@
     .line 164
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/ZonedDateTime;->minus(JLj$/time/temporal/TemporalUnit;)Lj$/time/ZonedDateTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/ZonedDateTime;
-    .locals 1
+    .locals 2
 
     .line 1601
     instance-of v0, p3, Lj$/time/temporal/ChronoUnit;
@@ -837,44 +847,54 @@
 
     move-result v0
 
+    .line 1605
+    iget-object v1, p0, Lj$/time/ZonedDateTime;->dateTime:Lj$/time/LocalDateTime;
+
     if-eqz v0, :cond_0
 
     .line 1603
-    iget-object v0, p0, Lj$/time/ZonedDateTime;->dateTime:Lj$/time/LocalDateTime;
-
-    invoke-virtual {v0, p1, p2, p3}, Lj$/time/LocalDateTime;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/LocalDateTime;
+    invoke-virtual {v1, p1, p2, p3}, Lj$/time/LocalDateTime;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/LocalDateTime;
 
     move-result-object p1
 
     invoke-direct {p0, p1}, Lj$/time/ZonedDateTime;->resolveLocal(Lj$/time/LocalDateTime;)Lj$/time/ZonedDateTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 1605
     :cond_0
-    iget-object v0, p0, Lj$/time/ZonedDateTime;->dateTime:Lj$/time/LocalDateTime;
-
-    invoke-virtual {v0, p1, p2, p3}, Lj$/time/LocalDateTime;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/LocalDateTime;
+    invoke-virtual {v1, p1, p2, p3}, Lj$/time/LocalDateTime;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/LocalDateTime;
 
     move-result-object p1
 
     invoke-direct {p0, p1}, Lj$/time/ZonedDateTime;->resolveInstant(Lj$/time/LocalDateTime;)Lj$/time/ZonedDateTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 1608
     :cond_1
     invoke-interface {p3, p0, p1, p2}, Lj$/time/temporal/TemporalUnit;->addTo(Lj$/time/temporal/Temporal;J)Lj$/time/temporal/Temporal;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lj$/time/ZonedDateTime;
+    check-cast p0, Lj$/time/ZonedDateTime;
 
-    return-object p1
+    return-object p0
+.end method
+
+.method public bridge synthetic plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/chrono/ChronoZonedDateTime;
+    .locals 0
+
+    .line 164
+    invoke-virtual {p0, p1, p2, p3}, Lj$/time/ZonedDateTime;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/ZonedDateTime;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method public bridge synthetic plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/temporal/Temporal;
@@ -883,9 +903,9 @@
     .line 164
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/ZonedDateTime;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/ZonedDateTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public query(Lj$/time/temporal/TemporalQuery;)Ljava/lang/Object;
@@ -901,17 +921,17 @@
     .line 2057
     invoke-virtual {p0}, Lj$/time/ZonedDateTime;->toLocalDate()Lj$/time/LocalDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 2059
     :cond_0
     invoke-super {p0, p1}, Lj$/time/chrono/ChronoZonedDateTime;->query(Lj$/time/temporal/TemporalQuery;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public range(Lj$/time/temporal/TemporalField;)Lj$/time/temporal/ValueRange;
@@ -935,87 +955,87 @@
 
     .line 779
     :cond_0
-    iget-object v0, p0, Lj$/time/ZonedDateTime;->dateTime:Lj$/time/LocalDateTime;
+    iget-object p0, p0, Lj$/time/ZonedDateTime;->dateTime:Lj$/time/LocalDateTime;
 
-    invoke-virtual {v0, p1}, Lj$/time/LocalDateTime;->range(Lj$/time/temporal/TemporalField;)Lj$/time/temporal/ValueRange;
+    invoke-virtual {p0, p1}, Lj$/time/LocalDateTime;->range(Lj$/time/temporal/TemporalField;)Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 777
     :cond_1
     :goto_0
     invoke-interface {p1}, Lj$/time/temporal/TemporalField;->range()Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 781
     :cond_2
     invoke-interface {p1, p0}, Lj$/time/temporal/TemporalField;->rangeRefinedBy(Lj$/time/temporal/TemporalAccessor;)Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public toLocalDate()Lj$/time/LocalDate;
-    .locals 1
+    .locals 0
 
     .line 1042
-    iget-object v0, p0, Lj$/time/ZonedDateTime;->dateTime:Lj$/time/LocalDateTime;
+    iget-object p0, p0, Lj$/time/ZonedDateTime;->dateTime:Lj$/time/LocalDateTime;
 
-    invoke-virtual {v0}, Lj$/time/LocalDateTime;->toLocalDate()Lj$/time/LocalDate;
+    invoke-virtual {p0}, Lj$/time/LocalDateTime;->toLocalDate()Lj$/time/LocalDate;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public bridge synthetic toLocalDate()Lj$/time/chrono/ChronoLocalDate;
-    .locals 1
+    .locals 0
 
     .line 164
     invoke-virtual {p0}, Lj$/time/ZonedDateTime;->toLocalDate()Lj$/time/LocalDate;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public toLocalDateTime()Lj$/time/LocalDateTime;
-    .locals 1
+    .locals 0
 
     .line 1028
-    iget-object v0, p0, Lj$/time/ZonedDateTime;->dateTime:Lj$/time/LocalDateTime;
+    iget-object p0, p0, Lj$/time/ZonedDateTime;->dateTime:Lj$/time/LocalDateTime;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public bridge synthetic toLocalDateTime()Lj$/time/chrono/ChronoLocalDateTime;
-    .locals 1
+    .locals 0
 
     .line 164
     invoke-virtual {p0}, Lj$/time/ZonedDateTime;->toLocalDateTime()Lj$/time/LocalDateTime;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public toLocalTime()Lj$/time/LocalTime;
-    .locals 1
+    .locals 0
 
     .line 1138
-    iget-object v0, p0, Lj$/time/ZonedDateTime;->dateTime:Lj$/time/LocalDateTime;
+    iget-object p0, p0, Lj$/time/ZonedDateTime;->dateTime:Lj$/time/LocalDateTime;
 
-    invoke-virtual {v0}, Lj$/time/LocalDateTime;->toLocalTime()Lj$/time/LocalTime;
+    invoke-virtual {p0}, Lj$/time/LocalDateTime;->toLocalTime()Lj$/time/LocalTime;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public toString()Ljava/lang/String;
@@ -1049,41 +1069,41 @@
     .line 2218
     iget-object v1, p0, Lj$/time/ZonedDateTime;->offset:Lj$/time/ZoneOffset;
 
-    iget-object v2, p0, Lj$/time/ZonedDateTime;->zone:Lj$/time/ZoneId;
+    iget-object p0, p0, Lj$/time/ZonedDateTime;->zone:Lj$/time/ZoneId;
 
-    if-eq v1, v2, :cond_0
+    if-eq v1, p0, :cond_0
 
     .line 2219
-    invoke-virtual {v2}, Lj$/time/ZoneId;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Lj$/time/ZoneId;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     const-string v0, "["
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v0, "]"
+    const-string p0, "]"
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
+
+    return-object p0
 
     :cond_0
     return-object v0
 .end method
 
 .method public with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/ZonedDateTime;
-    .locals 3
+    .locals 2
 
     .line 1231
     instance-of v0, p1, Lj$/time/LocalDate;
@@ -1105,9 +1125,9 @@
 
     invoke-direct {p0, p1}, Lj$/time/ZonedDateTime;->resolveLocal(Lj$/time/LocalDateTime;)Lj$/time/ZonedDateTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 1233
     :cond_0
@@ -1130,9 +1150,9 @@
 
     invoke-direct {p0, p1}, Lj$/time/ZonedDateTime;->resolveLocal(Lj$/time/LocalDateTime;)Lj$/time/ZonedDateTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 1235
     :cond_1
@@ -1145,9 +1165,9 @@
 
     invoke-direct {p0, p1}, Lj$/time/ZonedDateTime;->resolveLocal(Lj$/time/LocalDateTime;)Lj$/time/ZonedDateTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 1237
     :cond_2
@@ -1163,17 +1183,17 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lj$/time/ZonedDateTime;->zone:Lj$/time/ZoneId;
+    iget-object p0, p0, Lj$/time/ZonedDateTime;->zone:Lj$/time/ZoneId;
 
     invoke-virtual {p1}, Lj$/time/OffsetDateTime;->getOffset()Lj$/time/ZoneOffset;
 
     move-result-object p1
 
-    invoke-static {v0, v1, p1}, Lj$/time/ZonedDateTime;->ofLocal(Lj$/time/LocalDateTime;Lj$/time/ZoneId;Lj$/time/ZoneOffset;)Lj$/time/ZonedDateTime;
+    invoke-static {v0, p0, p1}, Lj$/time/ZonedDateTime;->ofLocal(Lj$/time/LocalDateTime;Lj$/time/ZoneId;Lj$/time/ZoneOffset;)Lj$/time/ZonedDateTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 1240
     :cond_3
@@ -1193,13 +1213,13 @@
 
     move-result p1
 
-    iget-object v2, p0, Lj$/time/ZonedDateTime;->zone:Lj$/time/ZoneId;
+    iget-object p0, p0, Lj$/time/ZonedDateTime;->zone:Lj$/time/ZoneId;
 
-    invoke-static {v0, v1, p1, v2}, Lj$/time/ZonedDateTime;->create(JILj$/time/ZoneId;)Lj$/time/ZonedDateTime;
+    invoke-static {v0, v1, p1, p0}, Lj$/time/ZonedDateTime;->create(JILj$/time/ZoneId;)Lj$/time/ZonedDateTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 1243
     :cond_4
@@ -1212,19 +1232,19 @@
 
     invoke-direct {p0, p1}, Lj$/time/ZonedDateTime;->resolveOffset(Lj$/time/ZoneOffset;)Lj$/time/ZonedDateTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 1246
     :cond_5
     invoke-interface {p1, p0}, Lj$/time/temporal/TemporalAdjuster;->adjustInto(Lj$/time/temporal/Temporal;)Lj$/time/temporal/Temporal;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lj$/time/ZonedDateTime;
+    check-cast p0, Lj$/time/ZonedDateTime;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public with(Lj$/time/temporal/TemporalField;J)Lj$/time/ZonedDateTime;
@@ -1266,9 +1286,9 @@
 
     invoke-direct {p0, p1}, Lj$/time/ZonedDateTime;->resolveLocal(Lj$/time/LocalDateTime;)Lj$/time/ZonedDateTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 1309
     :cond_0
@@ -1283,9 +1303,9 @@
     .line 1310
     invoke-direct {p0, p1}, Lj$/time/ZonedDateTime;->resolveOffset(Lj$/time/ZoneOffset;)Lj$/time/ZonedDateTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 1307
     :cond_1
@@ -1293,23 +1313,23 @@
 
     move-result p1
 
-    iget-object v0, p0, Lj$/time/ZonedDateTime;->zone:Lj$/time/ZoneId;
+    iget-object p0, p0, Lj$/time/ZonedDateTime;->zone:Lj$/time/ZoneId;
 
-    invoke-static {p2, p3, p1, v0}, Lj$/time/ZonedDateTime;->create(JILj$/time/ZoneId;)Lj$/time/ZonedDateTime;
+    invoke-static {p2, p3, p1, p0}, Lj$/time/ZonedDateTime;->create(JILj$/time/ZoneId;)Lj$/time/ZonedDateTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 1314
     :cond_2
     invoke-interface {p1, p0, p2, p3}, Lj$/time/temporal/TemporalField;->adjustInto(Lj$/time/temporal/Temporal;J)Lj$/time/temporal/Temporal;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lj$/time/ZonedDateTime;
+    check-cast p0, Lj$/time/ZonedDateTime;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/chrono/ChronoZonedDateTime;
@@ -1318,9 +1338,20 @@
     .line 164
     invoke-virtual {p0, p1}, Lj$/time/ZonedDateTime;->with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/ZonedDateTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
+.end method
+
+.method public bridge synthetic with(Lj$/time/temporal/TemporalField;J)Lj$/time/chrono/ChronoZonedDateTime;
+    .locals 0
+
+    .line 164
+    invoke-virtual {p0, p1, p2, p3}, Lj$/time/ZonedDateTime;->with(Lj$/time/temporal/TemporalField;J)Lj$/time/ZonedDateTime;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method public bridge synthetic with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/temporal/Temporal;
@@ -1329,9 +1360,9 @@
     .line 164
     invoke-virtual {p0, p1}, Lj$/time/ZonedDateTime;->with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/ZonedDateTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic with(Lj$/time/temporal/TemporalField;J)Lj$/time/temporal/Temporal;
@@ -1340,13 +1371,30 @@
     .line 164
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/ZonedDateTime;->with(Lj$/time/temporal/TemporalField;J)Lj$/time/ZonedDateTime;
 
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public withDayOfMonth(I)Lj$/time/ZonedDateTime;
+    .locals 1
+
+    .line 1382
+    iget-object v0, p0, Lj$/time/ZonedDateTime;->dateTime:Lj$/time/LocalDateTime;
+
+    invoke-virtual {v0, p1}, Lj$/time/LocalDateTime;->withDayOfMonth(I)Lj$/time/LocalDateTime;
+
     move-result-object p1
 
-    return-object p1
+    invoke-direct {p0, p1}, Lj$/time/ZonedDateTime;->resolveLocal(Lj$/time/LocalDateTime;)Lj$/time/ZonedDateTime;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method public withZoneSameLocal(Lj$/time/ZoneId;)Lj$/time/ZonedDateTime;
-    .locals 2
+    .locals 1
 
     .line 968
     const-string v0, "zone"
@@ -1367,13 +1415,13 @@
     :cond_0
     iget-object v0, p0, Lj$/time/ZonedDateTime;->dateTime:Lj$/time/LocalDateTime;
 
-    iget-object v1, p0, Lj$/time/ZonedDateTime;->offset:Lj$/time/ZoneOffset;
+    iget-object p0, p0, Lj$/time/ZonedDateTime;->offset:Lj$/time/ZoneOffset;
 
-    invoke-static {v0, p1, v1}, Lj$/time/ZonedDateTime;->ofLocal(Lj$/time/LocalDateTime;Lj$/time/ZoneId;Lj$/time/ZoneOffset;)Lj$/time/ZonedDateTime;
+    invoke-static {v0, p1, p0}, Lj$/time/ZonedDateTime;->ofLocal(Lj$/time/LocalDateTime;Lj$/time/ZoneId;Lj$/time/ZoneOffset;)Lj$/time/ZonedDateTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic withZoneSameLocal(Lj$/time/ZoneId;)Lj$/time/chrono/ChronoZonedDateTime;
@@ -1382,9 +1430,9 @@
     .line 164
     invoke-virtual {p0, p1}, Lj$/time/ZonedDateTime;->withZoneSameLocal(Lj$/time/ZoneId;)Lj$/time/ZonedDateTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method writeExternal(Ljava/io/DataOutput;)V
@@ -1401,9 +1449,9 @@
     invoke-virtual {v0, p1}, Lj$/time/ZoneOffset;->writeExternal(Ljava/io/DataOutput;)V
 
     .line 2255
-    iget-object v0, p0, Lj$/time/ZonedDateTime;->zone:Lj$/time/ZoneId;
+    iget-object p0, p0, Lj$/time/ZonedDateTime;->zone:Lj$/time/ZoneId;
 
-    invoke-virtual {v0, p1}, Lj$/time/ZoneId;->write(Ljava/io/DataOutput;)V
+    invoke-virtual {p0, p1}, Lj$/time/ZoneId;->write(Ljava/io/DataOutput;)V
 
     return-void
 .end method

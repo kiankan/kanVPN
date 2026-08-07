@@ -37,7 +37,7 @@
 
 # virtual methods
 .method public newInstance(Ljava/lang/Class;)Ljava/lang/Object;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -60,21 +60,21 @@
     .line 89
     iget-object v0, p0, Lcom/google/gson/internal/UnsafeAllocator$2;->val$newInstance:Ljava/lang/reflect/Method;
 
-    iget v1, p0, Lcom/google/gson/internal/UnsafeAllocator$2;->val$constructorId:I
+    iget p0, p0, Lcom/google/gson/internal/UnsafeAllocator$2;->val$constructorId:I
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v1
+    move-result-object p0
 
-    filled-new-array {p1, v1}, [Ljava/lang/Object;
+    filled-new-array {p1, p0}, [Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    const/4 v1, 0x0
+    const/4 p1, 0x0
 
-    invoke-virtual {v0, v1, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, p0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

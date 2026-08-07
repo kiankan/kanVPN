@@ -15,12 +15,12 @@
         "context",
         "Landroid/content/Context;",
         "(Landroidx/camera/lifecycle/ProcessCameraProvider$Companion;Landroid/content/Context;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;",
-        "camera-lifecycle_release"
+        "camera-lifecycle"
     }
     k = 0x2
     mv = {
+        0x2,
         0x1,
-        0x8,
         0x0
     }
     xi = 0x30
@@ -43,7 +43,7 @@
         }
     .end annotation
 
-    .line 36
+    .line 37
     invoke-virtual {p0, p1}, Landroidx/camera/lifecycle/ProcessCameraProvider$Companion;->getInstance(Landroid/content/Context;)Lcom/google/common/util/concurrent/ListenableFuture;
 
     move-result-object p0

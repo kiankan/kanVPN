@@ -25,12 +25,12 @@
 
 # virtual methods
 .method public final onImageAvailable(Landroidx/camera/core/impl/ImageReaderProxy;)V
-    .locals 1
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/CaptureNode$$ExternalSyntheticLambda2;->f$0:Landroidx/camera/core/imagecapture/CaptureNode;
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/CaptureNode$$ExternalSyntheticLambda2;->f$0:Landroidx/camera/core/imagecapture/CaptureNode;
 
-    invoke-virtual {v0, p1}, Landroidx/camera/core/imagecapture/CaptureNode;->lambda$transform$1$androidx-camera-core-imagecapture-CaptureNode(Landroidx/camera/core/impl/ImageReaderProxy;)V
+    invoke-virtual {p0, p1}, Landroidx/camera/core/imagecapture/CaptureNode;->lambda$transform$1$androidx-camera-core-imagecapture-CaptureNode(Landroidx/camera/core/impl/ImageReaderProxy;)V
 
     return-void
 .end method

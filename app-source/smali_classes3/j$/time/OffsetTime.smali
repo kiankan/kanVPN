@@ -9,6 +9,20 @@
 .implements Ljava/io/Serializable;
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lj$/time/temporal/Temporal;",
+        "Lj$/time/temporal/TemporalAdjuster;",
+        "Ljava/lang/Comparable<",
+        "Lj$/time/OffsetTime;",
+        ">;",
+        "Ljava/io/Serializable;"
+    }
+.end annotation
+
+
 # static fields
 .field public static final MAX:Lj$/time/OffsetTime;
 
@@ -116,16 +130,16 @@
 .end method
 
 .method private readObject(Ljava/io/ObjectInputStream;)V
-    .locals 1
+    .locals 0
 
     .line 1424
-    new-instance p1, Ljava/io/InvalidObjectException;
+    new-instance p0, Ljava/io/InvalidObjectException;
 
-    const-string v0, "Deserialization via serialization delegate"
+    const-string p1, "Deserialization via serialization delegate"
 
-    invoke-direct {p1, v0}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method private toEpochNano()J
@@ -139,13 +153,13 @@
     move-result-wide v0
 
     .line 1231
-    iget-object v2, p0, Lj$/time/OffsetTime;->offset:Lj$/time/ZoneOffset;
+    iget-object p0, p0, Lj$/time/OffsetTime;->offset:Lj$/time/ZoneOffset;
 
-    invoke-virtual {v2}, Lj$/time/ZoneOffset;->getTotalSeconds()I
+    invoke-virtual {p0}, Lj$/time/ZoneOffset;->getTotalSeconds()I
 
-    move-result v2
+    move-result p0
 
-    int-to-long v2, v2
+    int-to-long v2, p0
 
     const-wide/32 v4, 0x3b9aca00
 
@@ -176,11 +190,11 @@
 
     .line 352
     :cond_0
-    new-instance v0, Lj$/time/OffsetTime;
+    new-instance p0, Lj$/time/OffsetTime;
 
-    invoke-direct {v0, p1, p2}, Lj$/time/OffsetTime;-><init>(Lj$/time/LocalTime;Lj$/time/ZoneOffset;)V
+    invoke-direct {p0, p1, p2}, Lj$/time/OffsetTime;-><init>(Lj$/time/LocalTime;Lj$/time/ZoneOffset;)V
 
-    return-object v0
+    return-object p0
 .end method
 
 .method private writeReplace()Ljava/lang/Object;
@@ -217,20 +231,20 @@
 
     sget-object v0, Lj$/time/temporal/ChronoField;->OFFSET_SECONDS:Lj$/time/temporal/ChronoField;
 
-    iget-object v1, p0, Lj$/time/OffsetTime;->offset:Lj$/time/ZoneOffset;
+    iget-object p0, p0, Lj$/time/OffsetTime;->offset:Lj$/time/ZoneOffset;
 
     .line 1123
-    invoke-virtual {v1}, Lj$/time/ZoneOffset;->getTotalSeconds()I
+    invoke-virtual {p0}, Lj$/time/ZoneOffset;->getTotalSeconds()I
 
-    move-result v1
+    move-result p0
 
-    int-to-long v1, v1
+    int-to-long v1, p0
 
     invoke-interface {p1, v0, v1, v2}, Lj$/time/temporal/Temporal;->with(Lj$/time/temporal/TemporalField;J)Lj$/time/temporal/Temporal;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public compareTo(Lj$/time/OffsetTime;)I
@@ -248,15 +262,15 @@
     if-eqz v0, :cond_0
 
     .line 1287
-    iget-object v0, p0, Lj$/time/OffsetTime;->time:Lj$/time/LocalTime;
+    iget-object p0, p0, Lj$/time/OffsetTime;->time:Lj$/time/LocalTime;
 
     iget-object p1, p1, Lj$/time/OffsetTime;->time:Lj$/time/LocalTime;
 
-    invoke-virtual {v0, p1}, Lj$/time/LocalTime;->compareTo(Lj$/time/LocalTime;)I
+    invoke-virtual {p0, p1}, Lj$/time/LocalTime;->compareTo(Lj$/time/LocalTime;)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 
     .line 1289
     :cond_0
@@ -275,15 +289,15 @@
     if-nez v0, :cond_1
 
     .line 1291
-    iget-object v0, p0, Lj$/time/OffsetTime;->time:Lj$/time/LocalTime;
+    iget-object p0, p0, Lj$/time/OffsetTime;->time:Lj$/time/LocalTime;
 
     iget-object p1, p1, Lj$/time/OffsetTime;->time:Lj$/time/LocalTime;
 
-    invoke-virtual {v0, p1}, Lj$/time/LocalTime;->compareTo(Lj$/time/LocalTime;)I
+    invoke-virtual {p0, p1}, Lj$/time/LocalTime;->compareTo(Lj$/time/LocalTime;)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 
     :cond_1
     return v0
@@ -297,9 +311,9 @@
 
     invoke-virtual {p0, p1}, Lj$/time/OffsetTime;->compareTo(Lj$/time/OffsetTime;)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -333,15 +347,15 @@
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lj$/time/OffsetTime;->offset:Lj$/time/ZoneOffset;
+    iget-object p0, p0, Lj$/time/OffsetTime;->offset:Lj$/time/ZoneOffset;
 
     iget-object p1, p1, Lj$/time/OffsetTime;->offset:Lj$/time/ZoneOffset;
 
-    invoke-virtual {v1, p1}, Lj$/time/ZoneOffset;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Lj$/time/ZoneOffset;->equals(Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_1
+    if-eqz p0, :cond_1
 
     return v0
 
@@ -355,13 +369,13 @@
     .line 502
     invoke-super {p0, p1}, Lj$/time/temporal/TemporalAccessor;->get(Lj$/time/temporal/TemporalField;)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public getLong(Lj$/time/temporal/TemporalField;)J
-    .locals 2
+    .locals 1
 
     .line 530
     instance-of v0, p1, Lj$/time/temporal/ChronoField;
@@ -374,37 +388,46 @@
     if-ne p1, v0, :cond_0
 
     .line 532
-    iget-object p1, p0, Lj$/time/OffsetTime;->offset:Lj$/time/ZoneOffset;
+    iget-object p0, p0, Lj$/time/OffsetTime;->offset:Lj$/time/ZoneOffset;
 
-    invoke-virtual {p1}, Lj$/time/ZoneOffset;->getTotalSeconds()I
+    invoke-virtual {p0}, Lj$/time/ZoneOffset;->getTotalSeconds()I
 
-    move-result p1
+    move-result p0
 
-    int-to-long v0, p1
+    int-to-long p0, p0
 
-    return-wide v0
+    return-wide p0
 
     .line 534
     :cond_0
-    iget-object v0, p0, Lj$/time/OffsetTime;->time:Lj$/time/LocalTime;
+    iget-object p0, p0, Lj$/time/OffsetTime;->time:Lj$/time/LocalTime;
 
-    invoke-virtual {v0, p1}, Lj$/time/LocalTime;->getLong(Lj$/time/temporal/TemporalField;)J
+    invoke-virtual {p0, p1}, Lj$/time/LocalTime;->getLong(Lj$/time/temporal/TemporalField;)J
 
-    move-result-wide v0
+    move-result-wide p0
 
-    return-wide v0
+    return-wide p0
 
     .line 536
     :cond_1
     invoke-interface {p1, p0}, Lj$/time/temporal/TemporalField;->getFrom(Lj$/time/temporal/TemporalAccessor;)J
 
-    move-result-wide v0
+    move-result-wide p0
 
-    return-wide v0
+    return-wide p0
+.end method
+
+.method public getOffset()Lj$/time/ZoneOffset;
+    .locals 0
+
+    .line 548
+    iget-object p0, p0, Lj$/time/OffsetTime;->offset:Lj$/time/ZoneOffset;
+
+    return-object p0
 .end method
 
 .method public hashCode()I
-    .locals 2
+    .locals 1
 
     .line 1375
     iget-object v0, p0, Lj$/time/OffsetTime;->time:Lj$/time/LocalTime;
@@ -413,15 +436,15 @@
 
     move-result v0
 
-    iget-object v1, p0, Lj$/time/OffsetTime;->offset:Lj$/time/ZoneOffset;
+    iget-object p0, p0, Lj$/time/OffsetTime;->offset:Lj$/time/ZoneOffset;
 
-    invoke-virtual {v1}, Lj$/time/ZoneOffset;->hashCode()I
+    invoke-virtual {p0}, Lj$/time/ZoneOffset;->hashCode()I
 
-    move-result v1
+    move-result p0
 
-    xor-int/2addr v0, v1
+    xor-int/2addr p0, v0
 
-    return v0
+    return p0
 .end method
 
 .method public isSupported(Lj$/time/temporal/TemporalField;)Z
@@ -439,13 +462,13 @@
     .line 397
     invoke-interface {p1}, Lj$/time/temporal/TemporalField;->isTimeBased()Z
 
-    move-result v0
+    move-result p0
 
-    if-nez v0, :cond_1
+    if-nez p0, :cond_1
 
-    sget-object v0, Lj$/time/temporal/ChronoField;->OFFSET_SECONDS:Lj$/time/temporal/ChronoField;
+    sget-object p0, Lj$/time/temporal/ChronoField;->OFFSET_SECONDS:Lj$/time/temporal/ChronoField;
 
-    if-ne p1, v0, :cond_0
+    if-ne p1, p0, :cond_0
 
     goto :goto_0
 
@@ -462,9 +485,9 @@
     .line 399
     invoke-interface {p1, p0}, Lj$/time/temporal/TemporalField;->isSupportedBy(Lj$/time/temporal/TemporalAccessor;)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_3
+    if-eqz p0, :cond_3
 
     return v1
 
@@ -486,24 +509,21 @@
     .line 993
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/OffsetTime;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/OffsetTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    const-wide/16 v0, 0x1
+    const-wide/16 p1, 0x1
 
-    invoke-virtual {p1, v0, v1, p3}, Lj$/time/OffsetTime;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/OffsetTime;
+    :goto_0
+    invoke-virtual {p0, p1, p2, p3}, Lj$/time/OffsetTime;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/OffsetTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     :cond_0
     neg-long p1, p1
 
-    invoke-virtual {p0, p1, p2, p3}, Lj$/time/OffsetTime;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/OffsetTime;
-
-    move-result-object p1
-
-    return-object p1
+    goto :goto_0
 .end method
 
 .method public bridge synthetic minus(JLj$/time/temporal/TemporalUnit;)Lj$/time/temporal/Temporal;
@@ -512,9 +532,9 @@
     .line 118
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/OffsetTime;->minus(JLj$/time/temporal/TemporalUnit;)Lj$/time/OffsetTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/OffsetTime;
@@ -536,19 +556,19 @@
 
     invoke-direct {p0, p1, p2}, Lj$/time/OffsetTime;->with(Lj$/time/LocalTime;Lj$/time/ZoneOffset;)Lj$/time/OffsetTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 882
     :cond_0
     invoke-interface {p3, p0, p1, p2}, Lj$/time/temporal/TemporalUnit;->addTo(Lj$/time/temporal/Temporal;J)Lj$/time/temporal/Temporal;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lj$/time/OffsetTime;
+    check-cast p0, Lj$/time/OffsetTime;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/temporal/Temporal;
@@ -557,9 +577,9 @@
     .line 118
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/OffsetTime;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/OffsetTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public query(Lj$/time/temporal/TemporalQuery;)Ljava/lang/Object;
@@ -630,9 +650,9 @@
     if-ne p1, v0, :cond_4
 
     .line 1084
-    iget-object p1, p0, Lj$/time/OffsetTime;->time:Lj$/time/LocalTime;
+    iget-object p0, p0, Lj$/time/OffsetTime;->time:Lj$/time/LocalTime;
 
-    return-object p1
+    return-object p0
 
     .line 1085
     :cond_4
@@ -643,30 +663,30 @@
     if-ne p1, v0, :cond_5
 
     .line 1086
-    sget-object p1, Lj$/time/temporal/ChronoUnit;->NANOS:Lj$/time/temporal/ChronoUnit;
+    sget-object p0, Lj$/time/temporal/ChronoUnit;->NANOS:Lj$/time/temporal/ChronoUnit;
 
-    return-object p1
+    return-object p0
 
     .line 1090
     :cond_5
     invoke-interface {p1, p0}, Lj$/time/temporal/TemporalQuery;->queryFrom(Lj$/time/temporal/TemporalAccessor;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     :cond_6
     :goto_1
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return-object p1
+    return-object p0
 
     .line 1080
     :cond_7
     :goto_2
-    iget-object p1, p0, Lj$/time/OffsetTime;->offset:Lj$/time/ZoneOffset;
+    iget-object p0, p0, Lj$/time/OffsetTime;->offset:Lj$/time/ZoneOffset;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public range(Lj$/time/temporal/TemporalField;)Lj$/time/temporal/ValueRange;
@@ -685,31 +705,40 @@
     .line 466
     invoke-interface {p1}, Lj$/time/temporal/TemporalField;->range()Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 468
     :cond_0
-    iget-object v0, p0, Lj$/time/OffsetTime;->time:Lj$/time/LocalTime;
+    iget-object p0, p0, Lj$/time/OffsetTime;->time:Lj$/time/LocalTime;
 
-    invoke-virtual {v0, p1}, Lj$/time/LocalTime;->range(Lj$/time/temporal/TemporalField;)Lj$/time/temporal/ValueRange;
+    invoke-virtual {p0, p1}, Lj$/time/LocalTime;->range(Lj$/time/temporal/TemporalField;)Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 470
     :cond_1
     invoke-interface {p1, p0}, Lj$/time/temporal/TemporalField;->rangeRefinedBy(Lj$/time/temporal/TemporalAccessor;)Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
+.end method
+
+.method public toLocalTime()Lj$/time/LocalTime;
+    .locals 0
+
+    .line 609
+    iget-object p0, p0, Lj$/time/OffsetTime;->time:Lj$/time/LocalTime;
+
+    return-object p0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
     .line 1397
     iget-object v0, p0, Lj$/time/OffsetTime;->time:Lj$/time/LocalTime;
@@ -718,25 +747,25 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lj$/time/OffsetTime;->offset:Lj$/time/ZoneOffset;
+    iget-object p0, p0, Lj$/time/OffsetTime;->offset:Lj$/time/ZoneOffset;
 
-    invoke-virtual {v1}, Lj$/time/ZoneOffset;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Lj$/time/ZoneOffset;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/OffsetTime;
@@ -754,9 +783,9 @@
 
     invoke-direct {p0, p1, v0}, Lj$/time/OffsetTime;->with(Lj$/time/LocalTime;Lj$/time/ZoneOffset;)Lj$/time/OffsetTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 683
     :cond_0
@@ -771,9 +800,9 @@
 
     invoke-direct {p0, v0, p1}, Lj$/time/OffsetTime;->with(Lj$/time/LocalTime;Lj$/time/ZoneOffset;)Lj$/time/OffsetTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 685
     :cond_1
@@ -790,15 +819,15 @@
     :cond_2
     invoke-interface {p1, p0}, Lj$/time/temporal/TemporalAdjuster;->adjustInto(Lj$/time/temporal/Temporal;)Lj$/time/temporal/Temporal;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lj$/time/OffsetTime;
+    check-cast p0, Lj$/time/OffsetTime;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public with(Lj$/time/temporal/TemporalField;J)Lj$/time/OffsetTime;
-    .locals 1
+    .locals 2
 
     .line 728
     instance-of v0, p1, Lj$/time/temporal/ChronoField;
@@ -808,14 +837,15 @@
     .line 729
     sget-object v0, Lj$/time/temporal/ChronoField;->OFFSET_SECONDS:Lj$/time/temporal/ChronoField;
 
+    .line 733
+    iget-object v1, p0, Lj$/time/OffsetTime;->time:Lj$/time/LocalTime;
+
     if-ne p1, v0, :cond_0
 
     .line 730
     check-cast p1, Lj$/time/temporal/ChronoField;
 
     .line 731
-    iget-object v0, p0, Lj$/time/OffsetTime;->time:Lj$/time/LocalTime;
-
     invoke-virtual {p1, p2, p3}, Lj$/time/temporal/ChronoField;->checkValidIntValue(J)I
 
     move-result p1
@@ -824,17 +854,15 @@
 
     move-result-object p1
 
-    invoke-direct {p0, v0, p1}, Lj$/time/OffsetTime;->with(Lj$/time/LocalTime;Lj$/time/ZoneOffset;)Lj$/time/OffsetTime;
+    invoke-direct {p0, v1, p1}, Lj$/time/OffsetTime;->with(Lj$/time/LocalTime;Lj$/time/ZoneOffset;)Lj$/time/OffsetTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 733
     :cond_0
-    iget-object v0, p0, Lj$/time/OffsetTime;->time:Lj$/time/LocalTime;
-
-    invoke-virtual {v0, p1, p2, p3}, Lj$/time/LocalTime;->with(Lj$/time/temporal/TemporalField;J)Lj$/time/LocalTime;
+    invoke-virtual {v1, p1, p2, p3}, Lj$/time/LocalTime;->with(Lj$/time/temporal/TemporalField;J)Lj$/time/LocalTime;
 
     move-result-object p1
 
@@ -842,19 +870,19 @@
 
     invoke-direct {p0, p1, p2}, Lj$/time/OffsetTime;->with(Lj$/time/LocalTime;Lj$/time/ZoneOffset;)Lj$/time/OffsetTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 735
     :cond_1
     invoke-interface {p1, p0, p2, p3}, Lj$/time/temporal/TemporalField;->adjustInto(Lj$/time/temporal/Temporal;J)Lj$/time/temporal/Temporal;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lj$/time/OffsetTime;
+    check-cast p0, Lj$/time/OffsetTime;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/temporal/Temporal;
@@ -863,9 +891,9 @@
     .line 118
     invoke-virtual {p0, p1}, Lj$/time/OffsetTime;->with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/OffsetTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic with(Lj$/time/temporal/TemporalField;J)Lj$/time/temporal/Temporal;
@@ -874,9 +902,9 @@
     .line 118
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/OffsetTime;->with(Lj$/time/temporal/TemporalField;J)Lj$/time/OffsetTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method writeExternal(Ljava/io/ObjectOutput;)V
@@ -888,9 +916,9 @@
     invoke-virtual {v0, p1}, Lj$/time/LocalTime;->writeExternal(Ljava/io/DataOutput;)V
 
     .line 1429
-    iget-object v0, p0, Lj$/time/OffsetTime;->offset:Lj$/time/ZoneOffset;
+    iget-object p0, p0, Lj$/time/OffsetTime;->offset:Lj$/time/ZoneOffset;
 
-    invoke-virtual {v0, p1}, Lj$/time/ZoneOffset;->writeExternal(Ljava/io/DataOutput;)V
+    invoke-virtual {p0, p1}, Lj$/time/ZoneOffset;->writeExternal(Ljava/io/DataOutput;)V
 
     return-void
 .end method

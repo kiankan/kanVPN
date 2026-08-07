@@ -7,6 +7,18 @@
 .implements Lj$/time/temporal/TemporalAdjuster;
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum<",
+        "Lj$/time/Month;",
+        ">;",
+        "Lj$/time/temporal/TemporalAccessor;",
+        "Lj$/time/temporal/TemporalAdjuster;"
+    }
+.end annotation
+
+
 # static fields
 .field private static final synthetic $VALUES:[Lj$/time/Month;
 
@@ -200,7 +212,7 @@
 .end method
 
 .method public static of(I)Lj$/time/Month;
-    .locals 3
+    .locals 2
 
     const/4 v0, 0x1
 
@@ -221,25 +233,13 @@
 
     .line 187
     :cond_0
-    new-instance v0, Lj$/time/DateTimeException;
+    const-string v0, "Invalid value for MonthOfYear: "
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-static {v0, p0}, Lj$/time/Month$0;->m(Ljava/lang/String;I)V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 p0, 0x0
 
-    const-string v2, "Invalid value for MonthOfYear: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-object p0
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lj$/time/Month;
@@ -295,40 +295,40 @@
 
     invoke-virtual {p0}, Lj$/time/Month;->getValue()I
 
-    move-result v1
+    move-result p0
 
-    int-to-long v1, v1
+    int-to-long v1, p0
 
     invoke-interface {p1, v0, v1, v2}, Lj$/time/temporal/Temporal;->with(Lj$/time/temporal/TemporalField;J)Lj$/time/temporal/Temporal;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 610
     :cond_0
-    new-instance p1, Lj$/time/DateTimeException;
+    const-string p0, "Adjustment only supported on ISO date-time"
 
-    const-string v0, "Adjustment only supported on ISO date-time"
+    invoke-static {p0}, Lj$/time/Year$3;->m(Ljava/lang/String;)V
 
-    invoke-direct {p1, v0}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
+    const/4 p0, 0x0
 
-    throw p1
+    return-object p0
 .end method
 
 .method public firstDayOfYear(Z)I
-    .locals 2
+    .locals 1
 
     .line 497
     sget-object v0, Lj$/time/Month$1;->$SwitchMap$java$time$Month:[I
 
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
-    move-result v1
+    move-result p0
 
-    aget v0, v0, v1
+    aget p0, v0, p0
 
-    packed-switch v0, :pswitch_data_0
+    packed-switch p0, :pswitch_data_0
 
     add-int/lit16 p1, p1, 0x14f
 
@@ -360,9 +360,9 @@
     return p1
 
     :pswitch_5
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :pswitch_6
     add-int/lit16 p1, p1, 0x131
@@ -385,9 +385,9 @@
     return p1
 
     :pswitch_a
-    const/16 p1, 0x20
+    const/16 p0, 0x20
 
-    return p1
+    return p0
 
     :pswitch_data_0
     .packed-switch 0x1
@@ -416,21 +416,21 @@
     .line 343
     invoke-virtual {p0}, Lj$/time/Month;->getValue()I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 
     .line 345
     :cond_0
     invoke-super {p0, p1}, Lj$/time/temporal/TemporalAccessor;->get(Lj$/time/temporal/TemporalField;)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public getLong(Lj$/time/temporal/TemporalField;)J
-    .locals 3
+    .locals 1
 
     .line 372
     sget-object v0, Lj$/time/temporal/ChronoField;->MONTH_OF_YEAR:Lj$/time/temporal/ChronoField;
@@ -440,11 +440,11 @@
     .line 373
     invoke-virtual {p0}, Lj$/time/Month;->getValue()I
 
-    move-result p1
+    move-result p0
 
-    int-to-long v0, p1
+    int-to-long p0, p0
 
-    return-wide v0
+    return-wide p0
 
     .line 374
     :cond_0
@@ -455,44 +455,32 @@
     .line 377
     invoke-interface {p1, p0}, Lj$/time/temporal/TemporalField;->getFrom(Lj$/time/temporal/TemporalAccessor;)J
 
-    move-result-wide v0
+    move-result-wide p0
 
-    return-wide v0
+    return-wide p0
 
     .line 375
     :cond_1
-    new-instance v0, Lj$/time/temporal/UnsupportedTemporalTypeException;
+    const-string p0, "Unsupported field: "
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-static {p0, p1}, Lj$/time/Year$2;->m(Ljava/lang/String;Ljava/lang/Object;)V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const-wide/16 p0, 0x0
 
-    const-string v2, "Unsupported field: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Lj$/time/temporal/UnsupportedTemporalTypeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-wide p0
 .end method
 
 .method public getValue()I
-    .locals 1
+    .locals 0
 
     .line 236
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
-    move-result v0
+    move-result p0
 
-    add-int/lit8 v0, v0, 0x1
+    add-int/lit8 p0, p0, 0x1
 
-    return v0
+    return p0
 .end method
 
 .method public isSupported(Lj$/time/temporal/TemporalField;)Z
@@ -508,9 +496,9 @@
     if-eqz v0, :cond_1
 
     .line 280
-    sget-object v0, Lj$/time/temporal/ChronoField;->MONTH_OF_YEAR:Lj$/time/temporal/ChronoField;
+    sget-object p0, Lj$/time/temporal/ChronoField;->MONTH_OF_YEAR:Lj$/time/temporal/ChronoField;
 
-    if-ne p1, v0, :cond_0
+    if-ne p1, p0, :cond_0
 
     return v2
 
@@ -523,9 +511,9 @@
     .line 282
     invoke-interface {p1, p0}, Lj$/time/temporal/TemporalField;->isSupportedBy(Lj$/time/temporal/TemporalAccessor;)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_2
+    if-eqz p0, :cond_2
 
     return v2
 
@@ -534,151 +522,151 @@
 .end method
 
 .method public length(Z)I
-    .locals 2
+    .locals 1
 
     .line 426
     sget-object v0, Lj$/time/Month$1;->$SwitchMap$java$time$Month:[I
 
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
-    move-result v1
+    move-result p0
 
-    aget v0, v0, v1
+    aget p0, v0, p0
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    if-eq v0, v1, :cond_1
+    if-eq p0, v0, :cond_1
 
     const/4 p1, 0x2
 
-    if-eq v0, p1, :cond_0
+    if-eq p0, p1, :cond_0
 
     const/4 p1, 0x3
 
-    if-eq v0, p1, :cond_0
+    if-eq p0, p1, :cond_0
 
     const/4 p1, 0x4
 
-    if-eq v0, p1, :cond_0
+    if-eq p0, p1, :cond_0
 
     const/4 p1, 0x5
 
-    if-eq v0, p1, :cond_0
+    if-eq p0, p1, :cond_0
 
-    const/16 p1, 0x1f
+    const/16 p0, 0x1f
 
-    return p1
+    return p0
 
     :cond_0
-    const/16 p1, 0x1e
+    const/16 p0, 0x1e
 
-    return p1
+    return p0
 
     :cond_1
     if-eqz p1, :cond_2
 
-    const/16 p1, 0x1d
+    const/16 p0, 0x1d
 
-    return p1
+    return p0
 
     :cond_2
-    const/16 p1, 0x1c
+    const/16 p0, 0x1c
 
-    return p1
+    return p0
 .end method
 
 .method public maxLength()I
-    .locals 2
+    .locals 1
 
     .line 472
     sget-object v0, Lj$/time/Month$1;->$SwitchMap$java$time$Month:[I
 
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
-    move-result v1
+    move-result p0
 
-    aget v0, v0, v1
+    aget p0, v0, p0
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    if-eq v0, v1, :cond_1
+    if-eq p0, v0, :cond_1
 
-    const/4 v1, 0x2
+    const/4 v0, 0x2
 
-    if-eq v0, v1, :cond_0
+    if-eq p0, v0, :cond_0
 
-    const/4 v1, 0x3
+    const/4 v0, 0x3
 
-    if-eq v0, v1, :cond_0
+    if-eq p0, v0, :cond_0
 
-    const/4 v1, 0x4
+    const/4 v0, 0x4
 
-    if-eq v0, v1, :cond_0
+    if-eq p0, v0, :cond_0
 
-    const/4 v1, 0x5
+    const/4 v0, 0x5
 
-    if-eq v0, v1, :cond_0
+    if-eq p0, v0, :cond_0
 
-    const/16 v0, 0x1f
+    const/16 p0, 0x1f
 
-    return v0
+    return p0
 
     :cond_0
-    const/16 v0, 0x1e
+    const/16 p0, 0x1e
 
-    return v0
+    return p0
 
     :cond_1
-    const/16 v0, 0x1d
+    const/16 p0, 0x1d
 
-    return v0
+    return p0
 .end method
 
 .method public minLength()I
-    .locals 2
+    .locals 1
 
     .line 449
     sget-object v0, Lj$/time/Month$1;->$SwitchMap$java$time$Month:[I
 
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
-    move-result v1
+    move-result p0
 
-    aget v0, v0, v1
+    aget p0, v0, p0
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    if-eq v0, v1, :cond_1
+    if-eq p0, v0, :cond_1
 
-    const/4 v1, 0x2
+    const/4 v0, 0x2
 
-    if-eq v0, v1, :cond_0
+    if-eq p0, v0, :cond_0
 
-    const/4 v1, 0x3
+    const/4 v0, 0x3
 
-    if-eq v0, v1, :cond_0
+    if-eq p0, v0, :cond_0
 
-    const/4 v1, 0x4
+    const/4 v0, 0x4
 
-    if-eq v0, v1, :cond_0
+    if-eq p0, v0, :cond_0
 
-    const/4 v1, 0x5
+    const/4 v0, 0x5
 
-    if-eq v0, v1, :cond_0
+    if-eq p0, v0, :cond_0
 
-    const/16 v0, 0x1f
+    const/16 p0, 0x1f
 
-    return v0
+    return p0
 
     :cond_0
-    const/16 v0, 0x1e
+    const/16 p0, 0x1e
 
-    return v0
+    return p0
 
     :cond_1
-    const/16 v0, 0x1c
+    const/16 p0, 0x1c
 
-    return v0
+    return p0
 .end method
 
 .method public plus(J)Lj$/time/Month;
@@ -696,17 +684,17 @@
 
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
-    move-result v0
+    move-result p0
 
     add-int/lit8 p1, p1, 0xc
 
-    add-int/2addr v0, p1
+    add-int/2addr p0, p1
 
-    rem-int/lit8 v0, v0, 0xc
+    rem-int/lit8 p0, p0, 0xc
 
-    aget-object p1, p2, v0
+    aget-object p0, p2, p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public query(Lj$/time/temporal/TemporalQuery;)Ljava/lang/Object;
@@ -720,9 +708,9 @@
     if-ne p1, v0, :cond_0
 
     .line 565
-    sget-object p1, Lj$/time/chrono/IsoChronology;->INSTANCE:Lj$/time/chrono/IsoChronology;
+    sget-object p0, Lj$/time/chrono/IsoChronology;->INSTANCE:Lj$/time/chrono/IsoChronology;
 
-    return-object p1
+    return-object p0
 
     .line 566
     :cond_0
@@ -733,17 +721,17 @@
     if-ne p1, v0, :cond_1
 
     .line 567
-    sget-object p1, Lj$/time/temporal/ChronoUnit;->MONTHS:Lj$/time/temporal/ChronoUnit;
+    sget-object p0, Lj$/time/temporal/ChronoUnit;->MONTHS:Lj$/time/temporal/ChronoUnit;
 
-    return-object p1
+    return-object p0
 
     .line 569
     :cond_1
     invoke-super {p0, p1}, Lj$/time/temporal/TemporalAccessor;->query(Lj$/time/temporal/TemporalQuery;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public range(Lj$/time/temporal/TemporalField;)Lj$/time/temporal/ValueRange;
@@ -757,15 +745,15 @@
     .line 310
     invoke-interface {p1}, Lj$/time/temporal/TemporalField;->range()Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 312
     :cond_0
     invoke-super {p0, p1}, Lj$/time/temporal/TemporalAccessor;->range(Lj$/time/temporal/TemporalField;)Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

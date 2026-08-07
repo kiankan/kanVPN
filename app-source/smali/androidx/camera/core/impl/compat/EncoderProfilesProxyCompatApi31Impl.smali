@@ -7,7 +7,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 89
+    .line 87
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -66,12 +66,12 @@
         }
     .end annotation
 
-    .line 74
+    .line 72
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 75
+    .line 73
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -89,37 +89,37 @@
 
     check-cast v1, Landroid/media/EncoderProfiles$AudioProfile;
 
-    .line 77
+    .line 75
     invoke-virtual {v1}, Landroid/media/EncoderProfiles$AudioProfile;->getCodec()I
 
     move-result v2
 
-    .line 78
+    .line 76
     invoke-virtual {v1}, Landroid/media/EncoderProfiles$AudioProfile;->getMediaType()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 79
+    .line 77
     invoke-virtual {v1}, Landroid/media/EncoderProfiles$AudioProfile;->getBitrate()I
 
     move-result v4
 
-    .line 80
+    .line 78
     invoke-virtual {v1}, Landroid/media/EncoderProfiles$AudioProfile;->getSampleRate()I
 
     move-result v5
 
-    .line 81
+    .line 79
     invoke-virtual {v1}, Landroid/media/EncoderProfiles$AudioProfile;->getChannels()I
 
     move-result v6
 
-    .line 82
+    .line 80
     invoke-virtual {v1}, Landroid/media/EncoderProfiles$AudioProfile;->getProfile()I
 
     move-result v7
 
-    .line 76
+    .line 74
     invoke-static/range {v2 .. v7}, Landroidx/camera/core/impl/EncoderProfilesProxy$AudioProfileProxy;->create(ILjava/lang/String;IIII)Landroidx/camera/core/impl/EncoderProfilesProxy$AudioProfileProxy;
 
     move-result-object v1
@@ -146,12 +146,12 @@
         }
     .end annotation
 
-    .line 52
+    .line 51
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 53
+    .line 52
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -169,37 +169,37 @@
 
     check-cast v1, Landroid/media/EncoderProfiles$VideoProfile;
 
-    .line 55
+    .line 54
     invoke-virtual {v1}, Landroid/media/EncoderProfiles$VideoProfile;->getCodec()I
 
     move-result v2
 
-    .line 56
+    .line 55
     invoke-virtual {v1}, Landroid/media/EncoderProfiles$VideoProfile;->getMediaType()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 57
+    .line 56
     invoke-virtual {v1}, Landroid/media/EncoderProfiles$VideoProfile;->getBitrate()I
 
     move-result v4
 
-    .line 58
+    .line 57
     invoke-virtual {v1}, Landroid/media/EncoderProfiles$VideoProfile;->getFrameRate()I
 
     move-result v5
 
-    .line 59
+    .line 58
     invoke-virtual {v1}, Landroid/media/EncoderProfiles$VideoProfile;->getWidth()I
 
     move-result v6
 
-    .line 60
+    .line 59
     invoke-virtual {v1}, Landroid/media/EncoderProfiles$VideoProfile;->getHeight()I
 
     move-result v7
 
-    .line 61
+    .line 60
     invoke-virtual {v1}, Landroid/media/EncoderProfiles$VideoProfile;->getProfile()I
 
     move-result v8
@@ -210,7 +210,7 @@
 
     const/16 v9, 0x8
 
-    .line 54
+    .line 53
     invoke-static/range {v2 .. v11}, Landroidx/camera/core/impl/EncoderProfilesProxy$VideoProfileProxy;->create(ILjava/lang/String;IIIIIIII)Landroidx/camera/core/impl/EncoderProfilesProxy$VideoProfileProxy;
 
     move-result-object v1

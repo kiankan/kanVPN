@@ -73,9 +73,9 @@
     :cond_4
     invoke-static {}, Lcom/google/zxing/NotFoundException;->getNotFoundInstance()Lcom/google/zxing/NotFoundException;
 
-    move-result-object p1
+    move-result-object p0
 
-    throw p1
+    throw p0
 
     :cond_5
     :goto_2
@@ -480,73 +480,73 @@
 .end method
 
 .method getBottomLeft()Lcom/google/zxing/ResultPoint;
-    .locals 1
+    .locals 0
 
     .line 150
-    iget-object v0, p0, Lcom/google/zxing/pdf417/decoder/BoundingBox;->bottomLeft:Lcom/google/zxing/ResultPoint;
+    iget-object p0, p0, Lcom/google/zxing/pdf417/decoder/BoundingBox;->bottomLeft:Lcom/google/zxing/ResultPoint;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method getBottomRight()Lcom/google/zxing/ResultPoint;
-    .locals 1
+    .locals 0
 
     .line 154
-    iget-object v0, p0, Lcom/google/zxing/pdf417/decoder/BoundingBox;->bottomRight:Lcom/google/zxing/ResultPoint;
+    iget-object p0, p0, Lcom/google/zxing/pdf417/decoder/BoundingBox;->bottomRight:Lcom/google/zxing/ResultPoint;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method getMaxX()I
-    .locals 1
+    .locals 0
 
     .line 130
-    iget v0, p0, Lcom/google/zxing/pdf417/decoder/BoundingBox;->maxX:I
+    iget p0, p0, Lcom/google/zxing/pdf417/decoder/BoundingBox;->maxX:I
 
-    return v0
+    return p0
 .end method
 
 .method getMaxY()I
-    .locals 1
+    .locals 0
 
     .line 138
-    iget v0, p0, Lcom/google/zxing/pdf417/decoder/BoundingBox;->maxY:I
+    iget p0, p0, Lcom/google/zxing/pdf417/decoder/BoundingBox;->maxY:I
 
-    return v0
+    return p0
 .end method
 
 .method getMinX()I
-    .locals 1
+    .locals 0
 
     .line 126
-    iget v0, p0, Lcom/google/zxing/pdf417/decoder/BoundingBox;->minX:I
+    iget p0, p0, Lcom/google/zxing/pdf417/decoder/BoundingBox;->minX:I
 
-    return v0
+    return p0
 .end method
 
 .method getMinY()I
-    .locals 1
+    .locals 0
 
     .line 134
-    iget v0, p0, Lcom/google/zxing/pdf417/decoder/BoundingBox;->minY:I
+    iget p0, p0, Lcom/google/zxing/pdf417/decoder/BoundingBox;->minY:I
 
-    return v0
+    return p0
 .end method
 
 .method getTopLeft()Lcom/google/zxing/ResultPoint;
-    .locals 1
+    .locals 0
 
     .line 142
-    iget-object v0, p0, Lcom/google/zxing/pdf417/decoder/BoundingBox;->topLeft:Lcom/google/zxing/ResultPoint;
+    iget-object p0, p0, Lcom/google/zxing/pdf417/decoder/BoundingBox;->topLeft:Lcom/google/zxing/ResultPoint;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method getTopRight()Lcom/google/zxing/ResultPoint;
-    .locals 1
+    .locals 0
 
     .line 146
-    iget-object v0, p0, Lcom/google/zxing/pdf417/decoder/BoundingBox;->topRight:Lcom/google/zxing/ResultPoint;
+    iget-object p0, p0, Lcom/google/zxing/pdf417/decoder/BoundingBox;->topRight:Lcom/google/zxing/ResultPoint;
 
-    return-object v0
+    return-object p0
 .end method

@@ -29,14 +29,14 @@
 
 # virtual methods
 .method public final run()V
-    .locals 2
+    .locals 1
 
     .line 0
     iget-object v0, p0, Landroidx/camera/core/imagecapture/ProcessingNode$$ExternalSyntheticLambda3;->f$0:Landroidx/camera/core/imagecapture/ProcessingRequest;
 
-    iget-object v1, p0, Landroidx/camera/core/imagecapture/ProcessingNode$$ExternalSyntheticLambda3;->f$1:Landroidx/camera/core/ImageCaptureException;
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/ProcessingNode$$ExternalSyntheticLambda3;->f$1:Landroidx/camera/core/ImageCaptureException;
 
-    invoke-static {v0, v1}, Landroidx/camera/core/imagecapture/ProcessingNode;->lambda$sendError$7(Landroidx/camera/core/imagecapture/ProcessingRequest;Landroidx/camera/core/ImageCaptureException;)V
+    invoke-static {v0, p0}, Landroidx/camera/core/imagecapture/ProcessingNode;->lambda$sendError$8(Landroidx/camera/core/imagecapture/ProcessingRequest;Landroidx/camera/core/ImageCaptureException;)V
 
     return-void
 .end method

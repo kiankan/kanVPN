@@ -47,7 +47,7 @@
     k = 0x2
     mv = {
         0x1,
-        0x8,
+        0x9,
         0x0
     }
     xi = 0x30
@@ -71,7 +71,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 26
+    .line 27
     invoke-virtual {p0, p1}, Landroidx/collection/SparseArrayCompat;->containsKey(I)Z
 
     move-result p0
@@ -105,7 +105,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 62
+    .line 63
     invoke-virtual {p0}, Landroidx/collection/SparseArrayCompat;->size()I
 
     move-result v0
@@ -115,7 +115,7 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 63
+    .line 64
     invoke-virtual {p0, v1}, Landroidx/collection/SparseArrayCompat;->keyAt(I)I
 
     move-result v2
@@ -154,7 +154,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 45
+    .line 46
     invoke-virtual {p0, p1, p2}, Landroidx/collection/SparseArrayCompat;->get(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -184,7 +184,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 49
+    .line 50
     invoke-virtual {p0, p1}, Landroidx/collection/SparseArrayCompat;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -215,7 +215,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 22
+    .line 23
     invoke-virtual {p0}, Landroidx/collection/SparseArrayCompat;->size()I
 
     move-result p0
@@ -239,7 +239,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 53
+    .line 54
     invoke-virtual {p0}, Landroidx/collection/SparseArrayCompat;->isEmpty()Z
 
     move-result p0
@@ -266,7 +266,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 68
+    .line 70
     new-instance v0, Landroidx/collection/SparseArrayKt$keyIterator$1;
 
     invoke-direct {v0, p0}, Landroidx/collection/SparseArrayKt$keyIterator$1;-><init>(Landroidx/collection/SparseArrayCompat;)V
@@ -296,11 +296,11 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "other"
+    const-string/jumbo v0, "other"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 36
+    .line 37
     new-instance v0, Landroidx/collection/SparseArrayCompat;
 
     invoke-virtual {p0}, Landroidx/collection/SparseArrayCompat;->size()I
@@ -315,10 +315,10 @@
 
     invoke-direct {v0, v1}, Landroidx/collection/SparseArrayCompat;-><init>(I)V
 
-    .line 37
+    .line 38
     invoke-virtual {v0, p0}, Landroidx/collection/SparseArrayCompat;->putAll(Landroidx/collection/SparseArrayCompat;)V
 
-    .line 38
+    .line 39
     invoke-virtual {v0, p1}, Landroidx/collection/SparseArrayCompat;->putAll(Landroidx/collection/SparseArrayCompat;)V
 
     return-object v0
@@ -335,7 +335,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 58
+    .line 59
     invoke-virtual {p0, p1, p2}, Landroidx/collection/SparseArrayCompat;->remove(ILjava/lang/Object;)Z
 
     move-result p0
@@ -359,7 +359,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 30
+    .line 31
     invoke-virtual {p0, p1, p2}, Landroidx/collection/SparseArrayCompat;->put(ILjava/lang/Object;)V
 
     return-void
@@ -383,7 +383,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 75
+    .line 80
     new-instance v0, Landroidx/collection/SparseArrayKt$valueIterator$1;
 
     invoke-direct {v0, p0}, Landroidx/collection/SparseArrayKt$valueIterator$1;-><init>(Landroidx/collection/SparseArrayCompat;)V

@@ -19,12 +19,14 @@
 
 # virtual methods
 .method public final construct()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
     .line 0
-    invoke-static {}, Lcom/google/gson/internal/ConstructorConstructor;->lambda$newMapConstructor$14()Ljava/util/Map;
+    new-instance p0, Ljava/util/LinkedHashSet;
 
-    move-result-object v0
+    invoke-direct {p0}, Ljava/util/LinkedHashSet;-><init>()V
 
-    return-object v0
+    check-cast p0, Ljava/util/Collection;
+
+    return-object p0
 .end method

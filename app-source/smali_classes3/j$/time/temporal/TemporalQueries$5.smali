@@ -30,32 +30,32 @@
 
 # virtual methods
 .method public queryFrom(Lj$/time/temporal/TemporalAccessor;)Lj$/time/ZoneId;
-    .locals 1
+    .locals 0
 
     .line 412
-    sget-object v0, Lj$/time/temporal/TemporalQueries;->ZONE_ID:Lj$/time/temporal/TemporalQuery;
+    sget-object p0, Lj$/time/temporal/TemporalQueries;->ZONE_ID:Lj$/time/temporal/TemporalQuery;
 
-    invoke-interface {p1, v0}, Lj$/time/temporal/TemporalAccessor;->query(Lj$/time/temporal/TemporalQuery;)Ljava/lang/Object;
+    invoke-interface {p1, p0}, Lj$/time/temporal/TemporalAccessor;->query(Lj$/time/temporal/TemporalQuery;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Lj$/time/ZoneId;
+    check-cast p0, Lj$/time/ZoneId;
 
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
-    return-object v0
+    return-object p0
 
     .line 413
     :cond_0
-    sget-object v0, Lj$/time/temporal/TemporalQueries;->OFFSET:Lj$/time/temporal/TemporalQuery;
+    sget-object p0, Lj$/time/temporal/TemporalQueries;->OFFSET:Lj$/time/temporal/TemporalQuery;
 
-    invoke-interface {p1, v0}, Lj$/time/temporal/TemporalAccessor;->query(Lj$/time/temporal/TemporalQuery;)Ljava/lang/Object;
+    invoke-interface {p1, p0}, Lj$/time/temporal/TemporalAccessor;->query(Lj$/time/temporal/TemporalQuery;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lj$/time/ZoneId;
+    check-cast p0, Lj$/time/ZoneId;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic queryFrom(Lj$/time/temporal/TemporalAccessor;)Ljava/lang/Object;
@@ -64,16 +64,16 @@
     .line 409
     invoke-virtual {p0, p1}, Lj$/time/temporal/TemporalQueries$5;->queryFrom(Lj$/time/temporal/TemporalAccessor;)Lj$/time/ZoneId;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 418
-    const-string v0, "Zone"
+    const-string p0, "Zone"
 
-    return-object v0
+    return-object p0
 .end method

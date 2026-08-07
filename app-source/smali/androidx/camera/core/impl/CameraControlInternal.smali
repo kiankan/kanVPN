@@ -23,7 +23,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 200
+    .line 190
     new-instance v0, Landroidx/camera/core/impl/CameraControlInternal$2;
 
     invoke-direct {v0}, Landroidx/camera/core/impl/CameraControlInternal$2;-><init>()V
@@ -44,6 +44,9 @@
 .method public abstract clearInteropConfig()V
 .end method
 
+.method public abstract clearZslConfig()V
+.end method
+
 .method public decrementVideoUsage()V
     .locals 0
 
@@ -61,16 +64,16 @@
         }
     .end annotation
 
-    .line 128
+    .line 130
     new-instance p1, Landroidx/camera/core/impl/CameraControlInternal$1;
 
     invoke-direct {p1, p0}, Landroidx/camera/core/impl/CameraControlInternal$1;-><init>(Landroidx/camera/core/impl/CameraControlInternal;)V
 
     invoke-static {p1}, Landroidx/camera/core/impl/utils/futures/Futures;->immediateFuture(Ljava/lang/Object;)Lcom/google/common/util/concurrent/ListenableFuture;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public abstract getFlashMode()I
@@ -85,9 +88,6 @@
 .method public abstract getInteropConfig()Landroidx/camera/core/impl/Config;
 .end method
 
-.method public abstract getSensorRect()Landroid/graphics/Rect;
-.end method
-
 .method public abstract getSessionConfig()Landroidx/camera/core/impl/SessionConfig;
 .end method
 
@@ -98,11 +98,11 @@
 .end method
 
 .method public isInVideoUsage()Z
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public abstract isZslDisabledByByUserCaseConfig()Z

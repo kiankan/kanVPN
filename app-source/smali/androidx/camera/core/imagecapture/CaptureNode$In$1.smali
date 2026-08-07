@@ -30,7 +30,7 @@
         }
     .end annotation
 
-    .line 371
+    .line 446
     iput-object p1, p0, Landroidx/camera/core/imagecapture/CaptureNode$In$1;->this$0:Landroidx/camera/core/imagecapture/CaptureNode$In;
 
     invoke-direct {p0}, Landroidx/camera/core/impl/CameraCaptureCallback;-><init>()V

@@ -30,7 +30,7 @@
         }
     .end annotation
 
-    .line 104
+    .line 110
     iput-object p1, p0, Landroidx/camera/core/imagecapture/CaptureNode$1;->this$0:Landroidx/camera/core/imagecapture/CaptureNode;
 
     invoke-direct {p0}, Landroidx/camera/core/impl/CameraCaptureCallback;-><init>()V
@@ -43,19 +43,19 @@
 .method synthetic lambda$onCaptureProcessProgressed$1$androidx-camera-core-imagecapture-CaptureNode$1(I)V
     .locals 1
 
-    .line 117
+    .line 123
     iget-object v0, p0, Landroidx/camera/core/imagecapture/CaptureNode$1;->this$0:Landroidx/camera/core/imagecapture/CaptureNode;
 
     iget-object v0, v0, Landroidx/camera/core/imagecapture/CaptureNode;->mCurrentRequest:Landroidx/camera/core/imagecapture/ProcessingRequest;
 
     if-eqz v0, :cond_0
 
-    .line 118
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/CaptureNode$1;->this$0:Landroidx/camera/core/imagecapture/CaptureNode;
+    .line 124
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/CaptureNode$1;->this$0:Landroidx/camera/core/imagecapture/CaptureNode;
 
-    iget-object v0, v0, Landroidx/camera/core/imagecapture/CaptureNode;->mCurrentRequest:Landroidx/camera/core/imagecapture/ProcessingRequest;
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/CaptureNode;->mCurrentRequest:Landroidx/camera/core/imagecapture/ProcessingRequest;
 
-    invoke-virtual {v0, p1}, Landroidx/camera/core/imagecapture/ProcessingRequest;->onCaptureProcessProgressed(I)V
+    invoke-virtual {p0, p1}, Landroidx/camera/core/imagecapture/ProcessingRequest;->onCaptureProcessProgressed(I)V
 
     :cond_0
     return-void
@@ -64,19 +64,19 @@
 .method synthetic lambda$onCaptureStarted$0$androidx-camera-core-imagecapture-CaptureNode$1()V
     .locals 1
 
-    .line 108
+    .line 114
     iget-object v0, p0, Landroidx/camera/core/imagecapture/CaptureNode$1;->this$0:Landroidx/camera/core/imagecapture/CaptureNode;
 
     iget-object v0, v0, Landroidx/camera/core/imagecapture/CaptureNode;->mCurrentRequest:Landroidx/camera/core/imagecapture/ProcessingRequest;
 
     if-eqz v0, :cond_0
 
-    .line 109
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/CaptureNode$1;->this$0:Landroidx/camera/core/imagecapture/CaptureNode;
+    .line 115
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/CaptureNode$1;->this$0:Landroidx/camera/core/imagecapture/CaptureNode;
 
-    iget-object v0, v0, Landroidx/camera/core/imagecapture/CaptureNode;->mCurrentRequest:Landroidx/camera/core/imagecapture/ProcessingRequest;
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/CaptureNode;->mCurrentRequest:Landroidx/camera/core/imagecapture/ProcessingRequest;
 
-    invoke-virtual {v0}, Landroidx/camera/core/imagecapture/ProcessingRequest;->onCaptureStarted()V
+    invoke-virtual {p0}, Landroidx/camera/core/imagecapture/ProcessingRequest;->onCaptureStarted()V
 
     :cond_0
     return-void
@@ -85,7 +85,7 @@
 .method public onCaptureProcessProgressed(II)V
     .locals 1
 
-    .line 116
+    .line 122
     invoke-static {}, Landroidx/camera/core/impl/utils/executor/CameraXExecutors;->mainThreadExecutor()Ljava/util/concurrent/ScheduledExecutorService;
 
     move-result-object p1
@@ -102,7 +102,7 @@
 .method public onCaptureStarted(I)V
     .locals 1
 
-    .line 107
+    .line 113
     invoke-static {}, Landroidx/camera/core/impl/utils/executor/CameraXExecutors;->mainThreadExecutor()Ljava/util/concurrent/ScheduledExecutorService;
 
     move-result-object p1

@@ -25,14 +25,14 @@
 
 # virtual methods
 .method public final saveState()Landroid/os/Bundle;
-    .locals 1
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Landroidx/activity/ComponentActivity$$ExternalSyntheticLambda8;->f$0:Landroidx/activity/ComponentActivity;
+    iget-object p0, p0, Landroidx/activity/ComponentActivity$$ExternalSyntheticLambda8;->f$0:Landroidx/activity/ComponentActivity;
 
-    invoke-static {v0}, Landroidx/activity/ComponentActivity;->$r8$lambda$QUUwrpYSdd6n6dD7wrAaa0S4oXg(Landroidx/activity/ComponentActivity;)Landroid/os/Bundle;
+    invoke-static {p0}, Landroidx/activity/ComponentActivity;->_init_$lambda$3(Landroidx/activity/ComponentActivity;)Landroid/os/Bundle;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

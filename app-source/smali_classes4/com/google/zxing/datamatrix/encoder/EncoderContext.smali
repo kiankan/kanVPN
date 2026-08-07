@@ -74,13 +74,13 @@
 
     .line 42
     :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const-string v0, "Message contains characters outside ISO-8859-1 encoding."
+    const-string p1, "Message contains characters outside ISO-8859-1 encoding."
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
     .line 44
     :cond_1
@@ -124,7 +124,7 @@
 .end method
 
 .method private getTotalMessageCharCount()I
-    .locals 2
+    .locals 1
 
     .line 110
     iget-object v0, p0, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->msg:Ljava/lang/String;
@@ -133,9 +133,9 @@
 
     move-result v0
 
-    iget v1, p0, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->skipAtEnd:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->skipAtEnd:I
 
-    sub-int/2addr v0, v1
+    sub-int/2addr v0, p0
 
     return v0
 .end method
@@ -143,119 +143,119 @@
 
 # virtual methods
 .method public getCodewordCount()I
-    .locals 1
+    .locals 0
 
     .line 90
-    iget-object v0, p0, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->codewords:Ljava/lang/StringBuilder;
+    iget-object p0, p0, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->codewords:Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->length()I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public getCodewords()Ljava/lang/StringBuilder;
-    .locals 1
+    .locals 0
 
     .line 78
-    iget-object v0, p0, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->codewords:Ljava/lang/StringBuilder;
+    iget-object p0, p0, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->codewords:Ljava/lang/StringBuilder;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getCurrent()C
-    .locals 2
+    .locals 1
 
     .line 74
     iget-object v0, p0, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->msg:Ljava/lang/String;
 
-    iget v1, p0, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->pos:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->pos:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->charAt(I)C
+    invoke-virtual {v0, p0}, Ljava/lang/String;->charAt(I)C
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public getCurrentChar()C
-    .locals 2
+    .locals 1
 
     .line 70
     iget-object v0, p0, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->msg:Ljava/lang/String;
 
-    iget v1, p0, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->pos:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->pos:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->charAt(I)C
+    invoke-virtual {v0, p0}, Ljava/lang/String;->charAt(I)C
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public getMessage()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 62
-    iget-object v0, p0, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->msg:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->msg:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getNewEncoding()I
-    .locals 1
+    .locals 0
 
     .line 94
-    iget v0, p0, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->newEncoding:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->newEncoding:I
 
-    return v0
+    return p0
 .end method
 
 .method public getRemainingCharacters()I
-    .locals 2
+    .locals 1
 
     .line 114
     invoke-direct {p0}, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->getTotalMessageCharCount()I
 
     move-result v0
 
-    iget v1, p0, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->pos:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->pos:I
 
-    sub-int/2addr v0, v1
+    sub-int/2addr v0, p0
 
     return v0
 .end method
 
 .method public getSymbolInfo()Lcom/google/zxing/datamatrix/encoder/SymbolInfo;
-    .locals 1
+    .locals 0
 
     .line 118
-    iget-object v0, p0, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->symbolInfo:Lcom/google/zxing/datamatrix/encoder/SymbolInfo;
+    iget-object p0, p0, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->symbolInfo:Lcom/google/zxing/datamatrix/encoder/SymbolInfo;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public hasMoreCharacters()Z
-    .locals 2
+    .locals 1
 
     .line 106
     iget v0, p0, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->pos:I
 
     invoke-direct {p0}, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->getTotalMessageCharCount()I
 
-    move-result v1
+    move-result p0
 
-    if-ge v0, v1, :cond_0
+    if-ge v0, p0, :cond_0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public resetEncoderSignal()V
@@ -372,23 +372,23 @@
 .end method
 
 .method public writeCodeword(C)V
-    .locals 1
+    .locals 0
 
     .line 86
-    iget-object v0, p0, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->codewords:Ljava/lang/StringBuilder;
+    iget-object p0, p0, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->codewords:Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     return-void
 .end method
 
 .method public writeCodewords(Ljava/lang/String;)V
-    .locals 1
+    .locals 0
 
     .line 82
-    iget-object v0, p0, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->codewords:Ljava/lang/StringBuilder;
+    iget-object p0, p0, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->codewords:Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     return-void
 .end method

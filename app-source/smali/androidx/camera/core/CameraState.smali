@@ -20,6 +20,8 @@
 
 .field public static final ERROR_CAMERA_IN_USE:I = 0x2
 
+.field public static final ERROR_CAMERA_REMOVED:I = 0x8
+
 .field public static final ERROR_DO_NOT_DISTURB_MODE_ENABLED:I = 0x7
 
 .field public static final ERROR_MAX_CAMERAS_IN_USE:I = 0x1
@@ -33,7 +35,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 134
+    .line 138
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +46,7 @@
 
     const/4 v0, 0x0
 
-    .line 207
+    .line 229
     invoke-static {p0, v0}, Landroidx/camera/core/CameraState;->create(Landroidx/camera/core/CameraState$Type;Landroidx/camera/core/CameraState$StateError;)Landroidx/camera/core/CameraState;
 
     move-result-object p0
@@ -55,7 +57,7 @@
 .method public static create(Landroidx/camera/core/CameraState$Type;Landroidx/camera/core/CameraState$StateError;)Landroidx/camera/core/CameraState;
     .locals 1
 
-    .line 218
+    .line 239
     new-instance v0, Landroidx/camera/core/AutoValue_CameraState;
 
     invoke-direct {v0, p0, p1}, Landroidx/camera/core/AutoValue_CameraState;-><init>(Landroidx/camera/core/CameraState$Type;Landroidx/camera/core/CameraState$StateError;)V

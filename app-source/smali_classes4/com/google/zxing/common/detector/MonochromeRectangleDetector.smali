@@ -198,20 +198,20 @@
     if-le v0, v2, :cond_e
 
     .line 214
-    new-array p1, v1, [I
+    new-array p0, v1, [I
 
-    const/4 p2, 0x0
-
-    aput v2, p1, p2
-
-    aput v0, p1, p3
-
-    return-object p1
-
-    :cond_e
     const/4 p1, 0x0
 
-    return-object p1
+    aput v2, p0, p1
+
+    aput v0, p0, p3
+
+    return-object p0
+
+    :cond_e
+    const/4 p0, 0x0
+
+    return-object p0
 .end method
 
 .method private findCornerFromCenter(IIIIIIIII)Lcom/google/zxing/ResultPoint;
@@ -281,21 +281,21 @@
 
     if-eqz v1, :cond_8
 
-    const/4 v2, 0x1
+    const/4 p0, 0x1
 
-    const/4 v4, 0x0
+    const/4 v2, 0x0
 
     if-nez p2, :cond_4
 
     sub-int v8, v8, p6
 
     .line 130
-    aget v0, v1, v4
+    aget v0, v1, v2
 
     if-ge v0, p1, :cond_3
 
     .line 131
-    aget v0, v1, v2
+    aget v0, v1, p0
 
     if-le v0, p1, :cond_2
 
@@ -304,44 +304,44 @@
 
     if-lez p6, :cond_1
 
-    move v2, v4
+    move p0, v2
 
     :cond_1
-    aget v0, v1, v2
+    aget p0, v1, p0
 
-    int-to-float v0, v0
+    int-to-float p0, p0
 
-    int-to-float v1, v8
+    int-to-float v0, v8
 
-    invoke-direct {p1, v0, v1}, Lcom/google/zxing/ResultPoint;-><init>(FF)V
+    invoke-direct {p1, p0, v0}, Lcom/google/zxing/ResultPoint;-><init>(FF)V
 
     return-object p1
 
     .line 135
     :cond_2
-    new-instance p1, Lcom/google/zxing/ResultPoint;
+    new-instance p0, Lcom/google/zxing/ResultPoint;
 
-    aget v0, v1, v4
+    aget p1, v1, v2
 
-    int-to-float v0, v0
+    int-to-float p1, p1
 
-    int-to-float v1, v8
+    int-to-float v0, v8
 
-    invoke-direct {p1, v0, v1}, Lcom/google/zxing/ResultPoint;-><init>(FF)V
+    invoke-direct {p0, p1, v0}, Lcom/google/zxing/ResultPoint;-><init>(FF)V
 
-    return-object p1
+    return-object p0
 
     .line 137
     :cond_3
     new-instance p1, Lcom/google/zxing/ResultPoint;
 
-    aget v0, v1, v2
+    aget p0, v1, p0
 
-    int-to-float v0, v0
+    int-to-float p0, p0
 
-    int-to-float v1, v8
+    int-to-float v0, v8
 
-    invoke-direct {p1, v0, v1}, Lcom/google/zxing/ResultPoint;-><init>(FF)V
+    invoke-direct {p1, p0, v0}, Lcom/google/zxing/ResultPoint;-><init>(FF)V
 
     return-object p1
 
@@ -349,12 +349,12 @@
     sub-int/2addr v3, p2
 
     .line 141
-    aget p1, v1, v4
+    aget p1, v1, v2
 
     if-ge p1, v0, :cond_7
 
     .line 142
-    aget p1, v1, v2
+    aget p1, v1, p0
 
     if-le p1, v0, :cond_6
 
@@ -365,30 +365,30 @@
 
     if-gez p2, :cond_5
 
-    move v2, v4
+    move p0, v2
 
     :cond_5
-    aget v1, v1, v2
+    aget p0, v1, p0
 
-    int-to-float v1, v1
+    int-to-float p0, p0
 
-    invoke-direct {p1, v0, v1}, Lcom/google/zxing/ResultPoint;-><init>(FF)V
+    invoke-direct {p1, v0, p0}, Lcom/google/zxing/ResultPoint;-><init>(FF)V
 
     return-object p1
 
     .line 145
     :cond_6
-    new-instance p1, Lcom/google/zxing/ResultPoint;
+    new-instance p0, Lcom/google/zxing/ResultPoint;
 
-    int-to-float v0, v3
+    int-to-float p1, v3
 
-    aget v1, v1, v4
+    aget v0, v1, v2
 
-    int-to-float v1, v1
+    int-to-float v0, v0
 
-    invoke-direct {p1, v0, v1}, Lcom/google/zxing/ResultPoint;-><init>(FF)V
+    invoke-direct {p0, p1, v0}, Lcom/google/zxing/ResultPoint;-><init>(FF)V
 
-    return-object p1
+    return-object p0
 
     .line 147
     :cond_7
@@ -396,11 +396,11 @@
 
     int-to-float v0, v3
 
-    aget v1, v1, v2
+    aget p0, v1, p0
 
-    int-to-float v1, v1
+    int-to-float p0, p0
 
-    invoke-direct {p1, v0, v1}, Lcom/google/zxing/ResultPoint;-><init>(FF)V
+    invoke-direct {p1, v0, p0}, Lcom/google/zxing/ResultPoint;-><init>(FF)V
 
     return-object p1
 
@@ -408,9 +408,9 @@
     :cond_8
     invoke-static {}, Lcom/google/zxing/NotFoundException;->getNotFoundInstance()Lcom/google/zxing/NotFoundException;
 
-    move-result-object p1
+    move-result-object p0
 
-    throw p1
+    throw p0
 
     :cond_9
     add-int v8, v8, p6
@@ -425,9 +425,9 @@
     :cond_a
     invoke-static {}, Lcom/google/zxing/NotFoundException;->getNotFoundInstance()Lcom/google/zxing/NotFoundException;
 
-    move-result-object p1
+    move-result-object p0
 
-    throw p1
+    throw p0
 .end method
 
 
@@ -577,24 +577,24 @@
 
     invoke-direct/range {v0 .. v9}, Lcom/google/zxing/common/detector/MonochromeRectangleDetector;->findCornerFromCenter(IIIIIIIII)Lcom/google/zxing/ResultPoint;
 
-    move-result-object v1
+    move-result-object v0
 
-    const/4 v0, 0x4
+    const/4 v1, 0x4
 
     .line 81
-    new-array v0, v0, [Lcom/google/zxing/ResultPoint;
+    new-array v1, v1, [Lcom/google/zxing/ResultPoint;
 
-    aput-object v1, v0, v2
+    aput-object v0, v1, v2
 
-    aput-object v15, v0, v10
+    aput-object v15, v1, v10
 
-    const/4 v1, 0x2
+    const/4 v0, 0x2
 
-    aput-object v12, v0, v1
+    aput-object v12, v1, v0
 
-    const/4 v1, 0x3
+    const/4 v0, 0x3
 
-    aput-object v11, v0, v1
+    aput-object v11, v1, v0
 
-    return-object v0
+    return-object v1
 .end method

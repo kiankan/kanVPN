@@ -23,10 +23,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
-
-    .line 99
-    const-class v0, Lj$/time/zone/ZoneOffsetTransition;
+    .locals 0
 
     return-void
 .end method
@@ -84,7 +81,7 @@
 .end method
 
 .method private getDurationSeconds()I
-    .locals 2
+    .locals 1
 
     .line 338
     invoke-virtual {p0}, Lj$/time/zone/ZoneOffsetTransition;->getOffsetAfter()Lj$/time/ZoneOffset;
@@ -97,13 +94,13 @@
 
     invoke-virtual {p0}, Lj$/time/zone/ZoneOffsetTransition;->getOffsetBefore()Lj$/time/ZoneOffset;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-virtual {v1}, Lj$/time/ZoneOffset;->getTotalSeconds()I
+    invoke-virtual {p0}, Lj$/time/ZoneOffset;->getTotalSeconds()I
 
-    move-result v1
+    move-result p0
 
-    sub-int/2addr v0, v1
+    sub-int/2addr v0, p0
 
     return v0
 .end method
@@ -152,16 +149,16 @@
 .end method
 
 .method private readObject(Ljava/io/ObjectInputStream;)V
-    .locals 1
+    .locals 0
 
     .line 188
-    new-instance p1, Ljava/io/InvalidObjectException;
+    new-instance p0, Ljava/io/InvalidObjectException;
 
-    const-string v0, "Deserialization via serialization delegate"
+    const-string p1, "Deserialization via serialization delegate"
 
-    invoke-direct {p1, v0}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method private writeReplace()Ljava/lang/Object;
@@ -180,18 +177,18 @@
 
 # virtual methods
 .method public compareTo(Lj$/time/zone/ZoneOffsetTransition;)I
-    .locals 4
+    .locals 2
 
     .line 407
     iget-wide v0, p0, Lj$/time/zone/ZoneOffsetTransition;->epochSecond:J
 
-    iget-wide v2, p1, Lj$/time/zone/ZoneOffsetTransition;->epochSecond:J
+    iget-wide p0, p1, Lj$/time/zone/ZoneOffsetTransition;->epochSecond:J
 
-    invoke-static {v0, v1, v2, v3}, Ljava/lang/Long;->compare(JJ)I
+    invoke-static {v0, v1, p0, p1}, Ljava/lang/Long;->compare(JJ)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
@@ -202,9 +199,9 @@
 
     invoke-virtual {p0, p1}, Lj$/time/zone/ZoneOffsetTransition;->compareTo(Lj$/time/zone/ZoneOffsetTransition;)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -247,15 +244,15 @@
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lj$/time/zone/ZoneOffsetTransition;->offsetAfter:Lj$/time/ZoneOffset;
+    iget-object p0, p0, Lj$/time/zone/ZoneOffsetTransition;->offsetAfter:Lj$/time/ZoneOffset;
 
     iget-object p1, p1, Lj$/time/zone/ZoneOffsetTransition;->offsetAfter:Lj$/time/ZoneOffset;
 
-    invoke-virtual {v1, p1}, Lj$/time/ZoneOffset;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Lj$/time/ZoneOffset;->equals(Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_1
+    if-eqz p0, :cond_1
 
     return v0
 
@@ -271,24 +268,24 @@
 
     invoke-direct {p0}, Lj$/time/zone/ZoneOffsetTransition;->getDurationSeconds()I
 
-    move-result v1
+    move-result p0
 
-    int-to-long v1, v1
+    int-to-long v1, p0
 
     invoke-virtual {v0, v1, v2}, Lj$/time/LocalDateTime;->plusSeconds(J)Lj$/time/LocalDateTime;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getDateTimeBefore()Lj$/time/LocalDateTime;
-    .locals 1
+    .locals 0
 
     .line 280
-    iget-object v0, p0, Lj$/time/zone/ZoneOffsetTransition;->transition:Lj$/time/LocalDateTime;
+    iget-object p0, p0, Lj$/time/zone/ZoneOffsetTransition;->transition:Lj$/time/LocalDateTime;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getDuration()Lj$/time/Duration;
@@ -297,37 +294,37 @@
     .line 329
     invoke-direct {p0}, Lj$/time/zone/ZoneOffsetTransition;->getDurationSeconds()I
 
-    move-result v0
+    move-result p0
 
-    int-to-long v0, v0
+    int-to-long v0, p0
 
     invoke-static {v0, v1}, Lj$/time/Duration;->ofSeconds(J)Lj$/time/Duration;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getOffsetAfter()Lj$/time/ZoneOffset;
-    .locals 1
+    .locals 0
 
     .line 316
-    iget-object v0, p0, Lj$/time/zone/ZoneOffsetTransition;->offsetAfter:Lj$/time/ZoneOffset;
+    iget-object p0, p0, Lj$/time/zone/ZoneOffsetTransition;->offsetAfter:Lj$/time/ZoneOffset;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getOffsetBefore()Lj$/time/ZoneOffset;
-    .locals 1
+    .locals 0
 
     .line 305
-    iget-object v0, p0, Lj$/time/zone/ZoneOffsetTransition;->offsetBefore:Lj$/time/ZoneOffset;
+    iget-object p0, p0, Lj$/time/zone/ZoneOffsetTransition;->offsetBefore:Lj$/time/ZoneOffset;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method getValidOffsets()Ljava/util/List;
-    .locals 2
+    .locals 1
 
     .line 389
     invoke-virtual {p0}, Lj$/time/zone/ZoneOffsetTransition;->isGap()Z
@@ -337,9 +334,9 @@
     if-eqz v0, :cond_0
 
     .line 390
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    sget-object p0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    return-object v0
+    return-object p0
 
     .line 392
     :cond_0
@@ -349,17 +346,17 @@
 
     invoke-virtual {p0}, Lj$/time/zone/ZoneOffsetTransition;->getOffsetAfter()Lj$/time/ZoneOffset;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-static {v0, v1}, Lj$/time/Duration$DurationUnits$$ExternalSyntheticBackport1;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v0, p0}, Lj$/time/Duration$DurationUnits$1;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public hashCode()I
-    .locals 3
+    .locals 2
 
     .line 439
     iget-object v0, p0, Lj$/time/zone/ZoneOffsetTransition;->transition:Lj$/time/LocalDateTime;
@@ -376,25 +373,25 @@
 
     xor-int/2addr v0, v1
 
-    iget-object v1, p0, Lj$/time/zone/ZoneOffsetTransition;->offsetAfter:Lj$/time/ZoneOffset;
+    iget-object p0, p0, Lj$/time/zone/ZoneOffsetTransition;->offsetAfter:Lj$/time/ZoneOffset;
 
-    invoke-virtual {v1}, Lj$/time/ZoneOffset;->hashCode()I
+    invoke-virtual {p0}, Lj$/time/ZoneOffset;->hashCode()I
 
-    move-result v1
+    move-result p0
 
-    const/16 v2, 0x10
+    const/16 v1, 0x10
 
-    invoke-static {v1, v2}, Ljava/lang/Integer;->rotateLeft(II)I
+    invoke-static {p0, v1}, Ljava/lang/Integer;->rotateLeft(II)I
 
-    move-result v1
+    move-result p0
 
-    xor-int/2addr v0, v1
+    xor-int/2addr p0, v0
 
-    return v0
+    return p0
 .end method
 
 .method public isGap()Z
-    .locals 2
+    .locals 1
 
     .line 351
     invoke-virtual {p0}, Lj$/time/zone/ZoneOffsetTransition;->getOffsetAfter()Lj$/time/ZoneOffset;
@@ -407,22 +404,22 @@
 
     invoke-virtual {p0}, Lj$/time/zone/ZoneOffsetTransition;->getOffsetBefore()Lj$/time/ZoneOffset;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-virtual {v1}, Lj$/time/ZoneOffset;->getTotalSeconds()I
+    invoke-virtual {p0}, Lj$/time/ZoneOffset;->getTotalSeconds()I
 
-    move-result v1
+    move-result p0
 
-    if-le v0, v1, :cond_0
+    if-le v0, p0, :cond_0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public toEpochSecond()J
@@ -440,12 +437,9 @@
     .line 450
     new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    .line 451
     const-string v1, "Transition["
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 452
     invoke-virtual {p0}, Lj$/time/zone/ZoneOffsetTransition;->isGap()Z
@@ -484,22 +478,22 @@
     .line 456
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lj$/time/zone/ZoneOffsetTransition;->offsetAfter:Lj$/time/ZoneOffset;
+    iget-object p0, p0, Lj$/time/zone/ZoneOffsetTransition;->offsetAfter:Lj$/time/ZoneOffset;
 
     .line 457
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/16 v1, 0x5d
+    const/16 p0, 0x5d
 
     .line 458
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     .line 459
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method writeExternal(Ljava/io/DataOutput;)V
@@ -516,9 +510,9 @@
     invoke-static {v0, p1}, Lj$/time/zone/Ser;->writeOffset(Lj$/time/ZoneOffset;Ljava/io/DataOutput;)V
 
     .line 221
-    iget-object v0, p0, Lj$/time/zone/ZoneOffsetTransition;->offsetAfter:Lj$/time/ZoneOffset;
+    iget-object p0, p0, Lj$/time/zone/ZoneOffsetTransition;->offsetAfter:Lj$/time/ZoneOffset;
 
-    invoke-static {v0, p1}, Lj$/time/zone/Ser;->writeOffset(Lj$/time/ZoneOffset;Ljava/io/DataOutput;)V
+    invoke-static {p0, p1}, Lj$/time/zone/Ser;->writeOffset(Lj$/time/ZoneOffset;Ljava/io/DataOutput;)V
 
     return-void
 .end method

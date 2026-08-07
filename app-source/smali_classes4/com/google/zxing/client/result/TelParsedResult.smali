@@ -50,41 +50,41 @@
     invoke-static {v1, v0}, Lcom/google/zxing/client/result/TelParsedResult;->maybeAppend(Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 53
-    iget-object v1, p0, Lcom/google/zxing/client/result/TelParsedResult;->title:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/TelParsedResult;->title:Ljava/lang/String;
 
-    invoke-static {v1, v0}, Lcom/google/zxing/client/result/TelParsedResult;->maybeAppend(Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {p0, v0}, Lcom/google/zxing/client/result/TelParsedResult;->maybeAppend(Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 54
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getNumber()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 38
-    iget-object v0, p0, Lcom/google/zxing/client/result/TelParsedResult;->number:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/TelParsedResult;->number:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getTelURI()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 42
-    iget-object v0, p0, Lcom/google/zxing/client/result/TelParsedResult;->telURI:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/TelParsedResult;->telURI:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getTitle()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 46
-    iget-object v0, p0, Lcom/google/zxing/client/result/TelParsedResult;->title:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/TelParsedResult;->title:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method

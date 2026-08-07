@@ -52,7 +52,7 @@
         }
     .end annotation
 
-    .line 70
+    .line 68
     sget-object v0, Landroidx/camera/core/internal/compat/quirk/DeviceQuirks;->sQuirks:Landroidx/camera/core/impl/Quirks;
 
     invoke-virtual {v0, p0}, Landroidx/camera/core/impl/Quirks;->get(Ljava/lang/Class;)Landroidx/camera/core/impl/Quirk;
@@ -65,7 +65,7 @@
 .method public static getAll()Landroidx/camera/core/impl/Quirks;
     .locals 1
 
-    .line 58
+    .line 57
     sget-object v0, Landroidx/camera/core/internal/compat/quirk/DeviceQuirks;->sQuirks:Landroidx/camera/core/impl/Quirks;
 
     return-object v0

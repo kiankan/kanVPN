@@ -18,7 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 252
+    .line 248
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,7 +27,7 @@
 .method public static of(Landroid/util/Size;Landroid/graphics/Rect;Landroidx/camera/core/impl/CameraInternal;IZ)Landroidx/camera/core/SurfaceOutput$CameraInputInfo;
     .locals 6
 
-    .line 292
+    .line 284
     new-instance v0, Landroidx/camera/core/AutoValue_SurfaceOutput_CameraInputInfo;
 
     move-object v1, p0

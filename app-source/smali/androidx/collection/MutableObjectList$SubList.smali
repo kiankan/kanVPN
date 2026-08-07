@@ -30,7 +30,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nObjectList.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ObjectList.kt\nandroidx/collection/MutableObjectList$SubList\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,1618:1\n1855#2,2:1619\n1855#2,2:1621\n*S KotlinDebug\n*F\n+ 1 ObjectList.kt\nandroidx/collection/MutableObjectList$SubList\n*L\n1395#1:1619,2\n1477#1:1621,2\n*E\n"
+    value = "SMAP\nObjectList.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ObjectList.kt\nandroidx/collection/MutableObjectList$SubList\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,1548:1\n1855#2,2:1549\n1855#2,2:1551\n*S KotlinDebug\n*F\n+ 1 ObjectList.kt\nandroidx/collection/MutableObjectList$SubList\n*L\n1345#1:1549,2\n1427#1:1551,2\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -86,7 +86,7 @@
     k = 0x1
     mv = {
         0x1,
-        0x8,
+        0x9,
         0x0
     }
     xi = 0x30
@@ -123,16 +123,16 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1377
+    .line 1327
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1378
+    .line 1328
     iput-object p1, p0, Landroidx/collection/MutableObjectList$SubList;->list:Ljava/util/List;
 
-    .line 1379
+    .line 1329
     iput p2, p0, Landroidx/collection/MutableObjectList$SubList;->start:I
 
-    .line 1380
+    .line 1330
     iput p3, p0, Landroidx/collection/MutableObjectList$SubList;->end:I
 
     return-void
@@ -148,7 +148,7 @@
         }
     .end annotation
 
-    .line 1436
+    .line 1386
     iget-object v0, p0, Landroidx/collection/MutableObjectList$SubList;->list:Ljava/util/List;
 
     iget v1, p0, Landroidx/collection/MutableObjectList$SubList;->start:I
@@ -157,7 +157,7 @@
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 1437
+    .line 1387
     iget p1, p0, Landroidx/collection/MutableObjectList$SubList;->end:I
 
     add-int/lit8 p1, p1, 0x1
@@ -175,7 +175,7 @@
         }
     .end annotation
 
-    .line 1431
+    .line 1381
     iget-object v0, p0, Landroidx/collection/MutableObjectList$SubList;->list:Ljava/util/List;
 
     iget v1, p0, Landroidx/collection/MutableObjectList$SubList;->end:I
@@ -186,9 +186,9 @@
 
     invoke-interface {v0, v1, p1}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 .end method
 
 .method public addAll(ILjava/util/Collection;)Z
@@ -205,7 +205,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1441
+    .line 1391
     iget-object v0, p0, Landroidx/collection/MutableObjectList$SubList;->list:Ljava/util/List;
 
     iget v1, p0, Landroidx/collection/MutableObjectList$SubList;->start:I
@@ -214,7 +214,7 @@
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->addAll(ILjava/util/Collection;)Z
 
-    .line 1442
+    .line 1392
     iget p1, p0, Landroidx/collection/MutableObjectList$SubList;->end:I
 
     invoke-interface {p2}, Ljava/util/Collection;->size()I
@@ -225,21 +225,21 @@
 
     iput p1, p0, Landroidx/collection/MutableObjectList$SubList;->end:I
 
-    .line 1443
+    .line 1393
     invoke-interface {p2}, Ljava/util/Collection;->size()I
 
-    move-result p1
+    move-result p0
 
-    if-lez p1, :cond_0
+    if-lez p0, :cond_0
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method public addAll(Ljava/util/Collection;)Z
@@ -256,14 +256,14 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1447
+    .line 1397
     iget-object v0, p0, Landroidx/collection/MutableObjectList$SubList;->list:Ljava/util/List;
 
     iget v1, p0, Landroidx/collection/MutableObjectList$SubList;->end:I
 
     invoke-interface {v0, v1, p1}, Ljava/util/List;->addAll(ILjava/util/Collection;)Z
 
-    .line 1448
+    .line 1398
     iget v0, p0, Landroidx/collection/MutableObjectList$SubList;->end:I
 
     invoke-interface {p1}, Ljava/util/Collection;->size()I
@@ -274,27 +274,27 @@
 
     iput v0, p0, Landroidx/collection/MutableObjectList$SubList;->end:I
 
-    .line 1449
+    .line 1399
     invoke-interface {p1}, Ljava/util/Collection;->size()I
 
-    move-result p1
+    move-result p0
 
-    if-lez p1, :cond_0
+    if-lez p0, :cond_0
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method public clear()V
     .locals 3
 
-    .line 1453
+    .line 1403
     iget v0, p0, Landroidx/collection/MutableObjectList$SubList;->end:I
 
     add-int/lit8 v0, v0, -0x1
@@ -303,7 +303,7 @@
 
     if-gt v1, v0, :cond_0
 
-    .line 1454
+    .line 1404
     :goto_0
     iget-object v2, p0, Landroidx/collection/MutableObjectList$SubList;->list:Ljava/util/List;
 
@@ -315,7 +315,7 @@
 
     goto :goto_0
 
-    .line 1456
+    .line 1406
     :cond_0
     iget v0, p0, Landroidx/collection/MutableObjectList$SubList;->start:I
 
@@ -327,7 +327,7 @@
 .method public contains(Ljava/lang/Object;)Z
     .locals 3
 
-    .line 1386
+    .line 1336
     iget v0, p0, Landroidx/collection/MutableObjectList$SubList;->start:I
 
     iget v1, p0, Landroidx/collection/MutableObjectList$SubList;->end:I
@@ -335,7 +335,7 @@
     :goto_0
     if-ge v0, v1, :cond_1
 
-    .line 1387
+    .line 1337
     iget-object v2, p0, Landroidx/collection/MutableObjectList$SubList;->list:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -348,9 +348,9 @@
 
     if-eqz v2, :cond_0
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_0
     add-int/lit8 v0, v0, 0x1
@@ -358,9 +358,9 @@
     goto :goto_0
 
     :cond_1
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method public containsAll(Ljava/util/Collection;)Z
@@ -379,10 +379,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1395
+    .line 1345
     check-cast p1, Ljava/lang/Iterable;
 
-    .line 1619
+    .line 1549
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -398,61 +398,61 @@
 
     move-result-object v0
 
-    .line 1396
+    .line 1346
     invoke-virtual {p0, v0}, Landroidx/collection/MutableObjectList$SubList;->contains(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 
     :cond_1
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 .end method
 
 .method public get(I)Ljava/lang/Object;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)TT;"
         }
     .end annotation
 
-    .line 1404
+    .line 1354
     move-object v0, p0
 
     check-cast v0, Ljava/util/List;
 
     invoke-static {v0, p1}, Landroidx/collection/ObjectListKt;->access$checkIndex(Ljava/util/List;I)V
 
-    .line 1405
+    .line 1355
     iget-object v0, p0, Landroidx/collection/MutableObjectList$SubList;->list:Ljava/util/List;
 
-    iget v1, p0, Landroidx/collection/MutableObjectList$SubList;->start:I
+    iget p0, p0, Landroidx/collection/MutableObjectList$SubList;->start:I
 
-    add-int/2addr p1, v1
+    add-int/2addr p1, p0
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public getSize()I
-    .locals 2
+    .locals 1
 
-    .line 1383
+    .line 1333
     iget v0, p0, Landroidx/collection/MutableObjectList$SubList;->end:I
 
-    iget v1, p0, Landroidx/collection/MutableObjectList$SubList;->start:I
+    iget p0, p0, Landroidx/collection/MutableObjectList$SubList;->start:I
 
-    sub-int/2addr v0, v1
+    sub-int/2addr v0, p0
 
     return v0
 .end method
@@ -460,7 +460,7 @@
 .method public indexOf(Ljava/lang/Object;)I
     .locals 3
 
-    .line 1409
+    .line 1359
     iget v0, p0, Landroidx/collection/MutableObjectList$SubList;->start:I
 
     iget v1, p0, Landroidx/collection/MutableObjectList$SubList;->end:I
@@ -468,7 +468,7 @@
     :goto_0
     if-ge v0, v1, :cond_1
 
-    .line 1410
+    .line 1360
     iget-object v2, p0, Landroidx/collection/MutableObjectList$SubList;->list:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -481,10 +481,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 1411
-    iget p1, p0, Landroidx/collection/MutableObjectList$SubList;->start:I
+    .line 1361
+    iget p0, p0, Landroidx/collection/MutableObjectList$SubList;->start:I
 
-    sub-int/2addr v0, p1
+    sub-int/2addr v0, p0
 
     return v0
 
@@ -494,33 +494,33 @@
     goto :goto_0
 
     :cond_1
-    const/4 p1, -0x1
+    const/4 p0, -0x1
 
-    return p1
+    return p0
 .end method
 
 .method public isEmpty()Z
-    .locals 2
+    .locals 1
 
-    .line 1417
+    .line 1367
     iget v0, p0, Landroidx/collection/MutableObjectList$SubList;->end:I
 
-    iget v1, p0, Landroidx/collection/MutableObjectList$SubList;->start:I
+    iget p0, p0, Landroidx/collection/MutableObjectList$SubList;->start:I
 
-    if-ne v0, v1, :cond_0
+    if-ne v0, p0, :cond_0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public iterator()Ljava/util/Iterator;
-    .locals 3
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -529,16 +529,14 @@
         }
     .end annotation
 
-    .line 1419
+    .line 1369
     new-instance v0, Landroidx/collection/MutableObjectList$MutableObjectListIterator;
 
-    move-object v1, p0
+    check-cast p0, Ljava/util/List;
 
-    check-cast v1, Ljava/util/List;
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Landroidx/collection/MutableObjectList$MutableObjectListIterator;-><init>(Ljava/util/List;I)V
+    invoke-direct {v0, p0, v1}, Landroidx/collection/MutableObjectList$MutableObjectListIterator;-><init>(Ljava/util/List;I)V
 
     check-cast v0, Ljava/util/Iterator;
 
@@ -548,7 +546,7 @@
 .method public lastIndexOf(Ljava/lang/Object;)I
     .locals 3
 
-    .line 1422
+    .line 1372
     iget v0, p0, Landroidx/collection/MutableObjectList$SubList;->end:I
 
     add-int/lit8 v0, v0, -0x1
@@ -557,7 +555,7 @@
 
     if-gt v1, v0, :cond_1
 
-    .line 1423
+    .line 1373
     :goto_0
     iget-object v2, p0, Landroidx/collection/MutableObjectList$SubList;->list:Ljava/util/List;
 
@@ -571,10 +569,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 1424
-    iget p1, p0, Landroidx/collection/MutableObjectList$SubList;->start:I
+    .line 1374
+    iget p0, p0, Landroidx/collection/MutableObjectList$SubList;->start:I
 
-    sub-int/2addr v0, p1
+    sub-int/2addr v0, p0
 
     return v0
 
@@ -586,13 +584,13 @@
     goto :goto_0
 
     :cond_1
-    const/4 p1, -0x1
+    const/4 p0, -0x1
 
-    return p1
+    return p0
 .end method
 
 .method public listIterator()Ljava/util/ListIterator;
-    .locals 3
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -601,16 +599,14 @@
         }
     .end annotation
 
-    .line 1459
+    .line 1409
     new-instance v0, Landroidx/collection/MutableObjectList$MutableObjectListIterator;
 
-    move-object v1, p0
+    check-cast p0, Ljava/util/List;
 
-    check-cast v1, Ljava/util/List;
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Landroidx/collection/MutableObjectList$MutableObjectListIterator;-><init>(Ljava/util/List;I)V
+    invoke-direct {v0, p0, v1}, Landroidx/collection/MutableObjectList$MutableObjectListIterator;-><init>(Ljava/util/List;I)V
 
     check-cast v0, Ljava/util/ListIterator;
 
@@ -618,7 +614,7 @@
 .end method
 
 .method public listIterator(I)Ljava/util/ListIterator;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)",
@@ -627,14 +623,12 @@
         }
     .end annotation
 
-    .line 1462
+    .line 1412
     new-instance v0, Landroidx/collection/MutableObjectList$MutableObjectListIterator;
 
-    move-object v1, p0
+    check-cast p0, Ljava/util/List;
 
-    check-cast v1, Ljava/util/List;
-
-    invoke-direct {v0, v1, p1}, Landroidx/collection/MutableObjectList$MutableObjectListIterator;-><init>(Ljava/util/List;I)V
+    invoke-direct {v0, p0, p1}, Landroidx/collection/MutableObjectList$MutableObjectListIterator;-><init>(Ljava/util/List;I)V
 
     check-cast v0, Ljava/util/ListIterator;
 
@@ -649,18 +643,18 @@
         }
     .end annotation
 
-    .line 1377
+    .line 1327
     invoke-virtual {p0, p1}, Landroidx/collection/MutableObjectList$SubList;->removeAt(I)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public remove(Ljava/lang/Object;)Z
     .locals 3
 
-    .line 1465
+    .line 1415
     iget v0, p0, Landroidx/collection/MutableObjectList$SubList;->start:I
 
     iget v1, p0, Landroidx/collection/MutableObjectList$SubList;->end:I
@@ -668,7 +662,7 @@
     :goto_0
     if-ge v0, v1, :cond_1
 
-    .line 1466
+    .line 1416
     iget-object v2, p0, Landroidx/collection/MutableObjectList$SubList;->list:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -681,21 +675,21 @@
 
     if-eqz v2, :cond_0
 
-    .line 1467
+    .line 1417
     iget-object p1, p0, Landroidx/collection/MutableObjectList$SubList;->list:Ljava/util/List;
 
     invoke-interface {p1, v0}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 1468
+    .line 1418
     iget p1, p0, Landroidx/collection/MutableObjectList$SubList;->end:I
 
     add-int/lit8 p1, p1, -0x1
 
     iput p1, p0, Landroidx/collection/MutableObjectList$SubList;->end:I
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_0
     add-int/lit8 v0, v0, 0x1
@@ -703,9 +697,9 @@
     goto :goto_0
 
     :cond_1
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method public removeAll(Ljava/util/Collection;)Z
@@ -724,13 +718,13 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1476
+    .line 1426
     iget v0, p0, Landroidx/collection/MutableObjectList$SubList;->end:I
 
-    .line 1477
+    .line 1427
     check-cast p1, Ljava/lang/Iterable;
 
-    .line 1621
+    .line 1551
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -746,25 +740,25 @@
 
     move-result-object v1
 
-    .line 1478
+    .line 1427
     invoke-virtual {p0, v1}, Landroidx/collection/MutableObjectList$SubList;->remove(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 1480
+    .line 1428
     :cond_0
-    iget p1, p0, Landroidx/collection/MutableObjectList$SubList;->end:I
+    iget p0, p0, Landroidx/collection/MutableObjectList$SubList;->end:I
 
-    if-eq v0, p1, :cond_1
+    if-eq v0, p0, :cond_1
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_1
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method public removeAt(I)Ljava/lang/Object;
@@ -775,14 +769,14 @@
         }
     .end annotation
 
-    .line 1484
+    .line 1432
     move-object v0, p0
 
     check-cast v0, Ljava/util/List;
 
     invoke-static {v0, p1}, Landroidx/collection/ObjectListKt;->access$checkIndex(Ljava/util/List;I)V
 
-    .line 1485
+    .line 1433
     iget-object v0, p0, Landroidx/collection/MutableObjectList$SubList;->list:Ljava/util/List;
 
     iget v1, p0, Landroidx/collection/MutableObjectList$SubList;->start:I
@@ -793,7 +787,7 @@
 
     move-result-object p1
 
-    .line 1486
+    .line 1434
     iget v0, p0, Landroidx/collection/MutableObjectList$SubList;->end:I
 
     add-int/lit8 v0, v0, -0x1
@@ -819,17 +813,17 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1491
+    .line 1439
     iget v0, p0, Landroidx/collection/MutableObjectList$SubList;->end:I
 
     add-int/lit8 v1, v0, -0x1
 
-    .line 1492
+    .line 1440
     iget v2, p0, Landroidx/collection/MutableObjectList$SubList;->start:I
 
     if-gt v2, v1, :cond_1
 
-    .line 1493
+    .line 1441
     :goto_0
     iget-object v3, p0, Landroidx/collection/MutableObjectList$SubList;->list:Ljava/util/List;
 
@@ -837,19 +831,19 @@
 
     move-result-object v3
 
-    .line 1494
+    .line 1442
     invoke-interface {p1, v3}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 1495
+    .line 1443
     iget-object v3, p0, Landroidx/collection/MutableObjectList$SubList;->list:Ljava/util/List;
 
     invoke-interface {v3, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 1496
+    .line 1444
     iget v3, p0, Landroidx/collection/MutableObjectList$SubList;->end:I
 
     add-int/lit8 v3, v3, -0x1
@@ -863,64 +857,64 @@
 
     goto :goto_0
 
-    .line 1499
+    .line 1447
     :cond_1
-    iget p1, p0, Landroidx/collection/MutableObjectList$SubList;->end:I
+    iget p0, p0, Landroidx/collection/MutableObjectList$SubList;->end:I
 
-    if-eq v0, p1, :cond_2
+    if-eq v0, p0, :cond_2
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_2
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method public set(ILjava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(ITT;)TT;"
         }
     .end annotation
 
-    .line 1503
+    .line 1451
     move-object v0, p0
 
     check-cast v0, Ljava/util/List;
 
     invoke-static {v0, p1}, Landroidx/collection/ObjectListKt;->access$checkIndex(Ljava/util/List;I)V
 
-    .line 1504
+    .line 1452
     iget-object v0, p0, Landroidx/collection/MutableObjectList$SubList;->list:Ljava/util/List;
 
-    iget v1, p0, Landroidx/collection/MutableObjectList$SubList;->start:I
+    iget p0, p0, Landroidx/collection/MutableObjectList$SubList;->start:I
 
-    add-int/2addr p1, v1
+    add-int/2addr p1, p0
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final bridge size()I
-    .locals 1
+    .locals 0
 
-    .line 1377
+    .line 1327
     invoke-virtual {p0}, Landroidx/collection/MutableObjectList$SubList;->getSize()I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public subList(II)Ljava/util/List;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(II)",
@@ -929,35 +923,31 @@
         }
     .end annotation
 
-    .line 1508
-    move-object v0, p0
+    .line 1456
+    check-cast p0, Ljava/util/List;
+
+    invoke-static {p0, p1, p2}, Landroidx/collection/ObjectListKt;->access$checkSubIndex(Ljava/util/List;II)V
+
+    .line 1457
+    new-instance v0, Landroidx/collection/MutableObjectList$SubList;
+
+    invoke-direct {v0, p0, p1, p2}, Landroidx/collection/MutableObjectList$SubList;-><init>(Ljava/util/List;II)V
 
     check-cast v0, Ljava/util/List;
 
-    invoke-static {v0, p1, p2}, Landroidx/collection/ObjectListKt;->access$checkSubIndex(Ljava/util/List;II)V
-
-    .line 1509
-    new-instance v1, Landroidx/collection/MutableObjectList$SubList;
-
-    invoke-direct {v1, v0, p1, p2}, Landroidx/collection/MutableObjectList$SubList;-><init>(Ljava/util/List;II)V
-
-    check-cast v1, Ljava/util/List;
-
-    return-object v1
+    return-object v0
 .end method
 
 .method public toArray()[Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    move-object v0, p0
+    check-cast p0, Ljava/util/Collection;
 
-    check-cast v0, Ljava/util/Collection;
+    invoke-static {p0}, Lkotlin/jvm/internal/CollectionToArray;->toArray(Ljava/util/Collection;)[Ljava/lang/Object;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/CollectionToArray;->toArray(Ljava/util/Collection;)[Ljava/lang/Object;
+    move-result-object p0
 
-    move-result-object v0
-
-    return-object v0
+    return-object p0
 .end method
 
 .method public toArray([Ljava/lang/Object;)[Ljava/lang/Object;
@@ -974,13 +964,11 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-object v0, p0
+    check-cast p0, Ljava/util/Collection;
 
-    check-cast v0, Ljava/util/Collection;
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/CollectionToArray;->toArray(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/CollectionToArray;->toArray(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
+    move-result-object p0
 
-    move-result-object p1
-
-    return-object p1
+    return-object p0
 .end method

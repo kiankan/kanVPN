@@ -134,20 +134,20 @@
 
 # virtual methods
 .method close()V
-    .locals 2
+    .locals 1
 
     .line 288
-    iget-object v0, p0, Landroidx/camera/core/impl/StateObservable$ObserverWrapper;->mActive:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iget-object p0, p0, Landroidx/camera/core/impl/StateObservable$ObserverWrapper;->mActive:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
     return-void
 .end method
 
 .method public run()V
-    .locals 4
+    .locals 5
 
     .line 223
     monitor-enter p0
@@ -204,26 +204,25 @@
     .line 239
     instance-of v3, v0, Landroidx/camera/core/impl/StateObservable$ErrorWrapper;
 
+    .line 242
+    iget-object v4, p0, Landroidx/camera/core/impl/StateObservable$ObserverWrapper;->mObserver:Landroidx/camera/core/impl/Observable$Observer;
+
     if-eqz v3, :cond_1
 
     .line 240
-    iget-object v3, p0, Landroidx/camera/core/impl/StateObservable$ObserverWrapper;->mObserver:Landroidx/camera/core/impl/Observable$Observer;
-
     check-cast v0, Landroidx/camera/core/impl/StateObservable$ErrorWrapper;
 
     invoke-virtual {v0}, Landroidx/camera/core/impl/StateObservable$ErrorWrapper;->getError()Ljava/lang/Throwable;
 
     move-result-object v0
 
-    invoke-interface {v3, v0}, Landroidx/camera/core/impl/Observable$Observer;->onError(Ljava/lang/Throwable;)V
+    invoke-interface {v4, v0}, Landroidx/camera/core/impl/Observable$Observer;->onError(Ljava/lang/Throwable;)V
 
     goto :goto_1
 
     .line 242
     :cond_1
-    iget-object v3, p0, Landroidx/camera/core/impl/StateObservable$ObserverWrapper;->mObserver:Landroidx/camera/core/impl/Observable$Observer;
-
-    invoke-interface {v3, v0}, Landroidx/camera/core/impl/Observable$Observer;->onNewData(Ljava/lang/Object;)V
+    invoke-interface {v4, v0}, Landroidx/camera/core/impl/Observable$Observer;->onNewData(Ljava/lang/Object;)V
 
     .line 246
     :cond_2

@@ -7,7 +7,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 32
+    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -192,7 +192,7 @@
 
     return p0
 
-    .line 48
+    .line 49
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -200,7 +200,7 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 49
+    .line 50
     array-length v1, p1
 
     const/4 v2, 0x0
@@ -210,7 +210,7 @@
 
     aget v3, p1, v2
 
-    .line 50
+    .line 51
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -221,7 +221,7 @@
 
     goto :goto_0
 
-    .line 53
+    .line 54
     :cond_1
     invoke-interface {p0}, Landroidx/camera/core/impl/SessionProcessor;->getSupportedCameraOperations()Ljava/util/Set;
 

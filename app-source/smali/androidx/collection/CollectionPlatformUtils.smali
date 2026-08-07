@@ -21,7 +21,7 @@
     k = 0x1
     mv = {
         0x1,
-        0x8,
+        0x9,
         0x0
     }
     xi = 0x30
@@ -48,7 +48,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 22
+    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -57,14 +57,14 @@
 
 # virtual methods
 .method public final createIndexOutOfBoundsException$collection()Ljava/lang/IndexOutOfBoundsException;
-    .locals 1
+    .locals 0
 
-    .line 26
-    new-instance v0, Ljava/lang/ArrayIndexOutOfBoundsException;
+    .line 24
+    new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
-    invoke-direct {v0}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>()V
+    invoke-direct {p0}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>()V
 
-    check-cast v0, Ljava/lang/IndexOutOfBoundsException;
+    check-cast p0, Ljava/lang/IndexOutOfBoundsException;
 
-    return-object v0
+    return-object p0
 .end method

@@ -336,19 +336,347 @@
     goto :goto_3
 
     :cond_e
-    const/16 v2, 0x5a
+    const/16 v0, 0x5a
 
     .line 3472
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     return v12
 .end method
 
+.method public parse(Lj$/time/format/DateTimeParseContext;Ljava/lang/CharSequence;I)I
+    .locals 19
+
+    move-object/from16 v0, p0
+
+    move/from16 v4, p3
+
+    .line 3479
+    iget v0, v0, Lj$/time/format/DateTimeFormatterBuilder$InstantPrinterParser;->fractionalDigits:I
+
+    const/4 v1, 0x0
+
+    if-gez v0, :cond_0
+
+    move v2, v1
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v0
+
+    :goto_0
+    if-gez v0, :cond_1
+
+    const/16 v0, 0x9
+
+    .line 3481
+    :cond_1
+    new-instance v3, Lj$/time/format/DateTimeFormatterBuilder;
+
+    invoke-direct {v3}, Lj$/time/format/DateTimeFormatterBuilder;-><init>()V
+
+    sget-object v5, Lj$/time/format/DateTimeFormatter;->ISO_LOCAL_DATE:Lj$/time/format/DateTimeFormatter;
+
+    .line 3482
+    invoke-virtual {v3, v5}, Lj$/time/format/DateTimeFormatterBuilder;->append(Lj$/time/format/DateTimeFormatter;)Lj$/time/format/DateTimeFormatterBuilder;
+
+    move-result-object v3
+
+    const/16 v5, 0x54
+
+    invoke-virtual {v3, v5}, Lj$/time/format/DateTimeFormatterBuilder;->appendLiteral(C)Lj$/time/format/DateTimeFormatterBuilder;
+
+    move-result-object v3
+
+    sget-object v5, Lj$/time/temporal/ChronoField;->HOUR_OF_DAY:Lj$/time/temporal/ChronoField;
+
+    const/4 v6, 0x2
+
+    .line 3483
+    invoke-virtual {v3, v5, v6}, Lj$/time/format/DateTimeFormatterBuilder;->appendValue(Lj$/time/temporal/TemporalField;I)Lj$/time/format/DateTimeFormatterBuilder;
+
+    move-result-object v3
+
+    const/16 v7, 0x3a
+
+    invoke-virtual {v3, v7}, Lj$/time/format/DateTimeFormatterBuilder;->appendLiteral(C)Lj$/time/format/DateTimeFormatterBuilder;
+
+    move-result-object v3
+
+    sget-object v8, Lj$/time/temporal/ChronoField;->MINUTE_OF_HOUR:Lj$/time/temporal/ChronoField;
+
+    .line 3484
+    invoke-virtual {v3, v8, v6}, Lj$/time/format/DateTimeFormatterBuilder;->appendValue(Lj$/time/temporal/TemporalField;I)Lj$/time/format/DateTimeFormatterBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v7}, Lj$/time/format/DateTimeFormatterBuilder;->appendLiteral(C)Lj$/time/format/DateTimeFormatterBuilder;
+
+    move-result-object v3
+
+    sget-object v7, Lj$/time/temporal/ChronoField;->SECOND_OF_MINUTE:Lj$/time/temporal/ChronoField;
+
+    .line 3485
+    invoke-virtual {v3, v7, v6}, Lj$/time/format/DateTimeFormatterBuilder;->appendValue(Lj$/time/temporal/TemporalField;I)Lj$/time/format/DateTimeFormatterBuilder;
+
+    move-result-object v3
+
+    sget-object v6, Lj$/time/temporal/ChronoField;->NANO_OF_SECOND:Lj$/time/temporal/ChronoField;
+
+    const/4 v9, 0x1
+
+    .line 3486
+    invoke-virtual {v3, v6, v2, v0, v9}, Lj$/time/format/DateTimeFormatterBuilder;->appendFraction(Lj$/time/temporal/TemporalField;IIZ)Lj$/time/format/DateTimeFormatterBuilder;
+
+    move-result-object v0
+
+    const/16 v2, 0x5a
+
+    .line 3487
+    invoke-virtual {v0, v2}, Lj$/time/format/DateTimeFormatterBuilder;->appendLiteral(C)Lj$/time/format/DateTimeFormatterBuilder;
+
+    move-result-object v0
+
+    .line 3488
+    invoke-virtual {v0}, Lj$/time/format/DateTimeFormatterBuilder;->toFormatter()Lj$/time/format/DateTimeFormatter;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Lj$/time/format/DateTimeFormatter;->toPrinterParser(Z)Lj$/time/format/DateTimeFormatterBuilder$CompositePrinterParser;
+
+    move-result-object v0
+
+    .line 3489
+    invoke-virtual/range {p1 .. p1}, Lj$/time/format/DateTimeParseContext;->copy()Lj$/time/format/DateTimeParseContext;
+
+    move-result-object v2
+
+    move-object/from16 v3, p2
+
+    .line 3490
+    invoke-virtual {v0, v2, v3, v4}, Lj$/time/format/DateTimeFormatterBuilder$CompositePrinterParser;->parse(Lj$/time/format/DateTimeParseContext;Ljava/lang/CharSequence;I)I
+
+    move-result v0
+
+    if-gez v0, :cond_2
+
+    return v0
+
+    .line 3496
+    :cond_2
+    sget-object v3, Lj$/time/temporal/ChronoField;->YEAR:Lj$/time/temporal/ChronoField;
+
+    invoke-virtual {v2, v3}, Lj$/time/format/DateTimeParseContext;->getParsed(Lj$/time/temporal/TemporalField;)Ljava/lang/Long;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v10
+
+    .line 3497
+    sget-object v3, Lj$/time/temporal/ChronoField;->MONTH_OF_YEAR:Lj$/time/temporal/ChronoField;
+
+    invoke-virtual {v2, v3}, Lj$/time/format/DateTimeParseContext;->getParsed(Lj$/time/temporal/TemporalField;)Ljava/lang/Long;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/Long;->intValue()I
+
+    move-result v13
+
+    .line 3498
+    sget-object v3, Lj$/time/temporal/ChronoField;->DAY_OF_MONTH:Lj$/time/temporal/ChronoField;
+
+    invoke-virtual {v2, v3}, Lj$/time/format/DateTimeParseContext;->getParsed(Lj$/time/temporal/TemporalField;)Ljava/lang/Long;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/Long;->intValue()I
+
+    move-result v14
+
+    .line 3499
+    invoke-virtual {v2, v5}, Lj$/time/format/DateTimeParseContext;->getParsed(Lj$/time/temporal/TemporalField;)Ljava/lang/Long;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/Long;->intValue()I
+
+    move-result v3
+
+    .line 3500
+    invoke-virtual {v2, v8}, Lj$/time/format/DateTimeParseContext;->getParsed(Lj$/time/temporal/TemporalField;)Ljava/lang/Long;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/Long;->intValue()I
+
+    move-result v5
+
+    .line 3501
+    invoke-virtual {v2, v7}, Lj$/time/format/DateTimeParseContext;->getParsed(Lj$/time/temporal/TemporalField;)Ljava/lang/Long;
+
+    move-result-object v7
+
+    .line 3502
+    invoke-virtual {v2, v6}, Lj$/time/format/DateTimeParseContext;->getParsed(Lj$/time/temporal/TemporalField;)Ljava/lang/Long;
+
+    move-result-object v2
+
+    if-eqz v7, :cond_3
+
+    .line 3503
+    invoke-virtual {v7}, Ljava/lang/Long;->intValue()I
+
+    move-result v7
+
+    goto :goto_1
+
+    :cond_3
+    move v7, v1
+
+    :goto_1
+    if-eqz v2, :cond_4
+
+    .line 3504
+    invoke-virtual {v2}, Ljava/lang/Long;->intValue()I
+
+    move-result v2
+
+    move v8, v2
+
+    goto :goto_2
+
+    :cond_4
+    move v8, v1
+
+    :goto_2
+    const/16 v2, 0x18
+
+    if-ne v3, v2, :cond_5
+
+    if-nez v5, :cond_5
+
+    if-nez v7, :cond_5
+
+    if-nez v8, :cond_5
+
+    move v15, v1
+
+    move/from16 v17, v7
+
+    move v1, v9
+
+    goto :goto_3
+
+    :cond_5
+    const/16 v2, 0x17
+
+    if-ne v3, v2, :cond_6
+
+    const/16 v2, 0x3b
+
+    if-ne v5, v2, :cond_6
+
+    const/16 v9, 0x3c
+
+    if-ne v7, v9, :cond_6
+
+    .line 3510
+    invoke-virtual/range {p1 .. p1}, Lj$/time/format/DateTimeParseContext;->setParsedLeapSecond()V
+
+    move/from16 v17, v2
+
+    move v15, v3
+
+    goto :goto_3
+
+    :cond_6
+    move v15, v3
+
+    move/from16 v17, v7
+
+    :goto_3
+    long-to-int v2, v10
+
+    .line 3513
+    rem-int/lit16 v12, v2, 0x2710
+
+    const/16 v18, 0x0
+
+    move/from16 v16, v5
+
+    .line 3516
+    :try_start_0
+    invoke-static/range {v12 .. v18}, Lj$/time/LocalDateTime;->of(IIIIIII)Lj$/time/LocalDateTime;
+
+    move-result-object v2
+
+    int-to-long v12, v1
+
+    invoke-virtual {v2, v12, v13}, Lj$/time/LocalDateTime;->plusDays(J)Lj$/time/LocalDateTime;
+
+    move-result-object v1
+
+    .line 3517
+    sget-object v2, Lj$/time/ZoneOffset;->UTC:Lj$/time/ZoneOffset;
+
+    invoke-interface {v1, v2}, Lj$/time/chrono/ChronoLocalDateTime;->toEpochSecond(Lj$/time/ZoneOffset;)J
+
+    move-result-wide v1
+
+    const-wide/16 v12, 0x2710
+
+    .line 3518
+    div-long/2addr v10, v12
+
+    const-wide v12, 0x497968bd80L
+
+    invoke-static {v10, v11, v12, v13}, Ljava/lang/Math;->multiplyExact(JJ)J
+
+    move-result-wide v9
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    add-long v2, v1, v9
+
+    .line 3523
+    sget-object v1, Lj$/time/temporal/ChronoField;->INSTANT_SECONDS:Lj$/time/temporal/ChronoField;
+
+    move v5, v0
+
+    move-object/from16 v0, p1
+
+    invoke-virtual/range {v0 .. v5}, Lj$/time/format/DateTimeParseContext;->setParsedField(Lj$/time/temporal/TemporalField;JII)I
+
+    move-result v5
+
+    int-to-long v2, v8
+
+    move/from16 v4, p3
+
+    move-object v1, v6
+
+    .line 3524
+    invoke-virtual/range {v0 .. v5}, Lj$/time/format/DateTimeParseContext;->setParsedField(Lj$/time/temporal/TemporalField;JII)I
+
+    move-result v0
+
+    return v0
+
+    :catch_0
+    not-int v0, v4
+
+    return v0
+.end method
+
 .method public toString()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 3529
-    const-string v0, "Instant()"
+    const-string p0, "Instant()"
 
-    return-object v0
+    return-object p0
 .end method

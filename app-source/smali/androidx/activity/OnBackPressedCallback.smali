@@ -55,7 +55,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -125,11 +125,11 @@
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 122
-    iget-object v0, p0, Landroidx/activity/OnBackPressedCallback;->closeables:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object p0, p0, Landroidx/activity/OnBackPressedCallback;->closeables:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    check-cast v0, Ljava/util/Collection;
+    check-cast p0, Ljava/util/Collection;
 
-    invoke-interface {v0, p1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+    invoke-interface {p0, p1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
@@ -147,11 +147,11 @@
     invoke-direct {v0, p0, p1}, Landroidx/activity/OnBackPressedCallback$OnBackPressedEventHandler;-><init>(Landroidx/activity/OnBackPressedCallback;Landroidx/navigationevent/NavigationEventInfo;)V
 
     .line 133
-    iget-object p1, p0, Landroidx/activity/OnBackPressedCallback;->eventHandlers:Ljava/util/List;
+    iget-object p0, p0, Landroidx/activity/OnBackPressedCallback;->eventHandlers:Ljava/util/List;
 
-    check-cast p1, Ljava/util/Collection;
+    check-cast p0, Ljava/util/Collection;
 
-    invoke-interface {p1, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+    invoke-interface {p0, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     return-object v0
 .end method
@@ -166,32 +166,32 @@
 .end method
 
 .method public handleOnBackProgressed(Landroidx/activity/BackEventCompat;)V
-    .locals 1
+    .locals 0
 
-    const-string v0, "backEvent"
+    const-string p0, "backEvent"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method public handleOnBackStarted(Landroidx/activity/BackEventCompat;)V
-    .locals 1
+    .locals 0
 
-    const-string v0, "backEvent"
+    const-string p0, "backEvent"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method public final isEnabled()Z
-    .locals 1
+    .locals 0
 
     .line 63
-    iget-boolean v0, p0, Landroidx/activity/OnBackPressedCallback;->isEnabled:Z
+    iget-boolean p0, p0, Landroidx/activity/OnBackPressedCallback;->isEnabled:Z
 
-    return v0
+    return p0
 .end method
 
 .method public final remove()V
@@ -259,9 +259,9 @@
 
     .line 85
     :cond_1
-    iget-object v0, p0, Landroidx/activity/OnBackPressedCallback;->eventHandlers:Ljava/util/List;
+    iget-object p0, p0, Landroidx/activity/OnBackPressedCallback;->eventHandlers:Ljava/util/List;
 
-    invoke-interface {v0}, Ljava/util/List;->clear()V
+    invoke-interface {p0}, Ljava/util/List;->clear()V
 
     return-void
 .end method
@@ -274,59 +274,59 @@
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 126
-    iget-object v0, p0, Landroidx/activity/OnBackPressedCallback;->closeables:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object p0, p0, Landroidx/activity/OnBackPressedCallback;->closeables:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    check-cast v0, Ljava/util/Collection;
+    check-cast p0, Ljava/util/Collection;
 
-    invoke-interface {v0, p1}, Ljava/util/Collection;->remove(Ljava/lang/Object;)Z
+    invoke-interface {p0, p1}, Ljava/util/Collection;->remove(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
 .method public final setEnabled(Z)V
-    .locals 3
+    .locals 2
 
     .line 65
     iput-boolean p1, p0, Landroidx/activity/OnBackPressedCallback;->isEnabled:Z
 
     .line 66
-    iget-object v0, p0, Landroidx/activity/OnBackPressedCallback;->eventHandlers:Ljava/util/List;
+    iget-object p0, p0, Landroidx/activity/OnBackPressedCallback;->eventHandlers:Ljava/util/List;
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    check-cast v0, Landroidx/activity/OnBackPressedCallback$OnBackPressedEventHandler;
+
+    .line 69
+    invoke-virtual {v0}, Landroidx/activity/OnBackPressedCallback$OnBackPressedEventHandler;->isLifecycleActive()Z
 
     move-result v1
 
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroidx/activity/OnBackPressedCallback$OnBackPressedEventHandler;
-
-    .line 69
-    invoke-virtual {v1}, Landroidx/activity/OnBackPressedCallback$OnBackPressedEventHandler;->isLifecycleActive()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
+    if-eqz v1, :cond_0
 
     if-eqz p1, :cond_0
 
-    const/4 v2, 0x1
+    const/4 v1, 0x1
 
     goto :goto_1
 
     :cond_0
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
     :goto_1
-    invoke-virtual {v1, v2}, Landroidx/activity/OnBackPressedCallback$OnBackPressedEventHandler;->setBackEnabled(Z)V
+    invoke-virtual {v0, v1}, Landroidx/activity/OnBackPressedCallback$OnBackPressedEventHandler;->setBackEnabled(Z)V
 
     goto :goto_0
 

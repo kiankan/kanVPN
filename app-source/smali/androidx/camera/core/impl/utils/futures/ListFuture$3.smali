@@ -47,7 +47,7 @@
         }
     .end annotation
 
-    .line 132
+    .line 129
     iput-object p1, p0, Landroidx/camera/core/impl/utils/futures/ListFuture$3;->this$0:Landroidx/camera/core/impl/utils/futures/ListFuture;
 
     iput p2, p0, Landroidx/camera/core/impl/utils/futures/ListFuture$3;->val$index:I
@@ -62,16 +62,16 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 2
 
-    .line 135
+    .line 132
     iget-object v0, p0, Landroidx/camera/core/impl/utils/futures/ListFuture$3;->this$0:Landroidx/camera/core/impl/utils/futures/ListFuture;
 
     iget v1, p0, Landroidx/camera/core/impl/utils/futures/ListFuture$3;->val$index:I
 
-    iget-object v2, p0, Landroidx/camera/core/impl/utils/futures/ListFuture$3;->val$listenable:Lcom/google/common/util/concurrent/ListenableFuture;
+    iget-object p0, p0, Landroidx/camera/core/impl/utils/futures/ListFuture$3;->val$listenable:Lcom/google/common/util/concurrent/ListenableFuture;
 
-    invoke-virtual {v0, v1, v2}, Landroidx/camera/core/impl/utils/futures/ListFuture;->setOneValue(ILjava/util/concurrent/Future;)V
+    invoke-virtual {v0, v1, p0}, Landroidx/camera/core/impl/utils/futures/ListFuture;->setOneValue(ILjava/util/concurrent/Future;)V
 
     return-void
 .end method

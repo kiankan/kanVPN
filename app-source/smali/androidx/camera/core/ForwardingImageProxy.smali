@@ -34,24 +34,24 @@
 .method protected constructor <init>(Landroidx/camera/core/ImageProxy;)V
     .locals 1
 
-    .line 54
+    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
+    .line 43
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroidx/camera/core/ForwardingImageProxy;->mLock:Ljava/lang/Object;
 
-    .line 46
+    .line 47
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Landroidx/camera/core/ForwardingImageProxy;->mOnImageCloseListeners:Ljava/util/Set;
 
-    .line 55
+    .line 56
     iput-object p1, p0, Landroidx/camera/core/ForwardingImageProxy;->mImage:Landroidx/camera/core/ImageProxy;
 
     return-void
@@ -60,148 +60,148 @@
 
 # virtual methods
 .method public addOnImageCloseListener(Landroidx/camera/core/ForwardingImageProxy$OnImageCloseListener;)V
-    .locals 2
+    .locals 1
 
-    .line 115
+    .line 112
     iget-object v0, p0, Landroidx/camera/core/ForwardingImageProxy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 116
+    .line 113
     :try_start_0
-    iget-object v1, p0, Landroidx/camera/core/ForwardingImageProxy;->mOnImageCloseListeners:Ljava/util/Set;
+    iget-object p0, p0, Landroidx/camera/core/ForwardingImageProxy;->mOnImageCloseListeners:Ljava/util/Set;
 
-    invoke-interface {v1, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    invoke-interface {p0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 117
+    .line 114
     monitor-exit v0
 
     return-void
 
     :catchall_0
-    move-exception p1
+    move-exception p0
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p1
+    throw p0
 .end method
 
 .method public close()V
     .locals 1
 
-    .line 60
+    .line 61
     iget-object v0, p0, Landroidx/camera/core/ForwardingImageProxy;->mImage:Landroidx/camera/core/ImageProxy;
 
     invoke-interface {v0}, Landroidx/camera/core/ImageProxy;->close()V
 
-    .line 61
+    .line 62
     invoke-virtual {p0}, Landroidx/camera/core/ForwardingImageProxy;->notifyOnImageCloseListeners()V
 
     return-void
 .end method
 
 .method public getCropRect()Landroid/graphics/Rect;
-    .locals 1
+    .locals 0
 
     .line 67
-    iget-object v0, p0, Landroidx/camera/core/ForwardingImageProxy;->mImage:Landroidx/camera/core/ImageProxy;
+    iget-object p0, p0, Landroidx/camera/core/ForwardingImageProxy;->mImage:Landroidx/camera/core/ImageProxy;
 
-    invoke-interface {v0}, Landroidx/camera/core/ImageProxy;->getCropRect()Landroid/graphics/Rect;
+    invoke-interface {p0}, Landroidx/camera/core/ImageProxy;->getCropRect()Landroid/graphics/Rect;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getFormat()I
-    .locals 1
+    .locals 0
 
     .line 77
-    iget-object v0, p0, Landroidx/camera/core/ForwardingImageProxy;->mImage:Landroidx/camera/core/ImageProxy;
+    iget-object p0, p0, Landroidx/camera/core/ForwardingImageProxy;->mImage:Landroidx/camera/core/ImageProxy;
 
-    invoke-interface {v0}, Landroidx/camera/core/ImageProxy;->getFormat()I
+    invoke-interface {p0}, Landroidx/camera/core/ImageProxy;->getFormat()I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public getHeight()I
-    .locals 1
+    .locals 0
 
     .line 82
-    iget-object v0, p0, Landroidx/camera/core/ForwardingImageProxy;->mImage:Landroidx/camera/core/ImageProxy;
+    iget-object p0, p0, Landroidx/camera/core/ForwardingImageProxy;->mImage:Landroidx/camera/core/ImageProxy;
 
-    invoke-interface {v0}, Landroidx/camera/core/ImageProxy;->getHeight()I
+    invoke-interface {p0}, Landroidx/camera/core/ImageProxy;->getHeight()I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public getImage()Landroid/media/Image;
-    .locals 1
+    .locals 0
 
-    .line 106
-    iget-object v0, p0, Landroidx/camera/core/ForwardingImageProxy;->mImage:Landroidx/camera/core/ImageProxy;
+    .line 103
+    iget-object p0, p0, Landroidx/camera/core/ForwardingImageProxy;->mImage:Landroidx/camera/core/ImageProxy;
 
-    invoke-interface {v0}, Landroidx/camera/core/ImageProxy;->getImage()Landroid/media/Image;
+    invoke-interface {p0}, Landroidx/camera/core/ImageProxy;->getImage()Landroid/media/Image;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getImageInfo()Landroidx/camera/core/ImageInfo;
-    .locals 1
+    .locals 0
 
-    .line 99
-    iget-object v0, p0, Landroidx/camera/core/ForwardingImageProxy;->mImage:Landroidx/camera/core/ImageProxy;
+    .line 97
+    iget-object p0, p0, Landroidx/camera/core/ForwardingImageProxy;->mImage:Landroidx/camera/core/ImageProxy;
 
-    invoke-interface {v0}, Landroidx/camera/core/ImageProxy;->getImageInfo()Landroidx/camera/core/ImageInfo;
+    invoke-interface {p0}, Landroidx/camera/core/ImageProxy;->getImageInfo()Landroidx/camera/core/ImageInfo;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getPlanes()[Landroidx/camera/core/ImageProxy$PlaneProxy;
-    .locals 1
+    .locals 0
 
-    .line 93
-    iget-object v0, p0, Landroidx/camera/core/ForwardingImageProxy;->mImage:Landroidx/camera/core/ImageProxy;
+    .line 92
+    iget-object p0, p0, Landroidx/camera/core/ForwardingImageProxy;->mImage:Landroidx/camera/core/ImageProxy;
 
-    invoke-interface {v0}, Landroidx/camera/core/ImageProxy;->getPlanes()[Landroidx/camera/core/ImageProxy$PlaneProxy;
+    invoke-interface {p0}, Landroidx/camera/core/ImageProxy;->getPlanes()[Landroidx/camera/core/ImageProxy$PlaneProxy;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getWidth()I
-    .locals 1
+    .locals 0
 
     .line 87
-    iget-object v0, p0, Landroidx/camera/core/ForwardingImageProxy;->mImage:Landroidx/camera/core/ImageProxy;
+    iget-object p0, p0, Landroidx/camera/core/ForwardingImageProxy;->mImage:Landroidx/camera/core/ImageProxy;
 
-    invoke-interface {v0}, Landroidx/camera/core/ImageProxy;->getWidth()I
+    invoke-interface {p0}, Landroidx/camera/core/ImageProxy;->getWidth()I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method protected notifyOnImageCloseListeners()V
     .locals 3
 
-    .line 123
+    .line 120
     iget-object v0, p0, Landroidx/camera/core/ForwardingImageProxy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 127
+    .line 124
     :try_start_0
     new-instance v1, Ljava/util/HashSet;
 
@@ -209,12 +209,12 @@
 
     invoke-direct {v1, v2}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    .line 128
+    .line 125
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 129
+    .line 126
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -232,7 +232,7 @@
 
     check-cast v1, Landroidx/camera/core/ForwardingImageProxy$OnImageCloseListener;
 
-    .line 130
+    .line 127
     invoke-interface {v1, p0}, Landroidx/camera/core/ForwardingImageProxy$OnImageCloseListener;->onImageClose(Landroidx/camera/core/ImageProxy;)V
 
     goto :goto_0
@@ -241,24 +241,24 @@
     return-void
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
-    .line 128
+    .line 125
     :try_start_1
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw v1
+    throw p0
 .end method
 
 .method public setCropRect(Landroid/graphics/Rect;)V
-    .locals 1
+    .locals 0
 
     .line 72
-    iget-object v0, p0, Landroidx/camera/core/ForwardingImageProxy;->mImage:Landroidx/camera/core/ImageProxy;
+    iget-object p0, p0, Landroidx/camera/core/ForwardingImageProxy;->mImage:Landroidx/camera/core/ImageProxy;
 
-    invoke-interface {v0, p1}, Landroidx/camera/core/ImageProxy;->setCropRect(Landroid/graphics/Rect;)V
+    invoke-interface {p0, p1}, Landroidx/camera/core/ImageProxy;->setCropRect(Landroid/graphics/Rect;)V
 
     return-void
 .end method

@@ -11,10 +11,10 @@
 .method public constructor <init>(Landroid/view/Surface;)V
     .locals 0
 
-    .line 39
+    .line 40
     invoke-direct {p0}, Landroidx/camera/core/impl/DeferrableSurface;-><init>()V
 
-    .line 40
+    .line 41
     iput-object p1, p0, Landroidx/camera/core/impl/ImmediateSurface;->mSurface:Landroid/view/Surface;
 
     return-void
@@ -23,10 +23,10 @@
 .method public constructor <init>(Landroid/view/Surface;Landroid/util/Size;I)V
     .locals 0
 
-    .line 35
+    .line 36
     invoke-direct {p0, p2, p3}, Landroidx/camera/core/impl/DeferrableSurface;-><init>(Landroid/util/Size;I)V
 
-    .line 36
+    .line 37
     iput-object p1, p0, Landroidx/camera/core/impl/ImmediateSurface;->mSurface:Landroid/view/Surface;
 
     return-void
@@ -35,7 +35,7 @@
 
 # virtual methods
 .method public provideSurface()Lcom/google/common/util/concurrent/ListenableFuture;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -46,11 +46,11 @@
     .end annotation
 
     .line 46
-    iget-object v0, p0, Landroidx/camera/core/impl/ImmediateSurface;->mSurface:Landroid/view/Surface;
+    iget-object p0, p0, Landroidx/camera/core/impl/ImmediateSurface;->mSurface:Landroid/view/Surface;
 
-    invoke-static {v0}, Landroidx/camera/core/impl/utils/futures/Futures;->immediateFuture(Ljava/lang/Object;)Lcom/google/common/util/concurrent/ListenableFuture;
+    invoke-static {p0}, Landroidx/camera/core/impl/utils/futures/Futures;->immediateFuture(Ljava/lang/Object;)Lcom/google/common/util/concurrent/ListenableFuture;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

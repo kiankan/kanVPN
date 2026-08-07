@@ -180,7 +180,7 @@
 
 # virtual methods
 .method public decodeRow(ILcom/google/zxing/common/BitArray;Ljava/util/Map;)Lcom/google/zxing/Result;
-    .locals 11
+    .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -204,142 +204,142 @@
     move-result-object v0
 
     .line 77
-    iget-object v1, p0, Lcom/google/zxing/oned/MultiFormatUPCEANReader;->readers:[Lcom/google/zxing/oned/UPCEANReader;
+    iget-object p0, p0, Lcom/google/zxing/oned/MultiFormatUPCEANReader;->readers:[Lcom/google/zxing/oned/UPCEANReader;
 
-    array-length v2, v1
+    array-length v1, p0
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    move v4, v3
+    move v3, v2
 
     :goto_0
-    if-ge v4, v2, :cond_5
+    if-ge v3, v1, :cond_5
 
-    aget-object v5, v1, v4
+    aget-object v4, p0, v3
 
     .line 79
     :try_start_0
-    invoke-virtual {v5, p1, p2, v0, p3}, Lcom/google/zxing/oned/UPCEANReader;->decodeRow(ILcom/google/zxing/common/BitArray;[ILjava/util/Map;)Lcom/google/zxing/Result;
+    invoke-virtual {v4, p1, p2, v0, p3}, Lcom/google/zxing/oned/UPCEANReader;->decodeRow(ILcom/google/zxing/common/BitArray;[ILjava/util/Map;)Lcom/google/zxing/Result;
+
+    move-result-object v4
+
+    .line 93
+    invoke-virtual {v4}, Lcom/google/zxing/Result;->getBarcodeFormat()Lcom/google/zxing/BarcodeFormat;
 
     move-result-object v5
 
-    .line 93
-    invoke-virtual {v5}, Lcom/google/zxing/Result;->getBarcodeFormat()Lcom/google/zxing/BarcodeFormat;
+    sget-object v6, Lcom/google/zxing/BarcodeFormat;->EAN_13:Lcom/google/zxing/BarcodeFormat;
 
-    move-result-object v6
+    const/4 v7, 0x1
 
-    sget-object v7, Lcom/google/zxing/BarcodeFormat;->EAN_13:Lcom/google/zxing/BarcodeFormat;
-
-    const/4 v8, 0x1
-
-    if-ne v6, v7, :cond_0
+    if-ne v5, v6, :cond_0
 
     .line 94
-    invoke-virtual {v5}, Lcom/google/zxing/Result;->getText()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/google/zxing/Result;->getText()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v5
 
-    invoke-virtual {v6, v3}, Ljava/lang/String;->charAt(I)C
+    invoke-virtual {v5, v2}, Ljava/lang/String;->charAt(I)C
 
-    move-result v6
+    move-result v5
 
-    const/16 v7, 0x30
+    const/16 v6, 0x30
 
-    if-ne v6, v7, :cond_0
+    if-ne v5, v6, :cond_0
 
-    move v6, v8
+    move v5, v7
 
     goto :goto_1
 
     :cond_0
-    move v6, v3
+    move v5, v2
 
     :goto_1
     if-nez p3, :cond_1
 
-    const/4 v7, 0x0
+    const/4 v6, 0x0
 
     goto :goto_2
 
     .line 97
     :cond_1
-    sget-object v7, Lcom/google/zxing/DecodeHintType;->POSSIBLE_FORMATS:Lcom/google/zxing/DecodeHintType;
+    sget-object v6, Lcom/google/zxing/DecodeHintType;->POSSIBLE_FORMATS:Lcom/google/zxing/DecodeHintType;
 
-    invoke-interface {p3, v7}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, v6}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v7
+    move-result-object v6
 
-    check-cast v7, Ljava/util/Collection;
+    check-cast v6, Ljava/util/Collection;
 
     :goto_2
-    if-eqz v7, :cond_3
+    if-eqz v6, :cond_3
 
     .line 98
-    sget-object v9, Lcom/google/zxing/BarcodeFormat;->UPC_A:Lcom/google/zxing/BarcodeFormat;
+    sget-object v8, Lcom/google/zxing/BarcodeFormat;->UPC_A:Lcom/google/zxing/BarcodeFormat;
 
-    invoke-interface {v7, v9}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+    invoke-interface {v6, v8}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    move-result v7
+    move-result v6
 
-    if-eqz v7, :cond_2
+    if-eqz v6, :cond_2
 
     goto :goto_3
 
     :cond_2
-    move v7, v3
+    move v6, v2
 
     goto :goto_4
 
     :cond_3
     :goto_3
-    move v7, v8
+    move v6, v7
 
     :goto_4
+    if-eqz v5, :cond_4
+
     if-eqz v6, :cond_4
 
-    if-eqz v7, :cond_4
-
     .line 102
-    new-instance v6, Lcom/google/zxing/Result;
+    new-instance v5, Lcom/google/zxing/Result;
 
-    invoke-virtual {v5}, Lcom/google/zxing/Result;->getText()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/google/zxing/Result;->getText()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v6
 
-    invoke-virtual {v7, v8}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    invoke-virtual {v6, v7}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v6
 
     .line 103
-    invoke-virtual {v5}, Lcom/google/zxing/Result;->getRawBytes()[B
+    invoke-virtual {v4}, Lcom/google/zxing/Result;->getRawBytes()[B
+
+    move-result-object v7
+
+    .line 104
+    invoke-virtual {v4}, Lcom/google/zxing/Result;->getResultPoints()[Lcom/google/zxing/ResultPoint;
 
     move-result-object v8
 
-    .line 104
-    invoke-virtual {v5}, Lcom/google/zxing/Result;->getResultPoints()[Lcom/google/zxing/ResultPoint;
+    sget-object v9, Lcom/google/zxing/BarcodeFormat;->UPC_A:Lcom/google/zxing/BarcodeFormat;
 
-    move-result-object v9
-
-    sget-object v10, Lcom/google/zxing/BarcodeFormat;->UPC_A:Lcom/google/zxing/BarcodeFormat;
-
-    invoke-direct {v6, v7, v8, v9, v10}, Lcom/google/zxing/Result;-><init>(Ljava/lang/String;[B[Lcom/google/zxing/ResultPoint;Lcom/google/zxing/BarcodeFormat;)V
+    invoke-direct {v5, v6, v7, v8, v9}, Lcom/google/zxing/Result;-><init>(Ljava/lang/String;[B[Lcom/google/zxing/ResultPoint;Lcom/google/zxing/BarcodeFormat;)V
 
     .line 106
-    invoke-virtual {v5}, Lcom/google/zxing/Result;->getResultMetadata()Ljava/util/Map;
+    invoke-virtual {v4}, Lcom/google/zxing/Result;->getResultMetadata()Ljava/util/Map;
 
-    move-result-object v5
+    move-result-object v4
 
-    invoke-virtual {v6, v5}, Lcom/google/zxing/Result;->putAllMetadata(Ljava/util/Map;)V
+    invoke-virtual {v5, v4}, Lcom/google/zxing/Result;->putAllMetadata(Ljava/util/Map;)V
     :try_end_0
     .catch Lcom/google/zxing/ReaderException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object v6
-
-    :cond_4
     return-object v5
 
+    :cond_4
+    return-object v4
+
     :catch_0
-    add-int/lit8 v4, v4, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
@@ -347,30 +347,30 @@
     :cond_5
     invoke-static {}, Lcom/google/zxing/NotFoundException;->getNotFoundInstance()Lcom/google/zxing/NotFoundException;
 
-    move-result-object p1
+    move-result-object p0
 
-    throw p1
+    throw p0
 .end method
 
 .method public reset()V
-    .locals 4
+    .locals 3
 
     .line 120
-    iget-object v0, p0, Lcom/google/zxing/oned/MultiFormatUPCEANReader;->readers:[Lcom/google/zxing/oned/UPCEANReader;
+    iget-object p0, p0, Lcom/google/zxing/oned/MultiFormatUPCEANReader;->readers:[Lcom/google/zxing/oned/UPCEANReader;
 
-    array-length v1, v0
+    array-length v0, p0
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
     :goto_0
-    if-ge v2, v1, :cond_0
+    if-ge v1, v0, :cond_0
 
-    aget-object v3, v0, v2
+    aget-object v2, p0, v1
 
     .line 121
-    invoke-interface {v3}, Lcom/google/zxing/Reader;->reset()V
+    invoke-interface {v2}, Lcom/google/zxing/Reader;->reset()V
 
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 

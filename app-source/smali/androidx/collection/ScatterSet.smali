@@ -4,12 +4,6 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Landroidx/collection/ScatterSet$SetWrapper;
-    }
-.end annotation
-
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<E:",
@@ -20,12 +14,12 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nScatterSet.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ScatterSet.kt\nandroidx/collection/ScatterSet\n+ 2 ScatterMap.kt\nandroidx/collection/ScatterMapKt\n*L\n1#1,1100:1\n267#1,4:1101\n237#1,7:1105\n248#1,3:1113\n251#1,2:1117\n272#1,2:1119\n254#1,6:1121\n274#1:1127\n267#1,4:1128\n237#1,7:1132\n248#1,3:1140\n251#1,2:1144\n272#1,2:1146\n254#1,6:1148\n274#1:1154\n267#1,4:1155\n237#1,7:1159\n248#1,3:1167\n251#1,2:1171\n272#1,2:1173\n254#1,6:1175\n274#1:1181\n237#1,7:1184\n248#1,3:1192\n251#1,9:1196\n267#1,4:1205\n237#1,7:1209\n248#1,3:1217\n251#1,2:1221\n272#1,2:1223\n254#1,6:1225\n274#1:1231\n267#1,4:1232\n237#1,7:1236\n248#1,3:1244\n251#1,2:1248\n272#1,2:1250\n254#1,6:1252\n274#1:1258\n267#1,4:1259\n237#1,7:1263\n248#1,3:1271\n251#1,2:1275\n272#1,2:1277\n254#1,6:1279\n274#1:1285\n433#1:1286\n434#1:1290\n436#1,2:1292\n438#1,3:1295\n441#1:1301\n442#1:1305\n443#1:1307\n444#1,4:1310\n450#1:1315\n451#1,8:1317\n267#1,4:1325\n237#1,7:1329\n248#1,3:1337\n251#1,2:1341\n272#1,2:1343\n254#1,6:1345\n274#1:1351\n267#1,4:1352\n237#1,7:1356\n248#1,3:1364\n251#1,2:1368\n272#1,2:1370\n254#1,6:1372\n274#1:1378\n267#1,4:1379\n237#1,7:1383\n248#1,3:1391\n251#1,2:1395\n272#1,2:1397\n254#1,6:1399\n274#1:1405\n1826#2:1112\n1688#2:1116\n1826#2:1139\n1688#2:1143\n1826#2:1166\n1688#2:1170\n1826#2:1182\n1688#2:1183\n1826#2:1191\n1688#2:1195\n1826#2:1216\n1688#2:1220\n1826#2:1243\n1688#2:1247\n1826#2:1270\n1688#2:1274\n1605#2,3:1287\n1619#2:1291\n1615#2:1294\n1795#2,3:1298\n1809#2,3:1302\n1733#2:1306\n1721#2:1308\n1715#2:1309\n1728#2:1314\n1818#2:1316\n1826#2:1336\n1688#2:1340\n1826#2:1363\n1688#2:1367\n1826#2:1390\n1688#2:1394\n1605#2,3:1406\n1619#2:1409\n1615#2:1410\n1795#2,3:1411\n1809#2,3:1414\n1733#2:1417\n1721#2:1418\n1715#2:1419\n1728#2:1420\n1818#2:1421\n*S KotlinDebug\n*F\n+ 1 ScatterSet.kt\nandroidx/collection/ScatterSet\n*L\n201#1:1101,4\n201#1:1105,7\n201#1:1113,3\n201#1:1117,2\n201#1:1119,2\n201#1:1121,6\n201#1:1127\n214#1:1128,4\n214#1:1132,7\n214#1:1140,3\n214#1:1144,2\n214#1:1146,2\n214#1:1148,6\n214#1:1154\n227#1:1155,4\n227#1:1159,7\n227#1:1167,3\n227#1:1171,2\n227#1:1173,2\n227#1:1175,6\n227#1:1181\n270#1:1184,7\n270#1:1192,3\n270#1:1196,9\n284#1:1205,4\n284#1:1209,7\n284#1:1217,3\n284#1:1221,2\n284#1:1223,2\n284#1:1225,6\n284#1:1231\n297#1:1232,4\n297#1:1236,7\n297#1:1244,3\n297#1:1248,2\n297#1:1250,2\n297#1:1252,6\n297#1:1258\n318#1:1259,4\n318#1:1263,7\n318#1:1271,3\n318#1:1275,2\n318#1:1277,2\n318#1:1279,6\n318#1:1285\n329#1:1286\n329#1:1290\n329#1:1292,2\n329#1:1295,3\n329#1:1301\n329#1:1305\n329#1:1307\n329#1:1310,4\n329#1:1315\n329#1:1317,8\n352#1:1325,4\n352#1:1329,7\n352#1:1337,3\n352#1:1341,2\n352#1:1343,2\n352#1:1345,6\n352#1:1351\n378#1:1352,4\n378#1:1356,7\n378#1:1364,3\n378#1:1368,2\n378#1:1370,2\n378#1:1372,6\n378#1:1378\n407#1:1379,4\n407#1:1383,7\n407#1:1391,3\n407#1:1395,2\n407#1:1397,2\n407#1:1399,6\n407#1:1405\n201#1:1112\n201#1:1116\n214#1:1139\n214#1:1143\n227#1:1166\n227#1:1170\n243#1:1182\n250#1:1183\n270#1:1191\n270#1:1195\n284#1:1216\n284#1:1220\n297#1:1243\n297#1:1247\n318#1:1270\n318#1:1274\n329#1:1287,3\n329#1:1291\n329#1:1294\n329#1:1298,3\n329#1:1302,3\n329#1:1306\n329#1:1308\n329#1:1309\n329#1:1314\n329#1:1316\n352#1:1336\n352#1:1340\n378#1:1363\n378#1:1367\n407#1:1390\n407#1:1394\n433#1:1406,3\n434#1:1409\n437#1:1410\n440#1:1411,3\n441#1:1414,3\n442#1:1417\n443#1:1418\n443#1:1419\n447#1:1420\n450#1:1421\n*E\n"
+    value = "SMAP\nScatterSet.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ScatterSet.kt\nandroidx/collection/ScatterSet\n+ 2 ScatterMap.kt\nandroidx/collection/ScatterMapKt\n*L\n1#1,1210:1\n231#1,3:1211\n200#1,7:1214\n211#1,3:1222\n214#1,9:1226\n234#1:1235\n231#1,3:1236\n200#1,7:1239\n211#1,3:1247\n214#1,9:1251\n234#1:1260\n231#1,3:1261\n200#1,7:1264\n211#1,3:1272\n214#1,9:1276\n234#1:1285\n200#1,7:1288\n211#1,3:1296\n214#1,9:1300\n231#1,3:1309\n200#1,7:1312\n211#1,3:1320\n214#1,9:1324\n234#1:1333\n231#1,3:1334\n200#1,7:1337\n211#1,3:1345\n214#1,9:1349\n234#1:1358\n231#1,3:1359\n200#1,7:1362\n211#1,3:1370\n214#1,9:1374\n234#1:1383\n390#1:1384\n391#1:1388\n393#1,2:1390\n395#1,3:1393\n398#1:1399\n399#1:1403\n400#1:1405\n401#1,4:1408\n407#1:1413\n408#1,8:1415\n231#1,3:1423\n200#1,7:1426\n211#1,3:1434\n214#1,9:1438\n234#1:1447\n231#1,3:1448\n200#1,7:1451\n211#1,3:1459\n214#1,9:1463\n234#1:1472\n231#1,3:1473\n200#1,7:1476\n211#1,3:1484\n214#1,9:1488\n234#1:1497\n1399#2:1221\n1270#2:1225\n1399#2:1246\n1270#2:1250\n1399#2:1271\n1270#2:1275\n1399#2:1286\n1270#2:1287\n1399#2:1295\n1270#2:1299\n1399#2:1319\n1270#2:1323\n1399#2:1344\n1270#2:1348\n1399#2:1369\n1270#2:1373\n1165#2,3:1385\n1179#2:1389\n1175#2:1392\n1372#2,3:1396\n1386#2,3:1400\n1312#2:1404\n1303#2:1406\n1297#2:1407\n1309#2:1412\n1393#2:1414\n1399#2:1433\n1270#2:1437\n1399#2:1458\n1270#2:1462\n1399#2:1483\n1270#2:1487\n1165#2,3:1498\n1179#2:1501\n1175#2:1502\n1372#2,3:1503\n1386#2,3:1506\n1312#2:1509\n1303#2:1510\n1297#2:1511\n1309#2:1512\n1393#2:1513\n*S KotlinDebug\n*F\n+ 1 ScatterSet.kt\nandroidx/collection/ScatterSet\n*L\n163#1:1211,3\n163#1:1214,7\n163#1:1222,3\n163#1:1226,9\n163#1:1235\n179#1:1236,3\n179#1:1239,7\n179#1:1247,3\n179#1:1251,9\n179#1:1260\n193#1:1261,3\n193#1:1264,7\n193#1:1272,3\n193#1:1276,9\n193#1:1285\n233#1:1288,7\n233#1:1296,3\n233#1:1300,9\n245#1:1309,3\n245#1:1312,7\n245#1:1320,3\n245#1:1324,9\n245#1:1333\n257#1:1334,3\n257#1:1337,7\n257#1:1345,3\n257#1:1349,9\n257#1:1358\n274#1:1359,3\n274#1:1362,7\n274#1:1370,3\n274#1:1374,9\n274#1:1383\n283#1:1384\n283#1:1388\n283#1:1390,2\n283#1:1393,3\n283#1:1399\n283#1:1403\n283#1:1405\n283#1:1408,4\n283#1:1413\n283#1:1415,8\n306#1:1423,3\n306#1:1426,7\n306#1:1434,3\n306#1:1438,9\n306#1:1447\n333#1:1448,3\n333#1:1451,7\n333#1:1459,3\n333#1:1463,9\n333#1:1472\n363#1:1473,3\n363#1:1476,7\n363#1:1484,3\n363#1:1488,9\n363#1:1497\n163#1:1221\n163#1:1225\n179#1:1246\n179#1:1250\n193#1:1271\n193#1:1275\n206#1:1286\n213#1:1287\n233#1:1295\n233#1:1299\n245#1:1319\n245#1:1323\n257#1:1344\n257#1:1348\n274#1:1369\n274#1:1373\n283#1:1385,3\n283#1:1389\n283#1:1392\n283#1:1396,3\n283#1:1400,3\n283#1:1404\n283#1:1406\n283#1:1407\n283#1:1412\n283#1:1414\n306#1:1433\n306#1:1437\n333#1:1458\n333#1:1462\n363#1:1483\n363#1:1487\n390#1:1498,3\n391#1:1501\n394#1:1502\n397#1:1503,3\n398#1:1506,3\n399#1:1509\n400#1:1510\n400#1:1511\n404#1:1512\n407#1:1513\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000\\\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0005\n\u0002\u0010\u0011\n\u0002\u0008\u0003\n\u0002\u0010\u0016\n\u0002\u0008\u0004\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\"\n\u0002\u0008\r\n\u0002\u0010\u0002\n\u0002\u0008\u0007\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\r\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0000\u00086\u0018\u0000*\u0004\u0008\u0000\u0010\u00012\u00020\u0002:\u0001<B\u0007\u0008\u0004\u00a2\u0006\u0002\u0010\u0003J:\u0010\u0013\u001a\u00020\u00142!\u0010\u0015\u001a\u001d\u0012\u0013\u0012\u00118\u0000\u00a2\u0006\u000c\u0008\u0017\u0012\u0008\u0008\u0018\u0012\u0004\u0008\u0008(\u0019\u0012\u0004\u0012\u00020\u00140\u0016H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001J\u0006\u0010\u001a\u001a\u00020\u0014J:\u0010\u001a\u001a\u00020\u00142!\u0010\u0015\u001a\u001d\u0012\u0013\u0012\u00118\u0000\u00a2\u0006\u000c\u0008\u0017\u0012\u0008\u0008\u0018\u0012\u0004\u0008\u0008(\u0019\u0012\u0004\u0012\u00020\u00140\u0016H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001J\u000c\u0010\u001b\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u001cJ\u0016\u0010\u001d\u001a\u00020\u00142\u0006\u0010\u0019\u001a\u00028\u0000H\u0086\u0002\u00a2\u0006\u0002\u0010\u001eJ\u0008\u0010\u001f\u001a\u00020\u0005H\u0007J:\u0010\u001f\u001a\u00020\u00052!\u0010\u0015\u001a\u001d\u0012\u0013\u0012\u00118\u0000\u00a2\u0006\u000c\u0008\u0017\u0012\u0008\u0008\u0018\u0012\u0004\u0008\u0008(\u0019\u0012\u0004\u0012\u00020\u00140\u0016H\u0087\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001J\u0013\u0010 \u001a\u00020\u00142\u0008\u0010!\u001a\u0004\u0018\u00010\u0002H\u0096\u0002J\u0018\u0010\"\u001a\u00020\u00052\u0006\u0010\u0019\u001a\u00028\u0000H\u0080\u0008\u00a2\u0006\u0004\u0008#\u0010$J\u000e\u0010%\u001a\u00028\u0000H\u0086\u0008\u00a2\u0006\u0002\u0010&J?\u0010%\u001a\u00028\u00002!\u0010\u0015\u001a\u001d\u0012\u0013\u0012\u00118\u0000\u00a2\u0006\u000c\u0008\u0017\u0012\u0008\u0008\u0018\u0012\u0004\u0008\u0008(\u0019\u0012\u0004\u0012\u00020\u00140\u0016H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001\u00a2\u0006\u0002\u0010\'JA\u0010(\u001a\u0004\u0018\u00018\u00002!\u0010\u0015\u001a\u001d\u0012\u0013\u0012\u00118\u0000\u00a2\u0006\u000c\u0008\u0017\u0012\u0008\u0008\u0018\u0012\u0004\u0008\u0008(\u0019\u0012\u0004\u0012\u00020\u00140\u0016H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001\u00a2\u0006\u0002\u0010\'J:\u0010)\u001a\u00020*2!\u0010+\u001a\u001d\u0012\u0013\u0012\u00118\u0000\u00a2\u0006\u000c\u0008\u0017\u0012\u0008\u0008\u0018\u0012\u0004\u0008\u0008(\u0019\u0012\u0004\u0012\u00020*0\u0016H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001J:\u0010,\u001a\u00020*2!\u0010+\u001a\u001d\u0012\u0013\u0012\u00110\u0005\u00a2\u0006\u000c\u0008\u0017\u0012\u0008\u0008\u0018\u0012\u0004\u0008\u0008(-\u0012\u0004\u0012\u00020*0\u0016H\u0081\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001J\u0008\u0010.\u001a\u00020\u0005H\u0016J\u0006\u0010/\u001a\u00020\u0014J\u0006\u00100\u001a\u00020\u0014JR\u00101\u001a\u0002022\u0008\u0008\u0002\u00103\u001a\u0002042\u0008\u0008\u0002\u00105\u001a\u0002042\u0008\u0008\u0002\u00106\u001a\u0002042\u0008\u0008\u0002\u00107\u001a\u00020\u00052\u0008\u0008\u0002\u00108\u001a\u0002042\u0016\u0008\u0002\u00109\u001a\u0010\u0012\u0004\u0012\u00028\u0000\u0012\u0004\u0012\u000204\u0018\u00010\u0016H\u0007J\u0006\u0010:\u001a\u00020\u0014J\u0008\u0010;\u001a\u000202H\u0016R\u0012\u0010\u0004\u001a\u00020\u00058\u0000@\u0000X\u0081\u000e\u00a2\u0006\u0002\n\u0000R\u0012\u0010\u0006\u001a\u00020\u00058\u0000@\u0000X\u0081\u000e\u00a2\u0006\u0002\n\u0000R\u0011\u0010\u0007\u001a\u00020\u00058G\u00a2\u0006\u0006\u001a\u0004\u0008\u0008\u0010\tR\"\u0010\n\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00020\u000b8\u0000@\u0000X\u0081\u000e\u00a2\u0006\n\n\u0002\u0010\r\u0012\u0004\u0008\u000c\u0010\u0003R\u0018\u0010\u000e\u001a\u00020\u000f8\u0000@\u0000X\u0081\u000e\u00a2\u0006\u0008\n\u0000\u0012\u0004\u0008\u0010\u0010\u0003R\u0011\u0010\u0011\u001a\u00020\u00058G\u00a2\u0006\u0006\u001a\u0004\u0008\u0012\u0010\t\u0082\u0001\u0001=\u0082\u0002\u0007\n\u0005\u0008\u009920\u0001\u00a8\u0006>"
+        "\u0000\\\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0005\n\u0002\u0010\u0011\n\u0002\u0008\u0003\n\u0002\u0010\u0016\n\u0002\u0008\u0004\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\"\n\u0002\u0008\r\n\u0002\u0010\u0002\n\u0002\u0008\u0007\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\r\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0000\u00086\u0018\u0000*\u0004\u0008\u0000\u0010\u00012\u00020\u0002B\u0007\u0008\u0004\u00a2\u0006\u0002\u0010\u0003J:\u0010\u0013\u001a\u00020\u00142!\u0010\u0015\u001a\u001d\u0012\u0013\u0012\u00118\u0000\u00a2\u0006\u000c\u0008\u0017\u0012\u0008\u0008\u0018\u0012\u0004\u0008\u0008(\u0019\u0012\u0004\u0012\u00020\u00140\u0016H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001J\u0006\u0010\u001a\u001a\u00020\u0014J:\u0010\u001a\u001a\u00020\u00142!\u0010\u0015\u001a\u001d\u0012\u0013\u0012\u00118\u0000\u00a2\u0006\u000c\u0008\u0017\u0012\u0008\u0008\u0018\u0012\u0004\u0008\u0008(\u0019\u0012\u0004\u0012\u00020\u00140\u0016H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001J\u000c\u0010\u001b\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u001cJ\u0016\u0010\u001d\u001a\u00020\u00142\u0006\u0010\u0019\u001a\u00028\u0000H\u0086\u0002\u00a2\u0006\u0002\u0010\u001eJ\u0008\u0010\u001f\u001a\u00020\u0005H\u0007J:\u0010\u001f\u001a\u00020\u00052!\u0010\u0015\u001a\u001d\u0012\u0013\u0012\u00118\u0000\u00a2\u0006\u000c\u0008\u0017\u0012\u0008\u0008\u0018\u0012\u0004\u0008\u0008(\u0019\u0012\u0004\u0012\u00020\u00140\u0016H\u0087\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001J\u0013\u0010 \u001a\u00020\u00142\u0008\u0010!\u001a\u0004\u0018\u00010\u0002H\u0096\u0002J\u0018\u0010\"\u001a\u00020\u00052\u0006\u0010\u0019\u001a\u00028\u0000H\u0080\u0008\u00a2\u0006\u0004\u0008#\u0010$J\u000b\u0010%\u001a\u00028\u0000\u00a2\u0006\u0002\u0010&J?\u0010%\u001a\u00028\u00002!\u0010\u0015\u001a\u001d\u0012\u0013\u0012\u00118\u0000\u00a2\u0006\u000c\u0008\u0017\u0012\u0008\u0008\u0018\u0012\u0004\u0008\u0008(\u0019\u0012\u0004\u0012\u00020\u00140\u0016H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001\u00a2\u0006\u0002\u0010\'JA\u0010(\u001a\u0004\u0018\u00018\u00002!\u0010\u0015\u001a\u001d\u0012\u0013\u0012\u00118\u0000\u00a2\u0006\u000c\u0008\u0017\u0012\u0008\u0008\u0018\u0012\u0004\u0008\u0008(\u0019\u0012\u0004\u0012\u00020\u00140\u0016H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001\u00a2\u0006\u0002\u0010\'J:\u0010)\u001a\u00020*2!\u0010+\u001a\u001d\u0012\u0013\u0012\u00118\u0000\u00a2\u0006\u000c\u0008\u0017\u0012\u0008\u0008\u0018\u0012\u0004\u0008\u0008(\u0019\u0012\u0004\u0012\u00020*0\u0016H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001J:\u0010,\u001a\u00020*2!\u0010+\u001a\u001d\u0012\u0013\u0012\u00110\u0005\u00a2\u0006\u000c\u0008\u0017\u0012\u0008\u0008\u0018\u0012\u0004\u0008\u0008(-\u0012\u0004\u0012\u00020*0\u0016H\u0081\u0008\u00f8\u0001\u0000\u0082\u0002\u0008\n\u0006\u0008\u0001\u0012\u0002\u0010\u0001J\u0008\u0010.\u001a\u00020\u0005H\u0016J\u0006\u0010/\u001a\u00020\u0014J\u0006\u00100\u001a\u00020\u0014JR\u00101\u001a\u0002022\u0008\u0008\u0002\u00103\u001a\u0002042\u0008\u0008\u0002\u00105\u001a\u0002042\u0008\u0008\u0002\u00106\u001a\u0002042\u0008\u0008\u0002\u00107\u001a\u00020\u00052\u0008\u0008\u0002\u00108\u001a\u0002042\u0016\u0008\u0002\u00109\u001a\u0010\u0012\u0004\u0012\u00028\u0000\u0012\u0004\u0012\u000204\u0018\u00010\u0016H\u0007J\u0006\u0010:\u001a\u00020\u0014J\u0008\u0010;\u001a\u000202H\u0016R\u0012\u0010\u0004\u001a\u00020\u00058\u0000@\u0000X\u0081\u000e\u00a2\u0006\u0002\n\u0000R\u0012\u0010\u0006\u001a\u00020\u00058\u0000@\u0000X\u0081\u000e\u00a2\u0006\u0002\n\u0000R\u0011\u0010\u0007\u001a\u00020\u00058G\u00a2\u0006\u0006\u001a\u0004\u0008\u0008\u0010\tR\"\u0010\n\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00020\u000b8\u0000@\u0000X\u0081\u000e\u00a2\u0006\n\n\u0002\u0010\r\u0012\u0004\u0008\u000c\u0010\u0003R\u0018\u0010\u000e\u001a\u00020\u000f8\u0000@\u0000X\u0081\u000e\u00a2\u0006\u0008\n\u0000\u0012\u0004\u0008\u0010\u0010\u0003R\u0011\u0010\u0011\u001a\u00020\u00058G\u00a2\u0006\u0006\u001a\u0004\u0008\u0012\u0010\t\u0082\u0001\u0001<\u0082\u0002\u0007\n\u0005\u0008\u009920\u0001\u00a8\u0006="
     }
     d2 = {
         "Landroidx/collection/ScatterSet;",
@@ -88,14 +82,13 @@
         "transform",
         "none",
         "toString",
-        "SetWrapper",
         "Landroidx/collection/MutableScatterSet;",
         "collection"
     }
     k = 0x1
     mv = {
         0x1,
-        0x8,
+        0x9,
         0x0
     }
     xi = 0x30
@@ -116,15 +109,15 @@
 .method private constructor <init>()V
     .locals 1
 
-    .line 138
+    .line 115
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 145
+    .line 120
     sget-object v0, Landroidx/collection/ScatterMapKt;->EmptyGroup:[J
 
     iput-object v0, p0, Landroidx/collection/ScatterSet;->metadata:[J
 
-    .line 149
+    .line 122
     sget-object v0, Landroidx/collection/internal/ContainerHelpersKt;->EMPTY_OBJECTS:[Ljava/lang/Object;
 
     iput-object v0, p0, Landroidx/collection/ScatterSet;->elements:[Ljava/lang/Object;
@@ -161,7 +154,7 @@
 
     if-eqz p8, :cond_0
 
-    .line 343
+    .line 297
     const-string p1, ", "
 
     check-cast p1, Ljava/lang/CharSequence;
@@ -169,12 +162,12 @@
     :cond_0
     and-int/lit8 p8, p7, 0x2
 
-    .line 342
+    .line 296
     const-string v0, ""
 
     if-eqz p8, :cond_1
 
-    .line 344
+    .line 298
     move-object p2, v0
 
     check-cast p2, Ljava/lang/CharSequence;
@@ -184,7 +177,7 @@
 
     if-eqz p8, :cond_2
 
-    .line 345
+    .line 299
     move-object p3, v0
 
     check-cast p3, Ljava/lang/CharSequence;
@@ -201,7 +194,7 @@
 
     if-eqz p8, :cond_4
 
-    .line 347
+    .line 301
     const-string p5, "..."
 
     check-cast p5, Ljava/lang/CharSequence;
@@ -228,7 +221,7 @@
 
     move-object p2, p0
 
-    .line 342
+    .line 296
     invoke-virtual/range {p2 .. p8}, Landroidx/collection/ScatterSet;->joinToString(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/functions/Function1;)Ljava/lang/String;
 
     move-result-object p0
@@ -248,7 +241,7 @@
 
 # virtual methods
 .method public final all(Lkotlin/jvm/functions/Function1;)Z
-    .locals 14
+    .locals 13
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -259,137 +252,137 @@
         }
     .end annotation
 
-    const-string v0, "predicate"
+    const-string/jumbo v0, "predicate"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1206
+    .line 1310
     iget-object v0, p0, Landroidx/collection/ScatterSet;->elements:[Ljava/lang/Object;
 
-    .line 1210
-    iget-object v1, p0, Landroidx/collection/ScatterSet;->metadata:[J
+    .line 1313
+    iget-object p0, p0, Landroidx/collection/ScatterSet;->metadata:[J
 
-    .line 1211
-    array-length v2, v1
+    .line 1314
+    array-length v1, p0
 
-    add-int/lit8 v2, v2, -0x2
+    add-int/lit8 v1, v1, -0x2
 
-    if-ltz v2, :cond_3
+    if-ltz v1, :cond_3
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    move v4, v3
+    move v3, v2
 
-    .line 1214
+    .line 1317
     :goto_0
-    aget-wide v5, v1, v4
+    aget-wide v4, p0, v3
 
-    not-long v7, v5
+    not-long v6, v4
 
-    const/4 v9, 0x7
+    const/4 v8, 0x7
 
-    shl-long/2addr v7, v9
+    shl-long/2addr v6, v8
 
-    and-long/2addr v7, v5
+    and-long/2addr v6, v4
 
-    const-wide v9, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
+    const-wide v8, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
 
-    and-long/2addr v7, v9
+    and-long/2addr v6, v8
 
-    cmp-long v7, v7, v9
+    cmp-long v6, v6, v8
 
-    if-eqz v7, :cond_2
+    if-eqz v6, :cond_2
 
-    sub-int v7, v4, v2
+    sub-int v6, v3, v1
 
-    not-int v7, v7
+    not-int v6, v6
 
-    ushr-int/lit8 v7, v7, 0x1f
+    ushr-int/lit8 v6, v6, 0x1f
 
-    const/16 v8, 0x8
+    const/16 v7, 0x8
 
-    rsub-int/lit8 v7, v7, 0x8
+    rsub-int/lit8 v6, v6, 0x8
 
-    move v9, v3
+    move v8, v2
 
     :goto_1
-    if-ge v9, v7, :cond_1
+    if-ge v8, v6, :cond_1
 
-    const-wide/16 v10, 0xff
+    const-wide/16 v9, 0xff
 
-    and-long/2addr v10, v5
+    and-long/2addr v9, v4
 
-    const-wide/16 v12, 0x80
+    const-wide/16 v11, 0x80
 
-    cmp-long v10, v10, v12
+    cmp-long v9, v9, v11
 
-    if-gez v10, :cond_0
+    if-gez v9, :cond_0
 
-    shl-int/lit8 v10, v4, 0x3
+    shl-int/lit8 v9, v3, 0x3
 
-    add-int/2addr v10, v9
+    add-int/2addr v9, v8
 
-    .line 1223
-    aget-object v10, v0, v10
+    .line 1311
+    aget-object v9, v0, v9
 
-    .line 285
-    invoke-interface {p1, v10}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 245
+    invoke-interface {p1, v9}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v10
+    move-result-object v9
 
-    check-cast v10, Ljava/lang/Boolean;
+    check-cast v9, Ljava/lang/Boolean;
 
-    invoke-virtual {v10}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v9}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result v10
+    move-result v9
 
-    if-nez v10, :cond_0
+    if-nez v9, :cond_0
 
-    return v3
+    return v2
 
     :cond_0
-    shr-long/2addr v5, v8
+    shr-long/2addr v4, v7
 
-    add-int/lit8 v9, v9, 0x1
+    add-int/lit8 v8, v8, 0x1
 
     goto :goto_1
 
     :cond_1
-    if-ne v7, v8, :cond_3
+    if-ne v6, v7, :cond_3
 
     :cond_2
-    if-eq v4, v2, :cond_3
+    if-eq v3, v1, :cond_3
 
-    add-int/lit8 v4, v4, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_3
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 .end method
 
 .method public final any()Z
-    .locals 1
+    .locals 0
 
-    .line 179
-    iget v0, p0, Landroidx/collection/ScatterSet;->_size:I
+    .line 146
+    iget p0, p0, Landroidx/collection/ScatterSet;->_size:I
 
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public final any(Lkotlin/jvm/functions/Function1;)Z
-    .locals 14
+    .locals 13
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -400,115 +393,115 @@
         }
     .end annotation
 
-    const-string v0, "predicate"
+    const-string/jumbo v0, "predicate"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1233
+    .line 1335
     iget-object v0, p0, Landroidx/collection/ScatterSet;->elements:[Ljava/lang/Object;
 
-    .line 1237
-    iget-object v1, p0, Landroidx/collection/ScatterSet;->metadata:[J
+    .line 1338
+    iget-object p0, p0, Landroidx/collection/ScatterSet;->metadata:[J
 
-    .line 1238
-    array-length v2, v1
+    .line 1339
+    array-length v1, p0
 
-    add-int/lit8 v2, v2, -0x2
+    add-int/lit8 v1, v1, -0x2
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    if-ltz v2, :cond_3
+    if-ltz v1, :cond_3
 
-    move v4, v3
+    move v3, v2
 
-    .line 1241
+    .line 1342
     :goto_0
-    aget-wide v5, v1, v4
+    aget-wide v4, p0, v3
 
-    not-long v7, v5
+    not-long v6, v4
 
-    const/4 v9, 0x7
+    const/4 v8, 0x7
 
-    shl-long/2addr v7, v9
+    shl-long/2addr v6, v8
 
-    and-long/2addr v7, v5
+    and-long/2addr v6, v4
 
-    const-wide v9, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
+    const-wide v8, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
 
-    and-long/2addr v7, v9
+    and-long/2addr v6, v8
 
-    cmp-long v7, v7, v9
+    cmp-long v6, v6, v8
 
-    if-eqz v7, :cond_2
+    if-eqz v6, :cond_2
 
-    sub-int v7, v4, v2
+    sub-int v6, v3, v1
 
-    not-int v7, v7
+    not-int v6, v6
 
-    ushr-int/lit8 v7, v7, 0x1f
+    ushr-int/lit8 v6, v6, 0x1f
 
-    const/16 v8, 0x8
+    const/16 v7, 0x8
 
-    rsub-int/lit8 v7, v7, 0x8
+    rsub-int/lit8 v6, v6, 0x8
 
-    move v9, v3
+    move v8, v2
 
     :goto_1
-    if-ge v9, v7, :cond_1
+    if-ge v8, v6, :cond_1
 
-    const-wide/16 v10, 0xff
+    const-wide/16 v9, 0xff
 
-    and-long/2addr v10, v5
+    and-long/2addr v9, v4
 
-    const-wide/16 v12, 0x80
+    const-wide/16 v11, 0x80
 
-    cmp-long v10, v10, v12
+    cmp-long v9, v9, v11
 
-    if-gez v10, :cond_0
+    if-gez v9, :cond_0
 
-    shl-int/lit8 v10, v4, 0x3
+    shl-int/lit8 v9, v3, 0x3
 
-    add-int/2addr v10, v9
+    add-int/2addr v9, v8
 
-    .line 1250
-    aget-object v10, v0, v10
+    .line 1336
+    aget-object v9, v0, v9
 
-    .line 298
-    invoke-interface {p1, v10}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 257
+    invoke-interface {p1, v9}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v10
+    move-result-object v9
 
-    check-cast v10, Ljava/lang/Boolean;
+    check-cast v9, Ljava/lang/Boolean;
 
-    invoke-virtual {v10}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v9}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result v10
+    move-result v9
 
-    if-eqz v10, :cond_0
+    if-eqz v9, :cond_0
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_0
-    shr-long/2addr v5, v8
+    shr-long/2addr v4, v7
 
-    add-int/lit8 v9, v9, 0x1
+    add-int/lit8 v8, v8, 0x1
 
     goto :goto_1
 
     :cond_1
-    if-ne v7, v8, :cond_3
+    if-ne v6, v7, :cond_3
 
     :cond_2
-    if-eq v4, v2, :cond_3
+    if-eq v3, v1, :cond_3
 
-    add-int/lit8 v4, v4, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_3
-    return v3
+    return v2
 .end method
 
 .method public final asSet()Ljava/util/Set;
@@ -521,10 +514,10 @@
         }
     .end annotation
 
-    .line 473
-    new-instance v0, Landroidx/collection/ScatterSet$SetWrapper;
+    .line 428
+    new-instance v0, Landroidx/collection/SetWrapper;
 
-    invoke-direct {v0, p0}, Landroidx/collection/ScatterSet$SetWrapper;-><init>(Landroidx/collection/ScatterSet;)V
+    invoke-direct {v0, p0}, Landroidx/collection/SetWrapper;-><init>(Landroidx/collection/ScatterSet;)V
 
     check-cast v0, Ljava/util/Set;
 
@@ -547,7 +540,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 1287
+    .line 1385
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v3
@@ -568,7 +561,7 @@
 
     and-int/lit8 v4, v3, 0x7f
 
-    .line 1292
+    .line 1390
     iget v5, v0, Landroidx/collection/ScatterSet;->_capacity:I
 
     ushr-int/lit8 v3, v3, 0x7
@@ -577,7 +570,7 @@
 
     move v6, v2
 
-    .line 1297
+    .line 1395
     :goto_1
     iget-object v7, v0, Landroidx/collection/ScatterSet;->metadata:[J
 
@@ -587,7 +580,7 @@
 
     shl-int/lit8 v9, v9, 0x3
 
-    .line 1300
+    .line 1398
     aget-wide v10, v7, v8
 
     ushr-long/2addr v10, v9
@@ -639,7 +632,7 @@
 
     if-eqz v11, :cond_2
 
-    .line 1309
+    .line 1407
     invoke-static {v9, v10}, Ljava/lang/Long;->numberOfTrailingZeros(J)I
 
     move-result v11
@@ -650,7 +643,7 @@
 
     and-int/2addr v11, v5
 
-    .line 1310
+    .line 1408
     iget-object v15, v0, Landroidx/collection/ScatterSet;->elements:[Ljava/lang/Object;
 
     aget-object v15, v15, v11
@@ -708,18 +701,18 @@
 .end method
 
 .method public final count()I
-    .locals 1
+    .locals 0
 
-    .line 307
+    .line 262
     invoke-virtual {p0}, Landroidx/collection/ScatterSet;->getSize()I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public final count(Lkotlin/jvm/functions/Function1;)I
-    .locals 17
+    .locals 14
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -730,265 +723,257 @@
         }
     .end annotation
 
-    move-object/from16 v0, p0
+    const-string/jumbo v0, "predicate"
 
-    move-object/from16 v1, p1
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v2, "predicate"
+    .line 1360
+    iget-object v0, p0, Landroidx/collection/ScatterSet;->elements:[Ljava/lang/Object;
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 1363
+    iget-object p0, p0, Landroidx/collection/ScatterSet;->metadata:[J
 
-    .line 1260
-    iget-object v2, v0, Landroidx/collection/ScatterSet;->elements:[Ljava/lang/Object;
+    .line 1364
+    array-length v1, p0
 
-    .line 1264
-    iget-object v3, v0, Landroidx/collection/ScatterSet;->metadata:[J
+    add-int/lit8 v1, v1, -0x2
 
-    .line 1265
-    array-length v4, v3
+    const/4 v2, 0x0
 
-    add-int/lit8 v4, v4, -0x2
+    if-ltz v1, :cond_5
 
-    const/4 v5, 0x0
+    move v3, v2
 
-    if-ltz v4, :cond_5
+    move v4, v3
 
-    move v6, v5
-
-    move v7, v6
-
-    .line 1268
+    .line 1367
     :goto_0
-    aget-wide v8, v3, v6
+    aget-wide v5, p0, v3
 
-    not-long v10, v8
+    not-long v7, v5
 
-    const/4 v12, 0x7
+    const/4 v9, 0x7
 
-    shl-long/2addr v10, v12
+    shl-long/2addr v7, v9
 
-    and-long/2addr v10, v8
+    and-long/2addr v7, v5
 
-    const-wide v12, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
+    const-wide v9, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
 
-    and-long/2addr v10, v12
+    and-long/2addr v7, v9
+
+    cmp-long v7, v7, v9
+
+    if-eqz v7, :cond_3
+
+    sub-int v7, v3, v1
+
+    not-int v7, v7
+
+    ushr-int/lit8 v7, v7, 0x1f
+
+    const/16 v8, 0x8
+
+    rsub-int/lit8 v7, v7, 0x8
+
+    move v9, v2
+
+    :goto_1
+    if-ge v9, v7, :cond_1
+
+    const-wide/16 v10, 0xff
+
+    and-long/2addr v10, v5
+
+    const-wide/16 v12, 0x80
 
     cmp-long v10, v10, v12
 
-    if-eqz v10, :cond_3
+    if-gez v10, :cond_0
 
-    sub-int v10, v6, v4
+    shl-int/lit8 v10, v3, 0x3
 
-    not-int v10, v10
+    add-int/2addr v10, v9
 
-    ushr-int/lit8 v10, v10, 0x1f
+    .line 1361
+    aget-object v10, v0, v10
 
-    const/16 v11, 0x8
+    .line 274
+    invoke-interface {p1, v10}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    rsub-int/lit8 v10, v10, 0x8
+    move-result-object v10
 
-    move v12, v5
+    check-cast v10, Ljava/lang/Boolean;
 
-    :goto_1
-    if-ge v12, v10, :cond_1
+    invoke-virtual {v10}, Ljava/lang/Boolean;->booleanValue()Z
 
-    const-wide/16 v13, 0xff
+    move-result v10
 
-    and-long/2addr v13, v8
+    if-eqz v10, :cond_0
 
-    const-wide/16 v15, 0x80
-
-    cmp-long v13, v13, v15
-
-    if-gez v13, :cond_0
-
-    shl-int/lit8 v13, v6, 0x3
-
-    add-int/2addr v13, v12
-
-    .line 1277
-    aget-object v13, v2, v13
-
-    .line 319
-    invoke-interface {v1, v13}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v13
-
-    check-cast v13, Ljava/lang/Boolean;
-
-    invoke-virtual {v13}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v13
-
-    if-eqz v13, :cond_0
-
-    add-int/lit8 v7, v7, 0x1
+    add-int/lit8 v4, v4, 0x1
 
     :cond_0
-    shr-long/2addr v8, v11
+    shr-long/2addr v5, v8
 
-    add-int/lit8 v12, v12, 0x1
+    add-int/lit8 v9, v9, 0x1
 
     goto :goto_1
 
     :cond_1
-    if-ne v10, v11, :cond_2
+    if-ne v7, v8, :cond_2
 
     goto :goto_2
 
     :cond_2
-    return v7
+    return v4
 
     :cond_3
     :goto_2
-    if-eq v6, v4, :cond_4
+    if-eq v3, v1, :cond_4
 
-    add-int/lit8 v6, v6, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_4
-    return v7
+    return v4
 
     :cond_5
-    return v5
+    return v2
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
-    .locals 17
+    .locals 14
 
-    move-object/from16 v0, p0
+    const/4 v0, 0x1
 
-    move-object/from16 v1, p1
+    if-ne p1, p0, :cond_0
 
-    const/4 v2, 0x1
+    return v0
 
-    if-ne v1, v0, :cond_0
+    .line 354
+    :cond_0
+    instance-of v1, p1, Landroidx/collection/ScatterSet;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
 
     return v2
 
-    .line 397
-    :cond_0
-    instance-of v3, v1, Landroidx/collection/ScatterSet;
-
-    const/4 v4, 0x0
-
-    if-nez v3, :cond_1
-
-    return v4
-
-    .line 400
+    .line 357
     :cond_1
-    check-cast v1, Landroidx/collection/ScatterSet;
+    check-cast p1, Landroidx/collection/ScatterSet;
 
-    invoke-virtual {v1}, Landroidx/collection/ScatterSet;->getSize()I
+    invoke-virtual {p1}, Landroidx/collection/ScatterSet;->getSize()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroidx/collection/ScatterSet;->getSize()I
 
     move-result v3
 
-    invoke-virtual {v0}, Landroidx/collection/ScatterSet;->getSize()I
+    if-eq v1, v3, :cond_2
 
-    move-result v5
+    return v2
 
-    if-eq v3, v5, :cond_2
-
-    return v4
-
-    .line 1380
+    .line 1474
     :cond_2
-    iget-object v3, v0, Landroidx/collection/ScatterSet;->elements:[Ljava/lang/Object;
+    iget-object v1, p0, Landroidx/collection/ScatterSet;->elements:[Ljava/lang/Object;
 
-    .line 1384
-    iget-object v5, v0, Landroidx/collection/ScatterSet;->metadata:[J
+    .line 1477
+    iget-object p0, p0, Landroidx/collection/ScatterSet;->metadata:[J
 
-    .line 1385
-    array-length v6, v5
+    .line 1478
+    array-length v3, p0
 
-    add-int/lit8 v6, v6, -0x2
+    add-int/lit8 v3, v3, -0x2
 
-    if-ltz v6, :cond_6
+    if-ltz v3, :cond_6
 
-    move v7, v4
+    move v4, v2
 
-    .line 1388
+    .line 1481
     :goto_0
-    aget-wide v8, v5, v7
+    aget-wide v5, p0, v4
 
-    not-long v10, v8
+    not-long v7, v5
 
-    const/4 v12, 0x7
+    const/4 v9, 0x7
 
-    shl-long/2addr v10, v12
+    shl-long/2addr v7, v9
 
-    and-long/2addr v10, v8
+    and-long/2addr v7, v5
 
-    const-wide v12, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
+    const-wide v9, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
 
-    and-long/2addr v10, v12
+    and-long/2addr v7, v9
+
+    cmp-long v7, v7, v9
+
+    if-eqz v7, :cond_5
+
+    sub-int v7, v4, v3
+
+    not-int v7, v7
+
+    ushr-int/lit8 v7, v7, 0x1f
+
+    const/16 v8, 0x8
+
+    rsub-int/lit8 v7, v7, 0x8
+
+    move v9, v2
+
+    :goto_1
+    if-ge v9, v7, :cond_4
+
+    const-wide/16 v10, 0xff
+
+    and-long/2addr v10, v5
+
+    const-wide/16 v12, 0x80
 
     cmp-long v10, v10, v12
 
-    if-eqz v10, :cond_5
+    if-gez v10, :cond_3
 
-    sub-int v10, v7, v6
+    shl-int/lit8 v10, v4, 0x3
 
-    not-int v10, v10
+    add-int/2addr v10, v9
 
-    ushr-int/lit8 v10, v10, 0x1f
+    .line 1475
+    aget-object v10, v1, v10
 
-    const/16 v11, 0x8
+    .line 364
+    invoke-virtual {p1, v10}, Landroidx/collection/ScatterSet;->contains(Ljava/lang/Object;)Z
 
-    rsub-int/lit8 v10, v10, 0x8
+    move-result v10
 
-    move v12, v4
+    if-nez v10, :cond_3
 
-    :goto_1
-    if-ge v12, v10, :cond_4
-
-    const-wide/16 v13, 0xff
-
-    and-long/2addr v13, v8
-
-    const-wide/16 v15, 0x80
-
-    cmp-long v13, v13, v15
-
-    if-gez v13, :cond_3
-
-    shl-int/lit8 v13, v7, 0x3
-
-    add-int/2addr v13, v12
-
-    .line 1397
-    aget-object v13, v3, v13
-
-    .line 408
-    invoke-virtual {v1, v13}, Landroidx/collection/ScatterSet;->contains(Ljava/lang/Object;)Z
-
-    move-result v13
-
-    if-nez v13, :cond_3
-
-    return v4
+    return v2
 
     :cond_3
-    shr-long/2addr v8, v11
+    shr-long/2addr v5, v8
 
-    add-int/lit8 v12, v12, 0x1
+    add-int/lit8 v9, v9, 0x1
 
     goto :goto_1
 
     :cond_4
-    if-ne v10, v11, :cond_6
+    if-ne v7, v8, :cond_6
 
     :cond_5
-    if-eq v7, v6, :cond_6
+    if-eq v4, v3, :cond_6
 
-    add-int/lit8 v7, v7, 0x1
+    add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
     :cond_6
-    return v2
+    return v0
 .end method
 
 .method public final findElementIndex$collection(Ljava/lang/Object;)I
@@ -1003,7 +988,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 1406
+    .line 1498
     invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
@@ -1024,7 +1009,7 @@
 
     and-int/lit8 v2, v1, 0x7f
 
-    .line 436
+    .line 393
     iget v3, p0, Landroidx/collection/ScatterSet;->_capacity:I
 
     ushr-int/lit8 v1, v1, 0x7
@@ -1032,7 +1017,7 @@
     :goto_1
     and-int/2addr v1, v3
 
-    .line 440
+    .line 397
     iget-object v4, p0, Landroidx/collection/ScatterSet;->metadata:[J
 
     shr-int/lit8 v5, v1, 0x3
@@ -1041,7 +1026,7 @@
 
     shl-int/lit8 v6, v6, 0x3
 
-    .line 1413
+    .line 1505
     aget-wide v7, v4, v5
 
     ushr-long/2addr v7, v6
@@ -1091,7 +1076,7 @@
 
     if-eqz v12, :cond_2
 
-    .line 1419
+    .line 1511
     invoke-static {v6, v7}, Ljava/lang/Long;->numberOfTrailingZeros(J)I
 
     move-result v10
@@ -1102,7 +1087,7 @@
 
     and-int/2addr v10, v3
 
-    .line 444
+    .line 401
     iget-object v11, p0, Landroidx/collection/ScatterSet;->elements:[Ljava/lang/Object;
 
     aget-object v11, v11, v10
@@ -1139,9 +1124,9 @@
 
     if-eqz v4, :cond_3
 
-    const/4 p1, -0x1
+    const/4 p0, -0x1
 
-    return p1
+    return p0
 
     :cond_3
     add-int/lit8 v0, v0, 0x8
@@ -1152,493 +1137,21 @@
 .end method
 
 .method public final first()Ljava/lang/Object;
-    .locals 14
+    .locals 13
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TE;"
         }
     .end annotation
 
-    .line 1102
+    .line 1212
     iget-object v0, p0, Landroidx/collection/ScatterSet;->elements:[Ljava/lang/Object;
 
-    .line 1106
-    iget-object v1, p0, Landroidx/collection/ScatterSet;->metadata:[J
-
-    .line 1107
-    array-length v2, v1
-
-    add-int/lit8 v2, v2, -0x2
-
-    if-ltz v2, :cond_3
-
-    const/4 v3, 0x0
-
-    move v4, v3
-
-    .line 1110
-    :goto_0
-    aget-wide v5, v1, v4
-
-    not-long v7, v5
-
-    const/4 v9, 0x7
-
-    shl-long/2addr v7, v9
-
-    and-long/2addr v7, v5
-
-    const-wide v9, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
-
-    and-long/2addr v7, v9
-
-    cmp-long v7, v7, v9
-
-    if-eqz v7, :cond_2
-
-    sub-int v7, v4, v2
-
-    not-int v7, v7
-
-    ushr-int/lit8 v7, v7, 0x1f
-
-    const/16 v8, 0x8
-
-    rsub-int/lit8 v7, v7, 0x8
-
-    move v9, v3
-
-    :goto_1
-    if-ge v9, v7, :cond_1
-
-    const-wide/16 v10, 0xff
-
-    and-long/2addr v10, v5
-
-    const-wide/16 v12, 0x80
-
-    cmp-long v10, v10, v12
-
-    if-gez v10, :cond_0
-
-    shl-int/lit8 v1, v4, 0x3
-
-    add-int/2addr v1, v9
-
-    .line 1119
-    aget-object v0, v0, v1
-
-    return-object v0
-
-    :cond_0
-    shr-long/2addr v5, v8
-
-    add-int/lit8 v9, v9, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    if-ne v7, v8, :cond_3
-
-    :cond_2
-    if-eq v4, v2, :cond_3
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    .line 202
-    :cond_3
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    const-string v1, "The ScatterSet is empty"
-
-    invoke-direct {v0, v1}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final first(Lkotlin/jvm/functions/Function1;)Ljava/lang/Object;
-    .locals 14
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lkotlin/jvm/functions/Function1<",
-            "-TE;",
-            "Ljava/lang/Boolean;",
-            ">;)TE;"
-        }
-    .end annotation
-
-    const-string v0, "predicate"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 1129
-    iget-object v0, p0, Landroidx/collection/ScatterSet;->elements:[Ljava/lang/Object;
-
-    .line 1133
-    iget-object v1, p0, Landroidx/collection/ScatterSet;->metadata:[J
-
-    .line 1134
-    array-length v2, v1
-
-    add-int/lit8 v2, v2, -0x2
-
-    if-ltz v2, :cond_3
-
-    const/4 v3, 0x0
-
-    move v4, v3
-
-    .line 1137
-    :goto_0
-    aget-wide v5, v1, v4
-
-    not-long v7, v5
-
-    const/4 v9, 0x7
-
-    shl-long/2addr v7, v9
-
-    and-long/2addr v7, v5
-
-    const-wide v9, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
-
-    and-long/2addr v7, v9
-
-    cmp-long v7, v7, v9
-
-    if-eqz v7, :cond_2
-
-    sub-int v7, v4, v2
-
-    not-int v7, v7
-
-    ushr-int/lit8 v7, v7, 0x1f
-
-    const/16 v8, 0x8
-
-    rsub-int/lit8 v7, v7, 0x8
-
-    move v9, v3
-
-    :goto_1
-    if-ge v9, v7, :cond_1
-
-    const-wide/16 v10, 0xff
-
-    and-long/2addr v10, v5
-
-    const-wide/16 v12, 0x80
-
-    cmp-long v10, v10, v12
-
-    if-gez v10, :cond_0
-
-    shl-int/lit8 v10, v4, 0x3
-
-    add-int/2addr v10, v9
-
-    .line 1146
-    aget-object v10, v0, v10
-
-    .line 214
-    invoke-interface {p1, v10}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v11
-
-    check-cast v11, Ljava/lang/Boolean;
-
-    invoke-virtual {v11}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v11
-
-    if-eqz v11, :cond_0
-
-    return-object v10
-
-    :cond_0
-    shr-long/2addr v5, v8
-
-    add-int/lit8 v9, v9, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    if-ne v7, v8, :cond_3
-
-    :cond_2
-    if-eq v4, v2, :cond_3
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    .line 215
-    :cond_3
-    new-instance p1, Ljava/util/NoSuchElementException;
-
-    const-string v0, "Could not find a match"
-
-    invoke-direct {p1, v0}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final firstOrNull(Lkotlin/jvm/functions/Function1;)Ljava/lang/Object;
-    .locals 14
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lkotlin/jvm/functions/Function1<",
-            "-TE;",
-            "Ljava/lang/Boolean;",
-            ">;)TE;"
-        }
-    .end annotation
-
-    const-string v0, "predicate"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 1156
-    iget-object v0, p0, Landroidx/collection/ScatterSet;->elements:[Ljava/lang/Object;
-
-    .line 1160
-    iget-object v1, p0, Landroidx/collection/ScatterSet;->metadata:[J
-
-    .line 1161
-    array-length v2, v1
-
-    add-int/lit8 v2, v2, -0x2
-
-    if-ltz v2, :cond_3
-
-    const/4 v3, 0x0
-
-    move v4, v3
-
-    .line 1164
-    :goto_0
-    aget-wide v5, v1, v4
-
-    not-long v7, v5
-
-    const/4 v9, 0x7
-
-    shl-long/2addr v7, v9
-
-    and-long/2addr v7, v5
-
-    const-wide v9, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
-
-    and-long/2addr v7, v9
-
-    cmp-long v7, v7, v9
-
-    if-eqz v7, :cond_2
-
-    sub-int v7, v4, v2
-
-    not-int v7, v7
-
-    ushr-int/lit8 v7, v7, 0x1f
-
-    const/16 v8, 0x8
-
-    rsub-int/lit8 v7, v7, 0x8
-
-    move v9, v3
-
-    :goto_1
-    if-ge v9, v7, :cond_1
-
-    const-wide/16 v10, 0xff
-
-    and-long/2addr v10, v5
-
-    const-wide/16 v12, 0x80
-
-    cmp-long v10, v10, v12
-
-    if-gez v10, :cond_0
-
-    shl-int/lit8 v10, v4, 0x3
-
-    add-int/2addr v10, v9
-
-    .line 1173
-    aget-object v10, v0, v10
-
-    .line 227
-    invoke-interface {p1, v10}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v11
-
-    check-cast v11, Ljava/lang/Boolean;
-
-    invoke-virtual {v11}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v11
-
-    if-eqz v11, :cond_0
-
-    return-object v10
-
-    :cond_0
-    shr-long/2addr v5, v8
-
-    add-int/lit8 v9, v9, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    if-ne v7, v8, :cond_3
-
-    :cond_2
-    if-eq v4, v2, :cond_3
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    const/4 p1, 0x0
-
-    return-object p1
-.end method
-
-.method public final forEach(Lkotlin/jvm/functions/Function1;)V
-    .locals 14
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lkotlin/jvm/functions/Function1<",
-            "-TE;",
-            "Lkotlin/Unit;",
-            ">;)V"
-        }
-    .end annotation
-
-    const-string v0, "block"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 268
-    iget-object v0, p0, Landroidx/collection/ScatterSet;->elements:[Ljava/lang/Object;
-
-    .line 1185
-    iget-object v1, p0, Landroidx/collection/ScatterSet;->metadata:[J
-
-    .line 1186
-    array-length v2, v1
-
-    add-int/lit8 v2, v2, -0x2
-
-    if-ltz v2, :cond_3
-
-    const/4 v3, 0x0
-
-    move v4, v3
-
-    .line 1189
-    :goto_0
-    aget-wide v5, v1, v4
-
-    not-long v7, v5
-
-    const/4 v9, 0x7
-
-    shl-long/2addr v7, v9
-
-    and-long/2addr v7, v5
-
-    const-wide v9, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
-
-    and-long/2addr v7, v9
-
-    cmp-long v7, v7, v9
-
-    if-eqz v7, :cond_2
-
-    sub-int v7, v4, v2
-
-    not-int v7, v7
-
-    ushr-int/lit8 v7, v7, 0x1f
-
-    const/16 v8, 0x8
-
-    rsub-int/lit8 v7, v7, 0x8
-
-    move v9, v3
-
-    :goto_1
-    if-ge v9, v7, :cond_1
-
-    const-wide/16 v10, 0xff
-
-    and-long/2addr v10, v5
-
-    const-wide/16 v12, 0x80
-
-    cmp-long v10, v10, v12
-
-    if-gez v10, :cond_0
-
-    shl-int/lit8 v10, v4, 0x3
-
-    add-int/2addr v10, v9
-
-    .line 272
-    aget-object v10, v0, v10
-
-    invoke-interface {p1, v10}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    shr-long/2addr v5, v8
-
-    add-int/lit8 v9, v9, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    if-ne v7, v8, :cond_3
-
-    :cond_2
-    if-eq v4, v2, :cond_3
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    return-void
-.end method
-
-.method public final forEachIndex(Lkotlin/jvm/functions/Function1;)V
-    .locals 13
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lkotlin/jvm/functions/Function1<",
-            "-",
-            "Ljava/lang/Integer;",
-            "Lkotlin/Unit;",
-            ">;)V"
-        }
-    .end annotation
-
-    const-string v0, "block"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 238
-    iget-object v0, p0, Landroidx/collection/ScatterSet;->metadata:[J
-
-    .line 239
-    array-length v1, v0
+    .line 1215
+    iget-object p0, p0, Landroidx/collection/ScatterSet;->metadata:[J
+
+    .line 1216
+    array-length v1, p0
 
     add-int/lit8 v1, v1, -0x2
 
@@ -1648,9 +1161,126 @@
 
     move v3, v2
 
-    .line 242
+    .line 1219
     :goto_0
-    aget-wide v4, v0, v3
+    aget-wide v4, p0, v3
+
+    not-long v6, v4
+
+    const/4 v8, 0x7
+
+    shl-long/2addr v6, v8
+
+    and-long/2addr v6, v4
+
+    const-wide v8, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
+
+    and-long/2addr v6, v8
+
+    cmp-long v6, v6, v8
+
+    if-eqz v6, :cond_2
+
+    sub-int v6, v3, v1
+
+    not-int v6, v6
+
+    ushr-int/lit8 v6, v6, 0x1f
+
+    const/16 v7, 0x8
+
+    rsub-int/lit8 v6, v6, 0x8
+
+    move v8, v2
+
+    :goto_1
+    if-ge v8, v6, :cond_1
+
+    const-wide/16 v9, 0xff
+
+    and-long/2addr v9, v4
+
+    const-wide/16 v11, 0x80
+
+    cmp-long v9, v9, v11
+
+    if-gez v9, :cond_0
+
+    shl-int/lit8 p0, v3, 0x3
+
+    add-int/2addr p0, v8
+
+    .line 1213
+    aget-object p0, v0, p0
+
+    return-object p0
+
+    :cond_0
+    shr-long/2addr v4, v7
+
+    add-int/lit8 v8, v8, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    if-ne v6, v7, :cond_3
+
+    :cond_2
+    if-eq v3, v1, :cond_3
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    .line 166
+    :cond_3
+    const-string p0, "The ScatterSet is empty"
+
+    invoke-static {p0}, Landroidx/collection/internal/RuntimeHelpersKt;->throwNoSuchElementExceptionForInline(Ljava/lang/String;)Ljava/lang/Void;
+
+    new-instance p0, Lkotlin/KotlinNothingValueException;
+
+    invoke-direct {p0}, Lkotlin/KotlinNothingValueException;-><init>()V
+
+    throw p0
+.end method
+
+.method public final first(Lkotlin/jvm/functions/Function1;)Ljava/lang/Object;
+    .locals 13
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlin/jvm/functions/Function1<",
+            "-TE;",
+            "Ljava/lang/Boolean;",
+            ">;)TE;"
+        }
+    .end annotation
+
+    const-string/jumbo v0, "predicate"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1237
+    iget-object v0, p0, Landroidx/collection/ScatterSet;->elements:[Ljava/lang/Object;
+
+    .line 1240
+    iget-object p0, p0, Landroidx/collection/ScatterSet;->metadata:[J
+
+    .line 1241
+    array-length v1, p0
+
+    add-int/lit8 v1, v1, -0x2
+
+    if-ltz v1, :cond_3
+
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    .line 1244
+    :goto_0
+    aget-wide v4, p0, v3
 
     not-long v6, v4
 
@@ -1697,10 +1327,261 @@
 
     add-int/2addr v9, v8
 
-    .line 252
-    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    .line 1238
+    aget-object v9, v0, v9
 
-    move-result-object v9
+    .line 179
+    invoke-interface {p1, v9}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v10
+
+    check-cast v10, Ljava/lang/Boolean;
+
+    invoke-virtual {v10}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v10
+
+    if-eqz v10, :cond_0
+
+    return-object v9
+
+    :cond_0
+    shr-long/2addr v4, v7
+
+    add-int/lit8 v8, v8, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    if-ne v6, v7, :cond_3
+
+    :cond_2
+    if-eq v3, v1, :cond_3
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    .line 180
+    :cond_3
+    const-string p0, "Could not find a match"
+
+    invoke-static {p0}, Landroidx/collection/internal/RuntimeHelpersKt;->throwNoSuchElementExceptionForInline(Ljava/lang/String;)Ljava/lang/Void;
+
+    new-instance p0, Lkotlin/KotlinNothingValueException;
+
+    invoke-direct {p0}, Lkotlin/KotlinNothingValueException;-><init>()V
+
+    throw p0
+.end method
+
+.method public final firstOrNull(Lkotlin/jvm/functions/Function1;)Ljava/lang/Object;
+    .locals 13
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlin/jvm/functions/Function1<",
+            "-TE;",
+            "Ljava/lang/Boolean;",
+            ">;)TE;"
+        }
+    .end annotation
+
+    const-string/jumbo v0, "predicate"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1262
+    iget-object v0, p0, Landroidx/collection/ScatterSet;->elements:[Ljava/lang/Object;
+
+    .line 1265
+    iget-object p0, p0, Landroidx/collection/ScatterSet;->metadata:[J
+
+    .line 1266
+    array-length v1, p0
+
+    add-int/lit8 v1, v1, -0x2
+
+    if-ltz v1, :cond_3
+
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    .line 1269
+    :goto_0
+    aget-wide v4, p0, v3
+
+    not-long v6, v4
+
+    const/4 v8, 0x7
+
+    shl-long/2addr v6, v8
+
+    and-long/2addr v6, v4
+
+    const-wide v8, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
+
+    and-long/2addr v6, v8
+
+    cmp-long v6, v6, v8
+
+    if-eqz v6, :cond_2
+
+    sub-int v6, v3, v1
+
+    not-int v6, v6
+
+    ushr-int/lit8 v6, v6, 0x1f
+
+    const/16 v7, 0x8
+
+    rsub-int/lit8 v6, v6, 0x8
+
+    move v8, v2
+
+    :goto_1
+    if-ge v8, v6, :cond_1
+
+    const-wide/16 v9, 0xff
+
+    and-long/2addr v9, v4
+
+    const-wide/16 v11, 0x80
+
+    cmp-long v9, v9, v11
+
+    if-gez v9, :cond_0
+
+    shl-int/lit8 v9, v3, 0x3
+
+    add-int/2addr v9, v8
+
+    .line 1263
+    aget-object v9, v0, v9
+
+    .line 193
+    invoke-interface {p1, v9}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v10
+
+    check-cast v10, Ljava/lang/Boolean;
+
+    invoke-virtual {v10}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v10
+
+    if-eqz v10, :cond_0
+
+    return-object v9
+
+    :cond_0
+    shr-long/2addr v4, v7
+
+    add-int/lit8 v8, v8, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    if-ne v6, v7, :cond_3
+
+    :cond_2
+    if-eq v3, v1, :cond_3
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public final forEach(Lkotlin/jvm/functions/Function1;)V
+    .locals 13
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlin/jvm/functions/Function1<",
+            "-TE;",
+            "Lkotlin/Unit;",
+            ">;)V"
+        }
+    .end annotation
+
+    const-string v0, "block"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 232
+    iget-object v0, p0, Landroidx/collection/ScatterSet;->elements:[Ljava/lang/Object;
+
+    .line 1289
+    iget-object p0, p0, Landroidx/collection/ScatterSet;->metadata:[J
+
+    .line 1290
+    array-length v1, p0
+
+    add-int/lit8 v1, v1, -0x2
+
+    if-ltz v1, :cond_3
+
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    .line 1293
+    :goto_0
+    aget-wide v4, p0, v3
+
+    not-long v6, v4
+
+    const/4 v8, 0x7
+
+    shl-long/2addr v6, v8
+
+    and-long/2addr v6, v4
+
+    const-wide v8, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
+
+    and-long/2addr v6, v8
+
+    cmp-long v6, v6, v8
+
+    if-eqz v6, :cond_2
+
+    sub-int v6, v3, v1
+
+    not-int v6, v6
+
+    ushr-int/lit8 v6, v6, 0x1f
+
+    const/16 v7, 0x8
+
+    rsub-int/lit8 v6, v6, 0x8
+
+    move v8, v2
+
+    :goto_1
+    if-ge v8, v6, :cond_1
+
+    const-wide/16 v9, 0xff
+
+    and-long/2addr v9, v4
+
+    const-wide/16 v11, 0x80
+
+    cmp-long v9, v9, v11
+
+    if-gez v9, :cond_0
+
+    shl-int/lit8 v9, v3, 0x3
+
+    add-int/2addr v9, v8
+
+    .line 233
+    aget-object v9, v0, v9
 
     invoke-interface {p1, v9}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1712,9 +1593,7 @@
     goto :goto_1
 
     :cond_1
-    if-eq v6, v7, :cond_2
-
-    goto :goto_2
+    if-ne v6, v7, :cond_3
 
     :cond_2
     if-eq v3, v1, :cond_3
@@ -1724,53 +1603,171 @@
     goto :goto_0
 
     :cond_3
+    return-void
+.end method
+
+.method public final forEachIndex(Lkotlin/jvm/functions/Function1;)V
+    .locals 12
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlin/jvm/functions/Function1<",
+            "-",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;)V"
+        }
+    .end annotation
+
+    const-string v0, "block"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 201
+    iget-object p0, p0, Landroidx/collection/ScatterSet;->metadata:[J
+
+    .line 202
+    array-length v0, p0
+
+    add-int/lit8 v0, v0, -0x2
+
+    if-ltz v0, :cond_3
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    .line 205
+    :goto_0
+    aget-wide v3, p0, v2
+
+    not-long v5, v3
+
+    const/4 v7, 0x7
+
+    shl-long/2addr v5, v7
+
+    and-long/2addr v5, v3
+
+    const-wide v7, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
+
+    and-long/2addr v5, v7
+
+    cmp-long v5, v5, v7
+
+    if-eqz v5, :cond_2
+
+    sub-int v5, v2, v0
+
+    not-int v5, v5
+
+    ushr-int/lit8 v5, v5, 0x1f
+
+    const/16 v6, 0x8
+
+    rsub-int/lit8 v5, v5, 0x8
+
+    move v7, v1
+
+    :goto_1
+    if-ge v7, v5, :cond_1
+
+    const-wide/16 v8, 0xff
+
+    and-long/2addr v8, v3
+
+    const-wide/16 v10, 0x80
+
+    cmp-long v8, v8, v10
+
+    if-gez v8, :cond_0
+
+    shl-int/lit8 v8, v2, 0x3
+
+    add-int/2addr v8, v7
+
+    .line 215
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    invoke-interface {p1, v8}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
+    shr-long/2addr v3, v6
+
+    add-int/lit8 v7, v7, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    if-eq v5, v6, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    if-eq v2, v0, :cond_3
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_3
     :goto_2
     return-void
 .end method
 
 .method public final getCapacity()I
-    .locals 1
+    .locals 0
 
-    .line 162
-    iget v0, p0, Landroidx/collection/ScatterSet;->_capacity:I
+    .line 134
+    iget p0, p0, Landroidx/collection/ScatterSet;->_capacity:I
 
-    return v0
+    return p0
 .end method
 
 .method public final getSize()I
-    .locals 1
+    .locals 0
 
-    .line 174
-    iget v0, p0, Landroidx/collection/ScatterSet;->_size:I
+    .line 143
+    iget p0, p0, Landroidx/collection/ScatterSet;->_size:I
 
-    return v0
+    return p0
 .end method
 
 .method public hashCode()I
     .locals 15
 
-    .line 1353
-    iget-object v0, p0, Landroidx/collection/ScatterSet;->elements:[Ljava/lang/Object;
+    .line 330
+    iget v0, p0, Landroidx/collection/ScatterSet;->_capacity:I
 
-    .line 1357
-    iget-object v1, p0, Landroidx/collection/ScatterSet;->metadata:[J
+    mul-int/lit8 v0, v0, 0x1f
 
-    .line 1358
-    array-length v2, v1
+    .line 331
+    iget v1, p0, Landroidx/collection/ScatterSet;->_size:I
 
-    add-int/lit8 v2, v2, -0x2
+    add-int/2addr v0, v1
 
-    const/4 v3, 0x0
+    .line 1449
+    iget-object v1, p0, Landroidx/collection/ScatterSet;->elements:[Ljava/lang/Object;
 
-    if-ltz v2, :cond_6
+    .line 1452
+    iget-object v2, p0, Landroidx/collection/ScatterSet;->metadata:[J
 
-    move v4, v3
+    .line 1453
+    array-length v3, v2
+
+    add-int/lit8 v3, v3, -0x2
+
+    if-ltz v3, :cond_5
+
+    const/4 v4, 0x0
 
     move v5, v4
 
-    .line 1361
+    .line 1456
     :goto_0
-    aget-wide v6, v1, v4
+    aget-wide v6, v2, v5
 
     not-long v8, v6
 
@@ -1788,7 +1785,7 @@
 
     if-eqz v8, :cond_4
 
-    sub-int v8, v4, v2
+    sub-int v8, v5, v3
 
     not-int v8, v8
 
@@ -1798,7 +1795,7 @@
 
     rsub-int/lit8 v8, v8, 0x8
 
-    move v10, v3
+    move v10, v4
 
     :goto_1
     if-ge v10, v8, :cond_2
@@ -1813,16 +1810,23 @@
 
     if-gez v11, :cond_1
 
-    shl-int/lit8 v11, v4, 0x3
+    shl-int/lit8 v11, v5, 0x3
 
     add-int/2addr v11, v10
 
-    .line 1370
-    aget-object v11, v0, v11
+    .line 1450
+    aget-object v11, v1, v11
+
+    .line 334
+    invoke-static {v11, p0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v12
+
+    if-nez v12, :cond_1
 
     if-eqz v11, :cond_0
 
-    .line 379
+    .line 335
     invoke-virtual {v11}, Ljava/lang/Object;->hashCode()I
 
     move-result v11
@@ -1830,10 +1834,10 @@
     goto :goto_2
 
     :cond_0
-    move v11, v3
+    move v11, v4
 
     :goto_2
-    add-int/2addr v5, v11
+    add-int/2addr v0, v11
 
     :cond_1
     shr-long/2addr v6, v9
@@ -1848,57 +1852,54 @@
     goto :goto_3
 
     :cond_3
-    return v5
+    return v0
 
     :cond_4
     :goto_3
-    if-eq v4, v2, :cond_5
+    if-eq v5, v3, :cond_5
 
-    add-int/lit8 v4, v4, 0x1
+    add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
     :cond_5
-    return v5
-
-    :cond_6
-    return v3
+    return v0
 .end method
 
 .method public final isEmpty()Z
-    .locals 1
+    .locals 0
 
-    .line 189
-    iget v0, p0, Landroidx/collection/ScatterSet;->_size:I
+    .line 152
+    iget p0, p0, Landroidx/collection/ScatterSet;->_size:I
 
-    if-nez v0, :cond_0
+    if-nez p0, :cond_0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public final isNotEmpty()Z
-    .locals 1
+    .locals 0
 
-    .line 194
-    iget v0, p0, Landroidx/collection/ScatterSet;->_size:I
+    .line 155
+    iget p0, p0, Landroidx/collection/ScatterSet;->_size:I
 
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public final joinToString()Ljava/lang/String;
@@ -1924,15 +1925,15 @@
 
     invoke-static/range {v0 .. v8}, Landroidx/collection/ScatterSet;->joinToString$default(Landroidx/collection/ScatterSet;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    return-object v1
+    return-object p0
 .end method
 
 .method public final joinToString(Ljava/lang/CharSequence;)Ljava/lang/String;
     .locals 10
 
-    const-string v0, "separator"
+    const-string/jumbo v0, "separator"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -1956,19 +1957,19 @@
 
     invoke-static/range {v1 .. v9}, Landroidx/collection/ScatterSet;->joinToString$default(Landroidx/collection/ScatterSet;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final joinToString(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
     .locals 10
 
-    const-string v0, "separator"
+    const-string/jumbo v0, "separator"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "prefix"
+    const-string/jumbo v0, "prefix"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -1992,23 +1993,23 @@
 
     invoke-static/range {v1 .. v9}, Landroidx/collection/ScatterSet;->joinToString$default(Landroidx/collection/ScatterSet;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final joinToString(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
     .locals 10
 
-    const-string v0, "separator"
+    const-string/jumbo v0, "separator"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "prefix"
+    const-string/jumbo v0, "prefix"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "postfix"
+    const-string/jumbo v0, "postfix"
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -2032,23 +2033,23 @@
 
     invoke-static/range {v1 .. v9}, Landroidx/collection/ScatterSet;->joinToString$default(Landroidx/collection/ScatterSet;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final joinToString(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;I)Ljava/lang/String;
     .locals 10
 
-    const-string v0, "separator"
+    const-string/jumbo v0, "separator"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "prefix"
+    const-string/jumbo v0, "prefix"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "postfix"
+    const-string/jumbo v0, "postfix"
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -2072,27 +2073,27 @@
 
     invoke-static/range {v1 .. v9}, Landroidx/collection/ScatterSet;->joinToString$default(Landroidx/collection/ScatterSet;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final joinToString(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;)Ljava/lang/String;
     .locals 10
 
-    const-string v0, "separator"
+    const-string/jumbo v0, "separator"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "prefix"
+    const-string/jumbo v0, "prefix"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "postfix"
+    const-string/jumbo v0, "postfix"
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "truncated"
+    const-string/jumbo v0, "truncated"
 
     invoke-static {p5, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -2116,9 +2117,9 @@
 
     invoke-static/range {v1 .. v9}, Landroidx/collection/ScatterSet;->joinToString$default(Landroidx/collection/ScatterSet;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final joinToString(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/functions/Function1;)Ljava/lang/String;
@@ -2151,85 +2152,85 @@
 
     move-object/from16 v5, p6
 
-    const-string v6, "separator"
+    const-string/jumbo v6, "separator"
 
     invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v6, "prefix"
+    const-string/jumbo v6, "prefix"
 
     invoke-static {v2, v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v6, "postfix"
+    const-string/jumbo v6, "postfix"
 
     invoke-static {v3, v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v6, "truncated"
+    const-string/jumbo v6, "truncated"
 
     invoke-static {v4, v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 349
+    .line 303
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 350
+    .line 304
     invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1326
+    .line 1424
     iget-object v2, v0, Landroidx/collection/ScatterSet;->elements:[Ljava/lang/Object;
 
-    .line 1330
-    iget-object v7, v0, Landroidx/collection/ScatterSet;->metadata:[J
+    .line 1427
+    iget-object v0, v0, Landroidx/collection/ScatterSet;->metadata:[J
 
-    .line 1331
-    array-length v8, v7
+    .line 1428
+    array-length v7, v0
 
-    add-int/lit8 v8, v8, -0x2
+    add-int/lit8 v7, v7, -0x2
 
-    if-ltz v8, :cond_6
-
-    const/4 v10, 0x0
-
-    const/4 v11, 0x0
-
-    .line 1334
-    :goto_0
-    aget-wide v12, v7, v10
-
-    not-long v14, v12
-
-    const/16 v16, 0x7
-
-    shl-long v14, v14, v16
-
-    and-long/2addr v14, v12
-
-    const-wide v16, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
-
-    and-long v14, v14, v16
-
-    cmp-long v14, v14, v16
-
-    if-eqz v14, :cond_5
-
-    sub-int v14, v10, v8
-
-    not-int v14, v14
-
-    ushr-int/lit8 v14, v14, 0x1f
-
-    const/16 v15, 0x8
-
-    rsub-int/lit8 v14, v14, 0x8
+    if-ltz v7, :cond_6
 
     const/4 v9, 0x0
 
+    const/4 v10, 0x0
+
+    .line 1431
+    :goto_0
+    aget-wide v11, v0, v9
+
+    not-long v13, v11
+
+    const/4 v15, 0x7
+
+    shl-long/2addr v13, v15
+
+    and-long/2addr v13, v11
+
+    const-wide v15, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
+
+    and-long/2addr v13, v15
+
+    cmp-long v13, v13, v15
+
+    if-eqz v13, :cond_5
+
+    sub-int v13, v9, v7
+
+    not-int v13, v13
+
+    ushr-int/lit8 v13, v13, 0x1f
+
+    const/16 v14, 0x8
+
+    rsub-int/lit8 v13, v13, 0x8
+
+    const/4 v15, 0x0
+
     :goto_1
-    if-ge v9, v14, :cond_4
+    if-ge v15, v13, :cond_4
 
     const-wide/16 v16, 0xff
 
-    and-long v16, v12, v16
+    and-long v16, v11, v16
 
     const-wide/16 v18, 0x80
 
@@ -2237,101 +2238,97 @@
 
     if-gez v16, :cond_3
 
-    shl-int/lit8 v16, v10, 0x3
+    shl-int/lit8 v16, v9, 0x3
 
-    add-int v16, v16, v9
+    add-int v16, v16, v15
 
-    move/from16 v17, v15
+    .line 1425
+    aget-object v8, v2, v16
 
-    .line 1343
-    aget-object v15, v2, v16
+    move/from16 p2, v14
 
-    move/from16 v0, p4
+    move/from16 v14, p4
 
-    if-ne v11, v0, :cond_0
+    if-ne v10, v14, :cond_0
 
-    .line 354
+    .line 308
     invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     goto :goto_5
 
     :cond_0
-    if-eqz v11, :cond_1
+    if-eqz v10, :cond_1
 
-    .line 358
+    .line 312
     invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     :cond_1
     if-nez v5, :cond_2
 
-    .line 361
-    invoke-virtual {v6, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    .line 315
+    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 363
+    .line 317
     :cond_2
-    invoke-interface {v5, v15}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v5, v8}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v15
+    move-result-object v8
 
-    check-cast v15, Ljava/lang/CharSequence;
+    check-cast v8, Ljava/lang/CharSequence;
 
-    invoke-virtual {v6, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     :goto_2
-    add-int/lit8 v11, v11, 0x1
+    add-int/lit8 v10, v10, 0x1
 
     goto :goto_3
 
     :cond_3
-    move/from16 v0, p4
+    move/from16 p2, v14
 
-    move/from16 v17, v15
+    move/from16 v14, p4
 
     :goto_3
-    shr-long v12, v12, v17
+    shr-long v11, v11, p2
 
-    add-int/lit8 v9, v9, 0x1
+    add-int/lit8 v15, v15, 0x1
 
-    move-object/from16 v0, p0
-
-    move/from16 v15, v17
+    move/from16 v14, p2
 
     goto :goto_1
 
     :cond_4
-    move/from16 v0, p4
+    move v8, v14
 
-    move v9, v15
+    move/from16 v14, p4
 
-    if-ne v14, v9, :cond_6
+    if-ne v13, v8, :cond_6
 
     goto :goto_4
 
     :cond_5
-    move/from16 v0, p4
+    move/from16 v14, p4
 
     :goto_4
-    if-eq v10, v8, :cond_6
+    if-eq v9, v7, :cond_6
 
-    add-int/lit8 v10, v10, 0x1
-
-    move-object/from16 v0, p0
+    add-int/lit8 v9, v9, 0x1
 
     goto :goto_0
 
-    .line 367
+    .line 321
     :cond_6
     invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 349
+    .line 303
     :goto_5
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "StringBuilder().apply(builderAction).toString()"
+    const-string/jumbo v1, "toString(...)"
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -2339,27 +2336,27 @@
 .end method
 
 .method public final none()Z
-    .locals 1
+    .locals 0
 
-    .line 184
-    iget v0, p0, Landroidx/collection/ScatterSet;->_size:I
+    .line 149
+    iget p0, p0, Landroidx/collection/ScatterSet;->_size:I
 
-    if-nez v0, :cond_0
+    if-nez p0, :cond_0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 10
 
-    .line 420
+    .line 377
     const-string v0, "["
 
     move-object v3, v0
@@ -2394,7 +2391,7 @@
 
     invoke-static/range {v1 .. v9}, Landroidx/collection/ScatterSet;->joinToString$default(Landroidx/collection/ScatterSet;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

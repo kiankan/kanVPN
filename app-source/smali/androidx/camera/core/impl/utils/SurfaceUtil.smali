@@ -22,7 +22,7 @@
     .locals 1
 
     .line 30
-    const-string v0, "surface_util_jni"
+    const-string/jumbo v0, "surface_util_jni"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
@@ -41,33 +41,33 @@
 .method public static getSurfaceInfo(Landroid/view/Surface;)Landroidx/camera/core/impl/utils/SurfaceUtil$SurfaceInfo;
     .locals 2
 
-    .line 59
+    .line 58
     invoke-static {p0}, Landroidx/camera/core/impl/utils/SurfaceUtil;->nativeGetSurfaceInfo(Landroid/view/Surface;)[I
 
     move-result-object p0
 
-    .line 60
+    .line 59
     new-instance v0, Landroidx/camera/core/impl/utils/SurfaceUtil$SurfaceInfo;
 
     invoke-direct {v0}, Landroidx/camera/core/impl/utils/SurfaceUtil$SurfaceInfo;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 61
+    .line 60
     aget v1, p0, v1
 
     iput v1, v0, Landroidx/camera/core/impl/utils/SurfaceUtil$SurfaceInfo;->format:I
 
     const/4 v1, 0x1
 
-    .line 62
+    .line 61
     aget v1, p0, v1
 
     iput v1, v0, Landroidx/camera/core/impl/utils/SurfaceUtil$SurfaceInfo;->width:I
 
     const/4 v1, 0x2
 
-    .line 63
+    .line 62
     aget p0, p0, v1
 
     iput p0, v0, Landroidx/camera/core/impl/utils/SurfaceUtil$SurfaceInfo;->height:I

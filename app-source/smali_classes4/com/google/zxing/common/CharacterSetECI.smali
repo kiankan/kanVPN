@@ -470,7 +470,7 @@
     .line 52
     new-instance v0, Lcom/google/zxing/common/CharacterSetECI;
 
-    const-string v2, "windows-1250"
+    const-string/jumbo v2, "windows-1250"
 
     filled-new-array {v2}, [Ljava/lang/String;
 
@@ -487,7 +487,7 @@
     .line 53
     new-instance v0, Lcom/google/zxing/common/CharacterSetECI;
 
-    const-string v2, "windows-1251"
+    const-string/jumbo v2, "windows-1251"
 
     filled-new-array {v2}, [Ljava/lang/String;
 
@@ -504,7 +504,7 @@
     .line 54
     new-instance v0, Lcom/google/zxing/common/CharacterSetECI;
 
-    const-string v2, "windows-1252"
+    const-string/jumbo v2, "windows-1252"
 
     filled-new-array {v2}, [Ljava/lang/String;
 
@@ -523,7 +523,7 @@
     .line 55
     new-instance v0, Lcom/google/zxing/common/CharacterSetECI;
 
-    const-string v2, "windows-1256"
+    const-string/jumbo v2, "windows-1256"
 
     filled-new-array {v2}, [Ljava/lang/String;
 
@@ -988,29 +988,29 @@
 
 # virtual methods
 .method public getCharset()Ljava/nio/charset/Charset;
-    .locals 1
+    .locals 0
 
     .line 102
     invoke-virtual {p0}, Lcom/google/zxing/common/CharacterSetECI;->name()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+    invoke-static {p0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getValue()I
-    .locals 2
+    .locals 1
 
     .line 98
-    iget-object v0, p0, Lcom/google/zxing/common/CharacterSetECI;->values:[I
+    iget-object p0, p0, Lcom/google/zxing/common/CharacterSetECI;->values:[I
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    aget v0, v0, v1
+    aget p0, p0, v0
 
-    return v0
+    return p0
 .end method

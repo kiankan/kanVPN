@@ -31,7 +31,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -62,7 +62,7 @@
 
     const/4 v0, 0x0
 
-    .line 862
+    .line 874
     invoke-direct {p0, v0}, Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$DefaultTab;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
@@ -71,10 +71,10 @@
 
 # virtual methods
 .method public getValue()I
-    .locals 1
+    .locals 0
 
-    .line 863
-    sget v0, Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$DefaultTab$AlbumsTab;->value:I
+    .line 875
+    sget p0, Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$DefaultTab$AlbumsTab;->value:I
 
-    return v0
+    return p0
 .end method

@@ -52,7 +52,7 @@
         }
     .end annotation
 
-    .line 103
+    .line 101
     iput-object p1, p0, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer$1;->this$0:Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer;
 
     iput-object p2, p0, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer$1;->val$newPostedImage:Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer$CacheAnalyzingImageProxy;
@@ -67,10 +67,10 @@
 .method public onFailure(Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 112
-    iget-object p1, p0, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer$1;->val$newPostedImage:Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer$CacheAnalyzingImageProxy;
+    .line 110
+    iget-object p0, p0, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer$1;->val$newPostedImage:Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer$CacheAnalyzingImageProxy;
 
-    invoke-virtual {p1}, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer$CacheAnalyzingImageProxy;->close()V
+    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer$CacheAnalyzingImageProxy;->close()V
 
     return-void
 .end method
@@ -86,7 +86,7 @@
         }
     .end annotation
 
-    .line 103
+    .line 101
     check-cast p1, Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysisNonBlockingAnalyzer$1;->onSuccess(Ljava/lang/Void;)V

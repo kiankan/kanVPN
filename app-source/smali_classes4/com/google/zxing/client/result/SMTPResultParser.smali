@@ -21,94 +21,94 @@
     .line 31
     invoke-static {p1}, Lcom/google/zxing/client/result/SMTPResultParser;->getMassagedText(Lcom/google/zxing/Result;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
     .line 32
-    const-string v0, "smtp:"
+    const-string p1, "smtp:"
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result p1
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    if-nez v0, :cond_0
+    if-nez p1, :cond_0
 
-    const-string v0, "SMTP:"
+    const-string p1, "SMTP:"
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result p1
 
-    if-nez v0, :cond_0
+    if-nez p1, :cond_0
 
-    return-object v1
+    return-object v0
 
     :cond_0
-    const/4 v0, 0x5
+    const/4 p1, 0x5
 
     .line 35
-    invoke-virtual {p1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    const/16 v0, 0x3a
+    const/16 p1, 0x3a
 
     .line 38
-    invoke-virtual {p1, v0}, Ljava/lang/String;->indexOf(I)I
+    invoke-virtual {p0, p1}, Ljava/lang/String;->indexOf(I)I
 
-    move-result v2
+    move-result v1
 
-    if-ltz v2, :cond_2
+    if-ltz v1, :cond_2
 
-    add-int/lit8 v3, v2, 0x1
+    add-int/lit8 v2, v1, 0x1
 
     .line 40
-    invoke-virtual {p1, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    const/4 v4, 0x0
+    const/4 v3, 0x0
 
     .line 41
-    invoke-virtual {p1, v4, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    invoke-virtual {p0, v3, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
     .line 42
-    invoke-virtual {v3, v0}, Ljava/lang/String;->indexOf(I)I
+    invoke-virtual {v2, p1}, Ljava/lang/String;->indexOf(I)I
 
-    move-result v0
+    move-result p1
 
-    if-ltz v0, :cond_1
+    if-ltz p1, :cond_1
 
-    add-int/lit8 v1, v0, 0x1
+    add-int/lit8 v0, p1, 0x1
 
     .line 44
-    invoke-virtual {v3, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 45
-    invoke-virtual {v3, v4, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    invoke-virtual {v2, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v0
 
-    move-object v4, v0
+    .line 45
+    invoke-virtual {v2, v3, p1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
-    move-object v5, v1
+    move-result-object p1
+
+    move-object v4, p1
+
+    move-object v5, v0
 
     goto :goto_0
 
     :cond_1
-    move-object v5, v1
+    move-object v5, v0
 
-    move-object v4, v3
+    move-object v4, v2
 
     goto :goto_0
 
     :cond_2
-    move-object v4, v1
+    move-object v4, v0
 
     move-object v5, v4
 
@@ -116,7 +116,7 @@
     :goto_0
     new-instance v0, Lcom/google/zxing/client/result/EmailAddressParsedResult;
 
-    filled-new-array {p1}, [Ljava/lang/String;
+    filled-new-array {p0}, [Ljava/lang/String;
 
     move-result-object v1
 
@@ -143,7 +143,7 @@
     .line 27
     invoke-virtual {p0, p1}, Lcom/google/zxing/client/result/SMTPResultParser;->parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/EmailAddressParsedResult;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

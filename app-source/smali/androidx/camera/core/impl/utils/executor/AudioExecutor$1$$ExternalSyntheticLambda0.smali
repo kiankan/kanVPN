@@ -25,12 +25,12 @@
 
 # virtual methods
 .method public final run()V
-    .locals 1
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Landroidx/camera/core/impl/utils/executor/AudioExecutor$1$$ExternalSyntheticLambda0;->f$0:Ljava/lang/Runnable;
+    iget-object p0, p0, Landroidx/camera/core/impl/utils/executor/AudioExecutor$1$$ExternalSyntheticLambda0;->f$0:Ljava/lang/Runnable;
 
-    invoke-static {v0}, Landroidx/camera/core/impl/utils/executor/AudioExecutor$1;->lambda$newThread$0(Ljava/lang/Runnable;)V
+    invoke-static {p0}, Landroidx/camera/core/impl/utils/executor/AudioExecutor$1;->lambda$newThread$0(Ljava/lang/Runnable;)V
 
     return-void
 .end method

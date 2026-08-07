@@ -29,14 +29,14 @@
 
 # virtual methods
 .method public final onStateChanged(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;)V
-    .locals 2
+    .locals 1
 
     .line 0
     iget-object v0, p0, Landroidx/activity/ComponentActivity$$ExternalSyntheticLambda2;->f$0:Landroidx/activity/OnBackPressedDispatcher;
 
-    iget-object v1, p0, Landroidx/activity/ComponentActivity$$ExternalSyntheticLambda2;->f$1:Landroidx/activity/ComponentActivity;
+    iget-object p0, p0, Landroidx/activity/ComponentActivity$$ExternalSyntheticLambda2;->f$1:Landroidx/activity/ComponentActivity;
 
-    invoke-static {v0, v1, p1, p2}, Landroidx/activity/ComponentActivity;->$r8$lambda$XCwb6u5X87zpWrZW4Zmu6tsKQC8(Landroidx/activity/OnBackPressedDispatcher;Landroidx/activity/ComponentActivity;Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;)V
+    invoke-static {v0, p0, p1, p2}, Landroidx/activity/ComponentActivity;->addObserverForBackInvoker$lambda$0(Landroidx/activity/OnBackPressedDispatcher;Landroidx/activity/ComponentActivity;Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;)V
 
     return-void
 .end method

@@ -58,15 +58,15 @@
     .line 213
     invoke-virtual {p1}, Lcom/google/zxing/aztec/encoder/State;->getBitCount()I
 
-    move-result p1
+    move-result p0
 
     invoke-virtual {p2}, Lcom/google/zxing/aztec/encoder/State;->getBitCount()I
 
-    move-result p2
+    move-result p1
 
-    sub-int/2addr p1, p2
+    sub-int/2addr p0, p1
 
-    return p1
+    return p0
 .end method
 
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
@@ -89,7 +89,7 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/google/zxing/aztec/encoder/HighLevelEncoder$1;->compare(Lcom/google/zxing/aztec/encoder/State;Lcom/google/zxing/aztec/encoder/State;)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method

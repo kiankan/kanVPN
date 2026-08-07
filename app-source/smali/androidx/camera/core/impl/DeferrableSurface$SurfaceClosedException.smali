@@ -22,10 +22,10 @@
 .method public constructor <init>(Ljava/lang/String;Landroidx/camera/core/impl/DeferrableSurface;)V
     .locals 0
 
-    .line 71
+    .line 72
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 72
+    .line 73
     iput-object p2, p0, Landroidx/camera/core/impl/DeferrableSurface$SurfaceClosedException;->mDeferrableSurface:Landroidx/camera/core/impl/DeferrableSurface;
 
     return-void
@@ -34,10 +34,10 @@
 
 # virtual methods
 .method public getDeferrableSurface()Landroidx/camera/core/impl/DeferrableSurface;
-    .locals 1
+    .locals 0
 
     .line 82
-    iget-object v0, p0, Landroidx/camera/core/impl/DeferrableSurface$SurfaceClosedException;->mDeferrableSurface:Landroidx/camera/core/impl/DeferrableSurface;
+    iget-object p0, p0, Landroidx/camera/core/impl/DeferrableSurface$SurfaceClosedException;->mDeferrableSurface:Landroidx/camera/core/impl/DeferrableSurface;
 
-    return-object v0
+    return-object p0
 .end method

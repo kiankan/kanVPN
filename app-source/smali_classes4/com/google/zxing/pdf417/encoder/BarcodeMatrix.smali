@@ -72,16 +72,16 @@
 
 # virtual methods
 .method getCurrentRow()Lcom/google/zxing/pdf417/encoder/BarcodeRow;
-    .locals 2
+    .locals 1
 
     .line 55
     iget-object v0, p0, Lcom/google/zxing/pdf417/encoder/BarcodeMatrix;->matrix:[Lcom/google/zxing/pdf417/encoder/BarcodeRow;
 
-    iget v1, p0, Lcom/google/zxing/pdf417/encoder/BarcodeMatrix;->currentRow:I
+    iget p0, p0, Lcom/google/zxing/pdf417/encoder/BarcodeMatrix;->currentRow:I
 
-    aget-object v0, v0, v1
+    aget-object p0, v0, p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getMatrix()[[B
@@ -92,9 +92,9 @@
     .line 59
     invoke-virtual {p0, v0, v0}, Lcom/google/zxing/pdf417/encoder/BarcodeMatrix;->getScaledMatrix(II)[[B
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getScaledMatrix(II)[[B
@@ -163,14 +163,14 @@
 .end method
 
 .method set(IIB)V
-    .locals 1
+    .locals 0
 
     .line 47
-    iget-object v0, p0, Lcom/google/zxing/pdf417/encoder/BarcodeMatrix;->matrix:[Lcom/google/zxing/pdf417/encoder/BarcodeRow;
+    iget-object p0, p0, Lcom/google/zxing/pdf417/encoder/BarcodeMatrix;->matrix:[Lcom/google/zxing/pdf417/encoder/BarcodeRow;
 
-    aget-object p2, v0, p2
+    aget-object p0, p0, p2
 
-    invoke-virtual {p2, p1, p3}, Lcom/google/zxing/pdf417/encoder/BarcodeRow;->set(IB)V
+    invoke-virtual {p0, p1, p3}, Lcom/google/zxing/pdf417/encoder/BarcodeRow;->set(IB)V
 
     return-void
 .end method

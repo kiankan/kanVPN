@@ -38,10 +38,10 @@
         }
     .end annotation
 
-    .line 32
+    .line 33
     invoke-direct {p0}, Landroidx/camera/core/impl/utils/Optional;-><init>()V
 
-    .line 33
+    .line 34
     iput-object p1, p0, Landroidx/camera/core/impl/utils/Present;->mReference:Ljava/lang/Object;
 
     return-void
@@ -52,33 +52,33 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
-    .line 75
+    .line 73
     instance-of v0, p1, Landroidx/camera/core/impl/utils/Present;
 
     if-eqz v0, :cond_0
 
-    .line 76
+    .line 74
     check-cast p1, Landroidx/camera/core/impl/utils/Present;
 
-    .line 77
-    iget-object v0, p0, Landroidx/camera/core/impl/utils/Present;->mReference:Ljava/lang/Object;
+    .line 75
+    iget-object p0, p0, Landroidx/camera/core/impl/utils/Present;->mReference:Ljava/lang/Object;
 
     iget-object p1, p1, Landroidx/camera/core/impl/utils/Present;->mReference:Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method public get()Ljava/lang/Object;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TT;"
@@ -86,34 +86,34 @@
     .end annotation
 
     .line 44
-    iget-object v0, p0, Landroidx/camera/core/impl/utils/Present;->mReference:Ljava/lang/Object;
+    iget-object p0, p0, Landroidx/camera/core/impl/utils/Present;->mReference:Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public hashCode()I
-    .locals 2
+    .locals 1
 
-    .line 84
-    iget-object v0, p0, Landroidx/camera/core/impl/utils/Present;->mReference:Ljava/lang/Object;
+    .line 82
+    iget-object p0, p0, Landroidx/camera/core/impl/utils/Present;->mReference:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
-    move-result v0
+    move-result p0
 
-    const v1, 0x598df91c
+    const v0, 0x598df91c
 
-    add-int/2addr v0, v1
+    add-int/2addr p0, v0
 
-    return v0
+    return p0
 .end method
 
 .method public isPresent()Z
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 .end method
 
 .method public or(Landroidx/camera/core/impl/utils/Optional;)Landroidx/camera/core/impl/utils/Optional;
@@ -128,7 +128,7 @@
         }
     .end annotation
 
-    .line 57
+    .line 56
     invoke-static {p1}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object p0
@@ -144,13 +144,13 @@
         }
     .end annotation
 
-    .line 64
+    .line 62
     invoke-static {p1}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 65
-    iget-object p1, p0, Landroidx/camera/core/impl/utils/Present;->mReference:Ljava/lang/Object;
+    .line 63
+    iget-object p0, p0, Landroidx/camera/core/impl/utils/Present;->mReference:Ljava/lang/Object;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public or(Ljava/lang/Object;)Ljava/lang/Object;
@@ -161,52 +161,52 @@
         }
     .end annotation
 
-    .line 50
-    const-string v0, "use Optional.orNull() instead of Optional.or(null)"
+    .line 49
+    const-string/jumbo v0, "use Optional.orNull() instead of Optional.or(null)"
 
     invoke-static {p1, v0}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 52
-    iget-object p1, p0, Landroidx/camera/core/impl/utils/Present;->mReference:Ljava/lang/Object;
+    .line 51
+    iget-object p0, p0, Landroidx/camera/core/impl/utils/Present;->mReference:Ljava/lang/Object;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public orNull()Ljava/lang/Object;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TT;"
         }
     .end annotation
 
-    .line 70
-    iget-object v0, p0, Landroidx/camera/core/impl/utils/Present;->mReference:Ljava/lang/Object;
+    .line 68
+    iget-object p0, p0, Landroidx/camera/core/impl/utils/Present;->mReference:Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 90
+    .line 87
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "Optional.of("
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Landroidx/camera/core/impl/utils/Present;->mReference:Ljava/lang/Object;
+    iget-object p0, p0, Landroidx/camera/core/impl/utils/Present;->mReference:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ")"
+    const-string p0, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

@@ -28,6 +28,14 @@
 # direct methods
 .method constructor <init>(Landroidx/collection/ArrayMap;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            null
+        }
+    .end annotation
 
     .line 517
     iput-object p1, p0, Landroidx/collection/ArrayMap$ValueIterator;->this$0:Landroidx/collection/ArrayMap;
@@ -45,7 +53,7 @@
 
 # virtual methods
 .method protected elementAt(I)Ljava/lang/Object;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)TV;"
@@ -53,22 +61,22 @@
     .end annotation
 
     .line 523
-    iget-object v0, p0, Landroidx/collection/ArrayMap$ValueIterator;->this$0:Landroidx/collection/ArrayMap;
+    iget-object p0, p0, Landroidx/collection/ArrayMap$ValueIterator;->this$0:Landroidx/collection/ArrayMap;
 
-    invoke-virtual {v0, p1}, Landroidx/collection/ArrayMap;->valueAt(I)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Landroidx/collection/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method protected removeAt(I)V
-    .locals 1
+    .locals 0
 
     .line 528
-    iget-object v0, p0, Landroidx/collection/ArrayMap$ValueIterator;->this$0:Landroidx/collection/ArrayMap;
+    iget-object p0, p0, Landroidx/collection/ArrayMap$ValueIterator;->this$0:Landroidx/collection/ArrayMap;
 
-    invoke-virtual {v0, p1}, Landroidx/collection/ArrayMap;->removeAt(I)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Landroidx/collection/ArrayMap;->removeAt(I)Ljava/lang/Object;
 
     return-void
 .end method

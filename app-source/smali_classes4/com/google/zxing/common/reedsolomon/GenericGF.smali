@@ -239,9 +239,9 @@
     if-nez p2, :cond_0
 
     .line 101
-    iget-object p1, p0, Lcom/google/zxing/common/reedsolomon/GenericGF;->zero:Lcom/google/zxing/common/reedsolomon/GenericGFPoly;
+    iget-object p0, p0, Lcom/google/zxing/common/reedsolomon/GenericGF;->zero:Lcom/google/zxing/common/reedsolomon/GenericGFPoly;
 
-    return-object p1
+    return-object p0
 
     :cond_0
     add-int/lit8 p1, p1, 0x1
@@ -263,62 +263,62 @@
 
     .line 98
     :cond_1
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
+    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
 
-    throw p1
+    throw p0
 .end method
 
 .method exp(I)I
-    .locals 1
+    .locals 0
 
     .line 121
-    iget-object v0, p0, Lcom/google/zxing/common/reedsolomon/GenericGF;->expTable:[I
+    iget-object p0, p0, Lcom/google/zxing/common/reedsolomon/GenericGF;->expTable:[I
 
-    aget p1, v0, p1
+    aget p0, p0, p1
 
-    return p1
+    return p0
 .end method
 
 .method public getGeneratorBase()I
-    .locals 1
+    .locals 0
 
     .line 159
-    iget v0, p0, Lcom/google/zxing/common/reedsolomon/GenericGF;->generatorBase:I
+    iget p0, p0, Lcom/google/zxing/common/reedsolomon/GenericGF;->generatorBase:I
 
-    return v0
+    return p0
 .end method
 
 .method getOne()Lcom/google/zxing/common/reedsolomon/GenericGFPoly;
-    .locals 1
+    .locals 0
 
     .line 90
-    iget-object v0, p0, Lcom/google/zxing/common/reedsolomon/GenericGF;->one:Lcom/google/zxing/common/reedsolomon/GenericGFPoly;
+    iget-object p0, p0, Lcom/google/zxing/common/reedsolomon/GenericGF;->one:Lcom/google/zxing/common/reedsolomon/GenericGFPoly;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getSize()I
-    .locals 1
+    .locals 0
 
     .line 155
-    iget v0, p0, Lcom/google/zxing/common/reedsolomon/GenericGF;->size:I
+    iget p0, p0, Lcom/google/zxing/common/reedsolomon/GenericGF;->size:I
 
-    return v0
+    return p0
 .end method
 
 .method getZero()Lcom/google/zxing/common/reedsolomon/GenericGFPoly;
-    .locals 1
+    .locals 0
 
     .line 86
-    iget-object v0, p0, Lcom/google/zxing/common/reedsolomon/GenericGF;->zero:Lcom/google/zxing/common/reedsolomon/GenericGFPoly;
+    iget-object p0, p0, Lcom/google/zxing/common/reedsolomon/GenericGF;->zero:Lcom/google/zxing/common/reedsolomon/GenericGFPoly;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method inverse(I)I
-    .locals 3
+    .locals 2
 
     if-eqz p1, :cond_0
 
@@ -327,46 +327,46 @@
 
     iget v1, p0, Lcom/google/zxing/common/reedsolomon/GenericGF;->size:I
 
-    iget-object v2, p0, Lcom/google/zxing/common/reedsolomon/GenericGF;->logTable:[I
+    iget-object p0, p0, Lcom/google/zxing/common/reedsolomon/GenericGF;->logTable:[I
 
-    aget p1, v2, p1
+    aget p0, p0, p1
 
-    sub-int/2addr v1, p1
+    sub-int/2addr v1, p0
 
     add-int/lit8 v1, v1, -0x1
 
-    aget p1, v0, v1
+    aget p0, v0, v1
 
-    return p1
+    return p0
 
     .line 139
     :cond_0
-    new-instance p1, Ljava/lang/ArithmeticException;
+    new-instance p0, Ljava/lang/ArithmeticException;
 
-    invoke-direct {p1}, Ljava/lang/ArithmeticException;-><init>()V
+    invoke-direct {p0}, Ljava/lang/ArithmeticException;-><init>()V
 
-    throw p1
+    throw p0
 .end method
 
 .method log(I)I
-    .locals 1
+    .locals 0
 
     if-eqz p1, :cond_0
 
     .line 131
-    iget-object v0, p0, Lcom/google/zxing/common/reedsolomon/GenericGF;->logTable:[I
+    iget-object p0, p0, Lcom/google/zxing/common/reedsolomon/GenericGF;->logTable:[I
 
-    aget p1, v0, p1
+    aget p0, p0, p1
 
-    return p1
+    return p0
 
     .line 129
     :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
+    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
 
-    throw p1
+    throw p0
 .end method
 
 .method multiply(II)I
@@ -390,21 +390,21 @@
 
     add-int/2addr p1, p2
 
-    iget p2, p0, Lcom/google/zxing/common/reedsolomon/GenericGF;->size:I
+    iget p0, p0, Lcom/google/zxing/common/reedsolomon/GenericGF;->size:I
 
-    add-int/lit8 p2, p2, -0x1
+    add-int/lit8 p0, p0, -0x1
 
-    rem-int/2addr p1, p2
+    rem-int/2addr p1, p0
 
-    aget p1, v0, p1
+    aget p0, v0, p1
 
-    return p1
+    return p0
 
     :cond_1
     :goto_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method public toString()Ljava/lang/String;
@@ -429,17 +429,17 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lcom/google/zxing/common/reedsolomon/GenericGF;->size:I
+    iget p0, p0, Lcom/google/zxing/common/reedsolomon/GenericGF;->size:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const/16 v1, 0x29
+    const/16 p0, 0x29
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

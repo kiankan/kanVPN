@@ -25,14 +25,14 @@
 
 # virtual methods
 .method public final accept(Ljava/lang/Object;)V
-    .locals 1
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/CaptureNode$$ExternalSyntheticLambda1;->f$0:Landroidx/camera/core/imagecapture/CaptureNode;
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/CaptureNode$$ExternalSyntheticLambda1;->f$0:Landroidx/camera/core/imagecapture/CaptureNode;
 
     check-cast p1, Landroidx/camera/core/imagecapture/ProcessingRequest;
 
-    invoke-virtual {v0, p1}, Landroidx/camera/core/imagecapture/CaptureNode;->lambda$transform$0$androidx-camera-core-imagecapture-CaptureNode(Landroidx/camera/core/imagecapture/ProcessingRequest;)V
+    invoke-virtual {p0, p1}, Landroidx/camera/core/imagecapture/CaptureNode;->lambda$transform$0$androidx-camera-core-imagecapture-CaptureNode(Landroidx/camera/core/imagecapture/ProcessingRequest;)V
 
     return-void
 .end method

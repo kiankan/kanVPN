@@ -435,12 +435,12 @@
 
 # virtual methods
 .method public getBits()I
-    .locals 1
+    .locals 0
 
     .line 99
-    iget v0, p0, Lcom/google/zxing/qrcode/decoder/Mode;->bits:I
+    iget p0, p0, Lcom/google/zxing/qrcode/decoder/Mode;->bits:I
 
-    return v0
+    return p0
 .end method
 
 .method public getCharacterCountBits(Lcom/google/zxing/qrcode/decoder/Version;)I
@@ -473,9 +473,9 @@
 
     .line 95
     :goto_0
-    iget-object v0, p0, Lcom/google/zxing/qrcode/decoder/Mode;->characterCountBitsForVersions:[I
+    iget-object p0, p0, Lcom/google/zxing/qrcode/decoder/Mode;->characterCountBitsForVersions:[I
 
-    aget p1, v0, p1
+    aget p0, p0, p1
 
-    return p1
+    return p0
 .end method

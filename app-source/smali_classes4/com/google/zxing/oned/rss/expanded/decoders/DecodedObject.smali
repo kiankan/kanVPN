@@ -23,10 +23,10 @@
 
 # virtual methods
 .method final getNewPosition()I
-    .locals 1
+    .locals 0
 
     .line 41
-    iget v0, p0, Lcom/google/zxing/oned/rss/expanded/decoders/DecodedObject;->newPosition:I
+    iget p0, p0, Lcom/google/zxing/oned/rss/expanded/decoders/DecodedObject;->newPosition:I
 
-    return v0
+    return p0
 .end method

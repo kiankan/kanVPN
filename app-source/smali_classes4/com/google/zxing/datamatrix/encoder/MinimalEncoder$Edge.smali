@@ -907,30 +907,28 @@
 
 # virtual methods
 .method getB256Size()I
-    .locals 4
+    .locals 3
 
     const/4 v0, 0x0
 
-    move-object v1, p0
-
     :goto_0
-    if-eqz v1, :cond_0
+    if-eqz p0, :cond_0
 
     .line 582
-    iget-object v2, v1, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->mode:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;
+    iget-object v1, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->mode:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;
 
-    sget-object v3, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;->B256:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;
+    sget-object v2, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;->B256:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;
 
-    if-ne v2, v3, :cond_0
+    if-ne v1, v2, :cond_0
 
-    const/16 v2, 0xfa
+    const/16 v1, 0xfa
 
-    if-gt v0, v2, :cond_0
+    if-gt v0, v1, :cond_0
 
     add-int/lit8 v0, v0, 0x1
 
     .line 584
-    iget-object v1, v1, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->previous:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;
+    iget-object p0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->previous:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;
 
     goto :goto_0
 
@@ -1149,43 +1147,57 @@
     :cond_7
     invoke-interface {v0}, Ljava/util/List;->size()I
 
-    move-result p1
+    move-result p0
 
-    rem-int/lit8 p1, p1, 0x3
+    rem-int/lit8 p0, p0, 0x3
 
-    if-eqz p1, :cond_8
+    if-eqz p0, :cond_8
 
     .line 817
     invoke-static {v1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 820
     :cond_8
     invoke-interface {v0}, Ljava/util/List;->size()I
 
-    move-result p1
+    move-result p0
 
-    div-int/lit8 p1, p1, 0x3
+    div-int/lit8 p0, p0, 0x3
 
-    mul-int/lit8 p1, p1, 0x2
+    mul-int/lit8 p0, p0, 0x2
 
-    new-array p1, p1, [B
+    new-array p0, p0, [B
 
-    move p2, v1
+    move p1, v1
 
     .line 822
     :goto_2
     invoke-interface {v0}, Ljava/util/List;->size()I
 
-    move-result v2
+    move-result p2
 
-    if-ge v1, v2, :cond_9
+    if-ge v1, p2, :cond_9
 
     .line 823
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ljava/lang/Byte;
+
+    invoke-virtual {p2}, Ljava/lang/Byte;->byteValue()B
+
+    move-result p2
+
+    and-int/lit16 p2, p2, 0xff
+
+    add-int/lit8 v2, v1, 0x1
+
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -1197,7 +1209,7 @@
 
     and-int/lit16 v2, v2, 0xff
 
-    add-int/lit8 v3, v1, 0x1
+    add-int/lit8 v3, v1, 0x2
 
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1211,43 +1223,29 @@
 
     and-int/lit16 v3, v3, 0xff
 
-    add-int/lit8 v4, v1, 0x2
+    invoke-static {p0, p1, p2, v2, v3}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->setC40Word([BIIII)V
 
-    invoke-interface {v0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/lang/Byte;
-
-    invoke-virtual {v4}, Ljava/lang/Byte;->byteValue()B
-
-    move-result v4
-
-    and-int/lit16 v4, v4, 0xff
-
-    invoke-static {p1, p2, v2, v3, v4}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->setC40Word([BIIII)V
-
-    add-int/lit8 p2, p2, 0x2
+    add-int/lit8 p1, p1, 0x2
 
     add-int/lit8 v1, v1, 0x3
 
     goto :goto_2
 
     :cond_9
-    return-object p1
+    return-object p0
 .end method
 
 .method getCodewordsRemaining(I)I
-    .locals 1
+    .locals 0
 
     .line 709
     invoke-virtual {p0, p1}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getMinSymbolSize(I)I
 
-    move-result v0
+    move-result p0
 
-    sub-int/2addr v0, p1
+    sub-int/2addr p0, p1
 
-    return v0
+    return p0
 .end method
 
 .method getDataBytes()[B
@@ -1285,41 +1283,41 @@
     if-eq v0, v1, :cond_0
 
     .line 925
-    new-array v0, v2, [B
+    new-array p0, v2, [B
 
-    return-object v0
+    return-object p0
 
     .line 914
     :cond_0
     iget-object v0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->input:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;
 
-    iget v1, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->fromPosition:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->fromPosition:I
 
-    invoke-virtual {v0, v1}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->charAt(I)C
+    invoke-virtual {v0, p0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->charAt(I)C
 
-    move-result v0
+    move-result p0
 
-    invoke-static {v0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getBytes(I)[B
+    invoke-static {p0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getBytes(I)[B
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 
     .line 922
     :cond_1
     invoke-virtual {p0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getEDFBytes()[B
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 
     .line 920
     :cond_2
     invoke-virtual {p0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getX12Words()[B
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 
     .line 918
     :cond_3
@@ -1331,9 +1329,9 @@
 
     invoke-virtual {p0, v2, v0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getC40Words(ZI)[B
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 
     .line 916
     :cond_4
@@ -1345,9 +1343,9 @@
 
     invoke-virtual {p0, v2, v0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getC40Words(ZI)[B
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 
     .line 902
     :cond_5
@@ -1359,34 +1357,33 @@
 
     move-result v0
 
+    .line 904
+    iget-object v3, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->input:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;
+
     if-eqz v0, :cond_6
 
     .line 903
-    iget-object v0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->input:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;
+    iget p0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->fromPosition:I
 
-    iget v1, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->fromPosition:I
+    invoke-virtual {v3, p0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->getECIValue(I)I
 
-    invoke-virtual {v0, v1}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->getECIValue(I)I
+    move-result p0
 
-    move-result v0
+    add-int/2addr p0, v2
 
-    add-int/2addr v0, v2
+    const/16 v0, 0xf1
 
-    const/16 v1, 0xf1
+    invoke-static {v0, p0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getBytes(II)[B
 
-    invoke-static {v1, v0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getBytes(II)[B
+    move-result-object p0
 
-    move-result-object v0
-
-    return-object v0
+    return-object p0
 
     .line 904
     :cond_6
-    iget-object v0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->input:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;
+    iget v0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->fromPosition:I
 
-    iget v3, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->fromPosition:I
-
-    invoke-virtual {v0, v3}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->charAt(I)C
+    invoke-virtual {v3, v0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->charAt(I)C
 
     move-result v0
 
@@ -1405,34 +1402,35 @@
     .line 905
     iget-object v0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->input:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;
 
-    iget v1, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->fromPosition:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->fromPosition:I
 
-    invoke-virtual {v0, v1}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->charAt(I)C
+    invoke-virtual {v0, p0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->charAt(I)C
 
-    move-result v0
+    move-result p0
 
-    add-int/lit8 v0, v0, -0x7f
+    add-int/lit8 p0, p0, -0x7f
 
-    const/16 v1, 0xeb
+    const/16 v0, 0xeb
 
-    invoke-static {v1, v0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getBytes(II)[B
+    invoke-static {v0, p0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getBytes(II)[B
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 
     .line 906
     :cond_7
     iget v0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->characterLength:I
 
+    .line 908
+    iget-object v3, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->input:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;
+
     if-ne v0, v1, :cond_8
 
     .line 907
-    iget-object v0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->input:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;
+    iget v0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->fromPosition:I
 
-    iget v1, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->fromPosition:I
-
-    invoke-virtual {v0, v1}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->charAt(I)C
+    invoke-virtual {v3, v0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->charAt(I)C
 
     move-result v0
 
@@ -1442,62 +1440,60 @@
 
     iget-object v1, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->input:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;
 
-    iget v3, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->fromPosition:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->fromPosition:I
 
-    add-int/2addr v3, v2
+    add-int/2addr p0, v2
 
-    invoke-virtual {v1, v3}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->charAt(I)C
+    invoke-virtual {v1, p0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->charAt(I)C
 
-    move-result v1
+    move-result p0
 
-    add-int/2addr v0, v1
+    add-int/2addr v0, p0
 
     add-int/lit8 v0, v0, 0x52
 
     invoke-static {v0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getBytes(I)[B
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 
     .line 908
     :cond_8
-    iget-object v0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->input:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;
+    iget v0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->fromPosition:I
 
-    iget v1, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->fromPosition:I
-
-    invoke-virtual {v0, v1}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->isFNC1(I)Z
+    invoke-virtual {v3, v0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->isFNC1(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_9
 
-    const/16 v0, 0xe8
+    const/16 p0, 0xe8
 
     .line 909
-    invoke-static {v0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getBytes(I)[B
+    invoke-static {p0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getBytes(I)[B
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 
     .line 911
     :cond_9
     iget-object v0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->input:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;
 
-    iget v1, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->fromPosition:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->fromPosition:I
 
-    invoke-virtual {v0, v1}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->charAt(I)C
+    invoke-virtual {v0, p0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->charAt(I)C
 
-    move-result v0
+    move-result p0
 
-    add-int/2addr v0, v2
+    add-int/2addr p0, v2
 
-    invoke-static {v0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getBytes(I)[B
+    invoke-static {p0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getBytes(I)[B
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method getEDFBytes()[B
@@ -1688,9 +1684,9 @@
     if-ge v0, v1, :cond_0
 
     .line 606
-    sget-object v0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;->ASCII:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;
+    sget-object p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;->ASCII:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;
 
-    return-object v0
+    return-object p0
 
     .line 608
     :cond_0
@@ -1714,9 +1710,9 @@
     if-gt v1, v0, :cond_1
 
     .line 610
-    sget-object v0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;->ASCII:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;
+    sget-object p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;->ASCII:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;
 
-    return-object v0
+    return-object p0
 
     .line 613
     :cond_1
@@ -1763,9 +1759,9 @@
     if-nez v0, :cond_3
 
     .line 619
-    sget-object v0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;->ASCII:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;
+    sget-object p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;->ASCII:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;
 
-    return-object v0
+    return-object p0
 
     .line 621
     :cond_3
@@ -1789,15 +1785,15 @@
     if-nez v0, :cond_4
 
     .line 623
-    sget-object v0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;->ASCII:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;
+    sget-object p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;->ASCII:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;
 
-    return-object v0
+    return-object p0
 
     .line 626
     :cond_4
-    iget-object v0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->mode:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;
+    iget-object p0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->mode:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method getLastASCII()I
@@ -1841,17 +1837,17 @@
 
     move-result v1
 
-    iget-object v2, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->input:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;
+    iget-object p0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->input:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;
 
-    invoke-virtual {v2}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->getFNC1Character()I
+    invoke-virtual {p0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->getFNC1Character()I
 
-    move-result v2
+    move-result p0
 
-    invoke-static {v1, v2}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder;->isExtendedASCII(CI)Z
+    invoke-static {v1, p0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder;->isExtendedASCII(CI)Z
 
-    move-result v1
+    move-result p0
 
-    if-eqz v1, :cond_1
+    if-eqz p0, :cond_1
 
     return v4
 
@@ -1920,17 +1916,17 @@
 
     if-eqz v1, :cond_4
 
-    iget-object v1, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->input:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;
+    iget-object p0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->input:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;
 
-    invoke-virtual {v1, v5}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->charAt(I)C
+    invoke-virtual {p0, v5}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->charAt(I)C
 
-    move-result v1
+    move-result p0
 
-    invoke-static {v1}, Lcom/google/zxing/datamatrix/encoder/HighLevelEncoder;->isDigit(C)Z
+    invoke-static {p0}, Lcom/google/zxing/datamatrix/encoder/HighLevelEncoder;->isDigit(C)Z
 
-    move-result v1
+    move-result p0
 
-    if-eqz v1, :cond_4
+    if-eqz p0, :cond_4
 
     return v0
 
@@ -1941,14 +1937,15 @@
     :goto_0
     return v4
 
+    .line 670
     :cond_6
-    const/4 v0, 0x3
-
-    if-ne v2, v0, :cond_9
-
-    .line 660
     iget-object v0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->input:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;
 
+    const/4 v5, 0x3
+
+    if-ne v2, v5, :cond_9
+
+    .line 660
     invoke-virtual {v0, v1}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->charAt(I)C
 
     move-result v0
@@ -2033,17 +2030,17 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->input:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;
+    iget-object p0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->input:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;
 
-    invoke-virtual {v1}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->getFNC1Character()I
+    invoke-virtual {p0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->getFNC1Character()I
 
-    move-result v1
+    move-result p0
 
-    invoke-static {v0, v1}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder;->isExtendedASCII(CI)Z
+    invoke-static {v0, p0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder;->isExtendedASCII(CI)Z
 
-    move-result v0
+    move-result p0
 
-    if-nez v0, :cond_8
+    if-nez p0, :cond_8
 
     return v3
 
@@ -2052,52 +2049,7 @@
 
     .line 670
     :cond_9
-    iget-object v2, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->input:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;
-
-    invoke-virtual {v2, v1}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->charAt(I)C
-
-    move-result v2
-
-    invoke-static {v2}, Lcom/google/zxing/datamatrix/encoder/HighLevelEncoder;->isDigit(C)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_a
-
-    iget-object v2, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->input:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;
-
-    add-int/lit8 v5, v1, 0x1
-
-    invoke-virtual {v2, v5}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->charAt(I)C
-
-    move-result v2
-
-    invoke-static {v2}, Lcom/google/zxing/datamatrix/encoder/HighLevelEncoder;->isDigit(C)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_a
-
-    iget-object v2, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->input:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;
-
-    add-int/lit8 v5, v1, 0x2
-
-    .line 671
-    invoke-virtual {v2, v5}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->charAt(I)C
-
-    move-result v2
-
-    invoke-static {v2}, Lcom/google/zxing/datamatrix/encoder/HighLevelEncoder;->isDigit(C)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_a
-
-    iget-object v2, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->input:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;
-
-    add-int/2addr v1, v0
-
-    invoke-virtual {v2, v1}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->charAt(I)C
+    invoke-virtual {v0, v1}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->charAt(I)C
 
     move-result v0
 
@@ -2106,6 +2058,49 @@
     move-result v0
 
     if-eqz v0, :cond_a
+
+    iget-object v0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->input:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;
+
+    add-int/lit8 v2, v1, 0x1
+
+    invoke-virtual {v0, v2}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->charAt(I)C
+
+    move-result v0
+
+    invoke-static {v0}, Lcom/google/zxing/datamatrix/encoder/HighLevelEncoder;->isDigit(C)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_a
+
+    iget-object v0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->input:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;
+
+    add-int/lit8 v2, v1, 0x2
+
+    .line 671
+    invoke-virtual {v0, v2}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->charAt(I)C
+
+    move-result v0
+
+    invoke-static {v0}, Lcom/google/zxing/datamatrix/encoder/HighLevelEncoder;->isDigit(C)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_a
+
+    iget-object p0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->input:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;
+
+    add-int/2addr v1, v5
+
+    invoke-virtual {p0, v1}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->charAt(I)C
+
+    move-result p0
+
+    invoke-static {p0}, Lcom/google/zxing/datamatrix/encoder/HighLevelEncoder;->isDigit(C)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_a
 
     return v3
 
@@ -2171,297 +2166,297 @@
     if-eq v0, v11, :cond_8
 
     .line 875
-    iget-object v0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->mode:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;
+    iget-object p0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->mode:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;
 
-    invoke-virtual {v0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;->ordinal()I
+    invoke-virtual {p0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;->ordinal()I
 
-    move-result v0
+    move-result p0
 
-    const/16 v11, 0xfe
+    const/16 v0, 0xfe
 
-    if-eqz v0, :cond_6
+    if-eqz p0, :cond_6
 
-    if-eq v0, v10, :cond_5
+    if-eq p0, v10, :cond_5
 
-    if-eq v0, v9, :cond_4
+    if-eq p0, v9, :cond_4
 
-    if-eq v0, v8, :cond_3
+    if-eq p0, v8, :cond_3
 
-    if-eq v0, v7, :cond_2
+    if-eq p0, v7, :cond_2
 
-    if-eq v0, v6, :cond_1
+    if-eq p0, v6, :cond_1
 
     goto :goto_0
 
     .line 879
     :cond_1
-    invoke-static {v11, v1}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getBytes(II)[B
+    invoke-static {v0, v1}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getBytes(II)[B
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 
     .line 887
     :cond_2
-    invoke-static {v11, v2}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getBytes(II)[B
+    invoke-static {v0, v2}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getBytes(II)[B
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 
     .line 885
     :cond_3
-    invoke-static {v11, v3}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getBytes(II)[B
+    invoke-static {v0, v3}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getBytes(II)[B
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 
     .line 883
     :cond_4
-    invoke-static {v11, v4}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getBytes(II)[B
+    invoke-static {v0, v4}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getBytes(II)[B
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 
     .line 881
     :cond_5
-    invoke-static {v11, v5}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getBytes(II)[B
+    invoke-static {v0, v5}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getBytes(II)[B
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 
     .line 877
     :cond_6
-    invoke-static {v11}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getBytes(I)[B
+    invoke-static {v0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getBytes(I)[B
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 
     .line 858
     :cond_7
-    iget-object v0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->mode:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;
+    iget-object p0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->mode:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;
 
-    invoke-virtual {v0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;->ordinal()I
+    invoke-virtual {p0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;->ordinal()I
 
-    move-result v0
+    move-result p0
 
-    if-eq v0, v10, :cond_d
+    if-eq p0, v10, :cond_d
 
-    if-eq v0, v9, :cond_c
+    if-eq p0, v9, :cond_c
 
-    if-eq v0, v8, :cond_b
+    if-eq p0, v8, :cond_b
 
-    if-eq v0, v7, :cond_a
+    if-eq p0, v7, :cond_a
 
-    if-eq v0, v6, :cond_9
+    if-eq p0, v6, :cond_9
 
     :cond_8
     :goto_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
     .line 895
-    new-array v0, v0, [B
+    new-array p0, p0, [B
 
-    return-object v0
+    return-object p0
 
     .line 860
     :cond_9
     invoke-static {v1}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getBytes(I)[B
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 
     .line 868
     :cond_a
     invoke-static {v2}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getBytes(I)[B
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 
     .line 866
     :cond_b
     invoke-static {v3}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getBytes(I)[B
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 
     .line 864
     :cond_c
     invoke-static {v4}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getBytes(I)[B
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 
     .line 862
     :cond_d
     invoke-static {v5}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getBytes(I)[B
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method getMinSymbolSize(I)I
-    .locals 6
+    .locals 5
 
     .line 681
     sget-object v0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$1;->$SwitchMap$com$google$zxing$datamatrix$encoder$SymbolShapeHint:[I
 
-    iget-object v1, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->input:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;
+    iget-object p0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->input:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;
 
-    invoke-static {v1}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->access$500(Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;)Lcom/google/zxing/datamatrix/encoder/SymbolShapeHint;
+    invoke-static {p0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;->access$500(Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Input;)Lcom/google/zxing/datamatrix/encoder/SymbolShapeHint;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-virtual {v1}, Lcom/google/zxing/datamatrix/encoder/SymbolShapeHint;->ordinal()I
+    invoke-virtual {p0}, Lcom/google/zxing/datamatrix/encoder/SymbolShapeHint;->ordinal()I
 
-    move-result v1
+    move-result p0
 
-    aget v0, v0, v1
+    aget p0, v0, p0
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    const/4 v2, 0x1
+    const/4 v1, 0x1
 
-    if-eq v0, v2, :cond_2
+    if-eq p0, v1, :cond_2
 
-    const/4 v3, 0x2
+    const/4 v2, 0x2
 
-    if-eq v0, v3, :cond_0
+    if-eq p0, v2, :cond_0
 
     goto :goto_2
 
     .line 690
     :cond_0
-    sget-object v0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->rectangularCodewordCapacities:[I
+    sget-object p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->rectangularCodewordCapacities:[I
 
-    array-length v3, v0
+    array-length v2, p0
 
-    move v4, v1
+    move v3, v0
 
     :goto_0
-    if-ge v4, v3, :cond_4
+    if-ge v3, v2, :cond_4
 
-    aget v5, v0, v4
+    aget v4, p0, v3
 
-    if-lt v5, p1, :cond_1
+    if-lt v4, p1, :cond_1
 
-    return v5
+    return v4
 
     :cond_1
-    add-int/lit8 v4, v4, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     .line 683
     :cond_2
-    sget-object v0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->squareCodewordCapacities:[I
+    sget-object p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->squareCodewordCapacities:[I
 
-    array-length v3, v0
+    array-length v2, p0
 
-    move v4, v1
+    move v3, v0
 
     :goto_1
-    if-ge v4, v3, :cond_4
+    if-ge v3, v2, :cond_4
 
-    aget v5, v0, v4
+    aget v4, p0, v3
 
-    if-lt v5, p1, :cond_3
+    if-lt v4, p1, :cond_3
 
-    return v5
+    return v4
 
     :cond_3
-    add-int/lit8 v4, v4, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
     .line 697
     :cond_4
     :goto_2
-    sget-object v0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->allCodewordCapacities:[I
+    sget-object p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->allCodewordCapacities:[I
 
-    array-length v3, v0
+    array-length v2, p0
 
     :goto_3
-    if-ge v1, v3, :cond_6
+    if-ge v0, v2, :cond_6
 
-    aget v4, v0, v1
+    aget v3, p0, v0
 
-    if-lt v4, p1, :cond_5
+    if-lt v3, p1, :cond_5
 
-    return v4
+    return v3
 
     :cond_5
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_3
 
     .line 702
     :cond_6
-    sget-object p1, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->allCodewordCapacities:[I
+    sget-object p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->allCodewordCapacities:[I
 
-    array-length v0, p1
+    array-length p1, p0
 
-    sub-int/2addr v0, v2
+    sub-int/2addr p1, v1
 
-    aget p1, p1, v0
+    aget p0, p0, p1
 
-    return p1
+    return p0
 .end method
 
 .method getMode()Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;
-    .locals 1
+    .locals 0
 
     .line 630
-    iget-object v0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->mode:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;
+    iget-object p0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->mode:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method getPreviousMode()Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;
-    .locals 1
+    .locals 0
 
     .line 594
-    iget-object v0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->previous:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;
+    iget-object p0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->previous:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;
 
-    if-nez v0, :cond_0
+    if-nez p0, :cond_0
 
-    sget-object v0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;->ASCII:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;
+    sget-object p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;->ASCII:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;
 
-    return-object v0
+    return-object p0
 
     :cond_0
-    invoke-virtual {v0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getEndMode()Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;
+    invoke-virtual {p0}, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->getEndMode()Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method getPreviousStartMode()Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;
-    .locals 1
+    .locals 0
 
     .line 590
-    iget-object v0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->previous:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;
+    iget-object p0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->previous:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;
 
-    if-nez v0, :cond_0
+    if-nez p0, :cond_0
 
-    sget-object v0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;->ASCII:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;
+    sget-object p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;->ASCII:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;
 
-    return-object v0
+    return-object p0
 
     :cond_0
-    iget-object v0, v0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->mode:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;
+    iget-object p0, p0, Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Edge;->mode:Lcom/google/zxing/datamatrix/encoder/MinimalEncoder$Mode;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method getX12Words()[B

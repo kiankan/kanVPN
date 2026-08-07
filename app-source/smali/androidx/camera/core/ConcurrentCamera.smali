@@ -35,10 +35,10 @@
         }
     .end annotation
 
-    .line 53
+    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
+    .line 53
     iput-object p1, p0, Landroidx/camera/core/ConcurrentCamera;->mCameras:Ljava/util/List;
 
     return-void
@@ -47,7 +47,7 @@
 
 # virtual methods
 .method public getCameras()Ljava/util/List;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -57,8 +57,8 @@
         }
     .end annotation
 
-    .line 62
-    iget-object v0, p0, Landroidx/camera/core/ConcurrentCamera;->mCameras:Ljava/util/List;
+    .line 60
+    iget-object p0, p0, Landroidx/camera/core/ConcurrentCamera;->mCameras:Ljava/util/List;
 
-    return-object v0
+    return-object p0
 .end method

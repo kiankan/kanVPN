@@ -14,11 +14,15 @@
 .end annotation
 
 
+# static fields
+.field static final DEVICE_ID_DEFAULT:I
+
+
 # direct methods
 .method private constructor <init>()V
     .locals 0
 
-    .line 114
+    .line 181
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,7 +31,7 @@
 .method static createDeviceContext(Landroid/content/Context;I)Landroid/content/Context;
     .locals 0
 
-    .line 119
+    .line 187
     invoke-virtual {p0, p1}, Landroid/content/Context;->createDeviceContext(I)Landroid/content/Context;
 
     move-result-object p0
@@ -38,7 +42,7 @@
 .method static getDeviceId(Landroid/content/Context;)I
     .locals 0
 
-    .line 123
+    .line 191
     invoke-virtual {p0}, Landroid/content/Context;->getDeviceId()I
 
     move-result p0

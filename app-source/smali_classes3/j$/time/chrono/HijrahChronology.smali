@@ -94,23 +94,23 @@
 
     .line 287
     :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const-string p2, "calendar typeId is empty"
+    const-string p1, "calendar typeId is empty"
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
     .line 284
     :cond_1
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const-string p2, "calendar id is empty"
+    const-string p1, "calendar id is empty"
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method private checkCalendarInit()V
@@ -228,25 +228,13 @@
 
     .line 958
     :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    const-string p0, "Invalid month length in year: "
 
-    new-instance p3, Ljava/lang/StringBuilder;
+    invoke-static {p0, p2}, Lj$/time/chrono/HijrahChronology$0;->m(Ljava/lang/String;I)V
 
-    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 p0, 0x0
 
-    const-string p4, "Invalid month length in year: "
-
-    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-object p0
 
     :cond_1
     add-int/lit8 v4, v4, 0x1
@@ -254,12 +242,12 @@
     goto :goto_0
 
     :cond_2
-    add-int/lit8 p2, v5, 0x1
+    add-int/lit8 p0, v5, 0x1
 
     .line 967
     aput p1, v2, v5
 
-    if-ne p2, v0, :cond_3
+    if-ne p0, v0, :cond_3
 
     return-object v2
 
@@ -267,86 +255,84 @@
     :cond_3
     new-instance p1, Ljava/lang/IllegalStateException;
 
-    new-instance p3, Ljava/lang/StringBuilder;
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
+    const-string p3, "Did not fill epochMonths exactly: ndx = "
 
-    const-string p4, "Did not fill epochMonths exactly: ndx = "
+    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-string p0, " should be "
 
-    const-string p2, " should be "
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object p0
 
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p1
 .end method
 
 .method private epochDayToEpochMonth(I)I
-    .locals 1
+    .locals 0
 
     .line 716
-    iget-object v0, p0, Lj$/time/chrono/HijrahChronology;->hijrahEpochMonthStartDays:[I
+    iget-object p0, p0, Lj$/time/chrono/HijrahChronology;->hijrahEpochMonthStartDays:[I
 
-    invoke-static {v0, p1}, Ljava/util/Arrays;->binarySearch([II)I
+    invoke-static {p0, p1}, Ljava/util/Arrays;->binarySearch([II)I
 
-    move-result p1
+    move-result p0
 
-    if-gez p1, :cond_0
+    if-gez p0, :cond_0
 
-    neg-int p1, p1
+    neg-int p0, p0
 
-    add-int/lit8 p1, p1, -0x2
+    add-int/lit8 p0, p0, -0x2
 
     :cond_0
-    return p1
+    return p0
 .end method
 
 .method private epochMonthLength(I)I
-    .locals 2
+    .locals 1
 
     .line 786
-    iget-object v0, p0, Lj$/time/chrono/HijrahChronology;->hijrahEpochMonthStartDays:[I
+    iget-object p0, p0, Lj$/time/chrono/HijrahChronology;->hijrahEpochMonthStartDays:[I
 
-    add-int/lit8 v1, p1, 0x1
+    add-int/lit8 v0, p1, 0x1
 
-    aget v1, v0, v1
+    aget v0, p0, v0
 
-    aget p1, v0, p1
+    aget p0, p0, p1
 
-    sub-int/2addr v1, p1
+    sub-int/2addr v0, p0
 
-    return v1
+    return v0
 .end method
 
 .method private epochMonthToEpochDay(I)I
-    .locals 1
+    .locals 0
 
     .line 760
-    iget-object v0, p0, Lj$/time/chrono/HijrahChronology;->hijrahEpochMonthStartDays:[I
+    iget-object p0, p0, Lj$/time/chrono/HijrahChronology;->hijrahEpochMonthStartDays:[I
 
-    aget p1, v0, p1
+    aget p0, p0, p1
 
-    return p1
+    return p0
 .end method
 
 .method private epochMonthToMonth(I)I
-    .locals 1
+    .locals 0
 
     .line 750
-    iget v0, p0, Lj$/time/chrono/HijrahChronology;->hijrahStartEpochMonth:I
+    iget p0, p0, Lj$/time/chrono/HijrahChronology;->hijrahStartEpochMonth:I
 
-    add-int/2addr p1, v0
+    add-int/2addr p1, p0
 
     rem-int/lit8 p1, p1, 0xc
 
@@ -354,12 +340,12 @@
 .end method
 
 .method private epochMonthToYear(I)I
-    .locals 1
+    .locals 0
 
     .line 730
-    iget v0, p0, Lj$/time/chrono/HijrahChronology;->hijrahStartEpochMonth:I
+    iget p0, p0, Lj$/time/chrono/HijrahChronology;->hijrahStartEpochMonth:I
 
-    add-int/2addr p1, v0
+    add-int/2addr p1, p0
 
     div-int/lit8 p1, p1, 0xc
 
@@ -8497,38 +8483,36 @@
     :goto_2
     new-instance v1, Lj$/time/DateTimeException;
 
-    iget-object v2, p0, Lj$/time/chrono/HijrahChronology;->typeId:Ljava/lang/String;
+    iget-object p0, p0, Lj$/time/chrono/HijrahChronology;->typeId:Ljava/lang/String;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v3, "Unable to initialize HijrahCalendar: "
 
-    const-string v4, "Unable to initialize HijrahCalendar: "
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object p0
 
-    move-result-object v2
-
-    invoke-direct {v1, v2, v0}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {v1, p0, v0}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     throw v1
 .end method
 
 .method private readObject(Ljava/io/ObjectInputStream;)V
-    .locals 1
+    .locals 0
 
     .line 1358
-    new-instance p1, Ljava/io/InvalidObjectException;
+    new-instance p0, Ljava/io/InvalidObjectException;
 
-    const-string v0, "Deserialization via serialization delegate"
+    const-string p1, "Deserialization via serialization delegate"
 
-    invoke-direct {p1, v0}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method private yearMonthToDayOfYear(II)I
@@ -8549,22 +8533,22 @@
     .line 774
     invoke-direct {p0, p1}, Lj$/time/chrono/HijrahChronology;->epochMonthToEpochDay(I)I
 
-    move-result p1
+    move-result p0
 
-    sub-int/2addr p2, p1
+    sub-int/2addr p2, p0
 
     return p2
 .end method
 
 .method private yearToEpochMonth(I)I
-    .locals 1
+    .locals 0
 
     mul-int/lit8 p1, p1, 0xc
 
     .line 740
-    iget v0, p0, Lj$/time/chrono/HijrahChronology;->hijrahStartEpochMonth:I
+    iget p0, p0, Lj$/time/chrono/HijrahChronology;->hijrahStartEpochMonth:I
 
-    sub-int/2addr p1, v0
+    sub-int/2addr p1, p0
 
     return p1
 .end method
@@ -8572,43 +8556,29 @@
 
 # virtual methods
 .method checkValidMonth(I)V
-    .locals 3
+    .locals 0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    if-lt p1, v0, :cond_0
+    if-lt p1, p0, :cond_0
 
-    const/16 v0, 0xc
+    const/16 p0, 0xc
 
-    if-gt p1, v0, :cond_0
+    if-gt p1, p0, :cond_0
 
     return-void
 
     .line 561
     :cond_0
-    new-instance v0, Lj$/time/DateTimeException;
+    const-string p0, "Invalid Hijrah month: "
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-static {p0, p1}, Lj$/time/Month$0;->m(Ljava/lang/String;I)V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Invalid Hijrah month: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-void
 .end method
 
 .method checkValidYear(J)I
-    .locals 3
+    .locals 2
 
     .line 547
     invoke-virtual {p0}, Lj$/time/chrono/HijrahChronology;->getMinimumYear()I
@@ -8623,39 +8593,48 @@
 
     invoke-virtual {p0}, Lj$/time/chrono/HijrahChronology;->getMaximumYear()I
 
-    move-result v0
+    move-result p0
 
-    int-to-long v0, v0
+    int-to-long v0, p0
 
-    cmp-long v0, p1, v0
+    cmp-long p0, p1, v0
 
-    if-gtz v0, :cond_0
+    if-gtz p0, :cond_0
 
-    long-to-int p1, p1
+    long-to-int p0, p1
 
-    return p1
+    return p0
 
     .line 548
     :cond_0
-    new-instance v0, Lj$/time/DateTimeException;
+    new-instance p0, Lj$/time/DateTimeException;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v1, "Invalid Hijrah year: "
 
-    const-string v2, "Invalid Hijrah year: "
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {v0, p1}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
 
-    throw v0
+    throw p0
+.end method
+
+.method public bridge synthetic date(III)Lj$/time/chrono/ChronoLocalDate;
+    .locals 0
+
+    .line 188
+    invoke-virtual {p0, p1, p2, p3}, Lj$/time/chrono/HijrahChronology;->date(III)Lj$/time/chrono/HijrahDate;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method public bridge synthetic date(Lj$/time/temporal/TemporalAccessor;)Lj$/time/chrono/ChronoLocalDate;
@@ -8664,9 +8643,9 @@
     .line 188
     invoke-virtual {p0, p1}, Lj$/time/chrono/HijrahChronology;->date(Lj$/time/temporal/TemporalAccessor;)Lj$/time/chrono/HijrahDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public date(III)Lj$/time/chrono/HijrahDate;
@@ -8675,9 +8654,9 @@
     .line 374
     invoke-static {p0, p1, p2, p3}, Lj$/time/chrono/HijrahDate;->of(Lj$/time/chrono/HijrahChronology;III)Lj$/time/chrono/HijrahDate;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public date(Lj$/time/temporal/TemporalAccessor;)Lj$/time/chrono/HijrahDate;
@@ -8703,9 +8682,122 @@
 
     invoke-static {p0, v0, v1}, Lj$/time/chrono/HijrahDate;->ofEpochDay(Lj$/time/chrono/HijrahChronology;J)Lj$/time/chrono/HijrahDate;
 
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public bridge synthetic dateEpochDay(J)Lj$/time/chrono/ChronoLocalDate;
+    .locals 0
+
+    .line 188
+    invoke-virtual {p0, p1, p2}, Lj$/time/chrono/HijrahChronology;->dateEpochDay(J)Lj$/time/chrono/HijrahDate;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public dateEpochDay(J)Lj$/time/chrono/HijrahDate;
+    .locals 0
+
+    .line 421
+    invoke-static {p0, p1, p2}, Lj$/time/chrono/HijrahDate;->ofEpochDay(Lj$/time/chrono/HijrahChronology;J)Lj$/time/chrono/HijrahDate;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public bridge synthetic dateNow()Lj$/time/chrono/ChronoLocalDate;
+    .locals 0
+
+    .line 188
+    invoke-virtual {p0}, Lj$/time/chrono/HijrahChronology;->dateNow()Lj$/time/chrono/HijrahDate;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public dateNow()Lj$/time/chrono/HijrahDate;
+    .locals 1
+
+    .line 426
+    invoke-static {}, Lj$/time/Clock;->systemDefaultZone()Lj$/time/Clock;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lj$/time/chrono/HijrahChronology;->dateNow(Lj$/time/Clock;)Lj$/time/chrono/HijrahDate;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public dateNow(Lj$/time/Clock;)Lj$/time/chrono/HijrahDate;
+    .locals 0
+
+    .line 436
+    invoke-static {p1}, Lj$/time/LocalDate;->now(Lj$/time/Clock;)Lj$/time/LocalDate;
+
     move-result-object p1
 
-    return-object p1
+    invoke-virtual {p0, p1}, Lj$/time/chrono/HijrahChronology;->date(Lj$/time/temporal/TemporalAccessor;)Lj$/time/chrono/HijrahDate;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public bridge synthetic dateYearDay(II)Lj$/time/chrono/ChronoLocalDate;
+    .locals 0
+
+    .line 188
+    invoke-virtual {p0, p1, p2}, Lj$/time/chrono/HijrahChronology;->dateYearDay(II)Lj$/time/chrono/HijrahDate;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public dateYearDay(II)Lj$/time/chrono/HijrahDate;
+    .locals 1
+
+    const/4 v0, 0x1
+
+    .line 405
+    invoke-static {p0, p1, v0, v0}, Lj$/time/chrono/HijrahDate;->of(Lj$/time/chrono/HijrahChronology;III)Lj$/time/chrono/HijrahDate;
+
+    move-result-object p0
+
+    .line 406
+    invoke-virtual {p0}, Lj$/time/chrono/HijrahDate;->lengthOfYear()I
+
+    move-result p1
+
+    if-gt p2, p1, :cond_0
+
+    sub-int/2addr p2, v0
+
+    int-to-long p1, p2
+
+    .line 409
+    invoke-virtual {p0, p1, p2}, Lj$/time/chrono/HijrahDate;->plusDays(J)Lj$/time/chrono/HijrahDate;
+
+    move-result-object p0
+
+    return-object p0
+
+    .line 407
+    :cond_0
+    const-string p0, "Invalid dayOfYear: "
+
+    invoke-static {p0, p2}, Lj$/time/Month$0;->m(Ljava/lang/String;I)V
+
+    const/4 p0, 0x0
+
+    return-object p0
 .end method
 
 .method public bridge synthetic eraOf(I)Lj$/time/chrono/Era;
@@ -8714,41 +8806,56 @@
     .line 188
     invoke-virtual {p0, p1}, Lj$/time/chrono/HijrahChronology;->eraOf(I)Lj$/time/chrono/HijrahEra;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public eraOf(I)Lj$/time/chrono/HijrahEra;
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    if-ne p1, v0, :cond_0
+    if-ne p1, p0, :cond_0
 
     .line 498
-    sget-object p1, Lj$/time/chrono/HijrahEra;->AH:Lj$/time/chrono/HijrahEra;
+    sget-object p0, Lj$/time/chrono/HijrahEra;->AH:Lj$/time/chrono/HijrahEra;
 
-    return-object p1
+    return-object p0
 
     .line 500
     :cond_0
-    new-instance p1, Lj$/time/DateTimeException;
+    const-string p0, "invalid Hijrah era"
 
-    const-string v0, "invalid Hijrah era"
+    invoke-static {p0}, Lj$/time/Year$3;->m(Ljava/lang/String;)V
 
-    invoke-direct {p1, v0}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
+    const/4 p0, 0x0
 
-    throw p1
+    return-object p0
+.end method
+
+.method public eras()Ljava/util/List;
+    .locals 0
+
+    .line 506
+    invoke-static {}, Lj$/time/chrono/HijrahEra;->values()[Lj$/time/chrono/HijrahEra;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lj$/time/Duration$DurationUnits$0;->m([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method public getCalendarType()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 341
-    iget-object v0, p0, Lj$/time/chrono/HijrahChronology;->calendarType:Ljava/lang/String;
+    iget-object p0, p0, Lj$/time/chrono/HijrahChronology;->calendarType:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method getDayOfYear(II)I
@@ -8759,9 +8866,9 @@
     .line 622
     invoke-direct {p0, p1, p2}, Lj$/time/chrono/HijrahChronology;->yearMonthToDayOfYear(II)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method getEpochDay(III)J
@@ -8805,65 +8912,51 @@
     .line 611
     invoke-direct {p0, v0}, Lj$/time/chrono/HijrahChronology;->epochMonthToEpochDay(I)I
 
-    move-result p1
+    move-result p0
 
     sub-int/2addr p3, v1
 
-    add-int/2addr p1, p3
+    add-int/2addr p0, p3
 
-    int-to-long p1, p1
+    int-to-long p0, p0
 
-    return-wide p1
+    return-wide p0
 
     .line 609
     :cond_0
-    new-instance p1, Lj$/time/DateTimeException;
+    const-string p0, "Invalid Hijrah day of month: "
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    invoke-static {p0, p3}, Lj$/time/Month$0;->m(Ljava/lang/String;I)V
 
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+    const-wide/16 p0, 0x0
 
-    const-string v0, "Invalid Hijrah day of month: "
-
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-wide p0
 
     .line 605
     :cond_1
-    new-instance p3, Lj$/time/DateTimeException;
+    new-instance p0, Lj$/time/DateTimeException;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance p3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v0, "Invalid Hijrah date, year: "
 
-    const-string v1, "Invalid Hijrah date, year: "
+    invoke-direct {p3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string p1, ", month: "
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {p3, p1}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
 
-    throw p3
+    throw p0
 .end method
 
 .method getHijrahDateInfo(I)[I
@@ -8899,9 +8992,9 @@
     .line 582
     invoke-direct {p0, v0}, Lj$/time/chrono/HijrahChronology;->epochMonthToEpochDay(I)I
 
-    move-result v0
+    move-result p0
 
-    sub-int/2addr p1, v0
+    sub-int/2addr p1, p0
 
     add-int/lit8 v2, v2, 0x1
 
@@ -8910,46 +9003,46 @@
     .line 588
     filled-new-array {v1, v2, p1}, [I
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 576
     :cond_0
-    new-instance p1, Lj$/time/DateTimeException;
+    const-string p0, "Hijrah date out of range"
 
-    const-string v0, "Hijrah date out of range"
+    invoke-static {p0}, Lj$/time/Year$3;->m(Ljava/lang/String;)V
 
-    invoke-direct {p1, v0}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
+    const/4 p0, 0x0
 
-    throw p1
+    return-object p0
 .end method
 
 .method public getId()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 325
-    iget-object v0, p0, Lj$/time/chrono/HijrahChronology;->typeId:Ljava/lang/String;
+    iget-object p0, p0, Lj$/time/chrono/HijrahChronology;->typeId:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method getMaximumDayOfYear()I
-    .locals 1
+    .locals 0
 
     .line 694
-    iget v0, p0, Lj$/time/chrono/HijrahChronology;->maxYearLength:I
+    iget p0, p0, Lj$/time/chrono/HijrahChronology;->maxYearLength:I
 
-    return v0
+    return p0
 .end method
 
 .method getMaximumMonthLength()I
-    .locals 1
+    .locals 0
 
     .line 676
-    iget v0, p0, Lj$/time/chrono/HijrahChronology;->maxMonthLength:I
+    iget p0, p0, Lj$/time/chrono/HijrahChronology;->maxMonthLength:I
 
-    return v0
+    return p0
 .end method
 
 .method getMaximumYear()I
@@ -8964,20 +9057,20 @@
 
     invoke-direct {p0, v0}, Lj$/time/chrono/HijrahChronology;->epochMonthToYear(I)I
 
-    move-result v0
+    move-result p0
 
-    add-int/lit8 v0, v0, -0x1
+    add-int/lit8 p0, p0, -0x1
 
-    return v0
+    return p0
 .end method
 
 .method getMinimumMonthLength()I
-    .locals 1
+    .locals 0
 
     .line 685
-    iget v0, p0, Lj$/time/chrono/HijrahChronology;->minMonthLength:I
+    iget p0, p0, Lj$/time/chrono/HijrahChronology;->minMonthLength:I
 
-    return v0
+    return p0
 .end method
 
 .method getMinimumYear()I
@@ -8988,13 +9081,13 @@
     .line 658
     invoke-direct {p0, v0}, Lj$/time/chrono/HijrahChronology;->epochMonthToYear(I)I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method getMonthLength(II)I
-    .locals 3
+    .locals 2
 
     .line 633
     invoke-direct {p0, p1}, Lj$/time/chrono/HijrahChronology;->yearToEpochMonth(I)I
@@ -9017,37 +9110,35 @@
     .line 638
     invoke-direct {p0, v0}, Lj$/time/chrono/HijrahChronology;->epochMonthLength(I)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 
     .line 635
     :cond_0
-    new-instance v0, Lj$/time/DateTimeException;
+    new-instance p0, Lj$/time/DateTimeException;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v1, "Invalid Hijrah date, year: "
 
-    const-string v2, "Invalid Hijrah date, year: "
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string p1, ", month: "
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {v0, p1}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
 
-    throw v0
+    throw p0
 .end method
 
 .method getYearLength(I)I
@@ -9058,9 +9149,61 @@
     .line 649
     invoke-direct {p0, p1, v0}, Lj$/time/chrono/HijrahChronology;->yearMonthToDayOfYear(II)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
+.end method
+
+.method public isLeapYear(J)Z
+    .locals 4
+
+    .line 468
+    invoke-direct {p0}, Lj$/time/chrono/HijrahChronology;->checkCalendarInit()V
+
+    .line 469
+    invoke-virtual {p0}, Lj$/time/chrono/HijrahChronology;->getMinimumYear()I
+
+    move-result v0
+
+    int-to-long v0, v0
+
+    cmp-long v0, p1, v0
+
+    const/4 v1, 0x0
+
+    if-ltz v0, :cond_1
+
+    invoke-virtual {p0}, Lj$/time/chrono/HijrahChronology;->getMaximumYear()I
+
+    move-result v0
+
+    int-to-long v2, v0
+
+    cmp-long v0, p1, v2
+
+    if-lez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    long-to-int p1, p1
+
+    .line 472
+    invoke-virtual {p0, p1}, Lj$/time/chrono/HijrahChronology;->getYearLength(I)I
+
+    move-result p0
+
+    const/16 p1, 0x162
+
+    if-le p0, p1, :cond_1
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_1
+    :goto_0
+    return v1
 .end method
 
 .method public localDateTime(Lj$/time/temporal/TemporalAccessor;)Lj$/time/chrono/ChronoLocalDateTime;
@@ -9069,9 +9212,30 @@
     .line 450
     invoke-super {p0, p1}, Lj$/time/chrono/Chronology;->localDateTime(Lj$/time/temporal/TemporalAccessor;)Lj$/time/chrono/ChronoLocalDateTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
+.end method
+
+.method public prolepticYear(Lj$/time/chrono/Era;I)I
+    .locals 0
+
+    .line 478
+    instance-of p0, p1, Lj$/time/chrono/HijrahEra;
+
+    if-eqz p0, :cond_0
+
+    return p2
+
+    .line 479
+    :cond_0
+    new-instance p0, Ljava/lang/ClassCastException;
+
+    const-string p1, "Era must be HijrahEra"
+
+    invoke-direct {p0, p1}, Ljava/lang/ClassCastException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method
 
 .method public range(Lj$/time/temporal/ChronoField;)Lj$/time/temporal/ValueRange;
@@ -9098,17 +9262,17 @@
     .line 528
     invoke-virtual {p1}, Lj$/time/temporal/ChronoField;->range()Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 526
     :pswitch_0
     invoke-static {v1, v2, v1, v2}, Lj$/time/temporal/ValueRange;->of(JJ)Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 524
     :pswitch_1
@@ -9120,39 +9284,39 @@
 
     invoke-virtual {p0}, Lj$/time/chrono/HijrahChronology;->getMaximumYear()I
 
-    move-result p1
+    move-result p0
 
-    int-to-long v2, p1
+    int-to-long p0, p0
 
-    invoke-static {v0, v1, v2, v3}, Lj$/time/temporal/ValueRange;->of(JJ)Lj$/time/temporal/ValueRange;
+    invoke-static {v0, v1, p0, p1}, Lj$/time/temporal/ValueRange;->of(JJ)Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     :pswitch_2
-    const-wide/16 v3, 0x5
+    const-wide/16 p0, 0x5
 
     .line 521
-    invoke-static {v1, v2, v3, v4}, Lj$/time/temporal/ValueRange;->of(JJ)Lj$/time/temporal/ValueRange;
+    invoke-static {v1, v2, p0, p1}, Lj$/time/temporal/ValueRange;->of(JJ)Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 519
     :pswitch_3
     invoke-virtual {p0}, Lj$/time/chrono/HijrahChronology;->getMaximumDayOfYear()I
 
-    move-result p1
+    move-result p0
 
-    int-to-long v3, p1
+    int-to-long p0, p0
 
-    invoke-static {v1, v2, v3, v4}, Lj$/time/temporal/ValueRange;->of(JJ)Lj$/time/temporal/ValueRange;
+    invoke-static {v1, v2, p0, p1}, Lj$/time/temporal/ValueRange;->of(JJ)Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 517
     :pswitch_4
@@ -9164,9 +9328,9 @@
 
     invoke-virtual {p0}, Lj$/time/chrono/HijrahChronology;->getMaximumMonthLength()I
 
-    move-result p1
+    move-result p0
 
-    int-to-long v6, p1
+    int-to-long v6, p0
 
     const-wide/16 v0, 0x1
 
@@ -9174,17 +9338,17 @@
 
     invoke-static/range {v0 .. v7}, Lj$/time/temporal/ValueRange;->of(JJJJ)Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 531
     :cond_0
     invoke-virtual {p1}, Lj$/time/temporal/ChronoField;->range()Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     :pswitch_data_0
     .packed-switch 0x1
@@ -9197,15 +9361,39 @@
     .end packed-switch
 .end method
 
+.method public bridge synthetic resolveDate(Ljava/util/Map;Lj$/time/format/ResolverStyle;)Lj$/time/chrono/ChronoLocalDate;
+    .locals 0
+
+    .line 188
+    invoke-virtual {p0, p1, p2}, Lj$/time/chrono/HijrahChronology;->resolveDate(Ljava/util/Map;Lj$/time/format/ResolverStyle;)Lj$/time/chrono/HijrahDate;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public resolveDate(Ljava/util/Map;Lj$/time/format/ResolverStyle;)Lj$/time/chrono/HijrahDate;
+    .locals 0
+
+    .line 537
+    invoke-super {p0, p1, p2}, Lj$/time/chrono/AbstractChronology;->resolveDate(Ljava/util/Map;Lj$/time/format/ResolverStyle;)Lj$/time/chrono/ChronoLocalDate;
+
+    move-result-object p0
+
+    check-cast p0, Lj$/time/chrono/HijrahDate;
+
+    return-object p0
+.end method
+
 .method writeReplace()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
     .line 1348
     invoke-super {p0}, Lj$/time/chrono/AbstractChronology;->writeReplace()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public zonedDateTime(Lj$/time/Instant;Lj$/time/ZoneId;)Lj$/time/chrono/ChronoZonedDateTime;
@@ -9214,7 +9402,7 @@
     .line 462
     invoke-super {p0, p1, p2}, Lj$/time/chrono/Chronology;->zonedDateTime(Lj$/time/Instant;Lj$/time/ZoneId;)Lj$/time/chrono/ChronoZonedDateTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

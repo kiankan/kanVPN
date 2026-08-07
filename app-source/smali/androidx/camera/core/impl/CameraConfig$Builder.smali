@@ -42,6 +42,16 @@
     .end annotation
 .end method
 
+.method public abstract setPostviewFormatSelector(Landroidx/camera/core/impl/CameraConfig$PostviewFormatSelector;)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/camera/core/impl/CameraConfig$PostviewFormatSelector;",
+            ")TB;"
+        }
+    .end annotation
+.end method
+
 .method public abstract setPostviewSupported(Z)Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {

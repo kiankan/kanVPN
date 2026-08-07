@@ -29,18 +29,18 @@
 
 # virtual methods
 .method public final apply(Ljava/lang/Object;)Lcom/google/common/util/concurrent/ListenableFuture;
-    .locals 2
+    .locals 1
 
     .line 0
     iget-object v0, p0, Landroidx/camera/core/streamsharing/VirtualCameraControl$$ExternalSyntheticLambda1;->f$0:Landroidx/camera/core/streamsharing/VirtualCameraControl;
 
-    iget-object v1, p0, Landroidx/camera/core/streamsharing/VirtualCameraControl$$ExternalSyntheticLambda1;->f$1:Ljava/util/List;
+    iget-object p0, p0, Landroidx/camera/core/streamsharing/VirtualCameraControl$$ExternalSyntheticLambda1;->f$1:Ljava/util/List;
 
     check-cast p1, Ljava/lang/Void;
 
-    invoke-virtual {v0, v1, p1}, Landroidx/camera/core/streamsharing/VirtualCameraControl;->lambda$submitStillCaptureRequests$1$androidx-camera-core-streamsharing-VirtualCameraControl(Ljava/util/List;Ljava/lang/Void;)Lcom/google/common/util/concurrent/ListenableFuture;
+    invoke-virtual {v0, p0, p1}, Landroidx/camera/core/streamsharing/VirtualCameraControl;->lambda$submitStillCaptureRequests$1$androidx-camera-core-streamsharing-VirtualCameraControl(Ljava/util/List;Ljava/lang/Void;)Lcom/google/common/util/concurrent/ListenableFuture;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

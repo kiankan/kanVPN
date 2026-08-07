@@ -28,7 +28,7 @@
 
     invoke-static {p1, p2}, Landroidx/camera/core/impl/OptionsBundle;->lambda$static$0(Landroidx/camera/core/impl/Config$Option;Landroidx/camera/core/impl/Config$Option;)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method

@@ -53,11 +53,9 @@
     .line 337
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "Invalid value for "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -73,19 +71,17 @@
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 339
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v1, "Invalid value (valid values "
 
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -95,9 +91,9 @@
 
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public static of(JJ)Lj$/time/temporal/ValueRange;
@@ -214,7 +210,7 @@
 .end method
 
 .method private readObject(Ljava/io/ObjectInputStream;)V
-    .locals 6
+    .locals 4
 
     .line 358
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->defaultReadObject()V
@@ -231,47 +227,47 @@
     .line 362
     iget-wide v0, p0, Lj$/time/temporal/ValueRange;->maxSmallest:J
 
-    iget-wide v4, p0, Lj$/time/temporal/ValueRange;->maxLargest:J
+    iget-wide p0, p0, Lj$/time/temporal/ValueRange;->maxLargest:J
 
-    cmp-long p1, v0, v4
+    cmp-long v0, v0, p0
 
-    if-gtz p1, :cond_1
+    if-gtz v0, :cond_1
 
-    cmp-long p1, v2, v4
+    cmp-long p0, v2, p0
 
-    if-gtz p1, :cond_0
+    if-gtz p0, :cond_0
 
     return-void
 
     .line 366
     :cond_0
-    new-instance p1, Ljava/io/InvalidObjectException;
+    new-instance p0, Ljava/io/InvalidObjectException;
 
-    const-string v0, "Minimum value must be less than maximum value"
+    const-string p1, "Minimum value must be less than maximum value"
 
-    invoke-direct {p1, v0}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
     .line 363
     :cond_1
-    new-instance p1, Ljava/io/InvalidObjectException;
+    new-instance p0, Ljava/io/InvalidObjectException;
 
-    const-string v0, "Smallest maximum value must be less than largest maximum value"
+    const-string p1, "Smallest maximum value must be less than largest maximum value"
 
-    invoke-direct {p1, v0}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
     .line 360
     :cond_2
-    new-instance p1, Ljava/io/InvalidObjectException;
+    new-instance p0, Ljava/io/InvalidObjectException;
 
-    const-string v0, "Smallest minimum value must be less than largest minimum value"
+    const-string p1, "Smallest minimum value must be less than largest minimum value"
 
-    invoke-direct {p1, v0}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 
@@ -286,21 +282,21 @@
 
     if-eqz v0, :cond_0
 
-    long-to-int p1, p1
+    long-to-int p0, p1
 
-    return p1
+    return p0
 
     .line 330
     :cond_0
-    new-instance v0, Lj$/time/DateTimeException;
-
     invoke-direct {p0, p3, p1, p2}, Lj$/time/temporal/ValueRange;->genInvalidFieldMessage(Lj$/time/temporal/TemporalField;J)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-direct {v0, p1}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
+    invoke-static {p0}, Lj$/time/Year$3;->m(Ljava/lang/String;)V
 
-    throw v0
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
 .method public checkValidValue(JLj$/time/temporal/TemporalField;)J
@@ -317,15 +313,15 @@
 
     .line 311
     :cond_0
-    new-instance v0, Lj$/time/DateTimeException;
-
     invoke-direct {p0, p3, p1, p2}, Lj$/time/temporal/ValueRange;->genInvalidFieldMessage(Lj$/time/temporal/TemporalField;J)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-direct {v0, p1}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
+    invoke-static {p0}, Lj$/time/Year$3;->m(Ljava/lang/String;)V
 
-    throw v0
+    const-wide/16 p0, 0x0
+
+    return-wide p0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -375,11 +371,11 @@
 
     iget-wide v3, p0, Lj$/time/temporal/ValueRange;->maxLargest:J
 
-    iget-wide v5, p1, Lj$/time/temporal/ValueRange;->maxLargest:J
+    iget-wide p0, p1, Lj$/time/temporal/ValueRange;->maxLargest:J
 
-    cmp-long p1, v3, v5
+    cmp-long p0, v3, p0
 
-    if-nez p1, :cond_1
+    if-nez p0, :cond_1
 
     return v0
 
@@ -460,9 +456,9 @@
 
     xor-long/2addr v0, v2
 
-    long-to-int v0, v0
+    long-to-int p0, v0
 
-    return v0
+    return p0
 .end method
 
 .method public isFixed()Z
@@ -481,18 +477,18 @@
 
     iget-wide v2, p0, Lj$/time/temporal/ValueRange;->maxLargest:J
 
-    cmp-long v0, v0, v2
+    cmp-long p0, v0, v2
 
-    if-nez v0, :cond_0
+    if-nez p0, :cond_0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public isIntValue()Z
@@ -515,18 +511,18 @@
 
     const-wide/32 v2, 0x7fffffff
 
-    cmp-long v0, v0, v2
+    cmp-long p0, v0, v2
 
-    if-gtz v0, :cond_0
+    if-gtz p0, :cond_0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public isValidIntValue(J)Z
@@ -541,18 +537,18 @@
 
     invoke-virtual {p0, p1, p2}, Lj$/time/temporal/ValueRange;->isValidValue(J)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_0
+    if-eqz p0, :cond_0
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method public isValidValue(J)Z
@@ -571,18 +567,18 @@
 
     move-result-wide v0
 
-    cmp-long p1, p1, v0
+    cmp-long p0, p1, v0
 
-    if-gtz p1, :cond_0
+    if-gtz p0, :cond_0
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method public toString()Ljava/lang/String;
@@ -646,7 +642,7 @@
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

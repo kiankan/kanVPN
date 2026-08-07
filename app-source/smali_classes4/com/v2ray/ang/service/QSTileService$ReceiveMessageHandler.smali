@@ -36,12 +36,12 @@
         "Landroid/content/Context;",
         "intent",
         "Landroid/content/Intent;",
-        "app_playstoreRelease"
+        "v2rayNG:app_playstoreRelease"
     }
     k = 0x1
     mv = {
         0x2,
-        0x3,
+        0x4,
         0x0
     }
     xi = 0x30
@@ -68,10 +68,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 89
+    .line 90
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 90
+    .line 91
     new-instance v0, Ljava/lang/ref/SoftReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;)V
@@ -84,7 +84,7 @@
 
 # virtual methods
 .method public final getMReference()Ljava/lang/ref/SoftReference;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -94,159 +94,159 @@
         }
     .end annotation
 
-    .line 90
-    iget-object v0, p0, Lcom/v2ray/ang/service/QSTileService$ReceiveMessageHandler;->mReference:Ljava/lang/ref/SoftReference;
+    .line 91
+    iget-object p0, p0, Lcom/v2ray/ang/service/QSTileService$ReceiveMessageHandler;->mReference:Ljava/lang/ref/SoftReference;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 4
+    .locals 3
 
-    .line 92
-    iget-object p1, p0, Lcom/v2ray/ang/service/QSTileService$ReceiveMessageHandler;->mReference:Ljava/lang/ref/SoftReference;
+    .line 93
+    iget-object p0, p0, Lcom/v2ray/ang/service/QSTileService$ReceiveMessageHandler;->mReference:Ljava/lang/ref/SoftReference;
 
-    invoke-virtual {p1}, Ljava/lang/ref/SoftReference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/ref/SoftReference;->get()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lcom/v2ray/ang/service/QSTileService;
+    check-cast p0, Lcom/v2ray/ang/service/QSTileService;
 
     if-eqz p2, :cond_0
 
-    .line 93
-    const-string v0, "key"
+    .line 94
+    const-string p1, "key"
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
-    move-result p2
+    move-result p1
 
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object p2
+    move-result-object p1
 
     goto :goto_0
 
     :cond_0
-    const/4 p2, 0x0
+    const/4 p1, 0x0
 
     :goto_0
-    const/4 v0, 0x2
+    const/4 p2, 0x2
 
-    if-nez p2, :cond_1
+    if-nez p1, :cond_1
 
     goto :goto_1
 
-    .line 94
-    :cond_1
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    const/16 v2, 0xb
-
-    if-ne v1, v2, :cond_2
-
-    if-eqz p1, :cond_a
-
     .line 95
-    invoke-virtual {p1, v0}, Lcom/v2ray/ang/service/QSTileService;->setState(I)V
+    :cond_1
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    const/16 v1, 0xb
+
+    if-ne v0, v1, :cond_2
+
+    if-eqz p0, :cond_a
+
+    .line 96
+    invoke-virtual {p0, p2}, Lcom/v2ray/ang/service/QSTileService;->setState(I)V
 
     return-void
 
     :cond_2
     :goto_1
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    if-nez p2, :cond_3
+    if-nez p1, :cond_3
 
     goto :goto_2
 
-    .line 98
-    :cond_3
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    const/16 v3, 0xc
-
-    if-ne v2, v3, :cond_4
-
-    if-eqz p1, :cond_a
-
     .line 99
-    invoke-virtual {p1, v1}, Lcom/v2ray/ang/service/QSTileService;->setState(I)V
+    :cond_3
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    const/16 v2, 0xc
+
+    if-ne v1, v2, :cond_4
+
+    if-eqz p0, :cond_a
+
+    .line 100
+    invoke-virtual {p0, v0}, Lcom/v2ray/ang/service/QSTileService;->setState(I)V
 
     return-void
 
     :cond_4
     :goto_2
-    if-nez p2, :cond_5
+    if-nez p1, :cond_5
 
     goto :goto_3
 
-    .line 102
-    :cond_5
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    const/16 v3, 0x1f
-
-    if-ne v2, v3, :cond_6
-
-    if-eqz p1, :cond_a
-
     .line 103
-    invoke-virtual {p1, v0}, Lcom/v2ray/ang/service/QSTileService;->setState(I)V
+    :cond_5
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    const/16 v2, 0x1f
+
+    if-ne v1, v2, :cond_6
+
+    if-eqz p0, :cond_a
+
+    .line 104
+    invoke-virtual {p0, p2}, Lcom/v2ray/ang/service/QSTileService;->setState(I)V
 
     return-void
 
     :cond_6
     :goto_3
-    if-nez p2, :cond_7
+    if-nez p1, :cond_7
 
     goto :goto_4
 
-    .line 106
-    :cond_7
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    const/16 v2, 0x20
-
-    if-ne v0, v2, :cond_8
-
-    if-eqz p1, :cond_a
-
     .line 107
-    invoke-virtual {p1, v1}, Lcom/v2ray/ang/service/QSTileService;->setState(I)V
+    :cond_7
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p2
+
+    const/16 v1, 0x20
+
+    if-ne p2, v1, :cond_8
+
+    if-eqz p0, :cond_a
+
+    .line 108
+    invoke-virtual {p0, v0}, Lcom/v2ray/ang/service/QSTileService;->setState(I)V
 
     return-void
 
     :cond_8
     :goto_4
-    if-nez p2, :cond_9
+    if-nez p1, :cond_9
 
     goto :goto_5
 
-    .line 110
-    :cond_9
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
-
-    move-result p2
-
-    const/16 v0, 0x29
-
-    if-ne p2, v0, :cond_a
-
-    if-eqz p1, :cond_a
-
     .line 111
-    invoke-virtual {p1, v1}, Lcom/v2ray/ang/service/QSTileService;->setState(I)V
+    :cond_9
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    const/16 p2, 0x29
+
+    if-ne p1, p2, :cond_a
+
+    if-eqz p0, :cond_a
+
+    .line 112
+    invoke-virtual {p0, v0}, Lcom/v2ray/ang/service/QSTileService;->setState(I)V
 
     :cond_a
     :goto_5
@@ -268,7 +268,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 90
+    .line 91
     iput-object p1, p0, Lcom/v2ray/ang/service/QSTileService$ReceiveMessageHandler;->mReference:Ljava/lang/ref/SoftReference;
 
     return-void

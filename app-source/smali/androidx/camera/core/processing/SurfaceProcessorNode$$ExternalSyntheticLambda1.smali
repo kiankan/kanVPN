@@ -25,14 +25,14 @@
 
 # virtual methods
 .method public final accept(Ljava/lang/Object;)V
-    .locals 1
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Landroidx/camera/core/processing/SurfaceProcessorNode$$ExternalSyntheticLambda1;->f$0:Ljava/util/Map;
+    iget-object p0, p0, Landroidx/camera/core/processing/SurfaceProcessorNode$$ExternalSyntheticLambda1;->f$0:Ljava/util/Map;
 
     check-cast p1, Landroidx/camera/core/SurfaceRequest$TransformationInfo;
 
-    invoke-static {v0, p1}, Landroidx/camera/core/processing/SurfaceProcessorNode;->lambda$setUpRotationUpdates$1(Ljava/util/Map;Landroidx/camera/core/SurfaceRequest$TransformationInfo;)V
+    invoke-static {p0, p1}, Landroidx/camera/core/processing/SurfaceProcessorNode;->lambda$setUpRotationUpdates$1(Ljava/util/Map;Landroidx/camera/core/SurfaceRequest$TransformationInfo;)V
 
     return-void
 .end method

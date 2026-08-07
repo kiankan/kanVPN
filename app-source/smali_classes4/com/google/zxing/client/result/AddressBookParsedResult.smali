@@ -61,13 +61,13 @@
 
     .line 87
     :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const-string p2, "Phone numbers and types lengths differ"
+    const-string p1, "Phone numbers and types lengths differ"
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
     :cond_1
     :goto_0
@@ -86,13 +86,13 @@
 
     .line 90
     :cond_2
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const-string p2, "Emails and types lengths differ"
+    const-string p1, "Emails and types lengths differ"
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
     :cond_3
     :goto_1
@@ -111,13 +111,13 @@
 
     .line 93
     :cond_4
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const-string p2, "Addresses and types lengths differ"
+    const-string p1, "Addresses and types lengths differ"
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
     .line 95
     :cond_5
@@ -228,30 +228,30 @@
 
 # virtual methods
 .method public getAddressTypes()[Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 172
-    iget-object v0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->addressTypes:[Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->addressTypes:[Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getAddresses()[Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 164
-    iget-object v0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->addresses:[Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->addresses:[Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getBirthday()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 191
-    iget-object v0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->birthday:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->birthday:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getDisplayResult()Ljava/lang/String;
@@ -325,131 +325,131 @@
     invoke-static {v1, v0}, Lcom/google/zxing/client/result/AddressBookParsedResult;->maybeAppend([Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 216
-    iget-object v1, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->note:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->note:Ljava/lang/String;
 
-    invoke-static {v1, v0}, Lcom/google/zxing/client/result/AddressBookParsedResult;->maybeAppend(Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {p0, v0}, Lcom/google/zxing/client/result/AddressBookParsedResult;->maybeAppend(Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 217
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getEmailTypes()[Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 152
-    iget-object v0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->emailTypes:[Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->emailTypes:[Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getEmails()[Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 144
-    iget-object v0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->emails:[Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->emails:[Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getGeo()[Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 198
-    iget-object v0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->geo:[Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->geo:[Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getInstantMessenger()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 156
-    iget-object v0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->instantMessenger:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->instantMessenger:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getNames()[Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 114
-    iget-object v0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->names:[Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->names:[Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getNicknames()[Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 118
-    iget-object v0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->nicknames:[Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->nicknames:[Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getNote()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 160
-    iget-object v0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->note:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->note:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getOrg()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 180
-    iget-object v0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->org:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->org:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getPhoneNumbers()[Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 132
-    iget-object v0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->phoneNumbers:[Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->phoneNumbers:[Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getPhoneTypes()[Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 140
-    iget-object v0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->phoneTypes:[Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->phoneTypes:[Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getPronunciation()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 128
-    iget-object v0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->pronunciation:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->pronunciation:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getTitle()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 176
-    iget-object v0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->title:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->title:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getURLs()[Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 184
-    iget-object v0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->urls:[Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/AddressBookParsedResult;->urls:[Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method

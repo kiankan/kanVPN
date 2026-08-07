@@ -30,7 +30,7 @@
         }
     .end annotation
 
-    .line 57
+    .line 58
     iput-object p1, p0, Landroidx/camera/core/MetadataImageReader$1;->this$0:Landroidx/camera/core/MetadataImageReader;
 
     invoke-direct {p0}, Landroidx/camera/core/impl/CameraCaptureCallback;-><init>()V
@@ -43,13 +43,13 @@
 .method public onCaptureCompleted(ILandroidx/camera/core/impl/CameraCaptureResult;)V
     .locals 0
 
-    .line 61
+    .line 62
     invoke-super {p0, p1, p2}, Landroidx/camera/core/impl/CameraCaptureCallback;->onCaptureCompleted(ILandroidx/camera/core/impl/CameraCaptureResult;)V
 
-    .line 62
-    iget-object p1, p0, Landroidx/camera/core/MetadataImageReader$1;->this$0:Landroidx/camera/core/MetadataImageReader;
+    .line 63
+    iget-object p0, p0, Landroidx/camera/core/MetadataImageReader$1;->this$0:Landroidx/camera/core/MetadataImageReader;
 
-    invoke-virtual {p1, p2}, Landroidx/camera/core/MetadataImageReader;->resultIncoming(Landroidx/camera/core/impl/CameraCaptureResult;)V
+    invoke-virtual {p0, p2}, Landroidx/camera/core/MetadataImageReader;->resultIncoming(Landroidx/camera/core/impl/CameraCaptureResult;)V
 
     return-void
 .end method

@@ -25,14 +25,14 @@
 
 # virtual methods
 .method public final filter(Ljava/util/List;)Ljava/util/List;
-    .locals 1
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Landroidx/camera/core/impl/CameraInfoInternal$$ExternalSyntheticLambda0;->f$0:Landroidx/camera/core/impl/CameraInfoInternal;
+    iget-object p0, p0, Landroidx/camera/core/impl/CameraInfoInternal$$ExternalSyntheticLambda0;->f$0:Landroidx/camera/core/impl/CameraInfoInternal;
 
-    invoke-static {v0, p1}, Landroidx/camera/core/impl/CameraInfoInternal;->lambda$getCameraSelector$0(Landroidx/camera/core/impl/CameraInfoInternal;Ljava/util/List;)Ljava/util/List;
+    invoke-static {p0, p1}, Landroidx/camera/core/impl/CameraInfoInternal;->lambda$getCameraSelector$0(Landroidx/camera/core/impl/CameraInfoInternal;Ljava/util/List;)Ljava/util/List;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

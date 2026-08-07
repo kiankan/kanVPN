@@ -39,41 +39,41 @@
 
     invoke-virtual {p0, p1, p2}, Lj$/time/format/DateTimeFormatterBuilder$2;->compare(Ljava/lang/String;Ljava/lang/String;)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public compare(Ljava/lang/String;Ljava/lang/String;)I
-    .locals 2
+    .locals 1
 
     .line 4985
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
-    move-result v0
+    move-result p0
 
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
-    move-result v1
+    move-result v0
 
-    if-ne v0, v1, :cond_0
+    if-ne p0, v0, :cond_0
 
     invoke-virtual {p1, p2}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 
     :cond_0
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
-    move-result p1
+    move-result p0
 
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
-    move-result p2
+    move-result p1
 
-    sub-int/2addr p1, p2
+    sub-int/2addr p0, p1
 
-    return p1
+    return p0
 .end method

@@ -45,7 +45,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -108,7 +108,7 @@
 
 # virtual methods
 .method public final getCallback()Landroidx/activity/result/ActivityResultCallback;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -118,13 +118,13 @@
     .end annotation
 
     .line 389
-    iget-object v0, p0, Landroidx/activity/result/ActivityResultRegistry$CallbackAndContract;->callback:Landroidx/activity/result/ActivityResultCallback;
+    iget-object p0, p0, Landroidx/activity/result/ActivityResultRegistry$CallbackAndContract;->callback:Landroidx/activity/result/ActivityResultCallback;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getContract()Landroidx/activity/result/contract/ActivityResultContract;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -134,7 +134,7 @@
     .end annotation
 
     .line 390
-    iget-object v0, p0, Landroidx/activity/result/ActivityResultRegistry$CallbackAndContract;->contract:Landroidx/activity/result/contract/ActivityResultContract;
+    iget-object p0, p0, Landroidx/activity/result/ActivityResultRegistry$CallbackAndContract;->contract:Landroidx/activity/result/contract/ActivityResultContract;
 
-    return-object v0
+    return-object p0
 .end method

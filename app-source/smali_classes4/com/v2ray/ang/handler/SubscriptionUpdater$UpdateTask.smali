@@ -13,13 +13,9 @@
     name = "UpdateTask"
 .end annotation
 
-.annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nSubscriptionUpdater.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SubscriptionUpdater.kt\ncom/v2ray/ang/handler/SubscriptionUpdater$UpdateTask\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,63:1\n777#2:64\n873#2,2:65\n*S KotlinDebug\n*F\n+ 1 SubscriptionUpdater.kt\ncom/v2ray/ang/handler/SubscriptionUpdater$UpdateTask\n*L\n39#1:64\n39#1:65,2\n*E\n"
-.end annotation
-
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u00000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0018\u00002\u00020\u0001B\u0017\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0004\u0008\u0006\u0010\u0007J\u000e\u0010\r\u001a\u00020\u000eH\u0097@\u00a2\u0006\u0002\u0010\u000fR\u0013\u0010\u0008\u001a\u00070\t\u00a2\u0006\u0002\u0008\nX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0013\u0010\u000b\u001a\u00070\u000c\u00a2\u0006\u0002\u0008\nX\u0082\u0004\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u0010"
+        "\u0000,\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\u0008\u0007\u0018\u00002\u00020\u0001B\u0017\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0004\u0008\u0006\u0010\u0007J \u0010\u0008\u001a\u00020\tH\u0097@b\u0010\u0008\u000b\u0012\u000c\u0008\u000c\u0012\u0008\u0008\u000cJ\u0004\u0008\u0008(\r\u00a2\u0006\u0002\u0010\n\u00ca\u0001\u000c\u0008\u000f\u0012\u0008\u0008\u0010\u0012\u0004\u0008\u0003\u0010\u0000\u00a8\u0006\u000e"
     }
     d2 = {
         "Lcom/v2ray/ang/handler/SubscriptionUpdater$UpdateTask;",
@@ -30,35 +26,39 @@
         "Landroidx/work/WorkerParameters;",
         "<init>",
         "(Landroid/content/Context;Landroidx/work/WorkerParameters;)V",
-        "notificationManager",
-        "Landroidx/core/app/NotificationManagerCompat;",
-        "Lorg/jspecify/annotations/NonNull;",
-        "notification",
-        "Landroidx/core/app/NotificationCompat$Builder;",
         "doWork",
         "Landroidx/work/ListenableWorker$Result;",
         "(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;",
-        "app_playstoreRelease"
+        "Landroid/annotation/SuppressLint;",
+        "value",
+        "MissingPermission",
+        "v2rayNG:app_playstoreRelease",
+        "Landroidx/compose/runtime/internal/StabilityInferred;",
+        "parameters"
     }
     k = 0x1
     mv = {
         0x2,
-        0x3,
+        0x4,
         0x0
     }
     xi = 0x30
 .end annotation
 
 
-# instance fields
-.field private final notification:Landroidx/core/app/NotificationCompat$Builder;
-
-.field private final notificationManager:Landroidx/core/app/NotificationManagerCompat;
+# static fields
+.field public static final $stable:I = 0x8
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 0
+
+    return-void
+.end method
+
 .method public constructor <init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
-    .locals 2
+    .locals 1
 
     const-string v0, "context"
 
@@ -68,90 +68,8 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 18
+    .line 166
     invoke-direct {p0, p1, p2}, Landroidx/work/CoroutineWorker;-><init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
-
-    .line 21
-    invoke-virtual {p0}, Lcom/v2ray/ang/handler/SubscriptionUpdater$UpdateTask;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object p2
-
-    invoke-static {p2}, Landroidx/core/app/NotificationManagerCompat;->from(Landroid/content/Context;)Landroidx/core/app/NotificationManagerCompat;
-
-    move-result-object p2
-
-    const-string v0, "from(...)"
-
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    iput-object p2, p0, Lcom/v2ray/ang/handler/SubscriptionUpdater$UpdateTask;->notificationManager:Landroidx/core/app/NotificationManagerCompat;
-
-    .line 23
-    new-instance p2, Landroidx/core/app/NotificationCompat$Builder;
-
-    invoke-virtual {p0}, Lcom/v2ray/ang/handler/SubscriptionUpdater$UpdateTask;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    const-string v1, "subscription_update_channel"
-
-    invoke-direct {p2, v0, v1}, Landroidx/core/app/NotificationCompat$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
-
-    const-wide/16 v0, 0x0
-
-    .line 24
-    invoke-virtual {p2, v0, v1}, Landroidx/core/app/NotificationCompat$Builder;->setWhen(J)Landroidx/core/app/NotificationCompat$Builder;
-
-    move-result-object p2
-
-    .line 25
-    const-string v0, "Update"
-
-    check-cast v0, Ljava/lang/CharSequence;
-
-    invoke-virtual {p2, v0}, Landroidx/core/app/NotificationCompat$Builder;->setTicker(Ljava/lang/CharSequence;)Landroidx/core/app/NotificationCompat$Builder;
-
-    move-result-object p2
-
-    .line 26
-    sget v0, Lcom/v2ray/ang/R$string;->title_pref_auto_update_subscription:I
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/CharSequence;
-
-    invoke-virtual {p2, p1}, Landroidx/core/app/NotificationCompat$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroidx/core/app/NotificationCompat$Builder;
-
-    move-result-object p1
-
-    .line 27
-    sget p2, Lcom/v2ray/ang/R$drawable;->ic_stat_name:I
-
-    invoke-virtual {p1, p2}, Landroidx/core/app/NotificationCompat$Builder;->setSmallIcon(I)Landroidx/core/app/NotificationCompat$Builder;
-
-    move-result-object p1
-
-    .line 28
-    const-string p2, "service"
-
-    invoke-virtual {p1, p2}, Landroidx/core/app/NotificationCompat$Builder;->setCategory(Ljava/lang/String;)Landroidx/core/app/NotificationCompat$Builder;
-
-    move-result-object p1
-
-    const/4 p2, 0x0
-
-    .line 29
-    invoke-virtual {p1, p2}, Landroidx/core/app/NotificationCompat$Builder;->setPriority(I)Landroidx/core/app/NotificationCompat$Builder;
-
-    move-result-object p1
-
-    const-string p2, "setPriority(...)"
-
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    iput-object p1, p0, Lcom/v2ray/ang/handler/SubscriptionUpdater$UpdateTask;->notification:Landroidx/core/app/NotificationCompat$Builder;
 
     return-void
 .end method
@@ -159,7 +77,7 @@
 
 # virtual methods
 .method public doWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 7
+    .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -171,216 +89,117 @@
         }
     .end annotation
 
-    .line 37
-    const-string p1, "subscription automatic update starting"
-
-    const-string v0, "com.kanvpn.client"
-
-    invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 39
-    sget-object p1, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
-
-    invoke-virtual {p1}, Lcom/v2ray/ang/handler/MmkvManager;->decodeSubscriptions()Ljava/util/List;
+    .line 171
+    invoke-virtual {p0}, Lcom/v2ray/ang/handler/SubscriptionUpdater$UpdateTask;->getInputData()Landroidx/work/Data;
 
     move-result-object p1
 
-    check-cast p1, Ljava/lang/Iterable;
+    const-string v0, "subId"
 
-    .line 64
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    check-cast v1, Ljava/util/Collection;
-
-    .line 65
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p1, v0}, Landroidx/work/Data;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    :cond_0
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    .line 172
+    sget-object v0, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
 
-    move-result v2
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    if-eqz v2, :cond_1
+    const-string v2, "SubscriptionUpdater update starting via Service: "
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v2
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object v3, v2
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    check-cast v3, Lkotlin/Pair;
+    move-result-object v1
 
-    .line 39
-    invoke-virtual {v3}, Lkotlin/Pair;->getSecond()Ljava/lang/Object;
+    const-string v2, "com.kanvpn.client"
 
-    move-result-object v3
+    invoke-virtual {v0, v2, v1}, Lcom/v2ray/ang/util/LogUtil;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    check-cast v3, Lcom/v2ray/ang/dto/SubscriptionItem;
+    .line 174
+    move-object v0, p1
 
-    invoke-virtual {v3}, Lcom/v2ray/ang/dto/SubscriptionItem;->getAutoUpdate()Z
+    check-cast v0, Ljava/lang/CharSequence;
 
-    move-result v3
+    const-string v1, "success(...)"
 
-    if-eqz v3, :cond_0
+    if-eqz v0, :cond_1
 
-    .line 65
-    invoke-interface {v1, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
 
     goto :goto_0
 
-    .line 66
-    :cond_1
-    check-cast v1, Ljava/util/List;
+    .line 179
+    :cond_0
+    sget-object v0, Lcom/v2ray/ang/handler/SubscriptionUpdater;->INSTANCE:Lcom/v2ray/ang/handler/SubscriptionUpdater;
 
-    .line 41
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p0}, Lcom/v2ray/ang/handler/SubscriptionUpdater$UpdateTask;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    const-string v3, "getApplicationContext(...)"
+
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v0, v2, p1}, Lcom/v2ray/ang/handler/SubscriptionUpdater;->updateLastUpdatedAndReschedule(Landroid/content/Context;Ljava/lang/String;)V
+
+    .line 181
+    sget-object v0, Lcom/v2ray/ang/helper/MessageHelper;->INSTANCE:Lcom/v2ray/ang/helper/MessageHelper;
+
+    .line 182
+    invoke-virtual {p0}, Lcom/v2ray/ang/handler/SubscriptionUpdater$UpdateTask;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    invoke-static {p0, v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 183
+    new-instance v2, Lcom/v2ray/ang/dto/SubscriptionUpdateMessage;
+
+    const/4 v3, 0x1
+
+    invoke-static {p1}, Lkotlin/collections/CollectionsKt;->listOf(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
 
-    :goto_1
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    const/16 v4, 0x8
 
-    move-result v1
+    invoke-direct {v2, v4, v3, p1}, Lcom/v2ray/ang/dto/SubscriptionUpdateMessage;-><init>(IZLjava/util/List;)V
 
-    const/4 v2, 0x3
+    .line 181
+    invoke-virtual {v0, p0, v2}, Lcom/v2ray/ang/helper/MessageHelper;->sendMsg2SubscriptionService(Landroid/content/Context;Lcom/v2ray/ang/dto/SubscriptionUpdateMessage;)V
 
-    if-eqz v1, :cond_3
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lkotlin/Pair;
-
-    .line 42
-    invoke-virtual {v1}, Lkotlin/Pair;->getSecond()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lcom/v2ray/ang/dto/SubscriptionItem;
-
-    .line 44
-    sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v5, 0x1a
-
-    if-lt v4, v5, :cond_2
-
-    .line 45
-    iget-object v4, p0, Lcom/v2ray/ang/handler/SubscriptionUpdater$UpdateTask;->notification:Landroidx/core/app/NotificationCompat$Builder;
-
-    const-string v5, "subscription_update_channel"
-
-    invoke-virtual {v4, v5}, Landroidx/core/app/NotificationCompat$Builder;->setChannelId(Ljava/lang/String;)Landroidx/core/app/NotificationCompat$Builder;
-
-    .line 47
-    invoke-static {}, Lcom/v2ray/ang/extension/_ExtKt$$ExternalSyntheticApiModelOutline0;->m()V
-
-    .line 49
-    const-string v4, "Subscription Update Service"
-
-    check-cast v4, Ljava/lang/CharSequence;
-
-    const/4 v6, 0x1
-
-    .line 47
-    invoke-static {v5, v4, v6}, Lcom/v2ray/ang/extension/_ExtKt$$ExternalSyntheticApiModelOutline0;->m(Ljava/lang/String;Ljava/lang/CharSequence;I)Landroid/app/NotificationChannel;
-
-    move-result-object v4
-
-    .line 52
-    iget-object v5, p0, Lcom/v2ray/ang/handler/SubscriptionUpdater$UpdateTask;->notificationManager:Landroidx/core/app/NotificationManagerCompat;
-
-    invoke-virtual {v5, v4}, Landroidx/core/app/NotificationManagerCompat;->createNotificationChannel(Landroid/app/NotificationChannel;)V
-
-    .line 54
-    :cond_2
-    iget-object v4, p0, Lcom/v2ray/ang/handler/SubscriptionUpdater$UpdateTask;->notificationManager:Landroidx/core/app/NotificationManagerCompat;
-
-    iget-object v5, p0, Lcom/v2ray/ang/handler/SubscriptionUpdater$UpdateTask;->notification:Landroidx/core/app/NotificationCompat$Builder;
-
-    invoke-virtual {v5}, Landroidx/core/app/NotificationCompat$Builder;->build()Landroid/app/Notification;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v2, v5}, Landroidx/core/app/NotificationManagerCompat;->notify(ILandroid/app/Notification;)V
-
-    .line 55
-    invoke-virtual {v3}, Lcom/v2ray/ang/dto/SubscriptionItem;->getRemarks()Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "subscription automatic update: ---"
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 56
-    sget-object v2, Lcom/v2ray/ang/handler/AngConfigManager;->INSTANCE:Lcom/v2ray/ang/handler/AngConfigManager;
-
-    new-instance v4, Lkotlin/Pair;
-
-    invoke-virtual {v1}, Lkotlin/Pair;->getFirst()Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-direct {v4, v1, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-virtual {v2, v4}, Lcom/v2ray/ang/handler/AngConfigManager;->updateConfigViaSub(Lkotlin/Pair;)I
-
-    .line 57
-    iget-object v1, p0, Lcom/v2ray/ang/handler/SubscriptionUpdater$UpdateTask;->notification:Landroidx/core/app/NotificationCompat$Builder;
-
-    invoke-virtual {v3}, Lcom/v2ray/ang/dto/SubscriptionItem;->getRemarks()Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "Updating "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/CharSequence;
-
-    invoke-virtual {v1, v2}, Landroidx/core/app/NotificationCompat$Builder;->setContentText(Ljava/lang/CharSequence;)Landroidx/core/app/NotificationCompat$Builder;
-
-    goto :goto_1
-
-    .line 59
-    :cond_3
-    iget-object p1, p0, Lcom/v2ray/ang/handler/SubscriptionUpdater$UpdateTask;->notificationManager:Landroidx/core/app/NotificationManagerCompat;
-
-    invoke-virtual {p1, v2}, Landroidx/core/app/NotificationManagerCompat;->cancel(I)V
-
-    .line 60
+    .line 186
     invoke-static {}, Landroidx/work/ListenableWorker$Result;->success()Landroidx/work/ListenableWorker$Result;
 
-    move-result-object p1
+    move-result-object p0
 
-    const-string v0, "success(...)"
+    invoke-static {p0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+    return-object p0
 
-    return-object p1
+    .line 175
+    :cond_1
+    :goto_0
+    sget-object p0, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
+
+    const-string p1, "SubscriptionUpdater: missing subId in worker input"
+
+    invoke-virtual {p0, v2, p1}, Lcom/v2ray/ang/util/LogUtil;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 176
+    invoke-static {}, Landroidx/work/ListenableWorker$Result;->success()Landroidx/work/ListenableWorker$Result;
+
+    move-result-object p0
+
+    invoke-static {p0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-object p0
 .end method

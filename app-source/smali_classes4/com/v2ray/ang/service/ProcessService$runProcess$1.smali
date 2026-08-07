@@ -42,7 +42,7 @@
     k = 0x3
     mv = {
         0x2,
-        0x3,
+        0x4,
         0x0
     }
     xi = 0x30
@@ -93,7 +93,7 @@
 
 # virtual methods
 .method public final create(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -108,9 +108,9 @@
 
     new-instance p1, Lcom/v2ray/ang/service/ProcessService$runProcess$1;
 
-    iget-object v0, p0, Lcom/v2ray/ang/service/ProcessService$runProcess$1;->this$0:Lcom/v2ray/ang/service/ProcessService;
+    iget-object p0, p0, Lcom/v2ray/ang/service/ProcessService$runProcess$1;->this$0:Lcom/v2ray/ang/service/ProcessService;
 
-    invoke-direct {p1, v0, p2}, Lcom/v2ray/ang/service/ProcessService$runProcess$1;-><init>(Lcom/v2ray/ang/service/ProcessService;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p1, p0, p2}, Lcom/v2ray/ang/service/ProcessService$runProcess$1;-><init>(Lcom/v2ray/ang/service/ProcessService;Lkotlin/coroutines/Continuation;)V
 
     check-cast p1, Lkotlin/coroutines/Continuation;
 
@@ -126,9 +126,9 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/v2ray/ang/service/ProcessService$runProcess$1;->invoke(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final invoke(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -147,17 +147,17 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/v2ray/ang/service/ProcessService$runProcess$1;->create(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lcom/v2ray/ang/service/ProcessService$runProcess$1;
+    check-cast p0, Lcom/v2ray/ang/service/ProcessService$runProcess$1;
 
-    sget-object p2, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    invoke-virtual {p1, p2}, Lcom/v2ray/ang/service/ProcessService$runProcess$1;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lcom/v2ray/ang/service/ProcessService$runProcess$1;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
@@ -178,45 +178,49 @@
     invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
 
     .line 30
-    const-string p1, "runProcess check"
+    sget-object p1, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
 
-    const-string v0, "com.kanvpn.client"
+    const-string v0, "runProcess check"
 
-    invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    const-string v1, "com.kanvpn.client"
+
+    invoke-virtual {p1, v1, v0}, Lcom/v2ray/ang/util/LogUtil;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 31
-    iget-object p1, p0, Lcom/v2ray/ang/service/ProcessService$runProcess$1;->this$0:Lcom/v2ray/ang/service/ProcessService;
+    iget-object p0, p0, Lcom/v2ray/ang/service/ProcessService$runProcess$1;->this$0:Lcom/v2ray/ang/service/ProcessService;
 
-    invoke-static {p1}, Lcom/v2ray/ang/service/ProcessService;->access$getProcess$p(Lcom/v2ray/ang/service/ProcessService;)Ljava/lang/Process;
+    invoke-static {p0}, Lcom/v2ray/ang/service/ProcessService;->access$getProcess$p(Lcom/v2ray/ang/service/ProcessService;)Ljava/lang/Process;
 
-    move-result-object p1
+    move-result-object p0
 
-    if-eqz p1, :cond_0
+    if-eqz p0, :cond_0
 
-    invoke-virtual {p1}, Ljava/lang/Process;->waitFor()I
+    invoke-virtual {p0}, Ljava/lang/Process;->waitFor()I
 
-    move-result p1
+    move-result p0
 
-    invoke-static {p1}, Lkotlin/coroutines/jvm/internal/Boxing;->boxInt(I)Ljava/lang/Integer;
+    invoke-static {p0}, Lkotlin/coroutines/jvm/internal/Boxing;->boxInt(I)Ljava/lang/Integer;
 
     .line 32
     :cond_0
+    sget-object p0, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
+
     const-string p1, "runProcess exited"
 
-    invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {p0, v1, p1}, Lcom/v2ray/ang/util/LogUtil;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 33
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    return-object p1
+    return-object p0
 
     .line 28
     :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method

@@ -21,6 +21,21 @@
     return-void
 .end method
 
+.method public static systemDefaultZone()Lj$/time/Clock;
+    .locals 2
+
+    .line 183
+    new-instance v0, Lj$/time/Clock$SystemClock;
+
+    invoke-static {}, Lj$/time/ZoneId;->systemDefault()Lj$/time/ZoneId;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lj$/time/Clock$SystemClock;-><init>(Lj$/time/ZoneId;)V
+
+    return-object v0
+.end method
+
 .method public static systemUTC()Lj$/time/Clock;
     .locals 1
 
@@ -32,6 +47,9 @@
 
 
 # virtual methods
+.method public abstract getZone()Lj$/time/ZoneId;
+.end method
+
 .method public abstract instant()Lj$/time/Instant;
 .end method
 

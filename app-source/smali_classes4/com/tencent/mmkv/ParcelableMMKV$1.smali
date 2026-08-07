@@ -47,6 +47,15 @@
     move-result-object v1
 
     .line 92
+    sget-object p0, Landroid/os/ParcelFileDescriptor;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-interface {p0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/os/ParcelFileDescriptor;
+
+    .line 93
     sget-object v0, Landroid/os/ParcelFileDescriptor;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -55,49 +64,38 @@
 
     check-cast v0, Landroid/os/ParcelFileDescriptor;
 
-    .line 93
-    sget-object v2, Landroid/os/ParcelFileDescriptor;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {v2, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/os/ParcelFileDescriptor;
-
     .line 94
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
-    if-eqz v2, :cond_0
+    if-eqz v0, :cond_0
 
     move-object p1, v0
 
     .line 96
     new-instance v0, Lcom/tencent/mmkv/ParcelableMMKV;
 
+    invoke-virtual {p0}, Landroid/os/ParcelFileDescriptor;->detachFd()I
+
+    move-result v2
+
     invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor;->detachFd()I
-
-    move-result p1
-
-    invoke-virtual {v2}, Landroid/os/ParcelFileDescriptor;->detachFd()I
 
     move-result v3
 
     const/4 v5, 0x0
-
-    move v2, p1
 
     invoke-direct/range {v0 .. v5}, Lcom/tencent/mmkv/ParcelableMMKV;-><init>(Ljava/lang/String;IILjava/lang/String;Lcom/tencent/mmkv/ParcelableMMKV$1;)V
 
     return-object v0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -114,18 +112,18 @@
     .line 87
     invoke-virtual {p0, p1}, Lcom/tencent/mmkv/ParcelableMMKV$1;->createFromParcel(Landroid/os/Parcel;)Lcom/tencent/mmkv/ParcelableMMKV;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public newArray(I)[Lcom/tencent/mmkv/ParcelableMMKV;
     .locals 0
 
     .line 105
-    new-array p1, p1, [Lcom/tencent/mmkv/ParcelableMMKV;
+    new-array p0, p1, [Lcom/tencent/mmkv/ParcelableMMKV;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
@@ -142,7 +140,7 @@
     .line 87
     invoke-virtual {p0, p1}, Lcom/tencent/mmkv/ParcelableMMKV$1;->newArray(I)[Lcom/tencent/mmkv/ParcelableMMKV;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

@@ -32,7 +32,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 50
+    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +41,7 @@
 .method public static defaultConfig()Landroidx/camera/core/impl/CameraConfig;
     .locals 1
 
-    .line 32
+    .line 31
     sget-object v0, Landroidx/camera/core/impl/CameraConfigs;->DEFAULT_CAMERA_CONFIG:Landroidx/camera/core/impl/CameraConfig;
 
     return-object v0

@@ -25,7 +25,7 @@
 .method public static create()Landroidx/camera/core/impl/MutableTagBundle;
     .locals 2
 
-    .line 41
+    .line 40
     new-instance v0, Landroidx/camera/core/impl/MutableTagBundle;
 
     new-instance v1, Landroid/util/ArrayMap;
@@ -40,12 +40,12 @@
 .method public static from(Landroidx/camera/core/impl/TagBundle;)Landroidx/camera/core/impl/MutableTagBundle;
     .locals 4
 
-    .line 52
+    .line 50
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 53
+    .line 51
     invoke-virtual {p0}, Landroidx/camera/core/impl/TagBundle;->listKeys()Ljava/util/Set;
 
     move-result-object v1
@@ -67,7 +67,7 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 54
+    .line 52
     invoke-virtual {p0, v2}, Landroidx/camera/core/impl/TagBundle;->getTag(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
@@ -76,7 +76,7 @@
 
     goto :goto_0
 
-    .line 57
+    .line 55
     :cond_0
     new-instance p0, Landroidx/camera/core/impl/MutableTagBundle;
 
@@ -90,7 +90,7 @@
 .method public addTagBundle(Landroidx/camera/core/impl/TagBundle;)V
     .locals 1
 
-    .line 68
+    .line 66
     iget-object v0, p0, Landroidx/camera/core/impl/MutableTagBundle;->mTagMap:Ljava/util/Map;
 
     if-eqz v0, :cond_0
@@ -99,24 +99,24 @@
 
     if-eqz v0, :cond_0
 
-    .line 69
-    iget-object v0, p0, Landroidx/camera/core/impl/MutableTagBundle;->mTagMap:Ljava/util/Map;
+    .line 67
+    iget-object p0, p0, Landroidx/camera/core/impl/MutableTagBundle;->mTagMap:Ljava/util/Map;
 
     iget-object p1, p1, Landroidx/camera/core/impl/TagBundle;->mTagMap:Ljava/util/Map;
 
-    invoke-interface {v0, p1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
+    invoke-interface {p0, p1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
     :cond_0
     return-void
 .end method
 
 .method public putTag(Ljava/lang/String;Ljava/lang/Object;)V
-    .locals 1
+    .locals 0
 
-    .line 63
-    iget-object v0, p0, Landroidx/camera/core/impl/MutableTagBundle;->mTagMap:Ljava/util/Map;
+    .line 61
+    iget-object p0, p0, Landroidx/camera/core/impl/MutableTagBundle;->mTagMap:Ljava/util/Map;
 
-    invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

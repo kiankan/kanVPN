@@ -58,37 +58,37 @@
 
 # virtual methods
 .method public getAspectRatio()Landroid/util/Rational;
-    .locals 1
+    .locals 0
 
-    .line 172
-    iget-object v0, p0, Landroidx/camera/core/ViewPort;->mAspectRatio:Landroid/util/Rational;
+    .line 171
+    iget-object p0, p0, Landroidx/camera/core/ViewPort;->mAspectRatio:Landroid/util/Rational;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getLayoutDirection()I
-    .locals 1
+    .locals 0
 
-    .line 196
-    iget v0, p0, Landroidx/camera/core/ViewPort;->mLayoutDirection:I
+    .line 195
+    iget p0, p0, Landroidx/camera/core/ViewPort;->mLayoutDirection:I
 
-    return v0
+    return p0
 .end method
 
 .method public getRotation()I
-    .locals 1
+    .locals 0
 
-    .line 180
-    iget v0, p0, Landroidx/camera/core/ViewPort;->mRotation:I
+    .line 179
+    iget p0, p0, Landroidx/camera/core/ViewPort;->mRotation:I
 
-    return v0
+    return p0
 .end method
 
 .method public getScaleType()I
-    .locals 1
+    .locals 0
 
-    .line 188
-    iget v0, p0, Landroidx/camera/core/ViewPort;->mScaleType:I
+    .line 187
+    iget p0, p0, Landroidx/camera/core/ViewPort;->mScaleType:I
 
-    return v0
+    return p0
 .end method

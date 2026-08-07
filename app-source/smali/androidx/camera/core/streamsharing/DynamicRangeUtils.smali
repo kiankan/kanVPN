@@ -7,7 +7,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 38
+    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,7 +25,7 @@
         }
     .end annotation
 
-    .line 63
+    .line 64
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
@@ -39,14 +39,14 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 67
+    .line 68
     invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroidx/camera/core/DynamicRange;
 
-    .line 68
+    .line 69
     invoke-virtual {v0}, Landroidx/camera/core/DynamicRange;->getEncoding()I
 
     move-result v2
@@ -55,7 +55,7 @@
 
     move-result-object v2
 
-    .line 69
+    .line 70
     invoke-virtual {v0}, Landroidx/camera/core/DynamicRange;->getBitDepth()I
 
     move-result v0
@@ -66,7 +66,7 @@
 
     const/4 v3, 0x1
 
-    .line 70
+    .line 71
     :goto_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -74,14 +74,14 @@
 
     if-ge v3, v4, :cond_3
 
-    .line 71
+    .line 72
     invoke-interface {p0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Landroidx/camera/core/DynamicRange;
 
-    .line 73
+    .line 74
     invoke-virtual {v4}, Landroidx/camera/core/DynamicRange;->getEncoding()I
 
     move-result v5
@@ -90,12 +90,12 @@
 
     move-result-object v5
 
-    .line 72
+    .line 73
     invoke-static {v2, v5}, Landroidx/camera/core/streamsharing/DynamicRangeUtils;->intersectDynamicRangeEncoding(Ljava/lang/Integer;Ljava/lang/Integer;)Ljava/lang/Integer;
 
     move-result-object v2
 
-    .line 75
+    .line 76
     invoke-virtual {v4}, Landroidx/camera/core/DynamicRange;->getBitDepth()I
 
     move-result v4
@@ -104,7 +104,7 @@
 
     move-result-object v4
 
-    .line 74
+    .line 75
     invoke-static {v0, v4}, Landroidx/camera/core/streamsharing/DynamicRangeUtils;->intersectDynamicRangeBitDepth(Ljava/lang/Integer;Ljava/lang/Integer;)Ljava/lang/Integer;
 
     move-result-object v0
@@ -124,7 +124,7 @@
     :goto_1
     return-object v1
 
-    .line 82
+    .line 83
     :cond_3
     new-instance p0, Landroidx/camera/core/DynamicRange;
 
@@ -146,7 +146,7 @@
 
     const/4 v0, 0x0
 
-    .line 111
+    .line 110
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -159,7 +159,7 @@
 
     return-object p1
 
-    .line 114
+    .line 113
     :cond_0
     invoke-virtual {p1, v0}, Ljava/lang/Integer;->equals(Ljava/lang/Object;)Z
 
@@ -169,7 +169,7 @@
 
     goto :goto_0
 
-    .line 118
+    .line 117
     :cond_1
     invoke-virtual {p0, p1}, Ljava/lang/Integer;->equals(Ljava/lang/Object;)Z
 
@@ -296,12 +296,12 @@
         }
     .end annotation
 
-    .line 48
+    .line 49
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 49
+    .line 50
     invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -319,7 +319,7 @@
 
     check-cast v1, Landroidx/camera/core/impl/UseCaseConfig;
 
-    .line 50
+    .line 51
     invoke-interface {v1}, Landroidx/camera/core/impl/UseCaseConfig;->getDynamicRange()Landroidx/camera/core/DynamicRange;
 
     move-result-object v1
@@ -328,7 +328,7 @@
 
     goto :goto_0
 
-    .line 53
+    .line 54
     :cond_0
     invoke-static {v0}, Landroidx/camera/core/streamsharing/DynamicRangeUtils;->intersectDynamicRange(Ljava/util/List;)Landroidx/camera/core/DynamicRange;
 

@@ -19,10 +19,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 37
+    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
+    .line 45
     const-class v0, Landroidx/camera/core/internal/compat/quirk/SurfaceOrderQuirk;
 
     invoke-static {v0}, Landroidx/camera/core/internal/compat/quirk/DeviceQuirks;->get(Ljava/lang/Class;)Landroidx/camera/core/impl/Quirk;
@@ -45,39 +45,52 @@
 .end method
 
 .method private getSurfacePriority(Landroidx/camera/core/impl/DeferrableSurface;)I
-    .locals 2
-
-    .line 62
-    invoke-virtual {p1}, Landroidx/camera/core/impl/DeferrableSurface;->getContainerClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    const-class v1, Landroid/media/MediaCodec;
-
-    if-ne v0, v1, :cond_0
-
-    const/4 p1, 0x2
-
-    return p1
+    .locals 1
 
     .line 64
+    invoke-virtual {p1}, Landroidx/camera/core/impl/DeferrableSurface;->getContainerClass()Ljava/lang/Class;
+
+    move-result-object p0
+
+    const-class v0, Landroid/media/MediaCodec;
+
+    if-ne p0, v0, :cond_0
+
+    const/4 p0, 0x2
+
+    return p0
+
+    .line 66
     :cond_0
     invoke-virtual {p1}, Landroidx/camera/core/impl/DeferrableSurface;->getContainerClass()Ljava/lang/Class;
 
-    move-result-object p1
+    move-result-object p0
 
     const-class v0, Landroidx/camera/core/Preview;
 
-    if-ne p1, v0, :cond_1
+    if-eq p0, v0, :cond_2
 
-    const/4 p1, 0x0
+    .line 67
+    invoke-virtual {p1}, Landroidx/camera/core/impl/DeferrableSurface;->getContainerClass()Ljava/lang/Class;
 
-    return p1
+    move-result-object p0
+
+    const-class p1, Landroidx/camera/core/streamsharing/StreamSharing;
+
+    if-ne p0, p1, :cond_1
+
+    goto :goto_0
 
     :cond_1
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
+
+    :cond_2
+    :goto_0
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
 
@@ -85,7 +98,7 @@
 .method synthetic lambda$sort$0$androidx-camera-core-internal-compat-workaround-SurfaceSorter(Landroidx/camera/core/impl/SessionConfig$OutputConfig;Landroidx/camera/core/impl/SessionConfig$OutputConfig;)I
     .locals 0
 
-    .line 55
+    .line 57
     invoke-virtual {p1}, Landroidx/camera/core/impl/SessionConfig$OutputConfig;->getSurface()Landroidx/camera/core/impl/DeferrableSurface;
 
     move-result-object p1
@@ -94,16 +107,16 @@
 
     move-result p1
 
-    .line 56
+    .line 58
     invoke-virtual {p2}, Landroidx/camera/core/impl/SessionConfig$OutputConfig;->getSurface()Landroidx/camera/core/impl/DeferrableSurface;
 
     move-result-object p2
 
     invoke-direct {p0, p2}, Landroidx/camera/core/internal/compat/workaround/SurfaceSorter;->getSurfacePriority(Landroidx/camera/core/impl/DeferrableSurface;)I
 
-    move-result p2
+    move-result p0
 
-    sub-int/2addr p1, p2
+    sub-int/2addr p1, p0
 
     return p1
 .end method
@@ -119,14 +132,14 @@
         }
     .end annotation
 
-    .line 51
+    .line 53
     iget-boolean v0, p0, Landroidx/camera/core/internal/compat/workaround/SurfaceSorter;->mHasQuirk:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 54
+    .line 56
     :cond_0
     new-instance v0, Landroidx/camera/core/internal/compat/workaround/SurfaceSorter$$ExternalSyntheticLambda0;
 

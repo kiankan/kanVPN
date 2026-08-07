@@ -23,7 +23,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nActivityResultContracts.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ActivityResultContracts.kt\nandroidx/activity/result/contract/ActivityResultContracts$TakeVideo\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,1070:1\n1#2:1071\n*E\n"
+    value = "SMAP\nActivityResultContracts.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ActivityResultContracts.kt\nandroidx/activity/result/contract/ActivityResultContracts$TakeVideo\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,1082:1\n1#2:1083\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Deprecated;
@@ -57,7 +57,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -68,7 +68,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 299
+    .line 305
     invoke-direct {p0}, Landroidx/activity/result/contract/ActivityResultContract;-><init>()V
 
     return-void
@@ -77,53 +77,68 @@
 
 # virtual methods
 .method public createIntent(Landroid/content/Context;Landroid/net/Uri;)Landroid/content/Intent;
-    .locals 1
+    .locals 0
 
-    const-string v0, "context"
+    const-string p0, "context"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string p1, "input"
+    const-string p0, "input"
 
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 306
-    new-instance p1, Landroid/content/Intent;
+    .line 312
+    new-instance p0, Landroid/content/Intent;
 
-    const-string v0, "android.media.action.VIDEO_CAPTURE"
+    const-string p1, "android.media.action.VIDEO_CAPTURE"
 
-    invoke-direct {p1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    const-string v0, "output"
+    .line 313
+    const-string/jumbo p1, "output"
 
     check-cast p2, Landroid/os/Parcelable;
 
-    invoke-virtual {p1, v0, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+    invoke-virtual {p0, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    move-result-object p1
+    move-result-object p0
 
-    const-string p2, "putExtra(...)"
+    const/4 p1, 0x1
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 314
+    invoke-virtual {p0, p1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    return-object p1
+    move-result-object p0
+
+    const/4 p1, 0x2
+
+    .line 315
+    invoke-virtual {p0, p1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    move-result-object p0
+
+    const-string p1, "addFlags(...)"
+
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-object p0
 .end method
 
 .method public bridge synthetic createIntent(Landroid/content/Context;Ljava/lang/Object;)Landroid/content/Intent;
     .locals 0
 
-    .line 299
+    .line 305
     check-cast p2, Landroid/net/Uri;
 
     invoke-virtual {p0, p1, p2}, Landroidx/activity/result/contract/ActivityResultContracts$TakeVideo;->createIntent(Landroid/content/Context;Landroid/net/Uri;)Landroid/content/Intent;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final getSynchronousResult(Landroid/content/Context;Landroid/net/Uri;)Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -136,71 +151,71 @@
         }
     .end annotation
 
-    const-string v0, "context"
+    const-string p0, "context"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string p1, "input"
+    const-string p0, "input"
 
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic getSynchronousResult(Landroid/content/Context;Ljava/lang/Object;)Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;
     .locals 0
 
-    .line 299
+    .line 305
     check-cast p2, Landroid/net/Uri;
 
     invoke-virtual {p0, p1, p2}, Landroidx/activity/result/contract/ActivityResultContracts$TakeVideo;->getSynchronousResult(Landroid/content/Context;Landroid/net/Uri;)Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final parseResult(ILandroid/content/Intent;)Landroid/graphics/Bitmap;
-    .locals 2
+    .locals 1
 
-    const/4 v0, -0x1
+    const/4 p0, -0x1
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    if-ne p1, v0, :cond_0
+    if-ne p1, p0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move-object p2, v1
+    move-object p2, v0
 
     :goto_0
     if-eqz p2, :cond_1
 
-    .line 316
-    const-string p1, "data"
+    .line 325
+    const-string p0, "data"
 
-    invoke-virtual {p2, p1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
+    invoke-virtual {p2, p0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Landroid/graphics/Bitmap;
+    check-cast p0, Landroid/graphics/Bitmap;
 
-    return-object p1
+    return-object p0
 
     :cond_1
-    return-object v1
+    return-object v0
 .end method
 
 .method public bridge synthetic parseResult(ILandroid/content/Intent;)Ljava/lang/Object;
     .locals 0
 
-    .line 299
+    .line 305
     invoke-virtual {p0, p1, p2}, Landroidx/activity/result/contract/ActivityResultContracts$TakeVideo;->parseResult(ILandroid/content/Intent;)Landroid/graphics/Bitmap;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

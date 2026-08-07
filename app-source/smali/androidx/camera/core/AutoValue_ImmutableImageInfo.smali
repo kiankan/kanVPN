@@ -4,6 +4,8 @@
 
 
 # instance fields
+.field private final flashState:I
+
 .field private final rotationDegrees:I
 
 .field private final sensorToBufferTransformMatrix:Landroid/graphics/Matrix;
@@ -14,49 +16,52 @@
 
 
 # direct methods
-.method constructor <init>(Landroidx/camera/core/impl/TagBundle;JILandroid/graphics/Matrix;)V
+.method constructor <init>(Landroidx/camera/core/impl/TagBundle;JILandroid/graphics/Matrix;I)V
     .locals 0
 
-    .line 24
+    .line 27
     invoke-direct {p0}, Landroidx/camera/core/ImmutableImageInfo;-><init>()V
 
     if-eqz p1, :cond_1
 
-    .line 28
+    .line 31
     iput-object p1, p0, Landroidx/camera/core/AutoValue_ImmutableImageInfo;->tagBundle:Landroidx/camera/core/impl/TagBundle;
 
-    .line 29
+    .line 32
     iput-wide p2, p0, Landroidx/camera/core/AutoValue_ImmutableImageInfo;->timestamp:J
 
-    .line 30
+    .line 33
     iput p4, p0, Landroidx/camera/core/AutoValue_ImmutableImageInfo;->rotationDegrees:I
 
     if-eqz p5, :cond_0
 
-    .line 34
+    .line 37
     iput-object p5, p0, Landroidx/camera/core/AutoValue_ImmutableImageInfo;->sensorToBufferTransformMatrix:Landroid/graphics/Matrix;
+
+    .line 38
+    iput p6, p0, Landroidx/camera/core/AutoValue_ImmutableImageInfo;->flashState:I
 
     return-void
 
-    .line 32
+    .line 35
     :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null sensorToBufferTransformMatrix"
+    const-string p1, "Null sensorToBufferTransformMatrix"
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
-    .line 26
+    .line 29
     :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null tagBundle"
+    const-string p1, "Null tagBundle"
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 
@@ -70,7 +75,7 @@
 
     return v0
 
-    .line 74
+    .line 83
     :cond_0
     instance-of v1, p1, Landroidx/camera/core/ImmutableImageInfo;
 
@@ -78,10 +83,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 75
+    .line 84
     check-cast p1, Landroidx/camera/core/ImmutableImageInfo;
 
-    .line 76
+    .line 85
     iget-object v1, p0, Landroidx/camera/core/AutoValue_ImmutableImageInfo;->tagBundle:Landroidx/camera/core/impl/TagBundle;
 
     invoke-virtual {p1}, Landroidx/camera/core/ImmutableImageInfo;->getTagBundle()Landroidx/camera/core/impl/TagBundle;
@@ -96,7 +101,7 @@
 
     iget-wide v3, p0, Landroidx/camera/core/AutoValue_ImmutableImageInfo;->timestamp:J
 
-    .line 77
+    .line 86
     invoke-virtual {p1}, Landroidx/camera/core/ImmutableImageInfo;->getTimestamp()J
 
     move-result-wide v5
@@ -107,7 +112,7 @@
 
     iget v1, p0, Landroidx/camera/core/AutoValue_ImmutableImageInfo;->rotationDegrees:I
 
-    .line 78
+    .line 87
     invoke-virtual {p1}, Landroidx/camera/core/ImmutableImageInfo;->getRotationDegrees()I
 
     move-result v3
@@ -116,16 +121,25 @@
 
     iget-object v1, p0, Landroidx/camera/core/AutoValue_ImmutableImageInfo;->sensorToBufferTransformMatrix:Landroid/graphics/Matrix;
 
-    .line 79
+    .line 88
     invoke-virtual {p1}, Landroidx/camera/core/ImmutableImageInfo;->getSensorToBufferTransformMatrix()Landroid/graphics/Matrix;
 
-    move-result-object p1
+    move-result-object v3
 
-    invoke-virtual {v1, p1}, Landroid/graphics/Matrix;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Landroid/graphics/Matrix;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget p0, p0, Landroidx/camera/core/AutoValue_ImmutableImageInfo;->flashState:I
+
+    .line 89
+    invoke-virtual {p1}, Landroidx/camera/core/ImmutableImageInfo;->getFlashState()I
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    if-ne p0, p1, :cond_1
 
     return v0
 
@@ -133,37 +147,46 @@
     return v2
 .end method
 
+.method public getFlashState()I
+    .locals 0
+
+    .line 64
+    iget p0, p0, Landroidx/camera/core/AutoValue_ImmutableImageInfo;->flashState:I
+
+    return p0
+.end method
+
 .method public getRotationDegrees()I
-    .locals 1
+    .locals 0
 
-    .line 50
-    iget v0, p0, Landroidx/camera/core/AutoValue_ImmutableImageInfo;->rotationDegrees:I
+    .line 53
+    iget p0, p0, Landroidx/camera/core/AutoValue_ImmutableImageInfo;->rotationDegrees:I
 
-    return v0
+    return p0
 .end method
 
 .method public getSensorToBufferTransformMatrix()Landroid/graphics/Matrix;
-    .locals 1
+    .locals 0
 
-    .line 56
-    iget-object v0, p0, Landroidx/camera/core/AutoValue_ImmutableImageInfo;->sensorToBufferTransformMatrix:Landroid/graphics/Matrix;
+    .line 58
+    iget-object p0, p0, Landroidx/camera/core/AutoValue_ImmutableImageInfo;->sensorToBufferTransformMatrix:Landroid/graphics/Matrix;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getTagBundle()Landroidx/camera/core/impl/TagBundle;
-    .locals 1
+    .locals 0
 
-    .line 40
-    iget-object v0, p0, Landroidx/camera/core/AutoValue_ImmutableImageInfo;->tagBundle:Landroidx/camera/core/impl/TagBundle;
+    .line 43
+    iget-object p0, p0, Landroidx/camera/core/AutoValue_ImmutableImageInfo;->tagBundle:Landroidx/camera/core/impl/TagBundle;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getTimestamp()J
     .locals 2
 
-    .line 45
+    .line 48
     iget-wide v0, p0, Landroidx/camera/core/AutoValue_ImmutableImageInfo;->timestamp:J
 
     return-wide v0
@@ -172,7 +195,7 @@
 .method public hashCode()I
     .locals 6
 
-    .line 88
+    .line 98
     iget-object v0, p0, Landroidx/camera/core/AutoValue_ImmutableImageInfo;->tagBundle:Landroidx/camera/core/impl/TagBundle;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -185,7 +208,7 @@
 
     mul-int/2addr v0, v1
 
-    .line 90
+    .line 100
     iget-wide v2, p0, Landroidx/camera/core/AutoValue_ImmutableImageInfo;->timestamp:J
 
     const/16 v4, 0x20
@@ -200,29 +223,36 @@
 
     mul-int/2addr v0, v1
 
-    .line 92
+    .line 102
     iget v2, p0, Landroidx/camera/core/AutoValue_ImmutableImageInfo;->rotationDegrees:I
 
     xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
-    .line 94
-    iget-object v1, p0, Landroidx/camera/core/AutoValue_ImmutableImageInfo;->sensorToBufferTransformMatrix:Landroid/graphics/Matrix;
+    .line 104
+    iget-object v2, p0, Landroidx/camera/core/AutoValue_ImmutableImageInfo;->sensorToBufferTransformMatrix:Landroid/graphics/Matrix;
 
-    invoke-virtual {v1}, Landroid/graphics/Matrix;->hashCode()I
+    invoke-virtual {v2}, Landroid/graphics/Matrix;->hashCode()I
 
-    move-result v1
+    move-result v2
 
-    xor-int/2addr v0, v1
+    xor-int/2addr v0, v2
 
-    return v0
+    mul-int/2addr v0, v1
+
+    .line 106
+    iget p0, p0, Landroidx/camera/core/AutoValue_ImmutableImageInfo;->flashState:I
+
+    xor-int/2addr p0, v0
+
+    return p0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 61
+    .line 69
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "ImmutableImageInfo{tagBundle="
@@ -257,13 +287,21 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, "}"
+    const-string v1, ", flashState="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    iget p0, p0, Landroidx/camera/core/AutoValue_ImmutableImageInfo;->flashState:I
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string/jumbo p0, "}"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

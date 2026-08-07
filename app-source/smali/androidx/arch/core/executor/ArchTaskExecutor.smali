@@ -159,36 +159,36 @@
 
 # virtual methods
 .method public executeOnDiskIO(Ljava/lang/Runnable;)V
-    .locals 1
+    .locals 0
 
     .line 88
-    iget-object v0, p0, Landroidx/arch/core/executor/ArchTaskExecutor;->mDelegate:Landroidx/arch/core/executor/TaskExecutor;
+    iget-object p0, p0, Landroidx/arch/core/executor/ArchTaskExecutor;->mDelegate:Landroidx/arch/core/executor/TaskExecutor;
 
-    invoke-virtual {v0, p1}, Landroidx/arch/core/executor/TaskExecutor;->executeOnDiskIO(Ljava/lang/Runnable;)V
+    invoke-virtual {p0, p1}, Landroidx/arch/core/executor/TaskExecutor;->executeOnDiskIO(Ljava/lang/Runnable;)V
 
     return-void
 .end method
 
 .method public isMainThread()Z
-    .locals 1
+    .locals 0
 
     .line 108
-    iget-object v0, p0, Landroidx/arch/core/executor/ArchTaskExecutor;->mDelegate:Landroidx/arch/core/executor/TaskExecutor;
+    iget-object p0, p0, Landroidx/arch/core/executor/ArchTaskExecutor;->mDelegate:Landroidx/arch/core/executor/TaskExecutor;
 
-    invoke-virtual {v0}, Landroidx/arch/core/executor/TaskExecutor;->isMainThread()Z
+    invoke-virtual {p0}, Landroidx/arch/core/executor/TaskExecutor;->isMainThread()Z
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public postToMainThread(Ljava/lang/Runnable;)V
-    .locals 1
+    .locals 0
 
     .line 93
-    iget-object v0, p0, Landroidx/arch/core/executor/ArchTaskExecutor;->mDelegate:Landroidx/arch/core/executor/TaskExecutor;
+    iget-object p0, p0, Landroidx/arch/core/executor/ArchTaskExecutor;->mDelegate:Landroidx/arch/core/executor/TaskExecutor;
 
-    invoke-virtual {v0, p1}, Landroidx/arch/core/executor/TaskExecutor;->postToMainThread(Ljava/lang/Runnable;)V
+    invoke-virtual {p0, p1}, Landroidx/arch/core/executor/TaskExecutor;->postToMainThread(Ljava/lang/Runnable;)V
 
     return-void
 .end method

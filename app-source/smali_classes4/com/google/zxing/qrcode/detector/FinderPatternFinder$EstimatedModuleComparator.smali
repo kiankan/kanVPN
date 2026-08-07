@@ -55,17 +55,17 @@
     .line 724
     invoke-virtual {p1}, Lcom/google/zxing/qrcode/detector/FinderPattern;->getEstimatedModuleSize()F
 
-    move-result p1
+    move-result p0
 
     invoke-virtual {p2}, Lcom/google/zxing/qrcode/detector/FinderPattern;->getEstimatedModuleSize()F
 
-    move-result p2
-
-    invoke-static {p1, p2}, Ljava/lang/Float;->compare(FF)I
-
     move-result p1
 
-    return p1
+    invoke-static {p0, p1}, Ljava/lang/Float;->compare(FF)I
+
+    move-result p0
+
+    return p0
 .end method
 
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
@@ -88,7 +88,7 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/google/zxing/qrcode/detector/FinderPatternFinder$EstimatedModuleComparator;->compare(Lcom/google/zxing/qrcode/detector/FinderPattern;Lcom/google/zxing/qrcode/detector/FinderPattern;)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method

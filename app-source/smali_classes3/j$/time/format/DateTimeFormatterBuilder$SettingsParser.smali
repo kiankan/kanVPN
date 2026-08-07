@@ -131,63 +131,114 @@
 .method public format(Lj$/time/format/DateTimePrintContext;Ljava/lang/StringBuilder;)Z
     .locals 0
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
+.end method
+
+.method public parse(Lj$/time/format/DateTimeParseContext;Ljava/lang/CharSequence;I)I
+    .locals 2
+
+    .line 2503
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p0
+
+    const/4 p2, 0x1
+
+    if-eqz p0, :cond_3
+
+    const/4 v0, 0x0
+
+    if-eq p0, p2, :cond_2
+
+    const/4 v1, 0x2
+
+    if-eq p0, v1, :cond_1
+
+    const/4 p2, 0x3
+
+    if-eq p0, p2, :cond_0
+
+    return p3
+
+    .line 2507
+    :cond_0
+    invoke-virtual {p1, v0}, Lj$/time/format/DateTimeParseContext;->setStrict(Z)V
+
+    return p3
+
+    .line 2506
+    :cond_1
+    invoke-virtual {p1, p2}, Lj$/time/format/DateTimeParseContext;->setStrict(Z)V
+
+    return p3
+
+    .line 2505
+    :cond_2
+    invoke-virtual {p1, v0}, Lj$/time/format/DateTimeParseContext;->setCaseSensitive(Z)V
+
+    return p3
+
+    .line 2504
+    :cond_3
+    invoke-virtual {p1, p2}, Lj$/time/format/DateTimeParseContext;->setCaseSensitive(Z)V
+
+    return p3
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 2
+    .locals 1
 
     .line 2515
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
-    move-result v0
+    move-result p0
 
-    if-eqz v0, :cond_3
+    if-eqz p0, :cond_3
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    if-eq v0, v1, :cond_2
+    if-eq p0, v0, :cond_2
 
-    const/4 v1, 0x2
+    const/4 v0, 0x2
 
-    if-eq v0, v1, :cond_1
+    if-eq p0, v0, :cond_1
 
-    const/4 v1, 0x3
+    const/4 v0, 0x3
 
-    if-ne v0, v1, :cond_0
+    if-ne p0, v0, :cond_0
 
     .line 2519
-    const-string v0, "ParseStrict(false)"
+    const-string p0, "ParseStrict(false)"
 
-    return-object v0
+    return-object p0
 
     .line 2521
     :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    const-string v1, "Unreachable"
+    const-string v0, "Unreachable"
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw v0
+    throw p0
 
     .line 2518
     :cond_1
-    const-string v0, "ParseStrict(true)"
+    const-string p0, "ParseStrict(true)"
 
-    return-object v0
+    return-object p0
 
     .line 2517
     :cond_2
-    const-string v0, "ParseCaseSensitive(false)"
+    const-string p0, "ParseCaseSensitive(false)"
 
-    return-object v0
+    return-object p0
 
     .line 2516
     :cond_3
-    const-string v0, "ParseCaseSensitive(true)"
+    const-string p0, "ParseCaseSensitive(true)"
 
-    return-object v0
+    return-object p0
 .end method

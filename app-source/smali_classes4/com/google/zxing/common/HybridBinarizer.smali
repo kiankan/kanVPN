@@ -475,14 +475,14 @@
 
 # virtual methods
 .method public createBinarizer(Lcom/google/zxing/LuminanceSource;)Lcom/google/zxing/Binarizer;
-    .locals 1
+    .locals 0
 
     .line 93
-    new-instance v0, Lcom/google/zxing/common/HybridBinarizer;
+    new-instance p0, Lcom/google/zxing/common/HybridBinarizer;
 
-    invoke-direct {v0, p1}, Lcom/google/zxing/common/HybridBinarizer;-><init>(Lcom/google/zxing/LuminanceSource;)V
+    invoke-direct {p0, p1}, Lcom/google/zxing/common/HybridBinarizer;-><init>(Lcom/google/zxing/LuminanceSource;)V
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getBlackMatrix()Lcom/google/zxing/common/BitMatrix;
@@ -565,7 +565,7 @@
     .line 83
     iput-object v7, p0, Lcom/google/zxing/common/HybridBinarizer;->matrix:Lcom/google/zxing/common/BitMatrix;
 
-    goto :goto_0
+    return-object v7
 
     .line 86
     :cond_3
@@ -574,10 +574,6 @@
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/zxing/common/HybridBinarizer;->matrix:Lcom/google/zxing/common/BitMatrix;
-
-    .line 88
-    :goto_0
-    iget-object v0, p0, Lcom/google/zxing/common/HybridBinarizer;->matrix:Lcom/google/zxing/common/BitMatrix;
 
     return-object v0
 .end method

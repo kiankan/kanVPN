@@ -55,28 +55,28 @@
 
 # virtual methods
 .method getNewString()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 54
-    iget-object v0, p0, Lcom/google/zxing/oned/rss/expanded/decoders/DecodedInformation;->newString:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/oned/rss/expanded/decoders/DecodedInformation;->newString:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method getRemainingValue()I
-    .locals 1
+    .locals 0
 
     .line 62
-    iget v0, p0, Lcom/google/zxing/oned/rss/expanded/decoders/DecodedInformation;->remainingValue:I
+    iget p0, p0, Lcom/google/zxing/oned/rss/expanded/decoders/DecodedInformation;->remainingValue:I
 
-    return v0
+    return p0
 .end method
 
 .method isRemaining()Z
-    .locals 1
+    .locals 0
 
     .line 58
-    iget-boolean v0, p0, Lcom/google/zxing/oned/rss/expanded/decoders/DecodedInformation;->remaining:Z
+    iget-boolean p0, p0, Lcom/google/zxing/oned/rss/expanded/decoders/DecodedInformation;->remaining:Z
 
-    return v0
+    return p0
 .end method

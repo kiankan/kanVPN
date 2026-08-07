@@ -48,19 +48,19 @@
 
 # virtual methods
 .method getCount()I
-    .locals 1
+    .locals 0
 
     .line 156
-    iget v0, p0, Lcom/google/zxing/datamatrix/decoder/Version$ECB;->count:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/decoder/Version$ECB;->count:I
 
-    return v0
+    return p0
 .end method
 
 .method getDataCodewords()I
-    .locals 1
+    .locals 0
 
     .line 160
-    iget v0, p0, Lcom/google/zxing/datamatrix/decoder/Version$ECB;->dataCodewords:I
+    iget p0, p0, Lcom/google/zxing/datamatrix/decoder/Version$ECB;->dataCodewords:I
 
-    return v0
+    return p0
 .end method

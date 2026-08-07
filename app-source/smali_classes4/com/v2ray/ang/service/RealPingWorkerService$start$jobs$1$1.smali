@@ -42,7 +42,7 @@
     k = 0x3
     mv = {
         0x2,
-        0x3,
+        0x4,
         0x0
     }
     xi = 0x30
@@ -98,7 +98,7 @@
 
 # virtual methods
 .method public final create(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -115,9 +115,9 @@
 
     iget-object v0, p0, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;->this$0:Lcom/v2ray/ang/service/RealPingWorkerService;
 
-    iget-object v1, p0, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;->$guid:Ljava/lang/String;
+    iget-object p0, p0, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;->$guid:Ljava/lang/String;
 
-    invoke-direct {p1, v0, v1, p2}, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;-><init>(Lcom/v2ray/ang/service/RealPingWorkerService;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p1, v0, p0, p2}, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;-><init>(Lcom/v2ray/ang/service/RealPingWorkerService;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
 
     check-cast p1, Lkotlin/coroutines/Continuation;
 
@@ -133,9 +133,9 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;->invoke(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final invoke(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -154,34 +154,34 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;->create(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;
+    check-cast p0, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;
 
-    sget-object p2, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    invoke-virtual {p1, p2}, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    .locals 5
 
     const-string v0, " / "
 
     invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
 
-    .line 39
+    .line 44
     iget v1, p0, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;->label:I
 
-    if-nez v1, :cond_0
+    if-nez v1, :cond_1
 
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 40
+    .line 45
     iget-object p1, p0, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;->this$0:Lcom/v2ray/ang/service/RealPingWorkerService;
 
     invoke-static {p1}, Lcom/v2ray/ang/service/RealPingWorkerService;->access$getRunningCount$p(Lcom/v2ray/ang/service/RealPingWorkerService;)Ljava/util/concurrent/atomic/AtomicInteger;
@@ -190,49 +190,69 @@
 
     invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
 
-    const/16 p1, 0x49
-
-    .line 42
+    .line 47
     :try_start_0
-    iget-object v1, p0, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;->this$0:Lcom/v2ray/ang/service/RealPingWorkerService;
+    iget-object p1, p0, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;->this$0:Lcom/v2ray/ang/service/RealPingWorkerService;
 
-    iget-object v2, p0, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;->$guid:Ljava/lang/String;
+    invoke-static {p1}, Lcom/v2ray/ang/service/RealPingWorkerService;->access$getOnlyTcp$p(Lcom/v2ray/ang/service/RealPingWorkerService;)Z
 
-    invoke-static {v1, v2}, Lcom/v2ray/ang/service/RealPingWorkerService;->access$startRealPing(Lcom/v2ray/ang/service/RealPingWorkerService;Ljava/lang/String;)J
-
-    move-result-wide v1
-
-    .line 43
-    sget-object v3, Lcom/v2ray/ang/util/MessageUtil;->INSTANCE:Lcom/v2ray/ang/util/MessageUtil;
-
-    iget-object v4, p0, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;->this$0:Lcom/v2ray/ang/service/RealPingWorkerService;
-
-    invoke-static {v4}, Lcom/v2ray/ang/service/RealPingWorkerService;->access$getContext$p(Lcom/v2ray/ang/service/RealPingWorkerService;)Landroid/content/Context;
-
-    move-result-object v4
-
-    new-instance v5, Lkotlin/Pair;
-
-    iget-object v6, p0, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;->$guid:Ljava/lang/String;
-
-    invoke-static {v1, v2}, Lkotlin/coroutines/jvm/internal/Boxing;->boxLong(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-direct {v5, v6, v1}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    check-cast v5, Ljava/io/Serializable;
-
-    const/16 v1, 0x47
-
-    invoke-virtual {v3, v4, v1, v5}, Lcom/v2ray/ang/util/MessageUtil;->sendMsg2UI(Landroid/content/Context;ILjava/io/Serializable;)V
+    move-result p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 45
     iget-object v1, p0, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;->this$0:Lcom/v2ray/ang/service/RealPingWorkerService;
 
-    invoke-static {v1}, Lcom/v2ray/ang/service/RealPingWorkerService;->access$getTotalCount$p(Lcom/v2ray/ang/service/RealPingWorkerService;)Ljava/util/concurrent/atomic/AtomicInteger;
+    if-eqz p1, :cond_0
+
+    :try_start_1
+    iget-object p1, p0, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;->$guid:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lcom/v2ray/ang/service/RealPingWorkerService;->access$startTcping(Lcom/v2ray/ang/service/RealPingWorkerService;Ljava/lang/String;)J
+
+    move-result-wide v1
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p1, p0, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;->$guid:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lcom/v2ray/ang/service/RealPingWorkerService;->access$startRealPing(Lcom/v2ray/ang/service/RealPingWorkerService;Ljava/lang/String;)J
+
+    move-result-wide v1
+
+    .line 48
+    :goto_0
+    iget-object p1, p0, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;->this$0:Lcom/v2ray/ang/service/RealPingWorkerService;
+
+    invoke-static {p1}, Lcom/v2ray/ang/service/RealPingWorkerService;->access$getOnEvent$p(Lcom/v2ray/ang/service/RealPingWorkerService;)Lkotlin/jvm/functions/Function1;
+
+    move-result-object p1
+
+    new-instance v3, Lcom/v2ray/ang/dto/RealPingEvent$Result;
+
+    iget-object v4, p0, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;->$guid:Ljava/lang/String;
+
+    invoke-direct {v3, v4, v1, v2}, Lcom/v2ray/ang/dto/RealPingEvent$Result;-><init>(Ljava/lang/String;J)V
+
+    invoke-interface {p1, v3}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 52
+    iget-object p1, p0, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;->this$0:Lcom/v2ray/ang/service/RealPingWorkerService;
+
+    invoke-static {p1}, Lcom/v2ray/ang/service/RealPingWorkerService;->access$getTotalCount$p(Lcom/v2ray/ang/service/RealPingWorkerService;)Ljava/util/concurrent/atomic/AtomicInteger;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    move-result p1
+
+    .line 53
+    iget-object v1, p0, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;->this$0:Lcom/v2ray/ang/service/RealPingWorkerService;
+
+    invoke-static {v1}, Lcom/v2ray/ang/service/RealPingWorkerService;->access$getRunningCount$p(Lcom/v2ray/ang/service/RealPingWorkerService;)Ljava/util/concurrent/atomic/AtomicInteger;
 
     move-result-object v1
 
@@ -240,110 +260,96 @@
 
     move-result v1
 
-    .line 46
-    iget-object v2, p0, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;->this$0:Lcom/v2ray/ang/service/RealPingWorkerService;
+    .line 54
+    iget-object p0, p0, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;->this$0:Lcom/v2ray/ang/service/RealPingWorkerService;
 
-    invoke-static {v2}, Lcom/v2ray/ang/service/RealPingWorkerService;->access$getRunningCount$p(Lcom/v2ray/ang/service/RealPingWorkerService;)Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-static {p0}, Lcom/v2ray/ang/service/RealPingWorkerService;->access$getOnEvent$p(Lcom/v2ray/ang/service/RealPingWorkerService;)Lkotlin/jvm/functions/Function1;
 
-    move-result-object v2
+    move-result-object p0
 
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+    new-instance v2, Lcom/v2ray/ang/dto/RealPingEvent$Progress;
 
-    move-result v2
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    .line 47
-    sget-object v3, Lcom/v2ray/ang/util/MessageUtil;->INSTANCE:Lcom/v2ray/ang/util/MessageUtil;
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v4, p0, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;->this$0:Lcom/v2ray/ang/service/RealPingWorkerService;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-static {v4}, Lcom/v2ray/ang/service/RealPingWorkerService;->access$getContext$p(Lcom/v2ray/ang/service/RealPingWorkerService;)Landroid/content/Context;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v4
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    move-result-object p1
 
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-direct {v2, p1}, Lcom/v2ray/ang/dto/RealPingEvent$Progress;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    goto :goto_1
 
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/io/Serializable;
-
-    invoke-virtual {v3, v4, p1, v0}, Lcom/v2ray/ang/util/MessageUtil;->sendMsg2UI(Landroid/content/Context;ILjava/io/Serializable;)V
-
-    .line 49
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
-
-    return-object p1
-
+    .line 52
     :catchall_0
-    move-exception v1
+    iget-object p1, p0, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;->this$0:Lcom/v2ray/ang/service/RealPingWorkerService;
 
-    .line 45
-    iget-object v2, p0, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;->this$0:Lcom/v2ray/ang/service/RealPingWorkerService;
+    invoke-static {p1}, Lcom/v2ray/ang/service/RealPingWorkerService;->access$getTotalCount$p(Lcom/v2ray/ang/service/RealPingWorkerService;)Ljava/util/concurrent/atomic/AtomicInteger;
 
-    invoke-static {v2}, Lcom/v2ray/ang/service/RealPingWorkerService;->access$getTotalCount$p(Lcom/v2ray/ang/service/RealPingWorkerService;)Ljava/util/concurrent/atomic/AtomicInteger;
+    move-result-object p1
 
-    move-result-object v2
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
 
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+    move-result p1
 
-    move-result v2
+    .line 53
+    iget-object v1, p0, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;->this$0:Lcom/v2ray/ang/service/RealPingWorkerService;
 
-    .line 46
-    iget-object v3, p0, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;->this$0:Lcom/v2ray/ang/service/RealPingWorkerService;
+    invoke-static {v1}, Lcom/v2ray/ang/service/RealPingWorkerService;->access$getRunningCount$p(Lcom/v2ray/ang/service/RealPingWorkerService;)Ljava/util/concurrent/atomic/AtomicInteger;
 
-    invoke-static {v3}, Lcom/v2ray/ang/service/RealPingWorkerService;->access$getRunningCount$p(Lcom/v2ray/ang/service/RealPingWorkerService;)Ljava/util/concurrent/atomic/AtomicInteger;
+    move-result-object v1
 
-    move-result-object v3
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
 
-    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+    move-result v1
 
-    move-result v3
+    .line 54
+    iget-object p0, p0, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;->this$0:Lcom/v2ray/ang/service/RealPingWorkerService;
 
-    .line 47
-    sget-object v4, Lcom/v2ray/ang/util/MessageUtil;->INSTANCE:Lcom/v2ray/ang/util/MessageUtil;
+    invoke-static {p0}, Lcom/v2ray/ang/service/RealPingWorkerService;->access$getOnEvent$p(Lcom/v2ray/ang/service/RealPingWorkerService;)Lkotlin/jvm/functions/Function1;
 
-    iget-object v5, p0, Lcom/v2ray/ang/service/RealPingWorkerService$start$jobs$1$1;->this$0:Lcom/v2ray/ang/service/RealPingWorkerService;
+    move-result-object p0
 
-    invoke-static {v5}, Lcom/v2ray/ang/service/RealPingWorkerService;->access$getContext$p(Lcom/v2ray/ang/service/RealPingWorkerService;)Landroid/content/Context;
+    new-instance v2, Lcom/v2ray/ang/dto/RealPingEvent$Progress;
 
-    move-result-object v5
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v0
+    invoke-direct {v2, p1}, Lcom/v2ray/ang/dto/RealPingEvent$Progress;-><init>(Ljava/lang/String;)V
 
-    check-cast v0, Ljava/io/Serializable;
+    :goto_1
+    invoke-interface {p0, v2}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v4, v5, p1, v0}, Lcom/v2ray/ang/util/MessageUtil;->sendMsg2UI(Landroid/content/Context;ILjava/io/Serializable;)V
+    .line 56
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    throw v1
+    return-object p0
 
-    .line 39
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    .line 44
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method

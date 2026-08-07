@@ -50,7 +50,7 @@
 .method private static getMainHandler()Landroid/os/Handler;
     .locals 2
 
-    .line 122
+    .line 121
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;

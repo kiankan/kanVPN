@@ -316,55 +316,55 @@
 
 # virtual methods
 .method protected final getDataCharacterCounters()[I
-    .locals 1
+    .locals 0
 
     .line 58
-    iget-object v0, p0, Lcom/google/zxing/oned/rss/AbstractRSSReader;->dataCharacterCounters:[I
+    iget-object p0, p0, Lcom/google/zxing/oned/rss/AbstractRSSReader;->dataCharacterCounters:[I
 
-    return-object v0
+    return-object p0
 .end method
 
 .method protected final getDecodeFinderCounters()[I
-    .locals 1
+    .locals 0
 
     .line 54
-    iget-object v0, p0, Lcom/google/zxing/oned/rss/AbstractRSSReader;->decodeFinderCounters:[I
+    iget-object p0, p0, Lcom/google/zxing/oned/rss/AbstractRSSReader;->decodeFinderCounters:[I
 
-    return-object v0
+    return-object p0
 .end method
 
 .method protected final getEvenCounts()[I
-    .locals 1
+    .locals 0
 
     .line 74
-    iget-object v0, p0, Lcom/google/zxing/oned/rss/AbstractRSSReader;->evenCounts:[I
+    iget-object p0, p0, Lcom/google/zxing/oned/rss/AbstractRSSReader;->evenCounts:[I
 
-    return-object v0
+    return-object p0
 .end method
 
 .method protected final getEvenRoundingErrors()[F
-    .locals 1
+    .locals 0
 
     .line 66
-    iget-object v0, p0, Lcom/google/zxing/oned/rss/AbstractRSSReader;->evenRoundingErrors:[F
+    iget-object p0, p0, Lcom/google/zxing/oned/rss/AbstractRSSReader;->evenRoundingErrors:[F
 
-    return-object v0
+    return-object p0
 .end method
 
 .method protected final getOddCounts()[I
-    .locals 1
+    .locals 0
 
     .line 70
-    iget-object v0, p0, Lcom/google/zxing/oned/rss/AbstractRSSReader;->oddCounts:[I
+    iget-object p0, p0, Lcom/google/zxing/oned/rss/AbstractRSSReader;->oddCounts:[I
 
-    return-object v0
+    return-object p0
 .end method
 
 .method protected final getOddRoundingErrors()[F
-    .locals 1
+    .locals 0
 
     .line 62
-    iget-object v0, p0, Lcom/google/zxing/oned/rss/AbstractRSSReader;->oddRoundingErrors:[F
+    iget-object p0, p0, Lcom/google/zxing/oned/rss/AbstractRSSReader;->oddRoundingErrors:[F
 
-    return-object v0
+    return-object p0
 .end method

@@ -11,16 +11,16 @@
     d2 = {
         "Landroidx/camera/core/imagecapture/CameraCapturePipeline;",
         "",
-        "invokePostCapture",
+        "invokePreCapture",
         "Lcom/google/common/util/concurrent/ListenableFuture;",
         "Ljava/lang/Void;",
-        "invokePreCapture",
-        "camera-core_release"
+        "invokePostCapture",
+        "camera-core"
     }
     k = 0x1
     mv = {
+        0x2,
         0x1,
-        0x8,
         0x0
     }
     xi = 0x30

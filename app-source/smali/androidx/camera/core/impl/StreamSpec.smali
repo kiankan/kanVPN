@@ -27,7 +27,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 39
+    .line 42
     new-instance v0, Landroid/util/Range;
 
     const/4 v1, 0x0
@@ -46,42 +46,52 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 36
+    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 .method public static builder(Landroid/util/Size;)Landroidx/camera/core/impl/StreamSpec$Builder;
-    .locals 1
+    .locals 2
 
-    .line 79
+    .line 99
     new-instance v0, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;
 
     invoke-direct {v0}, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;-><init>()V
 
-    .line 80
+    .line 100
     invoke-virtual {v0, p0}, Landroidx/camera/core/impl/AutoValue_StreamSpec$Builder;->setResolution(Landroid/util/Size;)Landroidx/camera/core/impl/StreamSpec$Builder;
 
-    move-result-object p0
+    move-result-object v0
 
-    sget-object v0, Landroidx/camera/core/impl/StreamSpec;->FRAME_RATE_RANGE_UNSPECIFIED:Landroid/util/Range;
-
-    .line 81
-    invoke-virtual {p0, v0}, Landroidx/camera/core/impl/StreamSpec$Builder;->setExpectedFrameRateRange(Landroid/util/Range;)Landroidx/camera/core/impl/StreamSpec$Builder;
-
-    move-result-object p0
-
-    sget-object v0, Landroidx/camera/core/DynamicRange;->SDR:Landroidx/camera/core/DynamicRange;
-
-    .line 82
-    invoke-virtual {p0, v0}, Landroidx/camera/core/impl/StreamSpec$Builder;->setDynamicRange(Landroidx/camera/core/DynamicRange;)Landroidx/camera/core/impl/StreamSpec$Builder;
+    .line 101
+    invoke-virtual {v0, p0}, Landroidx/camera/core/impl/StreamSpec$Builder;->setOriginalConfiguredResolution(Landroid/util/Size;)Landroidx/camera/core/impl/StreamSpec$Builder;
 
     move-result-object p0
 
     const/4 v0, 0x0
 
-    .line 83
+    .line 102
+    invoke-virtual {p0, v0}, Landroidx/camera/core/impl/StreamSpec$Builder;->setSessionType(I)Landroidx/camera/core/impl/StreamSpec$Builder;
+
+    move-result-object p0
+
+    sget-object v1, Landroidx/camera/core/impl/StreamSpec;->FRAME_RATE_RANGE_UNSPECIFIED:Landroid/util/Range;
+
+    .line 103
+    invoke-virtual {p0, v1}, Landroidx/camera/core/impl/StreamSpec$Builder;->setExpectedFrameRateRange(Landroid/util/Range;)Landroidx/camera/core/impl/StreamSpec$Builder;
+
+    move-result-object p0
+
+    sget-object v1, Landroidx/camera/core/DynamicRange;->SDR:Landroidx/camera/core/DynamicRange;
+
+    .line 104
+    invoke-virtual {p0, v1}, Landroidx/camera/core/impl/StreamSpec$Builder;->setDynamicRange(Landroidx/camera/core/DynamicRange;)Landroidx/camera/core/impl/StreamSpec$Builder;
+
+    move-result-object p0
+
+    .line 105
     invoke-virtual {p0, v0}, Landroidx/camera/core/impl/StreamSpec$Builder;->setZslDisabled(Z)Landroidx/camera/core/impl/StreamSpec$Builder;
 
     move-result-object p0
@@ -108,7 +118,13 @@
 .method public abstract getImplementationOptions()Landroidx/camera/core/impl/Config;
 .end method
 
+.method public abstract getOriginalConfiguredResolution()Landroid/util/Size;
+.end method
+
 .method public abstract getResolution()Landroid/util/Size;
+.end method
+
+.method public abstract getSessionType()I
 .end method
 
 .method public abstract getZslDisabled()Z

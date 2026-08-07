@@ -33,16 +33,16 @@
 
 # virtual methods
 .method public final onImageAvailable(Landroid/media/ImageReader;)V
-    .locals 3
+    .locals 2
 
     .line 0
     iget-object v0, p0, Landroidx/camera/core/AndroidImageReaderProxy$$ExternalSyntheticLambda1;->f$0:Landroidx/camera/core/AndroidImageReaderProxy;
 
     iget-object v1, p0, Landroidx/camera/core/AndroidImageReaderProxy$$ExternalSyntheticLambda1;->f$1:Ljava/util/concurrent/Executor;
 
-    iget-object v2, p0, Landroidx/camera/core/AndroidImageReaderProxy$$ExternalSyntheticLambda1;->f$2:Landroidx/camera/core/impl/ImageReaderProxy$OnImageAvailableListener;
+    iget-object p0, p0, Landroidx/camera/core/AndroidImageReaderProxy$$ExternalSyntheticLambda1;->f$2:Landroidx/camera/core/impl/ImageReaderProxy$OnImageAvailableListener;
 
-    invoke-virtual {v0, v1, v2, p1}, Landroidx/camera/core/AndroidImageReaderProxy;->lambda$setOnImageAvailableListener$1$androidx-camera-core-AndroidImageReaderProxy(Ljava/util/concurrent/Executor;Landroidx/camera/core/impl/ImageReaderProxy$OnImageAvailableListener;Landroid/media/ImageReader;)V
+    invoke-virtual {v0, v1, p0, p1}, Landroidx/camera/core/AndroidImageReaderProxy;->lambda$setOnImageAvailableListener$1$androidx-camera-core-AndroidImageReaderProxy(Ljava/util/concurrent/Executor;Landroidx/camera/core/impl/ImageReaderProxy$OnImageAvailableListener;Landroid/media/ImageReader;)V
 
     return-void
 .end method

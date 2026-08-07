@@ -45,23 +45,23 @@
 
     .line 35
     :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null inputCropRect"
+    const-string p1, "Null inputCropRect"
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
     .line 31
     :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null inputSize"
+    const-string p1, "Null inputSize"
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 
@@ -75,7 +75,7 @@
 
     return v0
 
-    .line 87
+    .line 84
     :cond_0
     instance-of v1, p1, Landroidx/camera/core/SurfaceOutput$CameraInputInfo;
 
@@ -83,10 +83,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 88
+    .line 85
     check-cast p1, Landroidx/camera/core/SurfaceOutput$CameraInputInfo;
 
-    .line 89
+    .line 86
     iget-object v1, p0, Landroidx/camera/core/AutoValue_SurfaceOutput_CameraInputInfo;->inputSize:Landroid/util/Size;
 
     invoke-virtual {p1}, Landroidx/camera/core/SurfaceOutput$CameraInputInfo;->getInputSize()Landroid/util/Size;
@@ -101,7 +101,7 @@
 
     iget-object v1, p0, Landroidx/camera/core/AutoValue_SurfaceOutput_CameraInputInfo;->inputCropRect:Landroid/graphics/Rect;
 
-    .line 90
+    .line 87
     invoke-virtual {p1}, Landroidx/camera/core/SurfaceOutput$CameraInputInfo;->getInputCropRect()Landroid/graphics/Rect;
 
     move-result-object v3
@@ -116,7 +116,7 @@
 
     if-nez v1, :cond_1
 
-    .line 91
+    .line 88
     invoke-virtual {p1}, Landroidx/camera/core/SurfaceOutput$CameraInputInfo;->getCameraInternal()Landroidx/camera/core/impl/CameraInternal;
 
     move-result-object v1
@@ -139,21 +139,21 @@
     :goto_0
     iget v1, p0, Landroidx/camera/core/AutoValue_SurfaceOutput_CameraInputInfo;->rotationDegrees:I
 
-    .line 92
+    .line 89
     invoke-virtual {p1}, Landroidx/camera/core/SurfaceOutput$CameraInputInfo;->getRotationDegrees()I
 
     move-result v3
 
     if-ne v1, v3, :cond_2
 
-    iget-boolean v1, p0, Landroidx/camera/core/AutoValue_SurfaceOutput_CameraInputInfo;->mirroring:Z
+    iget-boolean p0, p0, Landroidx/camera/core/AutoValue_SurfaceOutput_CameraInputInfo;->mirroring:Z
 
-    .line 93
+    .line 90
     invoke-virtual {p1}, Landroidx/camera/core/SurfaceOutput$CameraInputInfo;->getMirroring()Z
 
     move-result p1
 
-    if-ne v1, p1, :cond_2
+    if-ne p0, p1, :cond_2
 
     return v0
 
@@ -162,54 +162,54 @@
 .end method
 
 .method public getCameraInternal()Landroidx/camera/core/impl/CameraInternal;
-    .locals 1
+    .locals 0
 
-    .line 58
-    iget-object v0, p0, Landroidx/camera/core/AutoValue_SurfaceOutput_CameraInputInfo;->cameraInternal:Landroidx/camera/core/impl/CameraInternal;
+    .line 55
+    iget-object p0, p0, Landroidx/camera/core/AutoValue_SurfaceOutput_CameraInputInfo;->cameraInternal:Landroidx/camera/core/impl/CameraInternal;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getInputCropRect()Landroid/graphics/Rect;
-    .locals 1
+    .locals 0
 
-    .line 52
-    iget-object v0, p0, Landroidx/camera/core/AutoValue_SurfaceOutput_CameraInputInfo;->inputCropRect:Landroid/graphics/Rect;
+    .line 50
+    iget-object p0, p0, Landroidx/camera/core/AutoValue_SurfaceOutput_CameraInputInfo;->inputCropRect:Landroid/graphics/Rect;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getInputSize()Landroid/util/Size;
-    .locals 1
+    .locals 0
 
-    .line 46
-    iget-object v0, p0, Landroidx/camera/core/AutoValue_SurfaceOutput_CameraInputInfo;->inputSize:Landroid/util/Size;
+    .line 45
+    iget-object p0, p0, Landroidx/camera/core/AutoValue_SurfaceOutput_CameraInputInfo;->inputSize:Landroid/util/Size;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getMirroring()Z
-    .locals 1
+    .locals 0
 
-    .line 68
-    iget-boolean v0, p0, Landroidx/camera/core/AutoValue_SurfaceOutput_CameraInputInfo;->mirroring:Z
+    .line 65
+    iget-boolean p0, p0, Landroidx/camera/core/AutoValue_SurfaceOutput_CameraInputInfo;->mirroring:Z
 
-    return v0
+    return p0
 .end method
 
 .method public getRotationDegrees()I
-    .locals 1
+    .locals 0
 
-    .line 63
-    iget v0, p0, Landroidx/camera/core/AutoValue_SurfaceOutput_CameraInputInfo;->rotationDegrees:I
+    .line 60
+    iget p0, p0, Landroidx/camera/core/AutoValue_SurfaceOutput_CameraInputInfo;->rotationDegrees:I
 
-    return v0
+    return p0
 .end method
 
 .method public hashCode()I
     .locals 3
 
-    .line 102
+    .line 99
     iget-object v0, p0, Landroidx/camera/core/AutoValue_SurfaceOutput_CameraInputInfo;->inputSize:Landroid/util/Size;
 
     invoke-virtual {v0}, Landroid/util/Size;->hashCode()I
@@ -222,7 +222,7 @@
 
     mul-int/2addr v0, v1
 
-    .line 104
+    .line 101
     iget-object v2, p0, Landroidx/camera/core/AutoValue_SurfaceOutput_CameraInputInfo;->inputCropRect:Landroid/graphics/Rect;
 
     invoke-virtual {v2}, Landroid/graphics/Rect;->hashCode()I
@@ -233,7 +233,7 @@
 
     mul-int/2addr v0, v1
 
-    .line 106
+    .line 103
     iget-object v2, p0, Landroidx/camera/core/AutoValue_SurfaceOutput_CameraInputInfo;->cameraInternal:Landroidx/camera/core/impl/CameraInternal;
 
     if-nez v2, :cond_0
@@ -252,35 +252,35 @@
 
     mul-int/2addr v0, v1
 
-    .line 108
+    .line 105
     iget v2, p0, Landroidx/camera/core/AutoValue_SurfaceOutput_CameraInputInfo;->rotationDegrees:I
 
     xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
-    .line 110
-    iget-boolean v1, p0, Landroidx/camera/core/AutoValue_SurfaceOutput_CameraInputInfo;->mirroring:Z
+    .line 107
+    iget-boolean p0, p0, Landroidx/camera/core/AutoValue_SurfaceOutput_CameraInputInfo;->mirroring:Z
 
-    if-eqz v1, :cond_1
+    if-eqz p0, :cond_1
 
-    const/16 v1, 0x4cf
+    const/16 p0, 0x4cf
 
     goto :goto_1
 
     :cond_1
-    const/16 v1, 0x4d5
+    const/16 p0, 0x4d5
 
     :goto_1
-    xor-int/2addr v0, v1
+    xor-int/2addr p0, v0
 
-    return v0
+    return p0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 73
+    .line 70
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "CameraInputInfo{inputSize="
@@ -319,17 +319,17 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Landroidx/camera/core/AutoValue_SurfaceOutput_CameraInputInfo;->mirroring:Z
+    iget-boolean p0, p0, Landroidx/camera/core/AutoValue_SurfaceOutput_CameraInputInfo;->mirroring:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v1, "}"
+    const-string/jumbo p0, "}"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

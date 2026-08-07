@@ -72,28 +72,28 @@
 
     const/4 v0, 0x1
 
-    .line 139
+    .line 140
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     const/4 v1, 0x2
 
-    .line 140
+    .line 141
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     const/4 v2, 0x3
 
-    .line 141
+    .line 142
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
     const/4 v3, 0x7
 
-    .line 142
+    .line 143
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -102,7 +102,7 @@
 
     move-result-object v0
 
-    .line 138
+    .line 139
     invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
@@ -125,35 +125,35 @@
         }
     .end annotation
 
-    .line 294
+    .line 291
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 295
+    .line 292
     sget-object v0, Landroidx/camera/core/CameraEffect;->SURFACE_PROCESSOR_TARGETS:Ljava/util/List;
 
     invoke-static {v0, p1}, Landroidx/camera/core/processing/TargetUtils;->checkSupportedTargets(Ljava/util/Collection;I)V
 
-    .line 296
+    .line 293
     iput p1, p0, Landroidx/camera/core/CameraEffect;->mTargets:I
 
-    .line 297
+    .line 294
     iput p2, p0, Landroidx/camera/core/CameraEffect;->mOutputOption:I
 
-    .line 298
+    .line 295
     iput p3, p0, Landroidx/camera/core/CameraEffect;->mTransformation:I
 
-    .line 299
+    .line 296
     iput-object p4, p0, Landroidx/camera/core/CameraEffect;->mExecutor:Ljava/util/concurrent/Executor;
 
-    .line 300
+    .line 297
     iput-object p5, p0, Landroidx/camera/core/CameraEffect;->mSurfaceProcessor:Landroidx/camera/core/SurfaceProcessor;
 
     const/4 p1, 0x0
 
-    .line 301
+    .line 298
     iput-object p1, p0, Landroidx/camera/core/CameraEffect;->mImageProcessor:Landroidx/camera/core/ImageProcessor;
 
-    .line 302
+    .line 299
     iput-object p6, p0, Landroidx/camera/core/CameraEffect;->mErrorListener:Landroidx/core/util/Consumer;
 
     return-void
@@ -186,7 +186,7 @@
 
     move-object v6, p5
 
-    .line 258
+    .line 255
     invoke-direct/range {v0 .. v6}, Landroidx/camera/core/CameraEffect;-><init>(IIILjava/util/concurrent/Executor;Landroidx/camera/core/SurfaceProcessor;Landroidx/core/util/Consumer;)V
 
     return-void
@@ -205,7 +205,7 @@
         }
     .end annotation
 
-    .line 239
+    .line 236
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x4
@@ -221,33 +221,33 @@
     :cond_0
     move v0, v1
 
-    .line 240
+    .line 237
     :goto_0
     const-string v2, "Currently ImageProcessor can only target IMAGE_CAPTURE."
 
     invoke-static {v0, v2}, Landroidx/core/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
-    .line 242
+    .line 239
     iput p1, p0, Landroidx/camera/core/CameraEffect;->mTargets:I
 
-    .line 243
+    .line 240
     iput v1, p0, Landroidx/camera/core/CameraEffect;->mTransformation:I
 
-    .line 244
+    .line 241
     iput v1, p0, Landroidx/camera/core/CameraEffect;->mOutputOption:I
 
-    .line 245
+    .line 242
     iput-object p2, p0, Landroidx/camera/core/CameraEffect;->mExecutor:Ljava/util/concurrent/Executor;
 
     const/4 p1, 0x0
 
-    .line 246
+    .line 243
     iput-object p1, p0, Landroidx/camera/core/CameraEffect;->mSurfaceProcessor:Landroidx/camera/core/SurfaceProcessor;
 
-    .line 247
+    .line 244
     iput-object p3, p0, Landroidx/camera/core/CameraEffect;->mImageProcessor:Landroidx/camera/core/ImageProcessor;
 
-    .line 248
+    .line 245
     iput-object p4, p0, Landroidx/camera/core/CameraEffect;->mErrorListener:Landroidx/core/util/Consumer;
 
     return-void
@@ -280,7 +280,7 @@
 
     move-object v6, p4
 
-    .line 333
+    .line 330
     invoke-direct/range {v0 .. v6}, Landroidx/camera/core/CameraEffect;-><init>(IIILjava/util/concurrent/Executor;Landroidx/camera/core/SurfaceProcessor;Landroidx/core/util/Consumer;)V
 
     return-void
@@ -291,7 +291,7 @@
 .method public createSurfaceProcessorInternal()Landroidx/camera/core/processing/SurfaceProcessorInternal;
     .locals 1
 
-    .line 412
+    .line 404
     new-instance v0, Landroidx/camera/core/processing/SurfaceProcessorWithExecutor;
 
     invoke-direct {v0, p0}, Landroidx/camera/core/processing/SurfaceProcessorWithExecutor;-><init>(Landroidx/camera/core/CameraEffect;)V
@@ -300,7 +300,7 @@
 .end method
 
 .method public getErrorListener()Landroidx/core/util/Consumer;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -310,62 +310,62 @@
         }
     .end annotation
 
-    .line 381
-    iget-object v0, p0, Landroidx/camera/core/CameraEffect;->mErrorListener:Landroidx/core/util/Consumer;
+    .line 376
+    iget-object p0, p0, Landroidx/camera/core/CameraEffect;->mErrorListener:Landroidx/core/util/Consumer;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getExecutor()Ljava/util/concurrent/Executor;
-    .locals 1
+    .locals 0
 
-    .line 370
-    iget-object v0, p0, Landroidx/camera/core/CameraEffect;->mExecutor:Ljava/util/concurrent/Executor;
+    .line 366
+    iget-object p0, p0, Landroidx/camera/core/CameraEffect;->mExecutor:Ljava/util/concurrent/Executor;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getImageProcessor()Landroidx/camera/core/ImageProcessor;
-    .locals 1
+    .locals 0
 
-    .line 398
-    iget-object v0, p0, Landroidx/camera/core/CameraEffect;->mImageProcessor:Landroidx/camera/core/ImageProcessor;
+    .line 391
+    iget-object p0, p0, Landroidx/camera/core/CameraEffect;->mImageProcessor:Landroidx/camera/core/ImageProcessor;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getOutputOption()I
-    .locals 1
+    .locals 0
 
-    .line 360
-    iget v0, p0, Landroidx/camera/core/CameraEffect;->mOutputOption:I
+    .line 357
+    iget p0, p0, Landroidx/camera/core/CameraEffect;->mOutputOption:I
 
-    return v0
+    return p0
 .end method
 
 .method public getSurfaceProcessor()Landroidx/camera/core/SurfaceProcessor;
-    .locals 1
+    .locals 0
 
-    .line 389
-    iget-object v0, p0, Landroidx/camera/core/CameraEffect;->mSurfaceProcessor:Landroidx/camera/core/SurfaceProcessor;
+    .line 383
+    iget-object p0, p0, Landroidx/camera/core/CameraEffect;->mSurfaceProcessor:Landroidx/camera/core/SurfaceProcessor;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getTargets()I
-    .locals 1
+    .locals 0
 
-    .line 342
-    iget v0, p0, Landroidx/camera/core/CameraEffect;->mTargets:I
+    .line 339
+    iget p0, p0, Landroidx/camera/core/CameraEffect;->mTargets:I
 
-    return v0
+    return p0
 .end method
 
 .method public getTransformation()I
-    .locals 1
+    .locals 0
 
-    .line 351
-    iget v0, p0, Landroidx/camera/core/CameraEffect;->mTransformation:I
+    .line 348
+    iget p0, p0, Landroidx/camera/core/CameraEffect;->mTransformation:I
 
-    return v0
+    return p0
 .end method

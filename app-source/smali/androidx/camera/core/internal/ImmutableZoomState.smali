@@ -10,7 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 28
+    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,19 +30,19 @@
 .method public static create(Landroidx/camera/core/ZoomState;)Landroidx/camera/core/ZoomState;
     .locals 4
 
-    .line 39
+    .line 38
     new-instance v0, Landroidx/camera/core/internal/AutoValue_ImmutableZoomState;
 
     invoke-interface {p0}, Landroidx/camera/core/ZoomState;->getZoomRatio()F
 
     move-result v1
 
-    .line 40
+    .line 39
     invoke-interface {p0}, Landroidx/camera/core/ZoomState;->getMaxZoomRatio()F
 
     move-result v2
 
-    .line 41
+    .line 40
     invoke-interface {p0}, Landroidx/camera/core/ZoomState;->getMinZoomRatio()F
 
     move-result v3

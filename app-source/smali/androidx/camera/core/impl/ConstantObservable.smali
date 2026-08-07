@@ -48,7 +48,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 33
+    .line 34
     new-instance v0, Landroidx/camera/core/impl/ConstantObservable;
 
     const/4 v1, 0x0
@@ -122,7 +122,7 @@
         }
     .end annotation
 
-    .line 70
+    .line 69
     iget-object v0, p0, Landroidx/camera/core/impl/ConstantObservable;->mValueFuture:Lcom/google/common/util/concurrent/ListenableFuture;
 
     new-instance v1, Landroidx/camera/core/impl/ConstantObservable$$ExternalSyntheticLambda0;
@@ -135,7 +135,7 @@
 .end method
 
 .method public fetchData()Lcom/google/common/util/concurrent/ListenableFuture;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -144,24 +144,24 @@
         }
     .end annotation
 
-    .line 61
-    iget-object v0, p0, Landroidx/camera/core/impl/ConstantObservable;->mValueFuture:Lcom/google/common/util/concurrent/ListenableFuture;
+    .line 60
+    iget-object p0, p0, Landroidx/camera/core/impl/ConstantObservable;->mValueFuture:Lcom/google/common/util/concurrent/ListenableFuture;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method synthetic lambda$addObserver$0$androidx-camera-core-impl-ConstantObservable(Landroidx/camera/core/impl/Observable$Observer;)V
-    .locals 1
+    .locals 0
 
-    .line 72
+    .line 71
     :try_start_0
-    iget-object v0, p0, Landroidx/camera/core/impl/ConstantObservable;->mValueFuture:Lcom/google/common/util/concurrent/ListenableFuture;
+    iget-object p0, p0, Landroidx/camera/core/impl/ConstantObservable;->mValueFuture:Lcom/google/common/util/concurrent/ListenableFuture;
 
-    invoke-interface {v0}, Lcom/google/common/util/concurrent/ListenableFuture;->get()Ljava/lang/Object;
+    invoke-interface {p0}, Lcom/google/common/util/concurrent/ListenableFuture;->get()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-interface {p1, v0}, Landroidx/camera/core/impl/Observable$Observer;->onNewData(Ljava/lang/Object;)V
+    invoke-interface {p1, p0}, Landroidx/camera/core/impl/Observable$Observer;->onNewData(Ljava/lang/Object;)V
     :try_end_0
     .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
@@ -169,16 +169,16 @@
     return-void
 
     :catch_0
-    move-exception v0
+    move-exception p0
 
     goto :goto_0
 
     :catch_1
-    move-exception v0
+    move-exception p0
 
-    .line 76
+    .line 75
     :goto_0
-    invoke-interface {p1, v0}, Landroidx/camera/core/impl/Observable$Observer;->onError(Ljava/lang/Throwable;)V
+    invoke-interface {p1, p0}, Landroidx/camera/core/impl/Observable$Observer;->onError(Ljava/lang/Throwable;)V
 
     return-void
 .end method

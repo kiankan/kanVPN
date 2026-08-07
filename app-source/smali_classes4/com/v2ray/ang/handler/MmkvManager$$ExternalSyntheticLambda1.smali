@@ -19,12 +19,12 @@
 
 # virtual methods
 .method public final invoke()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
     .line 0
-    invoke-static {}, Lcom/v2ray/ang/handler/MmkvManager;->$r8$lambda$010HwktDCMUh4K-4o_AvW6c-7o4()Lcom/tencent/mmkv/MMKV;
+    invoke-static {}, Lcom/v2ray/ang/handler/MmkvManager;->profileFullStorage_delegate$lambda$0()Lcom/tencent/mmkv/MMKV;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

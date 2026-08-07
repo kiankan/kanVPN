@@ -76,10 +76,10 @@
 .method constructor <init>(Landroid/view/Surface;IILandroid/util/Size;Landroidx/camera/core/SurfaceOutput$CameraInputInfo;Landroidx/camera/core/SurfaceOutput$CameraInputInfo;Landroid/graphics/Matrix;)V
     .locals 5
 
-    .line 113
+    .line 102
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
+    .line 60
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -88,62 +88,62 @@
 
     const/16 v0, 0x10
 
-    .line 76
+    .line 73
     new-array v1, v0, [F
 
     iput-object v1, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mAdditionalTransform:[F
 
-    .line 79
+    .line 75
     new-array v2, v0, [F
 
     iput-object v2, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mSecondaryAdditionalTransform:[F
 
-    .line 83
+    .line 78
     new-array v3, v0, [F
 
     iput-object v3, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mInvertedTextureTransform:[F
 
-    .line 86
+    .line 80
     new-array v0, v0, [F
 
     iput-object v0, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mSecondaryInvertedTextureTransform:[F
 
     const/4 v4, 0x0
 
-    .line 95
+    .line 86
     iput-boolean v4, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mHasPendingCloseRequest:Z
 
-    .line 97
+    .line 88
     iput-boolean v4, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mIsClosed:Z
 
-    .line 114
+    .line 103
     iput-object p1, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mSurface:Landroid/view/Surface;
 
-    .line 115
+    .line 104
     iput p2, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mTargets:I
 
-    .line 116
+    .line 105
     iput p3, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mFormat:I
 
-    .line 117
+    .line 106
     iput-object p4, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mSize:Landroid/util/Size;
 
-    .line 118
+    .line 107
     iput-object p5, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mCameraInputInfo:Landroidx/camera/core/SurfaceOutput$CameraInputInfo;
 
-    .line 119
+    .line 108
     iput-object p6, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mSecondaryCameraInputInfo:Landroidx/camera/core/SurfaceOutput$CameraInputInfo;
 
-    .line 120
+    .line 109
     iput-object p7, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mSensorToBufferTransform:Landroid/graphics/Matrix;
 
-    .line 121
+    .line 110
     invoke-static {v1, v3, p5}, Landroidx/camera/core/processing/SurfaceOutputImpl;->calculateAdditionalTransform([F[FLandroidx/camera/core/SurfaceOutput$CameraInputInfo;)V
 
-    .line 124
+    .line 113
     invoke-static {v2, v0, p6}, Landroidx/camera/core/processing/SurfaceOutputImpl;->calculateAdditionalTransform([F[FLandroidx/camera/core/SurfaceOutput$CameraInputInfo;)V
 
-    .line 127
+    .line 116
     new-instance p1, Landroidx/camera/core/processing/SurfaceOutputImpl$$ExternalSyntheticLambda0;
 
     invoke-direct {p1, p0}, Landroidx/camera/core/processing/SurfaceOutputImpl$$ExternalSyntheticLambda0;-><init>(Landroidx/camera/core/processing/SurfaceOutputImpl;)V
@@ -162,7 +162,7 @@
 
     const/4 v0, 0x0
 
-    .line 318
+    .line 302
     invoke-static {p0, v0}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
     if-nez p2, :cond_0
@@ -172,10 +172,10 @@
     :cond_0
     const/high16 v1, 0x3f000000    # 0.5f
 
-    .line 331
+    .line 315
     invoke-static {p0, v1}, Landroidx/camera/core/impl/utils/MatrixExt;->preVerticalFlip([FF)V
 
-    .line 334
+    .line 318
     invoke-virtual {p2}, Landroidx/camera/core/SurfaceOutput$CameraInputInfo;->getRotationDegrees()I
 
     move-result v2
@@ -184,7 +184,7 @@
 
     invoke-static {p0, v2, v1, v1}, Landroidx/camera/core/impl/utils/MatrixExt;->preRotate([FFFF)V
 
-    .line 337
+    .line 321
     invoke-virtual {p2}, Landroidx/camera/core/SurfaceOutput$CameraInputInfo;->getMirroring()Z
 
     move-result v1
@@ -195,61 +195,61 @@
 
     if-eqz v1, :cond_1
 
-    .line 338
+    .line 322
     invoke-static {p0, v0, v3, v2, v2}, Landroid/opengl/Matrix;->translateM([FIFFF)V
 
     const/high16 v1, -0x40800000    # -1.0f
 
-    .line 339
+    .line 323
     invoke-static {p0, v0, v1, v3, v3}, Landroid/opengl/Matrix;->scaleM([FIFFF)V
 
-    .line 344
+    .line 328
     :cond_1
     invoke-virtual {p2}, Landroidx/camera/core/SurfaceOutput$CameraInputInfo;->getInputSize()Landroid/util/Size;
 
     move-result-object v1
 
-    .line 345
+    .line 329
     invoke-virtual {p2}, Landroidx/camera/core/SurfaceOutput$CameraInputInfo;->getRotationDegrees()I
 
     move-result v4
 
-    .line 344
+    .line 328
     invoke-static {v1, v4}, Landroidx/camera/core/impl/utils/TransformUtils;->rotateSize(Landroid/util/Size;I)Landroid/util/Size;
 
     move-result-object v1
 
-    .line 347
+    .line 331
     invoke-virtual {p2}, Landroidx/camera/core/SurfaceOutput$CameraInputInfo;->getInputSize()Landroid/util/Size;
 
     move-result-object v4
 
-    .line 346
+    .line 330
     invoke-static {v4}, Landroidx/camera/core/impl/utils/TransformUtils;->sizeToRectF(Landroid/util/Size;)Landroid/graphics/RectF;
 
     move-result-object v4
 
-    .line 348
+    .line 332
     invoke-static {v1}, Landroidx/camera/core/impl/utils/TransformUtils;->sizeToRectF(Landroid/util/Size;)Landroid/graphics/RectF;
 
     move-result-object v5
 
-    .line 349
+    .line 333
     invoke-virtual {p2}, Landroidx/camera/core/SurfaceOutput$CameraInputInfo;->getRotationDegrees()I
 
     move-result v6
 
-    .line 350
+    .line 334
     invoke-virtual {p2}, Landroidx/camera/core/SurfaceOutput$CameraInputInfo;->getMirroring()Z
 
     move-result v7
 
-    .line 346
+    .line 330
     invoke-static {v4, v5, v6, v7}, Landroidx/camera/core/impl/utils/TransformUtils;->getRectToRect(Landroid/graphics/RectF;Landroid/graphics/RectF;IZ)Landroid/graphics/Matrix;
 
     move-result-object v4
 
-    .line 351
+    .line 335
     new-instance v5, Landroid/graphics/RectF;
 
     invoke-virtual {p2}, Landroidx/camera/core/SurfaceOutput$CameraInputInfo;->getInputCropRect()Landroid/graphics/Rect;
@@ -258,10 +258,10 @@
 
     invoke-direct {v5, v6}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V
 
-    .line 352
+    .line 336
     invoke-virtual {v4, v5}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
 
-    .line 355
+    .line 339
     iget v4, v5, Landroid/graphics/RectF;->left:F
 
     invoke-virtual {v1}, Landroid/util/Size;->getWidth()I
@@ -272,7 +272,7 @@
 
     div-float/2addr v4, v6
 
-    .line 356
+    .line 340
     invoke-virtual {v1}, Landroid/util/Size;->getHeight()I
 
     move-result v6
@@ -289,7 +289,7 @@
 
     sub-float/2addr v6, v7
 
-    .line 357
+    .line 341
     invoke-virtual {v1}, Landroid/util/Size;->getHeight()I
 
     move-result v7
@@ -298,7 +298,7 @@
 
     div-float/2addr v6, v7
 
-    .line 358
+    .line 342
     invoke-virtual {v5}, Landroid/graphics/RectF;->width()F
 
     move-result v7
@@ -311,7 +311,7 @@
 
     div-float/2addr v7, v8
 
-    .line 359
+    .line 343
     invoke-virtual {v5}, Landroid/graphics/RectF;->height()F
 
     move-result v5
@@ -324,13 +324,13 @@
 
     div-float/2addr v5, v1
 
-    .line 361
+    .line 345
     invoke-static {p0, v0, v4, v6, v2}, Landroid/opengl/Matrix;->translateM([FIFFF)V
 
-    .line 362
+    .line 346
     invoke-static {p0, v0, v7, v5, v3}, Landroid/opengl/Matrix;->scaleM([FIFFF)V
 
-    .line 365
+    .line 349
     invoke-virtual {p2}, Landroidx/camera/core/SurfaceOutput$CameraInputInfo;->getCameraInternal()Landroidx/camera/core/impl/CameraInternal;
 
     move-result-object p2
@@ -349,7 +349,7 @@
 
     move-object v2, p1
 
-    .line 368
+    .line 352
     invoke-static/range {v0 .. v5}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
 
     return-void
@@ -360,17 +360,17 @@
 
     const/4 v0, 0x0
 
-    .line 382
+    .line 366
     invoke-static {p0, v0}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
     const/high16 v1, 0x3f000000    # 0.5f
 
-    .line 386
+    .line 370
     invoke-static {p0, v1}, Landroidx/camera/core/impl/utils/MatrixExt;->preVerticalFlip([FF)V
 
     if-eqz p1, :cond_0
 
-    .line 390
+    .line 374
     invoke-interface {p1}, Landroidx/camera/core/impl/CameraInternal;->getHasTransform()Z
 
     move-result v2
@@ -379,7 +379,7 @@
 
     invoke-static {v2, v3}, Landroidx/core/util/Preconditions;->checkState(ZLjava/lang/String;)V
 
-    .line 394
+    .line 378
     invoke-interface {p1}, Landroidx/camera/core/impl/CameraInternal;->getCameraInfo()Landroidx/camera/core/CameraInfo;
 
     move-result-object v2
@@ -390,10 +390,10 @@
 
     int-to-float v2, v2
 
-    .line 393
+    .line 377
     invoke-static {p0, v2, v1, v1}, Landroidx/camera/core/impl/utils/MatrixExt;->preRotate([FFFF)V
 
-    .line 399
+    .line 383
     invoke-interface {p1}, Landroidx/camera/core/impl/CameraInternal;->isFrontFacing()Z
 
     move-result p1
@@ -404,15 +404,15 @@
 
     const/4 v1, 0x0
 
-    .line 400
+    .line 384
     invoke-static {p0, v0, p1, v1, v1}, Landroid/opengl/Matrix;->translateM([FIFFF)V
 
     const/high16 v1, -0x40800000    # -1.0f
 
-    .line 401
+    .line 385
     invoke-static {p0, v0, v1, p1, p1}, Landroid/opengl/Matrix;->scaleM([FIFFF)V
 
-    .line 406
+    .line 390
     :cond_0
     invoke-static {p0, v0, p0, v0}, Landroid/opengl/Matrix;->invertM([FI[FI)Z
 
@@ -424,12 +424,12 @@
 .method public close()V
     .locals 2
 
-    .line 240
+    .line 226
     iget-object v0, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 241
+    .line 227
     :try_start_0
     iget-boolean v1, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mIsClosed:Z
 
@@ -437,51 +437,51 @@
 
     const/4 v1, 0x1
 
-    .line 242
+    .line 228
     iput-boolean v1, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mIsClosed:Z
 
-    .line 244
+    .line 230
     :cond_0
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 245
-    iget-object v0, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mCloseFutureCompleter:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
+    .line 231
+    iget-object p0, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mCloseFutureCompleter:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1}, Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;->set(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v0}, Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;->set(Ljava/lang/Object;)Z
 
     return-void
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
-    .line 244
+    .line 230
     :try_start_1
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw v1
+    throw p0
 .end method
 
 .method public getCamera()Landroidx/camera/core/impl/CameraInternal;
-    .locals 1
+    .locals 0
 
-    .line 229
-    iget-object v0, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mCameraInputInfo:Landroidx/camera/core/SurfaceOutput$CameraInputInfo;
+    .line 215
+    iget-object p0, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mCameraInputInfo:Landroidx/camera/core/SurfaceOutput$CameraInputInfo;
 
-    invoke-virtual {v0}, Landroidx/camera/core/SurfaceOutput$CameraInputInfo;->getCameraInternal()Landroidx/camera/core/impl/CameraInternal;
+    invoke-virtual {p0}, Landroidx/camera/core/SurfaceOutput$CameraInputInfo;->getCameraInternal()Landroidx/camera/core/impl/CameraInternal;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getCloseFuture()Lcom/google/common/util/concurrent/ListenableFuture;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -491,80 +491,80 @@
         }
     .end annotation
 
-    .line 263
-    iget-object v0, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mCloseFuture:Lcom/google/common/util/concurrent/ListenableFuture;
+    .line 248
+    iget-object p0, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mCloseFuture:Lcom/google/common/util/concurrent/ListenableFuture;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getFormat()I
-    .locals 1
+    .locals 0
 
-    .line 194
-    iget v0, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mFormat:I
+    .line 182
+    iget p0, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mFormat:I
 
-    return v0
+    return p0
 .end method
 
 .method public getInputCropRect()Landroid/graphics/Rect;
-    .locals 1
+    .locals 0
 
-    .line 208
-    iget-object v0, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mCameraInputInfo:Landroidx/camera/core/SurfaceOutput$CameraInputInfo;
+    .line 195
+    iget-object p0, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mCameraInputInfo:Landroidx/camera/core/SurfaceOutput$CameraInputInfo;
 
-    invoke-virtual {v0}, Landroidx/camera/core/SurfaceOutput$CameraInputInfo;->getInputCropRect()Landroid/graphics/Rect;
+    invoke-virtual {p0}, Landroidx/camera/core/SurfaceOutput$CameraInputInfo;->getInputCropRect()Landroid/graphics/Rect;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getInputSize()Landroid/util/Size;
-    .locals 1
+    .locals 0
 
-    .line 213
-    iget-object v0, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mCameraInputInfo:Landroidx/camera/core/SurfaceOutput$CameraInputInfo;
+    .line 200
+    iget-object p0, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mCameraInputInfo:Landroidx/camera/core/SurfaceOutput$CameraInputInfo;
 
-    invoke-virtual {v0}, Landroidx/camera/core/SurfaceOutput$CameraInputInfo;->getInputSize()Landroid/util/Size;
+    invoke-virtual {p0}, Landroidx/camera/core/SurfaceOutput$CameraInputInfo;->getInputSize()Landroid/util/Size;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getRotationDegrees()I
-    .locals 1
+    .locals 0
 
-    .line 218
-    iget-object v0, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mCameraInputInfo:Landroidx/camera/core/SurfaceOutput$CameraInputInfo;
+    .line 205
+    iget-object p0, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mCameraInputInfo:Landroidx/camera/core/SurfaceOutput$CameraInputInfo;
 
-    invoke-virtual {v0}, Landroidx/camera/core/SurfaceOutput$CameraInputInfo;->getRotationDegrees()I
+    invoke-virtual {p0}, Landroidx/camera/core/SurfaceOutput$CameraInputInfo;->getRotationDegrees()I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public getSensorToBufferTransform()Landroid/graphics/Matrix;
-    .locals 2
+    .locals 1
 
-    .line 293
+    .line 277
     new-instance v0, Landroid/graphics/Matrix;
 
-    iget-object v1, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mSensorToBufferTransform:Landroid/graphics/Matrix;
+    iget-object p0, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mSensorToBufferTransform:Landroid/graphics/Matrix;
 
-    invoke-direct {v0, v1}, Landroid/graphics/Matrix;-><init>(Landroid/graphics/Matrix;)V
+    invoke-direct {v0, p0}, Landroid/graphics/Matrix;-><init>(Landroid/graphics/Matrix;)V
 
     return-object v0
 .end method
 
 .method public getSize()Landroid/util/Size;
-    .locals 1
+    .locals 0
 
-    .line 203
-    iget-object v0, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mSize:Landroid/util/Size;
+    .line 190
+    iget-object p0, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mSize:Landroid/util/Size;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getSurface(Ljava/util/concurrent/Executor;Landroidx/core/util/Consumer;)Landroid/view/Surface;
@@ -580,96 +580,96 @@
         }
     .end annotation
 
-    .line 142
+    .line 130
     iget-object v0, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 143
+    .line 131
     :try_start_0
     iput-object p1, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mExecutor:Ljava/util/concurrent/Executor;
 
-    .line 144
+    .line 132
     iput-object p2, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mEventListener:Landroidx/core/util/Consumer;
 
-    .line 145
+    .line 133
     iget-boolean p1, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mHasPendingCloseRequest:Z
 
-    .line 146
+    .line 134
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eqz p1, :cond_0
 
-    .line 148
+    .line 136
     invoke-virtual {p0}, Landroidx/camera/core/processing/SurfaceOutputImpl;->requestClose()V
 
-    .line 150
+    .line 138
     :cond_0
-    iget-object p1, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mSurface:Landroid/view/Surface;
+    iget-object p0, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mSurface:Landroid/view/Surface;
 
-    return-object p1
+    return-object p0
 
     :catchall_0
-    move-exception p1
+    move-exception p0
 
-    .line 146
+    .line 134
     :try_start_1
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw p1
+    throw p0
 .end method
 
 .method public getTargets()I
-    .locals 1
+    .locals 0
 
-    .line 188
-    iget v0, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mTargets:I
+    .line 176
+    iget p0, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mTargets:I
 
-    return v0
+    return p0
 .end method
 
 .method public isClosed()Z
-    .locals 2
+    .locals 1
 
-    .line 253
+    .line 239
     iget-object v0, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 254
+    .line 240
     :try_start_0
-    iget-boolean v1, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mIsClosed:Z
+    iget-boolean p0, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mIsClosed:Z
 
     monitor-exit v0
 
-    return v1
+    return p0
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
-    .line 255
+    .line 241
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v1
+    throw p0
 .end method
 
 .method public isMirroring()Z
-    .locals 1
+    .locals 0
 
-    .line 223
-    iget-object v0, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mCameraInputInfo:Landroidx/camera/core/SurfaceOutput$CameraInputInfo;
+    .line 210
+    iget-object p0, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mCameraInputInfo:Landroidx/camera/core/SurfaceOutput$CameraInputInfo;
 
-    invoke-virtual {v0}, Landroidx/camera/core/SurfaceOutput$CameraInputInfo;->getMirroring()Z
+    invoke-virtual {p0}, Landroidx/camera/core/SurfaceOutput$CameraInputInfo;->getMirroring()Z
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method synthetic lambda$new$0$androidx-camera-core-processing-SurfaceOutputImpl(Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;)Ljava/lang/Object;
@@ -680,19 +680,19 @@
         }
     .end annotation
 
-    .line 129
+    .line 118
     iput-object p1, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mCloseFutureCompleter:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
 
-    .line 130
-    const-string p1, "SurfaceOutputImpl close future complete"
+    .line 119
+    const-string p0, "SurfaceOutputImpl close future complete"
 
-    return-object p1
+    return-object p0
 .end method
 
 .method synthetic lambda$requestClose$1$androidx-camera-core-processing-SurfaceOutputImpl(Ljava/util/concurrent/atomic/AtomicReference;)V
     .locals 1
 
-    .line 172
+    .line 160
     invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object p1
@@ -701,13 +701,13 @@
 
     const/4 v0, 0x0
 
-    .line 173
+    .line 161
     invoke-static {v0, p0}, Landroidx/camera/core/SurfaceOutput$Event;->of(ILandroidx/camera/core/SurfaceOutput;)Landroidx/camera/core/SurfaceOutput$Event;
 
-    move-result-object v0
+    move-result-object p0
 
-    .line 172
-    invoke-interface {p1, v0}, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V
+    .line 160
+    invoke-interface {p1, p0}, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -715,17 +715,17 @@
 .method public requestClose()V
     .locals 4
 
-    .line 157
+    .line 145
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    .line 159
+    .line 147
     iget-object v1, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 160
+    .line 148
     :try_start_0
     iget-object v2, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mExecutor:Ljava/util/concurrent/Executor;
 
@@ -737,21 +737,21 @@
 
     goto :goto_0
 
-    .line 164
+    .line 152
     :cond_0
     iget-boolean v3, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mIsClosed:Z
 
     if-nez v3, :cond_2
 
-    .line 165
+    .line 153
     invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 166
+    .line 154
     iget-object v2, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mExecutor:Ljava/util/concurrent/Executor;
 
     const/4 v3, 0x0
 
-    .line 167
+    .line 155
     iput-boolean v3, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mHasPendingCloseRequest:Z
 
     goto :goto_1
@@ -760,13 +760,13 @@
     :goto_0
     const/4 v2, 0x1
 
-    .line 163
+    .line 151
     iput-boolean v2, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mHasPendingCloseRequest:Z
 
     :cond_2
     const/4 v2, 0x0
 
-    .line 169
+    .line 157
     :goto_1
     monitor-exit v1
     :try_end_0
@@ -774,7 +774,7 @@
 
     if-eqz v2, :cond_3
 
-    .line 172
+    .line 160
     :try_start_1
     new-instance v1, Landroidx/camera/core/processing/SurfaceOutputImpl$$ExternalSyntheticLambda1;
 
@@ -787,28 +787,28 @@
     return-void
 
     :catch_0
-    move-exception v0
+    move-exception p0
 
-    .line 178
-    const-string v1, "SurfaceOutputImpl"
+    .line 166
+    const-string v0, "SurfaceOutputImpl"
 
-    const-string v2, "Processor executor closed. Close request not posted."
+    const-string v1, "Processor executor closed. Close request not posted."
 
-    invoke-static {v1, v2, v0}, Landroidx/camera/core/Logger;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, v1, p0}, Landroidx/camera/core/Logger;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_3
     return-void
 
     :catchall_0
-    move-exception v0
+    move-exception p0
 
-    .line 169
+    .line 157
     :try_start_2
     monitor-exit v1
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    throw v0
+    throw p0
 .end method
 
 .method public updateTransformMatrix([F[F)V
@@ -816,7 +816,7 @@
 
     const/4 v0, 0x1
 
-    .line 272
+    .line 257
     invoke-virtual {p0, p1, p2, v0}, Landroidx/camera/core/processing/SurfaceOutputImpl;->updateTransformMatrix([F[FZ)V
 
     return-void
@@ -827,16 +827,16 @@
 
     if-eqz p3, :cond_0
 
-    .line 284
-    iget-object p3, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mAdditionalTransform:[F
+    .line 269
+    iget-object p0, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mAdditionalTransform:[F
 
     goto :goto_0
 
     :cond_0
-    iget-object p3, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mSecondaryAdditionalTransform:[F
+    iget-object p0, p0, Landroidx/camera/core/processing/SurfaceOutputImpl;->mSecondaryAdditionalTransform:[F
 
     :goto_0
-    move-object v4, p3
+    move-object v4, p0
 
     const/4 v5, 0x0
 
@@ -848,7 +848,7 @@
 
     move-object v2, p2
 
-    .line 283
+    .line 268
     invoke-static/range {v0 .. v5}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
 
     return-void

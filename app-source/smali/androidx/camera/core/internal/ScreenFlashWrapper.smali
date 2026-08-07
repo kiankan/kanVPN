@@ -15,17 +15,18 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000,\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\t\n\u0002\u0008\u0008\u0018\u0000 \u00142\u00020\u0001:\u0001\u0014B\u0011\u0008\u0002\u0012\u0008\u0010\u0002\u001a\u0004\u0018\u00010\u0001\u00a2\u0006\u0002\u0010\u0003J\u0018\u0010\n\u001a\u00020\u000b2\u0006\u0010\u000c\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\tH\u0016J\u0008\u0010\u000f\u001a\u00020\u000bH\u0016J\u0008\u0010\u0010\u001a\u00020\u000bH\u0002J\u0008\u0010\u0011\u001a\u00020\u000bH\u0002J\u0006\u0010\u0012\u001a\u00020\u000bJ\u0008\u0010\u0013\u001a\u0004\u0018\u00010\u0001R\u0012\u0010\u0004\u001a\u00020\u00058\u0002@\u0002X\u0083\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u0008\u001a\u0004\u0018\u00010\t8\u0002@\u0002X\u0083\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0002\u001a\u0004\u0018\u00010\u0001X\u0082\u0004\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u0015"
+        "\u0000,\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\t\n\u0002\u0008\u0008\u0008\u0000\u0018\u0000 \u00152\u00020\u0001:\u0001\u0015B\u0013\u0008\u0002\u0012\u0008\u0010\u0002\u001a\u0004\u0018\u00010\u0001\u00a2\u0006\u0004\u0008\u0003\u0010\u0004J\u0018\u0010\u000b\u001a\u00020\u000c2\u0006\u0010\r\u001a\u00020\u000e2\u0006\u0010\u000f\u001a\u00020\nH\u0016J\u0008\u0010\u0010\u001a\u00020\u000cH\u0016J\u0008\u0010\u0011\u001a\u0004\u0018\u00010\u0001J\u0008\u0010\u0012\u001a\u00020\u000cH\u0002J\u0008\u0010\u0013\u001a\u00020\u000cH\u0002J\u0006\u0010\u0014\u001a\u00020\u000cR\u0010\u0010\u0002\u001a\u0004\u0018\u00010\u0001X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0012\u0010\u0007\u001a\u00020\u00088\u0002@\u0002X\u0083\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010\t\u001a\u0004\u0018\u00010\n8\u0002@\u0002X\u0083\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u0016"
     }
     d2 = {
         "Landroidx/camera/core/internal/ScreenFlashWrapper;",
         "Landroidx/camera/core/ImageCapture$ScreenFlash;",
         "screenFlash",
+        "<init>",
         "(Landroidx/camera/core/ImageCapture$ScreenFlash;)V",
+        "lock",
+        "",
         "isClearScreenFlashPending",
         "",
-        "lock",
-        "Ljava/lang/Object;",
         "pendingListener",
         "Landroidx/camera/core/ImageCapture$ScreenFlashListener;",
         "apply",
@@ -34,17 +35,17 @@
         "",
         "screenFlashListener",
         "clear",
-        "completePendingScreenFlashClear",
-        "completePendingScreenFlashListener",
-        "completePendingTasks",
         "getBaseScreenFlash",
+        "completePendingScreenFlashListener",
+        "completePendingScreenFlashClear",
+        "completePendingTasks",
         "Companion",
-        "camera-core_release"
+        "camera-core"
     }
     k = 0x1
     mv = {
+        0x2,
         0x1,
-        0x8,
         0x0
     }
     xi = 0x30
@@ -68,14 +69,6 @@
 
 
 # direct methods
-.method public static synthetic $r8$lambda$t_o_lKGGIvRKmzNXRdv2XQWSBSA(Landroidx/camera/core/internal/ScreenFlashWrapper;)V
-    .locals 0
-
-    invoke-static {p0}, Landroidx/camera/core/internal/ScreenFlashWrapper;->apply$lambda$2(Landroidx/camera/core/internal/ScreenFlashWrapper;)V
-
-    return-void
-.end method
-
 .method static constructor <clinit>()V
     .locals 2
 
@@ -98,7 +91,7 @@
 
     iput-object p1, p0, Landroidx/camera/core/internal/ScreenFlashWrapper;->screenFlash:Landroidx/camera/core/ImageCapture$ScreenFlash;
 
-    .line 31
+    .line 32
     new-instance p1, Ljava/lang/Object;
 
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
@@ -116,41 +109,37 @@
     return-void
 .end method
 
-.method private static final apply$lambda$2(Landroidx/camera/core/internal/ScreenFlashWrapper;)V
+.method static final apply$lambda$1(Landroidx/camera/core/internal/ScreenFlashWrapper;)V
     .locals 3
 
-    const-string v0, "this$0"
-
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 49
+    .line 50
     iget-object v0, p0, Landroidx/camera/core/internal/ScreenFlashWrapper;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 50
+    .line 51
     :try_start_0
     iget-object v1, p0, Landroidx/camera/core/internal/ScreenFlashWrapper;->pendingListener:Landroidx/camera/core/ImageCapture$ScreenFlashListener;
 
     if-nez v1, :cond_0
 
-    .line 51
+    .line 52
     const-string v1, "ScreenFlashWrapper"
 
     const-string v2, "apply: pendingListener is null!"
 
     invoke-static {v1, v2}, Landroidx/camera/core/Logger;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 53
+    .line 54
     :cond_0
     invoke-direct {p0}, Landroidx/camera/core/internal/ScreenFlashWrapper;->completePendingScreenFlashListener()V
 
-    .line 54
+    .line 55
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 49
+    .line 50
     monitor-exit v0
 
     return-void
@@ -166,49 +155,42 @@
 .method private final completePendingScreenFlashClear()V
     .locals 3
 
-    .line 80
+    .line 81
     iget-object v0, p0, Landroidx/camera/core/internal/ScreenFlashWrapper;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 81
+    .line 82
     :try_start_0
     iget-boolean v1, p0, Landroidx/camera/core/internal/ScreenFlashWrapper;->isClearScreenFlashPending:Z
 
     if-eqz v1, :cond_1
 
-    .line 82
+    .line 83
     iget-object v1, p0, Landroidx/camera/core/internal/ScreenFlashWrapper;->screenFlash:Landroidx/camera/core/ImageCapture$ScreenFlash;
 
     if-eqz v1, :cond_0
 
     invoke-interface {v1}, Landroidx/camera/core/ImageCapture$ScreenFlash;->clear()V
 
-    sget-object v1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
-
     goto :goto_0
 
+    .line 84
     :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    if-nez v1, :cond_2
-
-    .line 83
     move-object v1, p0
 
     check-cast v1, Landroidx/camera/core/internal/ScreenFlashWrapper;
 
-    .line 84
+    .line 85
     const-string v1, "ScreenFlashWrapper"
 
     const-string v2, "completePendingScreenFlashClear: screenFlash is null!"
 
     invoke-static {v1, v2}, Landroidx/camera/core/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_1
+    goto :goto_0
 
-    .line 87
+    .line 88
     :cond_1
     const-string v1, "ScreenFlashWrapper"
 
@@ -216,40 +198,39 @@
 
     invoke-static {v1, v2}, Landroidx/camera/core/Logger;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_2
-    :goto_1
+    :goto_0
     const/4 v1, 0x0
 
-    .line 89
+    .line 90
     iput-boolean v1, p0, Landroidx/camera/core/internal/ScreenFlashWrapper;->isClearScreenFlashPending:Z
 
-    .line 90
-    sget-object v1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    .line 91
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 80
+    .line 81
     monitor-exit v0
 
     return-void
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
     monitor-exit v0
 
-    throw v1
+    throw p0
 .end method
 
 .method private final completePendingScreenFlashListener()V
     .locals 2
 
-    .line 72
+    .line 73
     iget-object v0, p0, Landroidx/camera/core/internal/ScreenFlashWrapper;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 73
+    .line 74
     :try_start_0
     iget-object v1, p0, Landroidx/camera/core/internal/ScreenFlashWrapper;->pendingListener:Landroidx/camera/core/ImageCapture$ScreenFlashListener;
 
@@ -260,25 +241,25 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 74
+    .line 75
     iput-object v1, p0, Landroidx/camera/core/internal/ScreenFlashWrapper;->pendingListener:Landroidx/camera/core/ImageCapture$ScreenFlashListener;
 
-    .line 75
-    sget-object v1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    .line 76
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 72
+    .line 73
     monitor-exit v0
 
     return-void
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
     monitor-exit v0
 
-    throw v1
+    throw p0
 .end method
 
 .method public static final from(Landroidx/camera/core/ImageCapture$ScreenFlash;)Landroidx/camera/core/internal/ScreenFlashWrapper;
@@ -300,33 +281,33 @@
 .method public apply(JLandroidx/camera/core/ImageCapture$ScreenFlashListener;)V
     .locals 2
 
-    const-string v0, "screenFlashListener"
+    const-string/jumbo v0, "screenFlashListener"
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 43
+    .line 44
     iget-object v0, p0, Landroidx/camera/core/internal/ScreenFlashWrapper;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
     const/4 v1, 0x1
 
-    .line 44
+    .line 45
     :try_start_0
     iput-boolean v1, p0, Landroidx/camera/core/internal/ScreenFlashWrapper;->isClearScreenFlashPending:Z
 
-    .line 45
+    .line 46
     iput-object p3, p0, Landroidx/camera/core/internal/ScreenFlashWrapper;->pendingListener:Landroidx/camera/core/ImageCapture$ScreenFlashListener;
 
-    .line 46
+    .line 47
     sget-object p3, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 43
+    .line 44
     monitor-exit v0
 
-    .line 48
+    .line 49
     iget-object p3, p0, Landroidx/camera/core/internal/ScreenFlashWrapper;->screenFlash:Landroidx/camera/core/ImageCapture$ScreenFlash;
 
     if-eqz p3, :cond_0
@@ -337,47 +318,39 @@
 
     invoke-interface {p3, p1, p2, v0}, Landroidx/camera/core/ImageCapture$ScreenFlash;->apply(JLandroidx/camera/core/ImageCapture$ScreenFlashListener;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    return-void
 
-    goto :goto_0
-
+    .line 57
     :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    if-nez p1, :cond_1
-
-    .line 56
     move-object p1, p0
 
     check-cast p1, Landroidx/camera/core/internal/ScreenFlashWrapper;
 
-    .line 57
+    .line 58
     const-string p1, "ScreenFlashWrapper"
 
     const-string p2, "apply: screenFlash is null!"
 
     invoke-static {p1, p2}, Landroidx/camera/core/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 59
+    .line 60
     invoke-direct {p0}, Landroidx/camera/core/internal/ScreenFlashWrapper;->completePendingScreenFlashListener()V
 
-    :cond_1
     return-void
 
     :catchall_0
-    move-exception p1
+    move-exception p0
 
-    .line 43
+    .line 44
     monitor-exit v0
 
-    throw p1
+    throw p0
 .end method
 
 .method public clear()V
     .locals 0
 
-    .line 64
+    .line 65
     invoke-direct {p0}, Landroidx/camera/core/internal/ScreenFlashWrapper;->completePendingScreenFlashClear()V
 
     return-void
@@ -386,20 +359,20 @@
 .method public final completePendingTasks()V
     .locals 0
 
-    .line 95
+    .line 96
     invoke-direct {p0}, Landroidx/camera/core/internal/ScreenFlashWrapper;->completePendingScreenFlashListener()V
 
-    .line 96
+    .line 97
     invoke-direct {p0}, Landroidx/camera/core/internal/ScreenFlashWrapper;->completePendingScreenFlashClear()V
 
     return-void
 .end method
 
 .method public final getBaseScreenFlash()Landroidx/camera/core/ImageCapture$ScreenFlash;
-    .locals 1
+    .locals 0
 
-    .line 68
-    iget-object v0, p0, Landroidx/camera/core/internal/ScreenFlashWrapper;->screenFlash:Landroidx/camera/core/ImageCapture$ScreenFlash;
+    .line 69
+    iget-object p0, p0, Landroidx/camera/core/internal/ScreenFlashWrapper;->screenFlash:Landroidx/camera/core/ImageCapture$ScreenFlash;
 
-    return-object v0
+    return-object p0
 .end method

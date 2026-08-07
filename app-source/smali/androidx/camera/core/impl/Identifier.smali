@@ -16,7 +16,7 @@
 .method public static create(Ljava/lang/Object;)Landroidx/camera/core/impl/Identifier;
     .locals 1
 
-    .line 35
+    .line 34
     new-instance v0, Landroidx/camera/core/impl/AutoValue_Identifier;
 
     invoke-direct {v0, p0}, Landroidx/camera/core/impl/AutoValue_Identifier;-><init>(Ljava/lang/Object;)V

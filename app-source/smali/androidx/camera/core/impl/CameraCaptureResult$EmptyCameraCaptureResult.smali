@@ -21,7 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 94
+    .line 86
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +30,7 @@
 .method public static create()Landroidx/camera/core/impl/CameraCaptureResult;
     .locals 1
 
-    .line 98
+    .line 89
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureResult$EmptyCameraCaptureResult;
 
     invoke-direct {v0}, Landroidx/camera/core/impl/CameraCaptureResult$EmptyCameraCaptureResult;-><init>()V
@@ -41,85 +41,85 @@
 
 # virtual methods
 .method public getAeMode()Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;
-    .locals 1
+    .locals 0
 
-    .line 134
-    sget-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;->UNKNOWN:Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;
+    .line 119
+    sget-object p0, Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;->UNKNOWN:Landroidx/camera/core/impl/CameraCaptureMetaData$AeMode;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getAeState()Landroidx/camera/core/impl/CameraCaptureMetaData$AeState;
-    .locals 1
+    .locals 0
 
-    .line 116
-    sget-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AeState;->UNKNOWN:Landroidx/camera/core/impl/CameraCaptureMetaData$AeState;
+    .line 104
+    sget-object p0, Landroidx/camera/core/impl/CameraCaptureMetaData$AeState;->UNKNOWN:Landroidx/camera/core/impl/CameraCaptureMetaData$AeState;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getAfMode()Landroidx/camera/core/impl/CameraCaptureMetaData$AfMode;
-    .locals 1
+    .locals 0
 
-    .line 104
-    sget-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AfMode;->UNKNOWN:Landroidx/camera/core/impl/CameraCaptureMetaData$AfMode;
+    .line 94
+    sget-object p0, Landroidx/camera/core/impl/CameraCaptureMetaData$AfMode;->UNKNOWN:Landroidx/camera/core/impl/CameraCaptureMetaData$AfMode;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getAfState()Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
-    .locals 1
+    .locals 0
 
-    .line 110
-    sget-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;->UNKNOWN:Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
+    .line 99
+    sget-object p0, Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;->UNKNOWN:Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getAwbMode()Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;
-    .locals 1
+    .locals 0
 
-    .line 140
-    sget-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;->UNKNOWN:Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;
+    .line 124
+    sget-object p0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;->UNKNOWN:Landroidx/camera/core/impl/CameraCaptureMetaData$AwbMode;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getAwbState()Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;
-    .locals 1
+    .locals 0
 
-    .line 122
-    sget-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;->UNKNOWN:Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;
+    .line 109
+    sget-object p0, Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;->UNKNOWN:Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getCaptureResult()Landroid/hardware/camera2/CaptureResult;
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getFlashState()Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;
-    .locals 1
+    .locals 0
 
-    .line 128
-    sget-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;->UNKNOWN:Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;
+    .line 114
+    sget-object p0, Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;->UNKNOWN:Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getTagBundle()Landroidx/camera/core/impl/TagBundle;
-    .locals 1
+    .locals 0
 
-    .line 151
+    .line 134
     invoke-static {}, Landroidx/camera/core/impl/TagBundle;->emptyBundle()Landroidx/camera/core/impl/TagBundle;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getTimestamp()J

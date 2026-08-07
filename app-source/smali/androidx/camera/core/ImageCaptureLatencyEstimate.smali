@@ -23,7 +23,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 42
+    .line 41
     new-instance v0, Landroidx/camera/core/ImageCaptureLatencyEstimate;
 
     const-wide/16 v1, -0x1
@@ -38,16 +38,16 @@
 .method public constructor <init>(JJ)V
     .locals 0
 
-    .line 62
+    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 63
+    .line 62
     iput-wide p1, p0, Landroidx/camera/core/ImageCaptureLatencyEstimate;->mCaptureLatencyMillis:J
 
-    .line 64
+    .line 63
     iput-wide p3, p0, Landroidx/camera/core/ImageCaptureLatencyEstimate;->mProcessingLatencyMillis:J
 
-    .line 65
+    .line 64
     invoke-direct {p0, p1, p2, p3, p4}, Landroidx/camera/core/ImageCaptureLatencyEstimate;->computeTotalCaptureLatencyMillis(JJ)J
 
     move-result-wide p1
@@ -58,17 +58,17 @@
 .end method
 
 .method private computeTotalCaptureLatencyMillis(JJ)J
-    .locals 3
+    .locals 2
 
     const-wide/16 v0, -0x1
 
-    cmp-long v2, p1, v0
+    cmp-long p0, p1, v0
 
-    if-eqz v2, :cond_1
+    if-eqz p0, :cond_1
 
-    cmp-long v2, p3, v0
+    cmp-long p0, p3, v0
 
-    if-nez v2, :cond_0
+    if-nez p0, :cond_0
 
     goto :goto_0
 
@@ -93,7 +93,7 @@
 
     return v0
 
-    .line 101
+    .line 100
     :cond_0
     instance-of v1, p1, Landroidx/camera/core/ImageCaptureLatencyEstimate;
 
@@ -103,11 +103,11 @@
 
     return v2
 
-    .line 102
+    .line 101
     :cond_1
     check-cast p1, Landroidx/camera/core/ImageCaptureLatencyEstimate;
 
-    .line 103
+    .line 102
     iget-wide v3, p0, Landroidx/camera/core/ImageCaptureLatencyEstimate;->mCaptureLatencyMillis:J
 
     invoke-virtual {p1}, Landroidx/camera/core/ImageCaptureLatencyEstimate;->getCaptureLatencyMillis()J
@@ -120,7 +120,7 @@
 
     iget-wide v3, p0, Landroidx/camera/core/ImageCaptureLatencyEstimate;->mProcessingLatencyMillis:J
 
-    .line 104
+    .line 103
     invoke-virtual {p1}, Landroidx/camera/core/ImageCaptureLatencyEstimate;->getProcessingLatencyMillis()J
 
     move-result-wide v5
@@ -131,14 +131,14 @@
 
     iget-wide v3, p0, Landroidx/camera/core/ImageCaptureLatencyEstimate;->mTotalCaptureLatencyMillis:J
 
-    .line 105
+    .line 104
     invoke-virtual {p1}, Landroidx/camera/core/ImageCaptureLatencyEstimate;->getTotalCaptureLatencyMillis()J
 
-    move-result-wide v5
+    move-result-wide p0
 
-    cmp-long p1, v3, v5
+    cmp-long p0, v3, p0
 
-    if-nez p1, :cond_2
+    if-nez p0, :cond_2
 
     return v0
 
@@ -149,7 +149,7 @@
 .method public getCaptureLatencyMillis()J
     .locals 2
 
-    .line 75
+    .line 74
     iget-wide v0, p0, Landroidx/camera/core/ImageCaptureLatencyEstimate;->mCaptureLatencyMillis:J
 
     return-wide v0
@@ -158,7 +158,7 @@
 .method public getProcessingLatencyMillis()J
     .locals 2
 
-    .line 84
+    .line 83
     iget-wide v0, p0, Landroidx/camera/core/ImageCaptureLatencyEstimate;->mProcessingLatencyMillis:J
 
     return-wide v0
@@ -167,7 +167,7 @@
 .method public getTotalCaptureLatencyMillis()J
     .locals 2
 
-    .line 95
+    .line 94
     iget-wide v0, p0, Landroidx/camera/core/ImageCaptureLatencyEstimate;->mTotalCaptureLatencyMillis:J
 
     return-wide v0
@@ -176,7 +176,7 @@
 .method public hashCode()I
     .locals 4
 
-    .line 110
+    .line 109
     iget-wide v0, p0, Landroidx/camera/core/ImageCaptureLatencyEstimate;->mCaptureLatencyMillis:J
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -191,27 +191,27 @@
 
     iget-wide v2, p0, Landroidx/camera/core/ImageCaptureLatencyEstimate;->mTotalCaptureLatencyMillis:J
 
-    .line 111
+    .line 110
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v2
+    move-result-object p0
 
-    filled-new-array {v0, v1, v2}, [Ljava/lang/Object;
+    filled-new-array {v0, v1, p0}, [Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    .line 110
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+    .line 109
+    invoke-static {p0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 117
+    .line 115
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "captureLatencyMillis="
@@ -240,7 +240,7 @@
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

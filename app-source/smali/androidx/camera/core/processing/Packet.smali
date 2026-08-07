@@ -18,7 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 60
+    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,12 +42,12 @@
         }
     .end annotation
 
-    .line 146
+    .line 140
     new-instance v0, Landroidx/camera/core/processing/AutoValue_Packet;
 
     new-instance v4, Landroid/util/Size;
 
-    .line 147
+    .line 141
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v1
@@ -95,7 +95,7 @@
         }
     .end annotation
 
-    .line 158
+    .line 151
     new-instance v2, Landroid/util/Size;
 
     invoke-interface {p0}, Landroidx/camera/core/ImageProxy;->getWidth()I
@@ -146,7 +146,7 @@
         }
     .end annotation
 
-    .line 174
+    .line 166
     invoke-interface {p0}, Landroidx/camera/core/ImageProxy;->getFormat()I
 
     move-result v0
@@ -157,12 +157,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 175
+    .line 167
     const-string v0, "JPEG image must have Exif."
 
     invoke-static {p1, v0}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 177
+    .line 169
     :cond_0
     new-instance v1, Landroidx/camera/core/processing/AutoValue_Packet;
 
@@ -207,7 +207,7 @@
         }
     .end annotation
 
-    .line 189
+    .line 180
     new-instance v0, Landroidx/camera/core/processing/AutoValue_Packet;
 
     move-object v1, p0
@@ -263,20 +263,20 @@
 .end method
 
 .method public hasCropping()Z
-    .locals 2
+    .locals 1
 
-    .line 136
+    .line 131
     invoke-virtual {p0}, Landroidx/camera/core/processing/Packet;->getCropRect()Landroid/graphics/Rect;
 
     move-result-object v0
 
     invoke-virtual {p0}, Landroidx/camera/core/processing/Packet;->getSize()Landroid/util/Size;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-static {v0, v1}, Landroidx/camera/core/impl/utils/TransformUtils;->hasCropping(Landroid/graphics/Rect;Landroid/util/Size;)Z
+    invoke-static {v0, p0}, Landroidx/camera/core/impl/utils/TransformUtils;->hasCropping(Landroid/graphics/Rect;Landroid/util/Size;)Z
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method

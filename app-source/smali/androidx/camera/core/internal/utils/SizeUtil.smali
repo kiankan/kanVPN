@@ -8,11 +8,15 @@
 
 .field public static final RESOLUTION_1440P:Landroid/util/Size;
 
+.field public static final RESOLUTION_1440P_16_9:Landroid/util/Size;
+
 .field public static final RESOLUTION_480P:Landroid/util/Size;
 
 .field public static final RESOLUTION_720P:Landroid/util/Size;
 
 .field public static final RESOLUTION_QVGA:Landroid/util/Size;
+
+.field public static final RESOLUTION_UHD:Landroid/util/Size;
 
 .field public static final RESOLUTION_VGA:Landroid/util/Size;
 
@@ -23,7 +27,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 34
+    .line 35
     new-instance v0, Landroid/util/Size;
 
     const/4 v1, 0x0
@@ -32,7 +36,7 @@
 
     sput-object v0, Landroidx/camera/core/internal/utils/SizeUtil;->RESOLUTION_ZERO:Landroid/util/Size;
 
-    .line 35
+    .line 36
     new-instance v0, Landroid/util/Size;
 
     const/16 v1, 0x140
@@ -43,7 +47,7 @@
 
     sput-object v0, Landroidx/camera/core/internal/utils/SizeUtil;->RESOLUTION_QVGA:Landroid/util/Size;
 
-    .line 36
+    .line 37
     new-instance v0, Landroid/util/Size;
 
     const/16 v1, 0x280
@@ -54,7 +58,7 @@
 
     sput-object v0, Landroidx/camera/core/internal/utils/SizeUtil;->RESOLUTION_VGA:Landroid/util/Size;
 
-    .line 37
+    .line 38
     new-instance v0, Landroid/util/Size;
 
     const/16 v1, 0x2d0
@@ -63,7 +67,7 @@
 
     sput-object v0, Landroidx/camera/core/internal/utils/SizeUtil;->RESOLUTION_480P:Landroid/util/Size;
 
-    .line 38
+    .line 39
     new-instance v0, Landroid/util/Size;
 
     const/16 v2, 0x500
@@ -72,7 +76,7 @@
 
     sput-object v0, Landroidx/camera/core/internal/utils/SizeUtil;->RESOLUTION_720P:Landroid/util/Size;
 
-    .line 39
+    .line 40
     new-instance v0, Landroid/util/Size;
 
     const/16 v1, 0x438
@@ -83,7 +87,7 @@
 
     sput-object v0, Landroidx/camera/core/internal/utils/SizeUtil;->RESOLUTION_1080P:Landroid/util/Size;
 
-    .line 40
+    .line 41
     new-instance v0, Landroid/util/Size;
 
     const/16 v1, 0x5a0
@@ -92,13 +96,33 @@
 
     sput-object v0, Landroidx/camera/core/internal/utils/SizeUtil;->RESOLUTION_1440P:Landroid/util/Size;
 
+    .line 42
+    new-instance v0, Landroid/util/Size;
+
+    const/16 v2, 0xa00
+
+    invoke-direct {v0, v2, v1}, Landroid/util/Size;-><init>(II)V
+
+    sput-object v0, Landroidx/camera/core/internal/utils/SizeUtil;->RESOLUTION_1440P_16_9:Landroid/util/Size;
+
+    .line 43
+    new-instance v0, Landroid/util/Size;
+
+    const/16 v1, 0xf00
+
+    const/16 v2, 0x870
+
+    invoke-direct {v0, v1, v2}, Landroid/util/Size;-><init>(II)V
+
+    sput-object v0, Landroidx/camera/core/internal/utils/SizeUtil;->RESOLUTION_UHD:Landroid/util/Size;
+
     return-void
 .end method
 
 .method private constructor <init>()V
     .locals 0
 
-    .line 42
+    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -118,21 +142,21 @@
         }
     .end annotation
 
-    .line 93
+    .line 94
     invoke-virtual {p1, p0}, Ljava/util/TreeMap;->ceilingEntry(Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 97
+    .line 98
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 
-    .line 101
+    .line 102
     :cond_0
     invoke-virtual {p1, p0}, Ljava/util/TreeMap;->floorEntry(Ljava/lang/Object;)Ljava/util/Map$Entry;
 
@@ -140,7 +164,7 @@
 
     if-eqz p0, :cond_1
 
-    .line 103
+    .line 104
     invoke-interface {p0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -164,7 +188,7 @@
 .method public static getArea(Landroid/util/Size;)I
     .locals 1
 
-    .line 49
+    .line 52
     invoke-virtual {p0}, Landroid/util/Size;->getWidth()I
 
     move-result v0
@@ -192,7 +216,7 @@
         }
     .end annotation
 
-    .line 82
+    .line 84
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
@@ -203,7 +227,7 @@
 
     return-object p0
 
-    .line 86
+    .line 88
     :cond_0
     new-instance v0, Landroidx/camera/core/impl/utils/CompareSizesByArea;
 
@@ -221,7 +245,7 @@
 .method public static isLongerInAnyEdge(Landroid/util/Size;Landroid/util/Size;)Z
     .locals 2
 
-    .line 72
+    .line 75
     invoke-virtual {p0}, Landroid/util/Size;->getWidth()I
 
     move-result v0
@@ -232,7 +256,7 @@
 
     if-gt v0, v1, :cond_1
 
-    .line 73
+    .line 76
     invoke-virtual {p0}, Landroid/util/Size;->getHeight()I
 
     move-result p0
@@ -260,7 +284,7 @@
 .method public static isSmallerByArea(Landroid/util/Size;Landroid/util/Size;)Z
     .locals 0
 
-    .line 64
+    .line 67
     invoke-static {p0}, Landroidx/camera/core/internal/utils/SizeUtil;->getArea(Landroid/util/Size;)I
 
     move-result p0

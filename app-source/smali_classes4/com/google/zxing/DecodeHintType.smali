@@ -89,7 +89,7 @@
 .end method
 
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 6
 
     .line 35
     new-instance v0, Lcom/google/zxing/DecodeHintType;
@@ -107,13 +107,13 @@
     .line 41
     new-instance v0, Lcom/google/zxing/DecodeHintType;
 
-    const/4 v1, 0x1
+    const-string v1, "PURE_BARCODE"
 
-    const-class v2, Ljava/lang/Void;
+    const/4 v2, 0x1
 
-    const-string v3, "PURE_BARCODE"
+    const-class v3, Ljava/lang/Void;
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/zxing/DecodeHintType;-><init>(Ljava/lang/String;ILjava/lang/Class;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/zxing/DecodeHintType;-><init>(Ljava/lang/String;ILjava/lang/Class;)V
 
     sput-object v0, Lcom/google/zxing/DecodeHintType;->PURE_BARCODE:Lcom/google/zxing/DecodeHintType;
 
@@ -124,22 +124,20 @@
 
     const-class v2, Ljava/util/List;
 
-    const-string v3, "POSSIBLE_FORMATS"
+    const-string v4, "POSSIBLE_FORMATS"
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/zxing/DecodeHintType;-><init>(Ljava/lang/String;ILjava/lang/Class;)V
+    invoke-direct {v0, v4, v1, v2}, Lcom/google/zxing/DecodeHintType;-><init>(Ljava/lang/String;ILjava/lang/Class;)V
 
     sput-object v0, Lcom/google/zxing/DecodeHintType;->POSSIBLE_FORMATS:Lcom/google/zxing/DecodeHintType;
 
     .line 53
     new-instance v0, Lcom/google/zxing/DecodeHintType;
 
-    const/4 v1, 0x3
+    const-string v1, "TRY_HARDER"
 
-    const-class v2, Ljava/lang/Void;
+    const/4 v2, 0x3
 
-    const-string v3, "TRY_HARDER"
-
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/zxing/DecodeHintType;-><init>(Ljava/lang/String;ILjava/lang/Class;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/zxing/DecodeHintType;-><init>(Ljava/lang/String;ILjava/lang/Class;)V
 
     sput-object v0, Lcom/google/zxing/DecodeHintType;->TRY_HARDER:Lcom/google/zxing/DecodeHintType;
 
@@ -150,9 +148,9 @@
 
     const-class v2, Ljava/lang/String;
 
-    const-string v3, "CHARACTER_SET"
+    const-string v4, "CHARACTER_SET"
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/zxing/DecodeHintType;-><init>(Ljava/lang/String;ILjava/lang/Class;)V
+    invoke-direct {v0, v4, v1, v2}, Lcom/google/zxing/DecodeHintType;-><init>(Ljava/lang/String;ILjava/lang/Class;)V
 
     sput-object v0, Lcom/google/zxing/DecodeHintType;->CHARACTER_SET:Lcom/google/zxing/DecodeHintType;
 
@@ -163,48 +161,42 @@
 
     const/4 v2, 0x5
 
-    const-class v3, [I
+    const-class v4, [I
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/google/zxing/DecodeHintType;-><init>(Ljava/lang/String;ILjava/lang/Class;)V
+    invoke-direct {v0, v1, v2, v4}, Lcom/google/zxing/DecodeHintType;-><init>(Ljava/lang/String;ILjava/lang/Class;)V
 
     sput-object v0, Lcom/google/zxing/DecodeHintType;->ALLOWED_LENGTHS:Lcom/google/zxing/DecodeHintType;
 
     .line 69
     new-instance v0, Lcom/google/zxing/DecodeHintType;
 
-    const/4 v1, 0x6
+    const-string v1, "ASSUME_CODE_39_CHECK_DIGIT"
 
-    const-class v2, Ljava/lang/Void;
+    const/4 v2, 0x6
 
-    const-string v4, "ASSUME_CODE_39_CHECK_DIGIT"
-
-    invoke-direct {v0, v4, v1, v2}, Lcom/google/zxing/DecodeHintType;-><init>(Ljava/lang/String;ILjava/lang/Class;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/zxing/DecodeHintType;-><init>(Ljava/lang/String;ILjava/lang/Class;)V
 
     sput-object v0, Lcom/google/zxing/DecodeHintType;->ASSUME_CODE_39_CHECK_DIGIT:Lcom/google/zxing/DecodeHintType;
 
     .line 76
     new-instance v0, Lcom/google/zxing/DecodeHintType;
 
-    const/4 v1, 0x7
+    const-string v1, "ASSUME_GS1"
 
-    const-class v2, Ljava/lang/Void;
+    const/4 v2, 0x7
 
-    const-string v4, "ASSUME_GS1"
-
-    invoke-direct {v0, v4, v1, v2}, Lcom/google/zxing/DecodeHintType;-><init>(Ljava/lang/String;ILjava/lang/Class;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/zxing/DecodeHintType;-><init>(Ljava/lang/String;ILjava/lang/Class;)V
 
     sput-object v0, Lcom/google/zxing/DecodeHintType;->ASSUME_GS1:Lcom/google/zxing/DecodeHintType;
 
     .line 83
     new-instance v0, Lcom/google/zxing/DecodeHintType;
 
-    const/16 v1, 0x8
+    const-string v1, "RETURN_CODABAR_START_END"
 
-    const-class v2, Ljava/lang/Void;
+    const/16 v2, 0x8
 
-    const-string v4, "RETURN_CODABAR_START_END"
-
-    invoke-direct {v0, v4, v1, v2}, Lcom/google/zxing/DecodeHintType;-><init>(Ljava/lang/String;ILjava/lang/Class;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/zxing/DecodeHintType;-><init>(Ljava/lang/String;ILjava/lang/Class;)V
 
     sput-object v0, Lcom/google/zxing/DecodeHintType;->RETURN_CODABAR_START_END:Lcom/google/zxing/DecodeHintType;
 
@@ -215,9 +207,9 @@
 
     const-class v2, Lcom/google/zxing/ResultPointCallback;
 
-    const-string v4, "NEED_RESULT_POINT_CALLBACK"
+    const-string v5, "NEED_RESULT_POINT_CALLBACK"
 
-    invoke-direct {v0, v4, v1, v2}, Lcom/google/zxing/DecodeHintType;-><init>(Ljava/lang/String;ILjava/lang/Class;)V
+    invoke-direct {v0, v5, v1, v2}, Lcom/google/zxing/DecodeHintType;-><init>(Ljava/lang/String;ILjava/lang/Class;)V
 
     sput-object v0, Lcom/google/zxing/DecodeHintType;->NEED_RESULT_POINT_CALLBACK:Lcom/google/zxing/DecodeHintType;
 
@@ -228,20 +220,18 @@
 
     const/16 v2, 0xa
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/google/zxing/DecodeHintType;-><init>(Ljava/lang/String;ILjava/lang/Class;)V
+    invoke-direct {v0, v1, v2, v4}, Lcom/google/zxing/DecodeHintType;-><init>(Ljava/lang/String;ILjava/lang/Class;)V
 
     sput-object v0, Lcom/google/zxing/DecodeHintType;->ALLOWED_EAN_EXTENSIONS:Lcom/google/zxing/DecodeHintType;
 
     .line 105
     new-instance v0, Lcom/google/zxing/DecodeHintType;
 
-    const/16 v1, 0xb
+    const-string v1, "ALSO_INVERTED"
 
-    const-class v2, Ljava/lang/Void;
+    const/16 v2, 0xb
 
-    const-string v3, "ALSO_INVERTED"
-
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/zxing/DecodeHintType;-><init>(Ljava/lang/String;ILjava/lang/Class;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/zxing/DecodeHintType;-><init>(Ljava/lang/String;ILjava/lang/Class;)V
 
     sput-object v0, Lcom/google/zxing/DecodeHintType;->ALSO_INVERTED:Lcom/google/zxing/DecodeHintType;
 
@@ -328,7 +318,7 @@
 
 # virtual methods
 .method public getValueType()Ljava/lang/Class;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -338,7 +328,7 @@
     .end annotation
 
     .line 125
-    iget-object v0, p0, Lcom/google/zxing/DecodeHintType;->valueType:Ljava/lang/Class;
+    iget-object p0, p0, Lcom/google/zxing/DecodeHintType;->valueType:Ljava/lang/Class;
 
-    return-object v0
+    return-object p0
 .end method

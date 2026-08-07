@@ -25,12 +25,12 @@
 
 # virtual methods
 .method public final run()V
-    .locals 1
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessorNode$$ExternalSyntheticLambda0;->f$0:Landroidx/camera/core/processing/concurrent/DualSurfaceProcessorNode;
+    iget-object p0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessorNode$$ExternalSyntheticLambda0;->f$0:Landroidx/camera/core/processing/concurrent/DualSurfaceProcessorNode;
 
-    invoke-virtual {v0}, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessorNode;->lambda$release$1$androidx-camera-core-processing-concurrent-DualSurfaceProcessorNode()V
+    invoke-virtual {p0}, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessorNode;->lambda$release$1$androidx-camera-core-processing-concurrent-DualSurfaceProcessorNode()V
 
     return-void
 .end method

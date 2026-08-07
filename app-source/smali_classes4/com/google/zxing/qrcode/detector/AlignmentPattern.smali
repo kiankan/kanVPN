@@ -72,11 +72,11 @@
     if-lez p2, :cond_1
 
     .line 43
-    iget p2, p0, Lcom/google/zxing/qrcode/detector/AlignmentPattern;->estimatedModuleSize:F
+    iget p0, p0, Lcom/google/zxing/qrcode/detector/AlignmentPattern;->estimatedModuleSize:F
 
-    cmpg-float p1, p1, p2
+    cmpg-float p0, p1, p0
 
-    if-gtz p1, :cond_0
+    if-gtz p0, :cond_0
 
     goto :goto_0
 
@@ -85,9 +85,9 @@
 
     :cond_1
     :goto_0
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_2
     return v0
@@ -117,16 +117,16 @@
     div-float/2addr v1, p2
 
     .line 55
-    iget p1, p0, Lcom/google/zxing/qrcode/detector/AlignmentPattern;->estimatedModuleSize:F
+    iget p0, p0, Lcom/google/zxing/qrcode/detector/AlignmentPattern;->estimatedModuleSize:F
 
-    add-float/2addr p1, p3
+    add-float/2addr p0, p3
 
-    div-float/2addr p1, p2
+    div-float/2addr p0, p2
 
     .line 56
-    new-instance p2, Lcom/google/zxing/qrcode/detector/AlignmentPattern;
+    new-instance p1, Lcom/google/zxing/qrcode/detector/AlignmentPattern;
 
-    invoke-direct {p2, v0, v1, p1}, Lcom/google/zxing/qrcode/detector/AlignmentPattern;-><init>(FFF)V
+    invoke-direct {p1, v0, v1, p0}, Lcom/google/zxing/qrcode/detector/AlignmentPattern;-><init>(FFF)V
 
-    return-object p2
+    return-object p1
 .end method

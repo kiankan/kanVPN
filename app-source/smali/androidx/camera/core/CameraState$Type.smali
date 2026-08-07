@@ -40,7 +40,7 @@
 .method private static synthetic $values()[Landroidx/camera/core/CameraState$Type;
     .locals 5
 
-    .line 280
+    .line 301
     sget-object v0, Landroidx/camera/core/CameraState$Type;->PENDING_OPEN:Landroidx/camera/core/CameraState$Type;
 
     sget-object v1, Landroidx/camera/core/CameraState$Type;->OPENING:Landroidx/camera/core/CameraState$Type;
@@ -61,7 +61,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 304
+    .line 325
     new-instance v0, Landroidx/camera/core/CameraState$Type;
 
     const-string v1, "PENDING_OPEN"
@@ -72,7 +72,7 @@
 
     sput-object v0, Landroidx/camera/core/CameraState$Type;->PENDING_OPEN:Landroidx/camera/core/CameraState$Type;
 
-    .line 326
+    .line 347
     new-instance v0, Landroidx/camera/core/CameraState$Type;
 
     const-string v1, "OPENING"
@@ -83,7 +83,7 @@
 
     sput-object v0, Landroidx/camera/core/CameraState$Type;->OPENING:Landroidx/camera/core/CameraState$Type;
 
-    .line 340
+    .line 361
     new-instance v0, Landroidx/camera/core/CameraState$Type;
 
     const-string v1, "OPEN"
@@ -94,7 +94,7 @@
 
     sput-object v0, Landroidx/camera/core/CameraState$Type;->OPEN:Landroidx/camera/core/CameraState$Type;
 
-    .line 355
+    .line 378
     new-instance v0, Landroidx/camera/core/CameraState$Type;
 
     const-string v1, "CLOSING"
@@ -105,7 +105,7 @@
 
     sput-object v0, Landroidx/camera/core/CameraState$Type;->CLOSING:Landroidx/camera/core/CameraState$Type;
 
-    .line 371
+    .line 394
     new-instance v0, Landroidx/camera/core/CameraState$Type;
 
     const-string v1, "CLOSED"
@@ -116,7 +116,7 @@
 
     sput-object v0, Landroidx/camera/core/CameraState$Type;->CLOSED:Landroidx/camera/core/CameraState$Type;
 
-    .line 280
+    .line 301
     invoke-static {}, Landroidx/camera/core/CameraState$Type;->$values()[Landroidx/camera/core/CameraState$Type;
 
     move-result-object v0
@@ -145,7 +145,7 @@
         }
     .end annotation
 
-    .line 280
+    .line 301
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -162,7 +162,7 @@
         }
     .end annotation
 
-    .line 280
+    .line 301
     const-class v0, Landroidx/camera/core/CameraState$Type;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -177,7 +177,7 @@
 .method public static values()[Landroidx/camera/core/CameraState$Type;
     .locals 1
 
-    .line 280
+    .line 301
     sget-object v0, Landroidx/camera/core/CameraState$Type;->$VALUES:[Landroidx/camera/core/CameraState$Type;
 
     invoke-virtual {v0}, [Landroidx/camera/core/CameraState$Type;->clone()Ljava/lang/Object;

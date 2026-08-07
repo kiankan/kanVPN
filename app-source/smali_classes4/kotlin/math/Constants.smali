@@ -6,7 +6,7 @@
 # annotations
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0003\n\u0002\u0010\u0006\n\u0002\u0008\u0006\u0008\u00c2\u0002\u0018\u00002\u00020\u0001B\t\u0008B\u00a2\u0006\u0004\u0008\u0002\u0010\u0003R\u0011\u0010\u0004\u001a\u00020\u00058\u0000X\u0081\u0084\u0008\u00a2\u0006\u0002\n\u0000R\u0011\u0010\u0006\u001a\u00020\u00058\u0000X\u0081\u0084\u0008\u00a2\u0006\u0002\n\u0000R\u0011\u0010\u0007\u001a\u00020\u00058\u0000X\u0081\u0084\u0008\u00a2\u0006\u0002\n\u0000R\u0011\u0010\u0008\u001a\u00020\u00058\u0000X\u0081\u0084\u0008\u00a2\u0006\u0002\n\u0000R\u0011\u0010\t\u001a\u00020\u00058\u0000X\u0081\u0084\u0008\u00a2\u0006\u0002\n\u0000R\u0011\u0010\n\u001a\u00020\u00058\u0000X\u0081\u0084\u0008\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u000b"
+        "\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0003\n\u0002\u0010\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0006\u0008\u00c2\u0002\u0018\u00002\u00020\u0001B\t\u0008B\u00a2\u0006\u0004\u0008\u0002\u0010\u0003R\u0016\u0010\u0004\u001a\u00020\u00058\u0000X\u0081\u0084\u0008\u0092\u0002\u0002\u0008\u0006\u00a2\u0006\u0002\n\u0000R\u0016\u0010\u0007\u001a\u00020\u00058\u0000X\u0081\u0084\u0008\u0092\u0002\u0002\u0008\u0006\u00a2\u0006\u0002\n\u0000R\u0016\u0010\u0008\u001a\u00020\u00058\u0000X\u0081\u0084\u0008\u0092\u0002\u0002\u0008\u0006\u00a2\u0006\u0002\n\u0000R\u0016\u0010\t\u001a\u00020\u00058\u0000X\u0081\u0084\u0008\u0092\u0002\u0002\u0008\u0006\u00a2\u0006\u0002\n\u0000R\u0016\u0010\n\u001a\u00020\u00058\u0000X\u0081\u0084\u0008\u0092\u0002\u0002\u0008\u0006\u00a2\u0006\u0002\n\u0000R\u0016\u0010\u000b\u001a\u00020\u00058\u0000X\u0081\u0084\u0008\u0092\u0002\u0002\u0008\u0006\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u000c"
     }
     d2 = {
         "Lkotlin/math/Constants;",
@@ -15,6 +15,7 @@
         "()V",
         "LN2",
         "",
+        "Lkotlin/jvm/JvmField;",
         "epsilon",
         "taylor_2_bound",
         "taylor_n_bound",
@@ -25,7 +26,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x3,
+        0x4,
         0x0
     }
     xi = 0x30
@@ -72,37 +73,33 @@
     .line 27
     invoke-static {v0, v1}, Ljava/lang/Math;->ulp(D)D
 
-    move-result-wide v0
+    move-result-wide v2
 
-    sput-wide v0, Lkotlin/math/Constants;->epsilon:D
+    sput-wide v2, Lkotlin/math/Constants;->epsilon:D
 
     .line 29
-    invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
-
-    move-result-wide v0
-
-    sput-wide v0, Lkotlin/math/Constants;->taylor_2_bound:D
-
-    .line 31
-    invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
+    invoke-static {v2, v3}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v2
 
-    sput-wide v2, Lkotlin/math/Constants;->taylor_n_bound:D
+    sput-wide v2, Lkotlin/math/Constants;->taylor_2_bound:D
 
-    const/4 v4, 0x1
+    .line 31
+    invoke-static {v2, v3}, Ljava/lang/Math;->sqrt(D)D
 
-    int-to-double v4, v4
+    move-result-wide v4
 
-    div-double v0, v4, v0
+    sput-wide v4, Lkotlin/math/Constants;->taylor_n_bound:D
+
+    div-double v2, v0, v2
 
     .line 33
-    sput-wide v0, Lkotlin/math/Constants;->upper_taylor_2_bound:D
+    sput-wide v2, Lkotlin/math/Constants;->upper_taylor_2_bound:D
 
-    div-double/2addr v4, v2
+    div-double/2addr v0, v4
 
     .line 35
-    sput-wide v4, Lkotlin/math/Constants;->upper_taylor_n_bound:D
+    sput-wide v0, Lkotlin/math/Constants;->upper_taylor_n_bound:D
 
     return-void
 .end method

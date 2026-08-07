@@ -96,7 +96,7 @@
 
 # virtual methods
 .method public decode(Lcom/google/zxing/BinaryBitmap;)Lcom/google/zxing/Result;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/google/zxing/NotFoundException;,
@@ -105,21 +105,21 @@
     .end annotation
 
     .line 57
-    iget-object v0, p0, Lcom/google/zxing/oned/UPCAReader;->ean13Reader:Lcom/google/zxing/oned/UPCEANReader;
+    iget-object p0, p0, Lcom/google/zxing/oned/UPCAReader;->ean13Reader:Lcom/google/zxing/oned/UPCEANReader;
 
-    invoke-virtual {v0, p1}, Lcom/google/zxing/oned/UPCEANReader;->decode(Lcom/google/zxing/BinaryBitmap;)Lcom/google/zxing/Result;
+    invoke-virtual {p0, p1}, Lcom/google/zxing/oned/UPCEANReader;->decode(Lcom/google/zxing/BinaryBitmap;)Lcom/google/zxing/Result;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-static {p1}, Lcom/google/zxing/oned/UPCAReader;->maybeReturnResult(Lcom/google/zxing/Result;)Lcom/google/zxing/Result;
+    invoke-static {p0}, Lcom/google/zxing/oned/UPCAReader;->maybeReturnResult(Lcom/google/zxing/Result;)Lcom/google/zxing/Result;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public decode(Lcom/google/zxing/BinaryBitmap;Ljava/util/Map;)Lcom/google/zxing/Result;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -139,21 +139,21 @@
     .end annotation
 
     .line 63
-    iget-object v0, p0, Lcom/google/zxing/oned/UPCAReader;->ean13Reader:Lcom/google/zxing/oned/UPCEANReader;
+    iget-object p0, p0, Lcom/google/zxing/oned/UPCAReader;->ean13Reader:Lcom/google/zxing/oned/UPCEANReader;
 
-    invoke-virtual {v0, p1, p2}, Lcom/google/zxing/oned/UPCEANReader;->decode(Lcom/google/zxing/BinaryBitmap;Ljava/util/Map;)Lcom/google/zxing/Result;
+    invoke-virtual {p0, p1, p2}, Lcom/google/zxing/oned/UPCEANReader;->decode(Lcom/google/zxing/BinaryBitmap;Ljava/util/Map;)Lcom/google/zxing/Result;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-static {p1}, Lcom/google/zxing/oned/UPCAReader;->maybeReturnResult(Lcom/google/zxing/Result;)Lcom/google/zxing/Result;
+    invoke-static {p0}, Lcom/google/zxing/oned/UPCAReader;->maybeReturnResult(Lcom/google/zxing/Result;)Lcom/google/zxing/Result;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method protected decodeMiddle(Lcom/google/zxing/common/BitArray;[ILjava/lang/StringBuilder;)I
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/google/zxing/NotFoundException;
@@ -161,17 +161,17 @@
     .end annotation
 
     .line 74
-    iget-object v0, p0, Lcom/google/zxing/oned/UPCAReader;->ean13Reader:Lcom/google/zxing/oned/UPCEANReader;
+    iget-object p0, p0, Lcom/google/zxing/oned/UPCAReader;->ean13Reader:Lcom/google/zxing/oned/UPCEANReader;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/google/zxing/oned/UPCEANReader;->decodeMiddle(Lcom/google/zxing/common/BitArray;[ILjava/lang/StringBuilder;)I
+    invoke-virtual {p0, p1, p2, p3}, Lcom/google/zxing/oned/UPCEANReader;->decodeMiddle(Lcom/google/zxing/common/BitArray;[ILjava/lang/StringBuilder;)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public decodeRow(ILcom/google/zxing/common/BitArray;Ljava/util/Map;)Lcom/google/zxing/Result;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -192,21 +192,21 @@
     .end annotation
 
     .line 52
-    iget-object v0, p0, Lcom/google/zxing/oned/UPCAReader;->ean13Reader:Lcom/google/zxing/oned/UPCEANReader;
+    iget-object p0, p0, Lcom/google/zxing/oned/UPCAReader;->ean13Reader:Lcom/google/zxing/oned/UPCEANReader;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/google/zxing/oned/UPCEANReader;->decodeRow(ILcom/google/zxing/common/BitArray;Ljava/util/Map;)Lcom/google/zxing/Result;
+    invoke-virtual {p0, p1, p2, p3}, Lcom/google/zxing/oned/UPCEANReader;->decodeRow(ILcom/google/zxing/common/BitArray;Ljava/util/Map;)Lcom/google/zxing/Result;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-static {p1}, Lcom/google/zxing/oned/UPCAReader;->maybeReturnResult(Lcom/google/zxing/Result;)Lcom/google/zxing/Result;
+    invoke-static {p0}, Lcom/google/zxing/oned/UPCAReader;->maybeReturnResult(Lcom/google/zxing/Result;)Lcom/google/zxing/Result;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public decodeRow(ILcom/google/zxing/common/BitArray;[ILjava/util/Map;)Lcom/google/zxing/Result;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -228,24 +228,24 @@
     .end annotation
 
     .line 46
-    iget-object v0, p0, Lcom/google/zxing/oned/UPCAReader;->ean13Reader:Lcom/google/zxing/oned/UPCEANReader;
+    iget-object p0, p0, Lcom/google/zxing/oned/UPCAReader;->ean13Reader:Lcom/google/zxing/oned/UPCEANReader;
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/google/zxing/oned/UPCEANReader;->decodeRow(ILcom/google/zxing/common/BitArray;[ILjava/util/Map;)Lcom/google/zxing/Result;
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/zxing/oned/UPCEANReader;->decodeRow(ILcom/google/zxing/common/BitArray;[ILjava/util/Map;)Lcom/google/zxing/Result;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-static {p1}, Lcom/google/zxing/oned/UPCAReader;->maybeReturnResult(Lcom/google/zxing/Result;)Lcom/google/zxing/Result;
+    invoke-static {p0}, Lcom/google/zxing/oned/UPCAReader;->maybeReturnResult(Lcom/google/zxing/Result;)Lcom/google/zxing/Result;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method getBarcodeFormat()Lcom/google/zxing/BarcodeFormat;
-    .locals 1
+    .locals 0
 
     .line 68
-    sget-object v0, Lcom/google/zxing/BarcodeFormat;->UPC_A:Lcom/google/zxing/BarcodeFormat;
+    sget-object p0, Lcom/google/zxing/BarcodeFormat;->UPC_A:Lcom/google/zxing/BarcodeFormat;
 
-    return-object v0
+    return-object p0
 .end method

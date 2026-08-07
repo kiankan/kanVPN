@@ -20,6 +20,8 @@
 
 .field private final rotationDegrees:I
 
+.field private final secondaryOutputFileOptions:Landroidx/camera/core/ImageCapture$OutputFileOptions;
+
 .field private final sensorToBufferTransform:Landroid/graphics/Matrix;
 
 .field private final sessionConfigCameraCaptureCallbacks:Ljava/util/List;
@@ -32,9 +34,11 @@
     .end annotation
 .end field
 
+.field private final simultaneousCapture:Z
+
 
 # direct methods
-.method constructor <init>(Ljava/util/concurrent/Executor;Landroidx/camera/core/ImageCapture$OnImageCapturedCallback;Landroidx/camera/core/ImageCapture$OnImageSavedCallback;Landroidx/camera/core/ImageCapture$OutputFileOptions;Landroid/graphics/Rect;Landroid/graphics/Matrix;IIILjava/util/List;)V
+.method constructor <init>(Ljava/util/concurrent/Executor;Landroidx/camera/core/ImageCapture$OnImageCapturedCallback;Landroidx/camera/core/ImageCapture$OnImageSavedCallback;Landroidx/camera/core/ImageCapture$OutputFileOptions;Landroidx/camera/core/ImageCapture$OutputFileOptions;Landroid/graphics/Rect;Landroid/graphics/Matrix;IIIZLjava/util/List;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -43,97 +47,104 @@
             "Landroidx/camera/core/ImageCapture$OnImageCapturedCallback;",
             "Landroidx/camera/core/ImageCapture$OnImageSavedCallback;",
             "Landroidx/camera/core/ImageCapture$OutputFileOptions;",
+            "Landroidx/camera/core/ImageCapture$OutputFileOptions;",
             "Landroid/graphics/Rect;",
             "Landroid/graphics/Matrix;",
-            "III",
+            "IIIZ",
             "Ljava/util/List<",
             "Landroidx/camera/core/impl/CameraCaptureCallback;",
             ">;)V"
         }
     .end annotation
 
-    .line 49
+    .line 55
     invoke-direct {p0}, Landroidx/camera/core/imagecapture/TakePictureRequest;-><init>()V
 
     if-eqz p1, :cond_3
 
-    .line 53
+    .line 59
     iput-object p1, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->appExecutor:Ljava/util/concurrent/Executor;
 
-    .line 54
+    .line 60
     iput-object p2, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->inMemoryCallback:Landroidx/camera/core/ImageCapture$OnImageCapturedCallback;
 
-    .line 55
+    .line 61
     iput-object p3, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->onDiskCallback:Landroidx/camera/core/ImageCapture$OnImageSavedCallback;
 
-    .line 56
+    .line 62
     iput-object p4, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->outputFileOptions:Landroidx/camera/core/ImageCapture$OutputFileOptions;
 
-    if-eqz p5, :cond_2
+    .line 63
+    iput-object p5, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->secondaryOutputFileOptions:Landroidx/camera/core/ImageCapture$OutputFileOptions;
 
-    .line 60
-    iput-object p5, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->cropRect:Landroid/graphics/Rect;
-
-    if-eqz p6, :cond_1
-
-    .line 64
-    iput-object p6, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->sensorToBufferTransform:Landroid/graphics/Matrix;
-
-    .line 65
-    iput p7, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->rotationDegrees:I
-
-    .line 66
-    iput p8, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->jpegQuality:I
+    if-eqz p6, :cond_2
 
     .line 67
-    iput p9, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->captureMode:I
+    iput-object p6, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->cropRect:Landroid/graphics/Rect;
 
-    if-eqz p10, :cond_0
+    if-eqz p7, :cond_1
 
     .line 71
-    iput-object p10, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->sessionConfigCameraCaptureCallbacks:Ljava/util/List;
+    iput-object p7, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->sensorToBufferTransform:Landroid/graphics/Matrix;
+
+    .line 72
+    iput p8, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->rotationDegrees:I
+
+    .line 73
+    iput p9, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->jpegQuality:I
+
+    .line 74
+    iput p10, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->captureMode:I
+
+    .line 75
+    iput-boolean p11, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->simultaneousCapture:Z
+
+    if-eqz p12, :cond_0
+
+    .line 79
+    iput-object p12, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->sessionConfigCameraCaptureCallbacks:Ljava/util/List;
 
     return-void
 
-    .line 69
+    .line 77
     :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null sessionConfigCameraCaptureCallbacks"
+    const-string p1, "Null sessionConfigCameraCaptureCallbacks"
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
-    .line 62
+    .line 69
     :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null sensorToBufferTransform"
+    const-string p1, "Null sensorToBufferTransform"
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
-    .line 58
+    .line 65
     :cond_2
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null cropRect"
+    const-string p1, "Null cropRect"
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 
-    .line 51
+    .line 57
     :cond_3
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null appExecutor"
+    const-string p1, "Null appExecutor"
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 
@@ -147,18 +158,18 @@
 
     return v0
 
-    .line 155
+    .line 168
     :cond_0
     instance-of v1, p1, Landroidx/camera/core/imagecapture/TakePictureRequest;
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_5
 
-    .line 156
+    .line 169
     check-cast p1, Landroidx/camera/core/imagecapture/TakePictureRequest;
 
-    .line 157
+    .line 170
     iget-object v1, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->appExecutor:Ljava/util/concurrent/Executor;
 
     invoke-virtual {p1}, Landroidx/camera/core/imagecapture/TakePictureRequest;->getAppExecutor()Ljava/util/concurrent/Executor;
@@ -169,18 +180,18 @@
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_5
 
     iget-object v1, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->inMemoryCallback:Landroidx/camera/core/ImageCapture$OnImageCapturedCallback;
 
     if-nez v1, :cond_1
 
-    .line 158
+    .line 171
     invoke-virtual {p1}, Landroidx/camera/core/imagecapture/TakePictureRequest;->getInMemoryCallback()Landroidx/camera/core/ImageCapture$OnImageCapturedCallback;
 
     move-result-object v1
 
-    if-nez v1, :cond_4
+    if-nez v1, :cond_5
 
     goto :goto_0
 
@@ -193,19 +204,19 @@
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_5
 
     :goto_0
     iget-object v1, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->onDiskCallback:Landroidx/camera/core/ImageCapture$OnImageSavedCallback;
 
     if-nez v1, :cond_2
 
-    .line 159
+    .line 172
     invoke-virtual {p1}, Landroidx/camera/core/imagecapture/TakePictureRequest;->getOnDiskCallback()Landroidx/camera/core/ImageCapture$OnImageSavedCallback;
 
     move-result-object v1
 
-    if-nez v1, :cond_4
+    if-nez v1, :cond_5
 
     goto :goto_1
 
@@ -218,19 +229,19 @@
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_5
 
     :goto_1
     iget-object v1, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->outputFileOptions:Landroidx/camera/core/ImageCapture$OutputFileOptions;
 
     if-nez v1, :cond_3
 
-    .line 160
+    .line 173
     invoke-virtual {p1}, Landroidx/camera/core/imagecapture/TakePictureRequest;->getOutputFileOptions()Landroidx/camera/core/ImageCapture$OutputFileOptions;
 
     move-result-object v1
 
-    if-nez v1, :cond_4
+    if-nez v1, :cond_5
 
     goto :goto_2
 
@@ -243,12 +254,37 @@
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_5
 
     :goto_2
+    iget-object v1, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->secondaryOutputFileOptions:Landroidx/camera/core/ImageCapture$OutputFileOptions;
+
+    if-nez v1, :cond_4
+
+    .line 174
+    invoke-virtual {p1}, Landroidx/camera/core/imagecapture/TakePictureRequest;->getSecondaryOutputFileOptions()Landroidx/camera/core/ImageCapture$OutputFileOptions;
+
+    move-result-object v1
+
+    if-nez v1, :cond_5
+
+    goto :goto_3
+
+    :cond_4
+    invoke-virtual {p1}, Landroidx/camera/core/imagecapture/TakePictureRequest;->getSecondaryOutputFileOptions()Landroidx/camera/core/ImageCapture$OutputFileOptions;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    :goto_3
     iget-object v1, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->cropRect:Landroid/graphics/Rect;
 
-    .line 161
+    .line 175
     invoke-virtual {p1}, Landroidx/camera/core/imagecapture/TakePictureRequest;->getCropRect()Landroid/graphics/Rect;
 
     move-result-object v3
@@ -257,11 +293,11 @@
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_5
 
     iget-object v1, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->sensorToBufferTransform:Landroid/graphics/Matrix;
 
-    .line 162
+    .line 176
     invoke-virtual {p1}, Landroidx/camera/core/imagecapture/TakePictureRequest;->getSensorToBufferTransform()Landroid/graphics/Matrix;
 
     move-result-object v3
@@ -270,137 +306,155 @@
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_5
 
     iget v1, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->rotationDegrees:I
 
-    .line 163
+    .line 177
     invoke-virtual {p1}, Landroidx/camera/core/imagecapture/TakePictureRequest;->getRotationDegrees()I
 
     move-result v3
 
-    if-ne v1, v3, :cond_4
+    if-ne v1, v3, :cond_5
 
     iget v1, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->jpegQuality:I
 
-    .line 164
+    .line 178
     invoke-virtual {p1}, Landroidx/camera/core/imagecapture/TakePictureRequest;->getJpegQuality()I
 
     move-result v3
 
-    if-ne v1, v3, :cond_4
+    if-ne v1, v3, :cond_5
 
     iget v1, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->captureMode:I
 
-    .line 165
+    .line 179
     invoke-virtual {p1}, Landroidx/camera/core/imagecapture/TakePictureRequest;->getCaptureMode()I
 
     move-result v3
 
-    if-ne v1, v3, :cond_4
+    if-ne v1, v3, :cond_5
 
-    iget-object v1, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->sessionConfigCameraCaptureCallbacks:Ljava/util/List;
+    iget-boolean v1, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->simultaneousCapture:Z
 
-    .line 166
+    .line 180
+    invoke-virtual {p1}, Landroidx/camera/core/imagecapture/TakePictureRequest;->isSimultaneousCapture()Z
+
+    move-result v3
+
+    if-ne v1, v3, :cond_5
+
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->sessionConfigCameraCaptureCallbacks:Ljava/util/List;
+
+    .line 181
     invoke-virtual {p1}, Landroidx/camera/core/imagecapture/TakePictureRequest;->getSessionConfigCameraCaptureCallbacks()Ljava/util/List;
 
     move-result-object p1
 
-    invoke-interface {v1, p1}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+    invoke-interface {p0, p1}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_4
+    if-eqz p0, :cond_5
 
     return v0
 
-    :cond_4
+    :cond_5
     return v2
 .end method
 
 .method getAppExecutor()Ljava/util/concurrent/Executor;
-    .locals 1
+    .locals 0
 
-    .line 77
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->appExecutor:Ljava/util/concurrent/Executor;
+    .line 84
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->appExecutor:Ljava/util/concurrent/Executor;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method getCaptureMode()I
-    .locals 1
+    .locals 0
 
-    .line 125
-    iget v0, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->captureMode:I
+    .line 132
+    iget p0, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->captureMode:I
 
-    return v0
+    return p0
 .end method
 
-.method getCropRect()Landroid/graphics/Rect;
-    .locals 1
+.method public getCropRect()Landroid/graphics/Rect;
+    .locals 0
 
-    .line 101
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->cropRect:Landroid/graphics/Rect;
+    .line 109
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->cropRect:Landroid/graphics/Rect;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getInMemoryCallback()Landroidx/camera/core/ImageCapture$OnImageCapturedCallback;
-    .locals 1
+    .locals 0
 
-    .line 83
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->inMemoryCallback:Landroidx/camera/core/ImageCapture$OnImageCapturedCallback;
+    .line 89
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->inMemoryCallback:Landroidx/camera/core/ImageCapture$OnImageCapturedCallback;
 
-    return-object v0
+    return-object p0
 .end method
 
-.method getJpegQuality()I
-    .locals 1
+.method public getJpegQuality()I
+    .locals 0
 
-    .line 119
-    iget v0, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->jpegQuality:I
+    .line 126
+    iget p0, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->jpegQuality:I
 
-    return v0
+    return p0
 .end method
 
 .method public getOnDiskCallback()Landroidx/camera/core/ImageCapture$OnImageSavedCallback;
-    .locals 1
+    .locals 0
 
-    .line 89
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->onDiskCallback:Landroidx/camera/core/ImageCapture$OnImageSavedCallback;
+    .line 94
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->onDiskCallback:Landroidx/camera/core/ImageCapture$OnImageSavedCallback;
 
-    return-object v0
+    return-object p0
 .end method
 
-.method getOutputFileOptions()Landroidx/camera/core/ImageCapture$OutputFileOptions;
-    .locals 1
+.method public getOutputFileOptions()Landroidx/camera/core/ImageCapture$OutputFileOptions;
+    .locals 0
 
-    .line 95
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->outputFileOptions:Landroidx/camera/core/ImageCapture$OutputFileOptions;
+    .line 99
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->outputFileOptions:Landroidx/camera/core/ImageCapture$OutputFileOptions;
 
-    return-object v0
+    return-object p0
 .end method
 
-.method getRotationDegrees()I
-    .locals 1
+.method public getRotationDegrees()I
+    .locals 0
 
-    .line 113
-    iget v0, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->rotationDegrees:I
+    .line 120
+    iget p0, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->rotationDegrees:I
 
-    return v0
+    return p0
+.end method
+
+.method public getSecondaryOutputFileOptions()Landroidx/camera/core/ImageCapture$OutputFileOptions;
+    .locals 0
+
+    .line 104
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->secondaryOutputFileOptions:Landroidx/camera/core/ImageCapture$OutputFileOptions;
+
+    return-object p0
 .end method
 
 .method getSensorToBufferTransform()Landroid/graphics/Matrix;
-    .locals 1
+    .locals 0
 
-    .line 107
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->sensorToBufferTransform:Landroid/graphics/Matrix;
+    .line 114
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->sensorToBufferTransform:Landroid/graphics/Matrix;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method getSessionConfigCameraCaptureCallbacks()Ljava/util/List;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -410,16 +464,16 @@
         }
     .end annotation
 
-    .line 131
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->sessionConfigCameraCaptureCallbacks:Ljava/util/List;
+    .line 142
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->sessionConfigCameraCaptureCallbacks:Ljava/util/List;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public hashCode()I
     .locals 4
 
-    .line 175
+    .line 190
     iget-object v0, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->appExecutor:Ljava/util/concurrent/Executor;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -432,7 +486,7 @@
 
     mul-int/2addr v0, v1
 
-    .line 177
+    .line 192
     iget-object v2, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->inMemoryCallback:Landroidx/camera/core/ImageCapture$OnImageCapturedCallback;
 
     const/4 v3, 0x0
@@ -453,7 +507,7 @@
 
     mul-int/2addr v0, v1
 
-    .line 179
+    .line 194
     iget-object v2, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->onDiskCallback:Landroidx/camera/core/ImageCapture$OnImageSavedCallback;
 
     if-nez v2, :cond_1
@@ -472,24 +526,43 @@
 
     mul-int/2addr v0, v1
 
-    .line 181
+    .line 196
     iget-object v2, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->outputFileOptions:Landroidx/camera/core/ImageCapture$OutputFileOptions;
 
     if-nez v2, :cond_2
+
+    move v2, v3
 
     goto :goto_2
 
     :cond_2
     invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
-    move-result v3
+    move-result v2
 
     :goto_2
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    .line 198
+    iget-object v2, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->secondaryOutputFileOptions:Landroidx/camera/core/ImageCapture$OutputFileOptions;
+
+    if-nez v2, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v3
+
+    :goto_3
     xor-int/2addr v0, v3
 
     mul-int/2addr v0, v1
 
-    .line 183
+    .line 200
     iget-object v2, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->cropRect:Landroid/graphics/Rect;
 
     invoke-virtual {v2}, Landroid/graphics/Rect;->hashCode()I
@@ -500,7 +573,7 @@
 
     mul-int/2addr v0, v1
 
-    .line 185
+    .line 202
     iget-object v2, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->sensorToBufferTransform:Landroid/graphics/Matrix;
 
     invoke-virtual {v2}, Landroid/graphics/Matrix;->hashCode()I
@@ -511,43 +584,69 @@
 
     mul-int/2addr v0, v1
 
-    .line 187
+    .line 204
     iget v2, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->rotationDegrees:I
 
     xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
-    .line 189
+    .line 206
     iget v2, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->jpegQuality:I
 
     xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
-    .line 191
+    .line 208
     iget v2, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->captureMode:I
 
     xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
-    .line 193
-    iget-object v1, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->sessionConfigCameraCaptureCallbacks:Ljava/util/List;
+    .line 210
+    iget-boolean v2, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->simultaneousCapture:Z
 
-    invoke-interface {v1}, Ljava/util/List;->hashCode()I
+    if-eqz v2, :cond_4
 
-    move-result v1
+    const/16 v2, 0x4cf
 
-    xor-int/2addr v0, v1
+    goto :goto_4
 
-    return v0
+    :cond_4
+    const/16 v2, 0x4d5
+
+    :goto_4
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    .line 212
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->sessionConfigCameraCaptureCallbacks:Ljava/util/List;
+
+    invoke-interface {p0}, Ljava/util/List;->hashCode()I
+
+    move-result p0
+
+    xor-int/2addr p0, v0
+
+    return p0
+.end method
+
+.method isSimultaneousCapture()Z
+    .locals 0
+
+    .line 137
+    iget-boolean p0, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->simultaneousCapture:Z
+
+    return p0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 136
+    .line 147
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "TakePictureRequest{appExecutor="
@@ -579,6 +678,14 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->outputFileOptions:Landroidx/camera/core/ImageCapture$OutputFileOptions;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", secondaryOutputFileOptions="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->secondaryOutputFileOptions:Landroidx/camera/core/ImageCapture$OutputFileOptions;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -622,21 +729,29 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
+    const-string v1, ", simultaneousCapture="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->simultaneousCapture:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
     const-string v1, ", sessionConfigCameraCaptureCallbacks="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->sessionConfigCameraCaptureCallbacks:Ljava/util/List;
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/AutoValue_TakePictureRequest;->sessionConfigCameraCaptureCallbacks:Ljava/util/List;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, "}"
+    const-string/jumbo p0, "}"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

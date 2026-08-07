@@ -5,36 +5,37 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nDynamicRanges.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DynamicRanges.kt\nandroidx/camera/core/impl/DynamicRanges\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,130:1\n288#2,2:131\n1855#2:133\n1855#2,2:134\n1856#2:136\n*S KotlinDebug\n*F\n+ 1 DynamicRanges.kt\nandroidx/camera/core/impl/DynamicRanges\n*L\n40#1:131,2\n65#1:133\n74#1:134,2\n65#1:136\n*E\n"
+    value = "SMAP\nDynamicRanges.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DynamicRanges.kt\nandroidx/camera/core/impl/DynamicRanges\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,130:1\n295#2,2:131\n1869#2:133\n1869#2,2:134\n1870#2:136\n*S KotlinDebug\n*F\n+ 1 DynamicRanges.kt\nandroidx/camera/core/impl/DynamicRanges\n*L\n40#1:131,2\n65#1:133\n74#1:134,2\n65#1:136\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\"\n\u0002\u0008\u0005\u0008\u00c6\u0002\u0018\u00002\u00020\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002J\u0018\u0010\u0003\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\u0006H\u0002J\u0018\u0010\u0008\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\u0006H\u0002J\u001e\u0010\t\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u00062\u000c\u0010\n\u001a\u0008\u0012\u0004\u0012\u00020\u00060\u000bH\u0007J\u0018\u0010\u000c\u001a\u00020\u00042\u0006\u0010\r\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\u0006H\u0002J*\u0010\u000e\u001a\u0008\u0012\u0004\u0012\u00020\u00060\u000b2\u000c\u0010\u000f\u001a\u0008\u0012\u0004\u0012\u00020\u00060\u000b2\u000c\u0010\n\u001a\u0008\u0012\u0004\u0012\u00020\u00060\u000bH\u0007\u00a8\u0006\u0010"
+        "\u0000 \n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\"\n\u0002\u0008\u0008\u0008\u00c6\u0002\u0018\u00002\u00020\u0001B\t\u0008\u0002\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J\u001e\u0010\u0004\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u00072\u000c\u0010\u0008\u001a\u0008\u0012\u0004\u0012\u00020\u00070\tH\u0007J*\u0010\n\u001a\u0008\u0012\u0004\u0012\u00020\u00070\t2\u000c\u0010\u000b\u001a\u0008\u0012\u0004\u0012\u00020\u00070\t2\u000c\u0010\u0008\u001a\u0008\u0012\u0004\u0012\u00020\u00070\tH\u0007J\u0018\u0010\u000c\u001a\u00020\u00052\u0006\u0010\r\u001a\u00020\u00072\u0006\u0010\u000e\u001a\u00020\u0007H\u0002J\u0018\u0010\u000f\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010\u000e\u001a\u00020\u0007H\u0002J\u0018\u0010\u0010\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010\u000e\u001a\u00020\u0007H\u0002\u00a8\u0006\u0011"
     }
     d2 = {
         "Landroidx/camera/core/impl/DynamicRanges;",
         "",
+        "<init>",
         "()V",
-        "canMatchBitDepth",
+        "canResolve",
         "",
         "dynamicRangeToTest",
         "Landroidx/camera/core/DynamicRange;",
-        "fullySpecifiedDynamicRange",
-        "canMatchEncoding",
-        "canResolve",
         "fullySpecifiedDynamicRanges",
         "",
-        "canResolveUnderSpecifiedTo",
-        "underSpecifiedDynamicRange",
         "findAllPossibleMatches",
         "dynamicRangesToTest",
-        "camera-core_release"
+        "canResolveUnderSpecifiedTo",
+        "underSpecifiedDynamicRange",
+        "fullySpecifiedDynamicRange",
+        "canMatchBitDepth",
+        "canMatchEncoding",
+        "camera-core"
     }
     k = 0x1
     mv = {
+        0x2,
         0x1,
-        0x8,
         0x0
     }
     xi = 0x30
@@ -68,74 +69,74 @@
 .end method
 
 .method private final canMatchBitDepth(Landroidx/camera/core/DynamicRange;Landroidx/camera/core/DynamicRange;)Z
-    .locals 2
+    .locals 1
 
     .line 97
     invoke-virtual {p2}, Landroidx/camera/core/DynamicRange;->isFullySpecified()Z
 
-    move-result v0
+    move-result p0
 
     .line 98
-    const-string v1, "Fully specified range is not actually fully specified."
+    const-string v0, "Fully specified range is not actually fully specified."
 
     .line 96
-    invoke-static {v0, v1}, Landroidx/core/util/Preconditions;->checkState(ZLjava/lang/String;)V
+    invoke-static {p0, v0}, Landroidx/core/util/Preconditions;->checkState(ZLjava/lang/String;)V
 
     .line 100
     invoke-virtual {p1}, Landroidx/camera/core/DynamicRange;->getBitDepth()I
 
-    move-result v0
+    move-result p0
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    if-nez v0, :cond_0
+    if-nez p0, :cond_0
 
-    return v1
+    return v0
 
     .line 103
     :cond_0
     invoke-virtual {p1}, Landroidx/camera/core/DynamicRange;->getBitDepth()I
 
-    move-result p1
+    move-result p0
 
     invoke-virtual {p2}, Landroidx/camera/core/DynamicRange;->getBitDepth()I
 
-    move-result p2
+    move-result p1
 
-    if-ne p1, p2, :cond_1
+    if-ne p0, p1, :cond_1
 
-    return v1
+    return v0
 
     :cond_1
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method private final canMatchEncoding(Landroidx/camera/core/DynamicRange;Landroidx/camera/core/DynamicRange;)Z
-    .locals 2
+    .locals 1
 
     .line 112
     invoke-virtual {p2}, Landroidx/camera/core/DynamicRange;->isFullySpecified()Z
 
-    move-result v0
+    move-result p0
 
     .line 113
-    const-string v1, "Fully specified range is not actually fully specified."
+    const-string v0, "Fully specified range is not actually fully specified."
 
     .line 111
-    invoke-static {v0, v1}, Landroidx/core/util/Preconditions;->checkState(ZLjava/lang/String;)V
+    invoke-static {p0, v0}, Landroidx/core/util/Preconditions;->checkState(ZLjava/lang/String;)V
 
     .line 115
     invoke-virtual {p1}, Landroidx/camera/core/DynamicRange;->getEncoding()I
 
-    move-result p1
+    move-result p0
 
-    const/4 v0, 0x1
+    const/4 p1, 0x1
 
-    if-nez p1, :cond_0
+    if-nez p0, :cond_0
 
-    return v0
+    return p1
 
     .line 119
     :cond_0
@@ -143,23 +144,23 @@
 
     move-result p2
 
-    const/4 v1, 0x2
+    const/4 v0, 0x2
 
-    if-ne p1, v1, :cond_1
+    if-ne p0, v0, :cond_1
 
-    if-eq p2, v0, :cond_1
-
-    return v0
-
-    :cond_1
-    if-ne p1, p2, :cond_2
-
-    return v0
-
-    :cond_2
-    const/4 p1, 0x0
+    if-eq p2, p1, :cond_1
 
     return p1
+
+    :cond_1
+    if-ne p0, p2, :cond_2
+
+    return p1
+
+    :cond_2
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
 .method public static final canResolve(Landroidx/camera/core/DynamicRange;Ljava/util/Set;)Z
@@ -263,18 +264,18 @@
     .line 89
     invoke-direct {p0, p1, p2}, Landroidx/camera/core/impl/DynamicRanges;->canMatchEncoding(Landroidx/camera/core/DynamicRange;Landroidx/camera/core/DynamicRange;)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_0
+    if-eqz p0, :cond_0
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method public static final findAllPossibleMatches(Ljava/util/Set;Ljava/util/Set;)Ljava/util/Set;

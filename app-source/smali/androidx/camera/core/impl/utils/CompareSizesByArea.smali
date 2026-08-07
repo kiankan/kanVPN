@@ -88,9 +88,9 @@
     move-result p1
 
     .line 47
-    iget-boolean p2, p0, Landroidx/camera/core/impl/utils/CompareSizesByArea;->mReverse:Z
+    iget-boolean p0, p0, Landroidx/camera/core/impl/utils/CompareSizesByArea;->mReverse:Z
 
-    if-eqz p2, :cond_0
+    if-eqz p0, :cond_0
 
     mul-int/lit8 p1, p1, -0x1
 
@@ -118,7 +118,7 @@
 
     invoke-virtual {p0, p1, p2}, Landroidx/camera/core/impl/utils/CompareSizesByArea;->compare(Landroid/util/Size;Landroid/util/Size;)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method

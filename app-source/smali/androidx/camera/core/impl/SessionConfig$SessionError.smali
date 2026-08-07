@@ -34,7 +34,7 @@
 .method private static synthetic $values()[Landroidx/camera/core/impl/SessionConfig$SessionError;
     .locals 2
 
-    .line 364
+    .line 346
     sget-object v0, Landroidx/camera/core/impl/SessionConfig$SessionError;->SESSION_ERROR_SURFACE_NEEDS_RESET:Landroidx/camera/core/impl/SessionConfig$SessionError;
 
     sget-object v1, Landroidx/camera/core/impl/SessionConfig$SessionError;->SESSION_ERROR_UNKNOWN:Landroidx/camera/core/impl/SessionConfig$SessionError;
@@ -49,7 +49,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 370
+    .line 352
     new-instance v0, Landroidx/camera/core/impl/SessionConfig$SessionError;
 
     const-string v1, "SESSION_ERROR_SURFACE_NEEDS_RESET"
@@ -60,7 +60,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/SessionConfig$SessionError;->SESSION_ERROR_SURFACE_NEEDS_RESET:Landroidx/camera/core/impl/SessionConfig$SessionError;
 
-    .line 372
+    .line 354
     new-instance v0, Landroidx/camera/core/impl/SessionConfig$SessionError;
 
     const-string v1, "SESSION_ERROR_UNKNOWN"
@@ -71,7 +71,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/SessionConfig$SessionError;->SESSION_ERROR_UNKNOWN:Landroidx/camera/core/impl/SessionConfig$SessionError;
 
-    .line 364
+    .line 346
     invoke-static {}, Landroidx/camera/core/impl/SessionConfig$SessionError;->$values()[Landroidx/camera/core/impl/SessionConfig$SessionError;
 
     move-result-object v0
@@ -100,7 +100,7 @@
         }
     .end annotation
 
-    .line 364
+    .line 346
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -117,7 +117,7 @@
         }
     .end annotation
 
-    .line 364
+    .line 346
     const-class v0, Landroidx/camera/core/impl/SessionConfig$SessionError;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -132,7 +132,7 @@
 .method public static values()[Landroidx/camera/core/impl/SessionConfig$SessionError;
     .locals 1
 
-    .line 364
+    .line 346
     sget-object v0, Landroidx/camera/core/impl/SessionConfig$SessionError;->$VALUES:[Landroidx/camera/core/impl/SessionConfig$SessionError;
 
     invoke-virtual {v0}, [Landroidx/camera/core/impl/SessionConfig$SessionError;->clone()Ljava/lang/Object;

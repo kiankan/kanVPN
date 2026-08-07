@@ -71,12 +71,12 @@
 
 # virtual methods
 .method public getBody()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 102
-    iget-object v0, p0, Lcom/google/zxing/client/result/SMSParsedResult;->body:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/SMSParsedResult;->body:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getDisplayResult()Ljava/lang/String;
@@ -100,25 +100,25 @@
     invoke-static {v1, v0}, Lcom/google/zxing/client/result/SMSParsedResult;->maybeAppend(Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 110
-    iget-object v1, p0, Lcom/google/zxing/client/result/SMSParsedResult;->body:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/SMSParsedResult;->body:Ljava/lang/String;
 
-    invoke-static {v1, v0}, Lcom/google/zxing/client/result/SMSParsedResult;->maybeAppend(Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {p0, v0}, Lcom/google/zxing/client/result/SMSParsedResult;->maybeAppend(Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 111
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getNumbers()[Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 90
-    iget-object v0, p0, Lcom/google/zxing/client/result/SMSParsedResult;->numbers:[Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/SMSParsedResult;->numbers:[Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getSMSURI()Ljava/lang/String;
@@ -257,33 +257,33 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 83
-    iget-object v1, p0, Lcom/google/zxing/client/result/SMSParsedResult;->subject:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/SMSParsedResult;->subject:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 86
     :cond_8
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getSubject()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 98
-    iget-object v0, p0, Lcom/google/zxing/client/result/SMSParsedResult;->subject:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/SMSParsedResult;->subject:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getVias()[Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 94
-    iget-object v0, p0, Lcom/google/zxing/client/result/SMSParsedResult;->vias:[Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/SMSParsedResult;->vias:[Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method

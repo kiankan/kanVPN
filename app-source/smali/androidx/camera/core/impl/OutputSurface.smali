@@ -16,7 +16,7 @@
 .method public static create(Landroid/view/Surface;Landroid/util/Size;I)Landroidx/camera/core/impl/OutputSurface;
     .locals 1
 
-    .line 37
+    .line 36
     new-instance v0, Landroidx/camera/core/impl/AutoValue_OutputSurface;
 
     invoke-direct {v0, p0, p1, p2}, Landroidx/camera/core/impl/AutoValue_OutputSurface;-><init>(Landroid/view/Surface;Landroid/util/Size;I)V

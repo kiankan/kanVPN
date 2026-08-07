@@ -16,66 +16,66 @@
 
 # virtual methods
 .method public parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/ISBNParsedResult;
-    .locals 3
+    .locals 2
 
     .line 34
     invoke-virtual {p1}, Lcom/google/zxing/Result;->getBarcodeFormat()Lcom/google/zxing/BarcodeFormat;
 
-    move-result-object v0
+    move-result-object p0
 
     .line 35
-    sget-object v1, Lcom/google/zxing/BarcodeFormat;->EAN_13:Lcom/google/zxing/BarcodeFormat;
+    sget-object v0, Lcom/google/zxing/BarcodeFormat;->EAN_13:Lcom/google/zxing/BarcodeFormat;
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    if-eq v0, v1, :cond_0
+    if-eq p0, v0, :cond_0
 
-    return-object v2
+    return-object v1
 
     .line 38
     :cond_0
     invoke-static {p1}, Lcom/google/zxing/client/result/ISBNResultParser;->getMassagedText(Lcom/google/zxing/Result;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
     .line 39
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
-    move-result v0
+    move-result p1
 
-    const/16 v1, 0xd
+    const/16 v0, 0xd
 
-    if-eq v0, v1, :cond_1
+    if-eq p1, v0, :cond_1
 
-    return-object v2
+    return-object v1
 
     .line 43
     :cond_1
-    const-string v0, "978"
+    const-string p1, "978"
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result p1
 
-    if-nez v0, :cond_2
+    if-nez p1, :cond_2
 
-    const-string v0, "979"
+    const-string p1, "979"
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result p1
 
-    if-nez v0, :cond_2
+    if-nez p1, :cond_2
 
-    return-object v2
+    return-object v1
 
     .line 47
     :cond_2
-    new-instance v0, Lcom/google/zxing/client/result/ISBNParsedResult;
+    new-instance p1, Lcom/google/zxing/client/result/ISBNParsedResult;
 
-    invoke-direct {v0, p1}, Lcom/google/zxing/client/result/ISBNParsedResult;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p0}, Lcom/google/zxing/client/result/ISBNParsedResult;-><init>(Ljava/lang/String;)V
 
-    return-object v0
+    return-object p1
 .end method
 
 .method public bridge synthetic parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/ParsedResult;
@@ -92,7 +92,7 @@
     .line 27
     invoke-virtual {p0, p1}, Lcom/google/zxing/client/result/ISBNResultParser;->parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/ISBNParsedResult;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

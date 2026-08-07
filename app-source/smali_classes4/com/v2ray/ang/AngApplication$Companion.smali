@@ -28,12 +28,12 @@
         "()Lcom/v2ray/ang/AngApplication;",
         "setApplication",
         "(Lcom/v2ray/ang/AngApplication;)V",
-        "app_playstoreRelease"
+        "v2rayNG:app_playstoreRelease"
     }
     k = 0x1
     mv = {
         0x2,
-        0x3,
+        0x4,
         0x0
     }
     xi = 0x30
@@ -44,7 +44,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 12
+    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -61,33 +61,33 @@
 
 # virtual methods
 .method public final getApplication()Lcom/v2ray/ang/AngApplication;
-    .locals 1
+    .locals 0
 
-    .line 13
-    sget-object v0, Lcom/v2ray/ang/AngApplication;->application:Lcom/v2ray/ang/AngApplication;
+    .line 14
+    sget-object p0, Lcom/v2ray/ang/AngApplication;->application:Lcom/v2ray/ang/AngApplication;
 
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
-    return-object v0
+    return-object p0
 
     :cond_0
-    const-string v0, "application"
+    const-string p0, "application"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
 
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final setApplication(Lcom/v2ray/ang/AngApplication;)V
-    .locals 1
+    .locals 0
 
-    const-string v0, "<set-?>"
+    const-string p0, "<set-?>"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 13
+    .line 14
     sput-object p1, Lcom/v2ray/ang/AngApplication;->application:Lcom/v2ray/ang/AngApplication;
 
     return-void

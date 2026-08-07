@@ -21,7 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 63
+    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,15 +32,15 @@
 .method public getAll(I)Landroidx/camera/core/impl/EncoderProfilesProxy;
     .locals 0
 
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public hasProfile(I)Z
     .locals 0
 
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method

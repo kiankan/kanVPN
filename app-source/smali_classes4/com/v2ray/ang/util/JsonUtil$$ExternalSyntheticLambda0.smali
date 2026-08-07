@@ -24,9 +24,9 @@
     .line 0
     check-cast p1, Ljava/lang/Double;
 
-    invoke-static {p1, p2, p3}, Lcom/v2ray/ang/util/JsonUtil;->$r8$lambda$_4FCjHNszV4YgxlQh00LwKWu5E0(Ljava/lang/Double;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;
+    invoke-static {p1, p2, p3}, Lcom/v2ray/ang/util/JsonUtil;->toJsonPretty$lambda$0(Ljava/lang/Double;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

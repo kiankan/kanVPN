@@ -62,7 +62,7 @@
 
     const/4 v1, 0x0
 
-    const-string v2, "version 1-9"
+    const-string/jumbo v2, "version 1-9"
 
     const-string v3, "SMALL"
 
@@ -75,7 +75,7 @@
 
     const/4 v1, 0x1
 
-    const-string v2, "version 10-26"
+    const-string/jumbo v2, "version 10-26"
 
     const-string v3, "MEDIUM"
 
@@ -88,7 +88,7 @@
 
     const/4 v1, 0x2
 
-    const-string v2, "version 27-40"
+    const-string/jumbo v2, "version 27-40"
 
     const-string v3, "LARGE"
 
@@ -179,10 +179,10 @@
 
 # virtual methods
 .method public toString()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 72
-    iget-object v0, p0, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$VersionSize;->description:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$VersionSize;->description:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method

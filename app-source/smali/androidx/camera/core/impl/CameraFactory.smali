@@ -2,10 +2,14 @@
 .super Ljava/lang/Object;
 .source "CameraFactory.java"
 
+# interfaces
+.implements Landroidx/camera/core/impl/CameraPresenceMonitor;
+
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroidx/camera/core/impl/CameraFactory$Interrogator;,
         Landroidx/camera/core/impl/CameraFactory$Provider;
     }
 .end annotation
@@ -35,4 +39,22 @@
 .end method
 
 .method public abstract getCameraManager()Ljava/lang/Object;
+.end method
+
+.method public abstract getCameraPresenceSource()Landroidx/camera/core/impl/Observable;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Landroidx/camera/core/impl/Observable<",
+            "Ljava/util/List<",
+            "Landroidx/camera/core/CameraIdentifier;",
+            ">;>;"
+        }
+    .end annotation
+.end method
+
+.method public shutdown()V
+    .locals 0
+
+    return-void
 .end method

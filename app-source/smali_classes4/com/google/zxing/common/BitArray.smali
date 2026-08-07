@@ -282,13 +282,13 @@
 
     .line 237
     :cond_2
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const-string p2, "Num bits must be between 0 and 32"
+    const-string p1, "Num bits must be between 0 and 32"
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method public clear()V
@@ -320,7 +320,7 @@
 .end method
 
 .method public clone()Lcom/google/zxing/common/BitArray;
-    .locals 3
+    .locals 2
 
     .line 356
     new-instance v0, Lcom/google/zxing/common/BitArray;
@@ -333,15 +333,15 @@
 
     check-cast v1, [I
 
-    iget v2, p0, Lcom/google/zxing/common/BitArray;->size:I
+    iget p0, p0, Lcom/google/zxing/common/BitArray;->size:I
 
-    invoke-direct {v0, v1, v2}, Lcom/google/zxing/common/BitArray;-><init>([II)V
+    invoke-direct {v0, v1, p0}, Lcom/google/zxing/common/BitArray;-><init>([II)V
 
     return-object v0
 .end method
 
 .method public bridge synthetic clone()Ljava/lang/Object;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/CloneNotSupportedException;
@@ -351,9 +351,9 @@
     .line 26
     invoke-virtual {p0}, Lcom/google/zxing/common/BitArray;->clone()Lcom/google/zxing/common/BitArray;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -379,82 +379,82 @@
 
     if-ne v0, v2, :cond_1
 
-    iget-object v0, p0, Lcom/google/zxing/common/BitArray;->bits:[I
+    iget-object p0, p0, Lcom/google/zxing/common/BitArray;->bits:[I
 
     iget-object p1, p1, Lcom/google/zxing/common/BitArray;->bits:[I
 
-    invoke-static {v0, p1}, Ljava/util/Arrays;->equals([I[I)Z
+    invoke-static {p0, p1}, Ljava/util/Arrays;->equals([I[I)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_1
+    if-eqz p0, :cond_1
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_1
     return v1
 .end method
 
 .method public flip(I)V
-    .locals 4
+    .locals 3
 
     .line 89
-    iget-object v0, p0, Lcom/google/zxing/common/BitArray;->bits:[I
+    iget-object p0, p0, Lcom/google/zxing/common/BitArray;->bits:[I
 
-    div-int/lit8 v1, p1, 0x20
+    div-int/lit8 v0, p1, 0x20
 
-    aget v2, v0, v1
+    aget v1, p0, v0
 
     and-int/lit8 p1, p1, 0x1f
 
-    const/4 v3, 0x1
+    const/4 v2, 0x1
 
-    shl-int p1, v3, p1
+    shl-int p1, v2, p1
 
-    xor-int/2addr p1, v2
+    xor-int/2addr p1, v1
 
-    aput p1, v0, v1
+    aput p1, p0, v0
 
     return-void
 .end method
 
 .method public get(I)Z
-    .locals 2
+    .locals 1
 
     .line 71
-    iget-object v0, p0, Lcom/google/zxing/common/BitArray;->bits:[I
+    iget-object p0, p0, Lcom/google/zxing/common/BitArray;->bits:[I
 
-    div-int/lit8 v1, p1, 0x20
+    div-int/lit8 v0, p1, 0x20
 
-    aget v0, v0, v1
+    aget p0, p0, v0
 
     and-int/lit8 p1, p1, 0x1f
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    shl-int p1, v1, p1
+    shl-int p1, v0, p1
 
-    and-int/2addr p1, v0
+    and-int/2addr p0, p1
 
-    if-eqz p1, :cond_0
+    if-eqz p0, :cond_0
 
-    return v1
+    return v0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method public getBitArray()[I
-    .locals 1
+    .locals 0
 
     .line 295
-    iget-object v0, p0, Lcom/google/zxing/common/BitArray;->bits:[I
+    iget-object p0, p0, Lcom/google/zxing/common/BitArray;->bits:[I
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getNextSet(I)I
@@ -499,9 +499,9 @@
     if-ne v0, v1, :cond_1
 
     .line 108
-    iget p1, p0, Lcom/google/zxing/common/BitArray;->size:I
+    iget p0, p0, Lcom/google/zxing/common/BitArray;->size:I
 
-    return p1
+    return p0
 
     .line 110
     :cond_1
@@ -520,13 +520,13 @@
     add-int/2addr v0, p1
 
     .line 113
-    iget p1, p0, Lcom/google/zxing/common/BitArray;->size:I
+    iget p0, p0, Lcom/google/zxing/common/BitArray;->size:I
 
-    invoke-static {v0, p1}, Ljava/lang/Math;->min(II)I
+    invoke-static {v0, p0}, Ljava/lang/Math;->min(II)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public getNextUnset(I)I
@@ -573,9 +573,9 @@
     if-ne v0, v1, :cond_1
 
     .line 131
-    iget p1, p0, Lcom/google/zxing/common/BitArray;->size:I
+    iget p0, p0, Lcom/google/zxing/common/BitArray;->size:I
 
-    return p1
+    return p0
 
     .line 133
     :cond_1
@@ -596,52 +596,52 @@
     add-int/2addr v0, p1
 
     .line 136
-    iget p1, p0, Lcom/google/zxing/common/BitArray;->size:I
+    iget p0, p0, Lcom/google/zxing/common/BitArray;->size:I
 
-    invoke-static {v0, p1}, Ljava/lang/Math;->min(II)I
+    invoke-static {v0, p0}, Ljava/lang/Math;->min(II)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public getSize()I
-    .locals 1
+    .locals 0
 
     .line 51
-    iget v0, p0, Lcom/google/zxing/common/BitArray;->size:I
+    iget p0, p0, Lcom/google/zxing/common/BitArray;->size:I
 
-    return v0
+    return p0
 .end method
 
 .method public getSizeInBytes()I
-    .locals 1
+    .locals 0
 
     .line 55
-    iget v0, p0, Lcom/google/zxing/common/BitArray;->size:I
+    iget p0, p0, Lcom/google/zxing/common/BitArray;->size:I
 
-    add-int/lit8 v0, v0, 0x7
+    add-int/lit8 p0, p0, 0x7
 
-    div-int/lit8 v0, v0, 0x8
+    div-int/lit8 p0, p0, 0x8
 
-    return v0
+    return p0
 .end method
 
 .method public hashCode()I
-    .locals 2
+    .locals 1
 
     .line 339
     iget v0, p0, Lcom/google/zxing/common/BitArray;->size:I
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lcom/google/zxing/common/BitArray;->bits:[I
+    iget-object p0, p0, Lcom/google/zxing/common/BitArray;->bits:[I
 
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([I)I
+    invoke-static {p0}, Ljava/util/Arrays;->hashCode([I)I
 
-    move-result v1
+    move-result p0
 
-    add-int/2addr v0, v1
+    add-int/2addr v0, p0
 
     return v0
 .end method
@@ -737,11 +737,11 @@
 
     .line 196
     :cond_6
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
+    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
 
-    throw p1
+    throw p0
 .end method
 
 .method public reverse()V
@@ -839,37 +839,37 @@
 .end method
 
 .method public set(I)V
-    .locals 4
+    .locals 3
 
     .line 80
-    iget-object v0, p0, Lcom/google/zxing/common/BitArray;->bits:[I
+    iget-object p0, p0, Lcom/google/zxing/common/BitArray;->bits:[I
 
-    div-int/lit8 v1, p1, 0x20
+    div-int/lit8 v0, p1, 0x20
 
-    aget v2, v0, v1
+    aget v1, p0, v0
 
     and-int/lit8 p1, p1, 0x1f
 
-    const/4 v3, 0x1
+    const/4 v2, 0x1
 
-    shl-int p1, v3, p1
+    shl-int p1, v2, p1
 
-    or-int/2addr p1, v2
+    or-int/2addr p1, v1
 
-    aput p1, v0, v1
+    aput p1, p0, v0
 
     return-void
 .end method
 
 .method public setBulk(II)V
-    .locals 1
+    .locals 0
 
     .line 147
-    iget-object v0, p0, Lcom/google/zxing/common/BitArray;->bits:[I
+    iget-object p0, p0, Lcom/google/zxing/common/BitArray;->bits:[I
 
     div-int/lit8 p1, p1, 0x20
 
-    aput p2, v0, p1
+    aput p2, p0, p1
 
     return-void
 .end method
@@ -953,11 +953,11 @@
 
     .line 158
     :cond_4
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
+    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
 
-    throw p1
+    throw p0
 .end method
 
 .method public toBytes(I[BII)V
@@ -1076,9 +1076,9 @@
     :cond_2
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public xor(Lcom/google/zxing/common/BitArray;)V
@@ -1121,11 +1121,11 @@
 
     .line 260
     :cond_1
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const-string v0, "Sizes don\'t match"
+    const-string p1, "Sizes don\'t match"
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method

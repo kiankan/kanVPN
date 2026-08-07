@@ -120,44 +120,44 @@
 .end method
 
 .method private canEncode(Ljava/lang/CharSequence;Lcom/google/zxing/oned/Code128Writer$MinimalEncoder$Charset;I)Z
-    .locals 7
+    .locals 6
 
     .line 475
     invoke-interface {p1, p3}, Ljava/lang/CharSequence;->charAt(I)C
 
-    move-result v0
+    move-result p0
 
     .line 476
     invoke-virtual {p2}, Lcom/google/zxing/oned/Code128Writer$MinimalEncoder$Charset;->ordinal()I
 
     move-result p2
 
-    const/16 v1, 0xf4
+    const/16 v0, 0xf4
 
-    const/16 v2, 0xf3
+    const/16 v1, 0xf3
 
-    const/16 v3, 0xf2
+    const/16 v2, 0xf2
 
-    const/16 v4, 0xf1
+    const/16 v3, 0xf1
 
-    const/4 v5, 0x0
+    const/4 v4, 0x0
 
-    const/4 v6, 0x1
+    const/4 v5, 0x1
 
     if-eqz p2, :cond_6
 
-    if-eq p2, v6, :cond_3
+    if-eq p2, v5, :cond_3
 
-    const/4 v1, 0x2
+    const/4 v0, 0x2
 
-    if-eq p2, v1, :cond_0
+    if-eq p2, v0, :cond_0
 
-    return v5
+    return v4
 
     :cond_0
-    if-eq v0, v4, :cond_2
+    if-eq p0, v3, :cond_2
 
-    add-int/2addr p3, v6
+    add-int/2addr p3, v5
 
     .line 488
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
@@ -167,87 +167,87 @@
     if-ge p3, p2, :cond_1
 
     .line 489
-    invoke-static {v0}, Lcom/google/zxing/oned/Code128Writer$MinimalEncoder;->isDigit(C)Z
+    invoke-static {p0}, Lcom/google/zxing/oned/Code128Writer$MinimalEncoder;->isDigit(C)Z
 
-    move-result p2
+    move-result p0
 
-    if-eqz p2, :cond_1
+    if-eqz p0, :cond_1
 
     .line 490
     invoke-interface {p1, p3}, Ljava/lang/CharSequence;->charAt(I)C
 
-    move-result p1
+    move-result p0
 
-    invoke-static {p1}, Lcom/google/zxing/oned/Code128Writer$MinimalEncoder;->isDigit(C)Z
+    invoke-static {p0}, Lcom/google/zxing/oned/Code128Writer$MinimalEncoder;->isDigit(C)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_1
+    if-eqz p0, :cond_1
 
     goto :goto_0
 
     :cond_1
-    return v5
+    return v4
 
     :cond_2
     :goto_0
-    return v6
+    return v5
 
     :cond_3
-    if-eq v0, v4, :cond_5
+    if-eq p0, v3, :cond_5
 
-    if-eq v0, v3, :cond_5
+    if-eq p0, v2, :cond_5
 
-    if-eq v0, v2, :cond_5
+    if-eq p0, v1, :cond_5
 
-    if-eq v0, v1, :cond_5
+    if-eq p0, v0, :cond_5
 
     .line 482
     const-string p1, " !\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\u007f\u00ff"
 
     .line 486
-    invoke-virtual {p1, v0}, Ljava/lang/String;->indexOf(I)I
+    invoke-virtual {p1, p0}, Ljava/lang/String;->indexOf(I)I
 
-    move-result p1
+    move-result p0
 
-    if-ltz p1, :cond_4
+    if-ltz p0, :cond_4
 
     goto :goto_1
 
     :cond_4
-    return v5
+    return v4
 
     :cond_5
     :goto_1
-    return v6
+    return v5
 
     :cond_6
-    if-eq v0, v4, :cond_8
+    if-eq p0, v3, :cond_8
 
-    if-eq v0, v3, :cond_8
+    if-eq p0, v2, :cond_8
 
-    if-eq v0, v2, :cond_8
+    if-eq p0, v1, :cond_8
 
-    if-eq v0, v1, :cond_8
+    if-eq p0, v0, :cond_8
 
     .line 477
     const-string p1, " !\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_\u0000\u0001\u0002\u0003\u0004\u0005\u0006\u0007\u0008\t\n\u000b\u000c\r\u000e\u000f\u0010\u0011\u0012\u0013\u0014\u0015\u0016\u0017\u0018\u0019\u001a\u001b\u001c\u001d\u001e\u001f\u00ff"
 
     .line 481
-    invoke-virtual {p1, v0}, Ljava/lang/String;->indexOf(I)I
+    invoke-virtual {p1, p0}, Ljava/lang/String;->indexOf(I)I
 
-    move-result p1
+    move-result p0
 
-    if-ltz p1, :cond_7
+    if-ltz p0, :cond_7
 
     goto :goto_2
 
     :cond_7
-    return v5
+    return v4
 
     :cond_8
     :goto_2
-    return v6
+    return v5
 .end method
 
 .method private encode(Ljava/lang/CharSequence;Lcom/google/zxing/oned/Code128Writer$MinimalEncoder$Charset;I)I
@@ -488,41 +488,41 @@
     aput v8, p1, p3
 
     .line 559
-    iget-object p1, p0, Lcom/google/zxing/oned/Code128Writer$MinimalEncoder;->minPath:[[Lcom/google/zxing/oned/Code128Writer$MinimalEncoder$Latch;
+    iget-object p0, p0, Lcom/google/zxing/oned/Code128Writer$MinimalEncoder;->minPath:[[Lcom/google/zxing/oned/Code128Writer$MinimalEncoder$Latch;
 
     invoke-virtual {p2}, Lcom/google/zxing/oned/Code128Writer$MinimalEncoder$Charset;->ordinal()I
 
-    move-result p2
+    move-result p1
 
-    aget-object p1, p1, p2
+    aget-object p0, p0, p1
 
-    aput-object v0, p1, p3
+    aput-object v0, p0, p3
 
     return v8
 
     .line 556
     :cond_c
-    new-instance p2, Ljava/lang/IllegalArgumentException;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    const-string v1, "Bad character in input: ASCII value="
+    const-string v0, "Bad character in input: ASCII value="
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-interface {p1, p3}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p2
+    throw p0
 .end method
 
 .method private encode(Ljava/lang/String;)[Z
@@ -849,13 +849,13 @@
     iput-object p1, p0, Lcom/google/zxing/oned/Code128Writer$MinimalEncoder;->minPath:[[Lcom/google/zxing/oned/Code128Writer$MinimalEncoder$Latch;
 
     .line 455
-    aget p1, v4, v0
+    aget p0, v4, v0
 
-    invoke-static {v2, p1}, Lcom/google/zxing/oned/Code128Writer;->produceResult(Ljava/util/Collection;I)[Z
+    invoke-static {v2, p0}, Lcom/google/zxing/oned/Code128Writer;->produceResult(Ljava/util/Collection;I)[Z
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     nop
 

@@ -6,7 +6,7 @@
     </string-array>
     <string-array name="mode_entries">
         <item>VPN</item>
-        <item>僅 Proxy</item>
+        <item>僅代理</item>
     </string-array>
     <string-array name="mux_xudp_quic_entries">
         <item>不代理</item>
@@ -21,6 +21,8 @@
     <string-array name="policy_group_type">
         <item>最低延遲</item>
         <item>最少卡頓</item>
+        <item>隨機選擇</item>
+        <item>輪詢</item>
     </string-array>
     <string-array name="preset_rulesets">
         <item>繞過大陸 (Whitelist)</item>
@@ -28,18 +30,6 @@
         <item>全域 (Global)</item>
         <item>伊朗 (Iran)</item>
         <item>俄羅斯白名單 (Russia Whitelist)</item>
-    </string-array>
-    <string-array name="share_method">
-        <item>二維碼</item>
-        <item>匯出至剪貼簿</item>
-        <item>匯出完整設定至剪貼簿</item>
-    </string-array>
-    <string-array name="share_method_more">
-        <item>QR Code</item>
-        <item>匯出至剪貼簿</item>
-        <item>匯出完整設定至剪貼簿</item>
-        <item>編輯</item>
-        <item>刪除</item>
     </string-array>
     <string-array name="share_sub_method">
         <item>二維碼</item>

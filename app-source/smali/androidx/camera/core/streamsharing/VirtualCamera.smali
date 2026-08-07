@@ -24,16 +24,16 @@
 .method constructor <init>(Landroidx/camera/core/impl/CameraInternal;Landroidx/camera/core/UseCase$StateChangeCallback;Landroidx/camera/core/streamsharing/StreamSharing$Control;)V
     .locals 1
 
-    .line 56
+    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
+    .line 55
     iput-object p1, p0, Landroidx/camera/core/streamsharing/VirtualCamera;->mParentCamera:Landroidx/camera/core/impl/CameraInternal;
 
-    .line 58
+    .line 56
     iput-object p2, p0, Landroidx/camera/core/streamsharing/VirtualCamera;->mStateChangeCallback:Landroidx/camera/core/UseCase$StateChangeCallback;
 
-    .line 59
+    .line 57
     new-instance p2, Landroidx/camera/core/streamsharing/VirtualCameraControl;
 
     invoke-interface {p1}, Landroidx/camera/core/impl/CameraInternal;->getCameraControlInternal()Landroidx/camera/core/impl/CameraControlInternal;
@@ -44,7 +44,7 @@
 
     iput-object p2, p0, Landroidx/camera/core/streamsharing/VirtualCamera;->mVirtualCameraControl:Landroidx/camera/core/streamsharing/VirtualCameraControl;
 
-    .line 61
+    .line 59
     new-instance p2, Landroidx/camera/core/streamsharing/VirtualCameraInfo;
 
     invoke-interface {p1}, Landroidx/camera/core/impl/CameraInternal;->getCameraInfoInternal()Landroidx/camera/core/impl/CameraInfoInternal;
@@ -61,7 +61,7 @@
 
 # virtual methods
 .method public attachUseCases(Ljava/util/Collection;)V
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -71,31 +71,31 @@
         }
     .end annotation
 
-    .line 146
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    .line 140
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    const-string v0, "Operation not supported by VirtualCamera."
+    const-string p1, "Operation not supported by VirtualCamera."
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method public close()V
-    .locals 2
+    .locals 1
 
-    .line 135
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    .line 130
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    const-string v1, "Operation not supported by VirtualCamera."
+    const-string v0, "Operation not supported by VirtualCamera."
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw v0
+    throw p0
 .end method
 
 .method public detachUseCases(Ljava/util/Collection;)V
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -105,36 +105,36 @@
         }
     .end annotation
 
-    .line 151
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    .line 145
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    const-string v0, "Operation not supported by VirtualCamera."
+    const-string p1, "Operation not supported by VirtualCamera."
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method public getCameraControlInternal()Landroidx/camera/core/impl/CameraControlInternal;
-    .locals 1
+    .locals 0
 
-    .line 111
-    iget-object v0, p0, Landroidx/camera/core/streamsharing/VirtualCamera;->mVirtualCameraControl:Landroidx/camera/core/streamsharing/VirtualCameraControl;
+    .line 108
+    iget-object p0, p0, Landroidx/camera/core/streamsharing/VirtualCamera;->mVirtualCameraControl:Landroidx/camera/core/streamsharing/VirtualCameraControl;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getCameraInfoInternal()Landroidx/camera/core/impl/CameraInfoInternal;
-    .locals 1
+    .locals 0
 
-    .line 117
-    iget-object v0, p0, Landroidx/camera/core/streamsharing/VirtualCamera;->mVirtualCameraInfo:Landroidx/camera/core/streamsharing/VirtualCameraInfo;
+    .line 113
+    iget-object p0, p0, Landroidx/camera/core/streamsharing/VirtualCamera;->mVirtualCameraInfo:Landroidx/camera/core/streamsharing/VirtualCameraInfo;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getCameraState()Landroidx/camera/core/impl/Observable;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -144,95 +144,95 @@
         }
     .end annotation
 
-    .line 123
-    iget-object v0, p0, Landroidx/camera/core/streamsharing/VirtualCamera;->mParentCamera:Landroidx/camera/core/impl/CameraInternal;
+    .line 118
+    iget-object p0, p0, Landroidx/camera/core/streamsharing/VirtualCamera;->mParentCamera:Landroidx/camera/core/impl/CameraInternal;
 
-    invoke-interface {v0}, Landroidx/camera/core/impl/CameraInternal;->getCameraState()Landroidx/camera/core/impl/Observable;
+    invoke-interface {p0}, Landroidx/camera/core/impl/CameraInternal;->getCameraState()Landroidx/camera/core/impl/Observable;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getHasTransform()Z
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public onUseCaseActive(Landroidx/camera/core/UseCase;)V
-    .locals 1
+    .locals 0
 
-    .line 76
+    .line 74
     invoke-static {}, Landroidx/camera/core/impl/utils/Threads;->checkMainThread()V
 
-    .line 77
-    iget-object v0, p0, Landroidx/camera/core/streamsharing/VirtualCamera;->mStateChangeCallback:Landroidx/camera/core/UseCase$StateChangeCallback;
+    .line 75
+    iget-object p0, p0, Landroidx/camera/core/streamsharing/VirtualCamera;->mStateChangeCallback:Landroidx/camera/core/UseCase$StateChangeCallback;
 
-    invoke-interface {v0, p1}, Landroidx/camera/core/UseCase$StateChangeCallback;->onUseCaseActive(Landroidx/camera/core/UseCase;)V
+    invoke-interface {p0, p1}, Landroidx/camera/core/UseCase$StateChangeCallback;->onUseCaseActive(Landroidx/camera/core/UseCase;)V
 
     return-void
 .end method
 
 .method public onUseCaseInactive(Landroidx/camera/core/UseCase;)V
-    .locals 1
+    .locals 0
 
-    .line 83
+    .line 81
     invoke-static {}, Landroidx/camera/core/impl/utils/Threads;->checkMainThread()V
 
-    .line 84
-    iget-object v0, p0, Landroidx/camera/core/streamsharing/VirtualCamera;->mStateChangeCallback:Landroidx/camera/core/UseCase$StateChangeCallback;
+    .line 82
+    iget-object p0, p0, Landroidx/camera/core/streamsharing/VirtualCamera;->mStateChangeCallback:Landroidx/camera/core/UseCase$StateChangeCallback;
 
-    invoke-interface {v0, p1}, Landroidx/camera/core/UseCase$StateChangeCallback;->onUseCaseInactive(Landroidx/camera/core/UseCase;)V
+    invoke-interface {p0, p1}, Landroidx/camera/core/UseCase$StateChangeCallback;->onUseCaseInactive(Landroidx/camera/core/UseCase;)V
 
     return-void
 .end method
 
 .method public onUseCaseReset(Landroidx/camera/core/UseCase;)V
-    .locals 1
+    .locals 0
 
-    .line 97
+    .line 95
     invoke-static {}, Landroidx/camera/core/impl/utils/Threads;->checkMainThread()V
 
-    .line 98
-    iget-object v0, p0, Landroidx/camera/core/streamsharing/VirtualCamera;->mStateChangeCallback:Landroidx/camera/core/UseCase$StateChangeCallback;
+    .line 96
+    iget-object p0, p0, Landroidx/camera/core/streamsharing/VirtualCamera;->mStateChangeCallback:Landroidx/camera/core/UseCase$StateChangeCallback;
 
-    invoke-interface {v0, p1}, Landroidx/camera/core/UseCase$StateChangeCallback;->onUseCaseReset(Landroidx/camera/core/UseCase;)V
+    invoke-interface {p0, p1}, Landroidx/camera/core/UseCase$StateChangeCallback;->onUseCaseReset(Landroidx/camera/core/UseCase;)V
 
     return-void
 .end method
 
 .method public onUseCaseUpdated(Landroidx/camera/core/UseCase;)V
-    .locals 1
+    .locals 0
 
-    .line 90
+    .line 88
     invoke-static {}, Landroidx/camera/core/impl/utils/Threads;->checkMainThread()V
 
-    .line 91
-    iget-object v0, p0, Landroidx/camera/core/streamsharing/VirtualCamera;->mStateChangeCallback:Landroidx/camera/core/UseCase$StateChangeCallback;
+    .line 89
+    iget-object p0, p0, Landroidx/camera/core/streamsharing/VirtualCamera;->mStateChangeCallback:Landroidx/camera/core/UseCase$StateChangeCallback;
 
-    invoke-interface {v0, p1}, Landroidx/camera/core/UseCase$StateChangeCallback;->onUseCaseUpdated(Landroidx/camera/core/UseCase;)V
+    invoke-interface {p0, p1}, Landroidx/camera/core/UseCase$StateChangeCallback;->onUseCaseUpdated(Landroidx/camera/core/UseCase;)V
 
     return-void
 .end method
 
 .method public open()V
-    .locals 2
+    .locals 1
 
-    .line 130
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    .line 125
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    const-string v1, "Operation not supported by VirtualCamera."
+    const-string v0, "Operation not supported by VirtualCamera."
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw v0
+    throw p0
 .end method
 
 .method public release()Lcom/google/common/util/concurrent/ListenableFuture;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -242,23 +242,23 @@
         }
     .end annotation
 
-    .line 141
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    .line 135
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    const-string v1, "Operation not supported by VirtualCamera."
+    const-string v0, "Operation not supported by VirtualCamera."
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw v0
+    throw p0
 .end method
 
 .method setRotationDegrees(I)V
-    .locals 1
+    .locals 0
 
-    .line 68
-    iget-object v0, p0, Landroidx/camera/core/streamsharing/VirtualCamera;->mVirtualCameraInfo:Landroidx/camera/core/streamsharing/VirtualCameraInfo;
+    .line 66
+    iget-object p0, p0, Landroidx/camera/core/streamsharing/VirtualCamera;->mVirtualCameraInfo:Landroidx/camera/core/streamsharing/VirtualCameraInfo;
 
-    invoke-virtual {v0, p1}, Landroidx/camera/core/streamsharing/VirtualCameraInfo;->setVirtualCameraRotationDegrees(I)V
+    invoke-virtual {p0, p1}, Landroidx/camera/core/streamsharing/VirtualCameraInfo;->setVirtualCameraRotationDegrees(I)V
 
     return-void
 .end method

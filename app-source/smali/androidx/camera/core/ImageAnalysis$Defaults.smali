@@ -44,7 +44,7 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .line 1028
+    .line 1133
     new-instance v0, Landroid/util/Size;
 
     const/16 v1, 0x280
@@ -55,19 +55,19 @@
 
     sput-object v0, Landroidx/camera/core/ImageAnalysis$Defaults;->DEFAULT_TARGET_RESOLUTION:Landroid/util/Size;
 
-    .line 1039
+    .line 1144
     sget-object v1, Landroidx/camera/core/DynamicRange;->SDR:Landroidx/camera/core/DynamicRange;
 
     sput-object v1, Landroidx/camera/core/ImageAnalysis$Defaults;->DEFAULT_DYNAMIC_RANGE:Landroidx/camera/core/DynamicRange;
 
-    .line 1041
+    .line 1146
     new-instance v2, Landroidx/camera/core/resolutionselector/ResolutionSelector$Builder;
 
     invoke-direct {v2}, Landroidx/camera/core/resolutionselector/ResolutionSelector$Builder;-><init>()V
 
     sget-object v3, Landroidx/camera/core/resolutionselector/AspectRatioStrategy;->RATIO_4_3_FALLBACK_AUTO_STRATEGY:Landroidx/camera/core/resolutionselector/AspectRatioStrategy;
 
-    .line 1042
+    .line 1147
     invoke-virtual {v2, v3}, Landroidx/camera/core/resolutionselector/ResolutionSelector$Builder;->setAspectRatioStrategy(Landroidx/camera/core/resolutionselector/AspectRatioStrategy;)Landroidx/camera/core/resolutionselector/ResolutionSelector$Builder;
 
     move-result-object v2
@@ -80,51 +80,51 @@
 
     invoke-direct {v3, v4, v5}, Landroidx/camera/core/resolutionselector/ResolutionStrategy;-><init>(Landroid/util/Size;I)V
 
-    .line 1044
+    .line 1149
     invoke-virtual {v2, v3}, Landroidx/camera/core/resolutionselector/ResolutionSelector$Builder;->setResolutionStrategy(Landroidx/camera/core/resolutionselector/ResolutionStrategy;)Landroidx/camera/core/resolutionselector/ResolutionSelector$Builder;
 
     move-result-object v2
 
-    .line 1046
+    .line 1151
     invoke-virtual {v2}, Landroidx/camera/core/resolutionselector/ResolutionSelector$Builder;->build()Landroidx/camera/core/resolutionselector/ResolutionSelector;
 
     move-result-object v2
 
     sput-object v2, Landroidx/camera/core/ImageAnalysis$Defaults;->DEFAULT_RESOLUTION_SELECTOR:Landroidx/camera/core/resolutionselector/ResolutionSelector;
 
-    .line 1051
+    .line 1156
     new-instance v3, Landroidx/camera/core/ImageAnalysis$Builder;
 
     invoke-direct {v3}, Landroidx/camera/core/ImageAnalysis$Builder;-><init>()V
 
-    .line 1052
+    .line 1157
     invoke-virtual {v3, v0}, Landroidx/camera/core/ImageAnalysis$Builder;->setDefaultResolution(Landroid/util/Size;)Landroidx/camera/core/ImageAnalysis$Builder;
 
     move-result-object v0
 
-    .line 1053
+    .line 1158
     invoke-virtual {v0, v5}, Landroidx/camera/core/ImageAnalysis$Builder;->setSurfaceOccupancyPriority(I)Landroidx/camera/core/ImageAnalysis$Builder;
 
     move-result-object v0
 
     const/4 v3, 0x0
 
-    .line 1054
+    .line 1159
     invoke-virtual {v0, v3}, Landroidx/camera/core/ImageAnalysis$Builder;->setTargetAspectRatio(I)Landroidx/camera/core/ImageAnalysis$Builder;
 
     move-result-object v0
 
-    .line 1055
+    .line 1160
     invoke-virtual {v0, v2}, Landroidx/camera/core/ImageAnalysis$Builder;->setResolutionSelector(Landroidx/camera/core/resolutionselector/ResolutionSelector;)Landroidx/camera/core/ImageAnalysis$Builder;
 
     move-result-object v0
 
-    .line 1056
+    .line 1161
     invoke-virtual {v0, v1}, Landroidx/camera/core/ImageAnalysis$Builder;->setDynamicRange(Landroidx/camera/core/DynamicRange;)Landroidx/camera/core/ImageAnalysis$Builder;
 
     move-result-object v0
 
-    .line 1058
+    .line 1163
     invoke-virtual {v0}, Landroidx/camera/core/ImageAnalysis$Builder;->getUseCaseConfig()Landroidx/camera/core/impl/ImageAnalysisConfig;
 
     move-result-object v0
@@ -137,7 +137,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1027
+    .line 1132
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -146,21 +146,21 @@
 
 # virtual methods
 .method public bridge synthetic getConfig()Landroidx/camera/core/impl/Config;
-    .locals 1
+    .locals 0
 
-    .line 1026
+    .line 1131
     invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$Defaults;->getConfig()Landroidx/camera/core/impl/ImageAnalysisConfig;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getConfig()Landroidx/camera/core/impl/ImageAnalysisConfig;
-    .locals 1
+    .locals 0
 
-    .line 1064
-    sget-object v0, Landroidx/camera/core/ImageAnalysis$Defaults;->DEFAULT_CONFIG:Landroidx/camera/core/impl/ImageAnalysisConfig;
+    .line 1168
+    sget-object p0, Landroidx/camera/core/ImageAnalysis$Defaults;->DEFAULT_CONFIG:Landroidx/camera/core/impl/ImageAnalysisConfig;
 
-    return-object v0
+    return-object p0
 .end method

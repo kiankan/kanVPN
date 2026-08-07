@@ -132,17 +132,17 @@
 
     .line 411
     :cond_1
-    new-instance p0, Lj$/time/DateTimeException;
+    const-string p0, "Instant exceeds minimum or maximum instant"
 
-    const-string p1, "Instant exceeds minimum or maximum instant"
+    invoke-static {p0}, Lj$/time/Year$3;->m(Ljava/lang/String;)V
 
-    invoke-direct {p0, p1}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
+    const/4 p0, 0x0
 
-    throw p0
+    return-object p0
 .end method
 
 .method public static from(Lj$/time/temporal/TemporalAccessor;)Lj$/time/Instant;
-    .locals 5
+    .locals 4
 
     .line 368
     instance-of v0, p0, Lj$/time/Instant;
@@ -189,41 +189,22 @@
     :catch_0
     move-exception v0
 
-    .line 377
-    new-instance v1, Lj$/time/DateTimeException;
-
     .line 378
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    const-string v2, "Unable to obtain Instant from TemporalAccessor: "
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-static {v2, p0, v1, v0}, Lj$/time/Instant$2;->m(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Throwable;)V
 
-    const-string v4, "Unable to obtain Instant from TemporalAccessor: "
+    const/4 p0, 0x0
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, " of type "
-
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v1, p0, v0}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v1
+    return-object p0
 .end method
 
 .method public static now()Lj$/time/Instant;
@@ -247,12 +228,12 @@
     const/16 v0, 0x3e8
 
     .line 344
-    invoke-static {p0, p1, v0}, Lj$/time/DesugarLocalDate$$ExternalSyntheticBackport0;->m(JI)J
+    invoke-static {p0, p1, v0}, Lj$/time/DesugarLocalDate$0;->m(JI)J
 
     move-result-wide v1
 
     .line 345
-    invoke-static {p0, p1, v0}, Lj$/time/DesugarLocalTime$$ExternalSyntheticBackport0;->m(JI)I
+    invoke-static {p0, p1, v0}, Lj$/time/DesugarLocalTime$0;->m(JI)I
 
     move-result p0
 
@@ -262,6 +243,19 @@
 
     .line 346
     invoke-static {v1, v2, p0}, Lj$/time/Instant;->create(JI)Lj$/time/Instant;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static ofEpochSecond(J)Lj$/time/Instant;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 304
+    invoke-static {p0, p1, v0}, Lj$/time/Instant;->create(JI)Lj$/time/Instant;
 
     move-result-object p0
 
@@ -331,18 +325,18 @@
     rem-long/2addr p3, v0
 
     .line 928
-    iget v0, p0, Lj$/time/Instant;->nanos:I
+    iget p0, p0, Lj$/time/Instant;->nanos:I
 
-    int-to-long v0, v0
+    int-to-long v0, p0
 
     add-long/2addr v0, p3
 
     .line 929
     invoke-static {p1, p2, v0, v1}, Lj$/time/Instant;->ofEpochSecond(JJ)Lj$/time/Instant;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method static readExternal(Ljava/io/DataInput;)Lj$/time/Instant;
@@ -369,16 +363,16 @@
 .end method
 
 .method private readObject(Ljava/io/ObjectInputStream;)V
-    .locals 1
+    .locals 0
 
     .line 1357
-    new-instance p1, Ljava/io/InvalidObjectException;
+    new-instance p0, Ljava/io/InvalidObjectException;
 
-    const-string v0, "Deserialization via serialization delegate"
+    const-string p1, "Deserialization via serialization delegate"
 
-    invoke-direct {p1, v0}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method private writeReplace()Ljava/lang/Object;
@@ -410,15 +404,26 @@
 
     sget-object v0, Lj$/time/temporal/ChronoField;->NANO_OF_SECOND:Lj$/time/temporal/ChronoField;
 
-    iget v1, p0, Lj$/time/Instant;->nanos:I
+    iget p0, p0, Lj$/time/Instant;->nanos:I
 
-    int-to-long v1, v1
+    int-to-long v1, p0
 
     invoke-interface {p1, v0, v1, v2}, Lj$/time/temporal/Temporal;->with(Lj$/time/temporal/TemporalField;J)Lj$/time/temporal/Temporal;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
+.end method
+
+.method public atZone(Lj$/time/ZoneId;)Lj$/time/ZonedDateTime;
+    .locals 0
+
+    .line 1213
+    invoke-static {p0, p1}, Lj$/time/ZonedDateTime;->ofInstant(Lj$/time/Instant;Lj$/time/ZoneId;)Lj$/time/ZonedDateTime;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method public compareTo(Lj$/time/Instant;)I
@@ -439,13 +444,13 @@
 
     .line 1259
     :cond_0
-    iget v0, p0, Lj$/time/Instant;->nanos:I
+    iget p0, p0, Lj$/time/Instant;->nanos:I
 
     iget p1, p1, Lj$/time/Instant;->nanos:I
 
-    sub-int/2addr v0, p1
+    sub-int/2addr p0, p1
 
-    return v0
+    return p0
 .end method
 
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
@@ -456,9 +461,9 @@
 
     invoke-virtual {p0, p1}, Lj$/time/Instant;->compareTo(Lj$/time/Instant;)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -490,11 +495,11 @@
 
     if-nez v1, :cond_1
 
-    iget v1, p0, Lj$/time/Instant;->nanos:I
+    iget p0, p0, Lj$/time/Instant;->nanos:I
 
     iget p1, p1, Lj$/time/Instant;->nanos:I
 
-    if-ne v1, p1, :cond_1
+    if-ne p0, p1, :cond_1
 
     return v0
 
@@ -551,49 +556,37 @@
 
     .line 566
     :goto_0
-    new-instance v0, Lj$/time/temporal/UnsupportedTemporalTypeException;
+    const-string p0, "Unsupported field: "
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-static {p0, p1}, Lj$/time/Year$2;->m(Ljava/lang/String;Ljava/lang/Object;)V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 p0, 0x0
 
-    const-string v2, "Unsupported field: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Lj$/time/temporal/UnsupportedTemporalTypeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return p0
 
     .line 563
     :cond_1
-    iget p1, p0, Lj$/time/Instant;->nanos:I
+    iget p0, p0, Lj$/time/Instant;->nanos:I
 
-    const v0, 0xf4240
+    const p1, 0xf4240
 
-    div-int/2addr p1, v0
+    div-int/2addr p0, p1
 
-    return p1
+    return p0
 
     .line 562
     :cond_2
-    iget p1, p0, Lj$/time/Instant;->nanos:I
+    iget p0, p0, Lj$/time/Instant;->nanos:I
 
-    div-int/lit16 p1, p1, 0x3e8
+    div-int/lit16 p0, p0, 0x3e8
 
-    return p1
+    return p0
 
     .line 561
     :cond_3
-    iget p1, p0, Lj$/time/Instant;->nanos:I
+    iget p0, p0, Lj$/time/Instant;->nanos:I
 
-    return p1
+    return p0
 
     .line 568
     :cond_4
@@ -607,9 +600,9 @@
 
     invoke-virtual {v0, v1, v2, p1}, Lj$/time/temporal/ValueRange;->checkValidIntValue(JLj$/time/temporal/TemporalField;)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public getEpochSecond()J
@@ -622,7 +615,7 @@
 .end method
 
 .method public getLong(Lj$/time/temporal/TemporalField;)J
-    .locals 3
+    .locals 2
 
     .line 596
     instance-of v0, p1, Lj$/time/temporal/ChronoField;
@@ -659,75 +652,66 @@
     if-ne v0, v1, :cond_0
 
     .line 601
-    iget-wide v0, p0, Lj$/time/Instant;->seconds:J
+    iget-wide p0, p0, Lj$/time/Instant;->seconds:J
 
-    return-wide v0
+    return-wide p0
 
     .line 603
     :cond_0
-    new-instance v0, Lj$/time/temporal/UnsupportedTemporalTypeException;
+    const-string p0, "Unsupported field: "
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-static {p0, p1}, Lj$/time/Year$2;->m(Ljava/lang/String;Ljava/lang/Object;)V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const-wide/16 p0, 0x0
 
-    const-string v2, "Unsupported field: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Lj$/time/temporal/UnsupportedTemporalTypeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-wide p0
 
     .line 600
     :cond_1
-    iget p1, p0, Lj$/time/Instant;->nanos:I
+    iget p0, p0, Lj$/time/Instant;->nanos:I
 
-    const v0, 0xf4240
+    const p1, 0xf4240
 
-    div-int/2addr p1, v0
+    div-int/2addr p0, p1
 
-    :goto_0
-    int-to-long v0, p1
+    int-to-long p0, p0
 
-    return-wide v0
+    return-wide p0
 
     .line 599
     :cond_2
-    iget p1, p0, Lj$/time/Instant;->nanos:I
+    iget p0, p0, Lj$/time/Instant;->nanos:I
 
-    div-int/lit16 p1, p1, 0x3e8
+    div-int/lit16 p0, p0, 0x3e8
 
-    goto :goto_0
+    int-to-long p0, p0
+
+    return-wide p0
 
     .line 598
     :cond_3
-    iget p1, p0, Lj$/time/Instant;->nanos:I
+    iget p0, p0, Lj$/time/Instant;->nanos:I
 
-    goto :goto_0
+    int-to-long p0, p0
+
+    return-wide p0
 
     .line 605
     :cond_4
     invoke-interface {p1, p0}, Lj$/time/temporal/TemporalField;->getFrom(Lj$/time/temporal/TemporalAccessor;)J
 
-    move-result-wide v0
+    move-result-wide p0
 
-    return-wide v0
+    return-wide p0
 .end method
 
 .method public getNano()I
-    .locals 1
+    .locals 0
 
     .line 632
-    iget v0, p0, Lj$/time/Instant;->nanos:I
+    iget p0, p0, Lj$/time/Instant;->nanos:I
 
-    return v0
+    return p0
 .end method
 
 .method public hashCode()I
@@ -744,11 +728,11 @@
 
     long-to-int v0, v0
 
-    iget v1, p0, Lj$/time/Instant;->nanos:I
+    iget p0, p0, Lj$/time/Instant;->nanos:I
 
-    mul-int/lit8 v1, v1, 0x33
+    mul-int/lit8 p0, p0, 0x33
 
-    add-int/2addr v0, v1
+    add-int/2addr v0, p0
 
     return v0
 .end method
@@ -766,21 +750,21 @@
     if-eqz v0, :cond_2
 
     .line 459
-    sget-object v0, Lj$/time/temporal/ChronoField;->INSTANT_SECONDS:Lj$/time/temporal/ChronoField;
+    sget-object p0, Lj$/time/temporal/ChronoField;->INSTANT_SECONDS:Lj$/time/temporal/ChronoField;
 
-    if-eq p1, v0, :cond_1
+    if-eq p1, p0, :cond_1
 
-    sget-object v0, Lj$/time/temporal/ChronoField;->NANO_OF_SECOND:Lj$/time/temporal/ChronoField;
+    sget-object p0, Lj$/time/temporal/ChronoField;->NANO_OF_SECOND:Lj$/time/temporal/ChronoField;
 
-    if-eq p1, v0, :cond_1
+    if-eq p1, p0, :cond_1
 
-    sget-object v0, Lj$/time/temporal/ChronoField;->MICRO_OF_SECOND:Lj$/time/temporal/ChronoField;
+    sget-object p0, Lj$/time/temporal/ChronoField;->MICRO_OF_SECOND:Lj$/time/temporal/ChronoField;
 
-    if-eq p1, v0, :cond_1
+    if-eq p1, p0, :cond_1
 
-    sget-object v0, Lj$/time/temporal/ChronoField;->MILLI_OF_SECOND:Lj$/time/temporal/ChronoField;
+    sget-object p0, Lj$/time/temporal/ChronoField;->MILLI_OF_SECOND:Lj$/time/temporal/ChronoField;
 
-    if-ne p1, v0, :cond_0
+    if-ne p1, p0, :cond_0
 
     goto :goto_0
 
@@ -797,9 +781,9 @@
     .line 461
     invoke-interface {p1, p0}, Lj$/time/temporal/TemporalField;->isSupportedBy(Lj$/time/temporal/TemporalAccessor;)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_3
+    if-eqz p0, :cond_3
 
     return v1
 
@@ -821,24 +805,21 @@
     .line 979
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/Instant;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/Instant;
 
-    move-result-object p1
+    move-result-object p0
 
-    const-wide/16 v0, 0x1
+    const-wide/16 p1, 0x1
 
-    invoke-virtual {p1, v0, v1, p3}, Lj$/time/Instant;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/Instant;
+    :goto_0
+    invoke-virtual {p0, p1, p2, p3}, Lj$/time/Instant;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/Instant;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     :cond_0
     neg-long p1, p1
 
-    invoke-virtual {p0, p1, p2, p3}, Lj$/time/Instant;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/Instant;
-
-    move-result-object p1
-
-    return-object p1
+    goto :goto_0
 .end method
 
 .method public bridge synthetic minus(JLj$/time/temporal/TemporalUnit;)Lj$/time/temporal/Temporal;
@@ -847,9 +828,9 @@
     .line 207
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/Instant;->minus(JLj$/time/temporal/TemporalUnit;)Lj$/time/Instant;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/Instant;
@@ -876,97 +857,85 @@
     packed-switch v0, :pswitch_data_0
 
     .line 862
-    new-instance p1, Lj$/time/temporal/UnsupportedTemporalTypeException;
+    const-string p0, "Unsupported unit: "
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    invoke-static {p0, p3}, Lj$/time/Year$2;->m(Ljava/lang/String;Ljava/lang/Object;)V
 
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 p0, 0x0
 
-    const-string v0, "Unsupported unit: "
-
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Lj$/time/temporal/UnsupportedTemporalTypeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-object p0
 
     :pswitch_0
     const p3, 0x15180
 
     .line 860
-    invoke-static {p1, p2, p3}, Lj$/time/Duration$$ExternalSyntheticBackport0;->m(JI)J
+    invoke-static {p1, p2, p3}, Lj$/time/Duration$0;->m(JI)J
 
     move-result-wide p1
 
     invoke-virtual {p0, p1, p2}, Lj$/time/Instant;->plusSeconds(J)Lj$/time/Instant;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     :pswitch_1
     const p3, 0xa8c0
 
     .line 859
-    invoke-static {p1, p2, p3}, Lj$/time/Duration$$ExternalSyntheticBackport0;->m(JI)J
+    invoke-static {p1, p2, p3}, Lj$/time/Duration$0;->m(JI)J
 
     move-result-wide p1
 
     invoke-virtual {p0, p1, p2}, Lj$/time/Instant;->plusSeconds(J)Lj$/time/Instant;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     :pswitch_2
     const/16 p3, 0xe10
 
     .line 858
-    invoke-static {p1, p2, p3}, Lj$/time/Duration$$ExternalSyntheticBackport0;->m(JI)J
+    invoke-static {p1, p2, p3}, Lj$/time/Duration$0;->m(JI)J
 
     move-result-wide p1
 
     invoke-virtual {p0, p1, p2}, Lj$/time/Instant;->plusSeconds(J)Lj$/time/Instant;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     :pswitch_3
     const/16 p3, 0x3c
 
     .line 857
-    invoke-static {p1, p2, p3}, Lj$/time/Duration$$ExternalSyntheticBackport0;->m(JI)J
+    invoke-static {p1, p2, p3}, Lj$/time/Duration$0;->m(JI)J
 
     move-result-wide p1
 
     invoke-virtual {p0, p1, p2}, Lj$/time/Instant;->plusSeconds(J)Lj$/time/Instant;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 856
     :pswitch_4
     invoke-virtual {p0, p1, p2}, Lj$/time/Instant;->plusSeconds(J)Lj$/time/Instant;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 855
     :pswitch_5
     invoke-virtual {p0, p1, p2}, Lj$/time/Instant;->plusMillis(J)Lj$/time/Instant;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     :pswitch_6
     const-wide/32 v0, 0xf4240
@@ -982,27 +951,27 @@
 
     invoke-direct {p0, v2, v3, p1, p2}, Lj$/time/Instant;->plus(JJ)Lj$/time/Instant;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 853
     :pswitch_7
     invoke-virtual {p0, p1, p2}, Lj$/time/Instant;->plusNanos(J)Lj$/time/Instant;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 864
     :cond_0
     invoke-interface {p3, p0, p1, p2}, Lj$/time/temporal/TemporalUnit;->addTo(Lj$/time/temporal/Temporal;J)Lj$/time/temporal/Temporal;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lj$/time/Instant;
+    check-cast p0, Lj$/time/Instant;
 
-    return-object p1
+    return-object p0
 
     nop
 
@@ -1025,9 +994,9 @@
     .line 207
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/Instant;->plus(JLj$/time/temporal/TemporalUnit;)Lj$/time/Instant;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public plusMillis(J)Lj$/time/Instant;
@@ -1046,9 +1015,9 @@
 
     invoke-direct {p0, v2, v3, p1, p2}, Lj$/time/Instant;->plus(JJ)Lj$/time/Instant;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public plusNanos(J)Lj$/time/Instant;
@@ -1059,9 +1028,9 @@
     .line 907
     invoke-direct {p0, v0, v1, p1, p2}, Lj$/time/Instant;->plus(JJ)Lj$/time/Instant;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public plusSeconds(J)Lj$/time/Instant;
@@ -1072,9 +1041,9 @@
     .line 879
     invoke-direct {p0, p1, p2, v0, v1}, Lj$/time/Instant;->plus(JJ)Lj$/time/Instant;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public query(Lj$/time/temporal/TemporalQuery;)Ljava/lang/Object;
@@ -1088,9 +1057,9 @@
     if-ne p1, v0, :cond_0
 
     .line 1057
-    sget-object p1, Lj$/time/temporal/ChronoUnit;->NANOS:Lj$/time/temporal/ChronoUnit;
+    sget-object p0, Lj$/time/temporal/ChronoUnit;->NANOS:Lj$/time/temporal/ChronoUnit;
 
-    return-object p1
+    return-object p0
 
     .line 1060
     :cond_0
@@ -1138,15 +1107,15 @@
     :cond_1
     invoke-interface {p1, p0}, Lj$/time/temporal/TemporalQuery;->queryFrom(Lj$/time/temporal/TemporalAccessor;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     :cond_2
     :goto_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public range(Lj$/time/temporal/TemporalField;)Lj$/time/temporal/ValueRange;
@@ -1155,9 +1124,9 @@
     .line 527
     invoke-super {p0, p1}, Lj$/time/temporal/TemporalAccessor;->range(Lj$/time/temporal/TemporalField;)Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public toEpochMilli()J
@@ -1185,18 +1154,18 @@
     add-long/2addr v0, v5
 
     .line 1233
-    invoke-static {v0, v1, v4}, Lj$/time/Duration$$ExternalSyntheticBackport0;->m(JI)J
+    invoke-static {v0, v1, v4}, Lj$/time/Duration$0;->m(JI)J
 
     move-result-wide v0
 
     .line 1234
-    iget v2, p0, Lj$/time/Instant;->nanos:I
+    iget p0, p0, Lj$/time/Instant;->nanos:I
 
-    div-int/2addr v2, v3
+    div-int/2addr p0, v3
 
-    sub-int/2addr v2, v4
+    sub-int/2addr p0, v4
 
-    int-to-long v2, v2
+    int-to-long v2, p0
 
     .line 1235
     invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->addExact(JJ)J
@@ -1207,16 +1176,16 @@
 
     .line 1237
     :cond_0
-    invoke-static {v0, v1, v4}, Lj$/time/Duration$$ExternalSyntheticBackport0;->m(JI)J
+    invoke-static {v0, v1, v4}, Lj$/time/Duration$0;->m(JI)J
 
     move-result-wide v0
 
     .line 1238
-    iget v2, p0, Lj$/time/Instant;->nanos:I
+    iget p0, p0, Lj$/time/Instant;->nanos:I
 
-    div-int/2addr v2, v3
+    div-int/2addr p0, v3
 
-    int-to-long v2, v2
+    int-to-long v2, p0
 
     invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->addExact(JJ)J
 
@@ -1233,9 +1202,9 @@
 
     invoke-virtual {v0, p0}, Lj$/time/format/DateTimeFormatter;->format(Lj$/time/temporal/TemporalAccessor;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/Instant;
@@ -1244,11 +1213,11 @@
     .line 656
     invoke-interface {p1, p0}, Lj$/time/temporal/TemporalAdjuster;->adjustInto(Lj$/time/temporal/Temporal;)Lj$/time/temporal/Temporal;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lj$/time/Instant;
+    check-cast p0, Lj$/time/Instant;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public with(Lj$/time/temporal/TemporalField;J)Lj$/time/Instant;
@@ -1299,35 +1268,23 @@
 
     if-eqz p1, :cond_4
 
-    iget p1, p0, Lj$/time/Instant;->nanos:I
+    iget p0, p0, Lj$/time/Instant;->nanos:I
 
-    invoke-static {p2, p3, p1}, Lj$/time/Instant;->create(JI)Lj$/time/Instant;
+    invoke-static {p2, p3, p0}, Lj$/time/Instant;->create(JI)Lj$/time/Instant;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 720
     :cond_0
-    new-instance p2, Lj$/time/temporal/UnsupportedTemporalTypeException;
+    const-string p0, "Unsupported field: "
 
-    new-instance p3, Ljava/lang/StringBuilder;
+    invoke-static {p0, p1}, Lj$/time/Year$2;->m(Ljava/lang/String;Ljava/lang/Object;)V
 
-    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 p0, 0x0
 
-    const-string v0, "Unsupported field: "
-
-    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Lj$/time/temporal/UnsupportedTemporalTypeException;-><init>(Ljava/lang/String;)V
-
-    throw p2
+    return-object p0
 
     :cond_1
     long-to-int p1, p2
@@ -1345,9 +1302,9 @@
 
     invoke-static {p2, p3, p1}, Lj$/time/Instant;->create(JI)Lj$/time/Instant;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     :cond_2
     long-to-int p1, p2
@@ -1363,9 +1320,9 @@
 
     invoke-static {p2, p3, p1}, Lj$/time/Instant;->create(JI)Lj$/time/Instant;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 717
     :cond_3
@@ -1377,15 +1334,13 @@
 
     if-eqz p1, :cond_4
 
-    iget-wide v0, p0, Lj$/time/Instant;->seconds:J
+    iget-wide p0, p0, Lj$/time/Instant;->seconds:J
 
-    long-to-int p1, p2
+    long-to-int p2, p2
 
-    invoke-static {v0, v1, p1}, Lj$/time/Instant;->create(JI)Lj$/time/Instant;
+    invoke-static {p0, p1, p2}, Lj$/time/Instant;->create(JI)Lj$/time/Instant;
 
-    move-result-object p1
-
-    return-object p1
+    move-result-object p0
 
     :cond_4
     return-object p0
@@ -1394,11 +1349,11 @@
     :cond_5
     invoke-interface {p1, p0, p2, p3}, Lj$/time/temporal/TemporalField;->adjustInto(Lj$/time/temporal/Temporal;J)Lj$/time/temporal/Temporal;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lj$/time/Instant;
+    check-cast p0, Lj$/time/Instant;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/temporal/Temporal;
@@ -1407,9 +1362,9 @@
     .line 207
     invoke-virtual {p0, p1}, Lj$/time/Instant;->with(Lj$/time/temporal/TemporalAdjuster;)Lj$/time/Instant;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic with(Lj$/time/temporal/TemporalField;J)Lj$/time/temporal/Temporal;
@@ -1418,9 +1373,9 @@
     .line 207
     invoke-virtual {p0, p1, p2, p3}, Lj$/time/Instant;->with(Lj$/time/temporal/TemporalField;J)Lj$/time/Instant;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method writeExternal(Ljava/io/DataOutput;)V
@@ -1432,9 +1387,9 @@
     invoke-interface {p1, v0, v1}, Ljava/io/DataOutput;->writeLong(J)V
 
     .line 1362
-    iget v0, p0, Lj$/time/Instant;->nanos:I
+    iget p0, p0, Lj$/time/Instant;->nanos:I
 
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeInt(I)V
+    invoke-interface {p1, p0}, Ljava/io/DataOutput;->writeInt(I)V
 
     return-void
 .end method

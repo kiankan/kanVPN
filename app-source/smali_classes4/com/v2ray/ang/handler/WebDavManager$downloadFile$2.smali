@@ -42,7 +42,7 @@
     k = 0x3
     mv = {
         0x2,
-        0x3,
+        0x4,
         0x0
     }
     xi = 0x30
@@ -98,7 +98,7 @@
 
 # virtual methods
 .method public final create(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -115,9 +115,9 @@
 
     iget-object v0, p0, Lcom/v2ray/ang/handler/WebDavManager$downloadFile$2;->$remoteFileName:Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/v2ray/ang/handler/WebDavManager$downloadFile$2;->$destFile:Ljava/io/File;
+    iget-object p0, p0, Lcom/v2ray/ang/handler/WebDavManager$downloadFile$2;->$destFile:Ljava/io/File;
 
-    invoke-direct {p1, v0, v1, p2}, Lcom/v2ray/ang/handler/WebDavManager$downloadFile$2;-><init>(Ljava/lang/String;Ljava/io/File;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p1, v0, p0, p2}, Lcom/v2ray/ang/handler/WebDavManager$downloadFile$2;-><init>(Ljava/lang/String;Ljava/io/File;Lkotlin/coroutines/Continuation;)V
 
     check-cast p1, Lkotlin/coroutines/Continuation;
 
@@ -133,9 +133,9 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/v2ray/ang/handler/WebDavManager$downloadFile$2;->invoke(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final invoke(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -154,21 +154,21 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/v2ray/ang/handler/WebDavManager$downloadFile$2;->create(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lcom/v2ray/ang/handler/WebDavManager$downloadFile$2;
+    check-cast p0, Lcom/v2ray/ang/handler/WebDavManager$downloadFile$2;
 
-    sget-object p2, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    invoke-virtual {p1, p2}, Lcom/v2ray/ang/handler/WebDavManager$downloadFile$2;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lcom/v2ray/ang/handler/WebDavManager$downloadFile$2;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
+    .locals 9
 
     const-string v0, "com.kanvpn.client"
 
@@ -206,9 +206,9 @@
 
     invoke-static {v3}, Lkotlin/coroutines/jvm/internal/Boxing;->boxBoolean(Z)Ljava/lang/Boolean;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 93
     :cond_0
@@ -245,26 +245,28 @@
 
     check-cast v4, Ljava/io/Closeable;
 
-    iget-object v5, p0, Lcom/v2ray/ang/handler/WebDavManager$downloadFile$2;->$destFile:Ljava/io/File;
+    iget-object p0, p0, Lcom/v2ray/ang/handler/WebDavManager$downloadFile$2;->$destFile:Ljava/io/File;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :try_start_1
-    move-object v6, v4
+    move-object v5, v4
 
-    check-cast v6, Lokhttp3/Response;
+    check-cast v5, Lokhttp3/Response;
 
     .line 95
-    invoke-virtual {v6}, Lokhttp3/Response;->isSuccessful()Z
+    invoke-virtual {v5}, Lokhttp3/Response;->isSuccessful()Z
 
-    move-result v7
+    move-result v6
 
-    const/4 v8, 0x0
+    const/4 v7, 0x0
 
-    if-nez v7, :cond_1
+    if-nez v6, :cond_1
 
     .line 96
-    invoke-virtual {v6}, Lokhttp3/Response;->code()I
+    sget-object p0, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
+
+    invoke-virtual {v5}, Lokhttp3/Response;->code()I
 
     move-result v1
 
@@ -288,28 +290,28 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {p0, v0, v1}, Lcom/v2ray/ang/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 97
     invoke-static {v3}, Lkotlin/coroutines/jvm/internal/Boxing;->boxBoolean(Z)Ljava/lang/Boolean;
 
-    move-result-object v1
+    move-result-object p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_4
 
     .line 94
     :goto_0
     :try_start_2
-    invoke-static {v4, v8}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {v4, v7}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    return-object v1
+    return-object p0
 
     .line 100
     :cond_1
     :try_start_3
-    invoke-virtual {v6}, Lokhttp3/Response;->body()Lokhttp3/ResponseBody;
+    invoke-virtual {v5}, Lokhttp3/Response;->body()Lokhttp3/ResponseBody;
 
     move-result-object v2
 
@@ -322,58 +324,60 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_4
 
     :try_start_4
-    move-object v6, v2
+    move-object v5, v2
 
-    check-cast v6, Ljava/io/InputStream;
+    check-cast v5, Ljava/io/InputStream;
 
     .line 101
-    invoke-virtual {v5}, Ljava/io/File;->getParentFile()Ljava/io/File;
+    invoke-virtual {p0}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
-    move-result-object v7
+    move-result-object v6
 
-    if-eqz v7, :cond_2
+    if-eqz v6, :cond_2
 
-    invoke-virtual {v7}, Ljava/io/File;->mkdirs()Z
+    invoke-virtual {v6}, Ljava/io/File;->mkdirs()Z
 
-    move-result v7
+    move-result v6
 
-    invoke-static {v7}, Lkotlin/coroutines/jvm/internal/Boxing;->boxBoolean(Z)Ljava/lang/Boolean;
+    invoke-static {v6}, Lkotlin/coroutines/jvm/internal/Boxing;->boxBoolean(Z)Ljava/lang/Boolean;
 
     .line 102
     :cond_2
-    new-instance v7, Ljava/io/FileOutputStream;
+    new-instance v6, Ljava/io/FileOutputStream;
 
-    invoke-direct {v7, v5}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    invoke-direct {v6, p0}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    check-cast v7, Ljava/io/Closeable;
+    check-cast v6, Ljava/io/Closeable;
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
     :try_start_5
-    move-object v5, v7
+    move-object p0, v6
 
-    check-cast v5, Ljava/io/FileOutputStream;
+    check-cast p0, Ljava/io/FileOutputStream;
 
     .line 103
-    check-cast v5, Ljava/io/OutputStream;
+    check-cast p0, Ljava/io/OutputStream;
 
-    const/4 v9, 0x2
+    const/4 v8, 0x2
 
-    invoke-static {v6, v5, v3, v9, v8}, Lkotlin/io/ByteStreamsKt;->copyTo$default(Ljava/io/InputStream;Ljava/io/OutputStream;IILjava/lang/Object;)J
+    invoke-static {v5, p0, v3, v8, v7}, Lkotlin/io/ByteStreamsKt;->copyTo$default(Ljava/io/InputStream;Ljava/io/OutputStream;IILjava/lang/Object;)J
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
     .line 102
     :try_start_6
-    invoke-static {v7, v8}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {v6, v7}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
     .line 100
     :try_start_7
-    invoke-static {v2, v8}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {v2, v7}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     .line 107
+    sget-object p0, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
+
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
@@ -384,80 +388,82 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {p0, v0, v1}, Lcom/v2ray/ang/util/LogUtil;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 v1, 0x1
+    const/4 p0, 0x1
 
     .line 108
-    invoke-static {v1}, Lkotlin/coroutines/jvm/internal/Boxing;->boxBoolean(Z)Ljava/lang/Boolean;
+    invoke-static {p0}, Lkotlin/coroutines/jvm/internal/Boxing;->boxBoolean(Z)Ljava/lang/Boolean;
 
-    move-result-object v1
+    move-result-object p0
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_4
 
     goto :goto_0
 
     :catchall_0
-    move-exception v1
+    move-exception p0
 
     .line 102
     :try_start_8
-    throw v1
+    throw p0
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
     :catchall_1
-    move-exception v5
+    move-exception v1
 
     :try_start_9
-    invoke-static {v7, v1}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {v6, p0}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
-    throw v5
+    throw v1
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_2
 
     :catchall_2
-    move-exception v1
+    move-exception p0
 
     .line 100
     :try_start_a
-    throw v1
+    throw p0
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_3
 
     :catchall_3
-    move-exception v5
+    move-exception v1
 
     :try_start_b
-    invoke-static {v2, v1}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {v2, p0}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
-    throw v5
+    throw v1
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_4
 
     :catchall_4
-    move-exception v1
+    move-exception p0
 
     .line 94
     :try_start_c
-    throw v1
+    throw p0
     :try_end_c
     .catchall {:try_start_c .. :try_end_c} :catchall_5
 
     :catchall_5
-    move-exception v2
+    move-exception v1
 
     :try_start_d
-    invoke-static {v4, v1}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {v4, p0}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
-    throw v2
+    throw v1
     :try_end_d
     .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_0
 
     :catch_0
-    move-exception v1
+    move-exception p0
 
     .line 111
+    sget-object v1, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
+
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v4, "WebDAV download exception: "
@@ -470,24 +476,24 @@
 
     move-result-object p1
 
-    check-cast v1, Ljava/lang/Throwable;
+    check-cast p0, Ljava/lang/Throwable;
 
-    invoke-static {v0, p1, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-virtual {v1, v0, p1, p0}, Lcom/v2ray/ang/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 112
     invoke-static {v3}, Lkotlin/coroutines/jvm/internal/Boxing;->boxBoolean(Z)Ljava/lang/Boolean;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 89
     :cond_3
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method

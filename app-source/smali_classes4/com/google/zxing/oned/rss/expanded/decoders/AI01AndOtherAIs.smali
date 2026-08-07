@@ -65,13 +65,13 @@
     .line 56
     invoke-virtual {p0}, Lcom/google/zxing/oned/rss/expanded/decoders/AI01AndOtherAIs;->getGeneralDecoder()Lcom/google/zxing/oned/rss/expanded/decoders/GeneralAppIdDecoder;
 
-    move-result-object v1
+    move-result-object p0
 
-    const/16 v2, 0x30
+    const/16 v1, 0x30
 
-    invoke-virtual {v1, v0, v2}, Lcom/google/zxing/oned/rss/expanded/decoders/GeneralAppIdDecoder;->decodeAllCodes(Ljava/lang/StringBuilder;I)Ljava/lang/String;
+    invoke-virtual {p0, v0, v1}, Lcom/google/zxing/oned/rss/expanded/decoders/GeneralAppIdDecoder;->decodeAllCodes(Ljava/lang/StringBuilder;I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

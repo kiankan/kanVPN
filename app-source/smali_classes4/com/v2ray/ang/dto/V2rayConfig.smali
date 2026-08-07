@@ -19,12 +19,12 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nV2rayConfig.kt\nKotlin\n*S Kotlin\n*F\n+ 1 V2rayConfig.kt\ncom/v2ray/ang/dto/V2rayConfig\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,510:1\n1915#2:511\n1915#2,2:512\n1916#2:514\n777#2:515\n873#2:516\n1807#2,3:517\n874#2:520\n*S KotlinDebug\n*F\n+ 1 V2rayConfig.kt\ncom/v2ray/ang/dto/V2rayConfig\n*L\n494#1:511\n495#1:512,2\n494#1:514\n505#1:515\n505#1:516\n506#1:517,3\n505#1:520\n*E\n"
+    value = "SMAP\nV2rayConfig.kt\nKotlin\n*S Kotlin\n*F\n+ 1 V2rayConfig.kt\ncom/v2ray/ang/dto/V2rayConfig\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,469:1\n2068#2:470\n2068#2,2:471\n2069#2:473\n777#2:474\n873#2:475\n1960#2,3:476\n874#2:479\n*S KotlinDebug\n*F\n+ 1 V2rayConfig.kt\ncom/v2ray/ang/dto/V2rayConfig\n*L\n453#1:470\n454#1:471,2\n453#1:473\n464#1:474\n464#1:475\n465#1:476,3\n464#1:479\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000X\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008.\n\u0002\u0010 \n\u0002\u0008\u0011\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u000b\u0008\u0086\u0008\u0018\u00002\u00020\u0001:\tXYZ[\\]^_`B\u00cb\u0001\u0012\n\u0008\u0002\u0010\u0002\u001a\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u0001\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\n\u0008\u0002\u0010\u0007\u001a\u0004\u0018\u00010\u0008\u0012\u0016\u0010\t\u001a\u0012\u0012\u0004\u0012\u00020\u000b0\nj\u0008\u0012\u0004\u0012\u00020\u000b`\u000c\u0012\u0016\u0010\r\u001a\u0012\u0012\u0004\u0012\u00020\u000e0\nj\u0008\u0012\u0004\u0012\u00020\u000e`\u000c\u0012\n\u0008\u0002\u0010\u000f\u001a\u0004\u0018\u00010\u0010\u0012\u0006\u0010\u0011\u001a\u00020\u0012\u0012\n\u0008\u0002\u0010\u0013\u001a\u0004\u0018\u00010\u0001\u0012\n\u0008\u0002\u0010\u0014\u001a\u0004\u0018\u00010\u0001\u0012\n\u0008\u0002\u0010\u0015\u001a\u0004\u0018\u00010\u0001\u0012\n\u0008\u0002\u0010\u0016\u001a\u0004\u0018\u00010\u0001\u0012\n\u0008\u0002\u0010\u0017\u001a\u0004\u0018\u00010\u0001\u0012\n\u0008\u0002\u0010\u0018\u001a\u0004\u0018\u00010\u0001\u0012\n\u0008\u0002\u0010\u0019\u001a\u0004\u0018\u00010\u0001\u00a2\u0006\u0004\u0008\u001a\u0010\u001bJ\u0008\u0010?\u001a\u0004\u0018\u00010\u000eJ\u000c\u0010@\u001a\u0008\u0012\u0004\u0012\u00020\u000e0AJ\u000b\u0010B\u001a\u0004\u0018\u00010\u0003H\u00c6\u0003J\u000b\u0010C\u001a\u0004\u0018\u00010\u0001H\u00c6\u0003J\t\u0010D\u001a\u00020\u0006H\u00c6\u0003J\u000b\u0010E\u001a\u0004\u0018\u00010\u0008H\u00c6\u0003J\u0019\u0010F\u001a\u0012\u0012\u0004\u0012\u00020\u000b0\nj\u0008\u0012\u0004\u0012\u00020\u000b`\u000cH\u00c6\u0003J\u0019\u0010G\u001a\u0012\u0012\u0004\u0012\u00020\u000e0\nj\u0008\u0012\u0004\u0012\u00020\u000e`\u000cH\u00c6\u0003J\u000b\u0010H\u001a\u0004\u0018\u00010\u0010H\u00c6\u0003J\t\u0010I\u001a\u00020\u0012H\u00c6\u0003J\u000b\u0010J\u001a\u0004\u0018\u00010\u0001H\u00c6\u0003J\u000b\u0010K\u001a\u0004\u0018\u00010\u0001H\u00c6\u0003J\u000b\u0010L\u001a\u0004\u0018\u00010\u0001H\u00c6\u0003J\u000b\u0010M\u001a\u0004\u0018\u00010\u0001H\u00c6\u0003J\u000b\u0010N\u001a\u0004\u0018\u00010\u0001H\u00c6\u0003J\u000b\u0010O\u001a\u0004\u0018\u00010\u0001H\u00c6\u0003J\u000b\u0010P\u001a\u0004\u0018\u00010\u0001H\u00c6\u0003J\u00d5\u0001\u0010Q\u001a\u00020\u00002\n\u0008\u0002\u0010\u0002\u001a\u0004\u0018\u00010\u00032\n\u0008\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u00012\u0008\u0008\u0002\u0010\u0005\u001a\u00020\u00062\n\u0008\u0002\u0010\u0007\u001a\u0004\u0018\u00010\u00082\u0018\u0008\u0002\u0010\t\u001a\u0012\u0012\u0004\u0012\u00020\u000b0\nj\u0008\u0012\u0004\u0012\u00020\u000b`\u000c2\u0018\u0008\u0002\u0010\r\u001a\u0012\u0012\u0004\u0012\u00020\u000e0\nj\u0008\u0012\u0004\u0012\u00020\u000e`\u000c2\n\u0008\u0002\u0010\u000f\u001a\u0004\u0018\u00010\u00102\u0008\u0008\u0002\u0010\u0011\u001a\u00020\u00122\n\u0008\u0002\u0010\u0013\u001a\u0004\u0018\u00010\u00012\n\u0008\u0002\u0010\u0014\u001a\u0004\u0018\u00010\u00012\n\u0008\u0002\u0010\u0015\u001a\u0004\u0018\u00010\u00012\n\u0008\u0002\u0010\u0016\u001a\u0004\u0018\u00010\u00012\n\u0008\u0002\u0010\u0017\u001a\u0004\u0018\u00010\u00012\n\u0008\u0002\u0010\u0018\u001a\u0004\u0018\u00010\u00012\n\u0008\u0002\u0010\u0019\u001a\u0004\u0018\u00010\u0001H\u00c6\u0001J\u0014\u0010R\u001a\u00020S2\u0008\u0010T\u001a\u0004\u0018\u00010\u0001H\u00d6\u0083\u0004J\n\u0010U\u001a\u00020VH\u00d6\u0081\u0004J\n\u0010W\u001a\u00020\u0003H\u00d6\u0081\u0004R\u001c\u0010\u0002\u001a\u0004\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u001c\u0010\u001d\"\u0004\u0008\u001e\u0010\u001fR\u001c\u0010\u0004\u001a\u0004\u0018\u00010\u0001X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008 \u0010!\"\u0004\u0008\"\u0010#R\u0011\u0010\u0005\u001a\u00020\u0006\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008$\u0010%R\u001c\u0010\u0007\u001a\u0004\u0018\u00010\u0008X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008&\u0010\'\"\u0004\u0008(\u0010)R!\u0010\t\u001a\u0012\u0012\u0004\u0012\u00020\u000b0\nj\u0008\u0012\u0004\u0012\u00020\u000b`\u000c\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008*\u0010+R*\u0010\r\u001a\u0012\u0012\u0004\u0012\u00020\u000e0\nj\u0008\u0012\u0004\u0012\u00020\u000e`\u000cX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008,\u0010+\"\u0004\u0008-\u0010.R\u001c\u0010\u000f\u001a\u0004\u0018\u00010\u0010X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008/\u00100\"\u0004\u00081\u00102R\u0011\u0010\u0011\u001a\u00020\u0012\u00a2\u0006\u0008\n\u0000\u001a\u0004\u00083\u00104R\u0013\u0010\u0013\u001a\u0004\u0018\u00010\u0001\u00a2\u0006\u0008\n\u0000\u001a\u0004\u00085\u0010!R\u0013\u0010\u0014\u001a\u0004\u0018\u00010\u0001\u00a2\u0006\u0008\n\u0000\u001a\u0004\u00086\u0010!R\u0013\u0010\u0015\u001a\u0004\u0018\u00010\u0001\u00a2\u0006\u0008\n\u0000\u001a\u0004\u00087\u0010!R\u001c\u0010\u0016\u001a\u0004\u0018\u00010\u0001X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u00088\u0010!\"\u0004\u00089\u0010#R\u0013\u0010\u0017\u001a\u0004\u0018\u00010\u0001\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008:\u0010!R\u001c\u0010\u0018\u001a\u0004\u0018\u00010\u0001X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008;\u0010!\"\u0004\u0008<\u0010#R\u001c\u0010\u0019\u001a\u0004\u0018\u00010\u0001X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008=\u0010!\"\u0004\u0008>\u0010#\u00a8\u0006a"
+        "\u0000^\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008.\n\u0002\u0010 \n\u0002\u0008\u0011\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u000b\n\u0002\u0018\u0002\n\u0000\u0008\u0087\u0008\u0018\u00002\u00020\u0001:\tXYZ[\\]^_`B\u00cb\u0001\u0012\n\u0008\u0002\u0010\u0002\u001a\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u0001\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\n\u0008\u0002\u0010\u0007\u001a\u0004\u0018\u00010\u0008\u0012\u0016\u0010\t\u001a\u0012\u0012\u0004\u0012\u00020\u000b0\nj\u0008\u0012\u0004\u0012\u00020\u000b`\u000c\u0012\u0016\u0010\r\u001a\u0012\u0012\u0004\u0012\u00020\u000e0\nj\u0008\u0012\u0004\u0012\u00020\u000e`\u000c\u0012\n\u0008\u0002\u0010\u000f\u001a\u0004\u0018\u00010\u0010\u0012\u0006\u0010\u0011\u001a\u00020\u0012\u0012\n\u0008\u0002\u0010\u0013\u001a\u0004\u0018\u00010\u0001\u0012\n\u0008\u0002\u0010\u0014\u001a\u0004\u0018\u00010\u0001\u0012\n\u0008\u0002\u0010\u0015\u001a\u0004\u0018\u00010\u0001\u0012\n\u0008\u0002\u0010\u0016\u001a\u0004\u0018\u00010\u0001\u0012\n\u0008\u0002\u0010\u0017\u001a\u0004\u0018\u00010\u0001\u0012\n\u0008\u0002\u0010\u0018\u001a\u0004\u0018\u00010\u0001\u0012\n\u0008\u0002\u0010\u0019\u001a\u0004\u0018\u00010\u0001\u00a2\u0006\u0004\u0008\u001a\u0010\u001bJ\u0008\u0010?\u001a\u0004\u0018\u00010\u000eJ\u000c\u0010@\u001a\u0008\u0012\u0004\u0012\u00020\u000e0AJ\u000b\u0010B\u001a\u0004\u0018\u00010\u0003H\u00c6\u0003J\u000b\u0010C\u001a\u0004\u0018\u00010\u0001H\u00c6\u0003J\t\u0010D\u001a\u00020\u0006H\u00c6\u0003J\u000b\u0010E\u001a\u0004\u0018\u00010\u0008H\u00c6\u0003J\u0019\u0010F\u001a\u0012\u0012\u0004\u0012\u00020\u000b0\nj\u0008\u0012\u0004\u0012\u00020\u000b`\u000cH\u00c6\u0003J\u0019\u0010G\u001a\u0012\u0012\u0004\u0012\u00020\u000e0\nj\u0008\u0012\u0004\u0012\u00020\u000e`\u000cH\u00c6\u0003J\u000b\u0010H\u001a\u0004\u0018\u00010\u0010H\u00c6\u0003J\t\u0010I\u001a\u00020\u0012H\u00c6\u0003J\u000b\u0010J\u001a\u0004\u0018\u00010\u0001H\u00c6\u0003J\u000b\u0010K\u001a\u0004\u0018\u00010\u0001H\u00c6\u0003J\u000b\u0010L\u001a\u0004\u0018\u00010\u0001H\u00c6\u0003J\u000b\u0010M\u001a\u0004\u0018\u00010\u0001H\u00c6\u0003J\u000b\u0010N\u001a\u0004\u0018\u00010\u0001H\u00c6\u0003J\u000b\u0010O\u001a\u0004\u0018\u00010\u0001H\u00c6\u0003J\u000b\u0010P\u001a\u0004\u0018\u00010\u0001H\u00c6\u0003J\u00d5\u0001\u0010Q\u001a\u00020\u00002\n\u0008\u0002\u0010\u0002\u001a\u0004\u0018\u00010\u00032\n\u0008\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u00012\u0008\u0008\u0002\u0010\u0005\u001a\u00020\u00062\n\u0008\u0002\u0010\u0007\u001a\u0004\u0018\u00010\u00082\u0018\u0008\u0002\u0010\t\u001a\u0012\u0012\u0004\u0012\u00020\u000b0\nj\u0008\u0012\u0004\u0012\u00020\u000b`\u000c2\u0018\u0008\u0002\u0010\r\u001a\u0012\u0012\u0004\u0012\u00020\u000e0\nj\u0008\u0012\u0004\u0012\u00020\u000e`\u000c2\n\u0008\u0002\u0010\u000f\u001a\u0004\u0018\u00010\u00102\u0008\u0008\u0002\u0010\u0011\u001a\u00020\u00122\n\u0008\u0002\u0010\u0013\u001a\u0004\u0018\u00010\u00012\n\u0008\u0002\u0010\u0014\u001a\u0004\u0018\u00010\u00012\n\u0008\u0002\u0010\u0015\u001a\u0004\u0018\u00010\u00012\n\u0008\u0002\u0010\u0016\u001a\u0004\u0018\u00010\u00012\n\u0008\u0002\u0010\u0017\u001a\u0004\u0018\u00010\u00012\n\u0008\u0002\u0010\u0018\u001a\u0004\u0018\u00010\u00012\n\u0008\u0002\u0010\u0019\u001a\u0004\u0018\u00010\u0001H\u00c6\u0001J\u0014\u0010R\u001a\u00020S2\u0008\u0010T\u001a\u0004\u0018\u00010\u0001H\u00d6\u0083\u0004J\n\u0010U\u001a\u00020VH\u00d6\u0081\u0004J\n\u0010W\u001a\u00020\u0003H\u00d6\u0081\u0004R\u001c\u0010\u0002\u001a\u0004\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u001c\u0010\u001d\"\u0004\u0008\u001e\u0010\u001fR\u001c\u0010\u0004\u001a\u0004\u0018\u00010\u0001X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008 \u0010!\"\u0004\u0008\"\u0010#R\u0011\u0010\u0005\u001a\u00020\u0006\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008$\u0010%R\u001c\u0010\u0007\u001a\u0004\u0018\u00010\u0008X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008&\u0010\'\"\u0004\u0008(\u0010)R!\u0010\t\u001a\u0012\u0012\u0004\u0012\u00020\u000b0\nj\u0008\u0012\u0004\u0012\u00020\u000b`\u000c\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008*\u0010+R*\u0010\r\u001a\u0012\u0012\u0004\u0012\u00020\u000e0\nj\u0008\u0012\u0004\u0012\u00020\u000e`\u000cX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008,\u0010+\"\u0004\u0008-\u0010.R\u001c\u0010\u000f\u001a\u0004\u0018\u00010\u0010X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008/\u00100\"\u0004\u00081\u00102R\u0011\u0010\u0011\u001a\u00020\u0012\u00a2\u0006\u0008\n\u0000\u001a\u0004\u00083\u00104R\u0013\u0010\u0013\u001a\u0004\u0018\u00010\u0001\u00a2\u0006\u0008\n\u0000\u001a\u0004\u00085\u0010!R\u0013\u0010\u0014\u001a\u0004\u0018\u00010\u0001\u00a2\u0006\u0008\n\u0000\u001a\u0004\u00086\u0010!R\u0013\u0010\u0015\u001a\u0004\u0018\u00010\u0001\u00a2\u0006\u0008\n\u0000\u001a\u0004\u00087\u0010!R\u001c\u0010\u0016\u001a\u0004\u0018\u00010\u0001X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u00088\u0010!\"\u0004\u00089\u0010#R\u0013\u0010\u0017\u001a\u0004\u0018\u00010\u0001\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008:\u0010!R\u001c\u0010\u0018\u001a\u0004\u0018\u00010\u0001X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008;\u0010!\"\u0004\u0008<\u0010#R\u001c\u0010\u0019\u001a\u0004\u0018\u00010\u0001X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008=\u0010!\"\u0004\u0008>\u0010#\u00ca\u0001\u000c\u0008b\u0012\u0008\u0008c\u0012\u0004\u0008\u0003\u0010\u0000\u00a8\u0006a"
     }
     d2 = {
         "Lcom/v2ray/ang/dto/V2rayConfig;",
@@ -124,16 +124,22 @@
         "ObservatoryObject",
         "BurstObservatoryObject",
         "FakednsBean",
-        "app_playstoreRelease"
+        "v2rayNG:app_playstoreRelease",
+        "Landroidx/compose/runtime/internal/StabilityInferred;",
+        "parameters"
     }
     k = 0x1
     mv = {
         0x2,
-        0x3,
+        0x4,
         0x0
     }
     xi = 0x30
 .end annotation
+
+
+# static fields
+.field public static final $stable:I = 0x8
 
 
 # instance fields
@@ -185,6 +191,12 @@
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 0
+
+    return-void
+.end method
+
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/Object;Lcom/v2ray/ang/dto/V2rayConfig$LogBean;Lcom/v2ray/ang/dto/V2rayConfig$PolicyBean;Ljava/util/ArrayList;Ljava/util/ArrayList;Lcom/v2ray/ang/dto/V2rayConfig$DnsBean;Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
@@ -229,54 +241,54 @@
 
     invoke-static {p8, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 6
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7
+    .line 8
     iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig;->remarks:Ljava/lang/String;
 
-    .line 8
+    .line 9
     iput-object p2, p0, Lcom/v2ray/ang/dto/V2rayConfig;->stats:Ljava/lang/Object;
 
-    .line 9
+    .line 10
     iput-object p3, p0, Lcom/v2ray/ang/dto/V2rayConfig;->log:Lcom/v2ray/ang/dto/V2rayConfig$LogBean;
 
-    .line 10
+    .line 11
     iput-object p4, p0, Lcom/v2ray/ang/dto/V2rayConfig;->policy:Lcom/v2ray/ang/dto/V2rayConfig$PolicyBean;
 
-    .line 11
+    .line 12
     iput-object p5, p0, Lcom/v2ray/ang/dto/V2rayConfig;->inbounds:Ljava/util/ArrayList;
 
-    .line 12
+    .line 13
     iput-object p6, p0, Lcom/v2ray/ang/dto/V2rayConfig;->outbounds:Ljava/util/ArrayList;
 
-    .line 13
+    .line 14
     iput-object p7, p0, Lcom/v2ray/ang/dto/V2rayConfig;->dns:Lcom/v2ray/ang/dto/V2rayConfig$DnsBean;
 
-    .line 14
+    .line 15
     iput-object p8, p0, Lcom/v2ray/ang/dto/V2rayConfig;->routing:Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean;
 
-    .line 15
+    .line 16
     iput-object p9, p0, Lcom/v2ray/ang/dto/V2rayConfig;->api:Ljava/lang/Object;
 
-    .line 16
+    .line 17
     iput-object p10, p0, Lcom/v2ray/ang/dto/V2rayConfig;->transport:Ljava/lang/Object;
 
-    .line 17
+    .line 18
     iput-object p11, p0, Lcom/v2ray/ang/dto/V2rayConfig;->reverse:Ljava/lang/Object;
 
-    .line 18
+    .line 19
     iput-object p12, p0, Lcom/v2ray/ang/dto/V2rayConfig;->fakedns:Ljava/lang/Object;
 
-    .line 19
+    .line 20
     iput-object p13, p0, Lcom/v2ray/ang/dto/V2rayConfig;->browserForwarder:Ljava/lang/Object;
 
-    .line 20
+    .line 21
     iput-object p14, p0, Lcom/v2ray/ang/dto/V2rayConfig;->observatory:Ljava/lang/Object;
 
     move-object/from16 p1, p15
 
-    .line 21
+    .line 22
     iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig;->burstObservatory:Ljava/lang/Object;
 
     return-void
@@ -431,7 +443,7 @@
 
     move-object/from16 v11, p8
 
-    .line 6
+    .line 7
     invoke-direct/range {v3 .. v18}, Lcom/v2ray/ang/dto/V2rayConfig;-><init>(Ljava/lang/String;Ljava/lang/Object;Lcom/v2ray/ang/dto/V2rayConfig$LogBean;Lcom/v2ray/ang/dto/V2rayConfig$PolicyBean;Ljava/util/ArrayList;Ljava/util/ArrayList;Lcom/v2ray/ang/dto/V2rayConfig$DnsBean;Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
@@ -666,87 +678,87 @@
 
 # virtual methods
 .method public final component1()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->remarks:Ljava/lang/String;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->remarks:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component10()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->transport:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->transport:Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component11()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->reverse:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->reverse:Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component12()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->fakedns:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->fakedns:Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component13()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->browserForwarder:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->browserForwarder:Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component14()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->observatory:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->observatory:Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component15()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->burstObservatory:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->burstObservatory:Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component2()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->stats:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->stats:Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component3()Lcom/v2ray/ang/dto/V2rayConfig$LogBean;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->log:Lcom/v2ray/ang/dto/V2rayConfig$LogBean;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->log:Lcom/v2ray/ang/dto/V2rayConfig$LogBean;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component4()Lcom/v2ray/ang/dto/V2rayConfig$PolicyBean;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->policy:Lcom/v2ray/ang/dto/V2rayConfig$PolicyBean;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->policy:Lcom/v2ray/ang/dto/V2rayConfig$PolicyBean;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component5()Ljava/util/ArrayList;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -756,13 +768,13 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->inbounds:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->inbounds:Ljava/util/ArrayList;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component6()Ljava/util/ArrayList;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -772,33 +784,33 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->outbounds:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->outbounds:Ljava/util/ArrayList;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component7()Lcom/v2ray/ang/dto/V2rayConfig$DnsBean;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->dns:Lcom/v2ray/ang/dto/V2rayConfig$DnsBean;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->dns:Lcom/v2ray/ang/dto/V2rayConfig$DnsBean;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component8()Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->routing:Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->routing:Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final component9()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->api:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->api:Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final copy(Ljava/lang/String;Ljava/lang/Object;Lcom/v2ray/ang/dto/V2rayConfig$LogBean;Lcom/v2ray/ang/dto/V2rayConfig$PolicyBean;Ljava/util/ArrayList;Ljava/util/ArrayList;Lcom/v2ray/ang/dto/V2rayConfig$DnsBean;Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/v2ray/ang/dto/V2rayConfig;
@@ -1086,15 +1098,15 @@
     return v2
 
     :cond_f
-    iget-object v1, p0, Lcom/v2ray/ang/dto/V2rayConfig;->burstObservatory:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->burstObservatory:Ljava/lang/Object;
 
     iget-object p1, p1, Lcom/v2ray/ang/dto/V2rayConfig;->burstObservatory:Ljava/lang/Object;
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result p0
 
-    if-nez p1, :cond_10
+    if-nez p0, :cond_10
 
     return v2
 
@@ -1103,7 +1115,7 @@
 .end method
 
 .method public final getAllProxyOutbound()Ljava/util/List;
-    .locals 8
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -1113,158 +1125,158 @@
         }
     .end annotation
 
-    .line 505
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->outbounds:Ljava/util/ArrayList;
+    .line 464
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->outbounds:Ljava/util/ArrayList;
 
-    check-cast v0, Ljava/lang/Iterable;
+    check-cast p0, Ljava/lang/Iterable;
 
-    .line 515
-    new-instance v1, Ljava/util/ArrayList;
+    .line 474
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    check-cast v1, Ljava/util/Collection;
+    check-cast v0, Ljava/util/Collection;
 
-    .line 516
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    .line 475
+    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    move-result-object v0
+    move-result-object p0
 
     :cond_0
     :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_3
+    if-eqz v1, :cond_3
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v1
 
-    move-object v3, v2
+    move-object v2, v1
 
-    check-cast v3, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;
+    check-cast v2, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;
 
-    .line 506
-    invoke-static {}, Lcom/v2ray/ang/dto/EConfigType;->getEntries()Lkotlin/enums/EnumEntries;
+    .line 465
+    invoke-static {}, Lcom/v2ray/ang/enums/EConfigType;->getEntries()Lkotlin/enums/EnumEntries;
 
-    move-result-object v4
+    move-result-object v3
 
-    check-cast v4, Ljava/lang/Iterable;
+    check-cast v3, Ljava/lang/Iterable;
 
-    .line 517
-    instance-of v5, v4, Ljava/util/Collection;
+    .line 476
+    instance-of v4, v3, Ljava/util/Collection;
 
-    if-eqz v5, :cond_1
+    if-eqz v4, :cond_1
 
-    move-object v5, v4
+    move-object v4, v3
 
-    check-cast v5, Ljava/util/Collection;
+    check-cast v4, Ljava/util/Collection;
 
-    invoke-interface {v5}, Ljava/util/Collection;->isEmpty()Z
+    invoke-interface {v4}, Ljava/util/Collection;->isEmpty()Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_1
+    if-eqz v4, :cond_1
 
     goto :goto_0
 
-    .line 518
+    .line 477
     :cond_1
-    invoke-interface {v4}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    move-result-object v4
+    move-result-object v3
 
     :cond_2
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_0
+    if-eqz v4, :cond_0
 
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lcom/v2ray/ang/enums/EConfigType;
+
+    .line 465
+    invoke-virtual {v4}, Lcom/v2ray/ang/enums/EConfigType;->name()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v2}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;->getProtocol()Ljava/lang/String;
 
     move-result-object v5
 
-    check-cast v5, Lcom/v2ray/ang/dto/EConfigType;
+    const/4 v6, 0x1
 
-    .line 506
-    invoke-virtual {v5}, Lcom/v2ray/ang/dto/EConfigType;->name()Ljava/lang/String;
+    invoke-static {v4, v5, v6}, Lkotlin/text/StringsKt;->equals(Ljava/lang/String;Ljava/lang/String;Z)Z
 
-    move-result-object v5
+    move-result v4
 
-    invoke-virtual {v3}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;->getProtocol()Ljava/lang/String;
+    if-eqz v4, :cond_2
 
-    move-result-object v6
-
-    const/4 v7, 0x1
-
-    invoke-static {v5, v6, v7}, Lkotlin/text/StringsKt;->equals(Ljava/lang/String;Ljava/lang/String;Z)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_2
-
-    .line 516
-    invoke-interface {v1, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+    .line 475
+    invoke-interface {v0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 520
+    .line 479
     :cond_3
-    check-cast v1, Ljava/util/List;
+    check-cast v0, Ljava/util/List;
 
-    return-object v1
+    return-object v0
 .end method
 
 .method public final getApi()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    .line 15
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->api:Ljava/lang/Object;
+    .line 16
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->api:Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getBrowserForwarder()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    .line 19
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->browserForwarder:Ljava/lang/Object;
+    .line 20
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->browserForwarder:Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getBurstObservatory()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    .line 21
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->burstObservatory:Ljava/lang/Object;
+    .line 22
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->burstObservatory:Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getDns()Lcom/v2ray/ang/dto/V2rayConfig$DnsBean;
-    .locals 1
+    .locals 0
 
-    .line 13
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->dns:Lcom/v2ray/ang/dto/V2rayConfig$DnsBean;
+    .line 14
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->dns:Lcom/v2ray/ang/dto/V2rayConfig$DnsBean;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getFakedns()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    .line 18
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->fakedns:Ljava/lang/Object;
+    .line 19
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->fakedns:Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getInbounds()Ljava/util/ArrayList;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -1274,32 +1286,32 @@
         }
     .end annotation
 
-    .line 11
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->inbounds:Ljava/util/ArrayList;
+    .line 12
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->inbounds:Ljava/util/ArrayList;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getLog()Lcom/v2ray/ang/dto/V2rayConfig$LogBean;
-    .locals 1
+    .locals 0
 
-    .line 9
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->log:Lcom/v2ray/ang/dto/V2rayConfig$LogBean;
+    .line 10
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->log:Lcom/v2ray/ang/dto/V2rayConfig$LogBean;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getObservatory()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    .line 20
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->observatory:Ljava/lang/Object;
+    .line 21
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->observatory:Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getOutbounds()Ljava/util/ArrayList;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -1309,140 +1321,140 @@
         }
     .end annotation
 
-    .line 12
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->outbounds:Ljava/util/ArrayList;
+    .line 13
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->outbounds:Ljava/util/ArrayList;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getPolicy()Lcom/v2ray/ang/dto/V2rayConfig$PolicyBean;
-    .locals 1
+    .locals 0
 
-    .line 10
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->policy:Lcom/v2ray/ang/dto/V2rayConfig$PolicyBean;
+    .line 11
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->policy:Lcom/v2ray/ang/dto/V2rayConfig$PolicyBean;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getProxyOutbound()Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;
-    .locals 6
+    .locals 5
 
-    .line 494
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->outbounds:Ljava/util/ArrayList;
+    .line 453
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->outbounds:Ljava/util/ArrayList;
 
-    check-cast v0, Ljava/lang/Iterable;
+    check-cast p0, Ljava/lang/Iterable;
 
-    .line 511
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    .line 470
+    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :cond_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    :cond_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    check-cast v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;
 
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 454
+    invoke-static {}, Lcom/v2ray/ang/enums/EConfigType;->getEntries()Lkotlin/enums/EnumEntries;
 
     move-result-object v1
 
-    check-cast v1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;
+    check-cast v1, Ljava/lang/Iterable;
 
-    .line 495
-    invoke-static {}, Lcom/v2ray/ang/dto/EConfigType;->getEntries()Lkotlin/enums/EnumEntries;
+    .line 471
+    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Iterable;
-
-    .line 512
-    invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
+    move-result-object v1
 
     :cond_1
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v3
+    move-result v2
 
-    if-eqz v3, :cond_0
+    if-eqz v2, :cond_0
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object v2
 
-    check-cast v3, Lcom/v2ray/ang/dto/EConfigType;
+    check-cast v2, Lcom/v2ray/ang/enums/EConfigType;
 
-    .line 496
-    invoke-virtual {v1}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;->getProtocol()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3}, Lcom/v2ray/ang/dto/EConfigType;->name()Ljava/lang/String;
+    .line 455
+    invoke-virtual {v0}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;->getProtocol()Ljava/lang/String;
 
     move-result-object v3
 
-    const/4 v5, 0x1
+    invoke-virtual {v2}, Lcom/v2ray/ang/enums/EConfigType;->name()Ljava/lang/String;
 
-    invoke-static {v4, v3, v5}, Lkotlin/text/StringsKt;->equals(Ljava/lang/String;Ljava/lang/String;Z)Z
+    move-result-object v2
 
-    move-result v3
+    const/4 v4, 0x1
 
-    if-eqz v3, :cond_1
+    invoke-static {v3, v2, v4}, Lkotlin/text/StringsKt;->equals(Ljava/lang/String;Ljava/lang/String;Z)Z
 
-    return-object v1
+    move-result v2
 
-    :cond_2
-    const/4 v0, 0x0
+    if-eqz v2, :cond_1
 
     return-object v0
+
+    :cond_2
+    const/4 p0, 0x0
+
+    return-object p0
 .end method
 
 .method public final getRemarks()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    .line 7
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->remarks:Ljava/lang/String;
+    .line 8
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->remarks:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getReverse()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    .line 17
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->reverse:Ljava/lang/Object;
+    .line 18
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->reverse:Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getRouting()Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean;
-    .locals 1
+    .locals 0
 
-    .line 14
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->routing:Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean;
+    .line 15
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->routing:Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getStats()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    .line 8
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->stats:Ljava/lang/Object;
+    .line 9
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->stats:Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getTransport()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    .line 16
-    iget-object v0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->transport:Ljava/lang/Object;
+    .line 17
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->transport:Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public hashCode()I
@@ -1668,14 +1680,14 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/v2ray/ang/dto/V2rayConfig;->burstObservatory:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/v2ray/ang/dto/V2rayConfig;->burstObservatory:Ljava/lang/Object;
 
-    if-nez v2, :cond_a
+    if-nez p0, :cond_a
 
     goto :goto_a
 
     :cond_a
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
@@ -1688,7 +1700,7 @@
 .method public final setBurstObservatory(Ljava/lang/Object;)V
     .locals 0
 
-    .line 21
+    .line 22
     iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig;->burstObservatory:Ljava/lang/Object;
 
     return-void
@@ -1697,7 +1709,7 @@
 .method public final setDns(Lcom/v2ray/ang/dto/V2rayConfig$DnsBean;)V
     .locals 0
 
-    .line 13
+    .line 14
     iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig;->dns:Lcom/v2ray/ang/dto/V2rayConfig$DnsBean;
 
     return-void
@@ -1706,7 +1718,7 @@
 .method public final setFakedns(Ljava/lang/Object;)V
     .locals 0
 
-    .line 18
+    .line 19
     iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig;->fakedns:Ljava/lang/Object;
 
     return-void
@@ -1715,7 +1727,7 @@
 .method public final setObservatory(Ljava/lang/Object;)V
     .locals 0
 
-    .line 20
+    .line 21
     iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig;->observatory:Ljava/lang/Object;
 
     return-void
@@ -1736,7 +1748,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 12
+    .line 13
     iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig;->outbounds:Ljava/util/ArrayList;
 
     return-void
@@ -1745,7 +1757,7 @@
 .method public final setPolicy(Lcom/v2ray/ang/dto/V2rayConfig$PolicyBean;)V
     .locals 0
 
-    .line 10
+    .line 11
     iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig;->policy:Lcom/v2ray/ang/dto/V2rayConfig$PolicyBean;
 
     return-void
@@ -1754,7 +1766,7 @@
 .method public final setRemarks(Ljava/lang/String;)V
     .locals 0
 
-    .line 7
+    .line 8
     iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig;->remarks:Ljava/lang/String;
 
     return-void
@@ -1763,14 +1775,14 @@
 .method public final setStats(Ljava/lang/Object;)V
     .locals 0
 
-    .line 8
+    .line 9
     iput-object p1, p0, Lcom/v2ray/ang/dto/V2rayConfig;->stats:Ljava/lang/Object;
 
     return-void
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 17
+    .locals 16
 
     move-object/from16 v0, p0
 
@@ -1802,109 +1814,109 @@
 
     iget-object v14, v0, Lcom/v2ray/ang/dto/V2rayConfig;->observatory:Ljava/lang/Object;
 
-    iget-object v15, v0, Lcom/v2ray/ang/dto/V2rayConfig;->burstObservatory:Ljava/lang/Object;
+    iget-object v0, v0, Lcom/v2ray/ang/dto/V2rayConfig;->burstObservatory:Ljava/lang/Object;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v15, Ljava/lang/StringBuilder;
 
-    move-object/from16 v16, v15
+    move-object/from16 p0, v0
 
-    const-string v15, "V2rayConfig(remarks="
+    const-string v0, "V2rayConfig(remarks="
 
-    invoke-direct {v0, v15}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v15, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", stats="
+    const-string v0, ", stats="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", log="
+    const-string v0, ", log="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", policy="
+    const-string v0, ", policy="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", inbounds="
+    const-string v0, ", inbounds="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", outbounds="
+    const-string v0, ", outbounds="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", dns="
+    const-string v0, ", dns="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", routing="
+    const-string v0, ", routing="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", api="
+    const-string v0, ", api="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", transport="
+    const-string v0, ", transport="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", reverse="
+    const-string v0, ", reverse="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", fakedns="
+    const-string v0, ", fakedns="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", browserForwarder="
+    const-string v0, ", browserForwarder="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", observatory="
+    const-string v0, ", observatory="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", burstObservatory="
+    const-string v0, ", burstObservatory="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object/from16 v1, v16
+    move-object/from16 v0, p0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ")"
+    const-string v0, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

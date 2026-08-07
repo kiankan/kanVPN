@@ -13,12 +13,6 @@
     name = "Builder"
 .end annotation
 
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Landroidx/activity/result/IntentSenderRequest$Builder$Flag;
-    }
-.end annotation
-
 .annotation runtime Lkotlin/Metadata;
     d1 = {
         "\u00000\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0018\u00002\u00020\u0001:\u0001\u0014B\u000f\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0004\u0008\u0004\u0010\u0005B\u0011\u0008\u0016\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u00a2\u0006\u0004\u0008\u0004\u0010\u0008J\u0010\u0010\u000e\u001a\u00020\u00002\u0008\u0010\t\u001a\u0004\u0018\u00010\nJ\u0016\u0010\u000f\u001a\u00020\u00002\u0006\u0010\u0010\u001a\u00020\u000c2\u0006\u0010\u0011\u001a\u00020\u000cJ\u0006\u0010\u0012\u001a\u00020\u0013R\u000e\u0010\u0002\u001a\u00020\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\t\u001a\u0004\u0018\u00010\nX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u000cX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000cX\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u0015"
@@ -50,7 +44,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -71,7 +65,7 @@
 .method public constructor <init>(Landroid/app/PendingIntent;)V
     .locals 1
 
-    const-string v0, "pendingIntent"
+    const-string/jumbo v0, "pendingIntent"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -107,7 +101,7 @@
 
 # virtual methods
 .method public final build()Landroidx/activity/result/IntentSenderRequest;
-    .locals 5
+    .locals 4
 
     .line 152
     new-instance v0, Landroidx/activity/result/IntentSenderRequest;
@@ -118,9 +112,9 @@
 
     iget v3, p0, Landroidx/activity/result/IntentSenderRequest$Builder;->flagsMask:I
 
-    iget v4, p0, Landroidx/activity/result/IntentSenderRequest$Builder;->flagsValues:I
+    iget p0, p0, Landroidx/activity/result/IntentSenderRequest$Builder;->flagsValues:I
 
-    invoke-direct {v0, v1, v2, v3, v4}, Landroidx/activity/result/IntentSenderRequest;-><init>(Landroid/content/IntentSender;Landroid/content/Intent;II)V
+    invoke-direct {v0, v1, v2, v3, p0}, Landroidx/activity/result/IntentSenderRequest;-><init>(Landroid/content/IntentSender;Landroid/content/Intent;II)V
 
     return-object v0
 .end method

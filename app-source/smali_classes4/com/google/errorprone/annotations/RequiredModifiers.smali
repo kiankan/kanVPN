@@ -10,7 +10,6 @@
 .annotation system Ldalvik/annotation/AnnotationDefault;
     value = .subannotation Lcom/google/errorprone/annotations/RequiredModifiers;
         modifier = {}
-        value = {}
     .end subannotation
 .end annotation
 
@@ -30,9 +29,4 @@
 
 # virtual methods
 .method public abstract modifier()[Lcom/google/errorprone/annotations/Modifier;
-.end method
-
-.method public abstract value()[Ljavax/lang/model/element/Modifier;
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
 .end method

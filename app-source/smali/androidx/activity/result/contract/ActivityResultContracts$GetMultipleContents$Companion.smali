@@ -14,7 +14,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nActivityResultContracts.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ActivityResultContracts.kt\nandroidx/activity/result/contract/ActivityResultContracts$GetMultipleContents$Companion\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,1070:1\n1#2:1071\n*E\n"
+    value = "SMAP\nActivityResultContracts.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ActivityResultContracts.kt\nandroidx/activity/result/contract/ActivityResultContracts$GetMultipleContents$Companion\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,1082:1\n1#2:1083\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -36,7 +36,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -47,7 +47,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 423
+    .line 435
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -64,7 +64,7 @@
 
 # virtual methods
 .method public final getClipDataUris$activity(Landroid/content/Intent;)Ljava/util/List;
-    .locals 4
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -76,25 +76,25 @@
         }
     .end annotation
 
-    const-string v0, "<this>"
+    const-string p0, "<this>"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 427
-    new-instance v0, Ljava/util/LinkedHashSet;
+    .line 439
+    new-instance p0, Ljava/util/LinkedHashSet;
 
-    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
+    invoke-direct {p0}, Ljava/util/LinkedHashSet;-><init>()V
 
-    .line 428
+    .line 440
     invoke-virtual {p1}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
-    move-result-object v1
+    move-result-object v0
 
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/util/LinkedHashSet;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v0}, Ljava/util/LinkedHashSet;->add(Ljava/lang/Object;)Z
 
-    .line 429
+    .line 441
     :cond_0
     invoke-virtual {p1}, Landroid/content/Intent;->getClipData()Landroid/content/ClipData;
 
@@ -102,59 +102,59 @@
 
     if-nez p1, :cond_1
 
-    .line 430
-    invoke-virtual {v0}, Ljava/util/LinkedHashSet;->isEmpty()Z
+    .line 442
+    invoke-virtual {p0}, Ljava/util/LinkedHashSet;->isEmpty()Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
 
-    .line 431
+    .line 443
     invoke-static {}, Lkotlin/collections/CollectionsKt;->emptyList()Ljava/util/List;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     :cond_1
     if-eqz p1, :cond_3
 
-    .line 433
+    .line 445
     invoke-virtual {p1}, Landroid/content/ClipData;->getItemCount()I
 
-    move-result v1
+    move-result v0
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
     :goto_0
-    if-ge v2, v1, :cond_3
+    if-ge v1, v0, :cond_3
 
-    .line 434
-    invoke-virtual {p1, v2}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
+    .line 446
+    invoke-virtual {p1, v1}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v3}, Landroid/content/ClipData$Item;->getUri()Landroid/net/Uri;
+    invoke-virtual {v2}, Landroid/content/ClipData$Item;->getUri()Landroid/net/Uri;
 
-    move-result-object v3
+    move-result-object v2
 
-    if-eqz v3, :cond_2
+    if-eqz v2, :cond_2
 
-    .line 436
-    invoke-virtual {v0, v3}, Ljava/util/LinkedHashSet;->add(Ljava/lang/Object;)Z
+    .line 448
+    invoke-virtual {p0, v2}, Ljava/util/LinkedHashSet;->add(Ljava/lang/Object;)Z
 
     :cond_2
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 440
+    .line 452
     :cond_3
     new-instance p1, Ljava/util/ArrayList;
 
-    check-cast v0, Ljava/util/Collection;
+    check-cast p0, Ljava/util/Collection;
 
-    invoke-direct {p1, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    invoke-direct {p1, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     check-cast p1, Ljava/util/List;
 

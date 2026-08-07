@@ -5,12 +5,12 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nIntList.kt\nKotlin\n*S Kotlin\n*F\n+ 1 IntList.kt\nandroidx/collection/MutableIntList\n+ 2 IntList.kt\nandroidx/collection/IntList\n+ 3 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n*L\n1#1,969:1\n549#1:970\n70#2:971\n253#2,6:974\n70#2:980\n70#2:981\n70#2:982\n70#2:989\n70#2:990\n13600#3,2:972\n1663#3,6:983\n*S KotlinDebug\n*F\n+ 1 IntList.kt\nandroidx/collection/MutableIntList\n*L\n692#1:970\n753#1:971\n772#1:974,6\n783#1:980\n787#1:981\n834#1:982\n850#1:989\n869#1:990\n763#1:972,2\n836#1:983,6\n*E\n"
+    value = "SMAP\nIntList.kt\nKotlin\n*S Kotlin\n*F\n+ 1 IntList.kt\nandroidx/collection/MutableIntList\n+ 2 IntList.kt\nandroidx/collection/IntList\n+ 3 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n*L\n1#1,968:1\n556#1:970\n363#2:969\n70#2:971\n237#2,6:974\n70#2:980\n70#2:981\n70#2:988\n13330#3,2:972\n1663#3,6:982\n*S KotlinDebug\n*F\n+ 1 IntList.kt\nandroidx/collection/MutableIntList\n*L\n692#1:970\n628#1:969\n749#1:971\n762#1:974,6\n776#1:980\n822#1:981\n839#1:988\n757#1:972,2\n824#1:982,6\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000(\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0005\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0015\n\u0002\u0008\u0011\u0018\u00002\u00020\u0001B\u000f\u0012\u0008\u0008\u0002\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004J\u000e\u0010\u0008\u001a\u00020\t2\u0006\u0010\n\u001a\u00020\u0003J\u0018\u0010\u0008\u001a\u00020\u000b2\u0008\u0008\u0001\u0010\u000c\u001a\u00020\u00032\u0006\u0010\n\u001a\u00020\u0003J\u000e\u0010\r\u001a\u00020\t2\u0006\u0010\u000e\u001a\u00020\u0001J\u0018\u0010\r\u001a\u00020\t2\u0008\u0008\u0001\u0010\u000c\u001a\u00020\u00032\u0006\u0010\u000e\u001a\u00020\u0001J\u0018\u0010\r\u001a\u00020\t2\u0008\u0008\u0001\u0010\u000c\u001a\u00020\u00032\u0006\u0010\u000e\u001a\u00020\u000fJ\u000e\u0010\r\u001a\u00020\t2\u0006\u0010\u000e\u001a\u00020\u000fJ\u0006\u0010\u0010\u001a\u00020\u000bJ\u000e\u0010\u0011\u001a\u00020\u000b2\u0006\u0010\u0005\u001a\u00020\u0003J\u0011\u0010\u0012\u001a\u00020\u000b2\u0006\u0010\u000e\u001a\u00020\u0001H\u0086\u0002J\u0011\u0010\u0012\u001a\u00020\u000b2\u0006\u0010\n\u001a\u00020\u0003H\u0086\nJ\u0011\u0010\u0012\u001a\u00020\u000b2\u0006\u0010\u000e\u001a\u00020\u000fH\u0086\u0002J\u0011\u0010\u0013\u001a\u00020\u000b2\u0006\u0010\u000e\u001a\u00020\u0001H\u0086\u0002J\u0011\u0010\u0013\u001a\u00020\u000b2\u0006\u0010\n\u001a\u00020\u0003H\u0086\nJ\u0011\u0010\u0013\u001a\u00020\u000b2\u0006\u0010\u000e\u001a\u00020\u000fH\u0086\u0002J\u000e\u0010\u0014\u001a\u00020\t2\u0006\u0010\n\u001a\u00020\u0003J\u000e\u0010\u0015\u001a\u00020\t2\u0006\u0010\u000e\u001a\u00020\u0001J\u000e\u0010\u0015\u001a\u00020\t2\u0006\u0010\u000e\u001a\u00020\u000fJ\u0010\u0010\u0016\u001a\u00020\u00032\u0008\u0008\u0001\u0010\u000c\u001a\u00020\u0003J\u001a\u0010\u0017\u001a\u00020\u000b2\u0008\u0008\u0001\u0010\u0018\u001a\u00020\u00032\u0008\u0008\u0001\u0010\u0019\u001a\u00020\u0003J\u000e\u0010\u001a\u001a\u00020\t2\u0006\u0010\u000e\u001a\u00020\u0001J\u000e\u0010\u001a\u001a\u00020\t2\u0006\u0010\u000e\u001a\u00020\u000fJ\u001b\u0010\u001b\u001a\u00020\u00032\u0008\u0008\u0001\u0010\u000c\u001a\u00020\u00032\u0006\u0010\n\u001a\u00020\u0003H\u0086\u0002J\u0006\u0010\u001c\u001a\u00020\u000bJ\u0006\u0010\u001d\u001a\u00020\u000bJ\u0010\u0010\u001e\u001a\u00020\u000b2\u0008\u0008\u0002\u0010\u001f\u001a\u00020\u0003R\u0012\u0010\u0005\u001a\u00020\u00038\u00c6\u0002\u00a2\u0006\u0006\u001a\u0004\u0008\u0006\u0010\u0007\u00a8\u0006 "
+        "\u0000(\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0005\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0015\n\u0002\u0008\u0011\u0018\u00002\u00020\u0001B\u000f\u0012\u0008\u0008\u0002\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004J\u000e\u0010\u0008\u001a\u00020\t2\u0006\u0010\n\u001a\u00020\u0003J\u0018\u0010\u0008\u001a\u00020\u000b2\u0008\u0008\u0001\u0010\u000c\u001a\u00020\u00032\u0006\u0010\n\u001a\u00020\u0003J\u0011\u0010\r\u001a\u00020\t2\u0006\u0010\u000e\u001a\u00020\u0001H\u0086\u0008J\u0018\u0010\r\u001a\u00020\t2\u0008\u0008\u0001\u0010\u000c\u001a\u00020\u00032\u0006\u0010\u000e\u001a\u00020\u0001J\u0018\u0010\r\u001a\u00020\t2\u0008\u0008\u0001\u0010\u000c\u001a\u00020\u00032\u0006\u0010\u000e\u001a\u00020\u000fJ\u0011\u0010\r\u001a\u00020\t2\u0006\u0010\u000e\u001a\u00020\u000fH\u0086\u0008J\u0006\u0010\u0010\u001a\u00020\u000bJ\u000e\u0010\u0011\u001a\u00020\u000b2\u0006\u0010\u0005\u001a\u00020\u0003J\u0011\u0010\u0012\u001a\u00020\u000b2\u0006\u0010\u000e\u001a\u00020\u0001H\u0086\u0002J\u0011\u0010\u0012\u001a\u00020\u000b2\u0006\u0010\n\u001a\u00020\u0003H\u0086\nJ\u0011\u0010\u0012\u001a\u00020\u000b2\u0006\u0010\u000e\u001a\u00020\u000fH\u0086\u0002J\u0011\u0010\u0013\u001a\u00020\u000b2\u0006\u0010\u000e\u001a\u00020\u0001H\u0086\nJ\u0011\u0010\u0013\u001a\u00020\u000b2\u0006\u0010\n\u001a\u00020\u0003H\u0086\nJ\u0011\u0010\u0013\u001a\u00020\u000b2\u0006\u0010\u000e\u001a\u00020\u000fH\u0086\nJ\u000e\u0010\u0014\u001a\u00020\t2\u0006\u0010\n\u001a\u00020\u0003J\u000e\u0010\u0015\u001a\u00020\t2\u0006\u0010\u000e\u001a\u00020\u0001J\u000e\u0010\u0015\u001a\u00020\t2\u0006\u0010\u000e\u001a\u00020\u000fJ\u0010\u0010\u0016\u001a\u00020\u00032\u0008\u0008\u0001\u0010\u000c\u001a\u00020\u0003J\u001a\u0010\u0017\u001a\u00020\u000b2\u0008\u0008\u0001\u0010\u0018\u001a\u00020\u00032\u0008\u0008\u0001\u0010\u0019\u001a\u00020\u0003J\u000e\u0010\u001a\u001a\u00020\t2\u0006\u0010\u000e\u001a\u00020\u0001J\u000e\u0010\u001a\u001a\u00020\t2\u0006\u0010\u000e\u001a\u00020\u000fJ\u001b\u0010\u001b\u001a\u00020\u00032\u0008\u0008\u0001\u0010\u000c\u001a\u00020\u00032\u0006\u0010\n\u001a\u00020\u0003H\u0086\u0002J\u0006\u0010\u001c\u001a\u00020\u000bJ\u0006\u0010\u001d\u001a\u00020\u000bJ\u0010\u0010\u001e\u001a\u00020\u000b2\u0008\u0008\u0002\u0010\u001f\u001a\u00020\u0003R\u0012\u0010\u0005\u001a\u00020\u00038\u00c6\u0002\u00a2\u0006\u0006\u001a\u0004\u0008\u0006\u0010\u0007\u00a8\u0006 "
     }
     d2 = {
         "Landroidx/collection/MutableIntList;",
@@ -50,7 +50,7 @@
     k = 0x1
     mv = {
         0x1,
-        0x8,
+        0x9,
         0x0
     }
     xi = 0x30
@@ -77,7 +77,7 @@
 
     const/4 v0, 0x0
 
-    .line 541
+    .line 549
     invoke-direct {p0, p1, v0}, Landroidx/collection/IntList;-><init>(ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
@@ -92,7 +92,7 @@
 
     const/16 p1, 0x10
 
-    .line 539
+    .line 549
     :cond_0
     invoke-direct {p0, p1}, Landroidx/collection/MutableIntList;-><init>(I)V
 
@@ -120,41 +120,50 @@
 .method public final add(II)V
     .locals 3
 
-    if-ltz p1, :cond_1
+    if-ltz p1, :cond_0
 
-    .line 567
+    .line 573
     iget v0, p0, Landroidx/collection/MutableIntList;->_size:I
 
-    if-gt p1, v0, :cond_1
+    if-gt p1, v0, :cond_0
 
-    .line 570
+    goto :goto_0
+
+    .line 574
+    :cond_0
+    const-string v0, "Index must be between 0 and size"
+
+    invoke-static {v0}, Landroidx/collection/internal/RuntimeHelpersKt;->throwIndexOutOfBoundsException(Ljava/lang/String;)V
+
+    .line 576
+    :goto_0
     iget v0, p0, Landroidx/collection/MutableIntList;->_size:I
 
     add-int/lit8 v0, v0, 0x1
 
     invoke-virtual {p0, v0}, Landroidx/collection/MutableIntList;->ensureCapacity(I)V
 
-    .line 571
+    .line 577
     iget-object v0, p0, Landroidx/collection/MutableIntList;->content:[I
 
-    .line 572
+    .line 578
     iget v1, p0, Landroidx/collection/MutableIntList;->_size:I
 
-    if-eq p1, v1, :cond_0
+    if-eq p1, v1, :cond_1
 
     add-int/lit8 v1, p1, 0x1
 
-    .line 577
+    .line 583
     iget v2, p0, Landroidx/collection/MutableIntList;->_size:I
 
-    .line 573
+    .line 579
     invoke-static {v0, v0, v1, p1, v2}, Lkotlin/collections/ArraysKt;->copyInto([I[IIII)[I
 
-    .line 580
-    :cond_0
+    .line 586
+    :cond_1
     aput p2, v0, p1
 
-    .line 581
+    .line 587
     iget p1, p0, Landroidx/collection/MutableIntList;->_size:I
 
     add-int/lit8 p1, p1, 0x1
@@ -162,40 +171,12 @@
     iput p1, p0, Landroidx/collection/MutableIntList;->_size:I
 
     return-void
-
-    .line 568
-    :cond_1
-    new-instance p2, Ljava/lang/IndexOutOfBoundsException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Index "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p1, " must be in 0.."
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget p1, p0, Landroidx/collection/MutableIntList;->_size:I
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw p2
 .end method
 
 .method public final add(I)Z
     .locals 3
 
-    .line 555
+    .line 560
     iget v0, p0, Landroidx/collection/MutableIntList;->_size:I
 
     const/4 v1, 0x1
@@ -204,14 +185,14 @@
 
     invoke-virtual {p0, v0}, Landroidx/collection/MutableIntList;->ensureCapacity(I)V
 
-    .line 556
+    .line 561
     iget-object v0, p0, Landroidx/collection/MutableIntList;->content:[I
 
     iget v2, p0, Landroidx/collection/MutableIntList;->_size:I
 
     aput p1, v0, v2
 
-    .line 557
+    .line 562
     iget p1, p0, Landroidx/collection/MutableIntList;->_size:I
 
     add-int/2addr p1, v1
@@ -228,26 +209,33 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    if-ltz p1, :cond_2
+    if-ltz p1, :cond_0
 
-    .line 623
+    .line 625
     iget v0, p0, Landroidx/collection/MutableIntList;->_size:I
 
-    if-gt p1, v0, :cond_2
+    if-gt p1, v0, :cond_0
+
+    goto :goto_0
 
     .line 626
-    invoke-virtual {p2}, Landroidx/collection/IntList;->isEmpty()Z
+    :cond_0
+    const-string v0, ""
 
-    move-result v0
+    invoke-static {v0}, Landroidx/collection/internal/RuntimeHelpersKt;->throwIndexOutOfBoundsException(Ljava/lang/String;)V
+
+    .line 969
+    :goto_0
+    iget v0, p2, Landroidx/collection/IntList;->_size:I
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_1
 
     return v1
 
-    .line 627
-    :cond_0
+    .line 629
+    :cond_1
     iget v0, p0, Landroidx/collection/MutableIntList;->_size:I
 
     iget v2, p2, Landroidx/collection/IntList;->_size:I
@@ -256,36 +244,36 @@
 
     invoke-virtual {p0, v0}, Landroidx/collection/MutableIntList;->ensureCapacity(I)V
 
-    .line 628
+    .line 630
     iget-object v0, p0, Landroidx/collection/MutableIntList;->content:[I
 
-    .line 629
+    .line 631
     iget v2, p0, Landroidx/collection/MutableIntList;->_size:I
 
-    if-eq p1, v2, :cond_1
+    if-eq p1, v2, :cond_2
 
-    .line 632
+    .line 634
     iget v2, p2, Landroidx/collection/IntList;->_size:I
 
     add-int/2addr v2, p1
 
-    .line 634
+    .line 636
     iget v3, p0, Landroidx/collection/MutableIntList;->_size:I
 
-    .line 630
+    .line 632
     invoke-static {v0, v0, v2, p1, v3}, Lkotlin/collections/ArraysKt;->copyInto([I[IIII)[I
 
-    .line 637
-    :cond_1
+    .line 639
+    :cond_2
     iget-object v2, p2, Landroidx/collection/IntList;->content:[I
 
-    .line 641
+    .line 643
     iget v3, p2, Landroidx/collection/IntList;->_size:I
 
-    .line 637
+    .line 639
     invoke-static {v2, v0, p1, v1, v3}, Lkotlin/collections/ArraysKt;->copyInto([I[IIII)[I
 
-    .line 643
+    .line 645
     iget p1, p0, Landroidx/collection/MutableIntList;->_size:I
 
     iget p2, p2, Landroidx/collection/IntList;->_size:I
@@ -294,37 +282,9 @@
 
     iput p1, p0, Landroidx/collection/MutableIntList;->_size:I
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
-
-    .line 624
-    :cond_2
-    new-instance p2, Ljava/lang/IndexOutOfBoundsException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Index "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p1, " must be in 0.."
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget p1, p0, Landroidx/collection/MutableIntList;->_size:I
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw p2
+    return p0
 .end method
 
 .method public final addAll(I[I)Z
@@ -334,24 +294,33 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    if-ltz p1, :cond_2
-
-    .line 594
-    iget v0, p0, Landroidx/collection/MutableIntList;->_size:I
-
-    if-gt p1, v0, :cond_2
-
-    .line 597
-    array-length v0, p2
-
-    if-nez v0, :cond_0
-
-    const/4 p1, 0x0
-
-    return p1
+    if-ltz p1, :cond_0
 
     .line 598
+    iget v0, p0, Landroidx/collection/MutableIntList;->_size:I
+
+    if-gt p1, v0, :cond_0
+
+    goto :goto_0
+
+    .line 599
     :cond_0
+    const-string v0, ""
+
+    invoke-static {v0}, Landroidx/collection/internal/RuntimeHelpersKt;->throwIndexOutOfBoundsException(Ljava/lang/String;)V
+
+    .line 601
+    :goto_0
+    array-length v0, p2
+
+    if-nez v0, :cond_1
+
+    const/4 p0, 0x0
+
+    return p0
+
+    .line 602
+    :cond_1
     iget v0, p0, Landroidx/collection/MutableIntList;->_size:I
 
     array-length v1, p2
@@ -360,26 +329,26 @@
 
     invoke-virtual {p0, v0}, Landroidx/collection/MutableIntList;->ensureCapacity(I)V
 
-    .line 599
+    .line 603
     iget-object v2, p0, Landroidx/collection/MutableIntList;->content:[I
 
-    .line 600
+    .line 604
     iget v0, p0, Landroidx/collection/MutableIntList;->_size:I
 
-    if-eq p1, v0, :cond_1
+    if-eq p1, v0, :cond_2
 
-    .line 603
+    .line 607
     array-length v0, p2
 
     add-int/2addr v0, p1
 
-    .line 605
+    .line 609
     iget v1, p0, Landroidx/collection/MutableIntList;->_size:I
 
-    .line 601
+    .line 605
     invoke-static {v2, v2, v0, p1, v1}, Lkotlin/collections/ArraysKt;->copyInto([I[IIII)[I
 
-    :cond_1
+    :cond_2
     const/16 v6, 0xc
 
     const/4 v7, 0x0
@@ -392,10 +361,10 @@
 
     move-object v1, p2
 
-    .line 608
+    .line 612
     invoke-static/range {v1 .. v7}, Lkotlin/collections/ArraysKt;->copyInto$default([I[IIIIILjava/lang/Object;)[I
 
-    .line 609
+    .line 613
     iget p1, p0, Landroidx/collection/MutableIntList;->_size:I
 
     array-length p2, v1
@@ -404,39 +373,9 @@
 
     iput p1, p0, Landroidx/collection/MutableIntList;->_size:I
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
-
-    :cond_2
-    move v3, p1
-
-    .line 595
-    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    const-string v0, "Index "
-
-    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v0, " must be in 0.."
-
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v0, p0, Landroidx/collection/MutableIntList;->_size:I
-
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return p0
 .end method
 
 .method public final addAll(Landroidx/collection/IntList;)Z
@@ -446,14 +385,14 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 652
+    .line 654
     iget v0, p0, Landroidx/collection/MutableIntList;->_size:I
 
     invoke-virtual {p0, v0, p1}, Landroidx/collection/MutableIntList;->addAll(ILandroidx/collection/IntList;)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public final addAll([I)Z
@@ -463,14 +402,14 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 660
+    .line 662
     iget v0, p0, Landroidx/collection/MutableIntList;->_size:I
 
     invoke-virtual {p0, v0, p1}, Landroidx/collection/MutableIntList;->addAll(I[I)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public final clear()V
@@ -478,7 +417,7 @@
 
     const/4 v0, 0x0
 
-    .line 682
+    .line 681
     iput v0, p0, Landroidx/collection/MutableIntList;->_size:I
 
     return-void
@@ -487,15 +426,15 @@
 .method public final ensureCapacity(I)V
     .locals 2
 
-    .line 702
+    .line 703
     iget-object v0, p0, Landroidx/collection/MutableIntList;->content:[I
 
-    .line 703
+    .line 704
     array-length v1, v0
 
     if-ge v1, p1, :cond_0
 
-    .line 704
+    .line 705
     array-length v1, v0
 
     mul-int/lit8 v1, v1, 0x3
@@ -506,12 +445,12 @@
 
     move-result p1
 
-    .line 705
+    .line 706
     invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([II)[I
 
     move-result-object p1
 
-    const-string v0, "copyOf(this, newSize)"
+    const-string v0, "copyOf(...)"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -522,20 +461,20 @@
 .end method
 
 .method public final getCapacity()I
-    .locals 1
+    .locals 0
 
-    .line 549
-    iget-object v0, p0, Landroidx/collection/MutableIntList;->content:[I
+    .line 556
+    iget-object p0, p0, Landroidx/collection/MutableIntList;->content:[I
 
-    array-length v0, v0
+    array-length p0, p0
 
-    return v0
+    return p0
 .end method
 
 .method public final minusAssign(I)V
     .locals 0
 
-    .line 720
+    .line 717
     invoke-virtual {p0, p1}, Landroidx/collection/MutableIntList;->remove(I)Z
 
     return-void
@@ -562,7 +501,7 @@
     .line 977
     aget v2, v0, v1
 
-    .line 773
+    .line 762
     invoke-virtual {p0, v2}, Landroidx/collection/MutableIntList;->remove(I)Z
 
     add-int/lit8 v1, v1, 0x1
@@ -590,7 +529,7 @@
 
     aget v2, p1, v1
 
-    .line 764
+    .line 757
     invoke-virtual {p0, v2}, Landroidx/collection/MutableIntList;->remove(I)Z
 
     add-int/lit8 v1, v1, 0x1
@@ -604,7 +543,7 @@
 .method public final plusAssign(I)V
     .locals 0
 
-    .line 713
+    .line 712
     invoke-virtual {p0, p1}, Landroidx/collection/MutableIntList;->add(I)Z
 
     return-void
@@ -632,7 +571,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 674
+    .line 672
     iget v0, p0, Landroidx/collection/MutableIntList;->_size:I
 
     invoke-virtual {p0, v0, p1}, Landroidx/collection/MutableIntList;->addAll(I[I)Z
@@ -643,24 +582,24 @@
 .method public final remove(I)Z
     .locals 0
 
-    .line 729
+    .line 725
     invoke-virtual {p0, p1}, Landroidx/collection/MutableIntList;->indexOf(I)I
 
     move-result p1
 
     if-ltz p1, :cond_0
 
-    .line 731
+    .line 727
     invoke-virtual {p0, p1}, Landroidx/collection/MutableIntList;->removeAt(I)I
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method public final removeAll(Landroidx/collection/IntList;)Z
@@ -670,7 +609,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 752
+    .line 748
     iget v0, p0, Landroidx/collection/MutableIntList;->_size:I
 
     .line 971
@@ -686,7 +625,7 @@
 
     move v4, v3
 
-    .line 754
+    .line 750
     :goto_0
     invoke-virtual {p1, v4}, Landroidx/collection/IntList;->get(I)I
 
@@ -700,11 +639,11 @@
 
     goto :goto_0
 
-    .line 756
+    .line 752
     :cond_0
-    iget p1, p0, Landroidx/collection/MutableIntList;->_size:I
+    iget p0, p0, Landroidx/collection/MutableIntList;->_size:I
 
-    if-eq v0, p1, :cond_1
+    if-eq v0, p0, :cond_1
 
     return v2
 
@@ -719,10 +658,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 741
+    .line 737
     iget v0, p0, Landroidx/collection/MutableIntList;->_size:I
 
-    .line 742
+    .line 738
     array-length v1, p1
 
     const/4 v2, 0x0
@@ -732,7 +671,7 @@
     :goto_0
     if-ge v3, v1, :cond_0
 
-    .line 743
+    .line 739
     aget v4, p1, v3
 
     invoke-virtual {p0, v4}, Landroidx/collection/MutableIntList;->remove(I)Z
@@ -741,15 +680,15 @@
 
     goto :goto_0
 
-    .line 745
+    .line 741
     :cond_0
-    iget p1, p0, Landroidx/collection/MutableIntList;->_size:I
+    iget p0, p0, Landroidx/collection/MutableIntList;->_size:I
 
-    if-eq v0, p1, :cond_1
+    if-eq v0, p0, :cond_1
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_1
     return v2
@@ -758,41 +697,50 @@
 .method public final removeAt(I)I
     .locals 4
 
-    if-ltz p1, :cond_1
+    if-ltz p1, :cond_0
 
-    .line 782
+    .line 771
     iget v0, p0, Landroidx/collection/MutableIntList;->_size:I
 
-    if-ge p1, v0, :cond_1
+    if-ge p1, v0, :cond_0
 
-    .line 785
+    goto :goto_0
+
+    .line 772
+    :cond_0
+    const-string v0, "Index must be between 0 and size"
+
+    invoke-static {v0}, Landroidx/collection/internal/RuntimeHelpersKt;->throwIndexOutOfBoundsException(Ljava/lang/String;)V
+
+    .line 774
+    :goto_0
     iget-object v0, p0, Landroidx/collection/MutableIntList;->content:[I
 
-    .line 786
+    .line 775
     aget v1, v0, p1
 
-    .line 787
+    .line 776
     move-object v2, p0
 
     check-cast v2, Landroidx/collection/IntList;
 
-    .line 981
+    .line 980
     iget v2, v2, Landroidx/collection/IntList;->_size:I
 
     add-int/lit8 v2, v2, -0x1
 
-    if-eq p1, v2, :cond_0
+    if-eq p1, v2, :cond_1
 
     add-int/lit8 v2, p1, 0x1
 
-    .line 792
+    .line 781
     iget v3, p0, Landroidx/collection/MutableIntList;->_size:I
 
-    .line 788
+    .line 777
     invoke-static {v0, v0, p1, v2, v3}, Lkotlin/collections/ArraysKt;->copyInto([I[IIII)[I
 
-    .line 795
-    :cond_0
+    .line 784
+    :cond_1
     iget p1, p0, Landroidx/collection/MutableIntList;->_size:I
 
     add-int/lit8 p1, p1, -0x1
@@ -800,85 +748,62 @@
     iput p1, p0, Landroidx/collection/MutableIntList;->_size:I
 
     return v1
-
-    .line 783
-    :cond_1
-    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Index "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p1, " must be in 0.."
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-object p1, p0
-
-    check-cast p1, Landroidx/collection/IntList;
-
-    .line 980
-    iget p1, p1, Landroidx/collection/IntList;->_size:I
-
-    add-int/lit8 p1, p1, -0x1
-
-    .line 783
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method
 
 .method public final removeRange(II)V
     .locals 3
 
-    .line 808
-    const-string v0, "Start ("
+    if-ltz p1, :cond_0
 
-    if-ltz p1, :cond_3
-
-    iget v1, p0, Landroidx/collection/MutableIntList;->_size:I
-
-    if-gt p1, v1, :cond_3
-
-    if-ltz p2, :cond_3
-
-    iget v1, p0, Landroidx/collection/MutableIntList;->_size:I
-
-    if-gt p2, v1, :cond_3
-
-    if-lt p2, p1, :cond_2
-
-    if-eq p2, p1, :cond_1
-
-    .line 815
+    .line 795
     iget v0, p0, Landroidx/collection/MutableIntList;->_size:I
 
-    if-ge p2, v0, :cond_0
+    if-gt p1, v0, :cond_0
 
-    .line 816
+    if-ltz p2, :cond_0
+
+    iget v0, p0, Landroidx/collection/MutableIntList;->_size:I
+
+    if-gt p2, v0, :cond_0
+
+    goto :goto_0
+
+    .line 796
+    :cond_0
+    const-string v0, "Index must be between 0 and size"
+
+    invoke-static {v0}, Landroidx/collection/internal/RuntimeHelpersKt;->throwIndexOutOfBoundsException(Ljava/lang/String;)V
+
+    :goto_0
+    if-ge p2, p1, :cond_1
+
+    .line 799
+    const-string v0, "The end index must be < start index"
+
+    invoke-static {v0}, Landroidx/collection/internal/RuntimeHelpersKt;->throwIllegalArgumentException(Ljava/lang/String;)V
+
+    :cond_1
+    if-eq p2, p1, :cond_3
+
+    .line 802
+    iget v0, p0, Landroidx/collection/MutableIntList;->_size:I
+
+    if-ge p2, v0, :cond_2
+
+    .line 803
     iget-object v0, p0, Landroidx/collection/MutableIntList;->content:[I
 
-    .line 817
+    .line 804
     iget-object v1, p0, Landroidx/collection/MutableIntList;->content:[I
 
-    .line 820
+    .line 807
     iget v2, p0, Landroidx/collection/MutableIntList;->_size:I
 
-    .line 816
+    .line 803
     invoke-static {v0, v1, p1, p2, v2}, Lkotlin/collections/ArraysKt;->copyInto([I[IIII)[I
 
-    .line 823
-    :cond_0
+    .line 810
+    :cond_2
     iget v0, p0, Landroidx/collection/MutableIntList;->_size:I
 
     sub-int/2addr p2, p1
@@ -887,68 +812,8 @@
 
     iput v0, p0, Landroidx/collection/MutableIntList;->_size:I
 
-    :cond_1
-    return-void
-
-    .line 812
-    :cond_2
-    new-instance v1, Ljava/lang/IllegalArgumentException;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p1, ") is more than end ("
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const/16 p1, 0x29
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v1, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    .line 809
     :cond_3
-    new-instance v1, Ljava/lang/IndexOutOfBoundsException;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p1, ") and end ("
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p1, ") must be in 0.."
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget p1, p0, Landroidx/collection/MutableIntList;->_size:I
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v1, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw v1
+    return-void
 .end method
 
 .method public final retainAll(Landroidx/collection/IntList;)Z
@@ -958,18 +823,18 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 848
+    .line 837
     iget v0, p0, Landroidx/collection/MutableIntList;->_size:I
 
-    .line 849
+    .line 838
     iget-object v1, p0, Landroidx/collection/MutableIntList;->content:[I
 
-    .line 850
+    .line 839
     move-object v2, p0
 
     check-cast v2, Landroidx/collection/IntList;
 
-    .line 989
+    .line 988
     iget v2, v2, Landroidx/collection/IntList;->_size:I
 
     const/4 v3, 0x1
@@ -981,17 +846,17 @@
 
     if-ge v4, v2, :cond_1
 
-    .line 851
+    .line 840
     aget v4, v1, v2
 
-    .line 852
+    .line 841
     invoke-virtual {p1, v4}, Landroidx/collection/IntList;->contains(I)Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 853
+    .line 842
     invoke-virtual {p0, v2}, Landroidx/collection/MutableIntList;->removeAt(I)I
 
     :cond_0
@@ -999,39 +864,39 @@
 
     goto :goto_0
 
-    .line 856
+    .line 845
     :cond_1
-    iget p1, p0, Landroidx/collection/MutableIntList;->_size:I
+    iget p0, p0, Landroidx/collection/MutableIntList;->_size:I
 
-    if-eq v0, p1, :cond_2
+    if-eq v0, p0, :cond_2
 
     return v3
 
     :cond_2
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return p1
+    return p0
 .end method
 
 .method public final retainAll([I)Z
-    .locals 10
+    .locals 9
 
     const-string v0, "elements"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 832
+    .line 820
     iget v0, p0, Landroidx/collection/MutableIntList;->_size:I
 
-    .line 833
+    .line 821
     iget-object v1, p0, Landroidx/collection/MutableIntList;->content:[I
 
-    .line 834
+    .line 822
     move-object v2, p0
 
     check-cast v2, Landroidx/collection/IntList;
 
-    .line 982
+    .line 981
     iget v2, v2, Landroidx/collection/IntList;->_size:I
 
     const/4 v3, 0x1
@@ -1043,151 +908,128 @@
 
     const/4 v5, -0x1
 
-    if-ge v5, v2, :cond_4
+    if-ge v5, v2, :cond_3
 
-    .line 835
+    .line 823
     aget v6, v1, v2
 
-    .line 983
+    .line 982
     array-length v7, p1
 
-    move v8, v4
-
     :goto_1
-    if-ge v8, v7, :cond_2
+    if-ge v4, v7, :cond_1
 
-    .line 984
-    aget v9, p1, v8
+    .line 983
+    aget v8, p1, v4
 
-    if-ne v9, v6, :cond_0
+    if-ne v8, v6, :cond_0
 
-    move v9, v3
+    move v5, v4
 
     goto :goto_2
 
     :cond_0
-    move v9, v4
-
-    :goto_2
-    if-eqz v9, :cond_1
-
-    move v5, v8
-
-    goto :goto_3
-
-    :cond_1
-    add-int/lit8 v8, v8, 0x1
+    add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    :cond_2
-    :goto_3
-    if-gez v5, :cond_3
+    :cond_1
+    :goto_2
+    if-gez v5, :cond_2
 
-    .line 837
+    .line 825
     invoke-virtual {p0, v2}, Landroidx/collection/MutableIntList;->removeAt(I)I
 
-    :cond_3
+    :cond_2
     add-int/lit8 v2, v2, -0x1
 
     goto :goto_0
 
-    .line 840
-    :cond_4
-    iget p1, p0, Landroidx/collection/MutableIntList;->_size:I
+    .line 828
+    :cond_3
+    iget p0, p0, Landroidx/collection/MutableIntList;->_size:I
 
-    if-eq v0, p1, :cond_5
+    if-eq v0, p0, :cond_4
 
     return v3
 
-    :cond_5
+    :cond_4
     return v4
 .end method
 
 .method public final set(II)I
-    .locals 2
+    .locals 1
 
     if-ltz p1, :cond_0
 
-    .line 868
+    .line 855
     iget v0, p0, Landroidx/collection/MutableIntList;->_size:I
 
     if-ge p1, v0, :cond_0
 
-    .line 871
-    iget-object v0, p0, Landroidx/collection/MutableIntList;->content:[I
+    goto :goto_0
 
-    .line 872
-    aget v1, v0, p1
-
-    .line 873
-    aput p2, v0, p1
-
-    return v1
-
-    .line 869
+    .line 856
     :cond_0
-    new-instance p2, Ljava/lang/IndexOutOfBoundsException;
+    const-string v0, "Index must be between 0 and size"
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {v0}, Landroidx/collection/internal/RuntimeHelpersKt;->throwIndexOutOfBoundsException(Ljava/lang/String;)V
 
-    const-string v1, "set index "
+    .line 858
+    :goto_0
+    iget-object p0, p0, Landroidx/collection/MutableIntList;->content:[I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 859
+    aget v0, p0, p1
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 860
+    aput p2, p0, p1
 
-    const-string p1, " must be between 0 .. "
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-object p1, p0
-
-    check-cast p1, Landroidx/collection/IntList;
-
-    .line 990
-    iget p1, p1, Landroidx/collection/IntList;->_size:I
-
-    add-int/lit8 p1, p1, -0x1
-
-    .line 869
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw p2
+    return v0
 .end method
 
 .method public final sort()V
-    .locals 3
+    .locals 2
 
-    .line 881
+    .line 867
+    iget v0, p0, Landroidx/collection/MutableIntList;->_size:I
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 868
+    :cond_0
     iget-object v0, p0, Landroidx/collection/MutableIntList;->content:[I
 
     const/4 v1, 0x0
 
-    iget v2, p0, Landroidx/collection/MutableIntList;->_size:I
+    iget p0, p0, Landroidx/collection/MutableIntList;->_size:I
 
-    invoke-static {v0, v1, v2}, Lkotlin/collections/ArraysKt;->sort([III)V
+    invoke-static {v0, v1, p0}, Lkotlin/collections/ArraysKt;->sort([III)V
 
     return-void
 .end method
 
 .method public final sortDescending()V
-    .locals 3
+    .locals 2
 
-    .line 888
+    .line 874
+    iget v0, p0, Landroidx/collection/MutableIntList;->_size:I
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 875
+    :cond_0
     iget-object v0, p0, Landroidx/collection/MutableIntList;->content:[I
 
     const/4 v1, 0x0
 
-    iget v2, p0, Landroidx/collection/MutableIntList;->_size:I
+    iget p0, p0, Landroidx/collection/MutableIntList;->_size:I
 
-    invoke-static {v0, v1, v2}, Lkotlin/collections/ArraysKt;->sortDescending([III)V
+    invoke-static {v0, v1, p0}, Lkotlin/collections/ArraysKt;->sortDescending([III)V
 
     return-void
 .end method
@@ -1216,7 +1058,7 @@
 
     move-result-object p1
 
-    const-string v0, "copyOf(this, newSize)"
+    const-string v0, "copyOf(...)"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 

@@ -61,37 +61,37 @@
 
 # virtual methods
 .method public getErrorsCorrected()I
-    .locals 1
+    .locals 0
 
     .line 70
-    iget v0, p0, Lcom/google/zxing/aztec/AztecDetectorResult;->errorsCorrected:I
+    iget p0, p0, Lcom/google/zxing/aztec/AztecDetectorResult;->errorsCorrected:I
 
-    return v0
+    return p0
 .end method
 
 .method public getNbDatablocks()I
-    .locals 1
+    .locals 0
 
     .line 62
-    iget v0, p0, Lcom/google/zxing/aztec/AztecDetectorResult;->nbDatablocks:I
+    iget p0, p0, Lcom/google/zxing/aztec/AztecDetectorResult;->nbDatablocks:I
 
-    return v0
+    return p0
 .end method
 
 .method public getNbLayers()I
-    .locals 1
+    .locals 0
 
     .line 58
-    iget v0, p0, Lcom/google/zxing/aztec/AztecDetectorResult;->nbLayers:I
+    iget p0, p0, Lcom/google/zxing/aztec/AztecDetectorResult;->nbLayers:I
 
-    return v0
+    return p0
 .end method
 
 .method public isCompact()Z
-    .locals 1
+    .locals 0
 
     .line 66
-    iget-boolean v0, p0, Lcom/google/zxing/aztec/AztecDetectorResult;->compact:Z
+    iget-boolean p0, p0, Lcom/google/zxing/aztec/AztecDetectorResult;->compact:Z
 
-    return v0
+    return p0
 .end method

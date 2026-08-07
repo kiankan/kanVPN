@@ -29,14 +29,14 @@
 
 # virtual methods
 .method public final onImageClose(Landroidx/camera/core/ImageProxy;)V
-    .locals 2
+    .locals 1
 
     .line 0
     iget-object v0, p0, Landroidx/camera/core/ImageProcessingUtil$$ExternalSyntheticLambda0;->f$0:Landroidx/camera/core/ImageProxy;
 
-    iget-object v1, p0, Landroidx/camera/core/ImageProcessingUtil$$ExternalSyntheticLambda0;->f$1:Landroidx/camera/core/ImageProxy;
+    iget-object p0, p0, Landroidx/camera/core/ImageProcessingUtil$$ExternalSyntheticLambda0;->f$1:Landroidx/camera/core/ImageProxy;
 
-    invoke-static {v0, v1, p1}, Landroidx/camera/core/ImageProcessingUtil;->lambda$convertYUVToRGB$0(Landroidx/camera/core/ImageProxy;Landroidx/camera/core/ImageProxy;Landroidx/camera/core/ImageProxy;)V
+    invoke-static {v0, p0, p1}, Landroidx/camera/core/ImageProcessingUtil;->lambda$convertYUVToRGB$0(Landroidx/camera/core/ImageProxy;Landroidx/camera/core/ImageProxy;Landroidx/camera/core/ImageProxy;)V
 
     return-void
 .end method

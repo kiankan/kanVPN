@@ -4,15 +4,26 @@
 
 
 # annotations
+.annotation system Ldalvik/annotation/SourceDebugExtension;
+    value = "SMAP\nFloatFloatMap.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FloatFloatMap.kt\nandroidx/collection/FloatFloatMapKt\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,1036:1\n1#2:1037\n*E\n"
+.end annotation
+
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000\u0018\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0007\n\u0002\u0008\u000b\u001a\u0006\u0010\u0002\u001a\u00020\u0003\u001a\u0006\u0010\u0004\u001a\u00020\u0003\u001a\u0016\u0010\u0004\u001a\u00020\u00032\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\u0006\u001a&\u0010\u0004\u001a\u00020\u00032\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0008\u001a\u00020\u00062\u0006\u0010\t\u001a\u00020\u0006\u001a6\u0010\u0004\u001a\u00020\u00032\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0008\u001a\u00020\u00062\u0006\u0010\t\u001a\u00020\u00062\u0006\u0010\n\u001a\u00020\u00062\u0006\u0010\u000b\u001a\u00020\u0006\u001aF\u0010\u0004\u001a\u00020\u00032\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0008\u001a\u00020\u00062\u0006\u0010\t\u001a\u00020\u00062\u0006\u0010\n\u001a\u00020\u00062\u0006\u0010\u000b\u001a\u00020\u00062\u0006\u0010\u000c\u001a\u00020\u00062\u0006\u0010\r\u001a\u00020\u0006\u001aV\u0010\u0004\u001a\u00020\u00032\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0008\u001a\u00020\u00062\u0006\u0010\t\u001a\u00020\u00062\u0006\u0010\n\u001a\u00020\u00062\u0006\u0010\u000b\u001a\u00020\u00062\u0006\u0010\u000c\u001a\u00020\u00062\u0006\u0010\r\u001a\u00020\u00062\u0006\u0010\u000e\u001a\u00020\u00062\u0006\u0010\u000f\u001a\u00020\u0006\u001a\u0006\u0010\u0010\u001a\u00020\u0001\u001a\u0016\u0010\u0010\u001a\u00020\u00012\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\u0006\u001a&\u0010\u0010\u001a\u00020\u00012\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0008\u001a\u00020\u00062\u0006\u0010\t\u001a\u00020\u0006\u001a6\u0010\u0010\u001a\u00020\u00012\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0008\u001a\u00020\u00062\u0006\u0010\t\u001a\u00020\u00062\u0006\u0010\n\u001a\u00020\u00062\u0006\u0010\u000b\u001a\u00020\u0006\u001aF\u0010\u0010\u001a\u00020\u00012\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0008\u001a\u00020\u00062\u0006\u0010\t\u001a\u00020\u00062\u0006\u0010\n\u001a\u00020\u00062\u0006\u0010\u000b\u001a\u00020\u00062\u0006\u0010\u000c\u001a\u00020\u00062\u0006\u0010\r\u001a\u00020\u0006\u001aV\u0010\u0010\u001a\u00020\u00012\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0008\u001a\u00020\u00062\u0006\u0010\t\u001a\u00020\u00062\u0006\u0010\n\u001a\u00020\u00062\u0006\u0010\u000b\u001a\u00020\u00062\u0006\u0010\u000c\u001a\u00020\u00062\u0006\u0010\r\u001a\u00020\u00062\u0006\u0010\u000e\u001a\u00020\u00062\u0006\u0010\u000f\u001a\u00020\u0006\"\u000e\u0010\u0000\u001a\u00020\u0001X\u0082\u0004\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u0011"
+        "\u0000,\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0010\u0007\n\u0002\u0008\u000b\u001a2\u0010\u0002\u001a\u00020\u00032\u0017\u0010\u0004\u001a\u0013\u0012\u0004\u0012\u00020\u0001\u0012\u0004\u0012\u00020\u00060\u0005\u00a2\u0006\u0002\u0008\u0007H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\n\n\u0008\u0008\u0001\u0012\u0002\u0010\u0001 \u0001\u001a:\u0010\u0002\u001a\u00020\u00032\u0006\u0010\u0008\u001a\u00020\t2\u0017\u0010\u0004\u001a\u0013\u0012\u0004\u0012\u00020\u0001\u0012\u0004\u0012\u00020\u00060\u0005\u00a2\u0006\u0002\u0008\u0007H\u0086\u0008\u00f8\u0001\u0000\u0082\u0002\n\n\u0008\u0008\u0001\u0012\u0002\u0010\u0002 \u0001\u001a\u0006\u0010\n\u001a\u00020\u0003\u001a\u0006\u0010\u000b\u001a\u00020\u0003\u001a\u0016\u0010\u000b\u001a\u00020\u00032\u0006\u0010\u000c\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\r\u001a&\u0010\u000b\u001a\u00020\u00032\u0006\u0010\u000c\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\r2\u0006\u0010\u000f\u001a\u00020\r2\u0006\u0010\u0010\u001a\u00020\r\u001a6\u0010\u000b\u001a\u00020\u00032\u0006\u0010\u000c\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\r2\u0006\u0010\u000f\u001a\u00020\r2\u0006\u0010\u0010\u001a\u00020\r2\u0006\u0010\u0011\u001a\u00020\r2\u0006\u0010\u0012\u001a\u00020\r\u001aF\u0010\u000b\u001a\u00020\u00032\u0006\u0010\u000c\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\r2\u0006\u0010\u000f\u001a\u00020\r2\u0006\u0010\u0010\u001a\u00020\r2\u0006\u0010\u0011\u001a\u00020\r2\u0006\u0010\u0012\u001a\u00020\r2\u0006\u0010\u0013\u001a\u00020\r2\u0006\u0010\u0014\u001a\u00020\r\u001aV\u0010\u000b\u001a\u00020\u00032\u0006\u0010\u000c\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\r2\u0006\u0010\u000f\u001a\u00020\r2\u0006\u0010\u0010\u001a\u00020\r2\u0006\u0010\u0011\u001a\u00020\r2\u0006\u0010\u0012\u001a\u00020\r2\u0006\u0010\u0013\u001a\u00020\r2\u0006\u0010\u0014\u001a\u00020\r2\u0006\u0010\u0015\u001a\u00020\r2\u0006\u0010\u0016\u001a\u00020\r\u001a\u0006\u0010\u0017\u001a\u00020\u0001\u001a\u0016\u0010\u0017\u001a\u00020\u00012\u0006\u0010\u000c\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\r\u001a&\u0010\u0017\u001a\u00020\u00012\u0006\u0010\u000c\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\r2\u0006\u0010\u000f\u001a\u00020\r2\u0006\u0010\u0010\u001a\u00020\r\u001a6\u0010\u0017\u001a\u00020\u00012\u0006\u0010\u000c\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\r2\u0006\u0010\u000f\u001a\u00020\r2\u0006\u0010\u0010\u001a\u00020\r2\u0006\u0010\u0011\u001a\u00020\r2\u0006\u0010\u0012\u001a\u00020\r\u001aF\u0010\u0017\u001a\u00020\u00012\u0006\u0010\u000c\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\r2\u0006\u0010\u000f\u001a\u00020\r2\u0006\u0010\u0010\u001a\u00020\r2\u0006\u0010\u0011\u001a\u00020\r2\u0006\u0010\u0012\u001a\u00020\r2\u0006\u0010\u0013\u001a\u00020\r2\u0006\u0010\u0014\u001a\u00020\r\u001aV\u0010\u0017\u001a\u00020\u00012\u0006\u0010\u000c\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\r2\u0006\u0010\u000f\u001a\u00020\r2\u0006\u0010\u0010\u001a\u00020\r2\u0006\u0010\u0011\u001a\u00020\r2\u0006\u0010\u0012\u001a\u00020\r2\u0006\u0010\u0013\u001a\u00020\r2\u0006\u0010\u0014\u001a\u00020\r2\u0006\u0010\u0015\u001a\u00020\r2\u0006\u0010\u0016\u001a\u00020\r\"\u000e\u0010\u0000\u001a\u00020\u0001X\u0082\u0004\u00a2\u0006\u0002\n\u0000\u0082\u0002\u0007\n\u0005\u0008\u009920\u0001\u00a8\u0006\u0018"
     }
     d2 = {
         "EmptyFloatFloatMap",
         "Landroidx/collection/MutableFloatFloatMap;",
-        "emptyFloatFloatMap",
+        "buildFloatFloatMap",
         "Landroidx/collection/FloatFloatMap;",
+        "builderAction",
+        "Lkotlin/Function1;",
+        "",
+        "Lkotlin/ExtensionFunctionType;",
+        "initialCapacity",
+        "",
+        "emptyFloatFloatMap",
         "floatFloatMapOf",
         "key1",
         "",
@@ -31,7 +42,7 @@
     k = 0x2
     mv = {
         0x1,
-        0x8,
+        0x9,
         0x0
     }
     xi = 0x30
@@ -46,7 +57,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 40
+    .line 43
     new-instance v0, Landroidx/collection/MutableFloatFloatMap;
 
     const/4 v1, 0x0
@@ -58,10 +69,76 @@
     return-void
 .end method
 
+.method public static final buildFloatFloatMap(ILkotlin/jvm/functions/Function1;)Landroidx/collection/FloatFloatMap;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Lkotlin/jvm/functions/Function1<",
+            "-",
+            "Landroidx/collection/MutableFloatFloatMap;",
+            "Lkotlin/Unit;",
+            ">;)",
+            "Landroidx/collection/FloatFloatMap;"
+        }
+    .end annotation
+
+    const-string v0, "builderAction"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 249
+    new-instance v0, Landroidx/collection/MutableFloatFloatMap;
+
+    invoke-direct {v0, p0}, Landroidx/collection/MutableFloatFloatMap;-><init>(I)V
+
+    invoke-interface {p1, v0}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    check-cast v0, Landroidx/collection/FloatFloatMap;
+
+    return-object v0
+.end method
+
+.method public static final buildFloatFloatMap(Lkotlin/jvm/functions/Function1;)Landroidx/collection/FloatFloatMap;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlin/jvm/functions/Function1<",
+            "-",
+            "Landroidx/collection/MutableFloatFloatMap;",
+            "Lkotlin/Unit;",
+            ">;)",
+            "Landroidx/collection/FloatFloatMap;"
+        }
+    .end annotation
+
+    const-string v0, "builderAction"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 231
+    new-instance v0, Landroidx/collection/MutableFloatFloatMap;
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v3, v1, v2}, Landroidx/collection/MutableFloatFloatMap;-><init>(IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    invoke-interface {p0, v0}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    check-cast v0, Landroidx/collection/FloatFloatMap;
+
+    return-object v0
+.end method
+
 .method public static final emptyFloatFloatMap()Landroidx/collection/FloatFloatMap;
     .locals 1
 
-    .line 45
+    .line 46
     sget-object v0, Landroidx/collection/FloatFloatMapKt;->EmptyFloatFloatMap:Landroidx/collection/MutableFloatFloatMap;
 
     check-cast v0, Landroidx/collection/FloatFloatMap;
@@ -72,7 +149,7 @@
 .method public static final floatFloatMapOf()Landroidx/collection/FloatFloatMap;
     .locals 1
 
-    .line 50
+    .line 49
     sget-object v0, Landroidx/collection/FloatFloatMapKt;->EmptyFloatFloatMap:Landroidx/collection/MutableFloatFloatMap;
 
     check-cast v0, Landroidx/collection/FloatFloatMap;
@@ -83,7 +160,7 @@
 .method public static final floatFloatMapOf(FF)Landroidx/collection/FloatFloatMap;
     .locals 4
 
-    .line 58
+    .line 53
     new-instance v0, Landroidx/collection/MutableFloatFloatMap;
 
     const/4 v1, 0x1
@@ -94,10 +171,8 @@
 
     invoke-direct {v0, v3, v1, v2}, Landroidx/collection/MutableFloatFloatMap;-><init>(IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 59
     invoke-virtual {v0, p0, p1}, Landroidx/collection/MutableFloatFloatMap;->set(FF)V
 
-    .line 58
     check-cast v0, Landroidx/collection/FloatFloatMap;
 
     return-object v0
@@ -106,7 +181,7 @@
 .method public static final floatFloatMapOf(FFFF)Landroidx/collection/FloatFloatMap;
     .locals 4
 
-    .line 71
+    .line 65
     new-instance v0, Landroidx/collection/MutableFloatFloatMap;
 
     const/4 v1, 0x1
@@ -117,13 +192,13 @@
 
     invoke-direct {v0, v3, v1, v2}, Landroidx/collection/MutableFloatFloatMap;-><init>(IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 72
+    .line 66
     invoke-virtual {v0, p0, p1}, Landroidx/collection/MutableFloatFloatMap;->set(FF)V
 
-    .line 73
+    .line 67
     invoke-virtual {v0, p2, p3}, Landroidx/collection/MutableFloatFloatMap;->set(FF)V
 
-    .line 71
+    .line 65
     check-cast v0, Landroidx/collection/FloatFloatMap;
 
     return-object v0
@@ -132,7 +207,7 @@
 .method public static final floatFloatMapOf(FFFFFF)Landroidx/collection/FloatFloatMap;
     .locals 4
 
-    .line 87
+    .line 82
     new-instance v0, Landroidx/collection/MutableFloatFloatMap;
 
     const/4 v1, 0x1
@@ -143,16 +218,16 @@
 
     invoke-direct {v0, v3, v1, v2}, Landroidx/collection/MutableFloatFloatMap;-><init>(IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 88
+    .line 83
     invoke-virtual {v0, p0, p1}, Landroidx/collection/MutableFloatFloatMap;->set(FF)V
 
-    .line 89
+    .line 84
     invoke-virtual {v0, p2, p3}, Landroidx/collection/MutableFloatFloatMap;->set(FF)V
 
-    .line 90
+    .line 85
     invoke-virtual {v0, p4, p5}, Landroidx/collection/MutableFloatFloatMap;->set(FF)V
 
-    .line 87
+    .line 82
     check-cast v0, Landroidx/collection/FloatFloatMap;
 
     return-object v0
@@ -161,7 +236,7 @@
 .method public static final floatFloatMapOf(FFFFFFFF)Landroidx/collection/FloatFloatMap;
     .locals 4
 
-    .line 106
+    .line 102
     new-instance v0, Landroidx/collection/MutableFloatFloatMap;
 
     const/4 v1, 0x1
@@ -172,19 +247,19 @@
 
     invoke-direct {v0, v3, v1, v2}, Landroidx/collection/MutableFloatFloatMap;-><init>(IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 107
+    .line 103
     invoke-virtual {v0, p0, p1}, Landroidx/collection/MutableFloatFloatMap;->set(FF)V
 
-    .line 108
+    .line 104
     invoke-virtual {v0, p2, p3}, Landroidx/collection/MutableFloatFloatMap;->set(FF)V
 
-    .line 109
+    .line 105
     invoke-virtual {v0, p4, p5}, Landroidx/collection/MutableFloatFloatMap;->set(FF)V
 
-    .line 110
+    .line 106
     invoke-virtual {v0, p6, p7}, Landroidx/collection/MutableFloatFloatMap;->set(FF)V
 
-    .line 106
+    .line 102
     check-cast v0, Landroidx/collection/FloatFloatMap;
 
     return-object v0
@@ -193,7 +268,7 @@
 .method public static final floatFloatMapOf(FFFFFFFFFF)Landroidx/collection/FloatFloatMap;
     .locals 4
 
-    .line 128
+    .line 125
     new-instance v0, Landroidx/collection/MutableFloatFloatMap;
 
     const/4 v1, 0x1
@@ -204,22 +279,22 @@
 
     invoke-direct {v0, v3, v1, v2}, Landroidx/collection/MutableFloatFloatMap;-><init>(IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 129
+    .line 126
     invoke-virtual {v0, p0, p1}, Landroidx/collection/MutableFloatFloatMap;->set(FF)V
 
-    .line 130
+    .line 127
     invoke-virtual {v0, p2, p3}, Landroidx/collection/MutableFloatFloatMap;->set(FF)V
 
-    .line 131
+    .line 128
     invoke-virtual {v0, p4, p5}, Landroidx/collection/MutableFloatFloatMap;->set(FF)V
 
-    .line 132
+    .line 129
     invoke-virtual {v0, p6, p7}, Landroidx/collection/MutableFloatFloatMap;->set(FF)V
 
-    .line 133
+    .line 130
     invoke-virtual {v0, p8, p9}, Landroidx/collection/MutableFloatFloatMap;->set(FF)V
 
-    .line 128
+    .line 125
     check-cast v0, Landroidx/collection/FloatFloatMap;
 
     return-object v0
@@ -228,7 +303,7 @@
 .method public static final mutableFloatFloatMapOf()Landroidx/collection/MutableFloatFloatMap;
     .locals 4
 
-    .line 139
+    .line 134
     new-instance v0, Landroidx/collection/MutableFloatFloatMap;
 
     const/4 v1, 0x1
@@ -245,7 +320,7 @@
 .method public static final mutableFloatFloatMapOf(FF)Landroidx/collection/MutableFloatFloatMap;
     .locals 4
 
-    .line 147
+    .line 138
     new-instance v0, Landroidx/collection/MutableFloatFloatMap;
 
     const/4 v1, 0x1
@@ -256,7 +331,6 @@
 
     invoke-direct {v0, v3, v1, v2}, Landroidx/collection/MutableFloatFloatMap;-><init>(IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 148
     invoke-virtual {v0, p0, p1}, Landroidx/collection/MutableFloatFloatMap;->set(FF)V
 
     return-object v0
@@ -265,7 +339,7 @@
 .method public static final mutableFloatFloatMapOf(FFFF)Landroidx/collection/MutableFloatFloatMap;
     .locals 4
 
-    .line 160
+    .line 150
     new-instance v0, Landroidx/collection/MutableFloatFloatMap;
 
     const/4 v1, 0x1
@@ -276,10 +350,10 @@
 
     invoke-direct {v0, v3, v1, v2}, Landroidx/collection/MutableFloatFloatMap;-><init>(IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 161
+    .line 151
     invoke-virtual {v0, p0, p1}, Landroidx/collection/MutableFloatFloatMap;->set(FF)V
 
-    .line 162
+    .line 152
     invoke-virtual {v0, p2, p3}, Landroidx/collection/MutableFloatFloatMap;->set(FF)V
 
     return-object v0
@@ -288,7 +362,7 @@
 .method public static final mutableFloatFloatMapOf(FFFFFF)Landroidx/collection/MutableFloatFloatMap;
     .locals 4
 
-    .line 176
+    .line 167
     new-instance v0, Landroidx/collection/MutableFloatFloatMap;
 
     const/4 v1, 0x1
@@ -299,13 +373,13 @@
 
     invoke-direct {v0, v3, v1, v2}, Landroidx/collection/MutableFloatFloatMap;-><init>(IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 177
+    .line 168
     invoke-virtual {v0, p0, p1}, Landroidx/collection/MutableFloatFloatMap;->set(FF)V
 
-    .line 178
+    .line 169
     invoke-virtual {v0, p2, p3}, Landroidx/collection/MutableFloatFloatMap;->set(FF)V
 
-    .line 179
+    .line 170
     invoke-virtual {v0, p4, p5}, Landroidx/collection/MutableFloatFloatMap;->set(FF)V
 
     return-object v0
@@ -314,7 +388,7 @@
 .method public static final mutableFloatFloatMapOf(FFFFFFFF)Landroidx/collection/MutableFloatFloatMap;
     .locals 4
 
-    .line 195
+    .line 187
     new-instance v0, Landroidx/collection/MutableFloatFloatMap;
 
     const/4 v1, 0x1
@@ -325,16 +399,16 @@
 
     invoke-direct {v0, v3, v1, v2}, Landroidx/collection/MutableFloatFloatMap;-><init>(IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 196
+    .line 188
     invoke-virtual {v0, p0, p1}, Landroidx/collection/MutableFloatFloatMap;->set(FF)V
 
-    .line 197
+    .line 189
     invoke-virtual {v0, p2, p3}, Landroidx/collection/MutableFloatFloatMap;->set(FF)V
 
-    .line 198
+    .line 190
     invoke-virtual {v0, p4, p5}, Landroidx/collection/MutableFloatFloatMap;->set(FF)V
 
-    .line 199
+    .line 191
     invoke-virtual {v0, p6, p7}, Landroidx/collection/MutableFloatFloatMap;->set(FF)V
 
     return-object v0
@@ -343,7 +417,7 @@
 .method public static final mutableFloatFloatMapOf(FFFFFFFFFF)Landroidx/collection/MutableFloatFloatMap;
     .locals 4
 
-    .line 217
+    .line 210
     new-instance v0, Landroidx/collection/MutableFloatFloatMap;
 
     const/4 v1, 0x1
@@ -354,19 +428,19 @@
 
     invoke-direct {v0, v3, v1, v2}, Landroidx/collection/MutableFloatFloatMap;-><init>(IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 218
+    .line 211
     invoke-virtual {v0, p0, p1}, Landroidx/collection/MutableFloatFloatMap;->set(FF)V
 
-    .line 219
+    .line 212
     invoke-virtual {v0, p2, p3}, Landroidx/collection/MutableFloatFloatMap;->set(FF)V
 
-    .line 220
+    .line 213
     invoke-virtual {v0, p4, p5}, Landroidx/collection/MutableFloatFloatMap;->set(FF)V
 
-    .line 221
+    .line 214
     invoke-virtual {v0, p6, p7}, Landroidx/collection/MutableFloatFloatMap;->set(FF)V
 
-    .line 222
+    .line 215
     invoke-virtual {v0, p8, p9}, Landroidx/collection/MutableFloatFloatMap;->set(FF)V
 
     return-object v0

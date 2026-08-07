@@ -125,15 +125,15 @@
 
 # virtual methods
 .method public describeContents()I
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 .end method
 
 .method public toMMKV()Lcom/tencent/mmkv/MMKV;
-    .locals 4
+    .locals 3
 
     .line 59
     iget v0, p0, Lcom/tencent/mmkv/ParcelableMMKV;->ashmemFD:I
@@ -147,18 +147,18 @@
     .line 60
     iget-object v2, p0, Lcom/tencent/mmkv/ParcelableMMKV;->mmapID:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/tencent/mmkv/ParcelableMMKV;->cryptKey:Ljava/lang/String;
+    iget-object p0, p0, Lcom/tencent/mmkv/ParcelableMMKV;->cryptKey:Ljava/lang/String;
 
-    invoke-static {v2, v0, v1, v3}, Lcom/tencent/mmkv/MMKV;->mmkvWithAshmemFD(Ljava/lang/String;IILjava/lang/String;)Lcom/tencent/mmkv/MMKV;
+    invoke-static {v2, v0, v1, p0}, Lcom/tencent/mmkv/MMKV;->mmkvWithAshmemFD(Ljava/lang/String;IILjava/lang/String;)Lcom/tencent/mmkv/MMKV;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
@@ -193,12 +193,12 @@
     invoke-virtual {v1, p1, p2}, Landroid/os/ParcelFileDescriptor;->writeToParcel(Landroid/os/Parcel;I)V
 
     .line 79
-    iget-object p2, p0, Lcom/tencent/mmkv/ParcelableMMKV;->cryptKey:Ljava/lang/String;
+    iget-object p0, p0, Lcom/tencent/mmkv/ParcelableMMKV;->cryptKey:Ljava/lang/String;
 
-    if-eqz p2, :cond_0
+    if-eqz p0, :cond_0
 
     .line 80
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -206,10 +206,10 @@
     return-void
 
     :catch_0
-    move-exception p1
+    move-exception p0
 
     .line 83
-    invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
+    invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     return-void
 .end method

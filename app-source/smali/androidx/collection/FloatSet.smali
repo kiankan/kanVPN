@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nFloatSet.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FloatSet.kt\nandroidx/collection/FloatSet\n+ 2 ScatterMap.kt\nandroidx/collection/ScatterMapKt\n+ 3 FloatSet.kt\nandroidx/collection/FloatSetKt\n*L\n1#1,853:1\n262#1,4:854\n232#1,7:858\n243#1,3:866\n246#1,2:870\n266#1,2:872\n249#1,6:874\n268#1:880\n262#1,4:881\n232#1,7:885\n243#1,3:893\n246#1,2:897\n266#1,2:899\n249#1,6:901\n268#1:907\n232#1,7:910\n243#1,3:918\n246#1,9:922\n262#1,4:931\n232#1,7:935\n243#1,3:943\n246#1,2:947\n266#1,2:949\n249#1,6:951\n268#1:957\n262#1,4:958\n232#1,7:962\n243#1,3:970\n246#1,2:974\n266#1,2:976\n249#1,6:978\n268#1:984\n262#1,4:985\n232#1,7:989\n243#1,3:997\n246#1,2:1001\n266#1,2:1003\n249#1,6:1005\n268#1:1011\n442#1:1012\n443#1:1016\n445#1,2:1018\n447#1,3:1021\n450#1:1027\n451#1:1031\n452#1:1033\n453#1,4:1036\n459#1:1041\n460#1,8:1043\n262#1,4:1051\n232#1,7:1055\n243#1,3:1063\n246#1,2:1067\n266#1,2:1069\n249#1,6:1071\n268#1:1077\n262#1,4:1078\n232#1,7:1082\n243#1,3:1090\n246#1,2:1094\n266#1,2:1096\n249#1,6:1098\n268#1:1104\n262#1,4:1105\n232#1,7:1109\n243#1,3:1117\n246#1,2:1121\n266#1,2:1123\n249#1,6:1125\n268#1:1131\n262#1,4:1132\n232#1,7:1136\n243#1,3:1144\n246#1,2:1148\n266#1,2:1150\n249#1,6:1152\n268#1:1158\n262#1,4:1159\n232#1,7:1163\n243#1,3:1171\n246#1,2:1175\n266#1,2:1177\n249#1,6:1179\n268#1:1185\n365#1,11:1202\n262#1,4:1213\n232#1,7:1217\n243#1,3:1225\n246#1,2:1229\n266#1:1231\n376#1,10:1232\n267#1:1242\n249#1,6:1243\n268#1:1249\n386#1,2:1250\n365#1,11:1252\n262#1,4:1263\n232#1,7:1267\n243#1,3:1275\n246#1,2:1279\n266#1:1281\n376#1,10:1282\n267#1:1292\n249#1,6:1293\n268#1:1299\n386#1,2:1300\n365#1,11:1302\n262#1,4:1313\n232#1,7:1317\n243#1,3:1325\n246#1,2:1329\n266#1:1331\n376#1,10:1332\n267#1:1342\n249#1,6:1343\n268#1:1349\n386#1,2:1350\n365#1,11:1352\n262#1,4:1363\n232#1,7:1367\n243#1,3:1375\n246#1,2:1379\n266#1:1381\n376#1,10:1382\n267#1:1392\n249#1,6:1393\n268#1:1399\n386#1,2:1400\n365#1,11:1402\n262#1,4:1413\n232#1,7:1417\n243#1,3:1425\n246#1,2:1429\n266#1:1431\n376#1,10:1432\n267#1:1442\n249#1,6:1443\n268#1:1449\n386#1,2:1450\n1826#2:865\n1688#2:869\n1826#2:892\n1688#2:896\n1826#2:908\n1688#2:909\n1826#2:917\n1688#2:921\n1826#2:942\n1688#2:946\n1826#2:969\n1688#2:973\n1826#2:996\n1688#2:1000\n1619#2:1017\n1615#2:1020\n1795#2,3:1024\n1809#2,3:1028\n1733#2:1032\n1721#2:1034\n1715#2:1035\n1728#2:1040\n1818#2:1042\n1826#2:1062\n1688#2:1066\n1826#2:1089\n1688#2:1093\n1826#2:1116\n1688#2:1120\n1826#2:1143\n1688#2:1147\n1826#2:1170\n1688#2:1174\n1619#2:1189\n1615#2:1190\n1795#2,3:1191\n1809#2,3:1194\n1733#2:1197\n1721#2:1198\n1715#2:1199\n1728#2:1200\n1818#2:1201\n1826#2:1224\n1688#2:1228\n1826#2:1274\n1688#2:1278\n1826#2:1324\n1688#2:1328\n1826#2:1374\n1688#2:1378\n1826#2:1424\n1688#2:1428\n849#3,3:1013\n849#3,3:1186\n*S KotlinDebug\n*F\n+ 1 FloatSet.kt\nandroidx/collection/FloatSet\n*L\n203#1:854,4\n203#1:858,7\n203#1:866,3\n203#1:870,2\n203#1:872,2\n203#1:874,6\n203#1:880\n222#1:881,4\n222#1:885,7\n222#1:893,3\n222#1:897,2\n222#1:899,2\n222#1:901,6\n222#1:907\n265#1:910,7\n265#1:918,3\n265#1:922,9\n277#1:931,4\n277#1:935,7\n277#1:943,3\n277#1:947,2\n277#1:949,2\n277#1:951,6\n277#1:957\n290#1:958,4\n290#1:962,7\n290#1:970,3\n290#1:974,2\n290#1:976,2\n290#1:978,6\n290#1:984\n311#1:985,4\n311#1:989,7\n311#1:997,3\n311#1:1001,2\n311#1:1003,2\n311#1:1005,6\n311#1:1011\n322#1:1012\n322#1:1016\n322#1:1018,2\n322#1:1021,3\n322#1:1027\n322#1:1031\n322#1:1033\n322#1:1036,4\n322#1:1041\n322#1:1043,8\n342#1:1051,4\n342#1:1055,7\n342#1:1063,3\n342#1:1067,2\n342#1:1069,2\n342#1:1071,6\n342#1:1077\n375#1:1078,4\n375#1:1082,7\n375#1:1090,3\n375#1:1094,2\n375#1:1096,2\n375#1:1098,6\n375#1:1104\n375#1:1105,4\n375#1:1109,7\n375#1:1117,3\n375#1:1121,2\n375#1:1123,2\n375#1:1125,6\n375#1:1131\n396#1:1132,4\n396#1:1136,7\n396#1:1144,3\n396#1:1148,2\n396#1:1150,2\n396#1:1152,6\n396#1:1158\n422#1:1159,4\n422#1:1163,7\n422#1:1171,3\n422#1:1175,2\n422#1:1177,2\n422#1:1179,6\n422#1:1185\n-1#1:1202,11\n-1#1:1213,4\n-1#1:1217,7\n-1#1:1225,3\n-1#1:1229,2\n-1#1:1231\n-1#1:1232,10\n-1#1:1242\n-1#1:1243,6\n-1#1:1249\n-1#1:1250,2\n-1#1:1252,11\n-1#1:1263,4\n-1#1:1267,7\n-1#1:1275,3\n-1#1:1279,2\n-1#1:1281\n-1#1:1282,10\n-1#1:1292\n-1#1:1293,6\n-1#1:1299\n-1#1:1300,2\n-1#1:1302,11\n-1#1:1313,4\n-1#1:1317,7\n-1#1:1325,3\n-1#1:1329,2\n-1#1:1331\n-1#1:1332,10\n-1#1:1342\n-1#1:1343,6\n-1#1:1349\n-1#1:1350,2\n-1#1:1352,11\n-1#1:1363,4\n-1#1:1367,7\n-1#1:1375,3\n-1#1:1379,2\n-1#1:1381\n-1#1:1382,10\n-1#1:1392\n-1#1:1393,6\n-1#1:1399\n-1#1:1400,2\n-1#1:1402,11\n-1#1:1413,4\n-1#1:1417,7\n-1#1:1425,3\n-1#1:1429,2\n-1#1:1431\n-1#1:1432,10\n-1#1:1442\n-1#1:1443,6\n-1#1:1449\n-1#1:1450,2\n203#1:865\n203#1:869\n222#1:892\n222#1:896\n238#1:908\n245#1:909\n265#1:917\n265#1:921\n277#1:942\n277#1:946\n290#1:969\n290#1:973\n311#1:996\n311#1:1000\n322#1:1017\n322#1:1020\n322#1:1024,3\n322#1:1028,3\n322#1:1032\n322#1:1034\n322#1:1035\n322#1:1040\n322#1:1042\n342#1:1062\n342#1:1066\n375#1:1089\n375#1:1093\n375#1:1116\n375#1:1120\n396#1:1143\n396#1:1147\n422#1:1170\n422#1:1174\n443#1:1189\n446#1:1190\n449#1:1191,3\n450#1:1194,3\n451#1:1197\n452#1:1198\n452#1:1199\n456#1:1200\n459#1:1201\n-1#1:1224\n-1#1:1228\n-1#1:1274\n-1#1:1278\n-1#1:1324\n-1#1:1328\n-1#1:1374\n-1#1:1378\n-1#1:1424\n-1#1:1428\n322#1:1013,3\n442#1:1186,3\n*E\n"
+    value = "SMAP\nFloatSet.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FloatSet.kt\nandroidx/collection/FloatSet\n+ 2 ScatterMap.kt\nandroidx/collection/ScatterMapKt\n+ 3 FloatSet.kt\nandroidx/collection/FloatSetKt\n*L\n1#1,886:1\n257#1,4:887\n227#1,7:891\n238#1,3:899\n241#1,9:903\n261#1:912\n257#1,4:913\n227#1,7:917\n238#1,3:925\n241#1,9:929\n261#1:938\n227#1,7:941\n238#1,3:949\n241#1,9:953\n257#1,4:962\n227#1,7:966\n238#1,3:974\n241#1,9:978\n261#1:987\n257#1,4:988\n227#1,7:992\n238#1,3:1000\n241#1,9:1004\n261#1:1013\n257#1,4:1014\n227#1,7:1018\n238#1,3:1026\n241#1,9:1030\n261#1:1039\n427#1:1040\n428#1:1044\n430#1,2:1046\n432#1,3:1049\n435#1:1055\n436#1:1059\n437#1:1061\n438#1,4:1064\n444#1:1069\n445#1,8:1071\n257#1,4:1079\n227#1,7:1083\n238#1,3:1091\n241#1,9:1095\n261#1:1104\n257#1,4:1105\n227#1,7:1109\n238#1,3:1117\n241#1,9:1121\n261#1:1130\n257#1,4:1131\n227#1,7:1135\n238#1,3:1143\n241#1,9:1147\n261#1:1156\n257#1,4:1157\n227#1,7:1161\n238#1,3:1169\n241#1,9:1173\n261#1:1182\n257#1,4:1183\n227#1,7:1187\n238#1,3:1195\n241#1,9:1199\n261#1:1208\n352#1,11:1225\n257#1,4:1236\n227#1,7:1240\n238#1,3:1248\n241#1,2:1252\n363#1,10:1254\n244#1,6:1264\n261#1:1270\n373#1,2:1271\n352#1,11:1273\n257#1,4:1284\n227#1,7:1288\n238#1,3:1296\n241#1,2:1300\n363#1,10:1302\n244#1,6:1312\n261#1:1318\n373#1,2:1319\n352#1,11:1321\n257#1,4:1332\n227#1,7:1336\n238#1,3:1344\n241#1,2:1348\n363#1,10:1350\n244#1,6:1360\n261#1:1366\n373#1,2:1367\n352#1,11:1369\n257#1,4:1380\n227#1,7:1384\n238#1,3:1392\n241#1,2:1396\n363#1,10:1398\n244#1,6:1408\n261#1:1414\n373#1,2:1415\n352#1,11:1417\n257#1,4:1428\n227#1,7:1432\n238#1,3:1440\n241#1,2:1444\n363#1,10:1446\n244#1,6:1456\n261#1:1462\n373#1,2:1463\n1399#2:898\n1270#2:902\n1399#2:924\n1270#2:928\n1399#2:939\n1270#2:940\n1399#2:948\n1270#2:952\n1399#2:973\n1270#2:977\n1399#2:999\n1270#2:1003\n1399#2:1025\n1270#2:1029\n1179#2:1045\n1175#2:1048\n1372#2,3:1052\n1386#2,3:1056\n1312#2:1060\n1303#2:1062\n1297#2:1063\n1309#2:1068\n1393#2:1070\n1399#2:1090\n1270#2:1094\n1399#2:1116\n1270#2:1120\n1399#2:1142\n1270#2:1146\n1399#2:1168\n1270#2:1172\n1399#2:1194\n1270#2:1198\n1179#2:1212\n1175#2:1213\n1372#2,3:1214\n1386#2,3:1217\n1312#2:1220\n1303#2:1221\n1297#2:1222\n1309#2:1223\n1393#2:1224\n1399#2:1247\n1270#2:1251\n1399#2:1295\n1270#2:1299\n1399#2:1343\n1270#2:1347\n1399#2:1391\n1270#2:1395\n1399#2:1439\n1270#2:1443\n882#3,3:1041\n882#3,3:1209\n*S KotlinDebug\n*F\n+ 1 FloatSet.kt\nandroidx/collection/FloatSet\n*L\n199#1:887,4\n199#1:891,7\n199#1:899,3\n199#1:903,9\n199#1:912\n220#1:913,4\n220#1:917,7\n220#1:925,3\n220#1:929,9\n220#1:938\n260#1:941,7\n260#1:949,3\n260#1:953,9\n271#1:962,4\n271#1:966,7\n271#1:974,3\n271#1:978,9\n271#1:987\n283#1:988,4\n283#1:992,7\n283#1:1000,3\n283#1:1004,9\n283#1:1013\n300#1:1014,4\n300#1:1018,7\n300#1:1026,3\n300#1:1030,9\n300#1:1039\n309#1:1040\n309#1:1044\n309#1:1046,2\n309#1:1049,3\n309#1:1055\n309#1:1059\n309#1:1061\n309#1:1064,4\n309#1:1069\n309#1:1071,8\n329#1:1079,4\n329#1:1083,7\n329#1:1091,3\n329#1:1095,9\n329#1:1104\n362#1:1105,4\n362#1:1109,7\n362#1:1117,3\n362#1:1121,9\n362#1:1130\n362#1:1131,4\n362#1:1135,7\n362#1:1143,3\n362#1:1147,9\n362#1:1156\n383#1:1157,4\n383#1:1161,7\n383#1:1169,3\n383#1:1173,9\n383#1:1182\n407#1:1183,4\n407#1:1187,7\n407#1:1195,3\n407#1:1199,9\n407#1:1208\n-1#1:1225,11\n-1#1:1236,4\n-1#1:1240,7\n-1#1:1248,3\n-1#1:1252,2\n-1#1:1254,10\n-1#1:1264,6\n-1#1:1270\n-1#1:1271,2\n-1#1:1273,11\n-1#1:1284,4\n-1#1:1288,7\n-1#1:1296,3\n-1#1:1300,2\n-1#1:1302,10\n-1#1:1312,6\n-1#1:1318\n-1#1:1319,2\n-1#1:1321,11\n-1#1:1332,4\n-1#1:1336,7\n-1#1:1344,3\n-1#1:1348,2\n-1#1:1350,10\n-1#1:1360,6\n-1#1:1366\n-1#1:1367,2\n-1#1:1369,11\n-1#1:1380,4\n-1#1:1384,7\n-1#1:1392,3\n-1#1:1396,2\n-1#1:1398,10\n-1#1:1408,6\n-1#1:1414\n-1#1:1415,2\n-1#1:1417,11\n-1#1:1428,4\n-1#1:1432,7\n-1#1:1440,3\n-1#1:1444,2\n-1#1:1446,10\n-1#1:1456,6\n-1#1:1462\n-1#1:1463,2\n199#1:898\n199#1:902\n220#1:924\n220#1:928\n233#1:939\n240#1:940\n260#1:948\n260#1:952\n271#1:973\n271#1:977\n283#1:999\n283#1:1003\n300#1:1025\n300#1:1029\n309#1:1045\n309#1:1048\n309#1:1052,3\n309#1:1056,3\n309#1:1060\n309#1:1062\n309#1:1063\n309#1:1068\n309#1:1070\n329#1:1090\n329#1:1094\n362#1:1116\n362#1:1120\n362#1:1142\n362#1:1146\n383#1:1168\n383#1:1172\n407#1:1194\n407#1:1198\n428#1:1212\n431#1:1213\n434#1:1214,3\n435#1:1217,3\n436#1:1220\n437#1:1221\n437#1:1222\n441#1:1223\n444#1:1224\n-1#1:1247\n-1#1:1251\n-1#1:1295\n-1#1:1299\n-1#1:1343\n-1#1:1347\n-1#1:1391\n-1#1:1395\n-1#1:1439\n-1#1:1443\n309#1:1041,3\n427#1:1209,3\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -71,7 +71,7 @@
     k = 0x1
     mv = {
         0x1,
-        0x8,
+        0x9,
         0x0
     }
     xi = 0x30
@@ -92,15 +92,15 @@
 .method private constructor <init>()V
     .locals 1
 
-    .line 140
+    .line 151
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 147
+    .line 156
     sget-object v0, Landroidx/collection/ScatterMapKt;->EmptyGroup:[J
 
     iput-object v0, p0, Landroidx/collection/FloatSet;->metadata:[J
 
-    .line 151
+    .line 158
     invoke-static {}, Landroidx/collection/FloatSetKt;->getEmptyFloatArray()[F
 
     move-result-object v0
@@ -139,7 +139,7 @@
 
     if-eqz p7, :cond_0
 
-    .line 334
+    .line 321
     const-string p1, ", "
 
     check-cast p1, Ljava/lang/CharSequence;
@@ -147,12 +147,12 @@
     :cond_0
     and-int/lit8 p7, p6, 0x2
 
-    .line 333
+    .line 320
     const-string v0, ""
 
     if-eqz p7, :cond_1
 
-    .line 335
+    .line 322
     move-object p2, v0
 
     check-cast p2, Ljava/lang/CharSequence;
@@ -162,7 +162,7 @@
 
     if-eqz p7, :cond_2
 
-    .line 336
+    .line 323
     move-object p3, v0
 
     check-cast p3, Ljava/lang/CharSequence;
@@ -179,7 +179,7 @@
 
     if-eqz p6, :cond_4
 
-    .line 338
+    .line 325
     const-string p5, "..."
 
     check-cast p5, Ljava/lang/CharSequence;
@@ -197,7 +197,7 @@
 
     move-object p3, p1
 
-    .line 333
+    .line 320
     invoke-virtual/range {p2 .. p7}, Landroidx/collection/FloatSet;->joinToString(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object p0
@@ -227,7 +227,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 366
+    .line 353
     const-string v2, ", "
 
     check-cast v2, Ljava/lang/CharSequence;
@@ -240,12 +240,12 @@
     :goto_0
     and-int/lit8 v3, p7, 0x2
 
-    .line 365
+    .line 352
     const-string v4, ""
 
     if-eqz v3, :cond_1
 
-    .line 367
+    .line 354
     move-object v3, v4
 
     check-cast v3, Ljava/lang/CharSequence;
@@ -260,7 +260,7 @@
 
     if-eqz v5, :cond_2
 
-    .line 368
+    .line 355
     check-cast v4, Ljava/lang/CharSequence;
 
     goto :goto_2
@@ -285,7 +285,7 @@
 
     if-eqz v6, :cond_4
 
-    .line 370
+    .line 357
     const-string v6, "..."
 
     check-cast v6, Ljava/lang/CharSequence;
@@ -295,43 +295,43 @@
     :cond_4
     move-object/from16 v6, p5
 
-    .line 365
+    .line 352
     :goto_4
-    const-string v7, "separator"
+    const-string/jumbo v7, "separator"
 
     invoke-static {v2, v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v7, "prefix"
+    const-string/jumbo v7, "prefix"
 
     invoke-static {v3, v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v7, "postfix"
+    const-string/jumbo v7, "postfix"
 
     invoke-static {v4, v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v7, "truncated"
+    const-string/jumbo v7, "truncated"
 
     invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v7, "transform"
+    const-string/jumbo v7, "transform"
 
     invoke-static {v1, v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 372
+    .line 359
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 373
+    .line 360
     invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1106
+    .line 1132
     iget-object v3, v0, Landroidx/collection/FloatSet;->elements:[F
 
-    .line 1110
+    .line 1136
     iget-object v0, v0, Landroidx/collection/FloatSet;->metadata:[J
 
-    .line 1111
+    .line 1137
     array-length v8, v0
 
     add-int/lit8 v8, v8, -0x2
@@ -342,7 +342,7 @@
 
     const/4 v11, 0x0
 
-    .line 1114
+    .line 1140
     :goto_5
     aget-wide v12, v0, v10
 
@@ -391,12 +391,12 @@
 
     add-int v16, v16, v9
 
-    .line 1123
+    .line 1134
     aget v16, v3, v16
 
     if-ne v11, v5, :cond_5
 
-    .line 377
+    .line 364
     invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     goto :goto_8
@@ -404,13 +404,13 @@
     :cond_5
     if-eqz v11, :cond_6
 
-    .line 381
+    .line 368
     invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     :cond_6
     move/from16 p1, v15
 
-    .line 383
+    .line 370
     invoke-static/range {v16 .. v16}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v15
@@ -451,23 +451,23 @@
 
     goto :goto_5
 
-    .line 386
+    .line 373
     :cond_a
     invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 372
+    .line 359
     :goto_8
     invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "StringBuilder().apply(builderAction).toString()"
+    const-string/jumbo v1, "toString(...)"
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 
-    .line 365
+    .line 352
     :cond_b
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
@@ -481,7 +481,7 @@
 
 # virtual methods
 .method public final all(Lkotlin/jvm/functions/Function1;)Z
-    .locals 14
+    .locals 13
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -493,141 +493,141 @@
         }
     .end annotation
 
-    const-string v0, "predicate"
+    const-string/jumbo v0, "predicate"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 932
+    .line 963
     iget-object v0, p0, Landroidx/collection/FloatSet;->elements:[F
 
-    .line 936
-    iget-object v1, p0, Landroidx/collection/FloatSet;->metadata:[J
+    .line 967
+    iget-object p0, p0, Landroidx/collection/FloatSet;->metadata:[J
 
-    .line 937
-    array-length v2, v1
+    .line 968
+    array-length v1, p0
 
-    add-int/lit8 v2, v2, -0x2
+    add-int/lit8 v1, v1, -0x2
 
-    if-ltz v2, :cond_3
+    if-ltz v1, :cond_3
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    move v4, v3
+    move v3, v2
 
-    .line 940
+    .line 971
     :goto_0
-    aget-wide v5, v1, v4
+    aget-wide v4, p0, v3
 
-    not-long v7, v5
+    not-long v6, v4
 
-    const/4 v9, 0x7
+    const/4 v8, 0x7
 
-    shl-long/2addr v7, v9
+    shl-long/2addr v6, v8
 
-    and-long/2addr v7, v5
+    and-long/2addr v6, v4
 
-    const-wide v9, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
+    const-wide v8, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
 
-    and-long/2addr v7, v9
+    and-long/2addr v6, v8
 
-    cmp-long v7, v7, v9
+    cmp-long v6, v6, v8
 
-    if-eqz v7, :cond_2
+    if-eqz v6, :cond_2
 
-    sub-int v7, v4, v2
+    sub-int v6, v3, v1
 
-    not-int v7, v7
+    not-int v6, v6
 
-    ushr-int/lit8 v7, v7, 0x1f
+    ushr-int/lit8 v6, v6, 0x1f
 
-    const/16 v8, 0x8
+    const/16 v7, 0x8
 
-    rsub-int/lit8 v7, v7, 0x8
+    rsub-int/lit8 v6, v6, 0x8
 
-    move v9, v3
+    move v8, v2
 
     :goto_1
-    if-ge v9, v7, :cond_1
+    if-ge v8, v6, :cond_1
 
-    const-wide/16 v10, 0xff
+    const-wide/16 v9, 0xff
 
-    and-long/2addr v10, v5
+    and-long/2addr v9, v4
 
-    const-wide/16 v12, 0x80
+    const-wide/16 v11, 0x80
 
-    cmp-long v10, v10, v12
+    cmp-long v9, v9, v11
 
-    if-gez v10, :cond_0
+    if-gez v9, :cond_0
 
-    shl-int/lit8 v10, v4, 0x3
+    shl-int/lit8 v9, v3, 0x3
 
-    add-int/2addr v10, v9
+    add-int/2addr v9, v8
 
-    .line 949
-    aget v10, v0, v10
+    .line 965
+    aget v9, v0, v9
 
-    .line 278
-    invoke-static {v10}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    .line 271
+    invoke-static {v9}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    move-result-object v10
+    move-result-object v9
 
-    invoke-interface {p1, v10}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v9}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v10
+    move-result-object v9
 
-    check-cast v10, Ljava/lang/Boolean;
+    check-cast v9, Ljava/lang/Boolean;
 
-    invoke-virtual {v10}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v9}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result v10
+    move-result v9
 
-    if-nez v10, :cond_0
+    if-nez v9, :cond_0
 
-    return v3
+    return v2
 
     :cond_0
-    shr-long/2addr v5, v8
+    shr-long/2addr v4, v7
 
-    add-int/lit8 v9, v9, 0x1
+    add-int/lit8 v8, v8, 0x1
 
     goto :goto_1
 
     :cond_1
-    if-ne v7, v8, :cond_3
+    if-ne v6, v7, :cond_3
 
     :cond_2
-    if-eq v4, v2, :cond_3
+    if-eq v3, v1, :cond_3
 
-    add-int/lit8 v4, v4, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_3
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 .end method
 
 .method public final any()Z
-    .locals 1
+    .locals 0
 
-    .line 181
-    iget v0, p0, Landroidx/collection/FloatSet;->_size:I
+    .line 182
+    iget p0, p0, Landroidx/collection/FloatSet;->_size:I
 
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public final any(Lkotlin/jvm/functions/Function1;)Z
-    .locals 14
+    .locals 13
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -639,119 +639,119 @@
         }
     .end annotation
 
-    const-string v0, "predicate"
+    const-string/jumbo v0, "predicate"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 959
+    .line 989
     iget-object v0, p0, Landroidx/collection/FloatSet;->elements:[F
 
-    .line 963
-    iget-object v1, p0, Landroidx/collection/FloatSet;->metadata:[J
+    .line 993
+    iget-object p0, p0, Landroidx/collection/FloatSet;->metadata:[J
 
-    .line 964
-    array-length v2, v1
+    .line 994
+    array-length v1, p0
 
-    add-int/lit8 v2, v2, -0x2
+    add-int/lit8 v1, v1, -0x2
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    if-ltz v2, :cond_3
+    if-ltz v1, :cond_3
 
-    move v4, v3
+    move v3, v2
 
-    .line 967
+    .line 997
     :goto_0
-    aget-wide v5, v1, v4
+    aget-wide v4, p0, v3
 
-    not-long v7, v5
+    not-long v6, v4
 
-    const/4 v9, 0x7
+    const/4 v8, 0x7
 
-    shl-long/2addr v7, v9
+    shl-long/2addr v6, v8
 
-    and-long/2addr v7, v5
+    and-long/2addr v6, v4
 
-    const-wide v9, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
+    const-wide v8, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
 
-    and-long/2addr v7, v9
+    and-long/2addr v6, v8
 
-    cmp-long v7, v7, v9
+    cmp-long v6, v6, v8
 
-    if-eqz v7, :cond_2
+    if-eqz v6, :cond_2
 
-    sub-int v7, v4, v2
+    sub-int v6, v3, v1
 
-    not-int v7, v7
+    not-int v6, v6
 
-    ushr-int/lit8 v7, v7, 0x1f
+    ushr-int/lit8 v6, v6, 0x1f
 
-    const/16 v8, 0x8
+    const/16 v7, 0x8
 
-    rsub-int/lit8 v7, v7, 0x8
+    rsub-int/lit8 v6, v6, 0x8
 
-    move v9, v3
+    move v8, v2
 
     :goto_1
-    if-ge v9, v7, :cond_1
+    if-ge v8, v6, :cond_1
 
-    const-wide/16 v10, 0xff
+    const-wide/16 v9, 0xff
 
-    and-long/2addr v10, v5
+    and-long/2addr v9, v4
 
-    const-wide/16 v12, 0x80
+    const-wide/16 v11, 0x80
 
-    cmp-long v10, v10, v12
+    cmp-long v9, v9, v11
 
-    if-gez v10, :cond_0
+    if-gez v9, :cond_0
 
-    shl-int/lit8 v10, v4, 0x3
+    shl-int/lit8 v9, v3, 0x3
 
-    add-int/2addr v10, v9
+    add-int/2addr v9, v8
 
-    .line 976
-    aget v10, v0, v10
+    .line 991
+    aget v9, v0, v9
 
-    .line 291
-    invoke-static {v10}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    .line 283
+    invoke-static {v9}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    move-result-object v10
+    move-result-object v9
 
-    invoke-interface {p1, v10}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v9}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v10
+    move-result-object v9
 
-    check-cast v10, Ljava/lang/Boolean;
+    check-cast v9, Ljava/lang/Boolean;
 
-    invoke-virtual {v10}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v9}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result v10
+    move-result v9
 
-    if-eqz v10, :cond_0
+    if-eqz v9, :cond_0
 
-    const/4 p1, 0x1
+    const/4 p0, 0x1
 
-    return p1
+    return p0
 
     :cond_0
-    shr-long/2addr v5, v8
+    shr-long/2addr v4, v7
 
-    add-int/lit8 v9, v9, 0x1
+    add-int/lit8 v8, v8, 0x1
 
     goto :goto_1
 
     :cond_1
-    if-ne v7, v8, :cond_3
+    if-ne v6, v7, :cond_3
 
     :cond_2
-    if-eq v4, v2, :cond_3
+    if-eq v3, v1, :cond_3
 
-    add-int/lit8 v4, v4, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_3
-    return v3
+    return v2
 .end method
 
 .method public final contains(F)Z
@@ -759,7 +759,7 @@
 
     move-object/from16 v0, p0
 
-    .line 1013
+    .line 1041
     invoke-static/range {p1 .. p1}, Ljava/lang/Float;->hashCode(F)I
 
     move-result v1
@@ -774,7 +774,7 @@
 
     and-int/lit8 v2, v1, 0x7f
 
-    .line 1018
+    .line 1046
     iget v3, v0, Landroidx/collection/FloatSet;->_capacity:I
 
     ushr-int/lit8 v1, v1, 0x7
@@ -785,7 +785,7 @@
 
     move v5, v4
 
-    .line 1023
+    .line 1051
     :goto_0
     iget-object v6, v0, Landroidx/collection/FloatSet;->metadata:[J
 
@@ -795,7 +795,7 @@
 
     shl-int/lit8 v8, v8, 0x3
 
-    .line 1026
+    .line 1054
     aget-wide v9, v6, v7
 
     ushr-long/2addr v9, v8
@@ -847,7 +847,7 @@
 
     if-eqz v10, :cond_1
 
-    .line 1035
+    .line 1063
     invoke-static {v8, v9}, Ljava/lang/Long;->numberOfTrailingZeros(J)I
 
     move-result v10
@@ -858,7 +858,7 @@
 
     and-int/2addr v10, v3
 
-    .line 1036
+    .line 1064
     iget-object v14, v0, Landroidx/collection/FloatSet;->elements:[F
 
     aget v14, v14, v10
@@ -914,16 +914,16 @@
 .end method
 
 .method public final count()I
-    .locals 1
+    .locals 0
 
-    .line 300
-    iget v0, p0, Landroidx/collection/FloatSet;->_size:I
+    .line 288
+    iget p0, p0, Landroidx/collection/FloatSet;->_size:I
 
-    return v0
+    return p0
 .end method
 
 .method public final count(Lkotlin/jvm/functions/Function1;)I
-    .locals 17
+    .locals 14
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -935,271 +935,263 @@
         }
     .end annotation
 
-    move-object/from16 v0, p0
+    const-string/jumbo v0, "predicate"
 
-    move-object/from16 v1, p1
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v2, "predicate"
+    .line 1015
+    iget-object v0, p0, Landroidx/collection/FloatSet;->elements:[F
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 1019
+    iget-object p0, p0, Landroidx/collection/FloatSet;->metadata:[J
 
-    .line 986
-    iget-object v2, v0, Landroidx/collection/FloatSet;->elements:[F
+    .line 1020
+    array-length v1, p0
 
-    .line 990
-    iget-object v3, v0, Landroidx/collection/FloatSet;->metadata:[J
+    add-int/lit8 v1, v1, -0x2
 
-    .line 991
-    array-length v4, v3
+    const/4 v2, 0x0
 
-    add-int/lit8 v4, v4, -0x2
+    if-ltz v1, :cond_5
 
-    const/4 v5, 0x0
+    move v3, v2
 
-    if-ltz v4, :cond_5
+    move v4, v3
 
-    move v6, v5
-
-    move v7, v6
-
-    .line 994
+    .line 1023
     :goto_0
-    aget-wide v8, v3, v6
+    aget-wide v5, p0, v3
 
-    not-long v10, v8
+    not-long v7, v5
 
-    const/4 v12, 0x7
+    const/4 v9, 0x7
 
-    shl-long/2addr v10, v12
+    shl-long/2addr v7, v9
 
-    and-long/2addr v10, v8
+    and-long/2addr v7, v5
 
-    const-wide v12, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
+    const-wide v9, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
 
-    and-long/2addr v10, v12
+    and-long/2addr v7, v9
+
+    cmp-long v7, v7, v9
+
+    if-eqz v7, :cond_3
+
+    sub-int v7, v3, v1
+
+    not-int v7, v7
+
+    ushr-int/lit8 v7, v7, 0x1f
+
+    const/16 v8, 0x8
+
+    rsub-int/lit8 v7, v7, 0x8
+
+    move v9, v2
+
+    :goto_1
+    if-ge v9, v7, :cond_1
+
+    const-wide/16 v10, 0xff
+
+    and-long/2addr v10, v5
+
+    const-wide/16 v12, 0x80
 
     cmp-long v10, v10, v12
 
-    if-eqz v10, :cond_3
+    if-gez v10, :cond_0
 
-    sub-int v10, v6, v4
+    shl-int/lit8 v10, v3, 0x3
 
-    not-int v10, v10
+    add-int/2addr v10, v9
 
-    ushr-int/lit8 v10, v10, 0x1f
+    .line 1017
+    aget v10, v0, v10
 
-    const/16 v11, 0x8
+    .line 300
+    invoke-static {v10}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    rsub-int/lit8 v10, v10, 0x8
+    move-result-object v10
 
-    move v12, v5
+    invoke-interface {p1, v10}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :goto_1
-    if-ge v12, v10, :cond_1
+    move-result-object v10
 
-    const-wide/16 v13, 0xff
+    check-cast v10, Ljava/lang/Boolean;
 
-    and-long/2addr v13, v8
+    invoke-virtual {v10}, Ljava/lang/Boolean;->booleanValue()Z
 
-    const-wide/16 v15, 0x80
+    move-result v10
 
-    cmp-long v13, v13, v15
+    if-eqz v10, :cond_0
 
-    if-gez v13, :cond_0
-
-    shl-int/lit8 v13, v6, 0x3
-
-    add-int/2addr v13, v12
-
-    .line 1003
-    aget v13, v2, v13
-
-    .line 312
-    invoke-static {v13}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v13
-
-    invoke-interface {v1, v13}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v13
-
-    check-cast v13, Ljava/lang/Boolean;
-
-    invoke-virtual {v13}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v13
-
-    if-eqz v13, :cond_0
-
-    add-int/lit8 v7, v7, 0x1
+    add-int/lit8 v4, v4, 0x1
 
     :cond_0
-    shr-long/2addr v8, v11
+    shr-long/2addr v5, v8
 
-    add-int/lit8 v12, v12, 0x1
+    add-int/lit8 v9, v9, 0x1
 
     goto :goto_1
 
     :cond_1
-    if-ne v10, v11, :cond_2
+    if-ne v7, v8, :cond_2
 
     goto :goto_2
 
     :cond_2
-    return v7
+    return v4
 
     :cond_3
     :goto_2
-    if-eq v6, v4, :cond_4
+    if-eq v3, v1, :cond_4
 
-    add-int/lit8 v6, v6, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_4
-    return v7
+    return v4
 
     :cond_5
-    return v5
+    return v2
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
-    .locals 17
+    .locals 14
 
-    move-object/from16 v0, p0
+    const/4 v0, 0x1
 
-    move-object/from16 v1, p1
+    if-ne p1, p0, :cond_0
 
-    const/4 v2, 0x1
+    return v0
 
-    if-ne v1, v0, :cond_0
+    .line 400
+    :cond_0
+    instance-of v1, p1, Landroidx/collection/FloatSet;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
 
     return v2
 
-    .line 415
-    :cond_0
-    instance-of v3, v1, Landroidx/collection/FloatSet;
-
-    const/4 v4, 0x0
-
-    if-nez v3, :cond_1
-
-    return v4
-
-    .line 418
+    .line 403
     :cond_1
-    check-cast v1, Landroidx/collection/FloatSet;
+    check-cast p1, Landroidx/collection/FloatSet;
 
-    iget v3, v1, Landroidx/collection/FloatSet;->_size:I
+    iget v1, p1, Landroidx/collection/FloatSet;->_size:I
 
-    iget v5, v0, Landroidx/collection/FloatSet;->_size:I
+    iget v3, p0, Landroidx/collection/FloatSet;->_size:I
 
-    if-eq v3, v5, :cond_2
+    if-eq v1, v3, :cond_2
 
-    return v4
+    return v2
 
-    .line 1160
+    .line 1184
     :cond_2
-    iget-object v3, v0, Landroidx/collection/FloatSet;->elements:[F
+    iget-object v1, p0, Landroidx/collection/FloatSet;->elements:[F
 
-    .line 1164
-    iget-object v5, v0, Landroidx/collection/FloatSet;->metadata:[J
+    .line 1188
+    iget-object p0, p0, Landroidx/collection/FloatSet;->metadata:[J
 
-    .line 1165
-    array-length v6, v5
+    .line 1189
+    array-length v3, p0
 
-    add-int/lit8 v6, v6, -0x2
+    add-int/lit8 v3, v3, -0x2
 
-    if-ltz v6, :cond_6
+    if-ltz v3, :cond_6
 
-    move v7, v4
+    move v4, v2
 
-    .line 1168
+    .line 1192
     :goto_0
-    aget-wide v8, v5, v7
+    aget-wide v5, p0, v4
 
-    not-long v10, v8
+    not-long v7, v5
 
-    const/4 v12, 0x7
+    const/4 v9, 0x7
 
-    shl-long/2addr v10, v12
+    shl-long/2addr v7, v9
 
-    and-long/2addr v10, v8
+    and-long/2addr v7, v5
 
-    const-wide v12, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
+    const-wide v9, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
 
-    and-long/2addr v10, v12
+    and-long/2addr v7, v9
+
+    cmp-long v7, v7, v9
+
+    if-eqz v7, :cond_5
+
+    sub-int v7, v4, v3
+
+    not-int v7, v7
+
+    ushr-int/lit8 v7, v7, 0x1f
+
+    const/16 v8, 0x8
+
+    rsub-int/lit8 v7, v7, 0x8
+
+    move v9, v2
+
+    :goto_1
+    if-ge v9, v7, :cond_4
+
+    const-wide/16 v10, 0xff
+
+    and-long/2addr v10, v5
+
+    const-wide/16 v12, 0x80
 
     cmp-long v10, v10, v12
 
-    if-eqz v10, :cond_5
+    if-gez v10, :cond_3
 
-    sub-int v10, v7, v6
+    shl-int/lit8 v10, v4, 0x3
 
-    not-int v10, v10
+    add-int/2addr v10, v9
 
-    ushr-int/lit8 v10, v10, 0x1f
+    .line 1186
+    aget v10, v1, v10
 
-    const/16 v11, 0x8
+    .line 408
+    invoke-virtual {p1, v10}, Landroidx/collection/FloatSet;->contains(F)Z
 
-    rsub-int/lit8 v10, v10, 0x8
+    move-result v10
 
-    move v12, v4
+    if-nez v10, :cond_3
 
-    :goto_1
-    if-ge v12, v10, :cond_4
-
-    const-wide/16 v13, 0xff
-
-    and-long/2addr v13, v8
-
-    const-wide/16 v15, 0x80
-
-    cmp-long v13, v13, v15
-
-    if-gez v13, :cond_3
-
-    shl-int/lit8 v13, v7, 0x3
-
-    add-int/2addr v13, v12
-
-    .line 1177
-    aget v13, v3, v13
-
-    .line 423
-    invoke-virtual {v1, v13}, Landroidx/collection/FloatSet;->contains(F)Z
-
-    move-result v13
-
-    if-nez v13, :cond_3
-
-    return v4
+    return v2
 
     :cond_3
-    shr-long/2addr v8, v11
+    shr-long/2addr v5, v8
 
-    add-int/lit8 v12, v12, 0x1
+    add-int/lit8 v9, v9, 0x1
 
     goto :goto_1
 
     :cond_4
-    if-ne v10, v11, :cond_6
+    if-ne v7, v8, :cond_6
 
     :cond_5
-    if-eq v7, v6, :cond_6
+    if-eq v4, v3, :cond_6
 
-    add-int/lit8 v7, v7, 0x1
+    add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
     :cond_6
-    return v2
+    return v0
 .end method
 
 .method public final findElementIndex$collection(F)I
     .locals 13
 
-    .line 1186
+    .line 1209
     invoke-static {p1}, Ljava/lang/Float;->hashCode(F)I
 
     move-result v0
@@ -1214,7 +1206,7 @@
 
     and-int/lit8 v1, v0, 0x7f
 
-    .line 445
+    .line 430
     iget v2, p0, Landroidx/collection/FloatSet;->_capacity:I
 
     ushr-int/lit8 v0, v0, 0x7
@@ -1223,7 +1215,7 @@
 
     const/4 v3, 0x0
 
-    .line 449
+    .line 434
     :goto_0
     iget-object v4, p0, Landroidx/collection/FloatSet;->metadata:[J
 
@@ -1233,7 +1225,7 @@
 
     shl-int/lit8 v6, v6, 0x3
 
-    .line 1193
+    .line 1216
     aget-wide v7, v4, v5
 
     ushr-long/2addr v7, v6
@@ -1283,7 +1275,7 @@
 
     if-eqz v12, :cond_1
 
-    .line 1199
+    .line 1222
     invoke-static {v6, v7}, Ljava/lang/Long;->numberOfTrailingZeros(J)I
 
     move-result v10
@@ -1294,7 +1286,7 @@
 
     and-int/2addr v10, v2
 
-    .line 453
+    .line 438
     iget-object v11, p0, Landroidx/collection/FloatSet;->elements:[F
 
     aget v11, v11, v10
@@ -1329,9 +1321,9 @@
 
     if-eqz v4, :cond_2
 
-    const/4 p1, -0x1
+    const/4 p0, -0x1
 
-    return p1
+    return p0
 
     :cond_2
     add-int/lit8 v3, v3, 0x8
@@ -1344,109 +1336,109 @@
 .end method
 
 .method public final first()F
-    .locals 14
+    .locals 13
 
-    .line 855
+    .line 888
     iget-object v0, p0, Landroidx/collection/FloatSet;->elements:[F
 
-    .line 859
-    iget-object v1, p0, Landroidx/collection/FloatSet;->metadata:[J
+    .line 892
+    iget-object p0, p0, Landroidx/collection/FloatSet;->metadata:[J
 
-    .line 860
-    array-length v2, v1
+    .line 893
+    array-length v1, p0
 
-    add-int/lit8 v2, v2, -0x2
+    add-int/lit8 v1, v1, -0x2
 
-    if-ltz v2, :cond_3
+    if-ltz v1, :cond_3
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    move v4, v3
+    move v3, v2
 
-    .line 863
+    .line 896
     :goto_0
-    aget-wide v5, v1, v4
+    aget-wide v4, p0, v3
 
-    not-long v7, v5
+    not-long v6, v4
 
-    const/4 v9, 0x7
+    const/4 v8, 0x7
 
-    shl-long/2addr v7, v9
+    shl-long/2addr v6, v8
 
-    and-long/2addr v7, v5
+    and-long/2addr v6, v4
 
-    const-wide v9, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
+    const-wide v8, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
 
-    and-long/2addr v7, v9
+    and-long/2addr v6, v8
 
-    cmp-long v7, v7, v9
+    cmp-long v6, v6, v8
 
-    if-eqz v7, :cond_2
+    if-eqz v6, :cond_2
 
-    sub-int v7, v4, v2
+    sub-int v6, v3, v1
 
-    not-int v7, v7
+    not-int v6, v6
 
-    ushr-int/lit8 v7, v7, 0x1f
+    ushr-int/lit8 v6, v6, 0x1f
 
-    const/16 v8, 0x8
+    const/16 v7, 0x8
 
-    rsub-int/lit8 v7, v7, 0x8
+    rsub-int/lit8 v6, v6, 0x8
 
-    move v9, v3
+    move v8, v2
 
     :goto_1
-    if-ge v9, v7, :cond_1
+    if-ge v8, v6, :cond_1
 
-    const-wide/16 v10, 0xff
+    const-wide/16 v9, 0xff
 
-    and-long/2addr v10, v5
+    and-long/2addr v9, v4
 
-    const-wide/16 v12, 0x80
+    const-wide/16 v11, 0x80
 
-    cmp-long v10, v10, v12
+    cmp-long v9, v9, v11
 
-    if-gez v10, :cond_0
+    if-gez v9, :cond_0
 
-    shl-int/lit8 v1, v4, 0x3
+    shl-int/lit8 p0, v3, 0x3
 
-    add-int/2addr v1, v9
+    add-int/2addr p0, v8
 
-    .line 872
-    aget v0, v0, v1
+    .line 890
+    aget p0, v0, p0
 
-    return v0
+    return p0
 
     :cond_0
-    shr-long/2addr v5, v8
+    shr-long/2addr v4, v7
 
-    add-int/lit8 v9, v9, 0x1
+    add-int/lit8 v8, v8, 0x1
 
     goto :goto_1
 
     :cond_1
-    if-ne v7, v8, :cond_3
+    if-ne v6, v7, :cond_3
 
     :cond_2
-    if-eq v4, v2, :cond_3
+    if-eq v3, v1, :cond_3
 
-    add-int/lit8 v4, v4, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 204
+    .line 202
     :cond_3
-    new-instance v0, Ljava/util/NoSuchElementException;
+    new-instance p0, Ljava/util/NoSuchElementException;
 
-    const-string v1, "The FloatSet is empty"
+    const-string v0, "The FloatSet is empty"
 
-    invoke-direct {v0, v1}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
 
-    throw v0
+    throw p0
 .end method
 
 .method public final first(Lkotlin/jvm/functions/Function1;)F
-    .locals 14
+    .locals 13
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1458,261 +1450,18 @@
         }
     .end annotation
 
-    const-string v0, "predicate"
+    const-string/jumbo v0, "predicate"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 882
+    .line 914
     iget-object v0, p0, Landroidx/collection/FloatSet;->elements:[F
 
-    .line 886
-    iget-object v1, p0, Landroidx/collection/FloatSet;->metadata:[J
-
-    .line 887
-    array-length v2, v1
-
-    add-int/lit8 v2, v2, -0x2
-
-    if-ltz v2, :cond_3
-
-    const/4 v3, 0x0
-
-    move v4, v3
-
-    .line 890
-    :goto_0
-    aget-wide v5, v1, v4
-
-    not-long v7, v5
-
-    const/4 v9, 0x7
-
-    shl-long/2addr v7, v9
-
-    and-long/2addr v7, v5
-
-    const-wide v9, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
-
-    and-long/2addr v7, v9
-
-    cmp-long v7, v7, v9
-
-    if-eqz v7, :cond_2
-
-    sub-int v7, v4, v2
-
-    not-int v7, v7
-
-    ushr-int/lit8 v7, v7, 0x1f
-
-    const/16 v8, 0x8
-
-    rsub-int/lit8 v7, v7, 0x8
-
-    move v9, v3
-
-    :goto_1
-    if-ge v9, v7, :cond_1
-
-    const-wide/16 v10, 0xff
-
-    and-long/2addr v10, v5
-
-    const-wide/16 v12, 0x80
-
-    cmp-long v10, v10, v12
-
-    if-gez v10, :cond_0
-
-    shl-int/lit8 v10, v4, 0x3
-
-    add-int/2addr v10, v9
-
-    .line 899
-    aget v10, v0, v10
-
-    .line 222
-    invoke-static {v10}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v11
-
-    invoke-interface {p1, v11}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v11
-
-    check-cast v11, Ljava/lang/Boolean;
-
-    invoke-virtual {v11}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v11
-
-    if-eqz v11, :cond_0
-
-    return v10
-
-    :cond_0
-    shr-long/2addr v5, v8
-
-    add-int/lit8 v9, v9, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    if-ne v7, v8, :cond_3
-
-    :cond_2
-    if-eq v4, v2, :cond_3
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    .line 223
-    :cond_3
-    new-instance p1, Ljava/util/NoSuchElementException;
-
-    const-string v0, "Could not find a match"
-
-    invoke-direct {p1, v0}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final forEach(Lkotlin/jvm/functions/Function1;)V
-    .locals 14
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lkotlin/jvm/functions/Function1<",
-            "-",
-            "Ljava/lang/Float;",
-            "Lkotlin/Unit;",
-            ">;)V"
-        }
-    .end annotation
-
-    const-string v0, "block"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 263
-    iget-object v0, p0, Landroidx/collection/FloatSet;->elements:[F
-
-    .line 911
-    iget-object v1, p0, Landroidx/collection/FloatSet;->metadata:[J
-
-    .line 912
-    array-length v2, v1
-
-    add-int/lit8 v2, v2, -0x2
-
-    if-ltz v2, :cond_3
-
-    const/4 v3, 0x0
-
-    move v4, v3
-
-    .line 915
-    :goto_0
-    aget-wide v5, v1, v4
-
-    not-long v7, v5
-
-    const/4 v9, 0x7
-
-    shl-long/2addr v7, v9
-
-    and-long/2addr v7, v5
-
-    const-wide v9, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
-
-    and-long/2addr v7, v9
-
-    cmp-long v7, v7, v9
-
-    if-eqz v7, :cond_2
-
-    sub-int v7, v4, v2
-
-    not-int v7, v7
-
-    ushr-int/lit8 v7, v7, 0x1f
-
-    const/16 v8, 0x8
-
-    rsub-int/lit8 v7, v7, 0x8
-
-    move v9, v3
-
-    :goto_1
-    if-ge v9, v7, :cond_1
-
-    const-wide/16 v10, 0xff
-
-    and-long/2addr v10, v5
-
-    const-wide/16 v12, 0x80
-
-    cmp-long v10, v10, v12
-
-    if-gez v10, :cond_0
-
-    shl-int/lit8 v10, v4, 0x3
-
-    add-int/2addr v10, v9
-
-    .line 266
-    aget v10, v0, v10
-
-    invoke-static {v10}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v10
-
-    invoke-interface {p1, v10}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    shr-long/2addr v5, v8
-
-    add-int/lit8 v9, v9, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    if-ne v7, v8, :cond_3
-
-    :cond_2
-    if-eq v4, v2, :cond_3
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    return-void
-.end method
-
-.method public final forEachIndex(Lkotlin/jvm/functions/Function1;)V
-    .locals 13
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lkotlin/jvm/functions/Function1<",
-            "-",
-            "Ljava/lang/Integer;",
-            "Lkotlin/Unit;",
-            ">;)V"
-        }
-    .end annotation
-
-    const-string v0, "block"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 233
-    iget-object v0, p0, Landroidx/collection/FloatSet;->metadata:[J
-
-    .line 234
-    array-length v1, v0
+    .line 918
+    iget-object p0, p0, Landroidx/collection/FloatSet;->metadata:[J
+
+    .line 919
+    array-length v1, p0
 
     add-int/lit8 v1, v1, -0x2
 
@@ -1722,9 +1471,9 @@
 
     move v3, v2
 
-    .line 237
+    .line 922
     :goto_0
-    aget-wide v4, v0, v3
+    aget-wide v4, p0, v3
 
     not-long v6, v4
 
@@ -1771,8 +1520,143 @@
 
     add-int/2addr v9, v8
 
-    .line 247
-    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    .line 916
+    aget v9, v0, v9
+
+    .line 220
+    invoke-static {v9}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v10
+
+    invoke-interface {p1, v10}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v10
+
+    check-cast v10, Ljava/lang/Boolean;
+
+    invoke-virtual {v10}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v10
+
+    if-eqz v10, :cond_0
+
+    return v9
+
+    :cond_0
+    shr-long/2addr v4, v7
+
+    add-int/lit8 v8, v8, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    if-ne v6, v7, :cond_3
+
+    :cond_2
+    if-eq v3, v1, :cond_3
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    .line 221
+    :cond_3
+    new-instance p0, Ljava/util/NoSuchElementException;
+
+    const-string p1, "Could not find a match"
+
+    invoke-direct {p0, p1}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public final forEach(Lkotlin/jvm/functions/Function1;)V
+    .locals 13
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlin/jvm/functions/Function1<",
+            "-",
+            "Ljava/lang/Float;",
+            "Lkotlin/Unit;",
+            ">;)V"
+        }
+    .end annotation
+
+    const-string v0, "block"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 258
+    iget-object v0, p0, Landroidx/collection/FloatSet;->elements:[F
+
+    .line 942
+    iget-object p0, p0, Landroidx/collection/FloatSet;->metadata:[J
+
+    .line 943
+    array-length v1, p0
+
+    add-int/lit8 v1, v1, -0x2
+
+    if-ltz v1, :cond_3
+
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    .line 946
+    :goto_0
+    aget-wide v4, p0, v3
+
+    not-long v6, v4
+
+    const/4 v8, 0x7
+
+    shl-long/2addr v6, v8
+
+    and-long/2addr v6, v4
+
+    const-wide v8, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
+
+    and-long/2addr v6, v8
+
+    cmp-long v6, v6, v8
+
+    if-eqz v6, :cond_2
+
+    sub-int v6, v3, v1
+
+    not-int v6, v6
+
+    ushr-int/lit8 v6, v6, 0x1f
+
+    const/16 v7, 0x8
+
+    rsub-int/lit8 v6, v6, 0x8
+
+    move v8, v2
+
+    :goto_1
+    if-ge v8, v6, :cond_1
+
+    const-wide/16 v9, 0xff
+
+    and-long/2addr v9, v4
+
+    const-wide/16 v11, 0x80
+
+    cmp-long v9, v9, v11
+
+    if-gez v9, :cond_0
+
+    shl-int/lit8 v9, v3, 0x3
+
+    add-int/2addr v9, v8
+
+    .line 260
+    aget v9, v0, v9
+
+    invoke-static {v9}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v9
 
@@ -1786,9 +1670,7 @@
     goto :goto_1
 
     :cond_1
-    if-eq v6, v7, :cond_2
-
-    goto :goto_2
+    if-ne v6, v7, :cond_3
 
     :cond_2
     if-eq v3, v1, :cond_3
@@ -1798,173 +1680,283 @@
     goto :goto_0
 
     :cond_3
+    return-void
+.end method
+
+.method public final forEachIndex(Lkotlin/jvm/functions/Function1;)V
+    .locals 12
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlin/jvm/functions/Function1<",
+            "-",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;)V"
+        }
+    .end annotation
+
+    const-string v0, "block"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 228
+    iget-object p0, p0, Landroidx/collection/FloatSet;->metadata:[J
+
+    .line 229
+    array-length v0, p0
+
+    add-int/lit8 v0, v0, -0x2
+
+    if-ltz v0, :cond_3
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    .line 232
+    :goto_0
+    aget-wide v3, p0, v2
+
+    not-long v5, v3
+
+    const/4 v7, 0x7
+
+    shl-long/2addr v5, v7
+
+    and-long/2addr v5, v3
+
+    const-wide v7, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
+
+    and-long/2addr v5, v7
+
+    cmp-long v5, v5, v7
+
+    if-eqz v5, :cond_2
+
+    sub-int v5, v2, v0
+
+    not-int v5, v5
+
+    ushr-int/lit8 v5, v5, 0x1f
+
+    const/16 v6, 0x8
+
+    rsub-int/lit8 v5, v5, 0x8
+
+    move v7, v1
+
+    :goto_1
+    if-ge v7, v5, :cond_1
+
+    const-wide/16 v8, 0xff
+
+    and-long/2addr v8, v3
+
+    const-wide/16 v10, 0x80
+
+    cmp-long v8, v8, v10
+
+    if-gez v8, :cond_0
+
+    shl-int/lit8 v8, v2, 0x3
+
+    add-int/2addr v8, v7
+
+    .line 242
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    invoke-interface {p1, v8}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
+    shr-long/2addr v3, v6
+
+    add-int/lit8 v7, v7, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    if-eq v5, v6, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    if-eq v2, v0, :cond_3
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_3
     :goto_2
     return-void
 .end method
 
 .method public final getCapacity()I
-    .locals 1
+    .locals 0
 
-    .line 164
-    iget v0, p0, Landroidx/collection/FloatSet;->_capacity:I
+    .line 170
+    iget p0, p0, Landroidx/collection/FloatSet;->_capacity:I
 
-    return v0
+    return p0
 .end method
 
 .method public final getSize()I
-    .locals 1
+    .locals 0
 
-    .line 176
-    iget v0, p0, Landroidx/collection/FloatSet;->_size:I
+    .line 179
+    iget p0, p0, Landroidx/collection/FloatSet;->_size:I
 
-    return v0
+    return p0
 .end method
 
 .method public hashCode()I
-    .locals 15
+    .locals 14
 
-    .line 1133
+    .line 1158
     iget-object v0, p0, Landroidx/collection/FloatSet;->elements:[F
 
-    .line 1137
-    iget-object v1, p0, Landroidx/collection/FloatSet;->metadata:[J
+    .line 1162
+    iget-object p0, p0, Landroidx/collection/FloatSet;->metadata:[J
 
-    .line 1138
-    array-length v2, v1
+    .line 1163
+    array-length v1, p0
 
-    add-int/lit8 v2, v2, -0x2
+    add-int/lit8 v1, v1, -0x2
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    if-ltz v2, :cond_5
+    if-ltz v1, :cond_5
+
+    move v3, v2
 
     move v4, v3
 
-    move v5, v4
-
-    .line 1141
+    .line 1166
     :goto_0
-    aget-wide v6, v1, v4
+    aget-wide v5, p0, v3
 
-    not-long v8, v6
+    not-long v7, v5
 
-    const/4 v10, 0x7
+    const/4 v9, 0x7
 
-    shl-long/2addr v8, v10
+    shl-long/2addr v7, v9
 
-    and-long/2addr v8, v6
+    and-long/2addr v7, v5
 
-    const-wide v10, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
+    const-wide v9, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
 
-    and-long/2addr v8, v10
+    and-long/2addr v7, v9
 
-    cmp-long v8, v8, v10
+    cmp-long v7, v7, v9
 
-    if-eqz v8, :cond_3
+    if-eqz v7, :cond_3
 
-    sub-int v8, v4, v2
+    sub-int v7, v3, v1
 
-    not-int v8, v8
+    not-int v7, v7
 
-    ushr-int/lit8 v8, v8, 0x1f
+    ushr-int/lit8 v7, v7, 0x1f
 
-    const/16 v9, 0x8
+    const/16 v8, 0x8
 
-    rsub-int/lit8 v8, v8, 0x8
+    rsub-int/lit8 v7, v7, 0x8
 
-    move v10, v3
+    move v9, v2
 
     :goto_1
-    if-ge v10, v8, :cond_1
+    if-ge v9, v7, :cond_1
 
-    const-wide/16 v11, 0xff
+    const-wide/16 v10, 0xff
 
-    and-long/2addr v11, v6
+    and-long/2addr v10, v5
 
-    const-wide/16 v13, 0x80
+    const-wide/16 v12, 0x80
 
-    cmp-long v11, v11, v13
+    cmp-long v10, v10, v12
 
-    if-gez v11, :cond_0
+    if-gez v10, :cond_0
 
-    shl-int/lit8 v11, v4, 0x3
+    shl-int/lit8 v10, v3, 0x3
 
-    add-int/2addr v11, v10
+    add-int/2addr v10, v9
 
-    .line 1150
-    aget v11, v0, v11
+    .line 1160
+    aget v10, v0, v10
 
-    .line 397
-    invoke-static {v11}, Ljava/lang/Float;->hashCode(F)I
+    .line 383
+    invoke-static {v10}, Ljava/lang/Float;->hashCode(F)I
 
-    move-result v11
+    move-result v10
 
-    add-int/2addr v5, v11
+    add-int/2addr v4, v10
 
     :cond_0
-    shr-long/2addr v6, v9
+    shr-long/2addr v5, v8
 
-    add-int/lit8 v10, v10, 0x1
+    add-int/lit8 v9, v9, 0x1
 
     goto :goto_1
 
     :cond_1
-    if-ne v8, v9, :cond_2
+    if-ne v7, v8, :cond_2
 
     goto :goto_2
 
     :cond_2
-    return v5
+    return v4
 
     :cond_3
     :goto_2
-    if-eq v4, v2, :cond_4
+    if-eq v3, v1, :cond_4
 
-    add-int/lit8 v4, v4, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_4
-    return v5
+    return v4
 
     :cond_5
-    return v3
+    return v2
 .end method
 
 .method public final isEmpty()Z
-    .locals 1
+    .locals 0
 
-    .line 191
-    iget v0, p0, Landroidx/collection/FloatSet;->_size:I
+    .line 188
+    iget p0, p0, Landroidx/collection/FloatSet;->_size:I
 
-    if-nez v0, :cond_0
+    if-nez p0, :cond_0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public final isNotEmpty()Z
-    .locals 1
+    .locals 0
 
-    .line 196
-    iget v0, p0, Landroidx/collection/FloatSet;->_size:I
+    .line 191
+    iget p0, p0, Landroidx/collection/FloatSet;->_size:I
 
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public final joinToString()Ljava/lang/String;
@@ -1988,15 +1980,15 @@
 
     invoke-static/range {v0 .. v7}, Landroidx/collection/FloatSet;->joinToString$default(Landroidx/collection/FloatSet;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    return-object v1
+    return-object p0
 .end method
 
 .method public final joinToString(Ljava/lang/CharSequence;)Ljava/lang/String;
     .locals 9
 
-    const-string v0, "separator"
+    const-string/jumbo v0, "separator"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -2018,19 +2010,19 @@
 
     invoke-static/range {v1 .. v8}, Landroidx/collection/FloatSet;->joinToString$default(Landroidx/collection/FloatSet;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/Object;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final joinToString(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
     .locals 9
 
-    const-string v0, "separator"
+    const-string/jumbo v0, "separator"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "prefix"
+    const-string/jumbo v0, "prefix"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -2052,23 +2044,23 @@
 
     invoke-static/range {v1 .. v8}, Landroidx/collection/FloatSet;->joinToString$default(Landroidx/collection/FloatSet;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/Object;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final joinToString(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
     .locals 9
 
-    const-string v0, "separator"
+    const-string/jumbo v0, "separator"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "prefix"
+    const-string/jumbo v0, "prefix"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "postfix"
+    const-string/jumbo v0, "postfix"
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -2090,23 +2082,23 @@
 
     invoke-static/range {v1 .. v8}, Landroidx/collection/FloatSet;->joinToString$default(Landroidx/collection/FloatSet;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/Object;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final joinToString(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;I)Ljava/lang/String;
     .locals 9
 
-    const-string v0, "separator"
+    const-string/jumbo v0, "separator"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "prefix"
+    const-string/jumbo v0, "prefix"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "postfix"
+    const-string/jumbo v0, "postfix"
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -2128,13 +2120,13 @@
 
     invoke-static/range {v1 .. v8}, Landroidx/collection/FloatSet;->joinToString$default(Landroidx/collection/FloatSet;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/Object;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final joinToString(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;)Ljava/lang/String;
-    .locals 20
+    .locals 19
 
     move-object/from16 v0, p0
 
@@ -2146,38 +2138,234 @@
 
     move-object/from16 v4, p5
 
-    const-string v5, "separator"
+    const-string/jumbo v5, "separator"
 
     invoke-static {v1, v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v5, "prefix"
+    const-string/jumbo v5, "prefix"
 
     invoke-static {v2, v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v5, "postfix"
+    const-string/jumbo v5, "postfix"
 
     invoke-static {v3, v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v5, "truncated"
+    const-string/jumbo v5, "truncated"
 
     invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 339
+    .line 326
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 340
+    .line 327
     invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1052
+    .line 1080
     iget-object v2, v0, Landroidx/collection/FloatSet;->elements:[F
 
-    .line 1056
-    iget-object v6, v0, Landroidx/collection/FloatSet;->metadata:[J
+    .line 1084
+    iget-object v0, v0, Landroidx/collection/FloatSet;->metadata:[J
 
-    .line 1057
-    array-length v7, v6
+    .line 1085
+    array-length v6, v0
+
+    add-int/lit8 v6, v6, -0x2
+
+    if-ltz v6, :cond_5
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    .line 1088
+    :goto_0
+    aget-wide v10, v0, v8
+
+    not-long v12, v10
+
+    const/4 v14, 0x7
+
+    shl-long/2addr v12, v14
+
+    and-long/2addr v12, v10
+
+    const-wide v14, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
+
+    and-long/2addr v12, v14
+
+    cmp-long v12, v12, v14
+
+    if-eqz v12, :cond_4
+
+    sub-int v12, v8, v6
+
+    not-int v12, v12
+
+    ushr-int/lit8 v12, v12, 0x1f
+
+    const/16 v13, 0x8
+
+    rsub-int/lit8 v12, v12, 0x8
+
+    const/4 v14, 0x0
+
+    :goto_1
+    if-ge v14, v12, :cond_3
+
+    const-wide/16 v15, 0xff
+
+    and-long/2addr v15, v10
+
+    const-wide/16 v17, 0x80
+
+    cmp-long v15, v15, v17
+
+    if-gez v15, :cond_2
+
+    shl-int/lit8 v15, v8, 0x3
+
+    add-int/2addr v15, v14
+
+    .line 1082
+    aget v15, v2, v15
+
+    move/from16 v7, p4
+
+    if-ne v9, v7, :cond_0
+
+    .line 331
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    goto :goto_4
+
+    :cond_0
+    if-eqz v9, :cond_1
+
+    .line 335
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    .line 337
+    :cond_1
+    invoke-virtual {v5, v15}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v9, v9, 0x1
+
+    goto :goto_2
+
+    :cond_2
+    move/from16 v7, p4
+
+    :goto_2
+    shr-long/2addr v10, v13
+
+    add-int/lit8 v14, v14, 0x1
+
+    goto :goto_1
+
+    :cond_3
+    move/from16 v7, p4
+
+    if-ne v12, v13, :cond_5
+
+    goto :goto_3
+
+    :cond_4
+    move/from16 v7, p4
+
+    :goto_3
+    if-eq v8, v6, :cond_5
+
+    add-int/lit8 v8, v8, 0x1
+
+    goto :goto_0
+
+    .line 340
+    :cond_5
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    .line 326
+    :goto_4
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "toString(...)"
+
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method public final joinToString(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/functions/Function1;)Ljava/lang/String;
+    .locals 20
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/CharSequence;",
+            "Ljava/lang/CharSequence;",
+            "Ljava/lang/CharSequence;",
+            "I",
+            "Ljava/lang/CharSequence;",
+            "Lkotlin/jvm/functions/Function1<",
+            "-",
+            "Ljava/lang/Float;",
+            "+",
+            "Ljava/lang/CharSequence;",
+            ">;)",
+            "Ljava/lang/String;"
+        }
+    .end annotation
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    move-object/from16 v2, p2
+
+    move-object/from16 v3, p3
+
+    move-object/from16 v4, p5
+
+    move-object/from16 v5, p6
+
+    const-string/jumbo v6, "separator"
+
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string/jumbo v6, "prefix"
+
+    invoke-static {v2, v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string/jumbo v6, "postfix"
+
+    invoke-static {v3, v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string/jumbo v6, "truncated"
+
+    invoke-static {v4, v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string/jumbo v6, "transform"
+
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 359
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    .line 360
+    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    .line 1106
+    iget-object v2, v0, Landroidx/collection/FloatSet;->elements:[F
+
+    .line 1110
+    iget-object v0, v0, Landroidx/collection/FloatSet;->metadata:[J
+
+    .line 1111
+    array-length v7, v0
 
     add-int/lit8 v7, v7, -0x2
 
@@ -2187,9 +2375,9 @@
 
     const/4 v10, 0x0
 
-    .line 1060
+    .line 1114
     :goto_0
-    aget-wide v11, v6, v9
+    aget-wide v11, v0, v9
 
     not-long v13, v11
 
@@ -2236,59 +2424,69 @@
 
     add-int v16, v16, v15
 
-    .line 1069
-    aget v8, v2, v16
+    .line 1108
+    aget v16, v2, v16
 
-    move/from16 v16, v14
+    move/from16 v8, p4
 
-    move/from16 v14, p4
+    if-ne v10, v8, :cond_0
 
-    if-ne v10, v14, :cond_0
-
-    .line 344
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+    .line 364
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     goto :goto_4
 
     :cond_0
     if-eqz v10, :cond_1
 
-    .line 348
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+    .line 368
+    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 350
     :cond_1
-    invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    move/from16 p2, v14
+
+    .line 370
+    invoke-static/range {v16 .. v16}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v14
+
+    invoke-interface {v5, v14}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v14
+
+    check-cast v14, Ljava/lang/CharSequence;
+
+    invoke-virtual {v6, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_2
 
     :cond_2
-    move/from16 v16, v14
+    move/from16 v8, p4
 
-    move/from16 v14, p4
+    move/from16 p2, v14
 
     :goto_2
-    shr-long v11, v11, v16
+    shr-long v11, v11, p2
 
     add-int/lit8 v15, v15, 0x1
 
-    move/from16 v14, v16
+    move/from16 v14, p2
 
     goto :goto_1
 
     :cond_3
-    move v8, v14
+    move/from16 v8, p4
 
-    move/from16 v14, p4
+    move v11, v14
 
-    if-ne v13, v8, :cond_5
+    if-ne v13, v11, :cond_5
 
     goto :goto_3
 
     :cond_4
-    move/from16 v14, p4
+    move/from16 v8, p4
 
     :goto_3
     if-eq v9, v7, :cond_5
@@ -2297,235 +2495,17 @@
 
     goto :goto_0
 
-    .line 353
-    :cond_5
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    .line 339
-    :goto_4
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "StringBuilder().apply(builderAction).toString()"
-
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    return-object v1
-.end method
-
-.method public final joinToString(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/functions/Function1;)Ljava/lang/String;
-    .locals 20
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/CharSequence;",
-            "Ljava/lang/CharSequence;",
-            "Ljava/lang/CharSequence;",
-            "I",
-            "Ljava/lang/CharSequence;",
-            "Lkotlin/jvm/functions/Function1<",
-            "-",
-            "Ljava/lang/Float;",
-            "+",
-            "Ljava/lang/CharSequence;",
-            ">;)",
-            "Ljava/lang/String;"
-        }
-    .end annotation
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p1
-
-    move-object/from16 v2, p2
-
-    move-object/from16 v3, p3
-
-    move-object/from16 v4, p5
-
-    move-object/from16 v5, p6
-
-    const-string v6, "separator"
-
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v6, "prefix"
-
-    invoke-static {v2, v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v6, "postfix"
-
-    invoke-static {v3, v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v6, "truncated"
-
-    invoke-static {v4, v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v6, "transform"
-
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 372
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
     .line 373
-    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    .line 1079
-    iget-object v2, v0, Landroidx/collection/FloatSet;->elements:[F
-
-    .line 1083
-    iget-object v7, v0, Landroidx/collection/FloatSet;->metadata:[J
-
-    .line 1084
-    array-length v8, v7
-
-    add-int/lit8 v8, v8, -0x2
-
-    if-ltz v8, :cond_5
-
-    const/4 v10, 0x0
-
-    const/4 v11, 0x0
-
-    .line 1087
-    :goto_0
-    aget-wide v12, v7, v10
-
-    not-long v14, v12
-
-    const/16 v16, 0x7
-
-    shl-long v14, v14, v16
-
-    and-long/2addr v14, v12
-
-    const-wide v16, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
-
-    and-long v14, v14, v16
-
-    cmp-long v14, v14, v16
-
-    if-eqz v14, :cond_4
-
-    sub-int v14, v10, v8
-
-    not-int v14, v14
-
-    ushr-int/lit8 v14, v14, 0x1f
-
-    const/16 v15, 0x8
-
-    rsub-int/lit8 v14, v14, 0x8
-
-    const/4 v9, 0x0
-
-    :goto_1
-    if-ge v9, v14, :cond_3
-
-    const-wide/16 v16, 0xff
-
-    and-long v16, v12, v16
-
-    const-wide/16 v18, 0x80
-
-    cmp-long v16, v16, v18
-
-    if-gez v16, :cond_2
-
-    shl-int/lit8 v16, v10, 0x3
-
-    add-int v16, v16, v9
-
-    .line 1096
-    aget v16, v2, v16
-
-    move/from16 v17, v15
-
-    move/from16 v15, p4
-
-    if-ne v11, v15, :cond_0
-
-    .line 377
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    goto :goto_4
-
-    :cond_0
-    if-eqz v11, :cond_1
-
-    .line 381
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    .line 383
-    :cond_1
-    invoke-static/range {v16 .. v16}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v0
-
-    invoke-interface {v5, v0}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/CharSequence;
-
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v11, v11, 0x1
-
-    goto :goto_2
-
-    :cond_2
-    move/from16 v17, v15
-
-    move/from16 v15, p4
-
-    :goto_2
-    shr-long v12, v12, v17
-
-    add-int/lit8 v9, v9, 0x1
-
-    move-object/from16 v0, p0
-
-    move/from16 v15, v17
-
-    goto :goto_1
-
-    :cond_3
-    move v0, v15
-
-    move/from16 v15, p4
-
-    if-ne v14, v0, :cond_5
-
-    goto :goto_3
-
-    :cond_4
-    move/from16 v15, p4
-
-    :goto_3
-    if-eq v10, v8, :cond_5
-
-    add-int/lit8 v10, v10, 0x1
-
-    move-object/from16 v0, p0
-
-    goto :goto_0
-
-    .line 386
     :cond_5
     invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 372
+    .line 359
     :goto_4
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "StringBuilder().apply(builderAction).toString()"
+    const-string/jumbo v1, "toString(...)"
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -2561,90 +2541,90 @@
 
     move-object/from16 v4, p5
 
-    const-string v5, "separator"
+    const-string/jumbo v5, "separator"
 
     invoke-static {v1, v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v5, "prefix"
+    const-string/jumbo v5, "prefix"
 
     invoke-static {v2, v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v5, "postfix"
+    const-string/jumbo v5, "postfix"
 
     invoke-static {v3, v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v5, "transform"
+    const-string/jumbo v5, "transform"
 
     invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1207
+    .line 1230
     const-string v5, "..."
 
     check-cast v5, Ljava/lang/CharSequence;
 
-    .line 1209
+    .line 1232
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1210
+    .line 1233
     invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1214
+    .line 1237
     iget-object v2, v0, Landroidx/collection/FloatSet;->elements:[F
 
-    .line 1218
-    iget-object v7, v0, Landroidx/collection/FloatSet;->metadata:[J
+    .line 1241
+    iget-object v0, v0, Landroidx/collection/FloatSet;->metadata:[J
 
-    .line 1219
-    array-length v8, v7
+    .line 1242
+    array-length v7, v0
 
-    add-int/lit8 v8, v8, -0x2
+    add-int/lit8 v7, v7, -0x2
 
-    if-ltz v8, :cond_5
-
-    const/4 v10, 0x0
-
-    const/4 v11, 0x0
-
-    .line 1222
-    :goto_0
-    aget-wide v12, v7, v10
-
-    not-long v14, v12
-
-    const/16 v16, 0x7
-
-    shl-long v14, v14, v16
-
-    and-long/2addr v14, v12
-
-    const-wide v16, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
-
-    and-long v14, v14, v16
-
-    cmp-long v14, v14, v16
-
-    if-eqz v14, :cond_4
-
-    sub-int v14, v10, v8
-
-    not-int v14, v14
-
-    ushr-int/lit8 v14, v14, 0x1f
-
-    const/16 v15, 0x8
-
-    rsub-int/lit8 v14, v14, 0x8
+    if-ltz v7, :cond_5
 
     const/4 v9, 0x0
 
+    const/4 v10, 0x0
+
+    .line 1245
+    :goto_0
+    aget-wide v11, v0, v9
+
+    not-long v13, v11
+
+    const/4 v15, 0x7
+
+    shl-long/2addr v13, v15
+
+    and-long/2addr v13, v11
+
+    const-wide v15, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
+
+    and-long/2addr v13, v15
+
+    cmp-long v13, v13, v15
+
+    if-eqz v13, :cond_4
+
+    sub-int v13, v9, v7
+
+    not-int v13, v13
+
+    ushr-int/lit8 v13, v13, 0x1f
+
+    const/16 v14, 0x8
+
+    rsub-int/lit8 v13, v13, 0x8
+
+    const/4 v15, 0x0
+
     :goto_1
-    if-ge v9, v14, :cond_3
+    if-ge v15, v13, :cond_3
 
     const-wide/16 v16, 0xff
 
-    and-long v16, v12, v16
+    and-long v16, v11, v16
 
     const-wide/16 v18, 0x80
 
@@ -2652,96 +2632,92 @@
 
     if-gez v16, :cond_2
 
-    shl-int/lit8 v16, v10, 0x3
+    shl-int/lit8 v16, v9, 0x3
 
-    add-int v16, v16, v9
+    add-int v16, v16, v15
 
-    .line 1231
+    .line 1239
     aget v16, v2, v16
 
-    move/from16 v17, v15
+    move/from16 v8, p4
 
-    move/from16 v15, p4
+    if-ne v10, v8, :cond_0
 
-    if-ne v11, v15, :cond_0
-
-    .line 1233
+    .line 1255
     invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     goto :goto_4
 
     :cond_0
-    if-eqz v11, :cond_1
+    if-eqz v10, :cond_1
 
-    .line 1237
+    .line 1259
     invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1239
     :cond_1
+    move/from16 p2, v14
+
+    .line 1261
     invoke-static/range {v16 .. v16}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    move-result-object v0
+    move-result-object v14
 
-    invoke-interface {v4, v0}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v4, v14}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v14
 
-    check-cast v0, Ljava/lang/CharSequence;
+    check-cast v14, Ljava/lang/CharSequence;
 
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    add-int/lit8 v11, v11, 0x1
+    add-int/lit8 v10, v10, 0x1
 
     goto :goto_2
 
     :cond_2
-    move/from16 v17, v15
+    move/from16 v8, p4
 
-    move/from16 v15, p4
+    move/from16 p2, v14
 
     :goto_2
-    shr-long v12, v12, v17
+    shr-long v11, v11, p2
 
-    add-int/lit8 v9, v9, 0x1
+    add-int/lit8 v15, v15, 0x1
 
-    move-object/from16 v0, p0
-
-    move/from16 v15, v17
+    move/from16 v14, p2
 
     goto :goto_1
 
     :cond_3
-    move v0, v15
+    move/from16 v8, p4
 
-    move/from16 v15, p4
+    move v11, v14
 
-    if-ne v14, v0, :cond_5
+    if-ne v13, v11, :cond_5
 
     goto :goto_3
 
     :cond_4
-    move/from16 v15, p4
+    move/from16 v8, p4
 
     :goto_3
-    if-eq v10, v8, :cond_5
+    if-eq v9, v7, :cond_5
 
-    add-int/lit8 v10, v10, 0x1
-
-    move-object/from16 v0, p0
+    add-int/lit8 v9, v9, 0x1
 
     goto :goto_0
 
-    .line 1250
+    .line 1271
     :cond_5
     invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1209
+    .line 1232
     :goto_4
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "StringBuilder().apply(builderAction).toString()"
+    const-string/jumbo v1, "toString(...)"
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -2776,90 +2752,90 @@
 
     move-object/from16 v4, p4
 
-    const-string v5, "separator"
+    const-string/jumbo v5, "separator"
 
     invoke-static {v1, v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v5, "prefix"
+    const-string/jumbo v5, "prefix"
 
     invoke-static {v2, v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v5, "postfix"
+    const-string/jumbo v5, "postfix"
 
     invoke-static {v3, v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v5, "transform"
+    const-string/jumbo v5, "transform"
 
     invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1257
+    .line 1278
     const-string v5, "..."
 
     check-cast v5, Ljava/lang/CharSequence;
 
-    .line 1259
+    .line 1280
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1260
+    .line 1281
     invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1264
+    .line 1285
     iget-object v2, v0, Landroidx/collection/FloatSet;->elements:[F
 
-    .line 1268
-    iget-object v7, v0, Landroidx/collection/FloatSet;->metadata:[J
+    .line 1289
+    iget-object v0, v0, Landroidx/collection/FloatSet;->metadata:[J
 
-    .line 1269
-    array-length v8, v7
+    .line 1290
+    array-length v7, v0
 
-    add-int/lit8 v8, v8, -0x2
+    add-int/lit8 v7, v7, -0x2
 
-    if-ltz v8, :cond_5
-
-    const/4 v10, 0x0
-
-    const/4 v11, 0x0
-
-    .line 1272
-    :goto_0
-    aget-wide v12, v7, v10
-
-    not-long v14, v12
-
-    const/16 v16, 0x7
-
-    shl-long v14, v14, v16
-
-    and-long/2addr v14, v12
-
-    const-wide v16, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
-
-    and-long v14, v14, v16
-
-    cmp-long v14, v14, v16
-
-    if-eqz v14, :cond_4
-
-    sub-int v14, v10, v8
-
-    not-int v14, v14
-
-    ushr-int/lit8 v14, v14, 0x1f
-
-    const/16 v15, 0x8
-
-    rsub-int/lit8 v14, v14, 0x8
+    if-ltz v7, :cond_5
 
     const/4 v9, 0x0
 
+    const/4 v10, 0x0
+
+    .line 1293
+    :goto_0
+    aget-wide v11, v0, v9
+
+    not-long v13, v11
+
+    const/4 v15, 0x7
+
+    shl-long/2addr v13, v15
+
+    and-long/2addr v13, v11
+
+    const-wide v15, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
+
+    and-long/2addr v13, v15
+
+    cmp-long v13, v13, v15
+
+    if-eqz v13, :cond_4
+
+    sub-int v13, v9, v7
+
+    not-int v13, v13
+
+    ushr-int/lit8 v13, v13, 0x1f
+
+    const/16 v14, 0x8
+
+    rsub-int/lit8 v13, v13, 0x8
+
+    const/4 v15, 0x0
+
     :goto_1
-    if-ge v9, v14, :cond_3
+    if-ge v15, v13, :cond_3
 
     const-wide/16 v16, 0xff
 
-    and-long v16, v12, v16
+    and-long v16, v11, v16
 
     const-wide/16 v18, 0x80
 
@@ -2867,87 +2843,76 @@
 
     if-gez v16, :cond_2
 
-    shl-int/lit8 v16, v10, 0x3
+    shl-int/lit8 v16, v9, 0x3
 
-    add-int v16, v16, v9
-
-    .line 1281
-    aget v16, v2, v16
-
-    move/from16 v17, v15
-
-    const/4 v15, -0x1
-
-    if-ne v11, v15, :cond_0
-
-    .line 1283
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    goto :goto_3
-
-    :cond_0
-    if-eqz v11, :cond_1
+    add-int v16, v16, v15
 
     .line 1287
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+    aget v16, v2, v16
 
-    .line 1289
-    :cond_1
-    invoke-static/range {v16 .. v16}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    const/4 v8, -0x1
 
-    move-result-object v15
+    if-ne v10, v8, :cond_0
 
-    invoke-interface {v4, v15}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v15
-
-    check-cast v15, Ljava/lang/CharSequence;
-
-    invoke-virtual {v6, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v11, v11, 0x1
+    .line 1303
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
+    :cond_0
+    if-eqz v10, :cond_1
+
+    .line 1307
+    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    .line 1309
+    :cond_1
+    invoke-static/range {v16 .. v16}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v8
+
+    invoke-interface {v4, v8}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Ljava/lang/CharSequence;
+
+    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v10, v10, 0x1
+
     :cond_2
-    move/from16 v17, v15
+    shr-long/2addr v11, v14
 
-    :goto_2
-    shr-long v12, v12, v17
-
-    add-int/lit8 v9, v9, 0x1
-
-    move/from16 v15, v17
+    add-int/lit8 v15, v15, 0x1
 
     goto :goto_1
 
     :cond_3
-    move v9, v15
-
-    if-ne v14, v9, :cond_5
+    if-ne v13, v14, :cond_5
 
     :cond_4
-    if-eq v10, v8, :cond_5
+    if-eq v9, v7, :cond_5
 
-    add-int/lit8 v10, v10, 0x1
+    add-int/lit8 v9, v9, 0x1
 
     goto :goto_0
 
-    .line 1300
+    .line 1319
     :cond_5
     invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1259
-    :goto_3
+    .line 1280
+    :goto_2
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    const-string v2, "StringBuilder().apply(builderAction).toString()"
+    const-string/jumbo v1, "toString(...)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    return-object v1
+    return-object v0
 .end method
 
 .method public final joinToString(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Lkotlin/jvm/functions/Function1;)Ljava/lang/String;
@@ -2975,91 +2940,91 @@
 
     move-object/from16 v3, p3
 
-    const-string v4, "separator"
+    const-string/jumbo v4, "separator"
 
     invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v4, "prefix"
+    const-string/jumbo v4, "prefix"
 
     invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v4, "transform"
+    const-string/jumbo v4, "transform"
 
     invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1305
+    .line 1324
     const-string v4, ""
 
     check-cast v4, Ljava/lang/CharSequence;
 
-    .line 1307
+    .line 1326
     const-string v5, "..."
 
     check-cast v5, Ljava/lang/CharSequence;
 
-    .line 1309
+    .line 1328
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1310
+    .line 1329
     invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1314
+    .line 1333
     iget-object v2, v0, Landroidx/collection/FloatSet;->elements:[F
 
-    .line 1318
-    iget-object v7, v0, Landroidx/collection/FloatSet;->metadata:[J
+    .line 1337
+    iget-object v0, v0, Landroidx/collection/FloatSet;->metadata:[J
 
-    .line 1319
-    array-length v8, v7
+    .line 1338
+    array-length v7, v0
 
-    add-int/lit8 v8, v8, -0x2
+    add-int/lit8 v7, v7, -0x2
 
-    if-ltz v8, :cond_5
-
-    const/4 v10, 0x0
-
-    const/4 v11, 0x0
-
-    .line 1322
-    :goto_0
-    aget-wide v12, v7, v10
-
-    not-long v14, v12
-
-    const/16 v16, 0x7
-
-    shl-long v14, v14, v16
-
-    and-long/2addr v14, v12
-
-    const-wide v16, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
-
-    and-long v14, v14, v16
-
-    cmp-long v14, v14, v16
-
-    if-eqz v14, :cond_4
-
-    sub-int v14, v10, v8
-
-    not-int v14, v14
-
-    ushr-int/lit8 v14, v14, 0x1f
-
-    const/16 v15, 0x8
-
-    rsub-int/lit8 v14, v14, 0x8
+    if-ltz v7, :cond_5
 
     const/4 v9, 0x0
 
+    const/4 v10, 0x0
+
+    .line 1341
+    :goto_0
+    aget-wide v11, v0, v9
+
+    not-long v13, v11
+
+    const/4 v15, 0x7
+
+    shl-long/2addr v13, v15
+
+    and-long/2addr v13, v11
+
+    const-wide v15, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
+
+    and-long/2addr v13, v15
+
+    cmp-long v13, v13, v15
+
+    if-eqz v13, :cond_4
+
+    sub-int v13, v9, v7
+
+    not-int v13, v13
+
+    ushr-int/lit8 v13, v13, 0x1f
+
+    const/16 v14, 0x8
+
+    rsub-int/lit8 v13, v13, 0x8
+
+    const/4 v15, 0x0
+
     :goto_1
-    if-ge v9, v14, :cond_3
+    if-ge v15, v13, :cond_3
 
     const-wide/16 v16, 0xff
 
-    and-long v16, v12, v16
+    and-long v16, v11, v16
 
     const-wide/16 v18, 0x80
 
@@ -3067,91 +3032,80 @@
 
     if-gez v16, :cond_2
 
-    shl-int/lit8 v16, v10, 0x3
+    shl-int/lit8 v16, v9, 0x3
 
-    add-int v16, v16, v9
+    add-int v16, v16, v15
 
-    .line 1331
+    .line 1335
     aget v16, v2, v16
 
-    move/from16 v17, v15
+    const/4 v8, -0x1
 
-    const/4 v15, -0x1
+    if-ne v10, v8, :cond_0
 
-    if-ne v11, v15, :cond_0
-
-    .line 1333
+    .line 1351
     invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    goto :goto_3
-
-    :cond_0
-    if-eqz v11, :cond_1
-
-    .line 1337
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    .line 1339
-    :cond_1
-    invoke-static/range {v16 .. v16}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v15
-
-    invoke-interface {v3, v15}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v15
-
-    check-cast v15, Ljava/lang/CharSequence;
-
-    invoke-virtual {v6, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v11, v11, 0x1
 
     goto :goto_2
 
+    :cond_0
+    if-eqz v10, :cond_1
+
+    .line 1355
+    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    .line 1357
+    :cond_1
+    invoke-static/range {v16 .. v16}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v8
+
+    invoke-interface {v3, v8}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Ljava/lang/CharSequence;
+
+    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v10, v10, 0x1
+
     :cond_2
-    move/from16 v17, v15
+    shr-long/2addr v11, v14
 
-    :goto_2
-    shr-long v12, v12, v17
-
-    add-int/lit8 v9, v9, 0x1
-
-    move/from16 v15, v17
+    add-int/lit8 v15, v15, 0x1
 
     goto :goto_1
 
     :cond_3
-    move v9, v15
-
-    if-ne v14, v9, :cond_5
+    if-ne v13, v14, :cond_5
 
     :cond_4
-    if-eq v10, v8, :cond_5
+    if-eq v9, v7, :cond_5
 
-    add-int/lit8 v10, v10, 0x1
+    add-int/lit8 v9, v9, 0x1
 
     goto :goto_0
 
-    .line 1350
+    .line 1367
     :cond_5
     invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1309
-    :goto_3
+    .line 1328
+    :goto_2
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    const-string v2, "StringBuilder().apply(builderAction).toString()"
+    const-string/jumbo v1, "toString(...)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    return-object v1
+    return-object v0
 .end method
 
 .method public final joinToString(Ljava/lang/CharSequence;Lkotlin/jvm/functions/Function1;)Ljava/lang/String;
-    .locals 21
+    .locals 20
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -3172,184 +3126,173 @@
 
     move-object/from16 v2, p2
 
-    const-string v3, "separator"
+    const-string/jumbo v3, "separator"
 
     invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v3, "transform"
+    const-string/jumbo v3, "transform"
 
     invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1354
+    .line 1371
     const-string v3, ""
 
     move-object v4, v3
 
     check-cast v4, Ljava/lang/CharSequence;
 
-    .line 1355
+    .line 1372
     check-cast v3, Ljava/lang/CharSequence;
 
-    .line 1357
+    .line 1374
     const-string v5, "..."
 
     check-cast v5, Ljava/lang/CharSequence;
 
-    .line 1359
+    .line 1376
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1360
+    .line 1377
     invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1364
+    .line 1381
     iget-object v4, v0, Landroidx/collection/FloatSet;->elements:[F
 
-    .line 1368
-    iget-object v7, v0, Landroidx/collection/FloatSet;->metadata:[J
+    .line 1385
+    iget-object v0, v0, Landroidx/collection/FloatSet;->metadata:[J
 
-    .line 1369
-    array-length v8, v7
+    .line 1386
+    array-length v7, v0
 
-    add-int/lit8 v8, v8, -0x2
+    add-int/lit8 v7, v7, -0x2
 
-    if-ltz v8, :cond_5
-
-    const/4 v10, 0x0
-
-    const/4 v11, 0x0
-
-    .line 1372
-    :goto_0
-    aget-wide v12, v7, v10
-
-    not-long v14, v12
-
-    const/16 v16, 0x7
-
-    shl-long v14, v14, v16
-
-    and-long/2addr v14, v12
-
-    const-wide v16, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
-
-    and-long v14, v14, v16
-
-    cmp-long v14, v14, v16
-
-    if-eqz v14, :cond_4
-
-    sub-int v14, v10, v8
-
-    not-int v14, v14
-
-    ushr-int/lit8 v14, v14, 0x1f
-
-    const/16 v15, 0x8
-
-    rsub-int/lit8 v14, v14, 0x8
+    if-ltz v7, :cond_5
 
     const/4 v9, 0x0
 
-    :goto_1
-    if-ge v9, v14, :cond_3
-
-    const-wide/16 v17, 0xff
-
-    and-long v17, v12, v17
-
-    const-wide/16 v19, 0x80
-
-    cmp-long v17, v17, v19
-
-    if-gez v17, :cond_2
-
-    shl-int/lit8 v17, v10, 0x3
-
-    add-int v17, v17, v9
-
-    .line 1381
-    aget v17, v4, v17
-
-    move/from16 v18, v15
-
-    const/4 v15, -0x1
-
-    if-ne v11, v15, :cond_0
-
-    .line 1383
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    goto :goto_3
-
-    :cond_0
-    if-eqz v11, :cond_1
-
-    .line 1387
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+    const/4 v10, 0x0
 
     .line 1389
-    :cond_1
-    invoke-static/range {v17 .. v17}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    :goto_0
+    aget-wide v11, v0, v9
 
-    move-result-object v15
+    not-long v13, v11
 
-    invoke-interface {v2, v15}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v15, 0x7
 
-    move-result-object v15
+    shl-long/2addr v13, v15
 
-    check-cast v15, Ljava/lang/CharSequence;
+    and-long/2addr v13, v11
 
-    invoke-virtual {v6, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+    const-wide v15, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
 
-    add-int/lit8 v11, v11, 0x1
+    and-long/2addr v13, v15
+
+    cmp-long v13, v13, v15
+
+    if-eqz v13, :cond_4
+
+    sub-int v13, v9, v7
+
+    not-int v13, v13
+
+    ushr-int/lit8 v13, v13, 0x1f
+
+    const/16 v14, 0x8
+
+    rsub-int/lit8 v13, v13, 0x8
+
+    const/4 v15, 0x0
+
+    :goto_1
+    if-ge v15, v13, :cond_3
+
+    const-wide/16 v16, 0xff
+
+    and-long v16, v11, v16
+
+    const-wide/16 v18, 0x80
+
+    cmp-long v16, v16, v18
+
+    if-gez v16, :cond_2
+
+    shl-int/lit8 v16, v9, 0x3
+
+    add-int v16, v16, v15
+
+    .line 1383
+    aget v16, v4, v16
+
+    const/4 v8, -0x1
+
+    if-ne v10, v8, :cond_0
+
+    .line 1399
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
+    :cond_0
+    if-eqz v10, :cond_1
+
+    .line 1403
+    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    .line 1405
+    :cond_1
+    invoke-static/range {v16 .. v16}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v8
+
+    invoke-interface {v2, v8}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Ljava/lang/CharSequence;
+
+    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v10, v10, 0x1
+
     :cond_2
-    move/from16 v18, v15
+    shr-long/2addr v11, v14
 
-    :goto_2
-    shr-long v12, v12, v18
-
-    add-int/lit8 v9, v9, 0x1
-
-    move/from16 v15, v18
+    add-int/lit8 v15, v15, 0x1
 
     goto :goto_1
 
     :cond_3
-    move v9, v15
-
-    if-ne v14, v9, :cond_5
+    if-ne v13, v14, :cond_5
 
     :cond_4
-    if-eq v10, v8, :cond_5
+    if-eq v9, v7, :cond_5
 
-    add-int/lit8 v10, v10, 0x1
+    add-int/lit8 v9, v9, 0x1
 
     goto :goto_0
 
-    .line 1400
+    .line 1415
     :cond_5
     invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1359
-    :goto_3
+    .line 1376
+    :goto_2
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    const-string v2, "StringBuilder().apply(builderAction).toString()"
+    const-string/jumbo v1, "toString(...)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    return-object v1
+    return-object v0
 .end method
 
 .method public final joinToString(Lkotlin/jvm/functions/Function1;)Ljava/lang/String;
-    .locals 21
+    .locals 20
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -3367,205 +3310,194 @@
 
     move-object/from16 v1, p1
 
-    const-string v2, "transform"
+    const-string/jumbo v2, "transform"
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1403
+    .line 1418
     const-string v2, ", "
 
     check-cast v2, Ljava/lang/CharSequence;
 
-    .line 1404
+    .line 1419
     const-string v3, ""
 
     move-object v4, v3
 
     check-cast v4, Ljava/lang/CharSequence;
 
-    .line 1405
+    .line 1420
     check-cast v3, Ljava/lang/CharSequence;
 
-    .line 1407
+    .line 1422
     const-string v5, "..."
 
     check-cast v5, Ljava/lang/CharSequence;
 
-    .line 1409
+    .line 1424
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1410
+    .line 1425
     invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1414
+    .line 1429
     iget-object v4, v0, Landroidx/collection/FloatSet;->elements:[F
 
-    .line 1418
-    iget-object v7, v0, Landroidx/collection/FloatSet;->metadata:[J
+    .line 1433
+    iget-object v0, v0, Landroidx/collection/FloatSet;->metadata:[J
 
-    .line 1419
-    array-length v8, v7
+    .line 1434
+    array-length v7, v0
 
-    add-int/lit8 v8, v8, -0x2
+    add-int/lit8 v7, v7, -0x2
 
-    if-ltz v8, :cond_5
-
-    const/4 v10, 0x0
-
-    const/4 v11, 0x0
-
-    .line 1422
-    :goto_0
-    aget-wide v12, v7, v10
-
-    not-long v14, v12
-
-    const/16 v16, 0x7
-
-    shl-long v14, v14, v16
-
-    and-long/2addr v14, v12
-
-    const-wide v16, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
-
-    and-long v14, v14, v16
-
-    cmp-long v14, v14, v16
-
-    if-eqz v14, :cond_4
-
-    sub-int v14, v10, v8
-
-    not-int v14, v14
-
-    ushr-int/lit8 v14, v14, 0x1f
-
-    const/16 v15, 0x8
-
-    rsub-int/lit8 v14, v14, 0x8
+    if-ltz v7, :cond_5
 
     const/4 v9, 0x0
 
-    :goto_1
-    if-ge v9, v14, :cond_3
-
-    const-wide/16 v17, 0xff
-
-    and-long v17, v12, v17
-
-    const-wide/16 v19, 0x80
-
-    cmp-long v17, v17, v19
-
-    if-gez v17, :cond_2
-
-    shl-int/lit8 v17, v10, 0x3
-
-    add-int v17, v17, v9
-
-    .line 1431
-    aget v17, v4, v17
-
-    move/from16 v18, v15
-
-    const/4 v15, -0x1
-
-    if-ne v11, v15, :cond_0
-
-    .line 1433
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    goto :goto_3
-
-    :cond_0
-    if-eqz v11, :cond_1
+    const/4 v10, 0x0
 
     .line 1437
-    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+    :goto_0
+    aget-wide v11, v0, v9
 
-    .line 1439
-    :cond_1
-    invoke-static/range {v17 .. v17}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    not-long v13, v11
 
-    move-result-object v15
+    const/4 v15, 0x7
 
-    invoke-interface {v1, v15}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    shl-long/2addr v13, v15
 
-    move-result-object v15
+    and-long/2addr v13, v11
 
-    check-cast v15, Ljava/lang/CharSequence;
+    const-wide v15, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
 
-    invoke-virtual {v6, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+    and-long/2addr v13, v15
 
-    add-int/lit8 v11, v11, 0x1
+    cmp-long v13, v13, v15
+
+    if-eqz v13, :cond_4
+
+    sub-int v13, v9, v7
+
+    not-int v13, v13
+
+    ushr-int/lit8 v13, v13, 0x1f
+
+    const/16 v14, 0x8
+
+    rsub-int/lit8 v13, v13, 0x8
+
+    const/4 v15, 0x0
+
+    :goto_1
+    if-ge v15, v13, :cond_3
+
+    const-wide/16 v16, 0xff
+
+    and-long v16, v11, v16
+
+    const-wide/16 v18, 0x80
+
+    cmp-long v16, v16, v18
+
+    if-gez v16, :cond_2
+
+    shl-int/lit8 v16, v9, 0x3
+
+    add-int v16, v16, v15
+
+    .line 1431
+    aget v16, v4, v16
+
+    const/4 v8, -0x1
+
+    if-ne v10, v8, :cond_0
+
+    .line 1447
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
+    :cond_0
+    if-eqz v10, :cond_1
+
+    .line 1451
+    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    .line 1453
+    :cond_1
+    invoke-static/range {v16 .. v16}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v8
+
+    invoke-interface {v1, v8}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Ljava/lang/CharSequence;
+
+    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v10, v10, 0x1
+
     :cond_2
-    move/from16 v18, v15
+    shr-long/2addr v11, v14
 
-    :goto_2
-    shr-long v12, v12, v18
-
-    add-int/lit8 v9, v9, 0x1
-
-    move/from16 v15, v18
+    add-int/lit8 v15, v15, 0x1
 
     goto :goto_1
 
     :cond_3
-    move v9, v15
-
-    if-ne v14, v9, :cond_5
+    if-ne v13, v14, :cond_5
 
     :cond_4
-    if-eq v10, v8, :cond_5
+    if-eq v9, v7, :cond_5
 
-    add-int/lit8 v10, v10, 0x1
+    add-int/lit8 v9, v9, 0x1
 
     goto :goto_0
 
-    .line 1450
+    .line 1463
     :cond_5
     invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1409
-    :goto_3
+    .line 1424
+    :goto_2
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    const-string v2, "StringBuilder().apply(builderAction).toString()"
+    const-string/jumbo v1, "toString(...)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    return-object v1
+    return-object v0
 .end method
 
 .method public final none()Z
-    .locals 1
+    .locals 0
 
-    .line 186
-    iget v0, p0, Landroidx/collection/FloatSet;->_size:I
+    .line 185
+    iget p0, p0, Landroidx/collection/FloatSet;->_size:I
 
-    if-nez v0, :cond_0
+    if-nez p0, :cond_0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 9
 
-    .line 435
+    .line 420
     const-string v0, "["
 
     move-object v3, v0
@@ -3592,7 +3524,7 @@
 
     invoke-static/range {v1 .. v8}, Landroidx/collection/FloatSet;->joinToString$default(Landroidx/collection/FloatSet;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

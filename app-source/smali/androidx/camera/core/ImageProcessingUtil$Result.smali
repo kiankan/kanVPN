@@ -36,7 +36,7 @@
 .method private static synthetic $values()[Landroidx/camera/core/ImageProcessingUtil$Result;
     .locals 3
 
-    .line 58
+    .line 60
     sget-object v0, Landroidx/camera/core/ImageProcessingUtil$Result;->UNKNOWN:Landroidx/camera/core/ImageProcessingUtil$Result;
 
     sget-object v1, Landroidx/camera/core/ImageProcessingUtil$Result;->SUCCESS:Landroidx/camera/core/ImageProcessingUtil$Result;
@@ -53,7 +53,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 59
+    .line 61
     new-instance v0, Landroidx/camera/core/ImageProcessingUtil$Result;
 
     const-string v1, "UNKNOWN"
@@ -64,7 +64,7 @@
 
     sput-object v0, Landroidx/camera/core/ImageProcessingUtil$Result;->UNKNOWN:Landroidx/camera/core/ImageProcessingUtil$Result;
 
-    .line 60
+    .line 62
     new-instance v0, Landroidx/camera/core/ImageProcessingUtil$Result;
 
     const-string v1, "SUCCESS"
@@ -75,7 +75,7 @@
 
     sput-object v0, Landroidx/camera/core/ImageProcessingUtil$Result;->SUCCESS:Landroidx/camera/core/ImageProcessingUtil$Result;
 
-    .line 61
+    .line 63
     new-instance v0, Landroidx/camera/core/ImageProcessingUtil$Result;
 
     const-string v1, "ERROR_CONVERSION"
@@ -86,7 +86,7 @@
 
     sput-object v0, Landroidx/camera/core/ImageProcessingUtil$Result;->ERROR_CONVERSION:Landroidx/camera/core/ImageProcessingUtil$Result;
 
-    .line 58
+    .line 60
     invoke-static {}, Landroidx/camera/core/ImageProcessingUtil$Result;->$values()[Landroidx/camera/core/ImageProcessingUtil$Result;
 
     move-result-object v0
@@ -115,7 +115,7 @@
         }
     .end annotation
 
-    .line 58
+    .line 60
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -132,7 +132,7 @@
         }
     .end annotation
 
-    .line 58
+    .line 60
     const-class v0, Landroidx/camera/core/ImageProcessingUtil$Result;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -147,7 +147,7 @@
 .method public static values()[Landroidx/camera/core/ImageProcessingUtil$Result;
     .locals 1
 
-    .line 58
+    .line 60
     sget-object v0, Landroidx/camera/core/ImageProcessingUtil$Result;->$VALUES:[Landroidx/camera/core/ImageProcessingUtil$Result;
 
     invoke-virtual {v0}, [Landroidx/camera/core/ImageProcessingUtil$Result;->clone()Ljava/lang/Object;

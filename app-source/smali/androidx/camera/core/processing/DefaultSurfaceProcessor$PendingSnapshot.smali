@@ -36,7 +36,7 @@
         }
     .end annotation
 
-    .line 427
+    .line 425
     new-instance v0, Landroidx/camera/core/processing/AutoValue_DefaultSurfaceProcessor_PendingSnapshot;
 
     invoke-direct {v0, p0, p1, p2}, Landroidx/camera/core/processing/AutoValue_DefaultSurfaceProcessor_PendingSnapshot;-><init>(IILandroidx/concurrent/futures/CallbackToFutureAdapter$Completer;)V

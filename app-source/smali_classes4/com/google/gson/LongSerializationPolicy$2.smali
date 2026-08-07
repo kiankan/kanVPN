@@ -20,7 +20,7 @@
 
     const/4 v0, 0x0
 
-    .line 50
+    .line 57
     invoke-direct {p0, p1, p2, v0}, Lcom/google/gson/LongSerializationPolicy;-><init>(Ljava/lang/String;ILcom/google/gson/LongSerializationPolicy$1;)V
 
     return-void
@@ -29,24 +29,41 @@
 
 # virtual methods
 .method public serialize(Ljava/lang/Long;)Lcom/google/gson/JsonElement;
-    .locals 1
+    .locals 0
 
     if-nez p1, :cond_0
 
-    .line 54
-    sget-object p1, Lcom/google/gson/JsonNull;->INSTANCE:Lcom/google/gson/JsonNull;
+    .line 61
+    sget-object p0, Lcom/google/gson/JsonNull;->INSTANCE:Lcom/google/gson/JsonNull;
 
-    return-object p1
+    return-object p0
 
-    .line 56
+    .line 63
     :cond_0
-    new-instance v0, Lcom/google/gson/JsonPrimitive;
+    new-instance p0, Lcom/google/gson/JsonPrimitive;
 
     invoke-virtual {p1}, Ljava/lang/Long;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {v0, p1}, Lcom/google/gson/JsonPrimitive;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcom/google/gson/JsonPrimitive;-><init>(Ljava/lang/String;)V
 
-    return-object v0
+    return-object p0
+.end method
+
+.method typeAdapter()Lcom/google/gson/TypeAdapter;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/google/gson/TypeAdapter<",
+            "Ljava/lang/Number;",
+            ">;"
+        }
+    .end annotation
+
+    .line 68
+    sget-object p0, Lcom/google/gson/internal/bind/TypeAdapters;->LONG_AS_STRING:Lcom/google/gson/TypeAdapter;
+
+    return-object p0
 .end method

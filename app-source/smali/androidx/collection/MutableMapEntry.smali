@@ -60,7 +60,7 @@
     k = 0x1
     mv = {
         0x1,
-        0x8,
+        0x9,
         0x0
     }
     xi = 0x30
@@ -83,20 +83,20 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "values"
+    const-string/jumbo v0, "values"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1831
+    .line 1499
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1832
+    .line 1500
     iput-object p1, p0, Landroidx/collection/MutableMapEntry;->keys:[Ljava/lang/Object;
 
-    .line 1833
+    .line 1501
     iput-object p2, p0, Landroidx/collection/MutableMapEntry;->values:[Ljava/lang/Object;
 
-    .line 1834
+    .line 1502
     iput p3, p0, Landroidx/collection/MutableMapEntry;->index:I
 
     return-void
@@ -117,85 +117,85 @@
 
 # virtual methods
 .method public final getIndex()I
-    .locals 1
+    .locals 0
 
-    .line 1834
-    iget v0, p0, Landroidx/collection/MutableMapEntry;->index:I
+    .line 1502
+    iget p0, p0, Landroidx/collection/MutableMapEntry;->index:I
 
-    return v0
+    return p0
 .end method
 
 .method public getKey()Ljava/lang/Object;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TK;"
         }
     .end annotation
 
-    .line 1845
+    .line 1514
     iget-object v0, p0, Landroidx/collection/MutableMapEntry;->keys:[Ljava/lang/Object;
 
-    iget v1, p0, Landroidx/collection/MutableMapEntry;->index:I
+    iget p0, p0, Landroidx/collection/MutableMapEntry;->index:I
 
-    aget-object v0, v0, v1
+    aget-object p0, v0, p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getKeys()[Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    .line 1832
-    iget-object v0, p0, Landroidx/collection/MutableMapEntry;->keys:[Ljava/lang/Object;
+    .line 1500
+    iget-object p0, p0, Landroidx/collection/MutableMapEntry;->keys:[Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getValue()Ljava/lang/Object;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TV;"
         }
     .end annotation
 
-    .line 1848
+    .line 1518
     iget-object v0, p0, Landroidx/collection/MutableMapEntry;->values:[Ljava/lang/Object;
 
-    iget v1, p0, Landroidx/collection/MutableMapEntry;->index:I
+    iget p0, p0, Landroidx/collection/MutableMapEntry;->index:I
 
-    aget-object v0, v0, v1
+    aget-object p0, v0, p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getValues()[Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    .line 1833
-    iget-object v0, p0, Landroidx/collection/MutableMapEntry;->values:[Ljava/lang/Object;
+    .line 1501
+    iget-object p0, p0, Landroidx/collection/MutableMapEntry;->values:[Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public setValue(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TV;)TV;"
         }
     .end annotation
 
-    .line 1839
+    .line 1507
     iget-object v0, p0, Landroidx/collection/MutableMapEntry;->values:[Ljava/lang/Object;
 
-    iget v1, p0, Landroidx/collection/MutableMapEntry;->index:I
+    iget p0, p0, Landroidx/collection/MutableMapEntry;->index:I
 
-    aget-object v2, v0, v1
+    aget-object v1, v0, p0
 
-    .line 1840
-    aput-object p1, v0, v1
+    .line 1508
+    aput-object p1, v0, p0
 
-    return-object v2
+    return-object v1
 .end method

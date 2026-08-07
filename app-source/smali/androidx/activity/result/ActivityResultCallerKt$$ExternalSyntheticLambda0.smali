@@ -25,12 +25,12 @@
 
 # virtual methods
 .method public final onActivityResult(Ljava/lang/Object;)V
-    .locals 1
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Landroidx/activity/result/ActivityResultCallerKt$$ExternalSyntheticLambda0;->f$0:Lkotlin/jvm/functions/Function1;
+    iget-object p0, p0, Landroidx/activity/result/ActivityResultCallerKt$$ExternalSyntheticLambda0;->f$0:Lkotlin/jvm/functions/Function1;
 
-    invoke-static {v0, p1}, Landroidx/activity/result/ActivityResultCallerKt;->$r8$lambda$ENwgic5h6novaYdTi_z5SNX1ZBE(Lkotlin/jvm/functions/Function1;Ljava/lang/Object;)V
+    invoke-static {p0, p1}, Landroidx/activity/result/ActivityResultCallerKt;->registerForActivityResult$lambda$0(Lkotlin/jvm/functions/Function1;Ljava/lang/Object;)V
 
     return-void
 .end method

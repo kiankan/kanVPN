@@ -29,16 +29,16 @@
 
 # virtual methods
 .method public final accept(Ljava/lang/Object;)V
-    .locals 2
+    .locals 1
 
     .line 0
     iget-object v0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor$$ExternalSyntheticLambda6;->f$0:Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;
 
-    iget-object v1, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor$$ExternalSyntheticLambda6;->f$1:Landroidx/camera/core/SurfaceOutput;
+    iget-object p0, p0, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor$$ExternalSyntheticLambda6;->f$1:Landroidx/camera/core/SurfaceOutput;
 
     check-cast p1, Landroidx/camera/core/SurfaceOutput$Event;
 
-    invoke-virtual {v0, v1, p1}, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->lambda$onOutputSurface$2$androidx-camera-core-processing-concurrent-DualSurfaceProcessor(Landroidx/camera/core/SurfaceOutput;Landroidx/camera/core/SurfaceOutput$Event;)V
+    invoke-virtual {v0, p0, p1}, Landroidx/camera/core/processing/concurrent/DualSurfaceProcessor;->lambda$onOutputSurface$2$androidx-camera-core-processing-concurrent-DualSurfaceProcessor(Landroidx/camera/core/SurfaceOutput;Landroidx/camera/core/SurfaceOutput$Event;)V
 
     return-void
 .end method

@@ -40,7 +40,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 130
+    .line 126
     invoke-direct {p0}, Landroidx/camera/core/impl/SessionConfig$OutputConfig$Builder;-><init>()V
 
     return-void
@@ -51,27 +51,27 @@
 .method public build()Landroidx/camera/core/impl/SessionConfig$OutputConfig;
     .locals 10
 
-    .line 174
+    .line 170
     iget-object v0, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig$Builder;->surface:Landroidx/camera/core/impl/DeferrableSurface;
 
     if-nez v0, :cond_0
 
-    .line 175
+    .line 171
     const-string v0, " surface"
 
     goto :goto_0
 
-    .line 174
+    .line 170
     :cond_0
     const-string v0, ""
 
-    .line 177
+    .line 173
     :goto_0
     iget-object v1, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig$Builder;->sharedSurfaces:Ljava/util/List;
 
     if-nez v1, :cond_1
 
-    .line 178
+    .line 174
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -86,13 +86,13 @@
 
     move-result-object v0
 
-    .line 180
+    .line 176
     :cond_1
     iget-object v1, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig$Builder;->mirrorMode:Ljava/lang/Integer;
 
     if-nez v1, :cond_2
 
-    .line 181
+    .line 177
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -107,13 +107,13 @@
 
     move-result-object v0
 
-    .line 183
+    .line 179
     :cond_2
     iget-object v1, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig$Builder;->surfaceGroupId:Ljava/lang/Integer;
 
     if-nez v1, :cond_3
 
-    .line 184
+    .line 180
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -128,13 +128,13 @@
 
     move-result-object v0
 
-    .line 186
+    .line 182
     :cond_3
     iget-object v1, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig$Builder;->dynamicRange:Landroidx/camera/core/DynamicRange;
 
     if-nez v1, :cond_4
 
-    .line 187
+    .line 183
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -149,7 +149,7 @@
 
     move-result-object v0
 
-    .line 189
+    .line 185
     :cond_4
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
@@ -157,7 +157,7 @@
 
     if-eqz v1, :cond_5
 
-    .line 192
+    .line 188
     new-instance v2, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig;
 
     iget-object v3, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig$Builder;->surface:Landroidx/camera/core/impl/DeferrableSurface;
@@ -168,14 +168,14 @@
 
     iget-object v0, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig$Builder;->mirrorMode:Ljava/lang/Integer;
 
-    .line 196
+    .line 192
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v6
 
     iget-object v0, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig$Builder;->surfaceGroupId:Ljava/lang/Integer;
 
-    .line 197
+    .line 193
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v7
@@ -188,52 +188,52 @@
 
     return-object v2
 
-    .line 190
+    .line 186
     :cond_5
-    new-instance v1, Ljava/lang/IllegalStateException;
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v3, "Missing required properties:"
+    const-string v2, "Missing required properties:"
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw v1
+    throw p0
 .end method
 
 .method public setDynamicRange(Landroidx/camera/core/DynamicRange;)Landroidx/camera/core/impl/SessionConfig$OutputConfig$Builder;
-    .locals 1
+    .locals 0
 
     if-eqz p1, :cond_0
 
-    .line 168
+    .line 164
     iput-object p1, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig$Builder;->dynamicRange:Landroidx/camera/core/DynamicRange;
 
     return-object p0
 
-    .line 166
+    .line 162
     :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string v0, "Null dynamicRange"
+    const-string p1, "Null dynamicRange"
 
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method public setMirrorMode(I)Landroidx/camera/core/impl/SessionConfig$OutputConfig$Builder;
     .locals 0
 
-    .line 155
+    .line 151
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -246,14 +246,14 @@
 .method public setPhysicalCameraId(Ljava/lang/String;)Landroidx/camera/core/impl/SessionConfig$OutputConfig$Builder;
     .locals 0
 
-    .line 150
+    .line 146
     iput-object p1, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig$Builder;->physicalCameraId:Ljava/lang/String;
 
     return-object p0
 .end method
 
 .method public setSharedSurfaces(Ljava/util/List;)Landroidx/camera/core/impl/SessionConfig$OutputConfig$Builder;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -266,47 +266,47 @@
 
     if-eqz p1, :cond_0
 
-    .line 145
+    .line 141
     iput-object p1, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig$Builder;->sharedSurfaces:Ljava/util/List;
 
     return-object p0
 
-    .line 143
+    .line 139
     :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string v0, "Null sharedSurfaces"
+    const-string p1, "Null sharedSurfaces"
 
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method public setSurface(Landroidx/camera/core/impl/DeferrableSurface;)Landroidx/camera/core/impl/SessionConfig$OutputConfig$Builder;
-    .locals 1
+    .locals 0
 
     if-eqz p1, :cond_0
 
-    .line 137
+    .line 133
     iput-object p1, p0, Landroidx/camera/core/impl/AutoValue_SessionConfig_OutputConfig$Builder;->surface:Landroidx/camera/core/impl/DeferrableSurface;
 
     return-object p0
 
-    .line 135
+    .line 131
     :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string v0, "Null surface"
+    const-string p1, "Null surface"
 
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw p0
 .end method
 
 .method public setSurfaceGroupId(I)Landroidx/camera/core/impl/SessionConfig$OutputConfig$Builder;
     .locals 0
 
-    .line 160
+    .line 156
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1

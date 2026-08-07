@@ -98,12 +98,12 @@
 
 # virtual methods
 .method public getAnonymousIdentity()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 83
-    iget-object v0, p0, Lcom/google/zxing/client/result/WifiParsedResult;->anonymousIdentity:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/WifiParsedResult;->anonymousIdentity:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getDisplayResult()Ljava/lang/String;
@@ -132,81 +132,81 @@
     invoke-static {v1, v0}, Lcom/google/zxing/client/result/WifiParsedResult;->maybeAppend(Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 100
-    iget-boolean v1, p0, Lcom/google/zxing/client/result/WifiParsedResult;->hidden:Z
+    iget-boolean p0, p0, Lcom/google/zxing/client/result/WifiParsedResult;->hidden:Z
 
-    invoke-static {v1}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
+    invoke-static {p0}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-static {v1, v0}, Lcom/google/zxing/client/result/WifiParsedResult;->maybeAppend(Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {p0, v0}, Lcom/google/zxing/client/result/WifiParsedResult;->maybeAppend(Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 101
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getEapMethod()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 87
-    iget-object v0, p0, Lcom/google/zxing/client/result/WifiParsedResult;->eapMethod:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/WifiParsedResult;->eapMethod:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getIdentity()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 79
-    iget-object v0, p0, Lcom/google/zxing/client/result/WifiParsedResult;->identity:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/WifiParsedResult;->identity:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getNetworkEncryption()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 67
-    iget-object v0, p0, Lcom/google/zxing/client/result/WifiParsedResult;->networkEncryption:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/WifiParsedResult;->networkEncryption:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getPassword()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 71
-    iget-object v0, p0, Lcom/google/zxing/client/result/WifiParsedResult;->password:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/WifiParsedResult;->password:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getPhase2Method()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 91
-    iget-object v0, p0, Lcom/google/zxing/client/result/WifiParsedResult;->phase2Method:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/WifiParsedResult;->phase2Method:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getSsid()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 63
-    iget-object v0, p0, Lcom/google/zxing/client/result/WifiParsedResult;->ssid:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/WifiParsedResult;->ssid:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public isHidden()Z
-    .locals 1
+    .locals 0
 
     .line 75
-    iget-boolean v0, p0, Lcom/google/zxing/client/result/WifiParsedResult;->hidden:Z
+    iget-boolean p0, p0, Lcom/google/zxing/client/result/WifiParsedResult;->hidden:Z
 
-    return v0
+    return p0
 .end method

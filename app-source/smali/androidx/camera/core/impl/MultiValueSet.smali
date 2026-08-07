@@ -45,7 +45,7 @@
 
 # virtual methods
 .method public addAll(Ljava/util/List;)V
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -55,9 +55,9 @@
     .end annotation
 
     .line 43
-    iget-object v0, p0, Landroidx/camera/core/impl/MultiValueSet;->mSet:Ljava/util/Set;
+    iget-object p0, p0, Landroidx/camera/core/impl/MultiValueSet;->mSet:Ljava/util/Set;
 
-    invoke-interface {v0, p1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
+    invoke-interface {p0, p1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
     return-void
 .end method
@@ -73,7 +73,7 @@
 .end method
 
 .method public bridge synthetic clone()Ljava/lang/Object;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/CloneNotSupportedException;
@@ -83,13 +83,13 @@
     .line 32
     invoke-virtual {p0}, Landroidx/camera/core/impl/MultiValueSet;->clone()Landroidx/camera/core/impl/MultiValueSet;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getAllItems()Ljava/util/List;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -98,16 +98,16 @@
         }
     .end annotation
 
-    .line 51
+    .line 50
     new-instance v0, Ljava/util/ArrayList;
 
-    iget-object v1, p0, Landroidx/camera/core/impl/MultiValueSet;->mSet:Ljava/util/Set;
+    iget-object p0, p0, Landroidx/camera/core/impl/MultiValueSet;->mSet:Ljava/util/Set;
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    invoke-direct {v0, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

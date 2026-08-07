@@ -33,16 +33,16 @@
 
 # virtual methods
 .method public final run()V
-    .locals 3
+    .locals 2
 
     .line 0
     iget-object v0, p0, Landroidx/camera/core/processing/InternalImageProcessor$$ExternalSyntheticLambda0;->f$0:Landroidx/camera/core/processing/InternalImageProcessor;
 
     iget-object v1, p0, Landroidx/camera/core/processing/InternalImageProcessor$$ExternalSyntheticLambda0;->f$1:Landroidx/camera/core/ImageProcessor$Request;
 
-    iget-object v2, p0, Landroidx/camera/core/processing/InternalImageProcessor$$ExternalSyntheticLambda0;->f$2:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
+    iget-object p0, p0, Landroidx/camera/core/processing/InternalImageProcessor$$ExternalSyntheticLambda0;->f$2:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
 
-    invoke-virtual {v0, v1, v2}, Landroidx/camera/core/processing/InternalImageProcessor;->lambda$safeProcess$0$androidx-camera-core-processing-InternalImageProcessor(Landroidx/camera/core/ImageProcessor$Request;Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;)V
+    invoke-virtual {v0, v1, p0}, Landroidx/camera/core/processing/InternalImageProcessor;->lambda$safeProcess$0$androidx-camera-core-processing-InternalImageProcessor(Landroidx/camera/core/ImageProcessor$Request;Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;)V
 
     return-void
 .end method

@@ -55,7 +55,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -103,16 +103,6 @@
 
 
 # direct methods
-.method public static synthetic $r8$lambda$Ch0g-owsUD3RY0ZHQNvP1kLq24A(Landroidx/activity/result/ActivityResultCallerLauncher;)Landroidx/activity/result/ActivityResultCallerLauncher$resultContract$2$1;
-    .locals 0
-
-    invoke-static {p0}, Landroidx/activity/result/ActivityResultCallerLauncher;->resultContract_delegate$lambda$0(Landroidx/activity/result/ActivityResultCallerLauncher;)Landroidx/activity/result/ActivityResultCallerLauncher$resultContract$2$1;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 .method public constructor <init>(Landroidx/activity/result/ActivityResultLauncher;Landroidx/activity/result/contract/ActivityResultContract;Ljava/lang/Object;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
@@ -167,7 +157,7 @@
 .end method
 
 .method private final getResultContract()Landroidx/activity/result/contract/ActivityResultContract;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -178,18 +168,18 @@
     .end annotation
 
     .line 115
-    iget-object v0, p0, Landroidx/activity/result/ActivityResultCallerLauncher;->resultContract$delegate:Lkotlin/Lazy;
+    iget-object p0, p0, Landroidx/activity/result/ActivityResultCallerLauncher;->resultContract$delegate:Lkotlin/Lazy;
 
-    invoke-interface {v0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Landroidx/activity/result/contract/ActivityResultContract;
+    check-cast p0, Landroidx/activity/result/contract/ActivityResultContract;
 
-    return-object v0
+    return-object p0
 .end method
 
-.method private static final resultContract_delegate$lambda$0(Landroidx/activity/result/ActivityResultCallerLauncher;)Landroidx/activity/result/ActivityResultCallerLauncher$resultContract$2$1;
+.method static final resultContract_delegate$lambda$0(Landroidx/activity/result/ActivityResultCallerLauncher;)Landroidx/activity/result/ActivityResultCallerLauncher$resultContract$2$1;
     .locals 1
 
     .line 116
@@ -203,7 +193,7 @@
 
 # virtual methods
 .method public final getCallerContract()Landroidx/activity/result/contract/ActivityResultContract;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -213,13 +203,13 @@
     .end annotation
 
     .line 112
-    iget-object v0, p0, Landroidx/activity/result/ActivityResultCallerLauncher;->callerContract:Landroidx/activity/result/contract/ActivityResultContract;
+    iget-object p0, p0, Landroidx/activity/result/ActivityResultCallerLauncher;->callerContract:Landroidx/activity/result/contract/ActivityResultContract;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final getCallerInput()Ljava/lang/Object;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TI;"
@@ -227,13 +217,13 @@
     .end annotation
 
     .line 113
-    iget-object v0, p0, Landroidx/activity/result/ActivityResultCallerLauncher;->callerInput:Ljava/lang/Object;
+    iget-object p0, p0, Landroidx/activity/result/ActivityResultCallerLauncher;->callerInput:Ljava/lang/Object;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getContract()Landroidx/activity/result/contract/ActivityResultContract;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -244,9 +234,9 @@
     .end annotation
 
     .line 135
-    iget-object v0, p0, Landroidx/activity/result/ActivityResultCallerLauncher;->contract:Landroidx/activity/result/contract/ActivityResultContract;
+    iget-object p0, p0, Landroidx/activity/result/ActivityResultCallerLauncher;->contract:Landroidx/activity/result/contract/ActivityResultContract;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public bridge synthetic launch(Ljava/lang/Object;Landroidx/core/app/ActivityOptionsCompat;)V
@@ -270,20 +260,20 @@
     .line 128
     iget-object p1, p0, Landroidx/activity/result/ActivityResultCallerLauncher;->launcher:Landroidx/activity/result/ActivityResultLauncher;
 
-    iget-object v0, p0, Landroidx/activity/result/ActivityResultCallerLauncher;->callerInput:Ljava/lang/Object;
+    iget-object p0, p0, Landroidx/activity/result/ActivityResultCallerLauncher;->callerInput:Ljava/lang/Object;
 
-    invoke-virtual {p1, v0, p2}, Landroidx/activity/result/ActivityResultLauncher;->launch(Ljava/lang/Object;Landroidx/core/app/ActivityOptionsCompat;)V
+    invoke-virtual {p1, p0, p2}, Landroidx/activity/result/ActivityResultLauncher;->launch(Ljava/lang/Object;Landroidx/core/app/ActivityOptionsCompat;)V
 
     return-void
 .end method
 
 .method public unregister()V
-    .locals 1
+    .locals 0
 
     .line 132
-    iget-object v0, p0, Landroidx/activity/result/ActivityResultCallerLauncher;->launcher:Landroidx/activity/result/ActivityResultLauncher;
+    iget-object p0, p0, Landroidx/activity/result/ActivityResultCallerLauncher;->launcher:Landroidx/activity/result/ActivityResultLauncher;
 
-    invoke-virtual {v0}, Landroidx/activity/result/ActivityResultLauncher;->unregister()V
+    invoke-virtual {p0}, Landroidx/activity/result/ActivityResultLauncher;->unregister()V
 
     return-void
 .end method

@@ -42,7 +42,7 @@
         }
     .end annotation
 
-    .line 80
+    .line 77
     iput-object p1, p0, Landroidx/camera/core/impl/utils/futures/ListFuture$1;->this$0:Landroidx/camera/core/impl/utils/futures/ListFuture;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -64,7 +64,7 @@
         }
     .end annotation
 
-    .line 84
+    .line 81
     iget-object v0, p0, Landroidx/camera/core/impl/utils/futures/ListFuture$1;->this$0:Landroidx/camera/core/impl/utils/futures/ListFuture;
 
     iget-object v0, v0, Landroidx/camera/core/impl/utils/futures/ListFuture;->mResultNotifier:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
@@ -83,12 +83,12 @@
 
     invoke-static {v0, v1}, Landroidx/core/util/Preconditions;->checkState(ZLjava/lang/String;)V
 
-    .line 86
+    .line 83
     iget-object v0, p0, Landroidx/camera/core/impl/utils/futures/ListFuture$1;->this$0:Landroidx/camera/core/impl/utils/futures/ListFuture;
 
     iput-object p1, v0, Landroidx/camera/core/impl/utils/futures/ListFuture;->mResultNotifier:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
 
-    .line 87
+    .line 84
     new-instance p1, Ljava/lang/StringBuilder;
 
     const-string v0, "ListFuture["
@@ -97,13 +97,13 @@
 
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v0, "]"
+    const-string p0, "]"
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

@@ -89,39 +89,39 @@
     .line 247
     invoke-direct {p0, v1, p2, v2, p1}, Lcom/google/zxing/qrcode/detector/Detector;->sizeOfBlackWhiteBlackRunBothWays(IIII)F
 
-    move-result p1
+    move-result p0
 
     .line 251
     invoke-static {v0}, Ljava/lang/Float;->isNaN(F)Z
 
-    move-result p2
+    move-result p1
 
-    const/high16 v1, 0x40e00000    # 7.0f
+    const/high16 p2, 0x40e00000    # 7.0f
 
-    if-eqz p2, :cond_0
+    if-eqz p1, :cond_0
 
-    div-float/2addr p1, v1
+    div-float/2addr p0, p2
 
-    return p1
+    return p0
 
     .line 254
     :cond_0
-    invoke-static {p1}, Ljava/lang/Float;->isNaN(F)Z
+    invoke-static {p0}, Ljava/lang/Float;->isNaN(F)Z
 
-    move-result p2
+    move-result p1
 
-    if-eqz p2, :cond_1
+    if-eqz p1, :cond_1
 
-    div-float/2addr v0, v1
+    div-float/2addr v0, p2
 
     return v0
 
     :cond_1
-    add-float/2addr v0, p1
+    add-float/2addr v0, p0
 
-    const/high16 p1, 0x41600000    # 14.0f
+    const/high16 p0, 0x41600000    # 14.0f
 
-    div-float/2addr v0, p1
+    div-float/2addr v0, p0
 
     return v0
 .end method
@@ -529,8 +529,6 @@
     goto :goto_3
 
     :cond_b
-    move-object/from16 v3, p0
-
     move v0, v10
 
     :goto_7
@@ -706,9 +704,9 @@
     .line 293
     invoke-direct {p0, p1, p2, p3, v1}, Lcom/google/zxing/qrcode/detector/Detector;->sizeOfBlackWhiteBlackRun(IIII)F
 
-    move-result p1
+    move-result p0
 
-    add-float/2addr v0, p1
+    add-float/2addr v0, p0
 
     sub-float/2addr v0, v2
 
@@ -728,13 +726,13 @@
     .line 234
     invoke-direct {p0, p1, p3}, Lcom/google/zxing/qrcode/detector/Detector;->calculateModuleSizeOneWay(Lcom/google/zxing/ResultPoint;Lcom/google/zxing/ResultPoint;)F
 
-    move-result p1
+    move-result p0
 
-    add-float/2addr p2, p1
+    add-float/2addr p2, p0
 
-    const/high16 p1, 0x40000000    # 2.0f
+    const/high16 p0, 0x40000000    # 2.0f
 
-    div-float/2addr p2, p1
+    div-float/2addr p2, p0
 
     return p2
 .end method
@@ -753,9 +751,9 @@
     .line 64
     invoke-virtual {p0, v0}, Lcom/google/zxing/qrcode/detector/Detector;->detect(Ljava/util/Map;)Lcom/google/zxing/common/DetectorResult;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final detect(Ljava/util/Map;)Lcom/google/zxing/common/DetectorResult;
@@ -813,9 +811,9 @@
     .line 83
     invoke-virtual {p0, p1}, Lcom/google/zxing/qrcode/detector/Detector;->processFinderPatternInfo(Lcom/google/zxing/qrcode/detector/FinderPatternInfo;)Lcom/google/zxing/common/DetectorResult;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method protected final findAlignmentInRegion(FIIF)Lcom/google/zxing/qrcode/detector/AlignmentPattern;
@@ -910,43 +908,43 @@
     .line 403
     invoke-virtual {v2}, Lcom/google/zxing/qrcode/detector/AlignmentPatternFinder;->find()Lcom/google/zxing/qrcode/detector/AlignmentPattern;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 391
     :cond_0
     invoke-static {}, Lcom/google/zxing/NotFoundException;->getNotFoundInstance()Lcom/google/zxing/NotFoundException;
 
-    move-result-object p1
+    move-result-object p0
 
-    throw p1
+    throw p0
 
     .line 385
     :cond_1
     invoke-static {}, Lcom/google/zxing/NotFoundException;->getNotFoundInstance()Lcom/google/zxing/NotFoundException;
 
-    move-result-object p1
+    move-result-object p0
 
-    throw p1
+    throw p0
 .end method
 
 .method protected final getImage()Lcom/google/zxing/common/BitMatrix;
-    .locals 1
+    .locals 0
 
     .line 49
-    iget-object v0, p0, Lcom/google/zxing/qrcode/detector/Detector;->image:Lcom/google/zxing/common/BitMatrix;
+    iget-object p0, p0, Lcom/google/zxing/qrcode/detector/Detector;->image:Lcom/google/zxing/common/BitMatrix;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method protected final getResultPointCallback()Lcom/google/zxing/ResultPointCallback;
-    .locals 1
+    .locals 0
 
     .line 53
-    iget-object v0, p0, Lcom/google/zxing/qrcode/detector/Detector;->resultPointCallback:Lcom/google/zxing/ResultPointCallback;
+    iget-object p0, p0, Lcom/google/zxing/qrcode/detector/Detector;->resultPointCallback:Lcom/google/zxing/ResultPointCallback;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method protected final processFinderPatternInfo(Lcom/google/zxing/qrcode/detector/FinderPatternInfo;)Lcom/google/zxing/common/DetectorResult;
@@ -1122,30 +1120,30 @@
     move-result-object v3
 
     .line 133
-    iget-object v5, p0, Lcom/google/zxing/qrcode/detector/Detector;->image:Lcom/google/zxing/common/BitMatrix;
+    iget-object p0, p0, Lcom/google/zxing/qrcode/detector/Detector;->image:Lcom/google/zxing/common/BitMatrix;
 
-    invoke-static {v5, v3, v4}, Lcom/google/zxing/qrcode/detector/Detector;->sampleGrid(Lcom/google/zxing/common/BitMatrix;Lcom/google/zxing/common/PerspectiveTransform;I)Lcom/google/zxing/common/BitMatrix;
+    invoke-static {p0, v3, v4}, Lcom/google/zxing/qrcode/detector/Detector;->sampleGrid(Lcom/google/zxing/common/BitMatrix;Lcom/google/zxing/common/PerspectiveTransform;I)Lcom/google/zxing/common/BitMatrix;
 
-    move-result-object v3
+    move-result-object p0
 
-    const/4 v4, 0x3
+    const/4 v3, 0x3
 
-    const/4 v5, 0x2
+    const/4 v4, 0x2
 
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
-    const/4 v8, 0x1
+    const/4 v6, 0x1
 
     if-nez v2, :cond_1
 
     .line 137
-    new-array v2, v4, [Lcom/google/zxing/ResultPoint;
+    new-array v2, v3, [Lcom/google/zxing/ResultPoint;
 
-    aput-object p1, v2, v6
+    aput-object p1, v2, v5
 
-    aput-object v0, v2, v8
+    aput-object v0, v2, v6
 
-    aput-object v1, v2, v5
+    aput-object v1, v2, v4
 
     goto :goto_2
 
@@ -1153,13 +1151,13 @@
     :cond_1
     new-array v7, v7, [Lcom/google/zxing/ResultPoint;
 
-    aput-object p1, v7, v6
+    aput-object p1, v7, v5
 
-    aput-object v0, v7, v8
+    aput-object v0, v7, v6
 
-    aput-object v1, v7, v5
+    aput-object v1, v7, v4
 
-    aput-object v2, v7, v4
+    aput-object v2, v7, v3
 
     move-object v2, v7
 
@@ -1167,7 +1165,7 @@
     :goto_2
     new-instance p1, Lcom/google/zxing/common/DetectorResult;
 
-    invoke-direct {p1, v3, v2}, Lcom/google/zxing/common/DetectorResult;-><init>(Lcom/google/zxing/common/BitMatrix;[Lcom/google/zxing/ResultPoint;)V
+    invoke-direct {p1, p0, v2}, Lcom/google/zxing/common/DetectorResult;-><init>(Lcom/google/zxing/common/BitMatrix;[Lcom/google/zxing/ResultPoint;)V
 
     return-object p1
 
@@ -1175,7 +1173,7 @@
     :cond_2
     invoke-static {}, Lcom/google/zxing/NotFoundException;->getNotFoundInstance()Lcom/google/zxing/NotFoundException;
 
-    move-result-object p1
+    move-result-object p0
 
-    throw p1
+    throw p0
 .end method

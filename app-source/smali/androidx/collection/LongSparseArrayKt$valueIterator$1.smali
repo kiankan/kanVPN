@@ -48,7 +48,7 @@
     k = 0x1
     mv = {
         0x1,
-        0x8,
+        0x9,
         0x0
     }
     xi = 0x30
@@ -81,7 +81,7 @@
 
     iput-object p1, p0, Landroidx/collection/LongSparseArrayKt$valueIterator$1;->$this_valueIterator:Landroidx/collection/LongSparseArray;
 
-    .line 601
+    .line 566
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -90,36 +90,36 @@
 
 # virtual methods
 .method public final getIndex()I
-    .locals 1
+    .locals 0
 
-    .line 602
-    iget v0, p0, Landroidx/collection/LongSparseArrayKt$valueIterator$1;->index:I
+    .line 567
+    iget p0, p0, Landroidx/collection/LongSparseArrayKt$valueIterator$1;->index:I
 
-    return v0
+    return p0
 .end method
 
 .method public hasNext()Z
-    .locals 2
+    .locals 1
 
-    .line 603
+    .line 569
     iget v0, p0, Landroidx/collection/LongSparseArrayKt$valueIterator$1;->index:I
 
-    iget-object v1, p0, Landroidx/collection/LongSparseArrayKt$valueIterator$1;->$this_valueIterator:Landroidx/collection/LongSparseArray;
+    iget-object p0, p0, Landroidx/collection/LongSparseArrayKt$valueIterator$1;->$this_valueIterator:Landroidx/collection/LongSparseArray;
 
-    invoke-virtual {v1}, Landroidx/collection/LongSparseArray;->size()I
+    invoke-virtual {p0}, Landroidx/collection/LongSparseArray;->size()I
 
-    move-result v1
+    move-result p0
 
-    if-ge v0, v1, :cond_0
+    if-ge v0, p0, :cond_0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public next()Ljava/lang/Object;
@@ -130,7 +130,7 @@
         }
     .end annotation
 
-    .line 604
+    .line 571
     iget-object v0, p0, Landroidx/collection/LongSparseArrayKt$valueIterator$1;->$this_valueIterator:Landroidx/collection/LongSparseArray;
 
     iget v1, p0, Landroidx/collection/LongSparseArrayKt$valueIterator$1;->index:I
@@ -141,27 +141,27 @@
 
     invoke-virtual {v0, v1}, Landroidx/collection/LongSparseArray;->valueAt(I)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public remove()V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    const-string v1, "Operation is not supported for read-only collection"
+    const-string v0, "Operation is not supported for read-only collection"
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw v0
+    throw p0
 .end method
 
 .method public final setIndex(I)V
     .locals 0
 
-    .line 602
+    .line 567
     iput p1, p0, Landroidx/collection/LongSparseArrayKt$valueIterator$1;->index:I
 
     return-void

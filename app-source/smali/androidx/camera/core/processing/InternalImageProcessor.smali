@@ -23,10 +23,10 @@
 .method public constructor <init>(Landroidx/camera/core/CameraEffect;)V
     .locals 2
 
-    .line 50
+    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
+    .line 49
     invoke-virtual {p1}, Landroidx/camera/core/CameraEffect;->getTargets()I
 
     move-result v0
@@ -45,14 +45,14 @@
     :goto_0
     invoke-static {v0}, Landroidx/core/util/Preconditions;->checkArgument(Z)V
 
-    .line 52
+    .line 50
     invoke-virtual {p1}, Landroidx/camera/core/CameraEffect;->getExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/camera/core/processing/InternalImageProcessor;->mExecutor:Ljava/util/concurrent/Executor;
 
-    .line 53
+    .line 51
     invoke-virtual {p1}, Landroidx/camera/core/CameraEffect;->getImageProcessor()Landroidx/camera/core/ImageProcessor;
 
     move-result-object v0
@@ -65,7 +65,7 @@
 
     iput-object v0, p0, Landroidx/camera/core/processing/InternalImageProcessor;->mImageProcessor:Landroidx/camera/core/ImageProcessor;
 
-    .line 54
+    .line 52
     invoke-virtual {p1}, Landroidx/camera/core/CameraEffect;->getErrorListener()Landroidx/core/util/Consumer;
 
     move-result-object p1
@@ -80,30 +80,30 @@
 .method synthetic lambda$safeProcess$0$androidx-camera-core-processing-InternalImageProcessor(Landroidx/camera/core/ImageProcessor$Request;Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;)V
     .locals 1
 
-    .line 69
+    .line 66
     :try_start_0
     iget-object v0, p0, Landroidx/camera/core/processing/InternalImageProcessor;->mImageProcessor:Landroidx/camera/core/ImageProcessor;
 
     invoke-interface {v0, p1}, Landroidx/camera/core/ImageProcessor;->process(Landroidx/camera/core/ImageProcessor$Request;)Landroidx/camera/core/ImageProcessor$Response;
 
-    move-result-object p1
+    move-result-object p0
     :try_end_0
     .catch Landroidx/camera/core/ProcessingException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 77
-    invoke-virtual {p2, p1}, Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;->set(Ljava/lang/Object;)Z
+    .line 74
+    invoke-virtual {p2, p0}, Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;->set(Ljava/lang/Object;)Z
 
     return-void
 
     :catch_0
     move-exception p1
 
-    .line 72
-    iget-object v0, p0, Landroidx/camera/core/processing/InternalImageProcessor;->mErrorListener:Landroidx/core/util/Consumer;
+    .line 69
+    iget-object p0, p0, Landroidx/camera/core/processing/InternalImageProcessor;->mErrorListener:Landroidx/core/util/Consumer;
 
-    invoke-interface {v0, p1}, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V
+    invoke-interface {p0, p1}, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V
 
-    .line 74
+    .line 71
     invoke-virtual {p2, p1}, Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;->setException(Ljava/lang/Throwable;)Z
 
     return-void
@@ -117,7 +117,7 @@
         }
     .end annotation
 
-    .line 66
+    .line 63
     iget-object v0, p0, Landroidx/camera/core/processing/InternalImageProcessor;->mExecutor:Ljava/util/concurrent/Executor;
 
     new-instance v1, Landroidx/camera/core/processing/InternalImageProcessor$$ExternalSyntheticLambda0;
@@ -126,35 +126,35 @@
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 79
-    new-instance p2, Ljava/lang/StringBuilder;
+    .line 76
+    new-instance p0, Ljava/lang/StringBuilder;
 
-    const-string v0, "InternalImageProcessor#process "
+    const-string p2, "InternalImageProcessor#process "
 
-    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
 
     move-result p1
 
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public safeProcess(Landroidx/camera/core/ImageProcessor$Request;)Landroidx/camera/core/ImageProcessor$Response;
-    .locals 3
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroidx/camera/core/ImageCaptureException;
         }
     .end annotation
 
-    .line 64
+    .line 61
     :try_start_0
     new-instance v0, Landroidx/camera/core/processing/InternalImageProcessor$$ExternalSyntheticLambda1;
 
@@ -162,42 +162,42 @@
 
     invoke-static {v0}, Landroidx/concurrent/futures/CallbackToFutureAdapter;->getFuture(Landroidx/concurrent/futures/CallbackToFutureAdapter$Resolver;)Lcom/google/common/util/concurrent/ListenableFuture;
 
-    move-result-object p1
+    move-result-object p0
 
-    .line 80
-    invoke-interface {p1}, Lcom/google/common/util/concurrent/ListenableFuture;->get()Ljava/lang/Object;
+    .line 77
+    invoke-interface {p0}, Lcom/google/common/util/concurrent/ListenableFuture;->get()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Landroidx/camera/core/ImageProcessor$Response;
+    check-cast p0, Landroidx/camera/core/ImageProcessor$Response;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object p1
+    return-object p0
 
     :catch_0
-    move-exception p1
+    move-exception p0
 
-    .line 82
-    invoke-virtual {p1}, Ljava/lang/Exception;->getCause()Ljava/lang/Throwable;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/Exception;->getCause()Ljava/lang/Throwable;
+    .line 79
+    invoke-virtual {p0}, Ljava/lang/Exception;->getCause()Ljava/lang/Throwable;
 
     move-result-object p1
 
-    .line 83
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Ljava/lang/Exception;->getCause()Ljava/lang/Throwable;
+
+    move-result-object p0
+
+    .line 80
     :cond_0
-    new-instance v0, Landroidx/camera/core/ImageCaptureException;
+    new-instance p1, Landroidx/camera/core/ImageCaptureException;
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    const-string v2, "Failed to invoke ImageProcessor."
+    const-string v1, "Failed to invoke ImageProcessor."
 
-    invoke-direct {v0, v1, v2, p1}, Landroidx/camera/core/ImageCaptureException;-><init>(ILjava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {p1, v0, v1, p0}, Landroidx/camera/core/ImageCaptureException;-><init>(ILjava/lang/String;Ljava/lang/Throwable;)V
 
-    throw v0
+    throw p1
 .end method

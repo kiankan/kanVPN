@@ -13,8 +13,8 @@
     return-void
 .end method
 
-.method public static create(Landroid/util/Size;Ljava/util/Map;Landroid/util/Size;Ljava/util/Map;Landroid/util/Size;Ljava/util/Map;Ljava/util/Map;)Landroidx/camera/core/impl/SurfaceSizeDefinition;
-    .locals 8
+.method public static create(Landroid/util/Size;Ljava/util/Map;Landroid/util/Size;Ljava/util/Map;Landroid/util/Size;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;)Landroidx/camera/core/impl/SurfaceSizeDefinition;
+    .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -36,12 +36,20 @@
             "Ljava/util/Map<",
             "Ljava/lang/Integer;",
             "Landroid/util/Size;",
+            ">;",
+            "Ljava/util/Map<",
+            "Ljava/lang/Integer;",
+            "Landroid/util/Size;",
+            ">;",
+            "Ljava/util/Map<",
+            "Ljava/lang/Integer;",
+            "Landroid/util/Size;",
             ">;)",
             "Landroidx/camera/core/impl/SurfaceSizeDefinition;"
         }
     .end annotation
 
-    .line 78
+    .line 79
     new-instance v0, Landroidx/camera/core/impl/AutoValue_SurfaceSizeDefinition;
 
     move-object v1, p0
@@ -56,9 +64,13 @@
 
     move-object v6, p5
 
-    move-object v7, p6
+    move-object/from16 v7, p6
 
-    invoke-direct/range {v0 .. v7}, Landroidx/camera/core/impl/AutoValue_SurfaceSizeDefinition;-><init>(Landroid/util/Size;Ljava/util/Map;Landroid/util/Size;Ljava/util/Map;Landroid/util/Size;Ljava/util/Map;Ljava/util/Map;)V
+    move-object/from16 v8, p7
+
+    move-object/from16 v9, p8
+
+    invoke-direct/range {v0 .. v9}, Landroidx/camera/core/impl/AutoValue_SurfaceSizeDefinition;-><init>(Landroid/util/Size;Ljava/util/Map;Landroid/util/Size;Ljava/util/Map;Landroid/util/Size;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;)V
 
     return-object v0
 .end method
@@ -68,25 +80,91 @@
 .method public abstract getAnalysisSize()Landroid/util/Size;
 .end method
 
-.method public getMaximumSize(I)Landroid/util/Size;
-    .locals 1
+.method public getMaximum16x9Size(I)Landroid/util/Size;
+    .locals 0
 
-    .line 140
+    .line 155
     invoke-virtual {p0}, Landroidx/camera/core/impl/SurfaceSizeDefinition;->getMaximumSizeMap()Ljava/util/Map;
 
-    move-result-object v0
+    move-result-object p0
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/util/Size;
+
+    return-object p0
+.end method
+
+.method public abstract getMaximum16x9SizeMap()Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Map<",
+            "Ljava/lang/Integer;",
+            "Landroid/util/Size;",
+            ">;"
+        }
+    .end annotation
+.end method
+
+.method public getMaximum4x3Size(I)Landroid/util/Size;
+    .locals 0
+
+    .line 147
+    invoke-virtual {p0}, Landroidx/camera/core/impl/SurfaceSizeDefinition;->getMaximumSizeMap()Ljava/util/Map;
+
+    move-result-object p0
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    check-cast p1, Landroid/util/Size;
+    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p1
+    move-result-object p0
+
+    check-cast p0, Landroid/util/Size;
+
+    return-object p0
+.end method
+
+.method public abstract getMaximum4x3SizeMap()Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Map<",
+            "Ljava/lang/Integer;",
+            "Landroid/util/Size;",
+            ">;"
+        }
+    .end annotation
+.end method
+
+.method public getMaximumSize(I)Landroid/util/Size;
+    .locals 0
+
+    .line 139
+    invoke-virtual {p0}, Landroidx/camera/core/impl/SurfaceSizeDefinition;->getMaximumSizeMap()Ljava/util/Map;
+
+    move-result-object p0
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/util/Size;
+
+    return-object p0
 .end method
 
 .method public abstract getMaximumSizeMap()Ljava/util/Map;
@@ -108,24 +186,24 @@
 .end method
 
 .method public getS1440pSize(I)Landroid/util/Size;
-    .locals 1
+    .locals 0
 
     .line 131
     invoke-virtual {p0}, Landroidx/camera/core/impl/SurfaceSizeDefinition;->getS1440pSizeMap()Ljava/util/Map;
 
-    move-result-object v0
+    move-result-object p0
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Landroid/util/Size;
+    check-cast p0, Landroid/util/Size;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public abstract getS1440pSizeMap()Ljava/util/Map;
@@ -141,24 +219,24 @@
 .end method
 
 .method public getS720pSize(I)Landroid/util/Size;
-    .locals 1
+    .locals 0
 
-    .line 122
+    .line 123
     invoke-virtual {p0}, Landroidx/camera/core/impl/SurfaceSizeDefinition;->getS720pSizeMap()Ljava/util/Map;
 
-    move-result-object v0
+    move-result-object p0
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Landroid/util/Size;
+    check-cast p0, Landroid/util/Size;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public abstract getS720pSizeMap()Ljava/util/Map;
@@ -174,24 +252,24 @@
 .end method
 
 .method public getUltraMaximumSize(I)Landroid/util/Size;
-    .locals 1
+    .locals 0
 
-    .line 149
+    .line 163
     invoke-virtual {p0}, Landroidx/camera/core/impl/SurfaceSizeDefinition;->getUltraMaximumSizeMap()Ljava/util/Map;
 
-    move-result-object v0
+    move-result-object p0
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Landroid/util/Size;
+    check-cast p0, Landroid/util/Size;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public abstract getUltraMaximumSizeMap()Ljava/util/Map;

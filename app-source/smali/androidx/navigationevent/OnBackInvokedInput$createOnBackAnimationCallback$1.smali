@@ -61,23 +61,23 @@
 
 # virtual methods
 .method public onBackCancelled()V
-    .locals 1
+    .locals 0
 
     .line 109
-    iget-object v0, p0, Landroidx/navigationevent/OnBackInvokedInput$createOnBackAnimationCallback$1;->this$0:Landroidx/navigationevent/OnBackInvokedInput;
+    iget-object p0, p0, Landroidx/navigationevent/OnBackInvokedInput$createOnBackAnimationCallback$1;->this$0:Landroidx/navigationevent/OnBackInvokedInput;
 
-    invoke-virtual {v0}, Landroidx/navigationevent/OnBackInvokedInput;->dispatchOnBackCancelled()V
+    invoke-virtual {p0}, Landroidx/navigationevent/OnBackInvokedInput;->dispatchOnBackCancelled()V
 
     return-void
 .end method
 
 .method public onBackInvoked()V
-    .locals 1
+    .locals 0
 
     .line 105
-    iget-object v0, p0, Landroidx/navigationevent/OnBackInvokedInput$createOnBackAnimationCallback$1;->this$0:Landroidx/navigationevent/OnBackInvokedInput;
+    iget-object p0, p0, Landroidx/navigationevent/OnBackInvokedInput$createOnBackAnimationCallback$1;->this$0:Landroidx/navigationevent/OnBackInvokedInput;
 
-    invoke-virtual {v0}, Landroidx/navigationevent/OnBackInvokedInput;->dispatchOnBackCompleted()V
+    invoke-virtual {p0}, Landroidx/navigationevent/OnBackInvokedInput;->dispatchOnBackCompleted()V
 
     return-void
 .end method
@@ -90,13 +90,13 @@
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 101
-    iget-object v0, p0, Landroidx/navigationevent/OnBackInvokedInput$createOnBackAnimationCallback$1;->this$0:Landroidx/navigationevent/OnBackInvokedInput;
+    iget-object p0, p0, Landroidx/navigationevent/OnBackInvokedInput$createOnBackAnimationCallback$1;->this$0:Landroidx/navigationevent/OnBackInvokedInput;
 
     invoke-static {p1}, Landroidx/navigationevent/NavigationEvent_androidKt;->NavigationEvent(Landroid/window/BackEvent;)Landroidx/navigationevent/NavigationEvent;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Landroidx/navigationevent/OnBackInvokedInput;->dispatchOnBackProgressed(Landroidx/navigationevent/NavigationEvent;)V
+    invoke-virtual {p0, p1}, Landroidx/navigationevent/OnBackInvokedInput;->dispatchOnBackProgressed(Landroidx/navigationevent/NavigationEvent;)V
 
     return-void
 .end method
@@ -109,13 +109,13 @@
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 97
-    iget-object v0, p0, Landroidx/navigationevent/OnBackInvokedInput$createOnBackAnimationCallback$1;->this$0:Landroidx/navigationevent/OnBackInvokedInput;
+    iget-object p0, p0, Landroidx/navigationevent/OnBackInvokedInput$createOnBackAnimationCallback$1;->this$0:Landroidx/navigationevent/OnBackInvokedInput;
 
     invoke-static {p1}, Landroidx/navigationevent/NavigationEvent_androidKt;->NavigationEvent(Landroid/window/BackEvent;)Landroidx/navigationevent/NavigationEvent;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Landroidx/navigationevent/OnBackInvokedInput;->dispatchOnBackStarted(Landroidx/navigationevent/NavigationEvent;)V
+    invoke-virtual {p0, p1}, Landroidx/navigationevent/OnBackInvokedInput;->dispatchOnBackStarted(Landroidx/navigationevent/NavigationEvent;)V
 
     return-void
 .end method

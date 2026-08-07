@@ -113,24 +113,24 @@
 
 # virtual methods
 .method public createDateTime(Lj$/time/LocalDateTime;Lj$/time/ZoneOffset;Lj$/time/ZoneOffset;)Lj$/time/LocalDateTime;
-    .locals 2
+    .locals 1
 
     .line 617
     sget-object v0, Lj$/time/zone/ZoneOffsetTransitionRule$1;->$SwitchMap$java$time$zone$ZoneOffsetTransitionRule$TimeDefinition:[I
 
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
-    move-result v1
+    move-result p0
 
-    aget v0, v0, v1
+    aget p0, v0, p0
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    if-eq v0, v1, :cond_1
+    if-eq p0, v0, :cond_1
 
-    const/4 v1, 0x2
+    const/4 v0, 0x2
 
-    if-eq v0, v1, :cond_0
+    if-eq p0, v0, :cond_0
 
     return-object p1
 
@@ -138,43 +138,43 @@
     :cond_0
     invoke-virtual {p3}, Lj$/time/ZoneOffset;->getTotalSeconds()I
 
-    move-result p3
+    move-result p0
 
     invoke-virtual {p2}, Lj$/time/ZoneOffset;->getTotalSeconds()I
 
     move-result p2
 
-    sub-int/2addr p3, p2
+    sub-int/2addr p0, p2
 
-    int-to-long p2, p3
+    int-to-long p2, p0
 
     .line 624
     invoke-virtual {p1, p2, p3}, Lj$/time/LocalDateTime;->plusSeconds(J)Lj$/time/LocalDateTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 619
     :cond_1
     invoke-virtual {p3}, Lj$/time/ZoneOffset;->getTotalSeconds()I
 
+    move-result p0
+
+    sget-object p2, Lj$/time/ZoneOffset;->UTC:Lj$/time/ZoneOffset;
+
+    invoke-virtual {p2}, Lj$/time/ZoneOffset;->getTotalSeconds()I
+
     move-result p2
 
-    sget-object p3, Lj$/time/ZoneOffset;->UTC:Lj$/time/ZoneOffset;
+    sub-int/2addr p0, p2
 
-    invoke-virtual {p3}, Lj$/time/ZoneOffset;->getTotalSeconds()I
-
-    move-result p3
-
-    sub-int/2addr p2, p3
-
-    int-to-long p2, p2
+    int-to-long p2, p0
 
     .line 620
     invoke-virtual {p1, p2, p3}, Lj$/time/LocalDateTime;->plusSeconds(J)Lj$/time/LocalDateTime;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

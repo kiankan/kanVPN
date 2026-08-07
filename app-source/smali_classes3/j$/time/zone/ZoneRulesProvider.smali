@@ -70,6 +70,15 @@
     return-void
 .end method
 
+.method public static getAvailableZoneIds()Ljava/util/Set;
+    .locals 1
+
+    .line 213
+    sget-object v0, Lj$/time/zone/ZoneRulesProvider;->ZONE_IDS:Ljava/util/Set;
+
+    return-object v0
+.end method
+
 .method private static getProvider(Ljava/lang/String;)Lj$/time/zone/ZoneRulesProvider;
     .locals 3
 
@@ -106,11 +115,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "Unknown time-zone ID: "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

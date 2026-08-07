@@ -84,21 +84,21 @@
 .end method
 
 .method public final getType()Lcom/google/zxing/client/result/ParsedResultType;
-    .locals 1
+    .locals 0
 
     .line 39
-    iget-object v0, p0, Lcom/google/zxing/client/result/ParsedResult;->type:Lcom/google/zxing/client/result/ParsedResultType;
+    iget-object p0, p0, Lcom/google/zxing/client/result/ParsedResult;->type:Lcom/google/zxing/client/result/ParsedResultType;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 46
     invoke-virtual {p0}, Lcom/google/zxing/client/result/ParsedResult;->getDisplayResult()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

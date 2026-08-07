@@ -6,7 +6,7 @@
 # annotations
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000,\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0003\n\u0002\u0010%\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0005\u0008\u00c6\u0002\u0018\u00002\u00020\u0001B\t\u0008\u0002\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J\u001a\u0010\t\u001a\u0004\u0018\u00010\n2\u0006\u0010\u000b\u001a\u00020\u000c2\u0008\u0008\u0002\u0010\r\u001a\u00020\u000eJ\u0010\u0010\u000f\u001a\u0004\u0018\u00010\u000c2\u0006\u0010\u0010\u001a\u00020\u000cJ\u0012\u0010\u000f\u001a\u0004\u0018\u00010\u000c2\u0008\u0010\u0011\u001a\u0004\u0018\u00010\nJ\u0012\u0010\u0012\u001a\u0004\u0018\u00010\n2\u0006\u0010\u0010\u001a\u00020\u000cH\u0002R\u001f\u0010\u0004\u001a\u0010\u0012\u0004\u0012\u00020\u0006\u0012\u0006\u0012\u0004\u0018\u00010\u00010\u0005\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0007\u0010\u0008\u00a8\u0006\u0013"
+        "\u00002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0003\n\u0002\u0010%\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0000\u0008\u00c7\u0002\u0018\u00002\u00020\u0001B\t\u0008\u0002\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J\u001a\u0010\t\u001a\u0004\u0018\u00010\n2\u0006\u0010\u000b\u001a\u00020\u000c2\u0008\u0008\u0002\u0010\r\u001a\u00020\u000eJ\u0010\u0010\u000f\u001a\u0004\u0018\u00010\u000c2\u0006\u0010\u0010\u001a\u00020\u000cJ\u0012\u0010\u000f\u001a\u0004\u0018\u00010\u000c2\u0008\u0010\u0011\u001a\u0004\u0018\u00010\nJ\u0012\u0010\u0012\u001a\u0004\u0018\u00010\n2\u0006\u0010\u0010\u001a\u00020\u000cH\u0002R\u001f\u0010\u0004\u001a\u0010\u0012\u0004\u0012\u00020\u0006\u0012\u0006\u0012\u0004\u0018\u00010\u00010\u0005\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0007\u0010\u0008\u00ca\u0001\u000c\u0008\u0014\u0012\u0008\u0008\u0015\u0012\u0004\u0008\u0003\u0010\u0002\u00a8\u0006\u0013"
     }
     d2 = {
         "Lcom/v2ray/ang/util/QRCodeDecoder;",
@@ -28,12 +28,14 @@
         "picturePath",
         "bitmap",
         "getDecodeAbleBitmap",
-        "app_playstoreRelease"
+        "v2rayNG:app_playstoreRelease",
+        "Landroidx/compose/runtime/internal/StabilityInferred;",
+        "parameters"
     }
     k = 0x1
     mv = {
         0x2,
-        0x3,
+        0x4,
         0x0
     }
     xi = 0x30
@@ -41,6 +43,8 @@
 
 
 # static fields
+.field public static final $stable:I
+
 .field private static final HINTS:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -140,56 +144,56 @@
 .end method
 
 .method private final getDecodeAbleBitmap(Ljava/lang/String;)Landroid/graphics/Bitmap;
-    .locals 3
+    .locals 2
 
     .line 84
     :try_start_0
-    new-instance v0, Landroid/graphics/BitmapFactory$Options;
+    new-instance p0, Landroid/graphics/BitmapFactory$Options;
 
-    invoke-direct {v0}, Landroid/graphics/BitmapFactory$Options;-><init>()V
+    invoke-direct {p0}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
     .line 85
-    iput-boolean v1, v0, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
+    iput-boolean v0, p0, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
     .line 86
-    invoke-static {p1, v0}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+    invoke-static {p1, p0}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     .line 87
-    iget v2, v0, Landroid/graphics/BitmapFactory$Options;->outHeight:I
+    iget v1, p0, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
-    div-int/lit16 v2, v2, 0x190
+    div-int/lit16 v1, v1, 0x190
 
-    if-gtz v2, :cond_0
+    if-gtz v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move v1, v2
+    move v0, v1
 
     .line 91
     :goto_0
-    iput v1, v0, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
+    iput v0, p0, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
     .line 92
-    iput-boolean v1, v0, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
+    iput-boolean v0, p0, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
     .line 93
-    invoke-static {p1, v0}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+    invoke-static {p1, p0}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    move-result-object p1
+    move-result-object p0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object p1
+    return-object p0
 
     :catch_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return-object p1
+    return-object p0
 .end method
 
 
@@ -205,82 +209,78 @@
     :try_start_0
     sget-object v0, Lkotlin/Result;->Companion:Lkotlin/Result$Companion;
 
-    move-object v0, p0
-
-    check-cast v0, Lcom/v2ray/ang/util/QRCodeDecoder;
+    check-cast p0, Lcom/v2ray/ang/util/QRCodeDecoder;
 
     .line 31
-    sget-object v0, Lcom/google/zxing/EncodeHintType;->CHARACTER_SET:Lcom/google/zxing/EncodeHintType;
+    sget-object p0, Lcom/google/zxing/EncodeHintType;->CHARACTER_SET:Lcom/google/zxing/EncodeHintType;
 
-    sget-object v1, Lkotlin/text/Charsets;->UTF_8:Ljava/nio/charset/Charset;
+    sget-object v0, Lkotlin/text/Charsets;->UTF_8:Ljava/nio/charset/Charset;
 
-    invoke-static {v0, v1}, Lkotlin/TuplesKt;->to(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {p0, v0}, Lkotlin/TuplesKt;->to(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-static {v0}, Lkotlin/collections/MapsKt;->mapOf(Lkotlin/Pair;)Ljava/util/Map;
+    invoke-static {p0}, Lkotlin/collections/MapsKt;->mapOf(Lkotlin/Pair;)Ljava/util/Map;
 
-    move-result-object v6
+    move-result-object v5
 
     .line 32
-    new-instance v1, Lcom/google/zxing/qrcode/QRCodeWriter;
+    new-instance v0, Lcom/google/zxing/qrcode/QRCodeWriter;
 
-    invoke-direct {v1}, Lcom/google/zxing/qrcode/QRCodeWriter;-><init>()V
+    invoke-direct {v0}, Lcom/google/zxing/qrcode/QRCodeWriter;-><init>()V
 
-    sget-object v3, Lcom/google/zxing/BarcodeFormat;->QR_CODE:Lcom/google/zxing/BarcodeFormat;
-
-    move v5, p2
-
-    move-object v2, p1
+    sget-object v2, Lcom/google/zxing/BarcodeFormat;->QR_CODE:Lcom/google/zxing/BarcodeFormat;
 
     move v4, p2
 
-    invoke-virtual/range {v1 .. v6}, Lcom/google/zxing/qrcode/QRCodeWriter;->encode(Ljava/lang/String;Lcom/google/zxing/BarcodeFormat;IILjava/util/Map;)Lcom/google/zxing/common/BitMatrix;
+    move-object v1, p1
 
-    move-result-object p1
+    move v3, p2
 
-    move v3, v4
+    invoke-virtual/range {v0 .. v5}, Lcom/google/zxing/qrcode/QRCodeWriter;->encode(Ljava/lang/String;Lcom/google/zxing/BarcodeFormat;IILjava/util/Map;)Lcom/google/zxing/common/BitMatrix;
+
+    move-result-object p0
 
     mul-int p2, v3, v3
 
     .line 33
     new-array v1, p2, [I
 
-    const/4 v0, 0x0
+    const/4 p1, 0x0
 
     :goto_0
-    if-ge v0, p2, :cond_1
+    if-ge p1, p2, :cond_1
 
     .line 34
-    rem-int v2, v0, v3
+    rem-int v0, p1, v3
 
-    div-int v4, v0, v3
+    div-int v2, p1, v3
 
-    invoke-virtual {p1, v2, v4}, Lcom/google/zxing/common/BitMatrix;->get(II)Z
+    invoke-virtual {p0, v0, v2}, Lcom/google/zxing/common/BitMatrix;->get(II)Z
 
-    move-result v2
+    move-result v0
 
-    if-eqz v2, :cond_0
+    if-eqz v0, :cond_0
 
-    const/high16 v2, -0x1000000
+    const/high16 v0, -0x1000000
 
     goto :goto_1
 
     :cond_0
-    const/4 v2, -0x1
+    const/4 v0, -0x1
 
     :goto_1
-    aput v2, v1, v0
+    aput v0, v1, p1
 
-    add-int/lit8 v0, v0, 0x1
+    add-int/lit8 p1, p1, 0x1
 
     goto :goto_0
 
     .line 36
     :cond_1
-    sget-object p1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+    sget-object p0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
-    invoke-static {v3, v3, p1}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+    invoke-static {v3, v3, p0}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -300,7 +300,7 @@
     .line 30
     invoke-static {v0}, Lkotlin/Result;->constructor-impl(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -309,36 +309,36 @@
     :catchall_0
     move-exception v0
 
-    move-object p1, v0
+    move-object p0, v0
 
-    sget-object p2, Lkotlin/Result;->Companion:Lkotlin/Result$Companion;
+    sget-object p1, Lkotlin/Result;->Companion:Lkotlin/Result$Companion;
 
-    invoke-static {p1}, Lkotlin/ResultKt;->createFailure(Ljava/lang/Throwable;)Ljava/lang/Object;
+    invoke-static {p0}, Lkotlin/ResultKt;->createFailure(Ljava/lang/Throwable;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-static {p1}, Lkotlin/Result;->constructor-impl(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Lkotlin/Result;->constructor-impl(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
     .line 39
     :goto_2
-    invoke-static {p1}, Lkotlin/Result;->isFailure-impl(Ljava/lang/Object;)Z
+    invoke-static {p0}, Lkotlin/Result;->isFailure-impl(Ljava/lang/Object;)Z
 
-    move-result p2
+    move-result p1
 
-    if-eqz p2, :cond_2
+    if-eqz p1, :cond_2
 
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
     :cond_2
-    check-cast p1, Landroid/graphics/Bitmap;
+    check-cast p0, Landroid/graphics/Bitmap;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public final getHINTS()Ljava/util/Map;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -350,15 +350,15 @@
     .end annotation
 
     .line 20
-    sget-object v0, Lcom/v2ray/ang/util/QRCodeDecoder;->HINTS:Ljava/util/Map;
+    sget-object p0, Lcom/v2ray/ang/util/QRCodeDecoder;->HINTS:Ljava/util/Map;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public final syncDecodeQRCode(Landroid/graphics/Bitmap;)Ljava/lang/String;
-    .locals 10
+    .locals 9
 
-    const/4 v1, 0x0
+    const/4 p0, 0x0
 
     if-eqz p1, :cond_1
 
@@ -373,47 +373,47 @@
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
-    move-result v2
+    move-result v1
 
-    mul-int/2addr v0, v2
+    mul-int/2addr v0, v1
 
-    new-array v3, v0, [I
+    new-array v2, v0, [I
 
     .line 62
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
-    move-result v5
+    move-result v4
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
-    move-result v8
+    move-result v7
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
-    move-result v9
+    move-result v8
 
-    const/4 v4, 0x0
+    const/4 v3, 0x0
+
+    const/4 v5, 0x0
 
     const/4 v6, 0x0
 
-    const/4 v7, 0x0
+    move-object v1, p1
 
-    move-object v2, p1
-
-    invoke-virtual/range {v2 .. v9}, Landroid/graphics/Bitmap;->getPixels([IIIIIII)V
+    invoke-virtual/range {v1 .. v8}, Landroid/graphics/Bitmap;->getPixels([IIIIIII)V
 
     .line 64
     new-instance p1, Lcom/google/zxing/RGBLuminanceSource;
 
-    invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
+    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
 
-    invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
+    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getHeight()I
 
-    move-result v2
+    move-result v1
 
-    invoke-direct {p1, v0, v2, v3}, Lcom/google/zxing/RGBLuminanceSource;-><init>(II[I)V
+    invoke-direct {p1, v0, v1, v2}, Lcom/google/zxing/RGBLuminanceSource;-><init>(II[I)V
 
     .line 65
     new-instance v0, Lcom/google/zxing/qrcode/QRCodeReader;
@@ -424,27 +424,27 @@
 
     .line 68
     :try_start_1
-    new-instance v2, Lcom/google/zxing/BinaryBitmap;
+    new-instance v1, Lcom/google/zxing/BinaryBitmap;
 
-    new-instance v3, Lcom/google/zxing/common/GlobalHistogramBinarizer;
+    new-instance v2, Lcom/google/zxing/common/GlobalHistogramBinarizer;
 
-    move-object v4, p1
+    move-object v3, p1
 
-    check-cast v4, Lcom/google/zxing/LuminanceSource;
+    check-cast v3, Lcom/google/zxing/LuminanceSource;
 
-    invoke-direct {v3, v4}, Lcom/google/zxing/common/GlobalHistogramBinarizer;-><init>(Lcom/google/zxing/LuminanceSource;)V
+    invoke-direct {v2, v3}, Lcom/google/zxing/common/GlobalHistogramBinarizer;-><init>(Lcom/google/zxing/LuminanceSource;)V
 
-    check-cast v3, Lcom/google/zxing/Binarizer;
+    check-cast v2, Lcom/google/zxing/Binarizer;
 
-    invoke-direct {v2, v3}, Lcom/google/zxing/BinaryBitmap;-><init>(Lcom/google/zxing/Binarizer;)V
+    invoke-direct {v1, v2}, Lcom/google/zxing/BinaryBitmap;-><init>(Lcom/google/zxing/Binarizer;)V
 
-    sget-object v3, Lcom/v2ray/ang/util/QRCodeDecoder;->HINTS:Ljava/util/Map;
+    sget-object v2, Lcom/v2ray/ang/util/QRCodeDecoder;->HINTS:Ljava/util/Map;
 
-    invoke-virtual {v0, v2, v3}, Lcom/google/zxing/qrcode/QRCodeReader;->decode(Lcom/google/zxing/BinaryBitmap;Ljava/util/Map;)Lcom/google/zxing/Result;
+    invoke-virtual {v0, v1, v2}, Lcom/google/zxing/qrcode/QRCodeReader;->decode(Lcom/google/zxing/BinaryBitmap;Ljava/util/Map;)Lcom/google/zxing/Result;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v2}, Lcom/google/zxing/Result;->getText()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/google/zxing/Result;->getText()Ljava/lang/String;
 
     move-result-object p1
     :try_end_1
@@ -456,23 +456,23 @@
     .line 70
     :catch_0
     :try_start_2
-    new-instance v2, Lcom/google/zxing/BinaryBitmap;
+    new-instance v1, Lcom/google/zxing/BinaryBitmap;
 
-    new-instance v3, Lcom/google/zxing/common/GlobalHistogramBinarizer;
+    new-instance v2, Lcom/google/zxing/common/GlobalHistogramBinarizer;
 
     invoke-virtual {p1}, Lcom/google/zxing/RGBLuminanceSource;->invert()Lcom/google/zxing/LuminanceSource;
 
     move-result-object p1
 
-    invoke-direct {v3, p1}, Lcom/google/zxing/common/GlobalHistogramBinarizer;-><init>(Lcom/google/zxing/LuminanceSource;)V
+    invoke-direct {v2, p1}, Lcom/google/zxing/common/GlobalHistogramBinarizer;-><init>(Lcom/google/zxing/LuminanceSource;)V
 
-    check-cast v3, Lcom/google/zxing/Binarizer;
+    check-cast v2, Lcom/google/zxing/Binarizer;
 
-    invoke-direct {v2, v3}, Lcom/google/zxing/BinaryBitmap;-><init>(Lcom/google/zxing/Binarizer;)V
+    invoke-direct {v1, v2}, Lcom/google/zxing/BinaryBitmap;-><init>(Lcom/google/zxing/Binarizer;)V
 
     sget-object p1, Lcom/v2ray/ang/util/QRCodeDecoder;->HINTS:Ljava/util/Map;
 
-    invoke-virtual {v0, v2, p1}, Lcom/google/zxing/qrcode/QRCodeReader;->decode(Lcom/google/zxing/BinaryBitmap;Ljava/util/Map;)Lcom/google/zxing/Result;
+    invoke-virtual {v0, v1, p1}, Lcom/google/zxing/qrcode/QRCodeReader;->decode(Lcom/google/zxing/BinaryBitmap;Ljava/util/Map;)Lcom/google/zxing/Result;
 
     move-result-object p1
 
@@ -516,13 +516,13 @@
     goto :goto_2
 
     :cond_0
-    move-object v1, p1
+    move-object p0, p1
 
     :goto_2
-    check-cast v1, Ljava/lang/String;
+    check-cast p0, Ljava/lang/String;
 
     :cond_1
-    return-object v1
+    return-object p0
 .end method
 
 .method public final syncDecodeQRCode(Ljava/lang/String;)Ljava/lang/String;
@@ -539,7 +539,7 @@
 
     invoke-virtual {p0, p1}, Lcom/v2ray/ang/util/QRCodeDecoder;->syncDecodeQRCode(Landroid/graphics/Bitmap;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

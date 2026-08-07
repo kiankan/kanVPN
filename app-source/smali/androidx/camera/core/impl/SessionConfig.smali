@@ -19,7 +19,11 @@
 
 
 # static fields
-.field public static final DEFAULT_SESSION_TYPE:I
+.field public static final DEFAULT_SESSION_TYPE:I = 0x0
+
+.field public static final SESSION_TYPE_HIGH_SPEED:I = 0x1
+
+.field public static final SESSION_TYPE_REGULAR:I
 
 .field private static final SUPPORTED_TEMPLATE_PRIORITY:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -90,21 +94,21 @@
 
     const/4 v0, 0x1
 
-    .line 59
+    .line 66
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     const/4 v1, 0x5
 
-    .line 62
+    .line 69
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     const/4 v2, 0x3
 
-    .line 63
+    .line 70
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -113,7 +117,7 @@
 
     move-result-object v0
 
-    .line 58
+    .line 65
     invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
@@ -149,46 +153,46 @@
         }
     .end annotation
 
-    .line 245
+    .line 240
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 246
+    .line 241
     iput-object p1, p0, Landroidx/camera/core/impl/SessionConfig;->mOutputConfigs:Ljava/util/List;
 
-    .line 247
+    .line 242
     invoke-static {p2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p1
 
     iput-object p1, p0, Landroidx/camera/core/impl/SessionConfig;->mDeviceStateCallbacks:Ljava/util/List;
 
-    .line 248
+    .line 243
     invoke-static {p3}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p1
 
     iput-object p1, p0, Landroidx/camera/core/impl/SessionConfig;->mSessionStateCallbacks:Ljava/util/List;
 
-    .line 250
+    .line 245
     invoke-static {p4}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p1
 
     iput-object p1, p0, Landroidx/camera/core/impl/SessionConfig;->mSingleCameraCaptureCallbacks:Ljava/util/List;
 
-    .line 251
+    .line 246
     iput-object p6, p0, Landroidx/camera/core/impl/SessionConfig;->mErrorListener:Landroidx/camera/core/impl/SessionConfig$ErrorListener;
 
-    .line 252
+    .line 247
     iput-object p5, p0, Landroidx/camera/core/impl/SessionConfig;->mRepeatingCaptureConfig:Landroidx/camera/core/impl/CaptureConfig;
 
-    .line 253
+    .line 248
     iput-object p7, p0, Landroidx/camera/core/impl/SessionConfig;->mInputConfiguration:Landroid/hardware/camera2/params/InputConfiguration;
 
-    .line 254
+    .line 249
     iput p8, p0, Landroidx/camera/core/impl/SessionConfig;->mSessionType:I
 
-    .line 255
+    .line 250
     iput-object p9, p0, Landroidx/camera/core/impl/SessionConfig;->mPostviewOutputConfig:Landroidx/camera/core/impl/SessionConfig$OutputConfig;
 
     return-void
@@ -197,7 +201,7 @@
 .method static synthetic access$000(Landroidx/camera/core/impl/SessionConfig;)Landroidx/camera/core/impl/SessionConfig$OutputConfig;
     .locals 0
 
-    .line 54
+    .line 56
     iget-object p0, p0, Landroidx/camera/core/impl/SessionConfig;->mPostviewOutputConfig:Landroidx/camera/core/impl/SessionConfig$OutputConfig;
 
     return-object p0
@@ -206,7 +210,7 @@
 .method public static defaultEmptySessionConfig()Landroidx/camera/core/impl/SessionConfig;
     .locals 10
 
-    .line 261
+    .line 255
     new-instance v0, Landroidx/camera/core/impl/SessionConfig;
 
     new-instance v1, Ljava/util/ArrayList;
@@ -235,7 +239,7 @@
 
     invoke-direct {v5}, Landroidx/camera/core/impl/CaptureConfig$Builder;-><init>()V
 
-    .line 266
+    .line 260
     invoke-virtual {v5}, Landroidx/camera/core/impl/CaptureConfig$Builder;->build()Landroidx/camera/core/impl/CaptureConfig;
 
     move-result-object v5
@@ -256,10 +260,10 @@
 .method public static getHigherPriorityTemplateType(II)I
     .locals 3
 
-    .line 361
+    .line 343
     sget-object v0, Landroidx/camera/core/impl/SessionConfig;->SUPPORTED_TEMPLATE_PRIORITY:Ljava/util/List;
 
-    .line 360
+    .line 342
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -268,7 +272,7 @@
 
     move-result v1
 
-    .line 361
+    .line 343
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -288,7 +292,7 @@
 
 # virtual methods
 .method public getDeviceStateCallbacks()Ljava/util/List;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -298,23 +302,23 @@
         }
     .end annotation
 
-    .line 326
-    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig;->mDeviceStateCallbacks:Ljava/util/List;
+    .line 313
+    iget-object p0, p0, Landroidx/camera/core/impl/SessionConfig;->mDeviceStateCallbacks:Ljava/util/List;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getErrorListener()Landroidx/camera/core/impl/SessionConfig$ErrorListener;
-    .locals 1
+    .locals 0
 
-    .line 344
-    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig;->mErrorListener:Landroidx/camera/core/impl/SessionConfig$ErrorListener;
+    .line 328
+    iget-object p0, p0, Landroidx/camera/core/impl/SessionConfig;->mErrorListener:Landroidx/camera/core/impl/SessionConfig$ErrorListener;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getExpectedFrameRateRange()Landroid/util/Range;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -324,40 +328,40 @@
         }
     .end annotation
 
-    .line 320
-    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig;->mRepeatingCaptureConfig:Landroidx/camera/core/impl/CaptureConfig;
+    .line 308
+    iget-object p0, p0, Landroidx/camera/core/impl/SessionConfig;->mRepeatingCaptureConfig:Landroidx/camera/core/impl/CaptureConfig;
 
-    invoke-virtual {v0}, Landroidx/camera/core/impl/CaptureConfig;->getExpectedFrameRateRange()Landroid/util/Range;
+    invoke-virtual {p0}, Landroidx/camera/core/impl/CaptureConfig;->getExpectedFrameRateRange()Landroid/util/Range;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getImplementationOptions()Landroidx/camera/core/impl/Config;
-    .locals 1
+    .locals 0
 
-    .line 307
-    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig;->mRepeatingCaptureConfig:Landroidx/camera/core/impl/CaptureConfig;
+    .line 296
+    iget-object p0, p0, Landroidx/camera/core/impl/SessionConfig;->mRepeatingCaptureConfig:Landroidx/camera/core/impl/CaptureConfig;
 
-    invoke-virtual {v0}, Landroidx/camera/core/impl/CaptureConfig;->getImplementationOptions()Landroidx/camera/core/impl/Config;
+    invoke-virtual {p0}, Landroidx/camera/core/impl/CaptureConfig;->getImplementationOptions()Landroidx/camera/core/impl/Config;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getInputConfiguration()Landroid/hardware/camera2/params/InputConfiguration;
-    .locals 1
+    .locals 0
 
-    .line 275
-    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig;->mInputConfiguration:Landroid/hardware/camera2/params/InputConfiguration;
+    .line 268
+    iget-object p0, p0, Landroidx/camera/core/impl/SessionConfig;->mInputConfiguration:Landroid/hardware/camera2/params/InputConfiguration;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getOutputConfigs()Ljava/util/List;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -367,23 +371,23 @@
         }
     .end annotation
 
-    .line 297
-    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig;->mOutputConfigs:Ljava/util/List;
+    .line 288
+    iget-object p0, p0, Landroidx/camera/core/impl/SessionConfig;->mOutputConfigs:Ljava/util/List;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getPostviewOutputConfig()Landroidx/camera/core/impl/SessionConfig$OutputConfig;
-    .locals 1
+    .locals 0
 
-    .line 302
-    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig;->mPostviewOutputConfig:Landroidx/camera/core/impl/SessionConfig$OutputConfig;
+    .line 292
+    iget-object p0, p0, Landroidx/camera/core/impl/SessionConfig;->mPostviewOutputConfig:Landroidx/camera/core/impl/SessionConfig$OutputConfig;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getRepeatingCameraCaptureCallbacks()Ljava/util/List;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -393,27 +397,27 @@
         }
     .end annotation
 
-    .line 338
-    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig;->mRepeatingCaptureConfig:Landroidx/camera/core/impl/CaptureConfig;
+    .line 323
+    iget-object p0, p0, Landroidx/camera/core/impl/SessionConfig;->mRepeatingCaptureConfig:Landroidx/camera/core/impl/CaptureConfig;
 
-    invoke-virtual {v0}, Landroidx/camera/core/impl/CaptureConfig;->getCameraCaptureCallbacks()Ljava/util/List;
+    invoke-virtual {p0}, Landroidx/camera/core/impl/CaptureConfig;->getCameraCaptureCallbacks()Ljava/util/List;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getRepeatingCaptureConfig()Landroidx/camera/core/impl/CaptureConfig;
-    .locals 1
+    .locals 0
 
-    .line 355
-    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig;->mRepeatingCaptureConfig:Landroidx/camera/core/impl/CaptureConfig;
+    .line 337
+    iget-object p0, p0, Landroidx/camera/core/impl/SessionConfig;->mRepeatingCaptureConfig:Landroidx/camera/core/impl/CaptureConfig;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getSessionStateCallbacks()Ljava/util/List;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -423,23 +427,23 @@
         }
     .end annotation
 
-    .line 332
-    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig;->mSessionStateCallbacks:Ljava/util/List;
+    .line 318
+    iget-object p0, p0, Landroidx/camera/core/impl/SessionConfig;->mSessionStateCallbacks:Ljava/util/List;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getSessionType()I
-    .locals 1
+    .locals 0
 
-    .line 315
-    iget v0, p0, Landroidx/camera/core/impl/SessionConfig;->mSessionType:I
+    .line 304
+    iget p0, p0, Landroidx/camera/core/impl/SessionConfig;->mSessionType:I
 
-    return v0
+    return p0
 .end method
 
 .method public getSingleCameraCaptureCallbacks()Ljava/util/List;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -449,14 +453,14 @@
         }
     .end annotation
 
-    .line 350
-    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig;->mSingleCameraCaptureCallbacks:Ljava/util/List;
+    .line 333
+    iget-object p0, p0, Landroidx/camera/core/impl/SessionConfig;->mSingleCameraCaptureCallbacks:Ljava/util/List;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getSurfaces()Ljava/util/List;
-    .locals 4
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -466,83 +470,83 @@
         }
     .end annotation
 
-    .line 285
+    .line 277
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 286
-    iget-object v1, p0, Landroidx/camera/core/impl/SessionConfig;->mOutputConfigs:Ljava/util/List;
+    .line 278
+    iget-object p0, p0, Landroidx/camera/core/impl/SessionConfig;->mOutputConfigs:Ljava/util/List;
+
+    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :cond_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/camera/core/impl/SessionConfig$OutputConfig;
+
+    .line 279
+    invoke-virtual {v1}, Landroidx/camera/core/impl/SessionConfig$OutputConfig;->getSurface()Landroidx/camera/core/impl/DeferrableSurface;
+
+    move-result-object v2
+
+    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 280
+    invoke-virtual {v1}, Landroidx/camera/core/impl/SessionConfig$OutputConfig;->getSharedSurfaces()Ljava/util/List;
+
+    move-result-object v1
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    :cond_0
+    :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_0
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Landroidx/camera/core/impl/SessionConfig$OutputConfig;
+    check-cast v2, Landroidx/camera/core/impl/DeferrableSurface;
 
-    .line 287
-    invoke-virtual {v2}, Landroidx/camera/core/impl/SessionConfig$OutputConfig;->getSurface()Landroidx/camera/core/impl/DeferrableSurface;
-
-    move-result-object v3
-
-    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 288
-    invoke-virtual {v2}, Landroidx/camera/core/impl/SessionConfig$OutputConfig;->getSharedSurfaces()Ljava/util/List;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Landroidx/camera/core/impl/DeferrableSurface;
-
-    .line 289
-    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    .line 281
+    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 292
+    .line 284
     :cond_1
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getTemplateType()I
-    .locals 1
+    .locals 0
 
-    .line 311
-    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig;->mRepeatingCaptureConfig:Landroidx/camera/core/impl/CaptureConfig;
+    .line 300
+    iget-object p0, p0, Landroidx/camera/core/impl/SessionConfig;->mRepeatingCaptureConfig:Landroidx/camera/core/impl/CaptureConfig;
 
-    invoke-virtual {v0}, Landroidx/camera/core/impl/CaptureConfig;->getTemplateType()I
+    invoke-virtual {p0}, Landroidx/camera/core/impl/CaptureConfig;->getTemplateType()I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method

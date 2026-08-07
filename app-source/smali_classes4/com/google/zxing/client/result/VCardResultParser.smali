@@ -900,7 +900,7 @@
     .line 196
     :cond_13
     :goto_7
-    const-string v4, "uri"
+    const-string/jumbo v4, "uri"
 
     invoke-virtual {v4, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1671,7 +1671,7 @@
     .line 37
     invoke-virtual {p0, p1}, Lcom/google/zxing/client/result/VCardResultParser;->parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/AddressBookParsedResult;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

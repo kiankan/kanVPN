@@ -32,19 +32,19 @@
 .method constructor <init>(Landroidx/camera/core/resolutionselector/AspectRatioStrategy;Landroidx/camera/core/resolutionselector/ResolutionStrategy;Landroidx/camera/core/resolutionselector/ResolutionFilter;I)V
     .locals 0
 
-    .line 142
+    .line 140
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 143
+    .line 141
     iput-object p1, p0, Landroidx/camera/core/resolutionselector/ResolutionSelector;->mAspectRatioStrategy:Landroidx/camera/core/resolutionselector/AspectRatioStrategy;
 
-    .line 144
+    .line 142
     iput-object p2, p0, Landroidx/camera/core/resolutionselector/ResolutionSelector;->mResolutionStrategy:Landroidx/camera/core/resolutionselector/ResolutionStrategy;
 
-    .line 145
+    .line 143
     iput-object p3, p0, Landroidx/camera/core/resolutionselector/ResolutionSelector;->mResolutionFilter:Landroidx/camera/core/resolutionselector/ResolutionFilter;
 
-    .line 146
+    .line 144
     iput p4, p0, Landroidx/camera/core/resolutionselector/ResolutionSelector;->mAllowedResolutionMode:I
 
     return-void
@@ -53,37 +53,37 @@
 
 # virtual methods
 .method public getAllowedResolutionMode()I
-    .locals 1
+    .locals 0
 
-    .line 180
-    iget v0, p0, Landroidx/camera/core/resolutionselector/ResolutionSelector;->mAllowedResolutionMode:I
+    .line 175
+    iget p0, p0, Landroidx/camera/core/resolutionselector/ResolutionSelector;->mAllowedResolutionMode:I
 
-    return v0
+    return p0
 .end method
 
 .method public getAspectRatioStrategy()Landroidx/camera/core/resolutionselector/AspectRatioStrategy;
-    .locals 1
+    .locals 0
 
-    .line 156
-    iget-object v0, p0, Landroidx/camera/core/resolutionselector/ResolutionSelector;->mAspectRatioStrategy:Landroidx/camera/core/resolutionselector/AspectRatioStrategy;
+    .line 153
+    iget-object p0, p0, Landroidx/camera/core/resolutionselector/ResolutionSelector;->mAspectRatioStrategy:Landroidx/camera/core/resolutionselector/AspectRatioStrategy;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getResolutionFilter()Landroidx/camera/core/resolutionselector/ResolutionFilter;
-    .locals 1
+    .locals 0
 
-    .line 172
-    iget-object v0, p0, Landroidx/camera/core/resolutionselector/ResolutionSelector;->mResolutionFilter:Landroidx/camera/core/resolutionselector/ResolutionFilter;
+    .line 167
+    iget-object p0, p0, Landroidx/camera/core/resolutionselector/ResolutionSelector;->mResolutionFilter:Landroidx/camera/core/resolutionselector/ResolutionFilter;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getResolutionStrategy()Landroidx/camera/core/resolutionselector/ResolutionStrategy;
-    .locals 1
+    .locals 0
 
-    .line 164
-    iget-object v0, p0, Landroidx/camera/core/resolutionselector/ResolutionSelector;->mResolutionStrategy:Landroidx/camera/core/resolutionselector/ResolutionStrategy;
+    .line 160
+    iget-object p0, p0, Landroidx/camera/core/resolutionselector/ResolutionSelector;->mResolutionStrategy:Landroidx/camera/core/resolutionselector/ResolutionStrategy;
 
-    return-object v0
+    return-object p0
 .end method

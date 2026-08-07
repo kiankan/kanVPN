@@ -18,7 +18,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 280
+    .line 396
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,7 +27,7 @@
 .method static of(Landroidx/camera/core/imagecapture/ProcessingRequest;Landroidx/camera/core/ImageProxy;)Landroidx/camera/core/imagecapture/ProcessingNode$InputPacket;
     .locals 1
 
-    .line 290
+    .line 404
     new-instance v0, Landroidx/camera/core/imagecapture/AutoValue_ProcessingNode_InputPacket;
 
     invoke-direct {v0, p0, p1}, Landroidx/camera/core/imagecapture/AutoValue_ProcessingNode_InputPacket;-><init>(Landroidx/camera/core/imagecapture/ProcessingRequest;Landroidx/camera/core/ImageProxy;)V

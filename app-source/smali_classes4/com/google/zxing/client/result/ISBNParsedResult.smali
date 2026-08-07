@@ -25,19 +25,19 @@
 
 # virtual methods
 .method public getDisplayResult()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 39
-    iget-object v0, p0, Lcom/google/zxing/client/result/ISBNParsedResult;->isbn:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/ISBNParsedResult;->isbn:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getISBN()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 34
-    iget-object v0, p0, Lcom/google/zxing/client/result/ISBNParsedResult;->isbn:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/zxing/client/result/ISBNParsedResult;->isbn:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method

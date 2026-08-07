@@ -25,12 +25,12 @@
 
 # virtual methods
 .method public final run()V
-    .locals 1
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Landroidx/camera/core/processing/SurfaceEdge$SettableSurface$$ExternalSyntheticLambda0;->f$0:Landroidx/camera/core/processing/SurfaceEdge$SettableSurface;
+    iget-object p0, p0, Landroidx/camera/core/processing/SurfaceEdge$SettableSurface$$ExternalSyntheticLambda0;->f$0:Landroidx/camera/core/processing/SurfaceEdge$SettableSurface;
 
-    invoke-virtual {v0}, Landroidx/camera/core/processing/SurfaceEdge$SettableSurface;->lambda$close$1$androidx-camera-core-processing-SurfaceEdge$SettableSurface()V
+    invoke-virtual {p0}, Landroidx/camera/core/processing/SurfaceEdge$SettableSurface;->lambda$close$1$androidx-camera-core-processing-SurfaceEdge$SettableSurface()V
 
     return-void
 .end method

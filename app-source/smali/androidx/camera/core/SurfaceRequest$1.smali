@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/camera/core/SurfaceRequest;-><init>(Landroid/util/Size;Landroidx/camera/core/impl/CameraInternal;ZLandroidx/camera/core/DynamicRange;Landroid/util/Range;Ljava/lang/Runnable;)V
+    value = Landroidx/camera/core/SurfaceRequest;-><init>(Landroid/util/Size;Landroidx/camera/core/impl/CameraInternal;ZLandroidx/camera/core/DynamicRange;ILandroid/util/Range;Ljava/lang/Runnable;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -56,7 +56,7 @@
         }
     .end annotation
 
-    .line 213
+    .line 216
     iput-object p1, p0, Landroidx/camera/core/SurfaceRequest$1;->this$0:Landroidx/camera/core/SurfaceRequest;
 
     iput-object p2, p0, Landroidx/camera/core/SurfaceRequest$1;->val$requestCancellationCompleter:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
@@ -71,37 +71,37 @@
 
 # virtual methods
 .method public onFailure(Ljava/lang/Throwable;)V
-    .locals 1
+    .locals 0
 
-    .line 224
+    .line 227
     instance-of p1, p1, Landroidx/camera/core/SurfaceRequest$RequestCancelledException;
 
     if-eqz p1, :cond_0
 
-    .line 226
-    iget-object p1, p0, Landroidx/camera/core/SurfaceRequest$1;->val$requestCancellationFuture:Lcom/google/common/util/concurrent/ListenableFuture;
+    .line 229
+    iget-object p0, p0, Landroidx/camera/core/SurfaceRequest$1;->val$requestCancellationFuture:Lcom/google/common/util/concurrent/ListenableFuture;
 
-    const/4 v0, 0x0
+    const/4 p1, 0x0
 
-    invoke-interface {p1, v0}, Lcom/google/common/util/concurrent/ListenableFuture;->cancel(Z)Z
+    invoke-interface {p0, p1}, Lcom/google/common/util/concurrent/ListenableFuture;->cancel(Z)Z
 
-    move-result p1
+    move-result p0
 
-    invoke-static {p1}, Landroidx/core/util/Preconditions;->checkState(Z)V
+    invoke-static {p0}, Landroidx/core/util/Preconditions;->checkState(Z)V
 
     return-void
 
-    .line 230
+    .line 233
     :cond_0
-    iget-object p1, p0, Landroidx/camera/core/SurfaceRequest$1;->val$requestCancellationCompleter:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
+    iget-object p0, p0, Landroidx/camera/core/SurfaceRequest$1;->val$requestCancellationCompleter:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
 
-    const/4 v0, 0x0
+    const/4 p1, 0x0
 
-    invoke-virtual {p1, v0}, Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;->set(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;->set(Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result p0
 
-    invoke-static {p1}, Landroidx/core/util/Preconditions;->checkState(Z)V
+    invoke-static {p0}, Landroidx/core/util/Preconditions;->checkState(Z)V
 
     return-void
 .end method
@@ -117,7 +117,7 @@
         }
     .end annotation
 
-    .line 213
+    .line 216
     check-cast p1, Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Landroidx/camera/core/SurfaceRequest$1;->onSuccess(Ljava/lang/Void;)V
@@ -126,18 +126,18 @@
 .end method
 
 .method public onSuccess(Ljava/lang/Void;)V
-    .locals 1
+    .locals 0
 
-    .line 219
-    iget-object p1, p0, Landroidx/camera/core/SurfaceRequest$1;->val$requestCancellationCompleter:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
+    .line 222
+    iget-object p0, p0, Landroidx/camera/core/SurfaceRequest$1;->val$requestCancellationCompleter:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
 
-    const/4 v0, 0x0
+    const/4 p1, 0x0
 
-    invoke-virtual {p1, v0}, Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;->set(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;->set(Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result p0
 
-    invoke-static {p1}, Landroidx/core/util/Preconditions;->checkState(Z)V
+    invoke-static {p0}, Landroidx/core/util/Preconditions;->checkState(Z)V
 
     return-void
 .end method

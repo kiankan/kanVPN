@@ -23,7 +23,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -59,31 +59,31 @@
 
 # virtual methods
 .method public final setPipParamsSourceRectHint(Landroid/app/Activity;Landroid/graphics/Rect;)V
-    .locals 1
+    .locals 0
 
-    const-string v0, "activity"
+    const-string p0, "activity"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "hint"
+    const-string p0, "hint"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 99
-    new-instance v0, Landroid/app/PictureInPictureParams$Builder;
+    new-instance p0, Landroid/app/PictureInPictureParams$Builder;
 
-    invoke-direct {v0}, Landroid/app/PictureInPictureParams$Builder;-><init>()V
+    invoke-direct {p0}, Landroid/app/PictureInPictureParams$Builder;-><init>()V
 
-    invoke-virtual {v0, p2}, Landroid/app/PictureInPictureParams$Builder;->setSourceRectHint(Landroid/graphics/Rect;)Landroid/app/PictureInPictureParams$Builder;
+    invoke-virtual {p0, p2}, Landroid/app/PictureInPictureParams$Builder;->setSourceRectHint(Landroid/graphics/Rect;)Landroid/app/PictureInPictureParams$Builder;
 
-    move-result-object p2
+    move-result-object p0
 
-    invoke-virtual {p2}, Landroid/app/PictureInPictureParams$Builder;->build()Landroid/app/PictureInPictureParams;
+    invoke-virtual {p0}, Landroid/app/PictureInPictureParams$Builder;->build()Landroid/app/PictureInPictureParams;
 
-    move-result-object p2
+    move-result-object p0
 
     .line 98
-    invoke-virtual {p1, p2}, Landroid/app/Activity;->setPictureInPictureParams(Landroid/app/PictureInPictureParams;)V
+    invoke-virtual {p1, p0}, Landroid/app/Activity;->setPictureInPictureParams(Landroid/app/PictureInPictureParams;)V
 
     return-void
 .end method

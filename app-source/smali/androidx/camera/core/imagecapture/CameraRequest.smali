@@ -31,13 +31,13 @@
         }
     .end annotation
 
-    .line 33
+    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
+    .line 35
     iput-object p1, p0, Landroidx/camera/core/imagecapture/CameraRequest;->mCaptureConfigs:Ljava/util/List;
 
-    .line 35
+    .line 36
     iput-object p2, p0, Landroidx/camera/core/imagecapture/CameraRequest;->mCallback:Landroidx/camera/core/imagecapture/TakePictureCallback;
 
     return-void
@@ -46,7 +46,7 @@
 
 # virtual methods
 .method getCaptureConfigs()Ljava/util/List;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -57,20 +57,20 @@
     .end annotation
 
     .line 40
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/CameraRequest;->mCaptureConfigs:Ljava/util/List;
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/CameraRequest;->mCaptureConfigs:Ljava/util/List;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method isAborted()Z
-    .locals 1
+    .locals 0
 
     .line 47
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/CameraRequest;->mCallback:Landroidx/camera/core/imagecapture/TakePictureCallback;
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/CameraRequest;->mCallback:Landroidx/camera/core/imagecapture/TakePictureCallback;
 
-    invoke-interface {v0}, Landroidx/camera/core/imagecapture/TakePictureCallback;->isAborted()Z
+    invoke-interface {p0}, Landroidx/camera/core/imagecapture/TakePictureCallback;->isAborted()Z
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method

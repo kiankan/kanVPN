@@ -213,43 +213,41 @@
 
     invoke-interface {p1, v0, p2, p3}, Lj$/time/temporal/Temporal;->with(Lj$/time/temporal/TemporalField;J)Lj$/time/temporal/Temporal;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 290
     :cond_0
     new-instance p1, Lj$/time/DateTimeException;
 
-    iget-object v0, p0, Lj$/time/temporal/JulianFields$Field;->name:Ljava/lang/String;
+    iget-object p0, p0, Lj$/time/temporal/JulianFields$Field;->name:Ljava/lang/String;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v1, "Invalid value: "
 
-    const-string v2, "Invalid value: "
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string p0, " "
 
-    const-string v0, " "
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p2, p3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p2, p3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object p0
 
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p0}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
 
     throw p1
 .end method
 
 .method public getFrom(Lj$/time/temporal/TemporalAccessor;)J
-    .locals 4
+    .locals 2
 
     .line 283
     sget-object v0, Lj$/time/temporal/ChronoField;->EPOCH_DAY:Lj$/time/temporal/ChronoField;
@@ -258,53 +256,53 @@
 
     move-result-wide v0
 
-    iget-wide v2, p0, Lj$/time/temporal/JulianFields$Field;->offset:J
+    iget-wide p0, p0, Lj$/time/temporal/JulianFields$Field;->offset:J
 
-    add-long/2addr v0, v2
+    add-long/2addr v0, p0
 
     return-wide v0
 .end method
 
 .method public isDateBased()Z
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 .end method
 
 .method public isSupportedBy(Lj$/time/temporal/TemporalAccessor;)Z
-    .locals 1
+    .locals 0
 
     .line 270
-    sget-object v0, Lj$/time/temporal/ChronoField;->EPOCH_DAY:Lj$/time/temporal/ChronoField;
+    sget-object p0, Lj$/time/temporal/ChronoField;->EPOCH_DAY:Lj$/time/temporal/ChronoField;
 
-    invoke-interface {p1, v0}, Lj$/time/temporal/TemporalAccessor;->isSupported(Lj$/time/temporal/TemporalField;)Z
+    invoke-interface {p1, p0}, Lj$/time/temporal/TemporalAccessor;->isSupported(Lj$/time/temporal/TemporalField;)Z
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method public isTimeBased()Z
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public range()Lj$/time/temporal/ValueRange;
-    .locals 1
+    .locals 0
 
     .line 264
-    iget-object v0, p0, Lj$/time/temporal/JulianFields$Field;->range:Lj$/time/temporal/ValueRange;
+    iget-object p0, p0, Lj$/time/temporal/JulianFields$Field;->range:Lj$/time/temporal/ValueRange;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public rangeRefinedBy(Lj$/time/temporal/TemporalAccessor;)Lj$/time/temporal/ValueRange;
-    .locals 2
+    .locals 0
 
     .line 275
     invoke-virtual {p0, p1}, Lj$/time/temporal/JulianFields$Field;->isSupportedBy(Lj$/time/temporal/TemporalAccessor;)Z
@@ -316,38 +314,94 @@
     .line 278
     invoke-virtual {p0}, Lj$/time/temporal/JulianFields$Field;->range()Lj$/time/temporal/ValueRange;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 
     .line 276
     :cond_0
-    new-instance p1, Lj$/time/DateTimeException;
+    const-string p1, "Unsupported field: "
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {p1, p0}, Lj$/time/ZoneOffset$0;->m(Ljava/lang/String;Ljava/lang/Object;)V
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 p0, 0x0
 
-    const-string v1, "Unsupported field: "
+    return-object p0
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public resolve(Ljava/util/Map;Lj$/time/temporal/TemporalAccessor;Lj$/time/format/ResolverStyle;)Lj$/time/chrono/ChronoLocalDate;
+    .locals 2
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    .line 299
+    invoke-interface {p1, p0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v0
+    check-cast p1, Ljava/lang/Long;
 
-    invoke-direct {p1, v0}, Lj$/time/DateTimeException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-    throw p1
+    move-result-wide v0
+
+    .line 300
+    invoke-static {p2}, Lj$/time/chrono/Chronology;->from(Lj$/time/temporal/TemporalAccessor;)Lj$/time/chrono/Chronology;
+
+    move-result-object p1
+
+    .line 301
+    sget-object p2, Lj$/time/format/ResolverStyle;->LENIENT:Lj$/time/format/ResolverStyle;
+
+    if-ne p3, p2, :cond_0
+
+    .line 302
+    iget-wide p2, p0, Lj$/time/temporal/JulianFields$Field;->offset:J
+
+    invoke-static {v0, v1, p2, p3}, Ljava/lang/Math;->subtractExact(JJ)J
+
+    move-result-wide p2
+
+    invoke-interface {p1, p2, p3}, Lj$/time/chrono/Chronology;->dateEpochDay(J)Lj$/time/chrono/ChronoLocalDate;
+
+    move-result-object p0
+
+    return-object p0
+
+    .line 304
+    :cond_0
+    invoke-virtual {p0}, Lj$/time/temporal/JulianFields$Field;->range()Lj$/time/temporal/ValueRange;
+
+    move-result-object p2
+
+    invoke-virtual {p2, v0, v1, p0}, Lj$/time/temporal/ValueRange;->checkValidValue(JLj$/time/temporal/TemporalField;)J
+
+    .line 305
+    iget-wide p2, p0, Lj$/time/temporal/JulianFields$Field;->offset:J
+
+    sub-long/2addr v0, p2
+
+    invoke-interface {p1, v0, v1}, Lj$/time/chrono/Chronology;->dateEpochDay(J)Lj$/time/chrono/ChronoLocalDate;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public bridge synthetic resolve(Ljava/util/Map;Lj$/time/temporal/TemporalAccessor;Lj$/time/format/ResolverStyle;)Lj$/time/temporal/TemporalAccessor;
+    .locals 0
+
+    .line 220
+    invoke-virtual {p0, p1, p2, p3}, Lj$/time/temporal/JulianFields$Field;->resolve(Ljava/util/Map;Lj$/time/temporal/TemporalAccessor;Lj$/time/format/ResolverStyle;)Lj$/time/chrono/ChronoLocalDate;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 311
-    iget-object v0, p0, Lj$/time/temporal/JulianFields$Field;->name:Ljava/lang/String;
+    iget-object p0, p0, Lj$/time/temporal/JulianFields$Field;->name:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method

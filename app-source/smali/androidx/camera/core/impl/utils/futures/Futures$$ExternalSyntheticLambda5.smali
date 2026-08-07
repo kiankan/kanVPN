@@ -37,7 +37,7 @@
 
 # virtual methods
 .method public final run()V
-    .locals 4
+    .locals 3
 
     .line 0
     iget-object v0, p0, Landroidx/camera/core/impl/utils/futures/Futures$$ExternalSyntheticLambda5;->f$0:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
@@ -46,9 +46,9 @@
 
     iget-boolean v2, p0, Landroidx/camera/core/impl/utils/futures/Futures$$ExternalSyntheticLambda5;->f$2:Z
 
-    iget-object v3, p0, Landroidx/camera/core/impl/utils/futures/Futures$$ExternalSyntheticLambda5;->f$3:Lcom/google/common/util/concurrent/ListenableFuture;
+    iget-object p0, p0, Landroidx/camera/core/impl/utils/futures/Futures$$ExternalSyntheticLambda5;->f$3:Lcom/google/common/util/concurrent/ListenableFuture;
 
-    invoke-static {v0, v1, v2, v3}, Landroidx/camera/core/impl/utils/futures/Futures;->lambda$makeTimeoutFuture$4(Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;Ljava/lang/Object;ZLcom/google/common/util/concurrent/ListenableFuture;)V
+    invoke-static {v0, v1, v2, p0}, Landroidx/camera/core/impl/utils/futures/Futures;->lambda$makeTimeoutFuture$4(Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;Ljava/lang/Object;ZLcom/google/common/util/concurrent/ListenableFuture;)V
 
     return-void
 .end method

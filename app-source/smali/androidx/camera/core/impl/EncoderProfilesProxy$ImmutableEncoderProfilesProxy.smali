@@ -21,7 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 217
+    .line 219
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,14 +42,14 @@
         }
     .end annotation
 
-    .line 226
+    .line 227
     new-instance v0, Landroidx/camera/core/impl/AutoValue_EncoderProfilesProxy_ImmutableEncoderProfilesProxy;
 
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1, p2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 229
+    .line 230
     invoke-static {v1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p2
@@ -58,7 +58,7 @@
 
     invoke-direct {v1, p3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 230
+    .line 231
     invoke-static {v1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p3

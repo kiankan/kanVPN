@@ -65,56 +65,54 @@
 
 # virtual methods
 .method protected provideRules(Ljava/lang/String;Z)Lj$/time/zone/ZoneRules;
-    .locals 2
+    .locals 1
 
     .line 475
-    iget-object p2, p0, Lj$/time/zone/ZoneRulesProvider$TimeZoneRulesProvider;->zoneIds:Ljava/util/Set;
+    iget-object p0, p0, Lj$/time/zone/ZoneRulesProvider$TimeZoneRulesProvider;->zoneIds:Ljava/util/Set;
 
-    invoke-interface {p2, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+    invoke-interface {p0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
-    move-result p2
+    move-result p0
 
-    if-eqz p2, :cond_0
+    if-eqz p0, :cond_0
 
     .line 476
-    new-instance p2, Lj$/time/zone/ZoneRules;
+    new-instance p0, Lj$/time/zone/ZoneRules;
 
     invoke-static {p1}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
 
     move-result-object p1
 
-    invoke-direct {p2, p1}, Lj$/time/zone/ZoneRules;-><init>(Ljava/util/TimeZone;)V
+    invoke-direct {p0, p1}, Lj$/time/zone/ZoneRules;-><init>(Ljava/util/TimeZone;)V
 
-    return-object p2
+    return-object p0
 
     .line 478
     :cond_0
-    new-instance p2, Lj$/time/zone/ZoneRulesException;
+    new-instance p0, Lj$/time/zone/ZoneRulesException;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v0, "Not a built-in time zone: "
 
-    const-string v1, "Not a built-in time zone: "
+    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {p2, p1}, Lj$/time/zone/ZoneRulesException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lj$/time/zone/ZoneRulesException;-><init>(Ljava/lang/String;)V
 
-    throw p2
+    throw p0
 .end method
 
 .method protected provideZoneIds()Ljava/util/Set;
-    .locals 1
+    .locals 0
 
     .line 470
-    iget-object v0, p0, Lj$/time/zone/ZoneRulesProvider$TimeZoneRulesProvider;->zoneIds:Ljava/util/Set;
+    iget-object p0, p0, Lj$/time/zone/ZoneRulesProvider$TimeZoneRulesProvider;->zoneIds:Ljava/util/Set;
 
-    return-object v0
+    return-object p0
 .end method

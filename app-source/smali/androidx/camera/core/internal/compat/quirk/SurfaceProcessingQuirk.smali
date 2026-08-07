@@ -10,7 +10,7 @@
 .method public static workaroundBySurfaceProcessing(Landroidx/camera/core/impl/Quirks;)Z
     .locals 1
 
-    .line 44
+    .line 45
     const-class v0, Landroidx/camera/core/internal/compat/quirk/SurfaceProcessingQuirk;
 
     invoke-virtual {p0, v0}, Landroidx/camera/core/impl/Quirks;->getAll(Ljava/lang/Class;)Ljava/util/List;
@@ -34,7 +34,7 @@
 
     check-cast v0, Landroidx/camera/core/internal/compat/quirk/SurfaceProcessingQuirk;
 
-    .line 45
+    .line 46
     invoke-interface {v0}, Landroidx/camera/core/internal/compat/quirk/SurfaceProcessingQuirk;->workaroundBySurfaceProcessing()Z
 
     move-result v0
@@ -54,9 +54,9 @@
 
 # virtual methods
 .method public workaroundBySurfaceProcessing()Z
-    .locals 1
+    .locals 0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 .end method

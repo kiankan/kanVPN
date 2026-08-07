@@ -13,17 +13,17 @@
 .method constructor <init>(Landroidx/camera/core/impl/CameraInfoInternal;)V
     .locals 2
 
-    .line 39
+    .line 40
     invoke-direct {p0, p1}, Landroidx/camera/core/impl/ForwardingCameraInfo;-><init>(Landroidx/camera/core/impl/CameraInfoInternal;)V
 
-    .line 41
+    .line 42
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "virtual-"
+    const-string/jumbo v1, "virtual-"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 42
+    .line 43
     invoke-interface {p1}, Landroidx/camera/core/impl/CameraInfoInternal;->getCameraId()Ljava/lang/String;
 
     move-result-object p1
@@ -56,12 +56,12 @@
 
 # virtual methods
 .method public getCameraId()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 51
-    iget-object v0, p0, Landroidx/camera/core/streamsharing/VirtualCameraInfo;->mVirtualCameraId:Ljava/lang/String;
+    iget-object p0, p0, Landroidx/camera/core/streamsharing/VirtualCameraInfo;->mVirtualCameraId:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getSensorRotationDegrees()I
@@ -72,29 +72,29 @@
     .line 63
     invoke-virtual {p0, v0}, Landroidx/camera/core/streamsharing/VirtualCameraInfo;->getSensorRotationDegrees(I)I
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
 .method public getSensorRotationDegrees(I)I
-    .locals 1
+    .locals 0
 
     .line 71
     invoke-super {p0, p1}, Landroidx/camera/core/impl/ForwardingCameraInfo;->getSensorRotationDegrees(I)I
 
     move-result p1
 
-    iget v0, p0, Landroidx/camera/core/streamsharing/VirtualCameraInfo;->mVirtualCameraRotationDegrees:I
+    iget p0, p0, Landroidx/camera/core/streamsharing/VirtualCameraInfo;->mVirtualCameraRotationDegrees:I
 
-    sub-int/2addr p1, v0
+    sub-int/2addr p1, p0
 
     .line 70
     invoke-static {p1}, Landroidx/camera/core/impl/utils/TransformUtils;->within360(I)I
 
-    move-result p1
+    move-result p0
 
-    return p1
+    return p0
 .end method
 
 .method setVirtualCameraRotationDegrees(I)V

@@ -29,14 +29,14 @@
 
 # virtual methods
 .method public final run()V
-    .locals 2
+    .locals 1
 
     .line 0
     iget-object v0, p0, Landroidx/camera/core/Preview$$ExternalSyntheticLambda0;->f$0:Landroidx/camera/core/Preview$SurfaceProvider;
 
-    iget-object v1, p0, Landroidx/camera/core/Preview$$ExternalSyntheticLambda0;->f$1:Landroidx/camera/core/SurfaceRequest;
+    iget-object p0, p0, Landroidx/camera/core/Preview$$ExternalSyntheticLambda0;->f$1:Landroidx/camera/core/SurfaceRequest;
 
-    invoke-static {v0, v1}, Landroidx/camera/core/Preview;->lambda$sendSurfaceRequest$2(Landroidx/camera/core/Preview$SurfaceProvider;Landroidx/camera/core/SurfaceRequest;)V
+    invoke-static {v0, p0}, Landroidx/camera/core/Preview;->lambda$sendSurfaceRequest$2(Landroidx/camera/core/Preview$SurfaceProvider;Landroidx/camera/core/SurfaceRequest;)V
 
     return-void
 .end method

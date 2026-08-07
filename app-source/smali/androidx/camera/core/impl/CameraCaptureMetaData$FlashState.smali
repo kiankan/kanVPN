@@ -38,7 +38,7 @@
 .method private static synthetic $values()[Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;
     .locals 4
 
-    .line 148
+    .line 151
     sget-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;->UNKNOWN:Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;
 
     sget-object v1, Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;->NONE:Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;
@@ -57,7 +57,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 151
+    .line 154
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;
 
     const-string v1, "UNKNOWN"
@@ -68,7 +68,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;->UNKNOWN:Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;
 
-    .line 154
+    .line 157
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;
 
     const-string v1, "NONE"
@@ -79,7 +79,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;->NONE:Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;
 
-    .line 157
+    .line 160
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;
 
     const-string v1, "READY"
@@ -90,7 +90,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;->READY:Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;
 
-    .line 160
+    .line 163
     new-instance v0, Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;
 
     const-string v1, "FIRED"
@@ -101,7 +101,7 @@
 
     sput-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;->FIRED:Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;
 
-    .line 148
+    .line 151
     invoke-static {}, Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;->$values()[Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;
 
     move-result-object v0
@@ -130,7 +130,7 @@
         }
     .end annotation
 
-    .line 148
+    .line 151
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -147,7 +147,7 @@
         }
     .end annotation
 
-    .line 148
+    .line 151
     const-class v0, Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -162,7 +162,7 @@
 .method public static values()[Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;
     .locals 1
 
-    .line 148
+    .line 151
     sget-object v0, Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;->$VALUES:[Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;
 
     invoke-virtual {v0}, [Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;->clone()Ljava/lang/Object;
@@ -172,4 +172,40 @@
     check-cast v0, [Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;
 
     return-object v0
+.end method
+
+
+# virtual methods
+.method public toFlashState()I
+    .locals 3
+
+    .line 169
+    invoke-virtual {p0}, Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;->ordinal()I
+
+    move-result p0
+
+    const/4 v0, 0x2
+
+    const/4 v1, 0x1
+
+    if-eq p0, v1, :cond_2
+
+    const/4 v2, 0x3
+
+    if-eq p0, v0, :cond_1
+
+    if-eq p0, v2, :cond_0
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_0
+    return v1
+
+    :cond_1
+    return v2
+
+    :cond_2
+    return v0
 .end method

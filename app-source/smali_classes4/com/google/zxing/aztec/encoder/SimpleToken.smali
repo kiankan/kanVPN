@@ -32,14 +32,14 @@
 
 # virtual methods
 .method appendTo(Lcom/google/zxing/common/BitArray;[B)V
-    .locals 1
+    .locals 0
 
     .line 35
     iget-short p2, p0, Lcom/google/zxing/aztec/encoder/SimpleToken;->value:S
 
-    iget-short v0, p0, Lcom/google/zxing/aztec/encoder/SimpleToken;->bitCount:S
+    iget-short p0, p0, Lcom/google/zxing/aztec/encoder/SimpleToken;->bitCount:S
 
-    invoke-virtual {p1, p2, v0}, Lcom/google/zxing/common/BitArray;->appendBits(II)V
+    invoke-virtual {p1, p2, p0}, Lcom/google/zxing/common/BitArray;->appendBits(II)V
 
     return-void
 .end method
@@ -71,29 +71,29 @@
 
     invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-short v3, p0, Lcom/google/zxing/aztec/encoder/SimpleToken;->bitCount:S
+    iget-short p0, p0, Lcom/google/zxing/aztec/encoder/SimpleToken;->bitCount:S
 
-    shl-int v3, v2, v3
+    shl-int p0, v2, p0
 
-    or-int/2addr v0, v3
+    or-int/2addr p0, v0
 
-    invoke-static {v0}, Ljava/lang/Integer;->toBinaryString(I)Ljava/lang/String;
+    invoke-static {p0}, Ljava/lang/Integer;->toBinaryString(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-virtual {v0, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/16 v0, 0x3e
+    const/16 p0, 0x3e
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

@@ -63,7 +63,7 @@
 
     return v0
 
-    .line 68
+    .line 64
     :cond_0
     instance-of v1, p1, Landroidx/camera/core/processing/util/GraphicDeviceInfo;
 
@@ -71,10 +71,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 69
+    .line 65
     check-cast p1, Landroidx/camera/core/processing/util/GraphicDeviceInfo;
 
-    .line 70
+    .line 66
     iget-object v1, p0, Landroidx/camera/core/processing/util/AutoValue_GraphicDeviceInfo;->glVersion:Ljava/lang/String;
 
     invoke-virtual {p1}, Landroidx/camera/core/processing/util/GraphicDeviceInfo;->getGlVersion()Ljava/lang/String;
@@ -89,7 +89,7 @@
 
     iget-object v1, p0, Landroidx/camera/core/processing/util/AutoValue_GraphicDeviceInfo;->eglVersion:Ljava/lang/String;
 
-    .line 71
+    .line 67
     invoke-virtual {p1}, Landroidx/camera/core/processing/util/GraphicDeviceInfo;->getEglVersion()Ljava/lang/String;
 
     move-result-object v3
@@ -102,7 +102,7 @@
 
     iget-object v1, p0, Landroidx/camera/core/processing/util/AutoValue_GraphicDeviceInfo;->glExtensions:Ljava/lang/String;
 
-    .line 72
+    .line 68
     invoke-virtual {p1}, Landroidx/camera/core/processing/util/GraphicDeviceInfo;->getGlExtensions()Ljava/lang/String;
 
     move-result-object v3
@@ -113,18 +113,18 @@
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Landroidx/camera/core/processing/util/AutoValue_GraphicDeviceInfo;->eglExtensions:Ljava/lang/String;
+    iget-object p0, p0, Landroidx/camera/core/processing/util/AutoValue_GraphicDeviceInfo;->eglExtensions:Ljava/lang/String;
 
-    .line 73
+    .line 69
     invoke-virtual {p1}, Landroidx/camera/core/processing/util/GraphicDeviceInfo;->getEglExtensions()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_1
+    if-eqz p0, :cond_1
 
     return v0
 
@@ -133,45 +133,45 @@
 .end method
 
 .method public getEglExtensions()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    .line 50
-    iget-object v0, p0, Landroidx/camera/core/processing/util/AutoValue_GraphicDeviceInfo;->eglExtensions:Ljava/lang/String;
+    .line 46
+    iget-object p0, p0, Landroidx/camera/core/processing/util/AutoValue_GraphicDeviceInfo;->eglExtensions:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getEglVersion()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    .line 38
-    iget-object v0, p0, Landroidx/camera/core/processing/util/AutoValue_GraphicDeviceInfo;->eglVersion:Ljava/lang/String;
+    .line 36
+    iget-object p0, p0, Landroidx/camera/core/processing/util/AutoValue_GraphicDeviceInfo;->eglVersion:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getGlExtensions()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    .line 44
-    iget-object v0, p0, Landroidx/camera/core/processing/util/AutoValue_GraphicDeviceInfo;->glExtensions:Ljava/lang/String;
+    .line 41
+    iget-object p0, p0, Landroidx/camera/core/processing/util/AutoValue_GraphicDeviceInfo;->glExtensions:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getGlVersion()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
-    .line 32
-    iget-object v0, p0, Landroidx/camera/core/processing/util/AutoValue_GraphicDeviceInfo;->glVersion:Ljava/lang/String;
+    .line 31
+    iget-object p0, p0, Landroidx/camera/core/processing/util/AutoValue_GraphicDeviceInfo;->glVersion:Ljava/lang/String;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public hashCode()I
     .locals 3
 
-    .line 82
+    .line 78
     iget-object v0, p0, Landroidx/camera/core/processing/util/AutoValue_GraphicDeviceInfo;->glVersion:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -184,7 +184,7 @@
 
     mul-int/2addr v0, v1
 
-    .line 84
+    .line 80
     iget-object v2, p0, Landroidx/camera/core/processing/util/AutoValue_GraphicDeviceInfo;->eglVersion:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
@@ -195,7 +195,7 @@
 
     mul-int/2addr v0, v1
 
-    .line 86
+    .line 82
     iget-object v2, p0, Landroidx/camera/core/processing/util/AutoValue_GraphicDeviceInfo;->glExtensions:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
@@ -206,22 +206,22 @@
 
     mul-int/2addr v0, v1
 
-    .line 88
-    iget-object v1, p0, Landroidx/camera/core/processing/util/AutoValue_GraphicDeviceInfo;->eglExtensions:Ljava/lang/String;
+    .line 84
+    iget-object p0, p0, Landroidx/camera/core/processing/util/AutoValue_GraphicDeviceInfo;->eglExtensions:Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
-    move-result v1
+    move-result p0
 
-    xor-int/2addr v0, v1
+    xor-int/2addr p0, v0
 
-    return v0
+    return p0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 55
+    .line 51
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "GraphicDeviceInfo{glVersion="
@@ -252,17 +252,17 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Landroidx/camera/core/processing/util/AutoValue_GraphicDeviceInfo;->eglExtensions:Ljava/lang/String;
+    iget-object p0, p0, Landroidx/camera/core/processing/util/AutoValue_GraphicDeviceInfo;->eglExtensions:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, "}"
+    const-string/jumbo p0, "}"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

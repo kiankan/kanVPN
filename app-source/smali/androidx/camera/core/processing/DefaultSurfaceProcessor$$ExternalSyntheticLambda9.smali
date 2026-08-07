@@ -37,7 +37,7 @@
 
 # virtual methods
 .method public final accept(Ljava/lang/Object;)V
-    .locals 4
+    .locals 3
 
     .line 0
     iget-object v0, p0, Landroidx/camera/core/processing/DefaultSurfaceProcessor$$ExternalSyntheticLambda9;->f$0:Landroidx/camera/core/processing/DefaultSurfaceProcessor;
@@ -46,11 +46,11 @@
 
     iget-object v2, p0, Landroidx/camera/core/processing/DefaultSurfaceProcessor$$ExternalSyntheticLambda9;->f$2:Landroid/graphics/SurfaceTexture;
 
-    iget-object v3, p0, Landroidx/camera/core/processing/DefaultSurfaceProcessor$$ExternalSyntheticLambda9;->f$3:Landroid/view/Surface;
+    iget-object p0, p0, Landroidx/camera/core/processing/DefaultSurfaceProcessor$$ExternalSyntheticLambda9;->f$3:Landroid/view/Surface;
 
     check-cast p1, Landroidx/camera/core/SurfaceRequest$Result;
 
-    invoke-virtual {v0, v1, v2, v3, p1}, Landroidx/camera/core/processing/DefaultSurfaceProcessor;->lambda$onInputSurface$1$androidx-camera-core-processing-DefaultSurfaceProcessor(Landroidx/camera/core/SurfaceRequest;Landroid/graphics/SurfaceTexture;Landroid/view/Surface;Landroidx/camera/core/SurfaceRequest$Result;)V
+    invoke-virtual {v0, v1, v2, p0, p1}, Landroidx/camera/core/processing/DefaultSurfaceProcessor;->lambda$onInputSurface$1$androidx-camera-core-processing-DefaultSurfaceProcessor(Landroidx/camera/core/SurfaceRequest;Landroid/graphics/SurfaceTexture;Landroid/view/Surface;Landroidx/camera/core/SurfaceRequest$Result;)V
 
     return-void
 .end method

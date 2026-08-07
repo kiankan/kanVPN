@@ -52,7 +52,7 @@
         }
     .end annotation
 
-    .line 513
+    .line 530
     iput-object p1, p0, Landroidx/camera/core/SurfaceRequest$5;->this$0:Landroidx/camera/core/SurfaceRequest;
 
     iput-object p2, p0, Landroidx/camera/core/SurfaceRequest$5;->val$runnable:Ljava/lang/Runnable;
@@ -81,7 +81,7 @@
         }
     .end annotation
 
-    .line 513
+    .line 530
     check-cast p1, Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Landroidx/camera/core/SurfaceRequest$5;->onSuccess(Ljava/lang/Void;)V
@@ -92,10 +92,10 @@
 .method public onSuccess(Ljava/lang/Void;)V
     .locals 0
 
-    .line 516
-    iget-object p1, p0, Landroidx/camera/core/SurfaceRequest$5;->val$runnable:Ljava/lang/Runnable;
+    .line 533
+    iget-object p0, p0, Landroidx/camera/core/SurfaceRequest$5;->val$runnable:Ljava/lang/Runnable;
 
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+    invoke-interface {p0}, Ljava/lang/Runnable;->run()V
 
     return-void
 .end method

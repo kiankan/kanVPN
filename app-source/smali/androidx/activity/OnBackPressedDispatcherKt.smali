@@ -25,7 +25,7 @@
     k = 0x2
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -58,14 +58,14 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 323
+    .line 330
     new-instance v0, Landroidx/activity/OnBackPressedDispatcherKt$addCallback$callback$1;
 
     invoke-direct {v0, p2, p3}, Landroidx/activity/OnBackPressedDispatcherKt$addCallback$callback$1;-><init>(ZLkotlin/jvm/functions/Function1;)V
 
     if-eqz p1, :cond_0
 
-    .line 329
+    .line 336
     move-object p2, v0
 
     check-cast p2, Landroidx/activity/OnBackPressedCallback;
@@ -74,7 +74,7 @@
 
     goto :goto_0
 
-    .line 331
+    .line 338
     :cond_0
     move-object p1, v0
 
@@ -82,7 +82,7 @@
 
     invoke-virtual {p0, p1}, Landroidx/activity/OnBackPressedDispatcher;->addCallback(Landroidx/activity/OnBackPressedCallback;)V
 
-    .line 333
+    .line 340
     :goto_0
     check-cast v0, Landroidx/activity/OnBackPressedCallback;
 
@@ -105,7 +105,7 @@
 
     const/4 p2, 0x1
 
-    .line 317
+    .line 324
     :cond_1
     invoke-static {p0, p1, p2, p3}, Landroidx/activity/OnBackPressedDispatcherKt;->addCallback(Landroidx/activity/OnBackPressedDispatcher;Landroidx/lifecycle/LifecycleOwner;ZLkotlin/jvm/functions/Function1;)Landroidx/activity/OnBackPressedCallback;
 

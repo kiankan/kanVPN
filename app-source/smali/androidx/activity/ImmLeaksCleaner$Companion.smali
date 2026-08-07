@@ -33,7 +33,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -61,18 +61,18 @@
 
 # virtual methods
 .method public final getCleaner()Landroidx/activity/ImmLeaksCleaner$Cleaner;
-    .locals 1
+    .locals 0
 
     .line 111
     invoke-static {}, Landroidx/activity/ImmLeaksCleaner;->access$getCleaner$delegate$cp()Lkotlin/Lazy;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-interface {v0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Landroidx/activity/ImmLeaksCleaner$Cleaner;
+    check-cast p0, Landroidx/activity/ImmLeaksCleaner$Cleaner;
 
-    return-object v0
+    return-object p0
 .end method

@@ -35,7 +35,7 @@
     k = 0x1
     mv = {
         0x1,
-        0x8,
+        0x9,
         0x0
     }
     xi = 0x30
@@ -68,7 +68,7 @@
 
     iput-object p1, p0, Landroidx/collection/LongSparseArrayKt$keyIterator$1;->$this_keyIterator:Landroidx/collection/LongSparseArray;
 
-    .line 594
+    .line 556
     invoke-direct {p0}, Lkotlin/collections/LongIterator;-><init>()V
 
     return-void
@@ -77,42 +77,42 @@
 
 # virtual methods
 .method public final getIndex()I
-    .locals 1
+    .locals 0
 
-    .line 595
-    iget v0, p0, Landroidx/collection/LongSparseArrayKt$keyIterator$1;->index:I
+    .line 557
+    iget p0, p0, Landroidx/collection/LongSparseArrayKt$keyIterator$1;->index:I
 
-    return v0
+    return p0
 .end method
 
 .method public hasNext()Z
-    .locals 2
+    .locals 1
 
-    .line 596
+    .line 559
     iget v0, p0, Landroidx/collection/LongSparseArrayKt$keyIterator$1;->index:I
 
-    iget-object v1, p0, Landroidx/collection/LongSparseArrayKt$keyIterator$1;->$this_keyIterator:Landroidx/collection/LongSparseArray;
+    iget-object p0, p0, Landroidx/collection/LongSparseArrayKt$keyIterator$1;->$this_keyIterator:Landroidx/collection/LongSparseArray;
 
-    invoke-virtual {v1}, Landroidx/collection/LongSparseArray;->size()I
+    invoke-virtual {p0}, Landroidx/collection/LongSparseArray;->size()I
 
-    move-result v1
+    move-result p0
 
-    if-ge v0, v1, :cond_0
+    if-ge v0, p0, :cond_0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public nextLong()J
     .locals 3
 
-    .line 597
+    .line 561
     iget-object v0, p0, Landroidx/collection/LongSparseArrayKt$keyIterator$1;->$this_keyIterator:Landroidx/collection/LongSparseArray;
 
     iget v1, p0, Landroidx/collection/LongSparseArrayKt$keyIterator$1;->index:I
@@ -131,7 +131,7 @@
 .method public final setIndex(I)V
     .locals 0
 
-    .line 595
+    .line 557
     iput p1, p0, Landroidx/collection/LongSparseArrayKt$keyIterator$1;->index:I
 
     return-void

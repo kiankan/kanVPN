@@ -70,24 +70,24 @@
 .method constructor <init>(Landroidx/camera/core/imagecapture/TakePictureRequest;Landroidx/camera/core/imagecapture/TakePictureRequest$RetryControl;)V
     .locals 1
 
-    .line 60
+    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 54
+    .line 56
     iput-boolean v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mIsAborted:Z
 
-    .line 55
+    .line 57
     iput-boolean v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mIsStarted:Z
 
-    .line 61
+    .line 62
     iput-object p1, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mTakePictureRequest:Landroidx/camera/core/imagecapture/TakePictureRequest;
 
-    .line 62
+    .line 63
     iput-object p2, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mRetryControl:Landroidx/camera/core/imagecapture/TakePictureRequest$RetryControl;
 
-    .line 63
+    .line 64
     new-instance p1, Landroidx/camera/core/imagecapture/RequestWithCallback$$ExternalSyntheticLambda0;
 
     invoke-direct {p1, p0}, Landroidx/camera/core/imagecapture/RequestWithCallback$$ExternalSyntheticLambda0;-><init>(Landroidx/camera/core/imagecapture/RequestWithCallback;)V
@@ -98,7 +98,7 @@
 
     iput-object p1, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mCaptureFuture:Lcom/google/common/util/concurrent/ListenableFuture;
 
-    .line 68
+    .line 69
     new-instance p1, Landroidx/camera/core/imagecapture/RequestWithCallback$$ExternalSyntheticLambda1;
 
     invoke-direct {p1, p0}, Landroidx/camera/core/imagecapture/RequestWithCallback$$ExternalSyntheticLambda1;-><init>(Landroidx/camera/core/imagecapture/RequestWithCallback;)V
@@ -115,15 +115,15 @@
 .method private abort(Landroidx/camera/core/ImageCaptureException;)V
     .locals 2
 
-    .line 241
+    .line 242
     invoke-static {}, Landroidx/camera/core/impl/utils/Threads;->checkMainThread()V
 
     const/4 v0, 0x1
 
-    .line 242
+    .line 243
     iput-boolean v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mIsAborted:Z
 
-    .line 244
+    .line 245
     iget-object v1, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mCaptureRequestFuture:Lcom/google/common/util/concurrent/ListenableFuture;
 
     invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -134,34 +134,34 @@
 
     invoke-interface {v1, v0}, Lcom/google/common/util/concurrent/ListenableFuture;->cancel(Z)Z
 
-    .line 245
+    .line 246
     iget-object v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mCaptureCompleter:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
 
     invoke-virtual {v0, p1}, Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;->setException(Ljava/lang/Throwable;)Z
 
-    .line 246
-    iget-object p1, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mCompleteCompleter:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
+    .line 247
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mCompleteCompleter:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
 
-    const/4 v0, 0x0
+    const/4 p1, 0x0
 
-    invoke-virtual {p1, v0}, Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;->set(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;->set(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
 .method private checkOnImageCaptured()V
-    .locals 2
+    .locals 1
 
-    .line 280
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mCaptureFuture:Lcom/google/common/util/concurrent/ListenableFuture;
+    .line 278
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mCaptureFuture:Lcom/google/common/util/concurrent/ListenableFuture;
 
-    invoke-interface {v0}, Lcom/google/common/util/concurrent/ListenableFuture;->isDone()Z
+    invoke-interface {p0}, Lcom/google/common/util/concurrent/ListenableFuture;->isDone()Z
 
-    move-result v0
+    move-result p0
 
-    const-string v1, "onImageCaptured() must be called before onFinalResult()"
+    const-string v0, "onImageCaptured() must be called before onFinalResult()"
 
-    invoke-static {v0, v1}, Landroidx/core/util/Preconditions;->checkState(ZLjava/lang/String;)V
+    invoke-static {p0, v0}, Landroidx/core/util/Preconditions;->checkState(ZLjava/lang/String;)V
 
     return-void
 .end method
@@ -169,7 +169,37 @@
 .method private markComplete()V
     .locals 2
 
-    .line 285
+    .line 283
+    iget-object v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mTakePictureRequest:Landroidx/camera/core/imagecapture/TakePictureRequest;
+
+    invoke-virtual {v0}, Landroidx/camera/core/imagecapture/TakePictureRequest;->isSimultaneousCapture()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mTakePictureRequest:Landroidx/camera/core/imagecapture/TakePictureRequest;
+
+    .line 284
+    invoke-virtual {v0}, Landroidx/camera/core/imagecapture/TakePictureRequest;->isFormatProcessedInSimultaneousCapture()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 287
+    :cond_0
+    iget-object v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mTakePictureRequest:Landroidx/camera/core/imagecapture/TakePictureRequest;
+
+    invoke-virtual {v0}, Landroidx/camera/core/imagecapture/TakePictureRequest;->isSimultaneousCapture()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 288
     iget-object v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mCompleteFuture:Lcom/google/common/util/concurrent/ListenableFuture;
 
     invoke-interface {v0}, Lcom/google/common/util/concurrent/ListenableFuture;->isDone()Z
@@ -182,26 +212,27 @@
 
     invoke-static {v0, v1}, Landroidx/core/util/Preconditions;->checkState(ZLjava/lang/String;)V
 
-    .line 286
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mCompleteCompleter:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
+    .line 290
+    :cond_1
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mCompleteCompleter:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1}, Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;->set(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v0}, Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;->set(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
 .method private onFailure(Landroidx/camera/core/ImageCaptureException;)V
-    .locals 1
+    .locals 0
 
-    .line 291
+    .line 295
     invoke-static {}, Landroidx/camera/core/impl/utils/Threads;->checkMainThread()V
 
-    .line 292
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mTakePictureRequest:Landroidx/camera/core/imagecapture/TakePictureRequest;
+    .line 296
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mTakePictureRequest:Landroidx/camera/core/imagecapture/TakePictureRequest;
 
-    invoke-virtual {v0, p1}, Landroidx/camera/core/imagecapture/TakePictureRequest;->onError(Landroidx/camera/core/ImageCaptureException;)V
+    invoke-virtual {p0, p1}, Landroidx/camera/core/imagecapture/TakePictureRequest;->onError(Landroidx/camera/core/ImageCaptureException;)V
 
     return-void
 .end method
@@ -211,10 +242,10 @@
 .method abortAndSendErrorToApp(Landroidx/camera/core/ImageCaptureException;)V
     .locals 1
 
-    .line 218
+    .line 219
     invoke-static {}, Landroidx/camera/core/impl/utils/Threads;->checkMainThread()V
 
-    .line 219
+    .line 220
     iget-object v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mCompleteFuture:Lcom/google/common/util/concurrent/ListenableFuture;
 
     invoke-interface {v0}, Lcom/google/common/util/concurrent/ListenableFuture;->isDone()Z
@@ -225,11 +256,11 @@
 
     return-void
 
-    .line 223
+    .line 224
     :cond_0
     invoke-direct {p0, p1}, Landroidx/camera/core/imagecapture/RequestWithCallback;->abort(Landroidx/camera/core/ImageCaptureException;)V
 
-    .line 224
+    .line 225
     invoke-direct {p0, p1}, Landroidx/camera/core/imagecapture/RequestWithCallback;->onFailure(Landroidx/camera/core/ImageCaptureException;)V
 
     return-void
@@ -238,10 +269,10 @@
 .method abortSilentlyAndRetry()V
     .locals 4
 
-    .line 229
+    .line 230
     invoke-static {}, Landroidx/camera/core/impl/utils/Threads;->checkMainThread()V
 
-    .line 230
+    .line 231
     iget-object v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mCompleteFuture:Lcom/google/common/util/concurrent/ListenableFuture;
 
     invoke-interface {v0}, Lcom/google/common/util/concurrent/ListenableFuture;->isDone()Z
@@ -252,7 +283,7 @@
 
     return-void
 
-    .line 234
+    .line 235
     :cond_0
     new-instance v0, Landroidx/camera/core/ImageCaptureException;
 
@@ -266,18 +297,18 @@
 
     invoke-direct {p0, v0}, Landroidx/camera/core/imagecapture/RequestWithCallback;->abort(Landroidx/camera/core/ImageCaptureException;)V
 
-    .line 236
+    .line 237
     iget-object v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mRetryControl:Landroidx/camera/core/imagecapture/TakePictureRequest$RetryControl;
 
-    iget-object v1, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mTakePictureRequest:Landroidx/camera/core/imagecapture/TakePictureRequest;
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mTakePictureRequest:Landroidx/camera/core/imagecapture/TakePictureRequest;
 
-    invoke-interface {v0, v1}, Landroidx/camera/core/imagecapture/TakePictureRequest$RetryControl;->retryRequest(Landroidx/camera/core/imagecapture/TakePictureRequest;)V
+    invoke-interface {v0, p0}, Landroidx/camera/core/imagecapture/TakePictureRequest$RetryControl;->retryRequest(Landroidx/camera/core/imagecapture/TakePictureRequest;)V
 
     return-void
 .end method
 
 .method getCaptureFuture()Lcom/google/common/util/concurrent/ListenableFuture;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -291,13 +322,13 @@
     invoke-static {}, Landroidx/camera/core/impl/utils/Threads;->checkMainThread()V
 
     .line 258
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mCaptureFuture:Lcom/google/common/util/concurrent/ListenableFuture;
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mCaptureFuture:Lcom/google/common/util/concurrent/ListenableFuture;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method getCompleteFuture()Lcom/google/common/util/concurrent/ListenableFuture;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -307,31 +338,31 @@
         }
     .end annotation
 
-    .line 269
+    .line 268
     invoke-static {}, Landroidx/camera/core/impl/utils/Threads;->checkMainThread()V
 
-    .line 270
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mCompleteFuture:Lcom/google/common/util/concurrent/ListenableFuture;
+    .line 269
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mCompleteFuture:Lcom/google/common/util/concurrent/ListenableFuture;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getTakePictureRequest()Landroidx/camera/core/imagecapture/TakePictureRequest;
-    .locals 1
+    .locals 0
 
-    .line 276
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mTakePictureRequest:Landroidx/camera/core/imagecapture/TakePictureRequest;
+    .line 274
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mTakePictureRequest:Landroidx/camera/core/imagecapture/TakePictureRequest;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public isAborted()Z
-    .locals 1
+    .locals 0
 
-    .line 190
-    iget-boolean v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mIsAborted:Z
+    .line 191
+    iget-boolean p0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mIsAborted:Z
 
-    return v0
+    return p0
 .end method
 
 .method synthetic lambda$new$0$androidx-camera-core-imagecapture-RequestWithCallback(Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;)Ljava/lang/Object;
@@ -342,13 +373,13 @@
         }
     .end annotation
 
-    .line 65
+    .line 66
     iput-object p1, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mCaptureCompleter:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
 
-    .line 66
-    const-string p1, "CaptureCompleteFuture"
+    .line 67
+    const-string p0, "CaptureCompleteFuture"
 
-    return-object p1
+    return-object p0
 .end method
 
 .method synthetic lambda$new$1$androidx-camera-core-imagecapture-RequestWithCallback(Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;)Ljava/lang/Object;
@@ -359,29 +390,29 @@
         }
     .end annotation
 
-    .line 70
+    .line 71
     iput-object p1, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mCompleteCompleter:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
 
-    .line 71
-    const-string p1, "RequestCompleteFuture"
+    .line 72
+    const-string p0, "RequestCompleteFuture"
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public onCaptureFailure(Landroidx/camera/core/ImageCaptureException;)V
     .locals 2
 
-    .line 196
+    .line 197
     invoke-static {}, Landroidx/camera/core/impl/utils/Threads;->checkMainThread()V
 
-    .line 197
+    .line 198
     iget-boolean v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mIsAborted:Z
 
     if-eqz v0, :cond_0
 
     goto :goto_0
 
-    .line 202
+    .line 203
     :cond_0
     iget-object v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mTakePictureRequest:Landroidx/camera/core/imagecapture/TakePictureRequest;
 
@@ -391,26 +422,26 @@
 
     if-nez v0, :cond_1
 
-    .line 204
+    .line 205
     invoke-direct {p0, p1}, Landroidx/camera/core/imagecapture/RequestWithCallback;->onFailure(Landroidx/camera/core/ImageCaptureException;)V
 
-    .line 206
+    .line 207
     :cond_1
     invoke-direct {p0}, Landroidx/camera/core/imagecapture/RequestWithCallback;->markComplete()V
 
-    .line 207
+    .line 208
     iget-object v1, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mCaptureCompleter:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
 
     invoke-virtual {v1, p1}, Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;->setException(Ljava/lang/Throwable;)Z
 
     if-eqz v0, :cond_2
 
-    .line 212
+    .line 213
     iget-object p1, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mRetryControl:Landroidx/camera/core/imagecapture/TakePictureRequest$RetryControl;
 
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mTakePictureRequest:Landroidx/camera/core/imagecapture/TakePictureRequest;
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mTakePictureRequest:Landroidx/camera/core/imagecapture/TakePictureRequest;
 
-    invoke-interface {p1, v0}, Landroidx/camera/core/imagecapture/TakePictureRequest$RetryControl;->retryRequest(Landroidx/camera/core/imagecapture/TakePictureRequest;)V
+    invoke-interface {p1, p0}, Landroidx/camera/core/imagecapture/TakePictureRequest$RetryControl;->retryRequest(Landroidx/camera/core/imagecapture/TakePictureRequest;)V
 
     :cond_2
     :goto_0
@@ -420,21 +451,21 @@
 .method public onCaptureProcessProgressed(I)V
     .locals 1
 
-    .line 156
+    .line 157
     invoke-static {}, Landroidx/camera/core/impl/utils/Threads;->checkMainThread()V
 
-    .line 157
+    .line 158
     iget-boolean v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mIsAborted:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 161
+    .line 162
     :cond_0
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mTakePictureRequest:Landroidx/camera/core/imagecapture/TakePictureRequest;
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mTakePictureRequest:Landroidx/camera/core/imagecapture/TakePictureRequest;
 
-    invoke-virtual {v0, p1}, Landroidx/camera/core/imagecapture/TakePictureRequest;->onCaptureProcessProgressed(I)V
+    invoke-virtual {p0, p1}, Landroidx/camera/core/imagecapture/TakePictureRequest;->onCaptureProcessProgressed(I)V
 
     return-void
 .end method
@@ -442,10 +473,10 @@
 .method public onCaptureStarted()V
     .locals 1
 
-    .line 90
+    .line 91
     invoke-static {}, Landroidx/camera/core/impl/utils/Threads;->checkMainThread()V
 
-    .line 91
+    .line 92
     iget-boolean v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mIsAborted:Z
 
     if-nez v0, :cond_2
@@ -459,34 +490,34 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 95
+    .line 96
     iput-boolean v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mIsStarted:Z
 
-    .line 97
+    .line 98
     iget-object v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mTakePictureRequest:Landroidx/camera/core/imagecapture/TakePictureRequest;
 
-    .line 98
+    .line 99
     invoke-virtual {v0}, Landroidx/camera/core/imagecapture/TakePictureRequest;->getInMemoryCallback()Landroidx/camera/core/ImageCapture$OnImageCapturedCallback;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 100
+    .line 101
     invoke-virtual {v0}, Landroidx/camera/core/ImageCapture$OnImageCapturedCallback;->onCaptureStarted()V
 
-    .line 103
+    .line 104
     :cond_1
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mTakePictureRequest:Landroidx/camera/core/imagecapture/TakePictureRequest;
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mTakePictureRequest:Landroidx/camera/core/imagecapture/TakePictureRequest;
 
-    invoke-virtual {v0}, Landroidx/camera/core/imagecapture/TakePictureRequest;->getOnDiskCallback()Landroidx/camera/core/ImageCapture$OnImageSavedCallback;
+    invoke-virtual {p0}, Landroidx/camera/core/imagecapture/TakePictureRequest;->getOnDiskCallback()Landroidx/camera/core/ImageCapture$OnImageSavedCallback;
 
-    move-result-object v0
+    move-result-object p0
 
-    if-eqz v0, :cond_2
+    if-eqz p0, :cond_2
 
-    .line 105
-    invoke-interface {v0}, Landroidx/camera/core/ImageCapture$OnImageSavedCallback;->onCaptureStarted()V
+    .line 106
+    invoke-interface {p0}, Landroidx/camera/core/ImageCapture$OnImageSavedCallback;->onCaptureStarted()V
 
     :cond_2
     :goto_0
@@ -496,27 +527,27 @@
 .method public onFinalResult(Landroidx/camera/core/ImageCapture$OutputFileResults;)V
     .locals 1
 
-    .line 129
+    .line 130
     invoke-static {}, Landroidx/camera/core/impl/utils/Threads;->checkMainThread()V
 
-    .line 130
+    .line 131
     iget-boolean v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mIsAborted:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 135
+    .line 136
     :cond_0
     invoke-direct {p0}, Landroidx/camera/core/imagecapture/RequestWithCallback;->checkOnImageCaptured()V
 
-    .line 136
+    .line 137
     invoke-direct {p0}, Landroidx/camera/core/imagecapture/RequestWithCallback;->markComplete()V
 
-    .line 137
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mTakePictureRequest:Landroidx/camera/core/imagecapture/TakePictureRequest;
+    .line 138
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mTakePictureRequest:Landroidx/camera/core/imagecapture/TakePictureRequest;
 
-    invoke-virtual {v0, p1}, Landroidx/camera/core/imagecapture/TakePictureRequest;->onResult(Landroidx/camera/core/ImageCapture$OutputFileResults;)V
+    invoke-virtual {p0, p1}, Landroidx/camera/core/imagecapture/TakePictureRequest;->onResult(Landroidx/camera/core/ImageCapture$OutputFileResults;)V
 
     return-void
 .end method
@@ -524,63 +555,63 @@
 .method public onFinalResult(Landroidx/camera/core/ImageProxy;)V
     .locals 1
 
-    .line 143
+    .line 144
     invoke-static {}, Landroidx/camera/core/impl/utils/Threads;->checkMainThread()V
 
-    .line 144
+    .line 145
     iget-boolean v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mIsAborted:Z
 
     if-eqz v0, :cond_0
 
-    .line 145
+    .line 146
     invoke-interface {p1}, Landroidx/camera/core/ImageProxy;->close()V
 
     return-void
 
-    .line 149
+    .line 150
     :cond_0
     invoke-direct {p0}, Landroidx/camera/core/imagecapture/RequestWithCallback;->checkOnImageCaptured()V
 
-    .line 150
+    .line 151
     invoke-direct {p0}, Landroidx/camera/core/imagecapture/RequestWithCallback;->markComplete()V
 
-    .line 151
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mTakePictureRequest:Landroidx/camera/core/imagecapture/TakePictureRequest;
+    .line 152
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mTakePictureRequest:Landroidx/camera/core/imagecapture/TakePictureRequest;
 
-    invoke-virtual {v0, p1}, Landroidx/camera/core/imagecapture/TakePictureRequest;->onResult(Landroidx/camera/core/ImageProxy;)V
+    invoke-virtual {p0, p1}, Landroidx/camera/core/imagecapture/TakePictureRequest;->onResult(Landroidx/camera/core/ImageProxy;)V
 
     return-void
 .end method
 
 .method public onImageCaptured()V
-    .locals 2
-
-    .line 112
-    invoke-static {}, Landroidx/camera/core/impl/utils/Threads;->checkMainThread()V
+    .locals 1
 
     .line 113
+    invoke-static {}, Landroidx/camera/core/impl/utils/Threads;->checkMainThread()V
+
+    .line 114
     iget-boolean v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mIsAborted:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 117
+    .line 118
     :cond_0
     iget-boolean v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mIsStarted:Z
 
     if-nez v0, :cond_1
 
-    .line 119
+    .line 120
     invoke-virtual {p0}, Landroidx/camera/core/imagecapture/RequestWithCallback;->onCaptureStarted()V
 
-    .line 122
+    .line 123
     :cond_1
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mCaptureCompleter:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mCaptureCompleter:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1}, Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;->set(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v0}, Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;->set(Ljava/lang/Object;)Z
 
     return-void
 .end method
@@ -588,21 +619,21 @@
 .method public onPostviewBitmapAvailable(Landroid/graphics/Bitmap;)V
     .locals 1
 
-    .line 166
+    .line 167
     invoke-static {}, Landroidx/camera/core/impl/utils/Threads;->checkMainThread()V
 
-    .line 167
+    .line 168
     iget-boolean v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mIsAborted:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 172
+    .line 173
     :cond_0
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mTakePictureRequest:Landroidx/camera/core/imagecapture/TakePictureRequest;
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mTakePictureRequest:Landroidx/camera/core/imagecapture/TakePictureRequest;
 
-    invoke-virtual {v0, p1}, Landroidx/camera/core/imagecapture/TakePictureRequest;->onPostviewBitmapAvailable(Landroid/graphics/Bitmap;)V
+    invoke-virtual {p0, p1}, Landroidx/camera/core/imagecapture/TakePictureRequest;->onPostviewBitmapAvailable(Landroid/graphics/Bitmap;)V
 
     return-void
 .end method
@@ -610,24 +641,24 @@
 .method public onProcessFailure(Landroidx/camera/core/ImageCaptureException;)V
     .locals 1
 
-    .line 178
+    .line 179
     invoke-static {}, Landroidx/camera/core/impl/utils/Threads;->checkMainThread()V
 
-    .line 179
+    .line 180
     iget-boolean v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mIsAborted:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 183
+    .line 184
     :cond_0
     invoke-direct {p0}, Landroidx/camera/core/imagecapture/RequestWithCallback;->checkOnImageCaptured()V
 
-    .line 184
+    .line 185
     invoke-direct {p0}, Landroidx/camera/core/imagecapture/RequestWithCallback;->markComplete()V
 
-    .line 185
+    .line 186
     invoke-direct {p0, p1}, Landroidx/camera/core/imagecapture/RequestWithCallback;->onFailure(Landroidx/camera/core/ImageCaptureException;)V
 
     return-void
@@ -644,10 +675,10 @@
         }
     .end annotation
 
-    .line 82
+    .line 83
     invoke-static {}, Landroidx/camera/core/impl/utils/Threads;->checkMainThread()V
 
-    .line 83
+    .line 84
     iget-object v0, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mCaptureRequestFuture:Lcom/google/common/util/concurrent/ListenableFuture;
 
     if-nez v0, :cond_0
@@ -664,7 +695,7 @@
 
     invoke-static {v0, v1}, Landroidx/core/util/Preconditions;->checkState(ZLjava/lang/String;)V
 
-    .line 84
+    .line 85
     iput-object p1, p0, Landroidx/camera/core/imagecapture/RequestWithCallback;->mCaptureRequestFuture:Lcom/google/common/util/concurrent/ListenableFuture;
 
     return-void

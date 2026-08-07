@@ -39,19 +39,19 @@
 
 # virtual methods
 .method public getCount()I
-    .locals 1
+    .locals 0
 
     .line 228
-    iget v0, p0, Lcom/google/zxing/qrcode/decoder/Version$ECB;->count:I
+    iget p0, p0, Lcom/google/zxing/qrcode/decoder/Version$ECB;->count:I
 
-    return v0
+    return p0
 .end method
 
 .method public getDataCodewords()I
-    .locals 1
+    .locals 0
 
     .line 232
-    iget v0, p0, Lcom/google/zxing/qrcode/decoder/Version$ECB;->dataCodewords:I
+    iget p0, p0, Lcom/google/zxing/qrcode/decoder/Version$ECB;->dataCodewords:I
 
-    return v0
+    return p0
 .end method

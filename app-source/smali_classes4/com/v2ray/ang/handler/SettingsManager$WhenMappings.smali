@@ -17,7 +17,7 @@
     k = 0x3
     mv = {
         0x2,
-        0x3,
+        0x4,
         0x0
     }
     xi = 0x30
@@ -32,7 +32,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    invoke-static {}, Lcom/v2ray/ang/dto/Language;->values()[Lcom/v2ray/ang/dto/Language;
+    invoke-static {}, Lcom/v2ray/ang/enums/Language;->values()[Lcom/v2ray/ang/enums/Language;
 
     move-result-object v0
 
@@ -41,9 +41,9 @@
     new-array v0, v0, [I
 
     :try_start_0
-    sget-object v1, Lcom/v2ray/ang/dto/Language;->AUTO:Lcom/v2ray/ang/dto/Language;
+    sget-object v1, Lcom/v2ray/ang/enums/Language;->AUTO:Lcom/v2ray/ang/enums/Language;
 
-    invoke-virtual {v1}, Lcom/v2ray/ang/dto/Language;->ordinal()I
+    invoke-virtual {v1}, Lcom/v2ray/ang/enums/Language;->ordinal()I
 
     move-result v1
 
@@ -55,9 +55,9 @@
 
     :catch_0
     :try_start_1
-    sget-object v1, Lcom/v2ray/ang/dto/Language;->ENGLISH:Lcom/v2ray/ang/dto/Language;
+    sget-object v1, Lcom/v2ray/ang/enums/Language;->ENGLISH:Lcom/v2ray/ang/enums/Language;
 
-    invoke-virtual {v1}, Lcom/v2ray/ang/dto/Language;->ordinal()I
+    invoke-virtual {v1}, Lcom/v2ray/ang/enums/Language;->ordinal()I
 
     move-result v1
 
@@ -69,9 +69,9 @@
 
     :catch_1
     :try_start_2
-    sget-object v1, Lcom/v2ray/ang/dto/Language;->CHINA:Lcom/v2ray/ang/dto/Language;
+    sget-object v1, Lcom/v2ray/ang/enums/Language;->CHINA:Lcom/v2ray/ang/enums/Language;
 
-    invoke-virtual {v1}, Lcom/v2ray/ang/dto/Language;->ordinal()I
+    invoke-virtual {v1}, Lcom/v2ray/ang/enums/Language;->ordinal()I
 
     move-result v1
 
@@ -83,9 +83,9 @@
 
     :catch_2
     :try_start_3
-    sget-object v1, Lcom/v2ray/ang/dto/Language;->TRADITIONAL_CHINESE:Lcom/v2ray/ang/dto/Language;
+    sget-object v1, Lcom/v2ray/ang/enums/Language;->TRADITIONAL_CHINESE:Lcom/v2ray/ang/enums/Language;
 
-    invoke-virtual {v1}, Lcom/v2ray/ang/dto/Language;->ordinal()I
+    invoke-virtual {v1}, Lcom/v2ray/ang/enums/Language;->ordinal()I
 
     move-result v1
 
@@ -97,9 +97,9 @@
 
     :catch_3
     :try_start_4
-    sget-object v1, Lcom/v2ray/ang/dto/Language;->VIETNAMESE:Lcom/v2ray/ang/dto/Language;
+    sget-object v1, Lcom/v2ray/ang/enums/Language;->VIETNAMESE:Lcom/v2ray/ang/enums/Language;
 
-    invoke-virtual {v1}, Lcom/v2ray/ang/dto/Language;->ordinal()I
+    invoke-virtual {v1}, Lcom/v2ray/ang/enums/Language;->ordinal()I
 
     move-result v1
 
@@ -111,9 +111,9 @@
 
     :catch_4
     :try_start_5
-    sget-object v1, Lcom/v2ray/ang/dto/Language;->RUSSIAN:Lcom/v2ray/ang/dto/Language;
+    sget-object v1, Lcom/v2ray/ang/enums/Language;->RUSSIAN:Lcom/v2ray/ang/enums/Language;
 
-    invoke-virtual {v1}, Lcom/v2ray/ang/dto/Language;->ordinal()I
+    invoke-virtual {v1}, Lcom/v2ray/ang/enums/Language;->ordinal()I
 
     move-result v1
 
@@ -125,9 +125,9 @@
 
     :catch_5
     :try_start_6
-    sget-object v1, Lcom/v2ray/ang/dto/Language;->PERSIAN:Lcom/v2ray/ang/dto/Language;
+    sget-object v1, Lcom/v2ray/ang/enums/Language;->PERSIAN:Lcom/v2ray/ang/enums/Language;
 
-    invoke-virtual {v1}, Lcom/v2ray/ang/dto/Language;->ordinal()I
+    invoke-virtual {v1}, Lcom/v2ray/ang/enums/Language;->ordinal()I
 
     move-result v1
 
@@ -139,9 +139,9 @@
 
     :catch_6
     :try_start_7
-    sget-object v1, Lcom/v2ray/ang/dto/Language;->ARABIC:Lcom/v2ray/ang/dto/Language;
+    sget-object v1, Lcom/v2ray/ang/enums/Language;->ARABIC:Lcom/v2ray/ang/enums/Language;
 
-    invoke-virtual {v1}, Lcom/v2ray/ang/dto/Language;->ordinal()I
+    invoke-virtual {v1}, Lcom/v2ray/ang/enums/Language;->ordinal()I
 
     move-result v1
 
@@ -153,9 +153,9 @@
 
     :catch_7
     :try_start_8
-    sget-object v1, Lcom/v2ray/ang/dto/Language;->BANGLA:Lcom/v2ray/ang/dto/Language;
+    sget-object v1, Lcom/v2ray/ang/enums/Language;->BANGLA:Lcom/v2ray/ang/enums/Language;
 
-    invoke-virtual {v1}, Lcom/v2ray/ang/dto/Language;->ordinal()I
+    invoke-virtual {v1}, Lcom/v2ray/ang/enums/Language;->ordinal()I
 
     move-result v1
 
@@ -167,9 +167,9 @@
 
     :catch_8
     :try_start_9
-    sget-object v1, Lcom/v2ray/ang/dto/Language;->BAKHTIARI:Lcom/v2ray/ang/dto/Language;
+    sget-object v1, Lcom/v2ray/ang/enums/Language;->BAKHTIARI:Lcom/v2ray/ang/enums/Language;
 
-    invoke-virtual {v1}, Lcom/v2ray/ang/dto/Language;->ordinal()I
+    invoke-virtual {v1}, Lcom/v2ray/ang/enums/Language;->ordinal()I
 
     move-result v1
 

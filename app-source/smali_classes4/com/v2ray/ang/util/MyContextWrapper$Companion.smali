@@ -28,12 +28,12 @@
         "Landroid/content/Context;",
         "newLocale",
         "Ljava/util/Locale;",
-        "app_playstoreRelease"
+        "v2rayNG:app_playstoreRelease"
     }
     k = 0x1
     mv = {
         0x2,
-        0x3,
+        0x4,
         0x0
     }
     xi = 0x30
@@ -61,29 +61,29 @@
 
 # virtual methods
 .method public final wrap(Landroid/content/Context;Ljava/util/Locale;)Landroid/content/ContextWrapper;
-    .locals 2
+    .locals 1
 
-    const-string v0, "context"
+    const-string p0, "context"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 21
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v0
+    move-result-object p0
 
-    const-string v1, "getResources(...)"
+    const-string v0, "getResources(...)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 22
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {p0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
-    move-result-object v0
+    move-result-object p0
 
-    const-string v1, "getConfiguration(...)"
+    const-string v0, "getConfiguration(...)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-nez p2, :cond_0
 
@@ -94,36 +94,36 @@
 
     .line 25
     :cond_0
-    invoke-virtual {v0, p2}, Landroid/content/res/Configuration;->setLocale(Ljava/util/Locale;)V
+    invoke-virtual {p0, p2}, Landroid/content/res/Configuration;->setLocale(Ljava/util/Locale;)V
 
     .line 26
-    new-instance v1, Landroid/os/LocaleList;
+    new-instance v0, Landroid/os/LocaleList;
 
     filled-new-array {p2}, [Ljava/util/Locale;
 
     move-result-object p2
 
-    invoke-direct {v1, p2}, Landroid/os/LocaleList;-><init>([Ljava/util/Locale;)V
+    invoke-direct {v0, p2}, Landroid/os/LocaleList;-><init>([Ljava/util/Locale;)V
 
     .line 27
-    invoke-static {v1}, Landroid/os/LocaleList;->setDefault(Landroid/os/LocaleList;)V
+    invoke-static {v0}, Landroid/os/LocaleList;->setDefault(Landroid/os/LocaleList;)V
 
     .line 28
-    invoke-virtual {v0, v1}, Landroid/content/res/Configuration;->setLocales(Landroid/os/LocaleList;)V
+    invoke-virtual {p0, v0}, Landroid/content/res/Configuration;->setLocales(Landroid/os/LocaleList;)V
 
     .line 30
-    invoke-virtual {p1, v0}, Landroid/content/Context;->createConfigurationContext(Landroid/content/res/Configuration;)Landroid/content/Context;
+    invoke-virtual {p1, p0}, Landroid/content/Context;->createConfigurationContext(Landroid/content/res/Configuration;)Landroid/content/Context;
 
-    move-result-object p1
+    move-result-object p0
 
-    const-string p2, "createConfigurationContext(...)"
+    const-string p1, "createConfigurationContext(...)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 31
-    new-instance p2, Landroid/content/ContextWrapper;
+    new-instance p1, Landroid/content/ContextWrapper;
 
-    invoke-direct {p2, p1}, Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, p0}, Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
 
-    return-object p2
+    return-object p1
 .end method

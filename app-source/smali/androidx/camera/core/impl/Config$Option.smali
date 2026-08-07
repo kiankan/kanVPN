@@ -27,7 +27,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 170
+    .line 166
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -50,7 +50,7 @@
 
     const/4 v0, 0x0
 
-    .line 186
+    .line 182
     invoke-static {p0, p1, v0}, Landroidx/camera/core/impl/Config$Option;->create(Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Object;)Landroidx/camera/core/impl/Config$Option;
 
     move-result-object p0
@@ -75,7 +75,7 @@
         }
     .end annotation
 
-    .line 207
+    .line 202
     new-instance v0, Landroidx/camera/core/impl/AutoValue_Config_Option;
 
     invoke-direct {v0, p0, p1, p2}, Landroidx/camera/core/impl/AutoValue_Config_Option;-><init>(Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Object;)V

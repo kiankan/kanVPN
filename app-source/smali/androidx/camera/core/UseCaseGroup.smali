@@ -51,16 +51,16 @@
         }
     .end annotation
 
-    .line 52
+    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
+    .line 51
     iput-object p1, p0, Landroidx/camera/core/UseCaseGroup;->mViewPort:Landroidx/camera/core/ViewPort;
 
-    .line 54
+    .line 52
     iput-object p2, p0, Landroidx/camera/core/UseCaseGroup;->mUseCases:Ljava/util/List;
 
-    .line 55
+    .line 53
     iput-object p3, p0, Landroidx/camera/core/UseCaseGroup;->mEffects:Ljava/util/List;
 
     return-void
@@ -69,7 +69,7 @@
 
 # virtual methods
 .method public getEffects()Ljava/util/List;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -79,14 +79,14 @@
         }
     .end annotation
 
-    .line 79
-    iget-object v0, p0, Landroidx/camera/core/UseCaseGroup;->mEffects:Ljava/util/List;
+    .line 74
+    iget-object p0, p0, Landroidx/camera/core/UseCaseGroup;->mEffects:Ljava/util/List;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getUseCases()Ljava/util/List;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -96,17 +96,17 @@
         }
     .end annotation
 
-    .line 71
-    iget-object v0, p0, Landroidx/camera/core/UseCaseGroup;->mUseCases:Ljava/util/List;
+    .line 67
+    iget-object p0, p0, Landroidx/camera/core/UseCaseGroup;->mUseCases:Ljava/util/List;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getViewPort()Landroidx/camera/core/ViewPort;
-    .locals 1
+    .locals 0
 
-    .line 63
-    iget-object v0, p0, Landroidx/camera/core/UseCaseGroup;->mViewPort:Landroidx/camera/core/ViewPort;
+    .line 60
+    iget-object p0, p0, Landroidx/camera/core/UseCaseGroup;->mViewPort:Landroidx/camera/core/ViewPort;
 
-    return-object v0
+    return-object p0
 .end method

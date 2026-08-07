@@ -34,23 +34,23 @@
 .method public constructor <init>(Landroid/util/Rational;I)V
     .locals 1
 
-    .line 269
+    .line 268
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 208
+    .line 207
     iput v0, p0, Landroidx/camera/core/ViewPort$Builder;->mScaleType:I
 
     const/4 v0, 0x0
 
-    .line 216
+    .line 215
     iput v0, p0, Landroidx/camera/core/ViewPort$Builder;->mLayoutDirection:I
 
-    .line 270
+    .line 269
     iput-object p1, p0, Landroidx/camera/core/ViewPort$Builder;->mAspectRatio:Landroid/util/Rational;
 
-    .line 271
+    .line 270
     iput p2, p0, Landroidx/camera/core/ViewPort$Builder;->mRotation:I
 
     return-void
@@ -59,16 +59,16 @@
 
 # virtual methods
 .method public build()Landroidx/camera/core/ViewPort;
-    .locals 5
+    .locals 4
 
-    .line 306
+    .line 302
     iget-object v0, p0, Landroidx/camera/core/ViewPort$Builder;->mAspectRatio:Landroid/util/Rational;
 
     const-string v1, "The crop aspect ratio must be set."
 
     invoke-static {v0, v1}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 307
+    .line 303
     new-instance v0, Landroidx/camera/core/ViewPort;
 
     iget v1, p0, Landroidx/camera/core/ViewPort$Builder;->mScaleType:I
@@ -77,9 +77,9 @@
 
     iget v3, p0, Landroidx/camera/core/ViewPort$Builder;->mRotation:I
 
-    iget v4, p0, Landroidx/camera/core/ViewPort$Builder;->mLayoutDirection:I
+    iget p0, p0, Landroidx/camera/core/ViewPort$Builder;->mLayoutDirection:I
 
-    invoke-direct {v0, v1, v2, v3, v4}, Landroidx/camera/core/ViewPort;-><init>(ILandroid/util/Rational;II)V
+    invoke-direct {v0, v1, v2, v3, p0}, Landroidx/camera/core/ViewPort;-><init>(ILandroid/util/Rational;II)V
 
     return-object v0
 .end method
@@ -87,7 +87,7 @@
 .method public setLayoutDirection(I)Landroidx/camera/core/ViewPort$Builder;
     .locals 0
 
-    .line 297
+    .line 294
     iput p1, p0, Landroidx/camera/core/ViewPort$Builder;->mLayoutDirection:I
 
     return-object p0
@@ -96,7 +96,7 @@
 .method public setScaleType(I)Landroidx/camera/core/ViewPort$Builder;
     .locals 0
 
-    .line 283
+    .line 281
     iput p1, p0, Landroidx/camera/core/ViewPort$Builder;->mScaleType:I
 
     return-object p0

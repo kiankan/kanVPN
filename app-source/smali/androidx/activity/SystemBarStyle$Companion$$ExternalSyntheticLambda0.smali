@@ -24,13 +24,13 @@
     .line 0
     check-cast p1, Landroid/content/res/Resources;
 
-    invoke-static {p1}, Landroidx/activity/SystemBarStyle$Companion;->$r8$lambda$c5ZuH01e8cSiKvRvj_RHuspalJQ(Landroid/content/res/Resources;)Z
+    invoke-static {p1}, Landroidx/activity/SystemBarStyle$Companion;->light$lambda$0(Landroid/content/res/Resources;)Z
 
-    move-result p1
+    move-result p0
 
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

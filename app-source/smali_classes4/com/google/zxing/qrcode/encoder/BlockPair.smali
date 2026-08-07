@@ -28,19 +28,19 @@
 
 # virtual methods
 .method public getDataBytes()[B
-    .locals 1
+    .locals 0
 
     .line 30
-    iget-object v0, p0, Lcom/google/zxing/qrcode/encoder/BlockPair;->dataBytes:[B
+    iget-object p0, p0, Lcom/google/zxing/qrcode/encoder/BlockPair;->dataBytes:[B
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getErrorCorrectionBytes()[B
-    .locals 1
+    .locals 0
 
     .line 34
-    iget-object v0, p0, Lcom/google/zxing/qrcode/encoder/BlockPair;->errorCorrectionBytes:[B
+    iget-object p0, p0, Lcom/google/zxing/qrcode/encoder/BlockPair;->errorCorrectionBytes:[B
 
-    return-object v0
+    return-object p0
 .end method

@@ -18,7 +18,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 1012
+    .line 1024
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,7 +27,7 @@
 .method public static of(Landroid/graphics/Rect;IIZLandroid/graphics/Matrix;Z)Landroidx/camera/core/SurfaceRequest$TransformationInfo;
     .locals 7
 
-    .line 1007
+    .line 1019
     new-instance v0, Landroidx/camera/core/AutoValue_SurfaceRequest_TransformationInfo;
 
     move-object v1, p0

@@ -46,7 +46,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -66,18 +66,18 @@
 
 # virtual methods
 .method public createFromParcel(Landroid/os/Parcel;)Landroidx/activity/result/ActivityResult;
-    .locals 1
+    .locals 0
 
-    const-string v0, "parcel"
+    const-string/jumbo p0, "parcel"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 79
-    new-instance v0, Landroidx/activity/result/ActivityResult;
+    new-instance p0, Landroidx/activity/result/ActivityResult;
 
-    invoke-direct {v0, p1}, Landroidx/activity/result/ActivityResult;-><init>(Landroid/os/Parcel;)V
+    invoke-direct {p0, p1}, Landroidx/activity/result/ActivityResult;-><init>(Landroid/os/Parcel;)V
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -86,18 +86,18 @@
     .line 78
     invoke-virtual {p0, p1}, Landroidx/activity/result/ActivityResult$Companion$CREATOR$1;->createFromParcel(Landroid/os/Parcel;)Landroidx/activity/result/ActivityResult;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public newArray(I)[Landroidx/activity/result/ActivityResult;
     .locals 0
 
     .line 81
-    new-array p1, p1, [Landroidx/activity/result/ActivityResult;
+    new-array p0, p1, [Landroidx/activity/result/ActivityResult;
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
@@ -106,7 +106,7 @@
     .line 78
     invoke-virtual {p0, p1}, Landroidx/activity/result/ActivityResult$Companion$CREATOR$1;->newArray(I)[Landroidx/activity/result/ActivityResult;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

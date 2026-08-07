@@ -18,7 +18,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 94
+    .line 115
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,7 +47,13 @@
 .method public abstract setImplementationOptions(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/StreamSpec$Builder;
 .end method
 
+.method public abstract setOriginalConfiguredResolution(Landroid/util/Size;)Landroidx/camera/core/impl/StreamSpec$Builder;
+.end method
+
 .method public abstract setResolution(Landroid/util/Size;)Landroidx/camera/core/impl/StreamSpec$Builder;
+.end method
+
+.method public abstract setSessionType(I)Landroidx/camera/core/impl/StreamSpec$Builder;
 .end method
 
 .method public abstract setZslDisabled(Z)Landroidx/camera/core/impl/StreamSpec$Builder;

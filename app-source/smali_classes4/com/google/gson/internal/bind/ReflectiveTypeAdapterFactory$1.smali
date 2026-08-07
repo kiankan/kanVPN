@@ -58,18 +58,18 @@
     .line 126
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->skipValue()V
 
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 1
+    .locals 0
 
     .line 137
-    const-string v0, "AnonymousOrNonStaticLocalClassAdapter"
+    const-string p0, "AnonymousOrNonStaticLocalClassAdapter"
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public write(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V

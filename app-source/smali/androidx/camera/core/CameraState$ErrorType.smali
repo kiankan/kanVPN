@@ -34,7 +34,7 @@
 .method private static synthetic $values()[Landroidx/camera/core/CameraState$ErrorType;
     .locals 2
 
-    .line 259
+    .line 280
     sget-object v0, Landroidx/camera/core/CameraState$ErrorType;->RECOVERABLE:Landroidx/camera/core/CameraState$ErrorType;
 
     sget-object v1, Landroidx/camera/core/CameraState$ErrorType;->CRITICAL:Landroidx/camera/core/CameraState$ErrorType;
@@ -49,7 +49,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 266
+    .line 287
     new-instance v0, Landroidx/camera/core/CameraState$ErrorType;
 
     const-string v1, "RECOVERABLE"
@@ -60,7 +60,7 @@
 
     sput-object v0, Landroidx/camera/core/CameraState$ErrorType;->RECOVERABLE:Landroidx/camera/core/CameraState$ErrorType;
 
-    .line 276
+    .line 297
     new-instance v0, Landroidx/camera/core/CameraState$ErrorType;
 
     const-string v1, "CRITICAL"
@@ -71,7 +71,7 @@
 
     sput-object v0, Landroidx/camera/core/CameraState$ErrorType;->CRITICAL:Landroidx/camera/core/CameraState$ErrorType;
 
-    .line 259
+    .line 280
     invoke-static {}, Landroidx/camera/core/CameraState$ErrorType;->$values()[Landroidx/camera/core/CameraState$ErrorType;
 
     move-result-object v0
@@ -100,7 +100,7 @@
         }
     .end annotation
 
-    .line 259
+    .line 280
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -117,7 +117,7 @@
         }
     .end annotation
 
-    .line 259
+    .line 280
     const-class v0, Landroidx/camera/core/CameraState$ErrorType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -132,7 +132,7 @@
 .method public static values()[Landroidx/camera/core/CameraState$ErrorType;
     .locals 1
 
-    .line 259
+    .line 280
     sget-object v0, Landroidx/camera/core/CameraState$ErrorType;->$VALUES:[Landroidx/camera/core/CameraState$ErrorType;
 
     invoke-virtual {v0}, [Landroidx/camera/core/CameraState$ErrorType;->clone()Ljava/lang/Object;

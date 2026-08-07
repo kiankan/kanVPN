@@ -9,7 +9,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 104
+    .line 103
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,155 +21,155 @@
 .end method
 
 .method public getAsBigDecimal()Ljava/math/BigDecimal;
-    .locals 2
+    .locals 1
 
-    .line 354
+    .line 353
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
 
 .method public getAsBigInteger()Ljava/math/BigInteger;
-    .locals 2
+    .locals 1
 
-    .line 369
+    .line 368
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
 
 .method public getAsBoolean()Z
-    .locals 2
+    .locals 1
 
-    .line 225
+    .line 224
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
 
 .method public getAsByte()B
-    .locals 2
+    .locals 1
 
-    .line 322
+    .line 321
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
 
 .method public getAsCharacter()C
-    .locals 2
+    .locals 1
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 339
+    .line 338
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
 
 .method public getAsDouble()D
-    .locals 2
+    .locals 1
 
-    .line 265
+    .line 264
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
 
 .method public getAsFloat()F
-    .locals 2
+    .locals 1
 
-    .line 279
+    .line 278
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
 
 .method public getAsInt()I
-    .locals 2
+    .locals 1
 
-    .line 307
+    .line 306
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -177,21 +177,19 @@
 .method public getAsJsonArray()Lcom/google/gson/JsonArray;
     .locals 3
 
-    .line 176
+    .line 175
     invoke-virtual {p0}, Lcom/google/gson/JsonElement;->isJsonArray()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 177
-    move-object v0, p0
+    .line 176
+    check-cast p0, Lcom/google/gson/JsonArray;
 
-    check-cast v0, Lcom/google/gson/JsonArray;
+    return-object p0
 
-    return-object v0
-
-    .line 179
+    .line 178
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -205,9 +203,9 @@
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -215,21 +213,19 @@
 .method public getAsJsonNull()Lcom/google/gson/JsonNull;
     .locals 3
 
-    .line 209
+    .line 208
     invoke-virtual {p0}, Lcom/google/gson/JsonElement;->isJsonNull()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 210
-    move-object v0, p0
+    .line 209
+    check-cast p0, Lcom/google/gson/JsonNull;
 
-    check-cast v0, Lcom/google/gson/JsonNull;
+    return-object p0
 
-    return-object v0
-
-    .line 212
+    .line 211
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -243,9 +239,9 @@
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -253,21 +249,19 @@
 .method public getAsJsonObject()Lcom/google/gson/JsonObject;
     .locals 3
 
-    .line 161
+    .line 160
     invoke-virtual {p0}, Lcom/google/gson/JsonElement;->isJsonObject()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 162
-    move-object v0, p0
+    .line 161
+    check-cast p0, Lcom/google/gson/JsonObject;
 
-    check-cast v0, Lcom/google/gson/JsonObject;
+    return-object p0
 
-    return-object v0
-
-    .line 164
+    .line 163
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -281,9 +275,9 @@
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -291,21 +285,19 @@
 .method public getAsJsonPrimitive()Lcom/google/gson/JsonPrimitive;
     .locals 3
 
-    .line 192
+    .line 191
     invoke-virtual {p0}, Lcom/google/gson/JsonElement;->isJsonPrimitive()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 193
-    move-object v0, p0
+    .line 192
+    check-cast p0, Lcom/google/gson/JsonPrimitive;
 
-    check-cast v0, Lcom/google/gson/JsonPrimitive;
+    return-object p0
 
-    return-object v0
-
-    .line 195
+    .line 194
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -319,135 +311,135 @@
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
 
 .method public getAsLong()J
-    .locals 2
+    .locals 1
 
-    .line 293
+    .line 292
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
 
 .method public getAsNumber()Ljava/lang/Number;
-    .locals 2
+    .locals 1
 
-    .line 238
+    .line 237
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
 
 .method public getAsShort()S
-    .locals 2
+    .locals 1
 
-    .line 383
+    .line 382
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
 
 .method public getAsString()Ljava/lang/String;
-    .locals 2
+    .locals 1
 
-    .line 251
+    .line 250
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
 
 .method public isJsonArray()Z
-    .locals 1
+    .locals 0
 
-    .line 120
-    instance-of v0, p0, Lcom/google/gson/JsonArray;
+    .line 119
+    instance-of p0, p0, Lcom/google/gson/JsonArray;
 
-    return v0
+    return p0
 .end method
 
 .method public isJsonNull()Z
-    .locals 1
+    .locals 0
 
-    .line 148
-    instance-of v0, p0, Lcom/google/gson/JsonNull;
+    .line 147
+    instance-of p0, p0, Lcom/google/gson/JsonNull;
 
-    return v0
+    return p0
 .end method
 
 .method public isJsonObject()Z
-    .locals 1
+    .locals 0
 
-    .line 129
-    instance-of v0, p0, Lcom/google/gson/JsonObject;
+    .line 128
+    instance-of p0, p0, Lcom/google/gson/JsonObject;
 
-    return v0
+    return p0
 .end method
 
 .method public isJsonPrimitive()Z
-    .locals 1
+    .locals 0
 
-    .line 138
-    instance-of v0, p0, Lcom/google/gson/JsonPrimitive;
+    .line 137
+    instance-of p0, p0, Lcom/google/gson/JsonPrimitive;
 
-    return v0
+    return p0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 424
+    .line 423
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 425
+    .line 424
     new-instance v1, Lcom/google/gson/stream/JsonWriter;
 
     invoke-static {v0}, Lcom/google/gson/internal/Streams;->writerForAppendable(Ljava/lang/Appendable;)Ljava/io/Writer;
@@ -456,30 +448,30 @@
 
     invoke-direct {v1, v2}, Lcom/google/gson/stream/JsonWriter;-><init>(Ljava/io/Writer;)V
 
-    .line 428
+    .line 427
     sget-object v2, Lcom/google/gson/Strictness;->LENIENT:Lcom/google/gson/Strictness;
 
     invoke-virtual {v1, v2}, Lcom/google/gson/stream/JsonWriter;->setStrictness(Lcom/google/gson/Strictness;)V
 
-    .line 429
+    .line 428
     invoke-static {p0, v1}, Lcom/google/gson/internal/Streams;->write(Lcom/google/gson/JsonElement;Lcom/google/gson/stream/JsonWriter;)V
 
-    .line 430
+    .line 429
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object v0
+    return-object p0
 
     :catch_0
-    move-exception v0
+    move-exception p0
 
-    .line 432
-    new-instance v1, Ljava/lang/AssertionError;
+    .line 431
+    new-instance v0, Ljava/lang/AssertionError;
 
-    invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
 
-    throw v1
+    throw v0
 .end method

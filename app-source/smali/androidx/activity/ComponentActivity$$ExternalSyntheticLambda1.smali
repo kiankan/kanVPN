@@ -29,14 +29,14 @@
 
 # virtual methods
 .method public final run()V
-    .locals 2
+    .locals 1
 
     .line 0
     iget-object v0, p0, Landroidx/activity/ComponentActivity$$ExternalSyntheticLambda1;->f$0:Landroidx/activity/ComponentActivity;
 
-    iget-object v1, p0, Landroidx/activity/ComponentActivity$$ExternalSyntheticLambda1;->f$1:Landroidx/activity/OnBackPressedDispatcher;
+    iget-object p0, p0, Landroidx/activity/ComponentActivity$$ExternalSyntheticLambda1;->f$1:Landroidx/activity/OnBackPressedDispatcher;
 
-    invoke-static {v0, v1}, Landroidx/activity/ComponentActivity;->$r8$lambda$7IJBVrN0sHyidCAZufWEJFc7-yY(Landroidx/activity/ComponentActivity;Landroidx/activity/OnBackPressedDispatcher;)V
+    invoke-static {v0, p0}, Landroidx/activity/ComponentActivity;->$r8$lambda$7IJBVrN0sHyidCAZufWEJFc7-yY(Landroidx/activity/ComponentActivity;Landroidx/activity/OnBackPressedDispatcher;)V
 
     return-void
 .end method

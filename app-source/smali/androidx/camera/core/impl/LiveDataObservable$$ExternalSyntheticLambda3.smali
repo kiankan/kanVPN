@@ -3,15 +3,17 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/concurrent/futures/CallbackToFutureAdapter$Resolver;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic f$0:Landroidx/camera/core/impl/LiveDataObservable;
 
+.field public final synthetic f$1:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
+
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/camera/core/impl/LiveDataObservable;)V
+.method public synthetic constructor <init>(Landroidx/camera/core/impl/LiveDataObservable;Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;)V
     .locals 0
 
     .line 0
@@ -19,20 +21,22 @@
 
     iput-object p1, p0, Landroidx/camera/core/impl/LiveDataObservable$$ExternalSyntheticLambda3;->f$0:Landroidx/camera/core/impl/LiveDataObservable;
 
+    iput-object p2, p0, Landroidx/camera/core/impl/LiveDataObservable$$ExternalSyntheticLambda3;->f$1:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final attachCompleter(Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;)Ljava/lang/Object;
+.method public final run()V
     .locals 1
 
     .line 0
     iget-object v0, p0, Landroidx/camera/core/impl/LiveDataObservable$$ExternalSyntheticLambda3;->f$0:Landroidx/camera/core/impl/LiveDataObservable;
 
-    invoke-virtual {v0, p1}, Landroidx/camera/core/impl/LiveDataObservable;->lambda$fetchData$1$androidx-camera-core-impl-LiveDataObservable(Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;)Ljava/lang/Object;
+    iget-object p0, p0, Landroidx/camera/core/impl/LiveDataObservable$$ExternalSyntheticLambda3;->f$1:Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
 
-    move-result-object p1
+    invoke-virtual {v0, p0}, Landroidx/camera/core/impl/LiveDataObservable;->lambda$fetchData$0$androidx-camera-core-impl-LiveDataObservable(Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;)V
 
-    return-object p1
+    return-void
 .end method

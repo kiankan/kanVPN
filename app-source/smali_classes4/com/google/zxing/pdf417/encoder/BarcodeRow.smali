@@ -30,14 +30,14 @@
 .end method
 
 .method private set(IZ)V
-    .locals 1
+    .locals 0
 
     .line 53
-    iget-object v0, p0, Lcom/google/zxing/pdf417/encoder/BarcodeRow;->row:[B
+    iget-object p0, p0, Lcom/google/zxing/pdf417/encoder/BarcodeRow;->row:[B
 
     int-to-byte p2, p2
 
-    aput-byte p2, v0, p1
+    aput-byte p2, p0, p1
 
     return-void
 .end method
@@ -104,12 +104,12 @@
 .end method
 
 .method set(IB)V
-    .locals 1
+    .locals 0
 
     .line 43
-    iget-object v0, p0, Lcom/google/zxing/pdf417/encoder/BarcodeRow;->row:[B
+    iget-object p0, p0, Lcom/google/zxing/pdf417/encoder/BarcodeRow;->row:[B
 
-    aput-byte p2, v0, p1
+    aput-byte p2, p0, p1
 
     return-void
 .end method

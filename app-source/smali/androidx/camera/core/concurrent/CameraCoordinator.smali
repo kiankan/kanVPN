@@ -2,6 +2,9 @@
 .super Ljava/lang/Object;
 .source "CameraCoordinator.java"
 
+# interfaces
+.implements Landroidx/camera/core/impl/InternalCameraPresenceListener;
+
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
@@ -22,6 +25,12 @@
 
 # virtual methods
 .method public abstract addListener(Landroidx/camera/core/concurrent/CameraCoordinator$ConcurrentCameraModeListener;)V
+.end method
+
+.method public addPendingCameraInfo(Landroidx/camera/core/CameraInfo;)V
+    .locals 0
+
+    return-void
 .end method
 
 .method public abstract getActiveConcurrentCameraInfos()Ljava/util/List;
@@ -53,7 +62,19 @@
 .method public abstract getPairedConcurrentCameraId(Ljava/lang/String;)Ljava/lang/String;
 .end method
 
+.method public init(Landroidx/camera/core/impl/CameraRepository;)V
+    .locals 0
+
+    return-void
+.end method
+
 .method public abstract removeListener(Landroidx/camera/core/concurrent/CameraCoordinator$ConcurrentCameraModeListener;)V
+.end method
+
+.method public removePendingCameraInfo(Landroidx/camera/core/CameraInfo;)V
+    .locals 0
+
+    return-void
 .end method
 
 .method public abstract setActiveConcurrentCameraInfos(Ljava/util/List;)V

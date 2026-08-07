@@ -29,16 +29,16 @@
 
 # virtual methods
 .method public final accept(Ljava/lang/Object;)V
-    .locals 2
+    .locals 1
 
     .line 0
     iget-object v0, p0, Landroidx/camera/core/internal/CameraUseCaseAdapter$$ExternalSyntheticLambda0;->f$0:Landroid/view/Surface;
 
-    iget-object v1, p0, Landroidx/camera/core/internal/CameraUseCaseAdapter$$ExternalSyntheticLambda0;->f$1:Landroid/graphics/SurfaceTexture;
+    iget-object p0, p0, Landroidx/camera/core/internal/CameraUseCaseAdapter$$ExternalSyntheticLambda0;->f$1:Landroid/graphics/SurfaceTexture;
 
     check-cast p1, Landroidx/camera/core/SurfaceRequest$Result;
 
-    invoke-static {v0, v1, p1}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->lambda$createExtraPreview$0(Landroid/view/Surface;Landroid/graphics/SurfaceTexture;Landroidx/camera/core/SurfaceRequest$Result;)V
+    invoke-static {v0, p0, p1}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->lambda$createExtraPreview$0(Landroid/view/Surface;Landroid/graphics/SurfaceTexture;Landroidx/camera/core/SurfaceRequest$Result;)V
 
     return-void
 .end method

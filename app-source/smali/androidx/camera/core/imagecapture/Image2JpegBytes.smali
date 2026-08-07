@@ -32,10 +32,10 @@
 .method constructor <init>(Landroidx/camera/core/impl/Quirks;)V
     .locals 1
 
-    .line 54
+    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
+    .line 56
     new-instance v0, Landroidx/camera/core/internal/compat/workaround/JpegMetadataCorrector;
 
     invoke-direct {v0, p1}, Landroidx/camera/core/internal/compat/workaround/JpegMetadataCorrector;-><init>(Landroidx/camera/core/impl/Quirks;)V
@@ -53,7 +53,7 @@
         }
     .end annotation
 
-    .line 123
+    .line 124
     :try_start_0
     new-instance v0, Ljava/io/ByteArrayInputStream;
 
@@ -70,7 +70,7 @@
     :catch_0
     move-exception p0
 
-    .line 125
+    .line 126
     new-instance v0, Landroidx/camera/core/ImageCaptureException;
 
     const/4 v1, 0x0
@@ -83,7 +83,7 @@
 .end method
 
 .method private processJpegImage(Landroidx/camera/core/imagecapture/Image2JpegBytes$In;I)Landroidx/camera/core/processing/Packet;
-    .locals 10
+    .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -94,75 +94,75 @@
         }
     .end annotation
 
-    .line 79
+    .line 80
     invoke-virtual {p1}, Landroidx/camera/core/imagecapture/Image2JpegBytes$In;->getPacket()Landroidx/camera/core/processing/Packet;
 
     move-result-object p1
 
-    .line 80
-    iget-object v0, p0, Landroidx/camera/core/imagecapture/Image2JpegBytes;->mJpegMetadataCorrector:Landroidx/camera/core/internal/compat/workaround/JpegMetadataCorrector;
-
     .line 81
+    iget-object p0, p0, Landroidx/camera/core/imagecapture/Image2JpegBytes;->mJpegMetadataCorrector:Landroidx/camera/core/internal/compat/workaround/JpegMetadataCorrector;
+
+    .line 82
     invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getData()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/camera/core/ImageProxy;
+
+    invoke-virtual {p0, v0}, Landroidx/camera/core/internal/compat/workaround/JpegMetadataCorrector;->jpegImageToJpegByteArray(Landroidx/camera/core/ImageProxy;)[B
 
     move-result-object v1
 
-    check-cast v1, Landroidx/camera/core/ImageProxy;
-
-    invoke-virtual {v0, v1}, Landroidx/camera/core/internal/compat/workaround/JpegMetadataCorrector;->jpegImageToJpegByteArray(Landroidx/camera/core/ImageProxy;)[B
-
-    move-result-object v2
-
-    .line 82
+    .line 83
     invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getExif()Landroidx/camera/core/impl/utils/Exif;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    move-object v3, v0
+    move-object v2, p0
 
-    check-cast v3, Landroidx/camera/core/impl/utils/Exif;
+    check-cast v2, Landroidx/camera/core/impl/utils/Exif;
 
-    .line 84
+    .line 85
     invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getSize()Landroid/util/Size;
+
+    move-result-object v4
+
+    .line 86
+    invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getCropRect()Landroid/graphics/Rect;
 
     move-result-object v5
 
-    .line 85
-    invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getCropRect()Landroid/graphics/Rect;
-
-    move-result-object v6
-
-    .line 86
+    .line 87
     invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getRotationDegrees()I
 
-    move-result v7
+    move-result v6
 
-    .line 87
+    .line 88
     invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getSensorToBufferTransform()Landroid/graphics/Matrix;
+
+    move-result-object v7
+
+    .line 89
+    invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getCameraCaptureResult()Landroidx/camera/core/impl/CameraCaptureResult;
 
     move-result-object v8
 
-    .line 88
-    invoke-virtual {p1}, Landroidx/camera/core/processing/Packet;->getCameraCaptureResult()Landroidx/camera/core/impl/CameraCaptureResult;
+    move v3, p2
 
-    move-result-object v9
+    .line 81
+    invoke-static/range {v1 .. v8}, Landroidx/camera/core/processing/Packet;->of([BLandroidx/camera/core/impl/utils/Exif;ILandroid/util/Size;Landroid/graphics/Rect;ILandroid/graphics/Matrix;Landroidx/camera/core/impl/CameraCaptureResult;)Landroidx/camera/core/processing/Packet;
 
-    move v4, p2
+    move-result-object p0
 
-    .line 80
-    invoke-static/range {v2 .. v9}, Landroidx/camera/core/processing/Packet;->of([BLandroidx/camera/core/impl/utils/Exif;ILandroid/util/Size;Landroid/graphics/Rect;ILandroid/graphics/Matrix;Landroidx/camera/core/impl/CameraCaptureResult;)Landroidx/camera/core/processing/Packet;
-
-    move-result-object p1
-
-    return-object p1
+    return-object p0
 .end method
 
 .method private processYuvImage(Landroidx/camera/core/imagecapture/Image2JpegBytes$In;)Landroidx/camera/core/processing/Packet;
-    .locals 12
+    .locals 11
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -179,123 +179,123 @@
         }
     .end annotation
 
-    .line 93
+    .line 94
     invoke-virtual {p1}, Landroidx/camera/core/imagecapture/Image2JpegBytes$In;->getPacket()Landroidx/camera/core/processing/Packet;
+
+    move-result-object p0
+
+    .line 95
+    invoke-virtual {p0}, Landroidx/camera/core/processing/Packet;->getData()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 94
-    invoke-virtual {v0}, Landroidx/camera/core/processing/Packet;->getData()Ljava/lang/Object;
+    check-cast v0, Landroidx/camera/core/ImageProxy;
+
+    .line 96
+    invoke-virtual {p0}, Landroidx/camera/core/processing/Packet;->getCropRect()Landroid/graphics/Rect;
 
     move-result-object v1
 
-    check-cast v1, Landroidx/camera/core/ImageProxy;
-
-    .line 95
-    invoke-virtual {v0}, Landroidx/camera/core/processing/Packet;->getCropRect()Landroid/graphics/Rect;
-
-    move-result-object v2
-
-    .line 102
+    .line 103
     :try_start_0
     invoke-virtual {p1}, Landroidx/camera/core/imagecapture/Image2JpegBytes$In;->getJpegQuality()I
 
     move-result p1
 
-    .line 103
-    invoke-virtual {v0}, Landroidx/camera/core/processing/Packet;->getRotationDegrees()I
+    .line 104
+    invoke-virtual {p0}, Landroidx/camera/core/processing/Packet;->getRotationDegrees()I
 
-    move-result v3
+    move-result v2
 
-    .line 99
-    invoke-static {v1, v2, p1, v3}, Landroidx/camera/core/internal/utils/ImageUtil;->yuvImageToJpegByteArray(Landroidx/camera/core/ImageProxy;Landroid/graphics/Rect;II)[B
+    .line 100
+    invoke-static {v0, v1, p1, v2}, Landroidx/camera/core/internal/utils/ImageUtil;->yuvImageToJpegByteArray(Landroidx/camera/core/ImageProxy;Landroid/graphics/Rect;II)[B
 
-    move-result-object v4
+    move-result-object v3
     :try_end_0
     .catch Landroidx/camera/core/internal/utils/ImageUtil$CodecFailedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 112
-    invoke-static {v4}, Landroidx/camera/core/imagecapture/Image2JpegBytes;->extractExif([B)Landroidx/camera/core/impl/utils/Exif;
+    .line 113
+    invoke-static {v3}, Landroidx/camera/core/imagecapture/Image2JpegBytes;->extractExif([B)Landroidx/camera/core/impl/utils/Exif;
 
-    move-result-object v5
+    move-result-object v4
 
-    new-instance v7, Landroid/util/Size;
-
-    .line 114
-    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
-
-    move-result p1
-
-    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
-
-    move-result v1
-
-    invoke-direct {v7, p1, v1}, Landroid/util/Size;-><init>(II)V
-
-    new-instance v8, Landroid/graphics/Rect;
+    new-instance v6, Landroid/util/Size;
 
     .line 115
-    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
+    invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
 
     move-result p1
 
-    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
+    invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
 
-    move-result v1
+    move-result v0
 
-    const/4 v3, 0x0
+    invoke-direct {v6, p1, v0}, Landroid/util/Size;-><init>(II)V
 
-    invoke-direct {v8, v3, v3, p1, v1}, Landroid/graphics/Rect;-><init>(IIII)V
+    new-instance v7, Landroid/graphics/Rect;
 
     .line 116
-    invoke-virtual {v0}, Landroidx/camera/core/processing/Packet;->getRotationDegrees()I
+    invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
 
-    move-result v9
+    move-result p1
+
+    invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
+
+    move-result v0
+
+    const/4 v2, 0x0
+
+    invoke-direct {v7, v2, v2, p1, v0}, Landroid/graphics/Rect;-><init>(IIII)V
 
     .line 117
-    invoke-virtual {v0}, Landroidx/camera/core/processing/Packet;->getSensorToBufferTransform()Landroid/graphics/Matrix;
+    invoke-virtual {p0}, Landroidx/camera/core/processing/Packet;->getRotationDegrees()I
+
+    move-result v8
+
+    .line 118
+    invoke-virtual {p0}, Landroidx/camera/core/processing/Packet;->getSensorToBufferTransform()Landroid/graphics/Matrix;
 
     move-result-object p1
 
-    invoke-static {p1, v2}, Landroidx/camera/core/impl/utils/TransformUtils;->updateSensorToBufferTransform(Landroid/graphics/Matrix;Landroid/graphics/Rect;)Landroid/graphics/Matrix;
+    invoke-static {p1, v1}, Landroidx/camera/core/impl/utils/TransformUtils;->updateSensorToBufferTransform(Landroid/graphics/Matrix;Landroid/graphics/Rect;)Landroid/graphics/Matrix;
+
+    move-result-object v9
+
+    .line 119
+    invoke-virtual {p0}, Landroidx/camera/core/processing/Packet;->getCameraCaptureResult()Landroidx/camera/core/impl/CameraCaptureResult;
 
     move-result-object v10
 
-    .line 118
-    invoke-virtual {v0}, Landroidx/camera/core/processing/Packet;->getCameraCaptureResult()Landroidx/camera/core/impl/CameraCaptureResult;
+    const/16 v5, 0x100
 
-    move-result-object v11
+    .line 111
+    invoke-static/range {v3 .. v10}, Landroidx/camera/core/processing/Packet;->of([BLandroidx/camera/core/impl/utils/Exif;ILandroid/util/Size;Landroid/graphics/Rect;ILandroid/graphics/Matrix;Landroidx/camera/core/impl/CameraCaptureResult;)Landroidx/camera/core/processing/Packet;
 
-    const/16 v6, 0x100
+    move-result-object p0
 
-    .line 110
-    invoke-static/range {v4 .. v11}, Landroidx/camera/core/processing/Packet;->of([BLandroidx/camera/core/impl/utils/Exif;ILandroid/util/Size;Landroid/graphics/Rect;ILandroid/graphics/Matrix;Landroidx/camera/core/impl/CameraCaptureResult;)Landroidx/camera/core/processing/Packet;
-
-    move-result-object p1
-
-    return-object p1
+    return-object p0
 
     :catch_0
     move-exception v0
 
-    move-object p1, v0
+    move-object p0, v0
 
-    .line 105
-    new-instance v0, Landroidx/camera/core/ImageCaptureException;
+    .line 106
+    new-instance p1, Landroidx/camera/core/ImageCaptureException;
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    const-string v2, "Failed to encode the image to JPEG."
+    const-string v1, "Failed to encode the image to JPEG."
 
-    invoke-direct {v0, v1, v2, p1}, Landroidx/camera/core/ImageCaptureException;-><init>(ILjava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {p1, v0, v1, p0}, Landroidx/camera/core/ImageCaptureException;-><init>(ILjava/lang/String;Ljava/lang/Throwable;)V
 
-    throw v0
+    throw p1
 .end method
 
 
 # virtual methods
 .method public apply(Landroidx/camera/core/imagecapture/Image2JpegBytes$In;)Landroidx/camera/core/processing/Packet;
-    .locals 4
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -314,7 +314,7 @@
 
     const-string v0, "Unexpected format: "
 
-    .line 62
+    .line 63
     :try_start_0
     invoke-virtual {p1}, Landroidx/camera/core/imagecapture/Image2JpegBytes$In;->getPacket()Landroidx/camera/core/processing/Packet;
 
@@ -338,34 +338,34 @@
 
     goto :goto_0
 
-    .line 71
+    .line 72
     :cond_0
-    new-instance v2, Ljava/lang/IllegalArgumentException;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {v2, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw v2
+    throw p0
 
-    .line 67
+    .line 68
     :cond_1
     :goto_0
     invoke-direct {p0, p1, v1}, Landroidx/camera/core/imagecapture/Image2JpegBytes;->processJpegImage(Landroidx/camera/core/imagecapture/Image2JpegBytes$In;I)Landroidx/camera/core/processing/Packet;
 
-    move-result-object v0
+    move-result-object p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 74
+    .line 75
     :goto_1
     invoke-virtual {p1}, Landroidx/camera/core/imagecapture/Image2JpegBytes$In;->getPacket()Landroidx/camera/core/processing/Packet;
 
@@ -379,23 +379,23 @@
 
     invoke-interface {p1}, Landroidx/camera/core/ImageProxy;->close()V
 
-    return-object v0
+    return-object p0
 
-    .line 69
+    .line 70
     :cond_2
     :try_start_1
     invoke-direct {p0, p1}, Landroidx/camera/core/imagecapture/Image2JpegBytes;->processYuvImage(Landroidx/camera/core/imagecapture/Image2JpegBytes$In;)Landroidx/camera/core/processing/Packet;
 
-    move-result-object v0
+    move-result-object p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_1
 
     :catchall_0
-    move-exception v0
+    move-exception p0
 
-    .line 74
+    .line 75
     invoke-virtual {p1}, Landroidx/camera/core/imagecapture/Image2JpegBytes$In;->getPacket()Landroidx/camera/core/processing/Packet;
 
     move-result-object p1
@@ -408,8 +408,8 @@
 
     invoke-interface {p1}, Landroidx/camera/core/ImageProxy;->close()V
 
-    .line 75
-    throw v0
+    .line 76
+    throw p0
 .end method
 
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
@@ -429,12 +429,12 @@
         }
     .end annotation
 
-    .line 51
+    .line 52
     check-cast p1, Landroidx/camera/core/imagecapture/Image2JpegBytes$In;
 
     invoke-virtual {p0, p1}, Landroidx/camera/core/imagecapture/Image2JpegBytes;->apply(Landroidx/camera/core/imagecapture/Image2JpegBytes$In;)Landroidx/camera/core/processing/Packet;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method

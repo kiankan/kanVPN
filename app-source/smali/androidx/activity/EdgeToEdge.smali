@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nEdgeToEdge.kt\nKotlin\n*S Kotlin\n*F\n+ 1 EdgeToEdge.kt\nandroidx/activity/EdgeToEdge\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,366:1\n1#2:367\n*E\n"
+    value = "SMAP\nEdgeToEdge.kt\nKotlin\n*S Kotlin\n*F\n+ 1 EdgeToEdge.kt\nandroidx/activity/EdgeToEdge\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 3 _Sequences.kt\nkotlin/sequences/SequencesKt___SequencesKt\n*L\n1#1,400:1\n1#2:401\n1255#3,2:402\n*S KotlinDebug\n*F\n+ 1 EdgeToEdge.kt\nandroidx/activity/EdgeToEdge\n*L\n111#1:402,2\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -36,7 +36,7 @@
     k = 0x2
     mv = {
         0x2,
-        0x0,
+        0x1,
         0x0
     }
     xi = 0x30
@@ -59,7 +59,7 @@
 
     const/16 v1, 0xff
 
-    .line 45
+    .line 47
     invoke-static {v0, v1, v1, v1}, Landroid/graphics/Color;->argb(IIII)I
 
     move-result v0
@@ -70,7 +70,7 @@
 
     const/16 v1, 0x1b
 
-    .line 50
+    .line 52
     invoke-static {v0, v1, v1, v1}, Landroid/graphics/Color;->argb(IIII)I
 
     move-result v0
@@ -103,7 +103,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "statusBarStyle"
+    const-string/jumbo v0, "statusBarStyle"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -117,13 +117,13 @@
 .end method
 
 .method public static final enable(Landroidx/activity/ComponentActivity;Landroidx/activity/SystemBarStyle;Landroidx/activity/SystemBarStyle;)V
-    .locals 8
+    .locals 7
 
     const-string v0, "<this>"
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "statusBarStyle"
+    const-string/jumbo v0, "statusBarStyle"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -131,62 +131,18 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 81
+    .line 83
     invoke-virtual {p0}, Landroidx/activity/ComponentActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
-    move-result-object v5
+    move-result-object v6
 
     const-string v0, "getDecorView(...)"
 
-    invoke-static {v5, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 82
-    invoke-virtual {p1}, Landroidx/activity/SystemBarStyle;->getDetectDarkMode$activity()Lkotlin/jvm/functions/Function1;
-
-    move-result-object v0
-
-    invoke-virtual {v5}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const-string v2, "getResources(...)"
-
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-interface {v0, v1}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v6
-
-    .line 83
-    invoke-virtual {p2}, Landroidx/activity/SystemBarStyle;->getDetectDarkMode$activity()Lkotlin/jvm/functions/Function1;
-
-    move-result-object v0
-
-    invoke-virtual {v5}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-interface {v0, v1}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v7
+    invoke-static {v6, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 85
     sget-object v0, Landroidx/activity/EdgeToEdge;->Impl:Landroidx/activity/EdgeToEdgeImpl;
@@ -292,32 +248,99 @@
     sput-object v0, Landroidx/activity/EdgeToEdge;->Impl:Landroidx/activity/EdgeToEdgeImpl;
 
     :cond_5
-    move-object v1, v0
-
-    .line 103
-    invoke-virtual {p0}, Landroidx/activity/ComponentActivity;->getWindow()Landroid/view/Window;
-
-    move-result-object v4
-
-    const-string v0, "getWindow(...)"
-
-    invoke-static {v4, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    move-object v2, p1
-
-    move-object v3, p2
+    move-object v2, v0
 
     .line 100
-    invoke-interface/range {v1 .. v7}, Landroidx/activity/EdgeToEdgeImpl;->setUp(Landroidx/activity/SystemBarStyle;Landroidx/activity/SystemBarStyle;Landroid/view/Window;Landroid/view/View;ZZ)V
+    new-instance v1, Landroidx/activity/EdgeToEdge$$ExternalSyntheticLambda0;
 
-    .line 108
-    invoke-virtual {p0}, Landroidx/activity/ComponentActivity;->getWindow()Landroid/view/Window;
+    move-object v5, p0
+
+    move-object v3, p1
+
+    move-object v4, p2
+
+    invoke-direct/range {v1 .. v6}, Landroidx/activity/EdgeToEdge$$ExternalSyntheticLambda0;-><init>(Landroidx/activity/EdgeToEdgeImpl;Landroidx/activity/SystemBarStyle;Landroidx/activity/SystemBarStyle;Landroidx/activity/ComponentActivity;Landroid/view/View;)V
+
+    .line 110
+    check-cast v6, Landroid/view/ViewGroup;
+
+    .line 111
+    invoke-static {v6}, Landroidx/core/view/ViewGroupKt;->getChildren(Landroid/view/ViewGroup;)Lkotlin/sequences/Sequence;
 
     move-result-object p0
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 402
+    invoke-interface {p0}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
-    invoke-interface {v1, p0}, Landroidx/activity/EdgeToEdgeImpl;->adjustLayoutInDisplayCutoutMode(Landroid/view/Window;)V
+    move-result-object p0
+
+    :cond_6
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_7
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/view/View;
+
+    .line 111
+    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
+
+    move-result-object p1
+
+    instance-of p1, p1, Landroidx/activity/EdgeToEdgeImpl;
+
+    if-eqz p1, :cond_6
+
+    goto :goto_1
+
+    .line 114
+    :cond_7
+    invoke-virtual {v6}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    new-instance p1, Landroidx/activity/EdgeToEdge$enableEdgeToEdge$1$2;
+
+    invoke-direct {p1, v1, p0}, Landroidx/activity/EdgeToEdge$enableEdgeToEdge$1$2;-><init>(Ljava/lang/Runnable;Landroid/content/Context;)V
+
+    .line 120
+    invoke-virtual {p1, v2}, Landroidx/activity/EdgeToEdge$enableEdgeToEdge$1$2;->setTag(Ljava/lang/Object;)V
+
+    const/16 p0, 0x8
+
+    .line 121
+    invoke-virtual {p1, p0}, Landroidx/activity/EdgeToEdge$enableEdgeToEdge$1$2;->setVisibility(I)V
+
+    const/4 p0, 0x1
+
+    .line 122
+    invoke-virtual {p1, p0}, Landroidx/activity/EdgeToEdge$enableEdgeToEdge$1$2;->setWillNotDraw(Z)V
+
+    .line 119
+    check-cast p1, Landroid/view/View;
+
+    .line 113
+    invoke-virtual {v6, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    .line 127
+    :goto_1
+    invoke-interface {v1}, Ljava/lang/Runnable;->run()V
+
+    .line 128
+    invoke-virtual {v5}, Landroidx/activity/ComponentActivity;->getWindow()Landroid/view/Window;
+
+    move-result-object p0
+
+    const-string p1, "getWindow(...)"
+
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-interface {v2, p0}, Landroidx/activity/EdgeToEdgeImpl;->adjustLayoutInDisplayCutoutMode(Landroid/view/Window;)V
 
     return-void
 .end method
@@ -329,7 +352,7 @@
 
     if-eqz p4, :cond_0
 
-    .line 78
+    .line 80
     sget-object v0, Landroidx/activity/SystemBarStyle;->Companion:Landroidx/activity/SystemBarStyle$Companion;
 
     const/4 v4, 0x4
@@ -351,7 +374,7 @@
 
     if-eqz p3, :cond_1
 
-    .line 79
+    .line 81
     sget-object v0, Landroidx/activity/SystemBarStyle;->Companion:Landroidx/activity/SystemBarStyle$Companion;
 
     sget v1, Landroidx/activity/EdgeToEdge;->DefaultLightScrim:I
@@ -368,9 +391,79 @@
 
     move-result-object p2
 
-    .line 77
+    .line 79
     :cond_1
     invoke-static {p0, p1, p2}, Landroidx/activity/EdgeToEdge;->enable(Landroidx/activity/ComponentActivity;Landroidx/activity/SystemBarStyle;Landroidx/activity/SystemBarStyle;)V
+
+    return-void
+.end method
+
+.method static final enableEdgeToEdge$lambda$1(Landroidx/activity/EdgeToEdgeImpl;Landroidx/activity/SystemBarStyle;Landroidx/activity/SystemBarStyle;Landroidx/activity/ComponentActivity;Landroid/view/View;)V
+    .locals 7
+
+    .line 104
+    invoke-virtual {p3}, Landroidx/activity/ComponentActivity;->getWindow()Landroid/view/Window;
+
+    move-result-object v3
+
+    const-string p3, "getWindow(...)"
+
+    invoke-static {v3, p3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 106
+    invoke-virtual {p1}, Landroidx/activity/SystemBarStyle;->getDetectDarkMode$activity()Lkotlin/jvm/functions/Function1;
+
+    move-result-object p3
+
+    invoke-virtual {p4}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const-string v1, "getResources(...)"
+
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-interface {p3, v0}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Ljava/lang/Boolean;
+
+    invoke-virtual {p3}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v5
+
+    .line 107
+    invoke-virtual {p2}, Landroidx/activity/SystemBarStyle;->getDetectDarkMode$activity()Lkotlin/jvm/functions/Function1;
+
+    move-result-object p3
+
+    invoke-virtual {p4}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-interface {p3, v0}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Ljava/lang/Boolean;
+
+    invoke-virtual {p3}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v6
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v4, p4
+
+    .line 101
+    invoke-interface/range {v0 .. v6}, Landroidx/activity/EdgeToEdgeImpl;->setUp(Landroidx/activity/SystemBarStyle;Landroidx/activity/SystemBarStyle;Landroid/view/Window;Landroid/view/View;ZZ)V
 
     return-void
 .end method
@@ -378,7 +471,7 @@
 .method public static final getDefaultDarkScrim()I
     .locals 1
 
-    .line 50
+    .line 52
     sget v0, Landroidx/activity/EdgeToEdge;->DefaultDarkScrim:I
 
     return v0
@@ -393,7 +486,7 @@
 .method public static final getDefaultLightScrim()I
     .locals 1
 
-    .line 45
+    .line 47
     sget v0, Landroidx/activity/EdgeToEdge;->DefaultLightScrim:I
 
     return v0

@@ -119,7 +119,7 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v2, "unknown decoder: "
+    const-string/jumbo v2, "unknown decoder: "
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -229,6 +229,8 @@
 
     return-object v0
 
+    nop
+
     :pswitch_data_0
     .packed-switch 0x38
         :pswitch_7
@@ -245,21 +247,21 @@
 
 # virtual methods
 .method protected final getGeneralDecoder()Lcom/google/zxing/oned/rss/expanded/decoders/GeneralAppIdDecoder;
-    .locals 1
+    .locals 0
 
     .line 52
-    iget-object v0, p0, Lcom/google/zxing/oned/rss/expanded/decoders/AbstractExpandedDecoder;->generalDecoder:Lcom/google/zxing/oned/rss/expanded/decoders/GeneralAppIdDecoder;
+    iget-object p0, p0, Lcom/google/zxing/oned/rss/expanded/decoders/AbstractExpandedDecoder;->generalDecoder:Lcom/google/zxing/oned/rss/expanded/decoders/GeneralAppIdDecoder;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method protected final getInformation()Lcom/google/zxing/common/BitArray;
-    .locals 1
+    .locals 0
 
     .line 48
-    iget-object v0, p0, Lcom/google/zxing/oned/rss/expanded/decoders/AbstractExpandedDecoder;->information:Lcom/google/zxing/common/BitArray;
+    iget-object p0, p0, Lcom/google/zxing/oned/rss/expanded/decoders/AbstractExpandedDecoder;->information:Lcom/google/zxing/common/BitArray;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public abstract parseInformation()Ljava/lang/String;

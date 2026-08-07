@@ -33,7 +33,7 @@
         }
     .end annotation
 
-    .line 1222
+    .line 1394
     iput-object p1, p0, Landroidx/camera/core/ImageCapture$1;->this$0:Landroidx/camera/core/ImageCapture;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,18 +44,18 @@
 
 # virtual methods
 .method public lockFlashMode()V
-    .locals 1
+    .locals 0
 
-    .line 1227
-    iget-object v0, p0, Landroidx/camera/core/ImageCapture$1;->this$0:Landroidx/camera/core/ImageCapture;
+    .line 1399
+    iget-object p0, p0, Landroidx/camera/core/ImageCapture$1;->this$0:Landroidx/camera/core/ImageCapture;
 
-    invoke-virtual {v0}, Landroidx/camera/core/ImageCapture;->lockFlashMode()V
+    invoke-virtual {p0}, Landroidx/camera/core/ImageCapture;->lockFlashMode()V
 
     return-void
 .end method
 
 .method public submitStillCaptureRequests(Ljava/util/List;)Lcom/google/common/util/concurrent/ListenableFuture;
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -68,23 +68,23 @@
         }
     .end annotation
 
-    .line 1241
-    iget-object v0, p0, Landroidx/camera/core/ImageCapture$1;->this$0:Landroidx/camera/core/ImageCapture;
+    .line 1412
+    iget-object p0, p0, Landroidx/camera/core/ImageCapture$1;->this$0:Landroidx/camera/core/ImageCapture;
 
-    invoke-virtual {v0, p1}, Landroidx/camera/core/ImageCapture;->submitStillCaptureRequest(Ljava/util/List;)Lcom/google/common/util/concurrent/ListenableFuture;
+    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageCapture;->submitStillCaptureRequest(Ljava/util/List;)Lcom/google/common/util/concurrent/ListenableFuture;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 .method public unlockFlashMode()V
-    .locals 1
+    .locals 0
 
-    .line 1233
-    iget-object v0, p0, Landroidx/camera/core/ImageCapture$1;->this$0:Landroidx/camera/core/ImageCapture;
+    .line 1405
+    iget-object p0, p0, Landroidx/camera/core/ImageCapture$1;->this$0:Landroidx/camera/core/ImageCapture;
 
-    invoke-virtual {v0}, Landroidx/camera/core/ImageCapture;->unlockFlashMode()V
+    invoke-virtual {p0}, Landroidx/camera/core/ImageCapture;->unlockFlashMode()V
 
     return-void
 .end method

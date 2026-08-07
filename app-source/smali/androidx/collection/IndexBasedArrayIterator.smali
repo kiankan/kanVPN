@@ -21,7 +21,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nIndexBasedArrayIterator.kt\nKotlin\n*S Kotlin\n*F\n+ 1 IndexBasedArrayIterator.kt\nandroidx/collection/IndexBasedArrayIterator\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,48:1\n1#2:49\n*E\n"
+    value = "SMAP\nIndexBasedArrayIterator.kt\nKotlin\n*S Kotlin\n*F\n+ 1 IndexBasedArrayIterator.kt\nandroidx/collection/IndexBasedArrayIterator\n+ 2 RuntimeHelpers.kt\nandroidx/collection/internal/RuntimeHelpersKt\n*L\n1#1,51:1\n45#2,5:52\n*S KotlinDebug\n*F\n+ 1 IndexBasedArrayIterator.kt\nandroidx/collection/IndexBasedArrayIterator\n*L\n44#1:52,5\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -52,7 +52,7 @@
     k = 0x1
     mv = {
         0x1,
-        0x8,
+        0x9,
         0x0
     }
     xi = 0x30
@@ -71,10 +71,10 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 18
+    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 20
+    .line 22
     iput p1, p0, Landroidx/collection/IndexBasedArrayIterator;->size:I
 
     return-void
@@ -91,23 +91,23 @@
 .end method
 
 .method public hasNext()Z
-    .locals 2
+    .locals 1
 
-    .line 27
+    .line 30
     iget v0, p0, Landroidx/collection/IndexBasedArrayIterator;->index:I
 
-    iget v1, p0, Landroidx/collection/IndexBasedArrayIterator;->size:I
+    iget p0, p0, Landroidx/collection/IndexBasedArrayIterator;->size:I
 
-    if-ge v0, v1, :cond_0
+    if-ge v0, p0, :cond_0
 
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public next()Ljava/lang/Object;
@@ -118,21 +118,21 @@
         }
     .end annotation
 
-    .line 30
+    .line 33
     invoke-virtual {p0}, Landroidx/collection/IndexBasedArrayIterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 34
+    .line 37
     iget v0, p0, Landroidx/collection/IndexBasedArrayIterator;->index:I
 
     invoke-virtual {p0, v0}, Landroidx/collection/IndexBasedArrayIterator;->elementAt(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 35
+    .line 38
     iget v1, p0, Landroidx/collection/IndexBasedArrayIterator;->index:I
 
     const/4 v2, 0x1
@@ -141,29 +141,35 @@
 
     iput v1, p0, Landroidx/collection/IndexBasedArrayIterator;->index:I
 
-    .line 36
+    .line 39
     iput-boolean v2, p0, Landroidx/collection/IndexBasedArrayIterator;->canRemove:Z
 
     return-object v0
 
-    .line 31
+    .line 34
     :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
+    new-instance p0, Ljava/util/NoSuchElementException;
 
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+    invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    throw v0
+    throw p0
 .end method
 
 .method public remove()V
-    .locals 2
+    .locals 1
 
-    .line 41
+    .line 44
     iget-boolean v0, p0, Landroidx/collection/IndexBasedArrayIterator;->canRemove:Z
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    .line 43
+    const-string v0, "Call next() before removing an element."
+
+    .line 54
+    invoke-static {v0}, Landroidx/collection/internal/RuntimeHelpersKt;->throwIllegalStateException(Ljava/lang/String;)V
+
+    .line 46
+    :cond_0
     iget v0, p0, Landroidx/collection/IndexBasedArrayIterator;->index:I
 
     add-int/lit8 v0, v0, -0x1
@@ -172,7 +178,7 @@
 
     invoke-virtual {p0, v0}, Landroidx/collection/IndexBasedArrayIterator;->removeAt(I)V
 
-    .line 44
+    .line 47
     iget v0, p0, Landroidx/collection/IndexBasedArrayIterator;->size:I
 
     add-int/lit8 v0, v0, -0x1
@@ -181,24 +187,10 @@
 
     const/4 v0, 0x0
 
-    .line 45
+    .line 48
     iput-boolean v0, p0, Landroidx/collection/IndexBasedArrayIterator;->canRemove:Z
 
     return-void
-
-    .line 41
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Call next() before removing an element."
-
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method
 
 .method protected abstract removeAt(I)V

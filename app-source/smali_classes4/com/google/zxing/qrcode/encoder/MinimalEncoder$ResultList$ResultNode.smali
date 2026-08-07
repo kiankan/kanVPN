@@ -101,7 +101,7 @@
 .end method
 
 .method private getBits(Lcom/google/zxing/common/BitArray;)V
-    .locals 4
+    .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/google/zxing/WriterException;
@@ -161,15 +161,15 @@
 
     move-result-object v0
 
-    iget v1, p0, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$ResultList$ResultNode;->charsetEncoderIndex:I
+    iget p0, p0, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$ResultList$ResultNode;->charsetEncoderIndex:I
 
-    invoke-virtual {v0, v1}, Lcom/google/zxing/common/ECIEncoderSet;->getECIValue(I)I
+    invoke-virtual {v0, p0}, Lcom/google/zxing/common/ECIEncoderSet;->getECIValue(I)I
 
-    move-result v0
+    move-result p0
 
-    const/16 v1, 0x8
+    const/16 v0, 0x8
 
-    invoke-virtual {p1, v0, v1}, Lcom/google/zxing/common/BitArray;->appendBits(II)V
+    invoke-virtual {p1, p0, v0}, Lcom/google/zxing/common/BitArray;->appendBits(II)V
 
     return-void
 
@@ -209,14 +209,14 @@
 
     move-result-object v2
 
-    iget v3, p0, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$ResultList$ResultNode;->charsetEncoderIndex:I
+    iget p0, p0, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$ResultList$ResultNode;->charsetEncoderIndex:I
 
-    invoke-virtual {v2, v3}, Lcom/google/zxing/common/ECIEncoderSet;->getCharset(I)Ljava/nio/charset/Charset;
+    invoke-virtual {v2, p0}, Lcom/google/zxing/common/ECIEncoderSet;->getCharset(I)Ljava/nio/charset/Charset;
 
-    move-result-object v2
+    move-result-object p0
 
     .line 637
-    invoke-static {v0, v1, p1, v2}, Lcom/google/zxing/qrcode/encoder/Encoder;->appendBytes(Ljava/lang/String;Lcom/google/zxing/qrcode/decoder/Mode;Lcom/google/zxing/common/BitArray;Ljava/nio/charset/Charset;)V
+    invoke-static {v0, v1, p1, p0}, Lcom/google/zxing/qrcode/encoder/Encoder;->appendBytes(Ljava/lang/String;Lcom/google/zxing/qrcode/decoder/Mode;Lcom/google/zxing/common/BitArray;Ljava/nio/charset/Charset;)V
 
     :cond_2
     return-void
@@ -260,21 +260,21 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$ResultList$ResultNode;->charsetEncoderIndex:I
+    iget p0, p0, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$ResultList$ResultNode;->charsetEncoderIndex:I
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/zxing/common/ECIEncoderSet;->encode(Ljava/lang/String;I)[B
+    invoke-virtual {v0, v1, p0}, Lcom/google/zxing/common/ECIEncoderSet;->encode(Ljava/lang/String;I)[B
 
-    move-result-object v0
+    move-result-object p0
 
-    array-length v0, v0
+    array-length p0, p0
 
-    return v0
+    return p0
 
     .line 621
     :cond_0
-    iget v0, p0, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$ResultList$ResultNode;->characterLength:I
+    iget p0, p0, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$ResultList$ResultNode;->characterLength:I
 
-    return v0
+    return p0
 .end method
 
 .method private getSize(Lcom/google/zxing/qrcode/decoder/Version;)I
@@ -318,9 +318,9 @@
 
     if-eq v1, v6, :cond_1
 
-    const/4 v2, 0x5
+    const/4 p0, 0x5
 
-    if-eq v1, v2, :cond_0
+    if-eq v1, p0, :cond_0
 
     return v0
 
@@ -333,36 +333,36 @@
     :cond_1
     invoke-direct {p0}, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$ResultList$ResultNode;->getCharacterCountIndicator()I
 
-    move-result p1
+    move-result p0
 
-    mul-int/lit8 p1, p1, 0x8
+    mul-int/lit8 p0, p0, 0x8
 
     :goto_0
-    add-int/2addr v0, p1
+    add-int/2addr v0, p0
 
     return v0
 
     .line 601
     :cond_2
-    iget p1, p0, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$ResultList$ResultNode;->characterLength:I
+    iget p0, p0, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$ResultList$ResultNode;->characterLength:I
 
-    div-int/lit8 v1, p1, 0x3
+    div-int/lit8 p1, p0, 0x3
 
-    mul-int/lit8 v1, v1, 0xa
+    mul-int/lit8 p1, p1, 0xa
 
-    add-int/2addr v0, v1
+    add-int/2addr v0, p1
 
     .line 602
-    rem-int/2addr p1, v5
+    rem-int/2addr p0, v5
 
-    if-ne p1, v2, :cond_3
+    if-ne p0, v2, :cond_3
 
     move v3, v6
 
     goto :goto_1
 
     :cond_3
-    if-ne p1, v4, :cond_4
+    if-ne p0, v4, :cond_4
 
     const/4 v3, 0x7
 
@@ -374,18 +374,18 @@
 
     .line 597
     :cond_5
-    iget p1, p0, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$ResultList$ResultNode;->characterLength:I
+    iget p0, p0, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$ResultList$ResultNode;->characterLength:I
 
-    div-int/lit8 v1, p1, 0x2
+    div-int/lit8 p1, p0, 0x2
 
-    mul-int/lit8 v1, v1, 0xb
+    mul-int/lit8 p1, p1, 0xb
 
-    add-int/2addr v0, v1
+    add-int/2addr v0, p1
 
     .line 598
-    rem-int/2addr p1, v4
+    rem-int/2addr p0, v4
 
-    if-ne p1, v2, :cond_6
+    if-ne p0, v2, :cond_6
 
     const/4 v3, 0x6
 
@@ -396,79 +396,79 @@
 
     .line 594
     :cond_7
-    iget p1, p0, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$ResultList$ResultNode;->characterLength:I
+    iget p0, p0, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$ResultList$ResultNode;->characterLength:I
 
-    mul-int/lit8 p1, p1, 0xd
+    mul-int/lit8 p0, p0, 0xd
 
     goto :goto_0
 .end method
 
 .method private makePrintable(Ljava/lang/String;)Ljava/lang/String;
-    .locals 4
+    .locals 3
 
     .line 655
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance p0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
     .line 656
     :goto_0
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
-    move-result v2
+    move-result v1
 
-    if-ge v1, v2, :cond_2
+    if-ge v0, v1, :cond_2
 
     .line 657
-    invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
+    invoke-virtual {p1, v0}, Ljava/lang/String;->charAt(I)C
 
-    move-result v2
+    move-result v1
 
-    const/16 v3, 0x20
+    const/16 v2, 0x20
 
-    if-lt v2, v3, :cond_1
+    if-lt v1, v2, :cond_1
 
-    invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
+    invoke-virtual {p1, v0}, Ljava/lang/String;->charAt(I)C
 
-    move-result v2
+    move-result v1
 
-    const/16 v3, 0x7e
+    const/16 v2, 0x7e
 
-    if-le v2, v3, :cond_0
+    if-le v1, v2, :cond_0
 
     goto :goto_1
 
     .line 660
     :cond_0
-    invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
+    invoke-virtual {p1, v0}, Ljava/lang/String;->charAt(I)C
 
-    move-result v2
+    move-result v1
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
     :cond_1
     :goto_1
-    const/16 v2, 0x2e
+    const/16 v1, 0x2e
 
     .line 658
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     :goto_2
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
     .line 663
     :cond_2
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
 .end method
 
 
@@ -495,36 +495,35 @@
 
     sget-object v2, Lcom/google/zxing/qrcode/decoder/Mode;->ECI:Lcom/google/zxing/qrcode/decoder/Mode;
 
+    .line 648
+    iget-object v3, p0, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$ResultList$ResultNode;->this$1:Lcom/google/zxing/qrcode/encoder/MinimalEncoder$ResultList;
+
     if-ne v1, v2, :cond_0
 
     .line 646
-    iget-object v1, p0, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$ResultList$ResultNode;->this$1:Lcom/google/zxing/qrcode/encoder/MinimalEncoder$ResultList;
-
-    iget-object v1, v1, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$ResultList;->this$0:Lcom/google/zxing/qrcode/encoder/MinimalEncoder;
+    iget-object v1, v3, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$ResultList;->this$0:Lcom/google/zxing/qrcode/encoder/MinimalEncoder;
 
     invoke-static {v1}, Lcom/google/zxing/qrcode/encoder/MinimalEncoder;->access$600(Lcom/google/zxing/qrcode/encoder/MinimalEncoder;)Lcom/google/zxing/common/ECIEncoderSet;
 
     move-result-object v1
 
-    iget v2, p0, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$ResultList$ResultNode;->charsetEncoderIndex:I
+    iget p0, p0, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$ResultList$ResultNode;->charsetEncoderIndex:I
 
-    invoke-virtual {v1, v2}, Lcom/google/zxing/common/ECIEncoderSet;->getCharset(I)Ljava/nio/charset/Charset;
+    invoke-virtual {v1, p0}, Lcom/google/zxing/common/ECIEncoderSet;->getCharset(I)Ljava/nio/charset/Charset;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-virtual {v1}, Ljava/nio/charset/Charset;->displayName()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/nio/charset/Charset;->displayName()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
     .line 648
     :cond_0
-    iget-object v1, p0, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$ResultList$ResultNode;->this$1:Lcom/google/zxing/qrcode/encoder/MinimalEncoder$ResultList;
-
-    iget-object v1, v1, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$ResultList;->this$0:Lcom/google/zxing/qrcode/encoder/MinimalEncoder;
+    iget-object v1, v3, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$ResultList;->this$0:Lcom/google/zxing/qrcode/encoder/MinimalEncoder;
 
     invoke-static {v1}, Lcom/google/zxing/qrcode/encoder/MinimalEncoder;->access$500(Lcom/google/zxing/qrcode/encoder/MinimalEncoder;)Ljava/lang/String;
 
@@ -542,20 +541,20 @@
 
     invoke-direct {p0, v1}, Lcom/google/zxing/qrcode/encoder/MinimalEncoder$ResultList$ResultNode;->makePrintable(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :goto_0
-    const/16 v1, 0x29
+    const/16 p0, 0x29
 
     .line 650
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     .line 651
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
