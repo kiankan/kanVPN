@@ -1,23 +1,23 @@
 import re, sys, pathlib
 
-root = pathlib.Path(r"C:\Users\kiyan\AppData\Local\Temp\claude\D--claude\013d22f0-b991-48de-8a19-2931728be005\scratchpad\v2ray_custom\decompiled")
+root = pathlib.Path(r"D:\claude\kanVPN_v232\decompiled")
 OLD = "com.v2ray.ang"
 NEW = "com.kanvpn.client"
 
-# Exact self-referencing literals safe to rename (applicationId inlining + app-internal action names).
-# Deliberately excludes the longer coroutine debug-metadata strings like
-# "com.v2ray.ang.viewmodel.MainViewModel$foo$1" which name real (unrenamed) classes.
 exact_literals = [
     f'"{OLD}"',
     f'"{OLD}.action.activity"',
     f'"{OLD}.action.service"',
     f'"{OLD}.action.widget.click"',
     f'"{OLD}:bg"',
+    f'"{OLD}.extra.PROFILE_EDITOR_ACTION"',
+    f'"{OLD}.extra.PROFILE_EDITOR_RESTART_SERVICE"',
+    f'"{OLD}.extra.PROFILE_EDITOR_GUID"',
 ]
 
 count_files = 0
 count_repl = 0
-for smali_dir_name in ["smali", "smali_classes2", "smali_classes3", "smali_classes4"]:
+for smali_dir_name in ["smali", "smali_classes2", "smali_classes3", "smali_classes4", "smali_classes5"]:
     d = root / smali_dir_name
     if not d.exists():
         continue
