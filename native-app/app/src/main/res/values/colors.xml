@@ -1,0 +1,7 @@
+<resources>
+    <color name="kan_purple">#1f0f5a</color>
+    <color name="kan_purple_dark">#140a3d</color>
+    <color name="white">#ffffff</color>
+    <color name="status_green">#2e7d32</color>
+    <color name="status_red">#c62828</color>
+</resources>

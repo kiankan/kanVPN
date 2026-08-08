@@ -1,0 +1,57 @@
+plugins {
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+}
+
+android {
+    namespace = "com.kanvpn.client"
+    compileSdk = 34
+
+    defaultConfig {
+        applicationId = "com.kanvpn.client"
+        minSdk = 24
+        targetSdk = 34
+        versionCode = 1
+        versionName = "1.0"
+        ndk {
+            abiFilters += listOf("arm64-v8a", "armeabi-v7a")
+        }
+    }
+
+    signingConfigs {
+        create("release") {
+            storeFile = file("../../kanVPN/kanvpn-release.keystore")
+            storePassword = "kanVPN-2026-release"
+            keyAlias = "kanvpn"
+            keyPassword = "kanVPN-2026-release"
+        }
+    }
+
+    buildTypes {
+        release {
+            isMinifyEnabled = false
+            signingConfig = signingConfigs.getByName("release")
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    packaging {
+        resources.excludes.add("META-INF/*")
+    }
+}
+
+dependencies {
+    implementation(files("libs/libv2ray.aar"))
+    implementation("androidx.core:core-ktx:1.13.1")
+    implementation("androidx.appcompat:appcompat:1.7.0")
+    implementation("com.google.android.material:material:1.12.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("com.journeyapps:zxing-android-embedded:4.3.0")
+}
