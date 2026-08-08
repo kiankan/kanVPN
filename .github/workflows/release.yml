@@ -13,12 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          lfs: true
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           name: kanVPN ${{ github.ref_name }}
-          files: kanVPN_*.apk
+          files: native-app/dist/*.apk
           generate_release_notes: true

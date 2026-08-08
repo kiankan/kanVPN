@@ -1,22 +1,21 @@
 # kanVPN
 
-Android VPN client app — personalized build.
+Android VPN client — personal build. Uses **Xray-core only**.
 
-## Contents
+## Current app: `native-app/`
 
-- `kanVPN_0.2.1.apk` — signed, installable APK
-- `app-source/` — decompiled application source (smali) and resources used to produce the APK
-- `rename_pkg.py` — script used to rebrand internal package identifiers
-- `gen_icons_v2.py` — script used to generate the app launcher icon
-- `icon_preview.png` — preview of the launcher icon
+A from-scratch Android Gradle/Kotlin project (real source, not decompiled or
+patched v2rayNG). See [`native-app/README.md`](native-app/README.md) for
+architecture, build instructions, and what's implemented.
 
-## Build
+Latest signed build: [`native-app/dist/kanVPN-native-1.0.apk`](native-app/dist/kanVPN-native-1.0.apk).
 
-The APK was rebuilt from `app-source/` with apktool, then signed and zip-aligned. Based on upstream v2rayNG 2.3.3, with the native Xray-core library kept at an older build (from upstream 2.0.6) so `allowInsecure` TLS configs keep working.
+## History
 
-## Notes
-
-- Package ID: `com.kanvpn.client`
-- Signed with a locally generated key (not the original developer's signing key).
-- In-app update checks query this repo's GitHub Releases (not the upstream v2rayNG project).
-- The in-app version comparison baseline is a compile-time constant, not read dynamically — every release must update `VERSION_NAME`/`VERSION_CODE` in `app-source/smali_classes4/com/v2ray/ang/BuildConfig.smali` and the matching literals in `UpdateCheckerManager$checkForUpdate$2.smali` to the new `versionName`/`versionCode`, in addition to `app-source/apktool.yml`, or update checks will silently never fire.
+Earlier versions of this repo (`v0.1`, `v0.2.1`) were built by decompiling
+and patching the official v2rayNG APK with `apktool`. That approach was
+dropped in favor of the from-scratch rewrite in `native-app/` — the old
+decompiled source, scripts, and APK have been removed from the repo (still
+available in git history / the `v0.1` and `v0.2.1` GitHub releases if
+needed). `kanvpn-release.keystore` at the repo root is unchanged and still
+used to sign `native-app` builds.

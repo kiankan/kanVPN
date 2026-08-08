@@ -20,7 +20,7 @@ android {
 
     signingConfigs {
         create("release") {
-            storeFile = file("../../kanVPN/kanvpn-release.keystore")
+            storeFile = file("../../kanvpn-release.keystore")
             storePassword = "kanVPN-2026-release"
             keyAlias = "kanvpn"
             keyPassword = "kanVPN-2026-release"
