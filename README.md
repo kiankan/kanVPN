@@ -4,7 +4,7 @@ Android VPN client app — personalized build.
 
 ## Contents
 
-- `kanVPN_0.0.2.apk` — signed, installable APK
+- `kanVPN_0.2.1.apk` — signed, installable APK
 - `app-source/` — decompiled application source (smali) and resources used to produce the APK
 - `rename_pkg.py` — script used to rebrand internal package identifiers
 - `gen_icons_v2.py` — script used to generate the app launcher icon
@@ -19,3 +19,4 @@ The APK was rebuilt from `app-source/` with apktool, then signed and zip-aligned
 - Package ID: `com.kanvpn.client`
 - Signed with a locally generated key (not the original developer's signing key).
 - In-app update checks query this repo's GitHub Releases (not the upstream v2rayNG project).
+- The in-app version comparison baseline is a compile-time constant, not read dynamically — every release must update `VERSION_NAME`/`VERSION_CODE` in `app-source/smali_classes4/com/v2ray/ang/BuildConfig.smali` and the matching literals in `UpdateCheckerManager$checkForUpdate$2.smali` to the new `versionName`/`versionCode`, in addition to `app-source/apktool.yml`, or update checks will silently never fire.

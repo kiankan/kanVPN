@@ -392,7 +392,7 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, " (current: 2.3.3)"
+    const-string v1, " (current: 0.2.1)"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -408,7 +408,7 @@
     .line 64
     sget-object p1, Lcom/v2ray/ang/handler/UpdateCheckerManager;->INSTANCE:Lcom/v2ray/ang/handler/UpdateCheckerManager;
 
-    const-string v0, "2.3.3"
+    const-string v0, "0.2.1"
 
     invoke-static {p1, v3, v0}, Lcom/v2ray/ang/handler/UpdateCheckerManager;->access$compareVersions(Lcom/v2ray/ang/handler/UpdateCheckerManager;Ljava/lang/String;Ljava/lang/String;)I
 
