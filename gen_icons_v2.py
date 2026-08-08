@@ -3,9 +3,10 @@ import os
 
 SRC = r"C:\Users\kiyan\Downloads\Gemini_Generated_Image_ehf9dkehf9dkehf9.png"
 ROOT = r"D:\claude\kanVPN_v233\decompiled\res"
+BG_COLOR = (31, 15, 90, 255)  # matches ic_launcher_background #1f0f5a
 
 src = Image.open(SRC).convert("RGBA")
-crop = src.crop((491, 164, 1515, 1188))  # 1024x1024
+crop = src.crop((491, 164, 1515, 1188))  # 1024x1024, tight around the shield
 
 densities = {
     "mdpi": (48, 108),
@@ -15,8 +16,16 @@ densities = {
     "xxxhdpi": (192, 432),
 }
 
+def with_margin(size, scale):
+    glyph_size = int(size * scale)
+    glyph = crop.resize((glyph_size, glyph_size), Image.LANCZOS)
+    canvas = Image.new("RGBA", (size, size), BG_COLOR)
+    offset = ((size - glyph_size) // 2, (size - glyph_size) // 2)
+    canvas.paste(glyph, offset, glyph)
+    return canvas
+
 def make_legacy(size, round_mask):
-    img = crop.resize((size, size), Image.LANCZOS)
+    img = with_margin(size, 0.82)
     if round_mask:
         mask = Image.new("L", (size, size), 0)
         d = ImageDraw.Draw(mask)
@@ -24,10 +33,10 @@ def make_legacy(size, round_mask):
         out = Image.new("RGBA", (size, size), (0, 0, 0, 0))
         out.paste(img, (0, 0), mask)
         return out
-    return img.convert("RGBA")
+    return img
 
 def make_foreground(canvas_size):
-    glyph_size = int(canvas_size * 0.72)
+    glyph_size = int(canvas_size * 0.64)
     glyph = crop.resize((glyph_size, glyph_size), Image.LANCZOS)
     canvas = Image.new("RGBA", (canvas_size, canvas_size), (0, 0, 0, 0))
     offset = ((canvas_size - glyph_size) // 2, (canvas_size - glyph_size) // 2)
@@ -48,4 +57,4 @@ for density, (legacy_size, fg_size) in densities.items():
     if os.path.exists(round_path):
         make_legacy(legacy_size, round_mask=True).save(round_path)
 
-print("Icons updated with shield artwork")
+print("Icons updated with margin (less zoomed)")

@@ -405,7 +405,7 @@
     <string name="title_import_config_count">وارد کردن %d کانفیگ</string>
     <string name="title_language">زبان</string>
     <string name="title_locate_selected_config">یافتن پیکربندی انتخاب‌شده</string>
-    <string name="title_logcat">Logcat</string>
+    <string name="title_logcat">گزارشات</string>
     <string name="title_mode">حالت</string>
     <string name="title_mode_help">برای اطلاعات و راهنمایی بیشتر، روی این متن کلیک کنید</string>
     <string name="title_mode_settings">تنظیمات حالت</string>
