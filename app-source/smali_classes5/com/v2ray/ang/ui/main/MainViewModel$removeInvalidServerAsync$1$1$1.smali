@@ -31,7 +31,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nMainViewModel.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$removeInvalidServerAsync$1$1$1\n+ 2 Mutex.kt\nkotlinx/coroutines/sync/MutexKt\n*L\n1#1,784:1\n117#2,10:785\n*S KotlinDebug\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$removeInvalidServerAsync$1$1$1\n*L\n518#1:785,10\n*E\n"
+    value = "SMAP\nMainViewModel.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$removeInvalidServerAsync$1$1$1\n+ 2 Mutex.kt\nkotlinx/coroutines/sync/MutexKt\n*L\n1#1,782:1\n117#2,10:783\n*S KotlinDebug\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$removeInvalidServerAsync$1$1$1\n*L\n516#1:783,10\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -59,14 +59,14 @@
         0x0
     }
     l = {
-        0x315
+        0x313
     }
     m = "invokeSuspend"
     n = {
         "$this$withLock_u24default$iv"
     }
     nl = {
-        0x316
+        0x314
     }
     s = {
         "L$0"
@@ -185,7 +185,7 @@
 
     move-result-object v0
 
-    .line 517
+    .line 515
     iget v1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$removeInvalidServerAsync$1$1$1;->label:I
 
     const/4 v2, 0x0
@@ -220,7 +220,7 @@
     :cond_1
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 518
+    .line 516
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$removeInvalidServerAsync$1$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {p1}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getCacheMutex$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lkotlinx/coroutines/sync/Mutex;
@@ -229,7 +229,7 @@
 
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$removeInvalidServerAsync$1$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
-    .line 789
+    .line 787
     move-object v4, p0
 
     check-cast v4, Lkotlin/coroutines/Continuation;
@@ -251,7 +251,7 @@
     :cond_2
     move-object v0, p1
 
-    .line 518
+    .line 516
     :goto_0
     :try_start_0
     invoke-static {v0}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getGroupDataCache$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Ljava/util/Map;
@@ -264,15 +264,15 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 793
+    .line 791
     invoke-interface {v1, v2}, Lkotlinx/coroutines/sync/Mutex;->unlock(Ljava/lang/Object;)V
 
-    .line 519
+    .line 517
     iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainViewModel$removeInvalidServerAsync$1$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-virtual {p0, v3}, Lcom/v2ray/ang/ui/main/MainViewModel;->setupGroupTab(Z)Lkotlinx/coroutines/Job;
 
-    .line 520
+    .line 518
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p0
@@ -280,7 +280,7 @@
     :catchall_0
     move-exception p0
 
-    .line 793
+    .line 791
     invoke-interface {v1, v2}, Lkotlinx/coroutines/sync/Mutex;->unlock(Ljava/lang/Object;)V
 
     throw p0

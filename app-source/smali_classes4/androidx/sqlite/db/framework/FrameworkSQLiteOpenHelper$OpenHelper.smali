@@ -627,7 +627,7 @@
 .method public final getWrappedDb(Landroid/database/sqlite/SQLiteDatabase;)Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase;
     .locals 1
 
-    const-string v0, "sqLiteDatabase"
+    const-string/jumbo v0, "sqLiteDatabase"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -703,7 +703,7 @@
 .method public onCreate(Landroid/database/sqlite/SQLiteDatabase;)V
     .locals 1
 
-    const-string v0, "sqLiteDatabase"
+    const-string/jumbo v0, "sqLiteDatabase"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -830,7 +830,7 @@
 .method public onUpgrade(Landroid/database/sqlite/SQLiteDatabase;II)V
     .locals 1
 
-    const-string v0, "sqLiteDatabase"
+    const-string/jumbo v0, "sqLiteDatabase"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

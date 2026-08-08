@@ -53,12 +53,12 @@
     f = "MainScreen.kt"
     i = {}
     l = {
-        0x67
+        0x65
     }
     m = "invokeSuspend"
     n = {}
     nl = {
-        0x6d
+        0x6b
     }
     s = {}
     v = 0x2
@@ -148,7 +148,7 @@
 .method static final invokeSuspend$lambda$0(Landroidx/compose/foundation/pager/PagerState;)I
     .locals 0
 
-    .line 101
+    .line 99
     invoke-virtual {p0}, Landroidx/compose/foundation/pager/PagerState;->getSettledPage()I
 
     move-result p0
@@ -241,7 +241,7 @@
 
     move-result-object v0
 
-    .line 100
+    .line 98
     iget v1, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$MainScreen$3$1;->label:I
 
     const/4 v2, 0x1
@@ -266,7 +266,7 @@
     :cond_1
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 101
+    .line 99
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$MainScreen$3$1;->$pagerState:Landroidx/compose/foundation/pager/PagerState;
 
     new-instance v1, Lcom/v2ray/ang/ui/main/MainScreenKt$MainScreen$3$1$$ExternalSyntheticLambda0;
@@ -277,12 +277,12 @@
 
     move-result-object p1
 
-    .line 102
+    .line 100
     invoke-static {p1}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
 
     move-result-object p1
 
-    .line 103
+    .line 101
     new-instance v1, Lcom/v2ray/ang/ui/main/MainScreenKt$MainScreen$3$1$2;
 
     iget-object v3, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$MainScreen$3$1;->$onAction:Lkotlin/jvm/functions/Function1;
@@ -309,7 +309,7 @@
 
     return-object v0
 
-    .line 109
+    .line 107
     :cond_2
     :goto_0
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;

@@ -32,7 +32,7 @@
 
     check-cast p1, Landroidx/activity/result/ActivityResult;
 
-    invoke-static {p0, p1}, Lcom/v2ray/ang/ui/main/MainActivity;->settingsActivityLauncher$lambda$0(Lcom/v2ray/ang/ui/main/MainActivity;Landroidx/activity/result/ActivityResult;)V
+    invoke-static {p0, p1}, Lcom/v2ray/ang/ui/main/MainActivity;->requestVpnPermission$lambda$0(Lcom/v2ray/ang/ui/main/MainActivity;Landroidx/activity/result/ActivityResult;)V
 
     return-void
 .end method

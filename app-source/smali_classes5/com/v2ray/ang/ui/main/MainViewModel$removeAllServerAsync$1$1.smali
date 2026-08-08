@@ -31,7 +31,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nMainViewModel.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$removeAllServerAsync$1$1\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,784:1\n1739#2:785\n1814#2,3:786\n2068#2,2:789\n*S KotlinDebug\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$removeAllServerAsync$1$1\n*L\n467#1:785\n467#1:786,3\n468#1:789,2\n*E\n"
+    value = "SMAP\nMainViewModel.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$removeAllServerAsync$1$1\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,782:1\n1739#2:783\n1814#2,3:784\n2068#2,2:787\n*S KotlinDebug\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$removeAllServerAsync$1$1\n*L\n465#1:783\n465#1:784,3\n466#1:787,2\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -169,14 +169,14 @@
 
     invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
 
-    .line 461
+    .line 459
     iget v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel$removeAllServerAsync$1$1;->label:I
 
     if-nez v0, :cond_3
 
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 464
+    .line 462
     :try_start_0
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$removeAllServerAsync$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
@@ -216,7 +216,7 @@
 
     if-nez p1, :cond_0
 
-    .line 465
+    .line 463
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$removeAllServerAsync$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {p1}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getDataSource$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lcom/v2ray/ang/ui/main/MainDataSource;
@@ -229,7 +229,7 @@
 
     goto :goto_2
 
-    .line 467
+    .line 465
     :cond_0
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$removeAllServerAsync$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
@@ -239,7 +239,7 @@
 
     check-cast p1, Ljava/lang/Iterable;
 
-    .line 785
+    .line 783
     new-instance v0, Ljava/util/ArrayList;
 
     const/16 v1, 0xa
@@ -252,7 +252,7 @@
 
     check-cast v0, Ljava/util/Collection;
 
-    .line 786
+    .line 784
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -268,31 +268,31 @@
 
     move-result-object v1
 
-    .line 787
+    .line 785
     check-cast v1, Lcom/v2ray/ang/dto/entities/ServersCache;
 
-    .line 467
+    .line 465
     invoke-virtual {v1}, Lcom/v2ray/ang/dto/entities/ServersCache;->getGuid()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 787
+    .line 785
     invoke-interface {v0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 788
+    .line 786
     :cond_1
     check-cast v0, Ljava/util/List;
 
-    .line 468
+    .line 466
     move-object p1, v0
 
     check-cast p1, Ljava/lang/Iterable;
 
     iget-object v1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$removeAllServerAsync$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
-    .line 789
+    .line 787
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -310,7 +310,7 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 468
+    .line 466
     invoke-static {v1}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getDataSource$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lcom/v2ray/ang/ui/main/MainDataSource;
 
     move-result-object v3
@@ -319,13 +319,13 @@
 
     goto :goto_1
 
-    .line 469
+    .line 467
     :cond_2
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result p1
 
-    .line 471
+    .line 469
     :goto_2
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel$removeAllServerAsync$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
@@ -365,14 +365,14 @@
 
     invoke-static/range {v1 .. v6}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lkotlinx/coroutines/Job;
 
-    .line 474
+    .line 472
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel$removeAllServerAsync$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/v2ray/ang/ui/main/MainViewModel;->setupGroupTab(Z)Lkotlinx/coroutines/Job;
 
-    .line 475
+    .line 473
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel$removeAllServerAsync$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {v0}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getDataSource$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lcom/v2ray/ang/ui/main/MainDataSource;
@@ -405,7 +405,7 @@
 
     move-object p1, v0
 
-    .line 479
+    .line 477
     sget-object v0, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
 
     const-string v1, "Delete all failed"
@@ -416,14 +416,14 @@
 
     invoke-virtual {v0, v2, v1, p1}, Lcom/v2ray/ang/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 480
+    .line 478
     iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainViewModel$removeAllServerAsync$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     sget p1, Lcom/v2ray/ang/R$string;->toast_failure:I
 
     invoke-virtual {p0, p1}, Lcom/v2ray/ang/ui/main/MainViewModel;->toastError(I)V
 
-    .line 482
+    .line 480
     :goto_3
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
@@ -434,10 +434,10 @@
 
     move-object p0, v0
 
-    .line 477
+    .line 475
     throw p0
 
-    .line 461
+    .line 459
     :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 

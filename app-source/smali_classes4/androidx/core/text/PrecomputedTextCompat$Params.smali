@@ -592,7 +592,7 @@
     .line 328
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v2, "textSize="
+    const-string/jumbo v2, "textSize="
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 

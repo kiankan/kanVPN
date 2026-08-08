@@ -69,7 +69,7 @@
 
     const-string v4, "offset"
 
-    const-string v5, "time"
+    const-string/jumbo v5, "time"
 
     if-eq v2, v3, :cond_2
 
@@ -176,7 +176,7 @@
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonWriter;->beginObject()Lcom/google/gson/stream/JsonWriter;
 
     .line 239
-    const-string v0, "time"
+    const-string/jumbo v0, "time"
 
     invoke-virtual {p1, v0}, Lcom/google/gson/stream/JsonWriter;->name(Ljava/lang/String;)Lcom/google/gson/stream/JsonWriter;
 

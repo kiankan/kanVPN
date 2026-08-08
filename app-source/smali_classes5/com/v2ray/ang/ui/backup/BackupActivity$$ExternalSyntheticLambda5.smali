@@ -30,13 +30,9 @@
     .line 0
     iget-object p0, p0, Lcom/v2ray/ang/ui/backup/BackupActivity$$ExternalSyntheticLambda5;->f$0:Lcom/v2ray/ang/ui/backup/BackupActivity;
 
-    check-cast p1, Ljava/lang/Integer;
+    check-cast p1, Lcom/v2ray/ang/dto/entities/WebDavConfig;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    invoke-static {p0, p1}, Lcom/v2ray/ang/ui/backup/BackupActivity;->$r8$lambda$BwU0FOVjsES803MHddJAvYvup5Q(Lcom/v2ray/ang/ui/backup/BackupActivity;I)Lkotlin/Unit;
+    invoke-static {p0, p1}, Lcom/v2ray/ang/ui/backup/BackupActivity;->$r8$lambda$U5mu_cRBZf9cNBDr8_P1gW_f0dM(Lcom/v2ray/ang/ui/backup/BackupActivity;Lcom/v2ray/ang/dto/entities/WebDavConfig;)Lkotlin/Unit;
 
     move-result-object p0
 

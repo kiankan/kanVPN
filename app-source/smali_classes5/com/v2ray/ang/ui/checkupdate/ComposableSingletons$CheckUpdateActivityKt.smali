@@ -55,7 +55,7 @@
 
     sput-object v0, Lcom/v2ray/ang/ui/checkupdate/ComposableSingletons$CheckUpdateActivityKt;->INSTANCE:Lcom/v2ray/ang/ui/checkupdate/ComposableSingletons$CheckUpdateActivityKt;
 
-    .line 107
+    .line 106
     new-instance v0, Lcom/v2ray/ang/ui/checkupdate/ComposableSingletons$CheckUpdateActivityKt$$ExternalSyntheticLambda0;
 
     invoke-direct {v0}, Lcom/v2ray/ang/ui/checkupdate/ComposableSingletons$CheckUpdateActivityKt$$ExternalSyntheticLambda0;-><init>()V
@@ -72,7 +72,7 @@
 
     sput-object v0, Lcom/v2ray/ang/ui/checkupdate/ComposableSingletons$CheckUpdateActivityKt;->lambda$424428662:Lkotlin/jvm/functions/Function3;
 
-    .line 112
+    .line 111
     new-instance v0, Lcom/v2ray/ang/ui/checkupdate/ComposableSingletons$CheckUpdateActivityKt$$ExternalSyntheticLambda1;
 
     invoke-direct {v0}, Lcom/v2ray/ang/ui/checkupdate/ComposableSingletons$CheckUpdateActivityKt$$ExternalSyntheticLambda1;-><init>()V
@@ -111,7 +111,7 @@
 
     invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v2, "C107@4091L35,107@4086L41:CheckUpdateActivity.kt#c9mg0o"
+    const-string v2, "C106@4096L35,106@4091L41:CheckUpdateActivity.kt#c9mg0o"
 
     invoke-static {v0, v2}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -147,13 +147,13 @@
 
     const/4 v2, -0x1
 
-    const-string v3, "com.v2ray.ang.ui.checkupdate.ComposableSingletons$CheckUpdateActivityKt.lambda$424428662.<anonymous> (CheckUpdateActivity.kt:107)"
+    const-string v3, "com.v2ray.ang.ui.checkupdate.ComposableSingletons$CheckUpdateActivityKt.lambda$424428662.<anonymous> (CheckUpdateActivity.kt:106)"
 
     const v5, 0x194c4476
 
     invoke-static {v5, v1, v2, v3}, Landroidx/compose/runtime/ComposerKt;->traceEventStart(IIILjava/lang/String;)V
 
-    .line 108
+    .line 107
     :cond_1
     sget v1, Lcom/v2ray/ang/R$string;->update_now:I
 
@@ -217,11 +217,11 @@
 
     goto :goto_1
 
-    .line 107
+    .line 106
     :cond_2
     invoke-interface/range {p1 .. p1}, Landroidx/compose/runtime/Composer;->skipToGroupEnd()V
 
-    .line 109
+    .line 108
     :cond_3
     :goto_1
     sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -242,7 +242,7 @@
 
     invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v2, "C112@4292L39,112@4287L45:CheckUpdateActivity.kt#c9mg0o"
+    const-string v2, "C111@4297L39,111@4292L45:CheckUpdateActivity.kt#c9mg0o"
 
     invoke-static {v0, v2}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -276,7 +276,7 @@
 
     const/4 v2, -0x1
 
-    const-string v3, "com.v2ray.ang.ui.checkupdate.ComposableSingletons$CheckUpdateActivityKt.lambda$-1939413000.<anonymous> (CheckUpdateActivity.kt:112)"
+    const-string v3, "com.v2ray.ang.ui.checkupdate.ComposableSingletons$CheckUpdateActivityKt.lambda$-1939413000.<anonymous> (CheckUpdateActivity.kt:111)"
 
     const v4, -0x73991808
 
@@ -287,7 +287,7 @@
 
     const/4 v2, 0x6
 
-    .line 113
+    .line 112
     invoke-static {v1, v0, v2}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
 
     move-result-object v1
@@ -348,11 +348,11 @@
 
     goto :goto_1
 
-    .line 112
+    .line 111
     :cond_2
     invoke-interface/range {p1 .. p1}, Landroidx/compose/runtime/Composer;->skipToGroupEnd()V
 
-    .line 114
+    .line 113
     :cond_3
     :goto_1
     sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;

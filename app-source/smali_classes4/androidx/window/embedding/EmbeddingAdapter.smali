@@ -1727,7 +1727,7 @@
         }
     .end annotation
 
-    const-string v0, "splitInfoList"
+    const-string/jumbo v0, "splitInfoList"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -2088,7 +2088,7 @@
 .method public final translate$window_release(Landroidx/window/extensions/embedding/SplitAttributes;)Landroidx/window/embedding/SplitAttributes;
     .locals 5
 
-    const-string v0, "splitAttributes"
+    const-string/jumbo v0, "splitAttributes"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -2562,7 +2562,7 @@
 .method public final translateSplitAttributes(Landroidx/window/embedding/SplitAttributes;)Landroidx/window/extensions/embedding/SplitAttributes;
     .locals 4
 
-    const-string v0, "splitAttributes"
+    const-string/jumbo v0, "splitAttributes"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -2928,7 +2928,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "splitPinRule"
+    const-string/jumbo v0, "splitPinRule"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

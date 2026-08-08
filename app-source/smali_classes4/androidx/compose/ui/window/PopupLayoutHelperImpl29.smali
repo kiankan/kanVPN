@@ -62,7 +62,7 @@
 
     move-result-object p0
 
-    invoke-static {p1, p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/view/View;Ljava/util/List;)V
+    invoke-static {p1, p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/view/View;Ljava/util/List;)V
 
     return-void
 .end method

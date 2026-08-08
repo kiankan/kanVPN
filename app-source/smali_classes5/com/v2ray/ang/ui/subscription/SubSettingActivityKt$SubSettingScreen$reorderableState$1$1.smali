@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt;->SubSettingScreen(Lcom/v2ray/ang/ui/subscription/SubscriptionsViewModel;ZLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Ljava/util/List;Landroidx/compose/runtime/Composer;I)V
+    value = Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt;->SubSettingScreen(Lcom/v2ray/ang/ui/subscription/SubscriptionsViewModel;ZLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -167,14 +167,14 @@
 
     invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
 
-    .line 123
+    .line 125
     iget v2, p0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$SubSettingScreen$reorderableState$1$1;->label:I
 
     if-nez v2, :cond_0
 
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 124
+    .line 126
     iget-object p0, p0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$SubSettingScreen$reorderableState$1$1;->$viewModel:Lcom/v2ray/ang/ui/subscription/SubscriptionsViewModel;
 
     invoke-interface {v0}, Landroidx/compose/foundation/lazy/LazyListItemInfo;->getIndex()I
@@ -187,12 +187,12 @@
 
     invoke-virtual {p0, p1, v0}, Lcom/v2ray/ang/ui/subscription/SubscriptionsViewModel;->move(II)V
 
-    .line 125
+    .line 127
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p0
 
-    .line 123
+    .line 125
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 

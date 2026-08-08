@@ -41,7 +41,7 @@
 
     sput-object v0, Lcom/v2ray/ang/ui/ComposableSingletons$ScannerActivityKt;->INSTANCE:Lcom/v2ray/ang/ui/ComposableSingletons$ScannerActivityKt;
 
-    .line 200
+    .line 206
     new-instance v0, Lcom/v2ray/ang/ui/ComposableSingletons$ScannerActivityKt$$ExternalSyntheticLambda0;
 
     invoke-direct {v0}, Lcom/v2ray/ang/ui/ComposableSingletons$ScannerActivityKt$$ExternalSyntheticLambda0;-><init>()V
@@ -72,7 +72,7 @@
 .method static final lambda__1608016848$lambda$0(Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
     .locals 11
 
-    const-string v0, "C201@7637L41,200@7603L166:ScannerActivity.kt#66hgl1"
+    const-string v0, "C207@7962L41,208@8054L41,206@7928L193:ScannerActivity.kt#66hgl1"
 
     invoke-static {p0, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -108,13 +108,13 @@
 
     const/4 v0, -0x1
 
-    const-string v1, "com.v2ray.ang.ui.ComposableSingletons$ScannerActivityKt.lambda$-1608016848.<anonymous> (ScannerActivity.kt:200)"
+    const-string v1, "com.v2ray.ang.ui.ComposableSingletons$ScannerActivityKt.lambda$-1608016848.<anonymous> (ScannerActivity.kt:206)"
 
     const v3, -0x5fd863d0
 
     invoke-static {v3, p1, v0, v1}, Landroidx/compose/runtime/ComposerKt;->traceEventStart(IIILjava/lang/String;)V
 
-    .line 202
+    .line 208
     :cond_1
     sget p1, Lcom/v2ray/ang/R$drawable;->ic_image_24dp:I
 
@@ -122,15 +122,16 @@
 
     move-result-object v3
 
-    .line 203
-    sget p1, Landroidx/compose/ui/graphics/painter/Painter;->$stable:I
+    .line 209
+    sget p1, Lcom/v2ray/ang/R$string;->acc_select_image:I
 
-    or-int/lit8 v9, p1, 0x30
+    invoke-static {p1, p0, v2}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
+
+    move-result-object v4
+
+    sget v9, Landroidx/compose/ui/graphics/painter/Painter;->$stable:I
 
     const/16 v10, 0xc
-
-    .line 201
-    const-string v4, "select image"
 
     const/4 v5, 0x0
 
@@ -138,6 +139,7 @@
 
     move-object v8, p0
 
+    .line 207
     invoke-static/range {v3 .. v10}, Landroidx/compose/material3/IconKt;->Icon-ww6aTOc(Landroidx/compose/ui/graphics/painter/Painter;Ljava/lang/String;Landroidx/compose/ui/Modifier;JLandroidx/compose/runtime/Composer;II)V
 
     invoke-static {}, Landroidx/compose/runtime/ComposerKt;->isTraceInProgress()Z
@@ -153,10 +155,10 @@
     :cond_2
     move-object v8, p0
 
-    .line 200
+    .line 206
     invoke-interface {v8}, Landroidx/compose/runtime/Composer;->skipToGroupEnd()V
 
-    .line 205
+    .line 211
     :cond_3
     :goto_1
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;

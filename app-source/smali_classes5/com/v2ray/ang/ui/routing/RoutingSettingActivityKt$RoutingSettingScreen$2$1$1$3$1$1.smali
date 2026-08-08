@@ -29,7 +29,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nRoutingSettingActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 RoutingSettingActivity.kt\ncom/v2ray/ang/ui/routing/RoutingSettingActivityKt$RoutingSettingScreen$2$1$1$3$1$1\n+ 2 Composer.kt\nandroidx/compose/runtime/ComposerKt\n*L\n1#1,388:1\n1047#2,6:389\n1047#2,6:395\n*S KotlinDebug\n*F\n+ 1 RoutingSettingActivity.kt\ncom/v2ray/ang/ui/routing/RoutingSettingActivityKt$RoutingSettingScreen$2$1$1$3$1$1\n*L\n287#1:389,6\n288#1:395,6\n*E\n"
+    value = "SMAP\nRoutingSettingActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 RoutingSettingActivity.kt\ncom/v2ray/ang/ui/routing/RoutingSettingActivityKt$RoutingSettingScreen$2$1$1$3$1$1\n+ 2 Composer.kt\nandroidx/compose/runtime/ComposerKt\n*L\n1#1,395:1\n1047#2,6:396\n1047#2,6:402\n*S KotlinDebug\n*F\n+ 1 RoutingSettingActivity.kt\ncom/v2ray/ang/ui/routing/RoutingSettingActivityKt$RoutingSettingScreen$2$1$1$3$1$1\n*L\n293#1:396,6\n294#1:402,6\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -97,7 +97,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 284
+    .line 290
     check-cast p1, Landroidx/compose/foundation/layout/RowScope;
 
     check-cast p2, Landroidx/compose/runtime/Composer;
@@ -122,7 +122,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string p1, "C286@11926L21,287@11995L185,284@11822L384:RoutingSettingActivity.kt#ni0ky5"
+    const-string p1, "C292@12199L21,293@12268L185,290@12095L384:RoutingSettingActivity.kt#ni0ky5"
 
     invoke-static {p2, p1}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -156,19 +156,19 @@
 
     const/4 p1, -0x1
 
-    const-string v0, "com.v2ray.ang.ui.routing.RoutingSettingScreen.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous> (RoutingSettingActivity.kt:284)"
+    const-string v0, "com.v2ray.ang.ui.routing.RoutingSettingScreen.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous> (RoutingSettingActivity.kt:290)"
 
     const v1, 0x51c13937
 
     invoke-static {v1, p3, p1, v0}, Landroidx/compose/runtime/ComposerKt;->traceEventStart(IIILjava/lang/String;)V
 
-    .line 286
+    .line 292
     :cond_1
     iget-object p1, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$RoutingSettingScreen$2$1$1$3$1$1;->$ruleset:Lcom/v2ray/ang/dto/entities/RulesetItem;
 
     const p3, -0x19a82834
 
-    .line 287
+    .line 293
     const-string v0, "CC(remember):RoutingSettingActivity.kt#9igjgp"
 
     invoke-static {p2, p3, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -191,14 +191,14 @@
 
     iget v2, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$RoutingSettingScreen$2$1$1$3$1$1;->$index:I
 
-    .line 389
+    .line 396
     invoke-interface {p2}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
     move-result-object v3
 
     if-nez p3, :cond_2
 
-    .line 390
+    .line 397
     sget-object p3, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {p3}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -207,7 +207,7 @@
 
     if-ne v3, p3, :cond_3
 
-    .line 287
+    .line 293
     :cond_2
     new-instance p3, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$RoutingSettingScreen$2$1$1$3$1$1$1$1;
 
@@ -217,10 +217,10 @@
 
     check-cast v3, Lkotlin/jvm/functions/Function0;
 
-    .line 392
+    .line 399
     invoke-interface {p2, v3}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 287
+    .line 293
     :cond_3
     check-cast v3, Lkotlin/jvm/functions/Function0;
 
@@ -228,7 +228,7 @@
 
     const p3, -0x19a81ef0
 
-    .line 288
+    .line 294
     invoke-static {p2, p3, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     iget-object p3, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$RoutingSettingScreen$2$1$1$3$1$1;->$ruleset:Lcom/v2ray/ang/dto/entities/RulesetItem;
@@ -259,14 +259,14 @@
 
     iget p0, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$RoutingSettingScreen$2$1$1$3$1$1;->$index:I
 
-    .line 395
+    .line 402
     invoke-interface {p2}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
     move-result-object v2
 
     if-nez p3, :cond_4
 
-    .line 396
+    .line 403
     sget-object p3, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {p3}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -275,7 +275,7 @@
 
     if-ne v2, p3, :cond_5
 
-    .line 288
+    .line 294
     :cond_4
     new-instance p3, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$RoutingSettingScreen$2$1$1$3$1$1$2$1;
 
@@ -285,10 +285,10 @@
 
     check-cast v2, Lkotlin/jvm/functions/Function1;
 
-    .line 398
+    .line 405
     invoke-interface {p2, v2}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 288
+    .line 294
     :cond_5
     check-cast v2, Lkotlin/jvm/functions/Function1;
 
@@ -296,7 +296,7 @@
 
     sget p0, Lcom/v2ray/ang/dto/entities/RulesetItem;->$stable:I
 
-    .line 285
+    .line 291
     invoke-static {p1, v3, v2, p2, p0}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt;->access$RoutingRulesetItem(Lcom/v2ray/ang/dto/entities/RulesetItem;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;I)V
 
     invoke-static {}, Landroidx/compose/runtime/ComposerKt;->isTraceInProgress()Z
@@ -310,7 +310,7 @@
     :cond_6
     return-void
 
-    .line 284
+    .line 290
     :cond_7
     invoke-interface {p2}, Landroidx/compose/runtime/Composer;->skipToGroupEnd()V
 

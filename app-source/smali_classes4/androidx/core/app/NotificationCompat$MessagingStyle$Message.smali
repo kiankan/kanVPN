@@ -168,9 +168,9 @@
 
     const-string v5, "person"
 
-    const-string v6, "time"
+    const-string/jumbo v6, "time"
 
-    const-string v7, "text"
+    const-string/jumbo v7, "text"
 
     const/4 v8, 0x0
 
@@ -415,13 +415,13 @@
     if-eqz v1, :cond_0
 
     .line 4376
-    const-string v2, "text"
+    const-string/jumbo v2, "text"
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
     .line 4378
     :cond_0
-    const-string v1, "time"
+    const-string/jumbo v1, "time"
 
     iget-wide v2, p0, Landroidx/core/app/NotificationCompat$MessagingStyle$Message;->mTimestamp:J
 

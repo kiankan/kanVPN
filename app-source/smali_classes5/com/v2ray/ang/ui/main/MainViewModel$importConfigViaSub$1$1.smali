@@ -172,14 +172,14 @@
 
     invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
 
-    .line 401
+    .line 399
     iget v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel$importConfigViaSub$1$1;->label:I
 
     if-nez v0, :cond_5
 
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 403
+    .line 401
     :try_start_0
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$importConfigViaSub$1$1;->$subId:Ljava/lang/String;
 
@@ -192,12 +192,12 @@
     .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 406
+    .line 404
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel$importConfigViaSub$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     if-nez p1, :cond_0
 
-    .line 404
+    .line 402
     :try_start_1
     invoke-static {v0}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getDataSource$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lcom/v2ray/ang/ui/main/MainDataSource;
 
@@ -209,7 +209,7 @@
 
     goto :goto_0
 
-    .line 406
+    .line 404
     :cond_0
     invoke-static {v0}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getDataSource$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lcom/v2ray/ang/ui/main/MainDataSource;
 
@@ -227,7 +227,7 @@
 
     return-object p0
 
-    .line 407
+    .line 405
     :cond_1
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel$importConfigViaSub$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
@@ -245,7 +245,7 @@
 
     move-result-object p1
 
-    .line 410
+    .line 408
     :goto_0
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/SubscriptionUpdateResult;->getSuccessCount()I
 
@@ -265,7 +265,7 @@
 
     if-nez v0, :cond_2
 
-    .line 411
+    .line 409
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel$importConfigViaSub$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     sget v1, Lcom/v2ray/ang/R$string;->title_update_subscription_no_subscription:I
@@ -274,7 +274,7 @@
 
     goto :goto_1
 
-    .line 413
+    .line 411
     :cond_2
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/SubscriptionUpdateResult;->getSuccessCount()I
 
@@ -294,7 +294,7 @@
 
     if-nez v0, :cond_3
 
-    .line 414
+    .line 412
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel$importConfigViaSub$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {v0}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getDataSource$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lcom/v2ray/ang/ui/main/MainDataSource;
@@ -323,7 +323,7 @@
 
     goto :goto_1
 
-    .line 417
+    .line 415
     :cond_3
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel$importConfigViaSub$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
@@ -375,7 +375,7 @@
 
     invoke-virtual {v0, v1}, Lcom/v2ray/ang/ui/main/MainViewModel;->toast(Ljava/lang/String;)V
 
-    .line 419
+    .line 417
     :goto_1
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/SubscriptionUpdateResult;->getConfigCount()I
 
@@ -383,14 +383,14 @@
 
     if-lez p1, :cond_4
 
-    .line 420
+    .line 418
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$importConfigViaSub$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Lcom/v2ray/ang/ui/main/MainViewModel;->setupGroupTab(Z)Lkotlinx/coroutines/Job;
 
-    .line 421
+    .line 419
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$importConfigViaSub$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-virtual {p1}, Lcom/v2ray/ang/ui/main/MainViewModel;->refreshSelectedGuid()V
@@ -403,7 +403,7 @@
     :catch_0
     move-exception p1
 
-    .line 426
+    .line 424
     sget-object v0, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
 
     const-string v1, "Subscription update failed"
@@ -414,14 +414,14 @@
 
     invoke-virtual {v0, v2, v1, p1}, Lcom/v2ray/ang/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 427
+    .line 425
     iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainViewModel$importConfigViaSub$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     sget p1, Lcom/v2ray/ang/R$string;->toast_failure:I
 
     invoke-virtual {p0, p1}, Lcom/v2ray/ang/ui/main/MainViewModel;->toastError(I)V
 
-    .line 429
+    .line 427
     :cond_4
     :goto_2
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -431,10 +431,10 @@
     :catch_1
     move-exception p0
 
-    .line 424
+    .line 422
     throw p0
 
-    .line 401
+    .line 399
     :cond_5
     new-instance p0, Ljava/lang/IllegalStateException;
 

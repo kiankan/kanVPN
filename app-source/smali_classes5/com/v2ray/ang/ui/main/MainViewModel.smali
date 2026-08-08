@@ -11,7 +11,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nMainViewModel.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel\n+ 2 StateFlow.kt\nkotlinx/coroutines/flow/StateFlowKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 4 CoroutineScope.kt\nkotlinx/coroutines/CoroutineScopeKt\n+ 5 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 6 Mutex.kt\nkotlinx/coroutines/sync/MutexKt\n*L\n1#1,784:1\n230#2,5:785\n230#2,5:790\n230#2,5:795\n230#2,5:800\n230#2,5:805\n230#2,5:866\n230#2,5:871\n230#2,5:876\n230#2,5:885\n230#2,5:894\n230#2,5:899\n230#2,5:904\n230#2,5:923\n230#2,5:928\n1795#3,10:810\n2068#3:820\n2069#3:823\n1805#3:824\n777#3:855\n873#3,2:856\n1960#3,3:858\n2068#3,2:861\n2945#3,3:863\n1739#3:881\n1814#3,3:882\n1739#3:890\n1814#3,3:891\n363#3,7:909\n363#3,7:916\n1307#4:821\n1307#4:842\n1#5:822\n1#5:839\n117#6,7:825\n117#6,7:832\n125#6,2:840\n117#6,10:843\n125#6,2:853\n*S KotlinDebug\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel\n*L\n120#1:785,5\n132#1:790,5\n183#1:795,5\n187#1:800,5\n223#1:805,5\n575#1:866,5\n630#1:871,5\n634#1:876,5\n667#1:885,5\n681#1:894,5\n685#1:899,5\n705#1:904,5\n746#1:923,5\n753#1:928,5\n233#1:810,10\n233#1:820\n233#1:823\n233#1:824\n269#1:855\n269#1:856,2\n288#1:858,3\n567#1:861,2\n571#1:863,3\n652#1:881\n652#1:882,3\n679#1:890\n679#1:891,3\n732#1:909,7\n743#1:916,7\n234#1:821\n255#1:842\n233#1:822\n250#1:825,7\n252#1:832,7\n252#1:840,2\n256#1:843,10\n250#1:853,2\n*E\n"
+    value = "SMAP\nMainViewModel.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel\n+ 2 StateFlow.kt\nkotlinx/coroutines/flow/StateFlowKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 4 CoroutineScope.kt\nkotlinx/coroutines/CoroutineScopeKt\n+ 5 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 6 Mutex.kt\nkotlinx/coroutines/sync/MutexKt\n*L\n1#1,782:1\n230#2,5:783\n230#2,5:788\n230#2,5:793\n230#2,5:798\n230#2,5:803\n230#2,5:864\n230#2,5:869\n230#2,5:874\n230#2,5:883\n230#2,5:892\n230#2,5:897\n230#2,5:902\n230#2,5:921\n230#2,5:926\n1795#3,10:808\n2068#3:818\n2069#3:821\n1805#3:822\n777#3:853\n873#3,2:854\n1960#3,3:856\n2068#3,2:859\n2945#3,3:861\n1739#3:879\n1814#3,3:880\n1739#3:888\n1814#3,3:889\n363#3,7:907\n363#3,7:914\n1307#4:819\n1307#4:840\n1#5:820\n1#5:837\n117#6,7:823\n117#6,7:830\n125#6,2:838\n117#6,10:841\n125#6,2:851\n*S KotlinDebug\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel\n*L\n120#1:783,5\n132#1:788,5\n181#1:793,5\n185#1:798,5\n221#1:803,5\n573#1:864,5\n628#1:869,5\n632#1:874,5\n665#1:883,5\n679#1:892,5\n683#1:897,5\n703#1:902,5\n744#1:921,5\n751#1:926,5\n231#1:808,10\n231#1:818\n231#1:821\n231#1:822\n267#1:853\n267#1:854,2\n286#1:856,3\n565#1:859,2\n569#1:861,3\n650#1:879\n650#1:880,3\n677#1:888\n677#1:889,3\n730#1:907,7\n741#1:914,7\n232#1:819\n253#1:840\n231#1:820\n248#1:823,7\n250#1:830,7\n250#1:838,2\n254#1:841,10\n248#1:851,2\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -706,7 +706,7 @@
         }
     .end annotation
 
-    .line 262
+    .line 260
     iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->keywordFilter:Ljava/lang/String;
 
     check-cast p0, Ljava/lang/CharSequence;
@@ -719,7 +719,7 @@
 
     move-result-object v2
 
-    .line 263
+    .line 261
     move-object p0, v2
 
     check-cast p0, Ljava/lang/CharSequence;
@@ -732,7 +732,7 @@
 
     return-object p1
 
-    .line 265
+    .line 263
     :cond_0
     :try_start_0
     new-instance v1, Lkotlin/text/Regex;
@@ -743,17 +743,17 @@
     :try_end_0
     .catch Ljava/util/regex/PatternSyntaxException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 269
+    .line 267
     check-cast p1, Ljava/lang/Iterable;
 
-    .line 855
+    .line 853
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
     check-cast p0, Ljava/util/Collection;
 
-    .line 856
+    .line 854
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -774,12 +774,12 @@
 
     check-cast v0, Lcom/v2ray/ang/dto/entities/ServersCache;
 
-    .line 270
+    .line 268
     invoke-virtual {v0}, Lcom/v2ray/ang/dto/entities/ServersCache;->getProfile()Lcom/v2ray/ang/dto/entities/ProfileItem;
 
     move-result-object v7
 
-    .line 271
+    .line 269
     invoke-virtual {v7}, Lcom/v2ray/ang/dto/entities/ProfileItem;->getRemarks()Ljava/lang/String;
 
     move-result-object v0
@@ -796,7 +796,7 @@
 
     if-nez v0, :cond_4
 
-    .line 272
+    .line 270
     invoke-virtual {v7}, Lcom/v2ray/ang/dto/entities/ProfileItem;->getDescription()Ljava/lang/String;
 
     move-result-object v0
@@ -820,7 +820,7 @@
 
     if-nez v0, :cond_4
 
-    .line 273
+    .line 271
     invoke-virtual {v7}, Lcom/v2ray/ang/dto/entities/ProfileItem;->getServer()Ljava/lang/String;
 
     move-result-object v0
@@ -842,7 +842,7 @@
 
     if-nez v0, :cond_4
 
-    .line 274
+    .line 272
     invoke-virtual {v7}, Lcom/v2ray/ang/dto/entities/ProfileItem;->getConfigType()Lcom/v2ray/ang/enums/EConfigType;
 
     move-result-object v0
@@ -863,13 +863,13 @@
 
     if-eqz v0, :cond_1
 
-    .line 856
+    .line 854
     :cond_4
     invoke-interface {p0, v6}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 857
+    .line 855
     :cond_5
     check-cast p0, Ljava/util/List;
 
@@ -898,19 +898,19 @@
 
     move-object/from16 v0, p0
 
-    .line 233
+    .line 231
     move-object/from16 v1, p1
 
     check-cast v1, Ljava/lang/Iterable;
 
-    .line 810
+    .line 808
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     check-cast v2, Ljava/util/Collection;
 
-    .line 820
+    .line 818
     invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -927,20 +927,20 @@
 
     move-result-object v3
 
-    .line 819
+    .line 817
     move-object v5, v3
 
     check-cast v5, Ljava/lang/String;
 
-    .line 821
+    .line 819
     invoke-interface/range {p2 .. p2}, Lkotlin/coroutines/Continuation;->getContext()Lkotlin/coroutines/CoroutineContext;
 
     move-result-object v3
 
-    .line 234
+    .line 232
     invoke-static {v3}, Lkotlinx/coroutines/JobKt;->ensureActive(Lkotlin/coroutines/CoroutineContext;)V
 
-    .line 235
+    .line 233
     iget-object v3, v0, Lcom/v2ray/ang/ui/main/MainViewModel;->dataSource:Lcom/v2ray/ang/ui/main/MainDataSource;
 
     invoke-interface {v3, v5}, Lcom/v2ray/ang/ui/main/MainDataSource;->decodeServerConfig(Ljava/lang/String;)Lcom/v2ray/ang/dto/entities/ProfileItem;
@@ -953,7 +953,7 @@
 
     goto/16 :goto_2
 
-    .line 236
+    .line 234
     :cond_1
     iget-object v4, v0, Lcom/v2ray/ang/ui/main/MainViewModel;->dataSource:Lcom/v2ray/ang/ui/main/MainDataSource;
 
@@ -963,7 +963,7 @@
 
     move-object/from16 v68, v4
 
-    .line 237
+    .line 235
     new-instance v4, Lcom/v2ray/ang/dto/entities/ServersCache;
 
     const v66, 0x1ffffff
@@ -1086,14 +1086,14 @@
 
     const/16 v65, -0x1
 
-    .line 239
+    .line 237
     invoke-static/range {v6 .. v67}, Lcom/v2ray/ang/dto/entities/ProfileItem;->copy$default(Lcom/v2ray/ang/dto/entities/ProfileItem;ILcom/v2ray/ang/enums/EConfigType;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Object;)Lcom/v2ray/ang/dto/entities/ProfileItem;
 
     move-result-object v6
 
     if-eqz v68, :cond_2
 
-    .line 240
+    .line 238
     invoke-virtual/range {v68 .. v68}, Lcom/v2ray/ang/dto/entities/ServerAffiliationInfo;->getTestDelayMillis()J
 
     move-result-wide v7
@@ -1106,7 +1106,7 @@
     :goto_1
     if-eqz v68, :cond_3
 
-    .line 241
+    .line 239
     invoke-virtual/range {v68 .. v68}, Lcom/v2ray/ang/dto/entities/ServerAffiliationInfo;->getTestDelayString()Ljava/lang/String;
 
     move-result-object v3
@@ -1119,7 +1119,7 @@
     :cond_4
     move-object v9, v3
 
-    .line 237
+    .line 235
     invoke-direct/range {v4 .. v9}, Lcom/v2ray/ang/dto/entities/ServersCache;-><init>(Ljava/lang/String;Lcom/v2ray/ang/dto/entities/ProfileItem;JLjava/lang/String;)V
 
     move-object v3, v4
@@ -1127,12 +1127,12 @@
     :goto_2
     if-eqz v3, :cond_0
 
-    .line 819
+    .line 817
     invoke-interface {v2, v3}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_0
 
-    .line 824
+    .line 822
     :cond_5
     check-cast v2, Ljava/util/List;
 
@@ -1175,21 +1175,21 @@
 .method private final consumeLocateTarget(Lcom/v2ray/ang/dto/LocateTarget;)V
     .locals 14
 
-    .line 746
+    .line 744
     iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->_uiState:Lkotlinx/coroutines/flow/MutableStateFlow;
 
-    .line 924
+    .line 922
     :cond_0
     invoke-interface {p0}, Lkotlinx/coroutines/flow/MutableStateFlow;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 925
+    .line 923
     move-object v1, v0
 
     check-cast v1, Lcom/v2ray/ang/ui/main/MainUiState;
 
-    .line 747
+    .line 745
     invoke-virtual {v1}, Lcom/v2ray/ang/ui/main/MainUiState;->getLocateTarget()Lcom/v2ray/ang/dto/LocateTarget;
 
     move-result-object v2
@@ -1228,7 +1228,7 @@
 
     move-result-object v1
 
-    .line 926
+    .line 924
     :cond_1
     invoke-interface {p0, v0, v1}, Lkotlinx/coroutines/flow/MutableStateFlow;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -1250,7 +1250,7 @@
         }
     .end annotation
 
-    .line 159
+    .line 157
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->uiState:Lkotlinx/coroutines/flow/StateFlow;
 
     invoke-interface {v0}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
@@ -1279,7 +1279,7 @@
 .method private final exportAllAsync()V
     .locals 2
 
-    .line 434
+    .line 432
     new-instance v0, Lcom/v2ray/ang/ui/main/MainViewModel$exportAllAsync$1;
 
     const/4 v1, 0x0
@@ -1419,13 +1419,13 @@
     .line 120
     iget-object v2, v0, Lcom/v2ray/ang/ui/main/MainViewModel;->_uiState:Lkotlinx/coroutines/flow/MutableStateFlow;
 
-    .line 786
+    .line 784
     :cond_6
     invoke-interface {v2}, Lkotlinx/coroutines/flow/MutableStateFlow;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 787
+    .line 785
     move-object v3, v0
 
     check-cast v3, Lcom/v2ray/ang/ui/main/MainUiState;
@@ -1465,7 +1465,7 @@
 
     move-result-object v3
 
-    .line 788
+    .line 786
     invoke-interface {v2, v0, v3}, Lkotlinx/coroutines/flow/MutableStateFlow;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
@@ -1526,13 +1526,13 @@
     .line 132
     iget-object v2, v0, Lcom/v2ray/ang/ui/main/MainViewModel;->_uiState:Lkotlinx/coroutines/flow/MutableStateFlow;
 
-    .line 791
+    .line 789
     :cond_9
     invoke-interface {v2}, Lkotlinx/coroutines/flow/MutableStateFlow;->getValue()Ljava/lang/Object;
 
     move-result-object v3
 
-    .line 792
+    .line 790
     move-object v4, v3
 
     check-cast v4, Lcom/v2ray/ang/ui/main/MainUiState;
@@ -1541,7 +1541,7 @@
     iget-object v5, v0, Lcom/v2ray/ang/ui/main/MainViewModel;->dataSource:Lcom/v2ray/ang/ui/main/MainDataSource;
 
     .line 135
-    sget v6, Lcom/v2ray/ang/R$string;->connection_runing_task_left:I
+    sget v6, Lcom/v2ray/ang/R$string;->connection_running_task_left:I
 
     .line 136
     move-object v7, v1
@@ -1588,45 +1588,29 @@
 
     move-result-object v4
 
-    .line 793
+    .line 791
     invoke-interface {v2, v3, v4}, Lkotlinx/coroutines/flow/MutableStateFlow;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_9
 
-    goto :goto_1
-
-    .line 142
-    :cond_a
-    instance-of v2, v1, Lcom/v2ray/ang/ui/main/MainServiceEvent$MeasureConfigFinish;
-
-    if-eqz v2, :cond_c
-
-    .line 143
-    check-cast v1, Lcom/v2ray/ang/ui/main/MainServiceEvent$MeasureConfigFinish;
-
-    invoke-virtual {v1}, Lcom/v2ray/ang/ui/main/MainServiceEvent$MeasureConfigFinish;->getFinishedCount()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "0"
-
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_b
-
-    .line 144
-    invoke-direct {v0}, Lcom/v2ray/ang/ui/main/MainViewModel;->onTestsFinished()V
-
-    :cond_b
     :goto_1
     return-void
 
+    .line 142
+    :cond_a
+    instance-of v1, v1, Lcom/v2ray/ang/ui/main/MainServiceEvent$MeasureConfigFinish;
+
+    if-eqz v1, :cond_b
+
+    .line 143
+    invoke-direct {v0}, Lcom/v2ray/ang/ui/main/MainViewModel;->onTestsFinished()V
+
+    return-void
+
     .line 100
-    :cond_c
+    :cond_b
     new-instance v0, Lkotlin/NoWhenBranchMatchedException;
 
     invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
@@ -1637,7 +1621,7 @@
 .method private final importBatchConfig(Ljava/lang/String;)V
     .locals 2
 
-    .line 373
+    .line 371
     new-instance v0, Lcom/v2ray/ang/ui/main/MainViewModel$importBatchConfig$1;
 
     const/4 v1, 0x0
@@ -1654,7 +1638,7 @@
 .method private final importConfigViaSub()V
     .locals 3
 
-    .line 399
+    .line 397
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->uiState:Lkotlinx/coroutines/flow/StateFlow;
 
     invoke-interface {v0}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
@@ -1667,7 +1651,7 @@
 
     move-result-object v0
 
-    .line 400
+    .line 398
     new-instance v1, Lcom/v2ray/ang/ui/main/MainViewModel$importConfigViaSub$1;
 
     const/4 v2, 0x0
@@ -1733,7 +1717,7 @@
 
     move-result-object v1
 
-    .line 245
+    .line 243
     iget v2, v0, Lcom/v2ray/ang/ui/main/MainViewModel$loadGroup$1;->label:I
 
     const/4 v3, 0x4
@@ -1897,7 +1881,7 @@
     :cond_5
     invoke-static {p3}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 249
+    .line 247
     iget-object p3, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->groupLoadMutexes:Ljava/util/concurrent/ConcurrentHashMap;
 
     new-instance v2, Lcom/v2ray/ang/ui/main/MainViewModel$$ExternalSyntheticLambda0;
@@ -1918,7 +1902,7 @@
 
     check-cast p3, Lkotlinx/coroutines/sync/Mutex;
 
-    .line 829
+    .line 827
     iput-object p1, v0, Lcom/v2ray/ang/ui/main/MainViewModel$loadGroup$1;->L$0:Ljava/lang/Object;
 
     invoke-static {p3}, Lkotlin/coroutines/jvm/internal/SpillingKt;->nullOutSpilledVariable(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1947,11 +1931,11 @@
     :goto_1
     if-nez p2, :cond_8
 
-    .line 252
+    .line 250
     :try_start_3
     iget-object v6, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->cacheMutex:Lkotlinx/coroutines/sync/Mutex;
 
-    .line 836
+    .line 834
     iput-object p1, v0, Lcom/v2ray/ang/ui/main/MainViewModel$loadGroup$1;->L$0:Ljava/lang/Object;
 
     invoke-static {v2}, Lkotlin/coroutines/jvm/internal/SpillingKt;->nullOutSpilledVariable(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1995,7 +1979,7 @@
 
     move-object v5, v2
 
-    .line 252
+    .line 250
     :goto_2
     :try_start_4
     iget-object v2, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->groupDataCache:Ljava/util/Map;
@@ -2008,7 +1992,7 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_3
 
-    .line 840
+    .line 838
     :try_start_5
     invoke-interface {p2, v7}, Lkotlinx/coroutines/sync/Mutex;->unlock(Ljava/lang/Object;)V
 
@@ -2027,7 +2011,7 @@
 
     throw p0
 
-    .line 254
+    .line 252
     :cond_8
     :goto_3
     iget-object v5, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->dataSource:Lcom/v2ray/ang/ui/main/MainDataSource;
@@ -2075,23 +2059,23 @@
 
     move-object p3, v9
 
-    .line 245
+    .line 243
     :goto_4
     :try_start_6
     check-cast p3, Ljava/util/List;
 
-    .line 842
+    .line 840
     invoke-interface {v0}, Lkotlin/coroutines/Continuation;->getContext()Lkotlin/coroutines/CoroutineContext;
 
     move-result-object v5
 
-    .line 255
+    .line 253
     invoke-static {v5}, Lkotlinx/coroutines/JobKt;->ensureActive(Lkotlin/coroutines/CoroutineContext;)V
 
-    .line 256
+    .line 254
     iget-object v5, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->cacheMutex:Lkotlinx/coroutines/sync/Mutex;
 
-    .line 847
+    .line 845
     iput-object v4, v0, Lcom/v2ray/ang/ui/main/MainViewModel$loadGroup$1;->L$0:Ljava/lang/Object;
 
     invoke-static {v2}, Lkotlin/coroutines/jvm/internal/SpillingKt;->nullOutSpilledVariable(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2136,7 +2120,7 @@
 
     move-object p1, v5
 
-    .line 256
+    .line 254
     :goto_6
     :try_start_7
     iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->groupDataCache:Ljava/util/Map;
@@ -2147,13 +2131,13 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_4
 
-    .line 851
+    .line 849
     :try_start_8
     invoke-interface {p1, v7}, Lkotlinx/coroutines/sync/Mutex;->unlock(Ljava/lang/Object;)V
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
-    .line 853
+    .line 851
     invoke-interface {v1, v7}, Lkotlinx/coroutines/sync/Mutex;->unlock(Ljava/lang/Object;)V
 
     return-object p2
@@ -2161,7 +2145,7 @@
     :catchall_4
     move-exception p0
 
-    .line 851
+    .line 849
     :try_start_9
     invoke-interface {p1, v7}, Lkotlinx/coroutines/sync/Mutex;->unlock(Ljava/lang/Object;)V
 
@@ -2174,7 +2158,7 @@
 
     move-object v1, p3
 
-    .line 853
+    .line 851
     :goto_7
     invoke-interface {v1, v7}, Lkotlinx/coroutines/sync/Mutex;->unlock(Ljava/lang/Object;)V
 
@@ -2190,7 +2174,7 @@
 
     const/4 p2, 0x0
 
-    .line 245
+    .line 243
     :cond_0
     invoke-direct {p0, p1, p2, p3}, Lcom/v2ray/ang/ui/main/MainViewModel;->loadGroup(Ljava/lang/String;ZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
@@ -2212,7 +2196,7 @@
 
     const/4 v1, 0x0
 
-    .line 249
+    .line 247
     invoke-static {v1, p0, v0}, Lkotlinx/coroutines/sync/MutexKt;->Mutex$default(ZILjava/lang/Object;)Lkotlinx/coroutines/sync/Mutex;
 
     move-result-object p0
@@ -2223,7 +2207,7 @@
 .method static final loadGroup$lambda$1(Lkotlin/jvm/functions/Function1;Ljava/lang/Object;)Lkotlinx/coroutines/sync/Mutex;
     .locals 0
 
-    .line 249
+    .line 247
     invoke-interface {p0, p1}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -2247,7 +2231,7 @@
         }
     .end annotation
 
-    .line 156
+    .line 154
     iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->groupPageFlows:Ljava/util/concurrent/ConcurrentHashMap;
 
     new-instance v0, Lcom/v2ray/ang/ui/main/MainViewModel$$ExternalSyntheticLambda2;
@@ -2278,7 +2262,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 156
+    .line 154
     invoke-static {}, Lkotlin/collections/CollectionsKt;->emptyList()Ljava/util/List;
 
     move-result-object p0
@@ -2293,7 +2277,7 @@
 .method static final mutableServersForGroup$lambda$1(Lkotlin/jvm/functions/Function1;Ljava/lang/Object;)Lkotlinx/coroutines/flow/MutableStateFlow;
     .locals 0
 
-    .line 156
+    .line 154
     invoke-interface {p0, p1}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -2306,7 +2290,7 @@
 .method private final onTestsFinished()V
     .locals 7
 
-    .line 714
+    .line 712
     move-object v0, p0
 
     check-cast v0, Landroidx/lifecycle/ViewModel;
@@ -2354,7 +2338,7 @@
         }
     .end annotation
 
-    .line 298
+    .line 296
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result p0
@@ -2367,7 +2351,7 @@
 
     return-object p0
 
-    .line 299
+    .line 297
     :cond_0
     new-instance p0, Ljava/util/ArrayList;
 
@@ -2387,7 +2371,7 @@
 
     invoke-direct {p0, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 300
+    .line 298
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -2401,7 +2385,7 @@
 
     if-ltz v2, :cond_1
 
-    .line 303
+    .line 301
     move-object v4, p1
 
     check-cast v4, Ljava/util/Collection;
@@ -2431,7 +2415,7 @@
     :cond_1
     if-ltz v3, :cond_2
 
-    .line 304
+    .line 302
     move-object v2, p1
 
     check-cast v2, Ljava/util/Collection;
@@ -2463,7 +2447,7 @@
 
     goto :goto_0
 
-    .line 306
+    .line 304
     :cond_3
     check-cast p0, Ljava/util/List;
 
@@ -2473,7 +2457,7 @@
 .method private final removeAllServerAsync()V
     .locals 2
 
-    .line 460
+    .line 458
     new-instance v0, Lcom/v2ray/ang/ui/main/MainViewModel$removeAllServerAsync$1;
 
     const/4 v1, 0x0
@@ -2490,7 +2474,7 @@
 .method private final removeDuplicateServerAsync()V
     .locals 2
 
-    .line 487
+    .line 485
     new-instance v0, Lcom/v2ray/ang/ui/main/MainViewModel$removeDuplicateServerAsync$1;
 
     const/4 v1, 0x0
@@ -2507,7 +2491,7 @@
 .method private final removeInvalidServerAsync()V
     .locals 2
 
-    .line 513
+    .line 511
     new-instance v0, Lcom/v2ray/ang/ui/main/MainViewModel$removeInvalidServerAsync$1;
 
     const/4 v1, 0x0
@@ -2524,7 +2508,7 @@
 .method private final removeInvalidServerInternal()I
     .locals 4
 
-    .line 534
+    .line 532
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->uiState:Lkotlinx/coroutines/flow/StateFlow;
 
     invoke-interface {v0}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
@@ -2558,7 +2542,7 @@
 
     if-nez v0, :cond_2
 
-    .line 536
+    .line 534
     :goto_0
     invoke-direct {p0}, Lcom/v2ray/ang/ui/main/MainViewModel;->currentServers()Ljava/util/List;
 
@@ -2585,7 +2569,7 @@
 
     check-cast v2, Lcom/v2ray/ang/dto/entities/ServersCache;
 
-    .line 537
+    .line 535
     iget-object v3, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->dataSource:Lcom/v2ray/ang/ui/main/MainDataSource;
 
     invoke-virtual {v2}, Lcom/v2ray/ang/dto/entities/ServersCache;->getGuid()Ljava/lang/String;
@@ -2603,7 +2587,7 @@
     :cond_1
     return v1
 
-    .line 540
+    .line 538
     :cond_2
     iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->dataSource:Lcom/v2ray/ang/ui/main/MainDataSource;
 
@@ -2628,7 +2612,7 @@
         }
     .end annotation
 
-    .line 285
+    .line 283
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->uiState:Lkotlinx/coroutines/flow/StateFlow;
 
     invoke-interface {v0}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
@@ -2641,7 +2625,7 @@
 
     move-result-object v0
 
-    .line 287
+    .line 285
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
@@ -2652,13 +2636,13 @@
 
     goto :goto_1
 
-    .line 288
+    .line 286
     :cond_0
     move-object v1, p1
 
     check-cast v1, Ljava/lang/Iterable;
 
-    .line 858
+    .line 856
     instance-of v2, v1, Ljava/util/Collection;
 
     if-eqz v2, :cond_1
@@ -2675,7 +2659,7 @@
 
     goto :goto_0
 
-    .line 859
+    .line 857
     :cond_1
     invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -2694,7 +2678,7 @@
 
     check-cast v2, Lcom/v2ray/ang/dto/GroupMapItem;
 
-    .line 288
+    .line 286
     invoke-virtual {v2}, Lcom/v2ray/ang/dto/GroupMapItem;->getId()Ljava/lang/String;
 
     move-result-object v2
@@ -2709,7 +2693,7 @@
 
     goto :goto_1
 
-    .line 289
+    .line 287
     :cond_3
     :goto_0
     invoke-static {p1}, Lkotlin/collections/CollectionsKt;->first(Ljava/util/List;)Ljava/lang/Object;
@@ -2722,7 +2706,7 @@
 
     move-result-object p1
 
-    .line 291
+    .line 289
     :goto_1
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -2730,7 +2714,7 @@
 
     if-nez v0, :cond_4
 
-    .line 292
+    .line 290
     iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->dataSource:Lcom/v2ray/ang/ui/main/MainDataSource;
 
     invoke-interface {p0, p1}, Lcom/v2ray/ang/ui/main/MainDataSource;->setSelectedSubscriptionId(Ljava/lang/String;)V
@@ -2746,7 +2730,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 152
+    .line 150
     invoke-static {}, Lkotlin/collections/CollectionsKt;->emptyList()Ljava/util/List;
 
     move-result-object p0
@@ -2761,7 +2745,7 @@
 .method static final serversForGroup$lambda$1(Lkotlin/jvm/functions/Function1;Ljava/lang/Object;)Lkotlinx/coroutines/flow/MutableStateFlow;
     .locals 0
 
-    .line 152
+    .line 150
     invoke-interface {p0, p1}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -2780,7 +2764,7 @@
 
     const/4 p1, 0x0
 
-    .line 309
+    .line 307
     :cond_0
     invoke-virtual {p0, p1}, Lcom/v2ray/ang/ui/main/MainViewModel;->setupGroupTab(Z)Lkotlinx/coroutines/Job;
 
@@ -2792,7 +2776,7 @@
 .method private final sortByTestResultsAsync()V
     .locals 2
 
-    .line 545
+    .line 543
     new-instance v0, Lcom/v2ray/ang/ui/main/MainViewModel$sortByTestResultsAsync$1;
 
     const/4 v1, 0x0
@@ -2809,7 +2793,7 @@
 .method private final sortByTestResultsInternal()V
     .locals 3
 
-    .line 562
+    .line 560
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->uiState:Lkotlinx/coroutines/flow/StateFlow;
 
     invoke-interface {v0}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
@@ -2830,7 +2814,7 @@
 
     if-nez v0, :cond_0
 
-    .line 563
+    .line 561
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->dataSource:Lcom/v2ray/ang/ui/main/MainDataSource;
 
     invoke-interface {v0}, Lcom/v2ray/ang/ui/main/MainDataSource;->getSubsList()Ljava/util/List;
@@ -2839,7 +2823,7 @@
 
     goto :goto_0
 
-    .line 565
+    .line 563
     :cond_0
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->uiState:Lkotlinx/coroutines/flow/StateFlow;
 
@@ -2857,11 +2841,11 @@
 
     move-result-object v0
 
-    .line 567
+    .line 565
     :goto_0
     check-cast v0, Ljava/lang/Iterable;
 
-    .line 861
+    .line 859
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -2879,7 +2863,7 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 567
+    .line 565
     iget-object v2, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->dataSource:Lcom/v2ray/ang/ui/main/MainDataSource;
 
     invoke-interface {v2, v1}, Lcom/v2ray/ang/ui/main/MainDataSource;->sortByTestResultsForSub(Ljava/lang/String;)V
@@ -2899,7 +2883,7 @@
 
     const/4 p1, 0x0
 
-    .line 675
+    .line 673
     :cond_0
     invoke-virtual {p0, p1}, Lcom/v2ray/ang/ui/main/MainViewModel;->testAllRealPing(Z)V
 
@@ -2918,7 +2902,7 @@
         }
     .end annotation
 
-    .line 279
+    .line 277
     invoke-direct {p0, p1}, Lcom/v2ray/ang/ui/main/MainViewModel;->mutableServersForGroup(Ljava/lang/String;)Lkotlinx/coroutines/flow/MutableStateFlow;
 
     move-result-object p1
@@ -2937,23 +2921,23 @@
 
     move-object/from16 v0, p0
 
-    .line 753
+    .line 751
     iget-object v1, v0, Lcom/v2ray/ang/ui/main/MainViewModel;->_uiState:Lkotlinx/coroutines/flow/MutableStateFlow;
 
-    .line 929
+    .line 927
     :cond_0
     invoke-interface {v1}, Lkotlinx/coroutines/flow/MutableStateFlow;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 930
+    .line 928
     move-object v3, v2
 
     check-cast v3, Lcom/v2ray/ang/ui/main/MainUiState;
 
     if-nez p2, :cond_1
 
-    .line 756
+    .line 754
     invoke-virtual {v3}, Lcom/v2ray/ang/ui/main/MainUiState;->isTesting()Z
 
     move-result v4
@@ -2969,7 +2953,7 @@
     :cond_1
     if-eqz p1, :cond_2
 
-    .line 757
+    .line 755
     iget-object v4, v0, Lcom/v2ray/ang/ui/main/MainViewModel;->connectedText:Ljava/lang/String;
 
     goto :goto_0
@@ -3002,12 +2986,12 @@
 
     move/from16 v7, p1
 
-    .line 754
+    .line 752
     invoke-static/range {v3 .. v15}, Lcom/v2ray/ang/ui/main/MainUiState;->copy$default(Lcom/v2ray/ang/ui/main/MainUiState;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;Lcom/v2ray/ang/dto/LocateTarget;ZZLandroid/graphics/Bitmap;ILjava/lang/Object;)Lcom/v2ray/ang/ui/main/MainUiState;
 
     move-result-object v3
 
-    .line 931
+    .line 929
     invoke-interface {v1, v2, v3}, Lkotlinx/coroutines/flow/MutableStateFlow;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -3026,7 +3010,7 @@
 
     const/4 p2, 0x1
 
-    .line 752
+    .line 750
     :cond_0
     invoke-direct {p0, p1, p2}, Lcom/v2ray/ang/ui/main/MainViewModel;->updateRunningState(ZZ)V
 
@@ -3038,31 +3022,31 @@
 .method public final cancelAllPing()V
     .locals 15
 
-    .line 665
+    .line 663
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->dataSource:Lcom/v2ray/ang/ui/main/MainDataSource;
 
     invoke-interface {v0}, Lcom/v2ray/ang/ui/main/MainDataSource;->cancelAllPing()V
 
     const/4 v0, 0x0
 
-    .line 666
+    .line 664
     iput-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->testingGroupId:Ljava/lang/String;
 
-    .line 667
+    .line 665
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->_uiState:Lkotlinx/coroutines/flow/MutableStateFlow;
 
-    .line 886
+    .line 884
     :cond_0
     invoke-interface {v0}, Lkotlinx/coroutines/flow/MutableStateFlow;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 887
+    .line 885
     move-object v2, v1
 
     check-cast v2, Lcom/v2ray/ang/ui/main/MainUiState;
 
-    .line 670
+    .line 668
     invoke-virtual {v2}, Lcom/v2ray/ang/ui/main/MainUiState;->isRunning()Z
 
     move-result v3
@@ -3101,12 +3085,12 @@
 
     const/4 v12, 0x0
 
-    .line 668
+    .line 666
     invoke-static/range {v2 .. v14}, Lcom/v2ray/ang/ui/main/MainUiState;->copy$default(Lcom/v2ray/ang/ui/main/MainUiState;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;Lcom/v2ray/ang/dto/LocateTarget;ZZLandroid/graphics/Bitmap;ILjava/lang/Object;)Lcom/v2ray/ang/ui/main/MainUiState;
 
     move-result-object v2
 
-    .line 888
+    .line 886
     invoke-interface {v0, v1, v2}, Lkotlinx/coroutines/flow/MutableStateFlow;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
@@ -3123,7 +3107,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 614
+    .line 612
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->keywordFilter:Ljava/lang/String;
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -3134,11 +3118,11 @@
 
     return-void
 
-    .line 615
+    .line 613
     :cond_0
     iput-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->keywordFilter:Ljava/lang/String;
 
-    .line 616
+    .line 614
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->filterJob:Lkotlinx/coroutines/Job;
 
     const/4 v0, 0x0
@@ -3149,7 +3133,7 @@
 
     invoke-static {p1, v0, v1, v0}, Lkotlinx/coroutines/Job;->cancel$default(Lkotlinx/coroutines/Job;Ljava/util/concurrent/CancellationException;ILjava/lang/Object;)V
 
-    .line 617
+    .line 615
     :cond_1
     move-object p1, p0
 
@@ -3195,12 +3179,12 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 743
+    .line 741
     invoke-direct {p0}, Lcom/v2ray/ang/ui/main/MainViewModel;->currentServers()Ljava/util/List;
 
     move-result-object p0
 
-    .line 917
+    .line 915
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -3218,10 +3202,10 @@
 
     move-result-object v1
 
-    .line 918
+    .line 916
     check-cast v1, Lcom/v2ray/ang/dto/entities/ServersCache;
 
-    .line 743
+    .line 741
     invoke-virtual {v1}, Lcom/v2ray/ang/dto/entities/ServersCache;->getGuid()Ljava/lang/String;
 
     move-result-object v1
@@ -3256,7 +3240,7 @@
         }
     .end annotation
 
-    .line 282
+    .line 280
     iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->dataSource:Lcom/v2ray/ang/ui/main/MainDataSource;
 
     invoke-interface {p0}, Lcom/v2ray/ang/ui/main/MainDataSource;->getSubscriptions()Ljava/util/List;
@@ -3286,7 +3270,7 @@
 .method public final initialize()V
     .locals 7
 
-    .line 208
+    .line 206
     move-object v0, p0
 
     check-cast v0, Landroidx/lifecycle/ViewModel;
@@ -3327,7 +3311,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 650
+    .line 648
     invoke-direct/range {p0 .. p1}, Lcom/v2ray/ang/ui/main/MainViewModel;->mutableServersForGroup(Ljava/lang/String;)Lkotlinx/coroutines/flow/MutableStateFlow;
 
     move-result-object v0
@@ -3344,7 +3328,7 @@
 
     move/from16 v1, p3
 
-    .line 651
+    .line 649
     invoke-static {v6, p2, v1}, Lcom/v2ray/ang/extension/ListExtKt;->moveItem(Ljava/util/List;II)Z
 
     move-result v0
@@ -3353,13 +3337,13 @@
 
     return-void
 
-    .line 652
+    .line 650
     :cond_0
     move-object v0, v6
 
     check-cast v0, Ljava/lang/Iterable;
 
-    .line 881
+    .line 879
     new-instance v1, Ljava/util/ArrayList;
 
     const/16 v2, 0xa
@@ -3372,7 +3356,7 @@
 
     check-cast v1, Ljava/util/Collection;
 
-    .line 882
+    .line 880
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -3388,33 +3372,33 @@
 
     move-result-object v2
 
-    .line 883
+    .line 881
     check-cast v2, Lcom/v2ray/ang/dto/entities/ServersCache;
 
-    .line 652
+    .line 650
     invoke-virtual {v2}, Lcom/v2ray/ang/dto/entities/ServersCache;->getGuid()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 883
+    .line 881
     invoke-interface {v1, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 884
+    .line 882
     :cond_1
     move-object v4, v1
 
     check-cast v4, Ljava/util/List;
 
-    .line 653
+    .line 651
     invoke-direct/range {p0 .. p1}, Lcom/v2ray/ang/ui/main/MainViewModel;->mutableServersForGroup(Ljava/lang/String;)Lkotlinx/coroutines/flow/MutableStateFlow;
 
     move-result-object v0
 
     invoke-interface {v0, v6}, Lkotlinx/coroutines/flow/MutableStateFlow;->setValue(Ljava/lang/Object;)V
 
-    .line 655
+    .line 653
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->serverOrderPersistenceJobs:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -3425,7 +3409,7 @@
 
     check-cast v2, Lkotlinx/coroutines/Job;
 
-    .line 656
+    .line 654
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->serverOrderPersistenceJobs:Ljava/util/Map;
 
     move-object v1, p0
@@ -3484,7 +3468,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 164
+    .line 162
     sget-object v0, Lcom/v2ray/ang/ui/main/MainAction$Initialize;->INSTANCE:Lcom/v2ray/ang/ui/main/MainAction$Initialize;
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -3497,7 +3481,7 @@
 
     return-void
 
-    .line 165
+    .line 163
     :cond_0
     sget-object v0, Lcom/v2ray/ang/ui/main/MainAction$RefreshGroups;->INSTANCE:Lcom/v2ray/ang/ui/main/MainAction$RefreshGroups;
 
@@ -3513,7 +3497,7 @@
 
     return-void
 
-    .line 166
+    .line 164
     :cond_1
     sget-object v0, Lcom/v2ray/ang/ui/main/MainAction$TestAllServers;->INSTANCE:Lcom/v2ray/ang/ui/main/MainAction$TestAllServers;
 
@@ -3527,7 +3511,7 @@
 
     return-void
 
-    .line 167
+    .line 165
     :cond_2
     sget-object v0, Lcom/v2ray/ang/ui/main/MainAction$TestRealAllServers;->INSTANCE:Lcom/v2ray/ang/ui/main/MainAction$TestRealAllServers;
 
@@ -3545,7 +3529,7 @@
 
     return-void
 
-    .line 168
+    .line 166
     :cond_3
     sget-object v0, Lcom/v2ray/ang/ui/main/MainAction$CancelTesting;->INSTANCE:Lcom/v2ray/ang/ui/main/MainAction$CancelTesting;
 
@@ -3559,7 +3543,7 @@
 
     return-void
 
-    .line 169
+    .line 167
     :cond_4
     sget-object v0, Lcom/v2ray/ang/ui/main/MainAction$RemoveAllServers;->INSTANCE:Lcom/v2ray/ang/ui/main/MainAction$RemoveAllServers;
 
@@ -3573,7 +3557,7 @@
 
     return-void
 
-    .line 170
+    .line 168
     :cond_5
     sget-object v0, Lcom/v2ray/ang/ui/main/MainAction$RemoveDuplicateServers;->INSTANCE:Lcom/v2ray/ang/ui/main/MainAction$RemoveDuplicateServers;
 
@@ -3587,7 +3571,7 @@
 
     return-void
 
-    .line 171
+    .line 169
     :cond_6
     sget-object v0, Lcom/v2ray/ang/ui/main/MainAction$RemoveInvalidServers;->INSTANCE:Lcom/v2ray/ang/ui/main/MainAction$RemoveInvalidServers;
 
@@ -3601,7 +3585,7 @@
 
     return-void
 
-    .line 172
+    .line 170
     :cond_7
     sget-object v0, Lcom/v2ray/ang/ui/main/MainAction$SortByTestResults;->INSTANCE:Lcom/v2ray/ang/ui/main/MainAction$SortByTestResults;
 
@@ -3615,7 +3599,7 @@
 
     return-void
 
-    .line 173
+    .line 171
     :cond_8
     sget-object v0, Lcom/v2ray/ang/ui/main/MainAction$UpdateSubscriptions;->INSTANCE:Lcom/v2ray/ang/ui/main/MainAction$UpdateSubscriptions;
 
@@ -3629,7 +3613,7 @@
 
     return-void
 
-    .line 174
+    .line 172
     :cond_9
     sget-object v0, Lcom/v2ray/ang/ui/main/MainAction$ExportAll;->INSTANCE:Lcom/v2ray/ang/ui/main/MainAction$ExportAll;
 
@@ -3643,7 +3627,7 @@
 
     return-void
 
-    .line 175
+    .line 173
     :cond_a
     instance-of v0, p1, Lcom/v2ray/ang/ui/main/MainAction$SelectGroup;
 
@@ -3659,7 +3643,7 @@
 
     return-void
 
-    .line 176
+    .line 174
     :cond_b
     instance-of v0, p1, Lcom/v2ray/ang/ui/main/MainAction$SelectServer;
 
@@ -3675,7 +3659,7 @@
 
     return-void
 
-    .line 177
+    .line 175
     :cond_c
     instance-of v0, p1, Lcom/v2ray/ang/ui/main/MainAction$RemoveServer;
 
@@ -3691,7 +3675,7 @@
 
     return-void
 
-    .line 178
+    .line 176
     :cond_d
     instance-of v0, p1, Lcom/v2ray/ang/ui/main/MainAction$Search;
 
@@ -3707,7 +3691,7 @@
 
     return-void
 
-    .line 179
+    .line 177
     :cond_e
     instance-of v0, p1, Lcom/v2ray/ang/ui/main/MainAction$ImportBatchConfig;
 
@@ -3723,7 +3707,7 @@
 
     return-void
 
-    .line 180
+    .line 178
     :cond_f
     instance-of v0, p1, Lcom/v2ray/ang/ui/main/MainAction$LocateHandled;
 
@@ -3739,13 +3723,13 @@
 
     return-void
 
-    .line 181
+    .line 179
     :cond_10
     instance-of v0, p1, Lcom/v2ray/ang/ui/main/MainAction$ShareQRCode;
 
     if-eqz v0, :cond_12
 
-    .line 182
+    .line 180
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->dataSource:Lcom/v2ray/ang/ui/main/MainDataSource;
 
     check-cast p1, Lcom/v2ray/ang/ui/main/MainAction$ShareQRCode;
@@ -3758,16 +3742,16 @@
 
     move-result-object v11
 
-    .line 183
+    .line 181
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->_uiState:Lkotlinx/coroutines/flow/MutableStateFlow;
 
-    .line 796
+    .line 794
     :cond_11
     invoke-interface {v0}, Lkotlinx/coroutines/flow/MutableStateFlow;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
-    .line 797
+    .line 795
     move-object v1, p0
 
     check-cast v1, Lcom/v2ray/ang/ui/main/MainUiState;
@@ -3794,12 +3778,12 @@
 
     const/4 v10, 0x0
 
-    .line 183
+    .line 181
     invoke-static/range {v1 .. v13}, Lcom/v2ray/ang/ui/main/MainUiState;->copy$default(Lcom/v2ray/ang/ui/main/MainUiState;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;Lcom/v2ray/ang/dto/LocateTarget;ZZLandroid/graphics/Bitmap;ILjava/lang/Object;)Lcom/v2ray/ang/ui/main/MainUiState;
 
     move-result-object p1
 
-    .line 798
+    .line 796
     invoke-interface {v0, p0, p1}, Lkotlinx/coroutines/flow/MutableStateFlow;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -3808,7 +3792,7 @@
 
     goto/16 :goto_0
 
-    .line 186
+    .line 184
     :cond_12
     sget-object v0, Lcom/v2ray/ang/ui/main/MainAction$DismissQRCodeDialog;->INSTANCE:Lcom/v2ray/ang/ui/main/MainAction$DismissQRCodeDialog;
 
@@ -3818,16 +3802,16 @@
 
     if-eqz v0, :cond_14
 
-    .line 187
+    .line 185
     iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->_uiState:Lkotlinx/coroutines/flow/MutableStateFlow;
 
-    .line 801
+    .line 799
     :cond_13
     invoke-interface {p0}, Lkotlinx/coroutines/flow/MutableStateFlow;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    .line 802
+    .line 800
     move-object v0, p1
 
     check-cast v0, Lcom/v2ray/ang/ui/main/MainUiState;
@@ -3856,12 +3840,12 @@
 
     const/4 v10, 0x0
 
-    .line 187
+    .line 185
     invoke-static/range {v0 .. v12}, Lcom/v2ray/ang/ui/main/MainUiState;->copy$default(Lcom/v2ray/ang/ui/main/MainUiState;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;Lcom/v2ray/ang/dto/LocateTarget;ZZLandroid/graphics/Bitmap;ILjava/lang/Object;)Lcom/v2ray/ang/ui/main/MainUiState;
 
     move-result-object v0
 
-    .line 803
+    .line 801
     invoke-interface {p0, p1, v0}, Lkotlinx/coroutines/flow/MutableStateFlow;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
@@ -3870,7 +3854,7 @@
 
     goto :goto_0
 
-    .line 190
+    .line 188
     :cond_14
     sget-object p0, Lcom/v2ray/ang/ui/main/MainAction$ToggleService;->INSTANCE:Lcom/v2ray/ang/ui/main/MainAction$ToggleService;
 
@@ -3880,7 +3864,7 @@
 
     if-nez p0, :cond_16
 
-    .line 191
+    .line 189
     sget-object p0, Lcom/v2ray/ang/ui/main/MainAction$TestCurrentServer;->INSTANCE:Lcom/v2ray/ang/ui/main/MainAction$TestCurrentServer;
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -3889,7 +3873,7 @@
 
     if-nez p0, :cond_16
 
-    .line 192
+    .line 190
     sget-object p0, Lcom/v2ray/ang/ui/main/MainAction$ImportQRcode;->INSTANCE:Lcom/v2ray/ang/ui/main/MainAction$ImportQRcode;
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -3898,7 +3882,7 @@
 
     if-nez p0, :cond_16
 
-    .line 193
+    .line 191
     sget-object p0, Lcom/v2ray/ang/ui/main/MainAction$ImportClipboard;->INSTANCE:Lcom/v2ray/ang/ui/main/MainAction$ImportClipboard;
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -3907,7 +3891,7 @@
 
     if-nez p0, :cond_16
 
-    .line 194
+    .line 192
     sget-object p0, Lcom/v2ray/ang/ui/main/MainAction$ImportConfigLocal;->INSTANCE:Lcom/v2ray/ang/ui/main/MainAction$ImportConfigLocal;
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -3916,12 +3900,12 @@
 
     if-nez p0, :cond_16
 
-    .line 195
+    .line 193
     instance-of p0, p1, Lcom/v2ray/ang/ui/main/MainAction$ImportManually;
 
     if-nez p0, :cond_16
 
-    .line 196
+    .line 194
     sget-object p0, Lcom/v2ray/ang/ui/main/MainAction$RestartService;->INSTANCE:Lcom/v2ray/ang/ui/main/MainAction$RestartService;
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -3930,7 +3914,7 @@
 
     if-nez p0, :cond_16
 
-    .line 197
+    .line 195
     sget-object p0, Lcom/v2ray/ang/ui/main/MainAction$LocateSelectedServer;->INSTANCE:Lcom/v2ray/ang/ui/main/MainAction$LocateSelectedServer;
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -3939,24 +3923,24 @@
 
     if-nez p0, :cond_16
 
-    .line 198
+    .line 196
     instance-of p0, p1, Lcom/v2ray/ang/ui/main/MainAction$EditServer;
 
     if-nez p0, :cond_16
 
-    .line 199
+    .line 197
     instance-of p0, p1, Lcom/v2ray/ang/ui/main/MainAction$ShareClipboard;
 
     if-nez p0, :cond_16
 
-    .line 200
+    .line 198
     instance-of p0, p1, Lcom/v2ray/ang/ui/main/MainAction$ShareFullContent;
 
     if-eqz p0, :cond_15
 
     goto :goto_0
 
-    .line 163
+    .line 161
     :cond_15
     new-instance p0, Lkotlin/NoWhenBranchMatchedException;
 
@@ -3972,7 +3956,7 @@
 .method protected onCleared()V
     .locals 3
 
-    .line 763
+    .line 761
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->setupGroupJob:Lkotlinx/coroutines/Job;
 
     const/4 v1, 0x1
@@ -3983,7 +3967,7 @@
 
     invoke-static {v0, v2, v1, v2}, Lkotlinx/coroutines/Job;->cancel$default(Lkotlinx/coroutines/Job;Ljava/util/concurrent/CancellationException;ILjava/lang/Object;)V
 
-    .line 764
+    .line 762
     :cond_0
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->preloadJob:Lkotlinx/coroutines/Job;
 
@@ -3991,7 +3975,7 @@
 
     invoke-static {v0, v2, v1, v2}, Lkotlinx/coroutines/Job;->cancel$default(Lkotlinx/coroutines/Job;Ljava/util/concurrent/CancellationException;ILjava/lang/Object;)V
 
-    .line 765
+    .line 763
     :cond_1
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->selectedGroupLoadJob:Lkotlinx/coroutines/Job;
 
@@ -3999,7 +3983,7 @@
 
     invoke-static {v0, v2, v1, v2}, Lkotlinx/coroutines/Job;->cancel$default(Lkotlinx/coroutines/Job;Ljava/util/concurrent/CancellationException;ILjava/lang/Object;)V
 
-    .line 766
+    .line 764
     :cond_2
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->reloadJob:Lkotlinx/coroutines/Job;
 
@@ -4007,7 +3991,7 @@
 
     invoke-static {v0, v2, v1, v2}, Lkotlinx/coroutines/Job;->cancel$default(Lkotlinx/coroutines/Job;Ljava/util/concurrent/CancellationException;ILjava/lang/Object;)V
 
-    .line 767
+    .line 765
     :cond_3
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->filterJob:Lkotlinx/coroutines/Job;
 
@@ -4015,16 +3999,16 @@
 
     invoke-static {v0, v2, v1, v2}, Lkotlinx/coroutines/Job;->cancel$default(Lkotlinx/coroutines/Job;Ljava/util/concurrent/CancellationException;ILjava/lang/Object;)V
 
-    .line 768
+    .line 766
     :cond_4
     invoke-virtual {p0}, Lcom/v2ray/ang/ui/main/MainViewModel;->cancelAllPing()V
 
-    .line 769
+    .line 767
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->dataSource:Lcom/v2ray/ang/ui/main/MainDataSource;
 
     invoke-interface {v0}, Lcom/v2ray/ang/ui/main/MainDataSource;->close()V
 
-    .line 770
+    .line 768
     invoke-super {p0}, Lcom/v2ray/ang/ui/base/BaseViewModel;->onCleared()V
 
     return-void
@@ -4033,21 +4017,21 @@
 .method public final refreshSelectedGuid()V
     .locals 15
 
-    .line 634
+    .line 632
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->_uiState:Lkotlinx/coroutines/flow/MutableStateFlow;
 
-    .line 877
+    .line 875
     :cond_0
     invoke-interface {v0}, Lkotlinx/coroutines/flow/MutableStateFlow;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 878
+    .line 876
     move-object v2, v1
 
     check-cast v2, Lcom/v2ray/ang/ui/main/MainUiState;
 
-    .line 634
+    .line 632
     iget-object v3, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->dataSource:Lcom/v2ray/ang/ui/main/MainDataSource;
 
     invoke-interface {v3}, Lcom/v2ray/ang/ui/main/MainDataSource;->getSelectServer()Ljava/lang/String;
@@ -4080,7 +4064,7 @@
 
     move-result-object v2
 
-    .line 879
+    .line 877
     invoke-interface {v0, v1, v2}, Lkotlinx/coroutines/flow/MutableStateFlow;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
@@ -4093,28 +4077,28 @@
 .method public final refreshUiSettings()V
     .locals 15
 
-    .line 223
+    .line 221
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->_uiState:Lkotlinx/coroutines/flow/MutableStateFlow;
 
-    .line 806
+    .line 804
     :cond_0
     invoke-interface {v0}, Lkotlinx/coroutines/flow/MutableStateFlow;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 807
+    .line 805
     move-object v2, v1
 
     check-cast v2, Lcom/v2ray/ang/ui/main/MainUiState;
 
-    .line 225
+    .line 223
     iget-object v3, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->dataSource:Lcom/v2ray/ang/ui/main/MainDataSource;
 
     invoke-interface {v3}, Lcom/v2ray/ang/ui/main/MainDataSource;->getConfirmRemove()Z
 
     move-result v10
 
-    .line 226
+    .line 224
     iget-object v3, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->dataSource:Lcom/v2ray/ang/ui/main/MainDataSource;
 
     invoke-interface {v3}, Lcom/v2ray/ang/ui/main/MainDataSource;->getDoubleColumnDisplay()Z
@@ -4141,12 +4125,12 @@
 
     const/4 v12, 0x0
 
-    .line 224
+    .line 222
     invoke-static/range {v2 .. v14}, Lcom/v2ray/ang/ui/main/MainUiState;->copy$default(Lcom/v2ray/ang/ui/main/MainUiState;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;Lcom/v2ray/ang/dto/LocateTarget;ZZLandroid/graphics/Bitmap;ILjava/lang/Object;)Lcom/v2ray/ang/ui/main/MainUiState;
 
     move-result-object v2
 
-    .line 808
+    .line 806
     invoke-interface {v0, v1, v2}, Lkotlinx/coroutines/flow/MutableStateFlow;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
@@ -4171,7 +4155,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 598
+    .line 596
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->reloadJob:Lkotlinx/coroutines/Job;
 
     const/4 v1, 0x0
@@ -4182,7 +4166,7 @@
 
     invoke-static {v0, v1, v2, v1}, Lkotlinx/coroutines/Job;->cancel$default(Lkotlinx/coroutines/Job;Ljava/util/concurrent/CancellationException;ILjava/lang/Object;)V
 
-    .line 599
+    .line 597
     :cond_0
     move-object v0, p0
 
@@ -4224,7 +4208,7 @@
 .method public final reloadServerList()V
     .locals 9
 
-    .line 590
+    .line 588
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->uiState:Lkotlinx/coroutines/flow/StateFlow;
 
     invoke-interface {v0}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
@@ -4237,7 +4221,7 @@
 
     move-result-object v0
 
-    .line 591
+    .line 589
     iget-object v1, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->selectedGroupLoadJob:Lkotlinx/coroutines/Job;
 
     const/4 v2, 0x0
@@ -4248,7 +4232,7 @@
 
     invoke-static {v1, v2, v3, v2}, Lkotlinx/coroutines/Job;->cancel$default(Lkotlinx/coroutines/Job;Ljava/util/concurrent/CancellationException;ILjava/lang/Object;)V
 
-    .line 592
+    .line 590
     :cond_0
     move-object v1, p0
 
@@ -4294,7 +4278,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 638
+    .line 636
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->uiState:Lkotlinx/coroutines/flow/StateFlow;
 
     invoke-interface {v0}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
@@ -4313,14 +4297,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 639
+    .line 637
     sget p1, Lcom/v2ray/ang/R$string;->toast_action_not_allowed:I
 
     invoke-virtual {p0, p1}, Lcom/v2ray/ang/ui/main/MainViewModel;->toast(I)V
 
     return-void
 
-    .line 642
+    .line 640
     :cond_0
     move-object v0, p0
 
@@ -4373,7 +4357,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 152
+    .line 150
     iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->groupPageFlows:Ljava/util/concurrent/ConcurrentHashMap;
 
     new-instance v0, Lcom/v2ray/ang/ui/main/MainViewModel$$ExternalSyntheticLambda4;
@@ -4394,7 +4378,7 @@
 
     check-cast p0, Lkotlinx/coroutines/flow/MutableStateFlow;
 
-    .line 153
+    .line 151
     invoke-static {p0}, Lkotlinx/coroutines/flow/FlowKt;->asStateFlow(Lkotlinx/coroutines/flow/MutableStateFlow;)Lkotlinx/coroutines/flow/StateFlow;
 
     move-result-object p0
@@ -4405,7 +4389,7 @@
 .method public final setupGroupTab(Z)Lkotlinx/coroutines/Job;
     .locals 9
 
-    .line 310
+    .line 308
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->setupGroupJob:Lkotlinx/coroutines/Job;
 
     const/4 v1, 0x1
@@ -4416,7 +4400,7 @@
 
     invoke-static {v0, v2, v1, v2}, Lkotlinx/coroutines/Job;->cancel$default(Lkotlinx/coroutines/Job;Ljava/util/concurrent/CancellationException;ILjava/lang/Object;)V
 
-    .line 311
+    .line 309
     :cond_0
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->preloadJob:Lkotlinx/coroutines/Job;
 
@@ -4424,7 +4408,7 @@
 
     invoke-static {v0, v2, v1, v2}, Lkotlinx/coroutines/Job;->cancel$default(Lkotlinx/coroutines/Job;Ljava/util/concurrent/CancellationException;ILjava/lang/Object;)V
 
-    .line 312
+    .line 310
     :cond_1
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->selectedGroupLoadJob:Lkotlinx/coroutines/Job;
 
@@ -4432,7 +4416,7 @@
 
     invoke-static {v0, v2, v1, v2}, Lkotlinx/coroutines/Job;->cancel$default(Lkotlinx/coroutines/Job;Ljava/util/concurrent/CancellationException;ILjava/lang/Object;)V
 
-    .line 314
+    .line 312
     :cond_2
     move-object v0, p0
 
@@ -4466,7 +4450,7 @@
 
     move-result-object p1
 
-    .line 368
+    .line 366
     iput-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->setupGroupJob:Lkotlinx/coroutines/Job;
 
     return-object p1
@@ -4483,7 +4467,7 @@
 
     invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 571
+    .line 569
     iget-object v1, v0, Lcom/v2ray/ang/ui/main/MainViewModel;->_uiState:Lkotlinx/coroutines/flow/MutableStateFlow;
 
     invoke-interface {v1}, Lkotlinx/coroutines/flow/MutableStateFlow;->getValue()Ljava/lang/Object;
@@ -4498,7 +4482,7 @@
 
     check-cast v1, Ljava/lang/Iterable;
 
-    .line 863
+    .line 861
     instance-of v2, v1, Ljava/util/Collection;
 
     if-eqz v2, :cond_0
@@ -4515,7 +4499,7 @@
 
     return-void
 
-    .line 864
+    .line 862
     :cond_0
     invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -4534,7 +4518,7 @@
 
     check-cast v2, Lcom/v2ray/ang/dto/GroupMapItem;
 
-    .line 571
+    .line 569
     invoke-virtual {v2}, Lcom/v2ray/ang/dto/GroupMapItem;->getId()Ljava/lang/String;
 
     move-result-object v2
@@ -4545,10 +4529,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 572
+    .line 570
     invoke-direct/range {p0 .. p1}, Lcom/v2ray/ang/ui/main/MainViewModel;->mutableServersForGroup(Ljava/lang/String;)Lkotlinx/coroutines/flow/MutableStateFlow;
 
-    .line 573
+    .line 571
     iget-object v1, v0, Lcom/v2ray/ang/ui/main/MainViewModel;->uiState:Lkotlinx/coroutines/flow/StateFlow;
 
     invoke-interface {v1}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
@@ -4567,21 +4551,21 @@
 
     if-nez v1, :cond_3
 
-    .line 574
+    .line 572
     iget-object v1, v0, Lcom/v2ray/ang/ui/main/MainViewModel;->dataSource:Lcom/v2ray/ang/ui/main/MainDataSource;
 
     invoke-interface {v1, v3}, Lcom/v2ray/ang/ui/main/MainDataSource;->setSelectedSubscriptionId(Ljava/lang/String;)V
 
-    .line 575
+    .line 573
     iget-object v14, v0, Lcom/v2ray/ang/ui/main/MainViewModel;->_uiState:Lkotlinx/coroutines/flow/MutableStateFlow;
 
-    .line 867
+    .line 865
     :cond_2
     invoke-interface {v14}, Lkotlinx/coroutines/flow/MutableStateFlow;->getValue()Ljava/lang/Object;
 
     move-result-object v15
 
-    .line 868
+    .line 866
     move-object v1, v15
 
     check-cast v1, Lcom/v2ray/ang/ui/main/MainUiState;
@@ -4608,19 +4592,19 @@
 
     const/4 v11, 0x0
 
-    .line 575
+    .line 573
     invoke-static/range {v1 .. v13}, Lcom/v2ray/ang/ui/main/MainUiState;->copy$default(Lcom/v2ray/ang/ui/main/MainUiState;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;Lcom/v2ray/ang/dto/LocateTarget;ZZLandroid/graphics/Bitmap;ILjava/lang/Object;)Lcom/v2ray/ang/ui/main/MainUiState;
 
     move-result-object v1
 
-    .line 869
+    .line 867
     invoke-interface {v14, v15, v1}, Lkotlinx/coroutines/flow/MutableStateFlow;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 577
+    .line 575
     :cond_3
     iget-object v1, v0, Lcom/v2ray/ang/ui/main/MainViewModel;->selectedGroupLoadJob:Lkotlinx/coroutines/Job;
 
@@ -4632,7 +4616,7 @@
 
     invoke-static {v1, v2, v4, v2}, Lkotlinx/coroutines/Job;->cancel$default(Lkotlinx/coroutines/Job;Ljava/util/concurrent/CancellationException;ILjava/lang/Object;)V
 
-    .line 578
+    .line 576
     :cond_4
     move-object v1, v0
 
@@ -4677,12 +4661,12 @@
 
     move-object/from16 v1, p0
 
-    .line 676
+    .line 674
     iget-object v0, v1, Lcom/v2ray/ang/ui/main/MainViewModel;->dataSource:Lcom/v2ray/ang/ui/main/MainDataSource;
 
     invoke-interface {v0}, Lcom/v2ray/ang/ui/main/MainDataSource;->cancelAllPing()V
 
-    .line 677
+    .line 675
     iget-object v0, v1, Lcom/v2ray/ang/ui/main/MainViewModel;->uiState:Lkotlinx/coroutines/flow/StateFlow;
 
     invoke-interface {v0}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
@@ -4695,19 +4679,19 @@
 
     move-result-object v2
 
-    .line 678
+    .line 676
     invoke-direct {v1}, Lcom/v2ray/ang/ui/main/MainViewModel;->currentServers()Ljava/util/List;
 
     move-result-object v3
 
-    .line 679
+    .line 677
     iget-object v0, v1, Lcom/v2ray/ang/ui/main/MainViewModel;->dataSource:Lcom/v2ray/ang/ui/main/MainDataSource;
 
     move-object v4, v3
 
     check-cast v4, Ljava/lang/Iterable;
 
-    .line 890
+    .line 888
     new-instance v5, Ljava/util/ArrayList;
 
     const/16 v6, 0xa
@@ -4720,7 +4704,7 @@
 
     check-cast v5, Ljava/util/Collection;
 
-    .line 891
+    .line 889
     invoke-interface {v4}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -4736,43 +4720,43 @@
 
     move-result-object v6
 
-    .line 892
+    .line 890
     check-cast v6, Lcom/v2ray/ang/dto/entities/ServersCache;
 
-    .line 679
+    .line 677
     invoke-virtual {v6}, Lcom/v2ray/ang/dto/entities/ServersCache;->getGuid()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 892
+    .line 890
     invoke-interface {v5, v6}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 893
+    .line 891
     :cond_0
     check-cast v5, Ljava/util/List;
 
-    .line 679
+    .line 677
     invoke-interface {v0, v5}, Lcom/v2ray/ang/ui/main/MainDataSource;->clearAllTestDelayResults(Ljava/util/List;)V
 
-    .line 680
+    .line 678
     invoke-interface {v3}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 681
+    .line 679
     iget-object v0, v1, Lcom/v2ray/ang/ui/main/MainViewModel;->_uiState:Lkotlinx/coroutines/flow/MutableStateFlow;
 
-    .line 895
+    .line 893
     :cond_1
     invoke-interface {v0}, Lkotlinx/coroutines/flow/MutableStateFlow;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 896
+    .line 894
     move-object v2, v1
 
     check-cast v2, Lcom/v2ray/ang/ui/main/MainUiState;
@@ -4801,12 +4785,12 @@
 
     const/4 v12, 0x0
 
-    .line 681
+    .line 679
     invoke-static/range {v2 .. v14}, Lcom/v2ray/ang/ui/main/MainUiState;->copy$default(Lcom/v2ray/ang/ui/main/MainUiState;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;Lcom/v2ray/ang/dto/LocateTarget;ZZLandroid/graphics/Bitmap;ILjava/lang/Object;)Lcom/v2ray/ang/ui/main/MainUiState;
 
     move-result-object v2
 
-    .line 897
+    .line 895
     invoke-interface {v0, v1, v2}, Lkotlinx/coroutines/flow/MutableStateFlow;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
@@ -4815,25 +4799,25 @@
 
     return-void
 
-    .line 684
+    .line 682
     :cond_2
     iput-object v2, v1, Lcom/v2ray/ang/ui/main/MainViewModel;->testingGroupId:Ljava/lang/String;
 
-    .line 685
+    .line 683
     iget-object v0, v1, Lcom/v2ray/ang/ui/main/MainViewModel;->_uiState:Lkotlinx/coroutines/flow/MutableStateFlow;
 
-    .line 900
+    .line 898
     :goto_1
     invoke-interface {v0}, Lkotlinx/coroutines/flow/MutableStateFlow;->getValue()Ljava/lang/Object;
 
     move-result-object v4
 
-    .line 901
+    .line 899
     move-object v5, v4
 
     check-cast v5, Lcom/v2ray/ang/ui/main/MainUiState;
 
-    .line 688
+    .line 686
     iget-object v6, v1, Lcom/v2ray/ang/ui/main/MainViewModel;->dataSource:Lcom/v2ray/ang/ui/main/MainDataSource;
 
     sget v7, Lcom/v2ray/ang/R$string;->connection_test_testing:I
@@ -4864,19 +4848,19 @@
 
     const/4 v15, 0x0
 
-    .line 686
+    .line 684
     invoke-static/range {v5 .. v17}, Lcom/v2ray/ang/ui/main/MainUiState;->copy$default(Lcom/v2ray/ang/ui/main/MainUiState;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;Lcom/v2ray/ang/dto/LocateTarget;ZZLandroid/graphics/Bitmap;ILjava/lang/Object;)Lcom/v2ray/ang/ui/main/MainUiState;
 
     move-result-object v5
 
-    .line 902
+    .line 900
     invoke-interface {v0, v4, v5}, Lkotlinx/coroutines/flow/MutableStateFlow;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_3
 
-    .line 691
+    .line 689
     move-object v0, v1
 
     check-cast v0, Landroidx/lifecycle/ViewModel;
@@ -4926,21 +4910,21 @@
 .method public final testCurrentServerRealPing()V
     .locals 15
 
-    .line 705
+    .line 703
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->_uiState:Lkotlinx/coroutines/flow/MutableStateFlow;
 
-    .line 905
+    .line 903
     :cond_0
     invoke-interface {v0}, Lkotlinx/coroutines/flow/MutableStateFlow;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 906
+    .line 904
     move-object v2, v1
 
     check-cast v2, Lcom/v2ray/ang/ui/main/MainUiState;
 
-    .line 707
+    .line 705
     iget-object v3, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->dataSource:Lcom/v2ray/ang/ui/main/MainDataSource;
 
     sget v4, Lcom/v2ray/ang/R$string;->connection_test_testing:I
@@ -4971,19 +4955,19 @@
 
     const/4 v12, 0x0
 
-    .line 706
+    .line 704
     invoke-static/range {v2 .. v14}, Lcom/v2ray/ang/ui/main/MainUiState;->copy$default(Lcom/v2ray/ang/ui/main/MainUiState;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;Lcom/v2ray/ang/dto/LocateTarget;ZZLandroid/graphics/Bitmap;ILjava/lang/Object;)Lcom/v2ray/ang/ui/main/MainUiState;
 
     move-result-object v2
 
-    .line 907
+    .line 905
     invoke-interface {v0, v1, v2}, Lkotlinx/coroutines/flow/MutableStateFlow;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 710
+    .line 708
     iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->dataSource:Lcom/v2ray/ang/ui/main/MainDataSource;
 
     invoke-interface {p0}, Lcom/v2ray/ang/ui/main/MainDataSource;->testCurrentServerRealPing()V
@@ -4994,7 +4978,7 @@
 .method public final triggerLocateSelectedServer()V
     .locals 12
 
-    .line 728
+    .line 726
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->dataSource:Lcom/v2ray/ang/ui/main/MainDataSource;
 
     invoke-interface {v0}, Lcom/v2ray/ang/ui/main/MainDataSource;->getSelectServer()Ljava/lang/String;
@@ -5005,7 +4989,7 @@
 
     goto :goto_3
 
-    .line 729
+    .line 727
     :cond_0
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->dataSource:Lcom/v2ray/ang/ui/main/MainDataSource;
 
@@ -5017,13 +5001,13 @@
 
     goto :goto_3
 
-    .line 730
+    .line 728
     :cond_1
     invoke-virtual {v0}, Lcom/v2ray/ang/dto/entities/ProfileItem;->getSubscriptionId()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 732
+    .line 730
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->_uiState:Lkotlinx/coroutines/flow/MutableStateFlow;
 
     invoke-interface {v0}, Lkotlinx/coroutines/flow/MutableStateFlow;->getValue()Ljava/lang/Object;
@@ -5036,7 +5020,7 @@
 
     move-result-object v0
 
-    .line 910
+    .line 908
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -5054,10 +5038,10 @@
 
     move-result-object v2
 
-    .line 911
+    .line 909
     check-cast v2, Lcom/v2ray/ang/dto/GroupMapItem;
 
-    .line 732
+    .line 730
     invoke-virtual {v2}, Lcom/v2ray/ang/dto/GroupMapItem;->getId()Ljava/lang/String;
 
     move-result-object v2
@@ -5105,7 +5089,7 @@
 
     move-result v5
 
-    .line 733
+    .line 731
     move-object v0, p0
 
     check-cast v0, Landroidx/lifecycle/ViewModel;
@@ -5154,21 +5138,21 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 629
+    .line 627
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->dataSource:Lcom/v2ray/ang/ui/main/MainDataSource;
 
     invoke-interface {v0, p1}, Lcom/v2ray/ang/ui/main/MainDataSource;->setSelectServer(Ljava/lang/String;)V
 
-    .line 630
+    .line 628
     iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainViewModel;->_uiState:Lkotlinx/coroutines/flow/MutableStateFlow;
 
-    .line 872
+    .line 870
     :goto_0
     invoke-interface {p0}, Lkotlinx/coroutines/flow/MutableStateFlow;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 873
+    .line 871
     move-object v1, v0
 
     check-cast v1, Lcom/v2ray/ang/ui/main/MainUiState;
@@ -5197,12 +5181,12 @@
 
     move-object v4, p1
 
-    .line 630
+    .line 628
     invoke-static/range {v1 .. v13}, Lcom/v2ray/ang/ui/main/MainUiState;->copy$default(Lcom/v2ray/ang/ui/main/MainUiState;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;Lcom/v2ray/ang/dto/LocateTarget;ZZLandroid/graphics/Bitmap;ILjava/lang/Object;)Lcom/v2ray/ang/ui/main/MainUiState;
 
     move-result-object p1
 
-    .line 874
+    .line 872
     invoke-interface {p0, v0, p1}, Lkotlinx/coroutines/flow/MutableStateFlow;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1

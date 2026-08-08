@@ -172,29 +172,29 @@
 
     invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
 
-    .line 214
+    .line 220
     iget v0, p0, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$downloadGeoFiles$1$1;->label:I
 
     if-nez v0, :cond_1
 
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 215
+    .line 221
     iget-object p1, p0, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$downloadGeoFiles$1$1;->$result:Lcom/v2ray/ang/ui/userasset/UserAssetViewModel$GeoDownloadResult;
 
     invoke-virtual {p1}, Lcom/v2ray/ang/ui/userasset/UserAssetViewModel$GeoDownloadResult;->getSuccessCount()I
 
     move-result p1
 
-    .line 218
+    .line 224
     iget-object v0, p0, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$downloadGeoFiles$1$1;->this$0:Lcom/v2ray/ang/ui/userasset/UserAssetActivity;
 
-    .line 215
+    .line 221
     const-string v1, "getString(...)"
 
     if-lez p1, :cond_0
 
-    .line 216
+    .line 222
     move-object p1, v0
 
     check-cast p1, Landroid/content/Context;
@@ -227,7 +227,7 @@
 
     goto :goto_0
 
-    .line 218
+    .line 224
     :cond_0
     move-object p1, v0
 
@@ -245,13 +245,13 @@
 
     invoke-static {p1, v0}, Lcom/v2ray/ang/extension/ToastExtKt;->toast(Landroid/content/Context;Ljava/lang/CharSequence;)V
 
-    .line 220
+    .line 226
     :goto_0
     iget-object p1, p0, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$downloadGeoFiles$1$1;->this$0:Lcom/v2ray/ang/ui/userasset/UserAssetActivity;
 
     invoke-virtual {p1}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->refreshData()V
 
-    .line 221
+    .line 227
     iget-object p0, p0, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$downloadGeoFiles$1$1;->this$0:Lcom/v2ray/ang/ui/userasset/UserAssetActivity;
 
     invoke-static {p0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->access$isLoadingState$p(Lcom/v2ray/ang/ui/userasset/UserAssetActivity;)Lkotlinx/coroutines/flow/MutableStateFlow;
@@ -266,12 +266,12 @@
 
     invoke-interface {p0, p1}, Lkotlinx/coroutines/flow/MutableStateFlow;->setValue(Ljava/lang/Object;)V
 
-    .line 222
+    .line 228
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p0
 
-    .line 214
+    .line 220
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 

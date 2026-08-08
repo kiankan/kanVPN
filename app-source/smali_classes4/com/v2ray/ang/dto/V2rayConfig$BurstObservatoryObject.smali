@@ -99,7 +99,7 @@
         }
     .end annotation
 
-    const-string v0, "subjectSelector"
+    const-string/jumbo v0, "subjectSelector"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -183,7 +183,7 @@
         }
     .end annotation
 
-    const-string p0, "subjectSelector"
+    const-string/jumbo p0, "subjectSelector"
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

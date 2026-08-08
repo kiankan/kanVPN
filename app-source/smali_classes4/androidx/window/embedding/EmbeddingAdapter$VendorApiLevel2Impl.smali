@@ -64,7 +64,7 @@
 .method public final translateCompat(Landroidx/window/extensions/embedding/SplitInfo;)Landroidx/window/embedding/SplitInfo;
     .locals 5
 
-    const-string v0, "splitInfo"
+    const-string/jumbo v0, "splitInfo"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

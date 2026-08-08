@@ -1785,7 +1785,7 @@
 
     move-result-object v1
 
-    const-string v2, "spotShadowColor"
+    const-string/jumbo v2, "spotShadowColor"
 
     invoke-virtual {v0, v2, v1}, Landroidx/compose/ui/platform/ValueElementSequence;->set(Ljava/lang/String;Ljava/lang/Object;)V
 

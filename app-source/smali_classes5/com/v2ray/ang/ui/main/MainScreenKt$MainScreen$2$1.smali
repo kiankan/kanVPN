@@ -31,7 +31,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nMainScreen.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MainScreen.kt\ncom/v2ray/ang/ui/main/MainScreenKt$MainScreen$2$1\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,299:1\n363#2,7:300\n1#3:307\n*S KotlinDebug\n*F\n+ 1 MainScreen.kt\ncom/v2ray/ang/ui/main/MainScreenKt$MainScreen$2$1\n*L\n90#1:300,7\n*E\n"
+    value = "SMAP\nMainScreen.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MainScreen.kt\ncom/v2ray/ang/ui/main/MainScreenKt$MainScreen$2$1\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,309:1\n363#2,7:310\n1#3:317\n*S KotlinDebug\n*F\n+ 1 MainScreen.kt\ncom/v2ray/ang/ui/main/MainScreenKt$MainScreen$2$1\n*L\n88#1:310,7\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -59,14 +59,14 @@
         0x0
     }
     l = {
-        0x5d
+        0x5b
     }
     m = "invokeSuspend"
     n = {
         "selectedIndex"
     }
     nl = {
-        0x5f
+        0x5d
     }
     s = {
         "I$0"
@@ -217,7 +217,7 @@
 
     move-result-object v0
 
-    .line 88
+    .line 86
     iget v1, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$MainScreen$2$1;->label:I
 
     const/4 v2, 0x1
@@ -242,7 +242,7 @@
     :cond_1
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 89
+    .line 87
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$MainScreen$2$1;->$groups:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
@@ -255,13 +255,13 @@
 
     return-object p0
 
-    .line 90
+    .line 88
     :cond_2
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$MainScreen$2$1;->$groups:Ljava/util/List;
 
     iget-object v1, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$MainScreen$2$1;->$uiState$delegate:Landroidx/compose/runtime/State;
 
-    .line 301
+    .line 311
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -281,10 +281,10 @@
 
     move-result-object v5
 
-    .line 302
+    .line 312
     check-cast v5, Lcom/v2ray/ang/dto/GroupMapItem;
 
-    .line 90
+    .line 88
     invoke-virtual {v5}, Lcom/v2ray/ang/dto/GroupMapItem;->getId()Ljava/lang/String;
 
     move-result-object v5
@@ -318,7 +318,7 @@
 
     move-result-object p1
 
-    .line 91
+    .line 89
     move-object v1, p1
 
     check-cast v1, Ljava/lang/Number;
@@ -337,7 +337,7 @@
     :goto_2
     if-eqz p1, :cond_6
 
-    .line 90
+    .line 88
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result v3
@@ -345,7 +345,7 @@
     :cond_6
     move v5, v3
 
-    .line 92
+    .line 90
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$MainScreen$2$1;->$pagerState:Landroidx/compose/foundation/pager/PagerState;
 
     invoke-virtual {p1}, Landroidx/compose/foundation/pager/PagerState;->isScrollInProgress()Z
@@ -362,7 +362,7 @@
 
     if-eq p1, v5, :cond_7
 
-    .line 93
+    .line 91
     iget-object v4, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$MainScreen$2$1;->$pagerState:Landroidx/compose/foundation/pager/PagerState;
 
     move-object v7, p0
@@ -387,7 +387,7 @@
 
     return-object v0
 
-    .line 95
+    .line 93
     :cond_7
     :goto_3
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;

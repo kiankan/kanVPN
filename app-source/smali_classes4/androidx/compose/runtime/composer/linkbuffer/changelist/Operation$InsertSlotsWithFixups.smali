@@ -269,7 +269,7 @@
     if-nez p1, :cond_0
 
     .line 737
-    const-string p0, "sourceHandle[32..63]"
+    const-string/jumbo p0, "sourceHandle[32..63]"
 
     return-object p0
 
@@ -279,7 +279,7 @@
     if-ne p1, v0, :cond_1
 
     .line 738
-    const-string p0, "sourceHandle[0..31]"
+    const-string/jumbo p0, "sourceHandle[0..31]"
 
     return-object p0
 

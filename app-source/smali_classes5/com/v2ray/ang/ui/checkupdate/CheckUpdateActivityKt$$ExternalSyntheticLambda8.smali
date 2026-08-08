@@ -9,13 +9,9 @@
 # instance fields
 .field public final synthetic f$0:Lcom/v2ray/ang/ui/checkupdate/CheckUpdateViewModel;
 
-.field public final synthetic f$1:Lcom/v2ray/ang/dto/CheckUpdateResult;
-
-.field public final synthetic f$2:Landroid/content/Context;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/v2ray/ang/ui/checkupdate/CheckUpdateViewModel;Lcom/v2ray/ang/dto/CheckUpdateResult;Landroid/content/Context;)V
+.method public synthetic constructor <init>(Lcom/v2ray/ang/ui/checkupdate/CheckUpdateViewModel;)V
     .locals 0
 
     .line 0
@@ -23,24 +19,16 @@
 
     iput-object p1, p0, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt$$ExternalSyntheticLambda8;->f$0:Lcom/v2ray/ang/ui/checkupdate/CheckUpdateViewModel;
 
-    iput-object p2, p0, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt$$ExternalSyntheticLambda8;->f$1:Lcom/v2ray/ang/dto/CheckUpdateResult;
-
-    iput-object p3, p0, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt$$ExternalSyntheticLambda8;->f$2:Landroid/content/Context;
-
     return-void
 .end method
 
 
 # virtual methods
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt$$ExternalSyntheticLambda8;->f$0:Lcom/v2ray/ang/ui/checkupdate/CheckUpdateViewModel;
-
-    iget-object v1, p0, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt$$ExternalSyntheticLambda8;->f$1:Lcom/v2ray/ang/dto/CheckUpdateResult;
-
-    iget-object p0, p0, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt$$ExternalSyntheticLambda8;->f$2:Landroid/content/Context;
+    iget-object p0, p0, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt$$ExternalSyntheticLambda8;->f$0:Lcom/v2ray/ang/ui/checkupdate/CheckUpdateViewModel;
 
     check-cast p1, Landroidx/compose/runtime/Composer;
 
@@ -50,7 +38,7 @@
 
     move-result p2
 
-    invoke-static {v0, v1, p0, p1, p2}, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt;->CheckUpdateScreen$lambda$8(Lcom/v2ray/ang/ui/checkupdate/CheckUpdateViewModel;Lcom/v2ray/ang/dto/CheckUpdateResult;Landroid/content/Context;Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
+    invoke-static {p0, p1, p2}, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt;->CheckUpdateScreen$lambda$8(Lcom/v2ray/ang/ui/checkupdate/CheckUpdateViewModel;Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
 
     move-result-object p0
 

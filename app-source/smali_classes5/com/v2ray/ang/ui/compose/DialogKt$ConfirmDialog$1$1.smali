@@ -179,14 +179,14 @@
 
     invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
 
-    .line 54
+    .line 56
     iget v0, p0, Lcom/v2ray/ang/ui/compose/DialogKt$ConfirmDialog$1$1;->label:I
 
     if-nez v0, :cond_1
 
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 55
+    .line 57
     iget-object p1, p0, Lcom/v2ray/ang/ui/compose/DialogKt$ConfirmDialog$1$1;->$dismissText:Ljava/lang/String;
 
     const/4 v0, 0x0
@@ -203,19 +203,19 @@
 
     goto :goto_0
 
-    .line 56
+    .line 58
     :cond_0
     iget-object p0, p0, Lcom/v2ray/ang/ui/compose/DialogKt$ConfirmDialog$1$1;->$confirmFocusRequester:Landroidx/compose/ui/focus/FocusRequester;
 
     invoke-static {p0, v2, v1, v0}, Landroidx/compose/ui/focus/FocusRequester;->requestFocus-3ESFkO8$default(Landroidx/compose/ui/focus/FocusRequester;IILjava/lang/Object;)Z
 
-    .line 57
+    .line 59
     :goto_0
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p0
 
-    .line 54
+    .line 56
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 

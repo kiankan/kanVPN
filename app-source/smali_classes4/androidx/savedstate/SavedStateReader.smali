@@ -278,7 +278,7 @@
 .method public static constructor-impl(Landroid/os/Bundle;)Landroid/os/Bundle;
     .locals 1
 
-    const-string v0, "source"
+    const-string/jumbo v0, "source"
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

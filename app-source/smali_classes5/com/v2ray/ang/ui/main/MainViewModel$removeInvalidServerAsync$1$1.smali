@@ -165,14 +165,14 @@
 
     invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
 
-    .line 514
+    .line 512
     iget v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel$removeInvalidServerAsync$1$1;->label:I
 
     if-nez v0, :cond_0
 
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 516
+    .line 514
     :try_start_0
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$removeInvalidServerAsync$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
@@ -180,7 +180,7 @@
 
     move-result p1
 
-    .line 517
+    .line 515
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel$removeInvalidServerAsync$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     check-cast v0, Landroidx/lifecycle/ViewModel;
@@ -219,7 +219,7 @@
 
     invoke-static/range {v1 .. v6}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lkotlinx/coroutines/Job;
 
-    .line 521
+    .line 519
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel$removeInvalidServerAsync$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {v0}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getDataSource$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lcom/v2ray/ang/ui/main/MainDataSource;
@@ -252,7 +252,7 @@
 
     move-object p1, v0
 
-    .line 525
+    .line 523
     sget-object v0, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
 
     const-string v1, "Delete invalid failed"
@@ -263,14 +263,14 @@
 
     invoke-virtual {v0, v2, v1, p1}, Lcom/v2ray/ang/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 526
+    .line 524
     iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainViewModel$removeInvalidServerAsync$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     sget p1, Lcom/v2ray/ang/R$string;->toast_failure:I
 
     invoke-virtual {p0, p1}, Lcom/v2ray/ang/ui/main/MainViewModel;->toastError(I)V
 
-    .line 528
+    .line 526
     :goto_0
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
@@ -281,10 +281,10 @@
 
     move-object p0, v0
 
-    .line 523
+    .line 521
     throw p0
 
-    .line 514
+    .line 512
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 

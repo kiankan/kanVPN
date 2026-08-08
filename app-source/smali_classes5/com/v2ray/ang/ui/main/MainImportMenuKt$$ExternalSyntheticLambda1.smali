@@ -3,7 +3,7 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Lkotlin/jvm/functions/Function0;
+.implements Lkotlin/jvm/functions/Function1;
 
 
 # instance fields
@@ -24,13 +24,15 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
     .line 0
     iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainImportMenuKt$$ExternalSyntheticLambda1;->f$0:Lkotlin/jvm/functions/Function1;
 
-    invoke-static {p0}, Lcom/v2ray/ang/ui/main/MainImportMenuKt;->$r8$lambda$cIdtlRySBisJSfUb_v58SmuYKBk(Lkotlin/jvm/functions/Function1;)Lkotlin/Unit;
+    check-cast p1, Lcom/v2ray/ang/ui/main/ImportMenuAction;
+
+    invoke-static {p0, p1}, Lcom/v2ray/ang/ui/main/MainImportMenuKt;->$r8$lambda$XWMAqtCnSm7JiaeCn5A3VwowRUw(Lkotlin/jvm/functions/Function1;Lcom/v2ray/ang/ui/main/ImportMenuAction;)Lkotlin/Unit;
 
     move-result-object p0
 

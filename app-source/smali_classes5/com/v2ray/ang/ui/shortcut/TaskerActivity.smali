@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nTaskerActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TaskerActivity.kt\ncom/v2ray/ang/ui/shortcut/TaskerActivity\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 Composer.kt\nandroidx/compose/runtime/ComposerKt\n*L\n1#1,180:1\n2068#2,2:181\n1047#3,6:183\n1047#3,6:189\n*S KotlinDebug\n*F\n+ 1 TaskerActivity.kt\ncom/v2ray/ang/ui/shortcut/TaskerActivity\n*L\n55#1:181,2\n71#1:183,6\n72#1:189,6\n*E\n"
+    value = "SMAP\nTaskerActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TaskerActivity.kt\ncom/v2ray/ang/ui/shortcut/TaskerActivity\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 Composer.kt\nandroidx/compose/runtime/ComposerKt\n*L\n1#1,179:1\n2068#2,2:180\n1047#3,6:182\n1047#3,6:188\n*S KotlinDebug\n*F\n+ 1 TaskerActivity.kt\ncom/v2ray/ang/ui/shortcut/TaskerActivity\n*L\n55#1:180,2\n71#1:182,6\n72#1:188,6\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -218,7 +218,7 @@
 .end method
 
 .method private final confirmFinish()V
-    .locals 5
+    .locals 4
 
     .line 97
     iget-object v0, p0, Lcom/v2ray/ang/ui/shortcut/TaskerActivity;->selectedPosition:Landroidx/compose/runtime/MutableState;
@@ -291,7 +291,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 108
+    .line 109
     iget-object v3, p0, Lcom/v2ray/ang/ui/shortcut/TaskerActivity;->switchState:Landroidx/compose/runtime/MutableState;
 
     invoke-interface {v3}, Landroidx/compose/runtime/MutableState;->getValue()Ljava/lang/Object;
@@ -306,52 +306,44 @@
 
     if-eqz v3, :cond_1
 
-    .line 109
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "Start "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    sget v3, Lcom/v2ray/ang/R$string;->tasker_blurb_start:I
 
     goto :goto_0
 
-    .line 111
     :cond_1
-    new-instance v3, Ljava/lang/StringBuilder;
+    sget v3, Lcom/v2ray/ang/R$string;->tasker_blurb_stop:I
 
-    const-string v4, "Stop "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 110
+    :goto_0
+    filled-new-array {v0}, [Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 114
-    :goto_0
+    .line 108
+    invoke-virtual {p0, v3, v0}, Lcom/v2ray/ang/ui/shortcut/TaskerActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v3, "getString(...)"
+
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 113
     const-string v3, "com.twofortyfouram.locale.intent.extra.BUNDLE"
 
     invoke-virtual {v2, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 115
+    .line 114
     const-string v1, "com.twofortyfouram.locale.intent.extra.BLURB"
 
     invoke-virtual {v2, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const/4 v0, -0x1
 
-    .line 116
+    .line 115
     invoke-virtual {p0, v0, v2}, Lcom/v2ray/ang/ui/shortcut/TaskerActivity;->setResult(ILandroid/content/Intent;)V
 
-    .line 117
+    .line 116
     invoke-virtual {p0}, Lcom/v2ray/ang/ui/shortcut/TaskerActivity;->finish()V
 
     return-void
@@ -582,14 +574,14 @@
 
     move-result p1
 
-    .line 183
+    .line 182
     invoke-interface {v6}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
     move-result-object v4
 
     if-nez p1, :cond_4
 
-    .line 184
+    .line 183
     sget-object p1, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {p1}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -604,7 +596,7 @@
 
     invoke-direct {v4, p0}, Lcom/v2ray/ang/ui/shortcut/TaskerActivity$$ExternalSyntheticLambda0;-><init>(Lcom/v2ray/ang/ui/shortcut/TaskerActivity;)V
 
-    .line 186
+    .line 185
     invoke-interface {v6, v4}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
     .line 71
@@ -622,14 +614,14 @@
 
     move-result p1
 
-    .line 189
+    .line 188
     invoke-interface {v6}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
     move-result-object v0
 
     if-nez p1, :cond_6
 
-    .line 190
+    .line 189
     sget-object p1, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {p1}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -644,7 +636,7 @@
 
     invoke-direct {v0, p0}, Lcom/v2ray/ang/ui/shortcut/TaskerActivity$$ExternalSyntheticLambda1;-><init>(Lcom/v2ray/ang/ui/shortcut/TaskerActivity;)V
 
-    .line 192
+    .line 191
     invoke-interface {v6, v0}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
     .line 72
@@ -720,7 +712,7 @@
 
     check-cast p1, Ljava/lang/Iterable;
 
-    .line 181
+    .line 180
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1

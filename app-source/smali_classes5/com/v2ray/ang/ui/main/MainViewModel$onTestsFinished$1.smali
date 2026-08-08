@@ -31,7 +31,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nMainViewModel.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$onTestsFinished$1\n+ 2 Mutex.kt\nkotlinx/coroutines/sync/MutexKt\n+ 3 StateFlow.kt\nkotlinx/coroutines/flow/StateFlowKt\n+ 4 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,784:1\n117#2,10:785\n230#3,5:795\n1739#4:800\n1814#4,3:801\n*S KotlinDebug\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$onTestsFinished$1\n*L\n715#1:785,10\n717#1:795,5\n723#1:800\n723#1:801,3\n*E\n"
+    value = "SMAP\nMainViewModel.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$onTestsFinished$1\n+ 2 Mutex.kt\nkotlinx/coroutines/sync/MutexKt\n+ 3 StateFlow.kt\nkotlinx/coroutines/flow/StateFlowKt\n+ 4 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,782:1\n117#2,10:783\n230#3,5:793\n1739#4:798\n1814#4,3:799\n*S KotlinDebug\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$onTestsFinished$1\n*L\n713#1:783,10\n715#1:793,5\n721#1:798\n721#1:799,3\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -59,14 +59,14 @@
         0x0
     }
     l = {
-        0x315
+        0x313
     }
     m = "invokeSuspend"
     n = {
         "$this$withLock_u24default$iv"
     }
     nl = {
-        0x316
+        0x314
     }
     s = {
         "L$0"
@@ -187,7 +187,7 @@
 
     move-result-object v1
 
-    .line 714
+    .line 712
     iget v2, v0, Lcom/v2ray/ang/ui/main/MainViewModel$onTestsFinished$1;->label:I
 
     const/4 v3, 0x1
@@ -222,7 +222,7 @@
     :cond_1
     invoke-static/range {p1 .. p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 715
+    .line 713
     iget-object v2, v0, Lcom/v2ray/ang/ui/main/MainViewModel$onTestsFinished$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {v2}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getCacheMutex$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lkotlinx/coroutines/sync/Mutex;
@@ -231,7 +231,7 @@
 
     iget-object v5, v0, Lcom/v2ray/ang/ui/main/MainViewModel$onTestsFinished$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
-    .line 789
+    .line 787
     move-object v6, v0
 
     check-cast v6, Lkotlin/coroutines/Continuation;
@@ -253,7 +253,7 @@
     :cond_2
     move-object v1, v5
 
-    .line 715
+    .line 713
     :goto_0
     :try_start_0
     invoke-static {v1}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getGroupDataCache$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Ljava/util/Map;
@@ -266,15 +266,15 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 793
+    .line 791
     invoke-interface {v2, v4}, Lkotlinx/coroutines/sync/Mutex;->unlock(Ljava/lang/Object;)V
 
-    .line 716
+    .line 714
     iget-object v1, v0, Lcom/v2ray/ang/ui/main/MainViewModel$onTestsFinished$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {v1, v4}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$setTestingGroupId$p(Lcom/v2ray/ang/ui/main/MainViewModel;Ljava/lang/String;)V
 
-    .line 717
+    .line 715
     iget-object v1, v0, Lcom/v2ray/ang/ui/main/MainViewModel$onTestsFinished$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {v1}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$get_uiState$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lkotlinx/coroutines/flow/MutableStateFlow;
@@ -283,18 +283,18 @@
 
     iget-object v3, v0, Lcom/v2ray/ang/ui/main/MainViewModel$onTestsFinished$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
-    .line 796
+    .line 794
     :cond_3
     invoke-interface {v1}, Lkotlinx/coroutines/flow/MutableStateFlow;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 797
+    .line 795
     move-object v4, v2
 
     check-cast v4, Lcom/v2ray/ang/ui/main/MainUiState;
 
-    .line 720
+    .line 718
     invoke-virtual {v4}, Lcom/v2ray/ang/ui/main/MainUiState;->isRunning()Z
 
     move-result v5
@@ -337,19 +337,19 @@
 
     const/4 v14, 0x0
 
-    .line 718
+    .line 716
     invoke-static/range {v4 .. v16}, Lcom/v2ray/ang/ui/main/MainUiState;->copy$default(Lcom/v2ray/ang/ui/main/MainUiState;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;Lcom/v2ray/ang/dto/LocateTarget;ZZLandroid/graphics/Bitmap;ILjava/lang/Object;)Lcom/v2ray/ang/ui/main/MainUiState;
 
     move-result-object v4
 
-    .line 798
+    .line 796
     invoke-interface {v1, v2, v4}, Lkotlinx/coroutines/flow/MutableStateFlow;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 723
+    .line 721
     iget-object v0, v0, Lcom/v2ray/ang/ui/main/MainViewModel$onTestsFinished$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {v0}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$get_uiState$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lkotlinx/coroutines/flow/MutableStateFlow;
@@ -368,7 +368,7 @@
 
     check-cast v1, Ljava/lang/Iterable;
 
-    .line 800
+    .line 798
     new-instance v2, Ljava/util/ArrayList;
 
     const/16 v3, 0xa
@@ -381,7 +381,7 @@
 
     check-cast v2, Ljava/util/Collection;
 
-    .line 801
+    .line 799
     invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -397,27 +397,27 @@
 
     move-result-object v3
 
-    .line 802
+    .line 800
     check-cast v3, Lcom/v2ray/ang/dto/GroupMapItem;
 
-    .line 723
+    .line 721
     invoke-virtual {v3}, Lcom/v2ray/ang/dto/GroupMapItem;->getId()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 802
+    .line 800
     invoke-interface {v2, v3}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
 
-    .line 803
+    .line 801
     :cond_5
     check-cast v2, Ljava/util/List;
 
-    .line 723
+    .line 721
     invoke-virtual {v0, v2}, Lcom/v2ray/ang/ui/main/MainViewModel;->reloadAllGroups(Ljava/util/List;)V
 
-    .line 724
+    .line 722
     sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
@@ -425,7 +425,7 @@
     :catchall_0
     move-exception v0
 
-    .line 793
+    .line 791
     invoke-interface {v2, v4}, Lkotlinx/coroutines/sync/Mutex;->unlock(Ljava/lang/Object;)V
 
     throw v0

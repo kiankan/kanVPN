@@ -94,7 +94,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 280
+    .line 286
     check-cast p1, Lsh/calvin/reorderable/ReorderableCollectionItemScope;
 
     check-cast p2, Ljava/lang/Boolean;
@@ -125,7 +125,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "CN(isDragging)283@11796L432,280@11667L561,293@12249L13:RoutingSettingActivity.kt#ni0ky5"
+    const-string v0, "CN(isDragging)289@12069L432,286@11940L561,299@12522L13:RoutingSettingActivity.kt#ni0ky5"
 
     invoke-static {p3, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -210,13 +210,13 @@
 
     const/4 p4, -0x1
 
-    const-string v1, "com.v2ray.ang.ui.routing.RoutingSettingScreen.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous> (RoutingSettingActivity.kt:280)"
+    const-string v1, "com.v2ray.ang.ui.routing.RoutingSettingScreen.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous> (RoutingSettingActivity.kt:286)"
 
     const v4, 0x7d402588
 
     invoke-static {v4, v0, p4, v1}, Landroidx/compose/runtime/ComposerKt;->traceEventStart(IIILjava/lang/String;)V
 
-    .line 284
+    .line 290
     :cond_5
     new-instance p4, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$RoutingSettingScreen$2$1$1$3$1$1;
 
@@ -248,10 +248,10 @@
 
     or-int/2addr p4, v0
 
-    .line 281
+    .line 287
     invoke-static {p1, p2, p0, p3, p4}, Lcom/v2ray/ang/ui/compose/ComponentsKt;->ReorderableListItem(Lsh/calvin/reorderable/ReorderableCollectionItemScope;ZLkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;I)V
 
-    .line 294
+    .line 300
     invoke-static {p3, v2}, Lcom/v2ray/ang/ui/compose/ComponentsKt;->ItemDivider(Landroidx/compose/runtime/Composer;I)V
 
     invoke-static {}, Landroidx/compose/runtime/ComposerKt;->isTraceInProgress()Z
@@ -265,7 +265,7 @@
     :cond_6
     return-void
 
-    .line 280
+    .line 286
     :cond_7
     invoke-interface {p3}, Landroidx/compose/runtime/Composer;->skipToGroupEnd()V
 

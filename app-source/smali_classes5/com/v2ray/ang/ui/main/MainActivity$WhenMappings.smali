@@ -27,10 +27,162 @@
 # static fields
 .field public static final synthetic $EnumSwitchMapping$0:[I
 
+.field public static final synthetic $EnumSwitchMapping$1:[I
+
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 12
+
+    invoke-static {}, Lcom/v2ray/ang/ui/main/MainDestination;->values()[Lcom/v2ray/ang/ui/main/MainDestination;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    const/4 v1, 0x1
+
+    :try_start_0
+    sget-object v2, Lcom/v2ray/ang/ui/main/MainDestination;->Subscriptions:Lcom/v2ray/ang/ui/main/MainDestination;
+
+    invoke-virtual {v2}, Lcom/v2ray/ang/ui/main/MainDestination;->ordinal()I
+
+    move-result v2
+
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    const/4 v2, 0x2
+
+    :try_start_1
+    sget-object v3, Lcom/v2ray/ang/ui/main/MainDestination;->PerAppProxy:Lcom/v2ray/ang/ui/main/MainDestination;
+
+    invoke-virtual {v3}, Lcom/v2ray/ang/ui/main/MainDestination;->ordinal()I
+
+    move-result v3
+
+    aput v2, v0, v3
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    const/4 v3, 0x3
+
+    :try_start_2
+    sget-object v4, Lcom/v2ray/ang/ui/main/MainDestination;->Routing:Lcom/v2ray/ang/ui/main/MainDestination;
+
+    invoke-virtual {v4}, Lcom/v2ray/ang/ui/main/MainDestination;->ordinal()I
+
+    move-result v4
+
+    aput v3, v0, v4
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    const/4 v4, 0x4
+
+    :try_start_3
+    sget-object v5, Lcom/v2ray/ang/ui/main/MainDestination;->UserAssets:Lcom/v2ray/ang/ui/main/MainDestination;
+
+    invoke-virtual {v5}, Lcom/v2ray/ang/ui/main/MainDestination;->ordinal()I
+
+    move-result v5
+
+    aput v4, v0, v5
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    const/4 v5, 0x5
+
+    :try_start_4
+    sget-object v6, Lcom/v2ray/ang/ui/main/MainDestination;->Settings:Lcom/v2ray/ang/ui/main/MainDestination;
+
+    invoke-virtual {v6}, Lcom/v2ray/ang/ui/main/MainDestination;->ordinal()I
+
+    move-result v6
+
+    aput v5, v0, v6
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    const/4 v6, 0x6
+
+    :try_start_5
+    sget-object v7, Lcom/v2ray/ang/ui/main/MainDestination;->Logcat:Lcom/v2ray/ang/ui/main/MainDestination;
+
+    invoke-virtual {v7}, Lcom/v2ray/ang/ui/main/MainDestination;->ordinal()I
+
+    move-result v7
+
+    aput v6, v0, v7
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
+    const/4 v7, 0x7
+
+    :try_start_6
+    sget-object v8, Lcom/v2ray/ang/ui/main/MainDestination;->CheckUpdate:Lcom/v2ray/ang/ui/main/MainDestination;
+
+    invoke-virtual {v8}, Lcom/v2ray/ang/ui/main/MainDestination;->ordinal()I
+
+    move-result v8
+
+    aput v7, v0, v8
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+
+    :catch_6
+    const/16 v8, 0x8
+
+    :try_start_7
+    sget-object v9, Lcom/v2ray/ang/ui/main/MainDestination;->BackupRestore:Lcom/v2ray/ang/ui/main/MainDestination;
+
+    invoke-virtual {v9}, Lcom/v2ray/ang/ui/main/MainDestination;->ordinal()I
+
+    move-result v9
+
+    aput v8, v0, v9
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+
+    :catch_7
+    const/16 v9, 0x9
+
+    :try_start_8
+    sget-object v10, Lcom/v2ray/ang/ui/main/MainDestination;->About:Lcom/v2ray/ang/ui/main/MainDestination;
+
+    invoke-virtual {v10}, Lcom/v2ray/ang/ui/main/MainDestination;->ordinal()I
+
+    move-result v10
+
+    aput v9, v0, v10
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
+
+    :catch_8
+    const/16 v10, 0xa
+
+    :try_start_9
+    sget-object v11, Lcom/v2ray/ang/ui/main/MainDestination;->Promotion:Lcom/v2ray/ang/ui/main/MainDestination;
+
+    invoke-virtual {v11}, Lcom/v2ray/ang/ui/main/MainDestination;->ordinal()I
+
+    move-result v11
+
+    aput v10, v0, v11
+    :try_end_9
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
+
+    :catch_9
+    sput-object v0, Lcom/v2ray/ang/ui/main/MainActivity$WhenMappings;->$EnumSwitchMapping$0:[I
 
     invoke-static {}, Lcom/v2ray/ang/enums/EConfigType;->values()[Lcom/v2ray/ang/enums/EConfigType;
 
@@ -40,147 +192,127 @@
 
     new-array v0, v0, [I
 
-    :try_start_0
-    sget-object v1, Lcom/v2ray/ang/enums/EConfigType;->CUSTOM:Lcom/v2ray/ang/enums/EConfigType;
+    :try_start_a
+    sget-object v11, Lcom/v2ray/ang/enums/EConfigType;->CUSTOM:Lcom/v2ray/ang/enums/EConfigType;
 
-    invoke-virtual {v1}, Lcom/v2ray/ang/enums/EConfigType;->ordinal()I
+    invoke-virtual {v11}, Lcom/v2ray/ang/enums/EConfigType;->ordinal()I
 
-    move-result v1
+    move-result v11
 
-    const/4 v2, 0x1
+    aput v1, v0, v11
+    :try_end_a
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_a
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :try_start_1
+    :catch_a
+    :try_start_b
     sget-object v1, Lcom/v2ray/ang/enums/EConfigType;->POLICYGROUP:Lcom/v2ray/ang/enums/EConfigType;
 
     invoke-virtual {v1}, Lcom/v2ray/ang/enums/EConfigType;->ordinal()I
 
     move-result v1
 
-    const/4 v2, 0x2
-
     aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    :try_end_b
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_b
 
-    :catch_1
-    :try_start_2
+    :catch_b
+    :try_start_c
     sget-object v1, Lcom/v2ray/ang/enums/EConfigType;->PROXYCHAIN:Lcom/v2ray/ang/enums/EConfigType;
 
     invoke-virtual {v1}, Lcom/v2ray/ang/enums/EConfigType;->ordinal()I
 
     move-result v1
 
-    const/4 v2, 0x3
+    aput v3, v0, v1
+    :try_end_c
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_c .. :try_end_c} :catch_c
 
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    :try_start_3
+    :catch_c
+    :try_start_d
     sget-object v1, Lcom/v2ray/ang/enums/EConfigType;->VMESS:Lcom/v2ray/ang/enums/EConfigType;
 
     invoke-virtual {v1}, Lcom/v2ray/ang/enums/EConfigType;->ordinal()I
 
     move-result v1
 
-    const/4 v2, 0x4
+    aput v4, v0, v1
+    :try_end_d
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_d .. :try_end_d} :catch_d
 
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    :try_start_4
+    :catch_d
+    :try_start_e
     sget-object v1, Lcom/v2ray/ang/enums/EConfigType;->VLESS:Lcom/v2ray/ang/enums/EConfigType;
 
     invoke-virtual {v1}, Lcom/v2ray/ang/enums/EConfigType;->ordinal()I
 
     move-result v1
 
-    const/4 v2, 0x5
+    aput v5, v0, v1
+    :try_end_e
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_e .. :try_end_e} :catch_e
 
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    :try_start_5
+    :catch_e
+    :try_start_f
     sget-object v1, Lcom/v2ray/ang/enums/EConfigType;->SHADOWSOCKS:Lcom/v2ray/ang/enums/EConfigType;
 
     invoke-virtual {v1}, Lcom/v2ray/ang/enums/EConfigType;->ordinal()I
 
     move-result v1
 
-    const/4 v2, 0x6
+    aput v6, v0, v1
+    :try_end_f
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_f .. :try_end_f} :catch_f
 
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    :try_start_6
+    :catch_f
+    :try_start_10
     sget-object v1, Lcom/v2ray/ang/enums/EConfigType;->SOCKS:Lcom/v2ray/ang/enums/EConfigType;
 
     invoke-virtual {v1}, Lcom/v2ray/ang/enums/EConfigType;->ordinal()I
 
     move-result v1
 
-    const/4 v2, 0x7
+    aput v7, v0, v1
+    :try_end_10
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_10 .. :try_end_10} :catch_10
 
-    aput v2, v0, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
-
-    :catch_6
-    :try_start_7
+    :catch_10
+    :try_start_11
     sget-object v1, Lcom/v2ray/ang/enums/EConfigType;->HTTP:Lcom/v2ray/ang/enums/EConfigType;
 
     invoke-virtual {v1}, Lcom/v2ray/ang/enums/EConfigType;->ordinal()I
 
     move-result v1
 
-    const/16 v2, 0x8
+    aput v8, v0, v1
+    :try_end_11
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_11 .. :try_end_11} :catch_11
 
-    aput v2, v0, v1
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
-
-    :catch_7
-    :try_start_8
+    :catch_11
+    :try_start_12
     sget-object v1, Lcom/v2ray/ang/enums/EConfigType;->TROJAN:Lcom/v2ray/ang/enums/EConfigType;
 
     invoke-virtual {v1}, Lcom/v2ray/ang/enums/EConfigType;->ordinal()I
 
     move-result v1
 
-    const/16 v2, 0x9
+    aput v9, v0, v1
+    :try_end_12
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_12 .. :try_end_12} :catch_12
 
-    aput v2, v0, v1
-    :try_end_8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
-
-    :catch_8
-    :try_start_9
+    :catch_12
+    :try_start_13
     sget-object v1, Lcom/v2ray/ang/enums/EConfigType;->WIREGUARD:Lcom/v2ray/ang/enums/EConfigType;
 
     invoke-virtual {v1}, Lcom/v2ray/ang/enums/EConfigType;->ordinal()I
 
     move-result v1
 
-    const/16 v2, 0xa
+    aput v10, v0, v1
+    :try_end_13
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_13 .. :try_end_13} :catch_13
 
-    aput v2, v0, v1
-    :try_end_9
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
-
-    :catch_9
-    :try_start_a
+    :catch_13
+    :try_start_14
     sget-object v1, Lcom/v2ray/ang/enums/EConfigType;->HYSTERIA2:Lcom/v2ray/ang/enums/EConfigType;
 
     invoke-virtual {v1}, Lcom/v2ray/ang/enums/EConfigType;->ordinal()I
@@ -190,11 +322,11 @@
     const/16 v2, 0xb
 
     aput v2, v0, v1
-    :try_end_a
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_a
+    :try_end_14
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_14 .. :try_end_14} :catch_14
 
-    :catch_a
-    sput-object v0, Lcom/v2ray/ang/ui/main/MainActivity$WhenMappings;->$EnumSwitchMapping$0:[I
+    :catch_14
+    sput-object v0, Lcom/v2ray/ang/ui/main/MainActivity$WhenMappings;->$EnumSwitchMapping$1:[I
 
     return-void
 .end method

@@ -63,7 +63,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 138
+    .line 139
     new-instance v0, Lcom/v2ray/ang/ui/ScannerUiState;
 
     const-string v1, "IDLE"
@@ -74,7 +74,7 @@
 
     sput-object v0, Lcom/v2ray/ang/ui/ScannerUiState;->IDLE:Lcom/v2ray/ang/ui/ScannerUiState;
 
-    .line 139
+    .line 140
     new-instance v0, Lcom/v2ray/ang/ui/ScannerUiState;
 
     const-string v1, "ACTIVE"
@@ -110,7 +110,7 @@
         }
     .end annotation
 
-    .line 137
+    .line 138
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void

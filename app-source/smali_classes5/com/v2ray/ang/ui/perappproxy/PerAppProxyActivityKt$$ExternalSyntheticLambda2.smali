@@ -9,11 +9,9 @@
 # instance fields
 .field public final synthetic f$0:Landroidx/compose/runtime/MutableState;
 
-.field public final synthetic f$1:Landroidx/compose/runtime/MutableState;
-
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/compose/runtime/MutableState;Landroidx/compose/runtime/MutableState;)V
+.method public synthetic constructor <init>(Landroidx/compose/runtime/MutableState;)V
     .locals 0
 
     .line 0
@@ -21,22 +19,18 @@
 
     iput-object p1, p0, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivityKt$$ExternalSyntheticLambda2;->f$0:Landroidx/compose/runtime/MutableState;
 
-    iput-object p2, p0, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivityKt$$ExternalSyntheticLambda2;->f$1:Landroidx/compose/runtime/MutableState;
-
     return-void
 .end method
 
 
 # virtual methods
 .method public final invoke()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivityKt$$ExternalSyntheticLambda2;->f$0:Landroidx/compose/runtime/MutableState;
+    iget-object p0, p0, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivityKt$$ExternalSyntheticLambda2;->f$0:Landroidx/compose/runtime/MutableState;
 
-    iget-object p0, p0, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivityKt$$ExternalSyntheticLambda2;->f$1:Landroidx/compose/runtime/MutableState;
-
-    invoke-static {v0, p0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivityKt;->$r8$lambda$nT062DQTSnIIO6hbQBO69a93934(Landroidx/compose/runtime/MutableState;Landroidx/compose/runtime/MutableState;)Lkotlin/Unit;
+    invoke-static {p0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivityKt;->$r8$lambda$l0z8-HNX0KNvrFAjfqrCNM3t56U(Landroidx/compose/runtime/MutableState;)Lkotlin/Unit;
 
     move-result-object p0
 

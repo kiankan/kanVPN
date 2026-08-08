@@ -53,12 +53,12 @@
     f = "MainViewModel.kt"
     i = {}
     l = {
-        0x244
+        0x242
     }
     m = "invokeSuspend"
     n = {}
     nl = {
-        0x245
+        0x243
     }
     s = {}
     v = 0x2
@@ -182,7 +182,7 @@
 
     move-result-object v0
 
-    .line 578
+    .line 576
     iget v1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$subscriptionIdChanged$3;->label:I
 
     const/4 v2, 0x1
@@ -219,7 +219,7 @@
     :cond_1
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 580
+    .line 578
     :try_start_1
     iget-object v1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$subscriptionIdChanged$3;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
@@ -269,7 +269,7 @@
 
     move-object p1, v0
 
-    .line 584
+    .line 582
     sget-object v0, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
 
     iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainViewModel$subscriptionIdChanged$3;->$id:Ljava/lang/String;
@@ -292,7 +292,7 @@
 
     invoke-virtual {v0, v1, p0, p1}, Lcom/v2ray/ang/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 586
+    .line 584
     :goto_1
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
@@ -303,6 +303,6 @@
 
     move-object p0, v0
 
-    .line 582
+    .line 580
     throw p0
 .end method

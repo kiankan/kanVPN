@@ -225,7 +225,7 @@
 .method public final isAtLeast(Landroidx/lifecycle/Lifecycle$State;)Z
     .locals 1
 
-    const-string v0, "state"
+    const-string/jumbo v0, "state"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

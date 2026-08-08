@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nTaskerActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TaskerActivity.kt\ncom/v2ray/ang/ui/shortcut/TaskerActivityKt\n+ 2 LazyDsl.kt\nandroidx/compose/foundation/lazy/LazyDslKt\n+ 3 Column.kt\nandroidx/compose/foundation/layout/ColumnKt\n+ 4 Layout.kt\nandroidx/compose/ui/layout/LayoutKt\n+ 5 Composables.kt\nandroidx/compose/runtime/ComposablesKt\n+ 6 Composer.kt\nandroidx/compose/runtime/ComposerKt\n*L\n1#1,180:1\n204#2,13:181\n87#3:194\n84#3,9:195\n94#3:241\n81#4,6:204\n88#4,6:219\n96#4:240\n402#5,9:210\n411#5:225\n412#5,2:238\n1047#6,6:226\n1047#6,6:232\n*S KotlinDebug\n*F\n+ 1 TaskerActivity.kt\ncom/v2ray/ang/ui/shortcut/TaskerActivityKt\n*L\n160#1:181,13\n144#1:194\n144#1:195,9\n144#1:241\n144#1:204,6\n144#1:219,6\n144#1:240\n144#1:210,9\n144#1:225\n144#1:238,2\n152#1:226,6\n159#1:232,6\n*E\n"
+    value = "SMAP\nTaskerActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TaskerActivity.kt\ncom/v2ray/ang/ui/shortcut/TaskerActivityKt\n+ 2 LazyDsl.kt\nandroidx/compose/foundation/lazy/LazyDslKt\n+ 3 Column.kt\nandroidx/compose/foundation/layout/ColumnKt\n+ 4 Layout.kt\nandroidx/compose/ui/layout/LayoutKt\n+ 5 Composables.kt\nandroidx/compose/runtime/ComposablesKt\n+ 6 Composer.kt\nandroidx/compose/runtime/ComposerKt\n*L\n1#1,179:1\n204#2,13:180\n87#3:193\n84#3,9:194\n94#3:240\n81#4,6:203\n88#4,6:218\n96#4:239\n402#5,9:209\n411#5:224\n412#5,2:237\n1047#6,6:225\n1047#6,6:231\n*S KotlinDebug\n*F\n+ 1 TaskerActivity.kt\ncom/v2ray/ang/ui/shortcut/TaskerActivityKt\n*L\n159#1:180,13\n143#1:193\n143#1:194,9\n143#1:240\n143#1:203,6\n143#1:218,6\n143#1:239\n143#1:209,9\n143#1:224\n143#1:237,2\n151#1:225,6\n158#1:231,6\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -135,12 +135,12 @@
 
     move-object/from16 v7, p5
 
-    .line 128
+    .line 127
     invoke-interface {v7, v0}, Landroidx/compose/runtime/Composer;->startRestartGroup(I)Landroidx/compose/runtime/Composer;
 
     move-result-object v7
 
-    const-string v8, "C(TaskerScreen)N(items,switchState,selectedPosition,onBackClick,onSave)128@4342L23,130@4427L19,131@4465L378,142@4850L1411,129@4370L1891:TaskerActivity.kt#cg5iov"
+    const-string v8, "C(TaskerScreen)N(items,switchState,selectedPosition,onBackClick,onSave)127@4370L23,129@4455L19,130@4493L365,141@4865L1411,128@4398L1878:TaskerActivity.kt#cg5iov"
 
     invoke-static {v7, v8}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -300,19 +300,19 @@
 
     const/4 v9, -0x1
 
-    const-string v10, "com.v2ray.ang.ui.shortcut.TaskerScreen (TaskerActivity.kt:127)"
+    const-string v10, "com.v2ray.ang.ui.shortcut.TaskerScreen (TaskerActivity.kt:126)"
 
     invoke-static {v0, v8, v9, v10}, Landroidx/compose/runtime/ComposerKt;->traceEventStart(IIILjava/lang/String;)V
 
     :cond_c
     const/4 v0, 0x3
 
-    .line 129
+    .line 128
     invoke-static {v12, v12, v7, v12, v0}, Landroidx/compose/foundation/lazy/LazyListStateKt;->rememberLazyListState(IILandroidx/compose/runtime/Composer;II)Landroidx/compose/foundation/lazy/LazyListState;
 
     move-result-object v0
 
-    .line 131
+    .line 130
     sget-object v8, Landroidx/compose/material3/ScaffoldDefaults;->INSTANCE:Landroidx/compose/material3/ScaffoldDefaults;
 
     const/4 v9, 0x6
@@ -321,7 +321,7 @@
 
     move-result-object v17
 
-    .line 132
+    .line 131
     new-instance v8, Lcom/v2ray/ang/ui/shortcut/TaskerActivityKt$$ExternalSyntheticLambda1;
 
     invoke-direct {v8, v4, v5}, Lcom/v2ray/ang/ui/shortcut/TaskerActivityKt$$ExternalSyntheticLambda1;-><init>(Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;)V
@@ -336,7 +336,7 @@
 
     check-cast v8, Lkotlin/jvm/functions/Function2;
 
-    .line 143
+    .line 142
     new-instance v9, Lcom/v2ray/ang/ui/shortcut/TaskerActivityKt$$ExternalSyntheticLambda2;
 
     invoke-direct {v9, v2, v0, v1, v3}, Lcom/v2ray/ang/ui/shortcut/TaskerActivityKt$$ExternalSyntheticLambda2;-><init>(Landroidx/compose/runtime/MutableState;Landroidx/compose/foundation/lazy/LazyListState;Ljava/util/List;Landroidx/compose/runtime/MutableState;)V
@@ -371,7 +371,7 @@
 
     const-wide/16 v15, 0x0
 
-    .line 130
+    .line 129
     invoke-static/range {v7 .. v21}, Landroidx/compose/material3/ScaffoldKt;->Scaffold-TvnljyQ(Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;IJJLandroidx/compose/foundation/layout/WindowInsets;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
 
     invoke-static {}, Landroidx/compose/runtime/ComposerKt;->isTraceInProgress()Z
@@ -387,10 +387,10 @@
     :cond_d
     move-object/from16 v19, v7
 
-    .line 122
+    .line 121
     invoke-interface/range {v19 .. v19}, Landroidx/compose/runtime/Composer;->skipToGroupEnd()V
 
-    .line 179
+    .line 178
     :cond_e
     :goto_8
     invoke-interface/range {v19 .. v19}, Landroidx/compose/runtime/Composer;->endRestartGroup()Landroidx/compose/runtime/ScopeUpdateScope;
@@ -414,7 +414,7 @@
 
     move/from16 v0, p3
 
-    const-string v1, "C135@4587L232,132@4479L354:TaskerActivity.kt#cg5iov"
+    const-string v1, "C134@4615L219,131@4507L341:TaskerActivity.kt#cg5iov"
 
     invoke-static {p2, v1}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -450,13 +450,13 @@
 
     const/4 v1, -0x1
 
-    const-string v2, "com.v2ray.ang.ui.shortcut.TaskerScreen.<anonymous> (TaskerActivity.kt:132)"
+    const-string v2, "com.v2ray.ang.ui.shortcut.TaskerScreen.<anonymous> (TaskerActivity.kt:131)"
 
     const v4, -0x29621d52
 
     invoke-static {v4, v0, v1, v2}, Landroidx/compose/runtime/ComposerKt;->traceEventStart(IIILjava/lang/String;)V
 
-    .line 136
+    .line 135
     :cond_1
     new-instance v0, Lcom/v2ray/ang/ui/shortcut/TaskerActivityKt$$ExternalSyntheticLambda0;
 
@@ -478,7 +478,7 @@
 
     const/16 v12, 0x1fc
 
-    .line 133
+    .line 132
     const-string v0, ""
 
     const/4 v2, 0x0
@@ -511,11 +511,11 @@
 
     goto :goto_1
 
-    .line 132
+    .line 131
     :cond_2
     invoke-interface {p2}, Landroidx/compose/runtime/Composer;->skipToGroupEnd()V
 
-    .line 142
+    .line 141
     :cond_3
     :goto_1
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -530,7 +530,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string p1, "C136@4609L192:TaskerActivity.kt#cg5iov"
+    const-string p1, "C135@4637L179:TaskerActivity.kt#cg5iov"
 
     invoke-static {p2, p1}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -564,13 +564,13 @@
 
     const/4 p1, -0x1
 
-    const-string v0, "com.v2ray.ang.ui.shortcut.TaskerScreen.<anonymous>.<anonymous> (TaskerActivity.kt:136)"
+    const-string v0, "com.v2ray.ang.ui.shortcut.TaskerScreen.<anonymous>.<anonymous> (TaskerActivity.kt:135)"
 
     const v1, 0x584003b1
 
     invoke-static {v1, p3, p1, v0}, Landroidx/compose/runtime/ComposerKt;->traceEventStart(IIILjava/lang/String;)V
 
-    .line 137
+    .line 136
     :cond_1
     sget-object p1, Lcom/v2ray/ang/ui/shortcut/ComposableSingletons$TaskerActivityKt;->INSTANCE:Lcom/v2ray/ang/ui/shortcut/ComposableSingletons$TaskerActivityKt;
 
@@ -611,10 +611,10 @@
     :cond_2
     move-object v7, p2
 
-    .line 136
+    .line 135
     invoke-interface {v7}, Landroidx/compose/runtime/Composer;->skipToGroupEnd()V
 
-    .line 140
+    .line 139
     :cond_3
     :goto_1
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -639,7 +639,7 @@
 
     invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v4, "CN(innerPadding)143@4876L1379:TaskerActivity.kt#cg5iov"
+    const-string v4, "CN(innerPadding)142@4891L1379:TaskerActivity.kt#cg5iov"
 
     invoke-static {v10, v4}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -703,13 +703,13 @@
 
     const/4 v5, -0x1
 
-    const-string v6, "com.v2ray.ang.ui.shortcut.TaskerScreen.<anonymous> (TaskerActivity.kt:143)"
+    const-string v6, "com.v2ray.ang.ui.shortcut.TaskerScreen.<anonymous> (TaskerActivity.kt:142)"
 
     const v8, -0x4c9a2107
 
     invoke-static {v8, v4, v5, v6}, Landroidx/compose/runtime/ComposerKt;->traceEventStart(IIILjava/lang/String;)V
 
-    .line 145
+    .line 144
     :cond_3
     sget-object v4, Landroidx/compose/ui/Modifier;->Companion:Landroidx/compose/ui/Modifier$Companion;
 
@@ -719,52 +719,52 @@
 
     const/4 v5, 0x0
 
-    .line 146
+    .line 145
     invoke-static {v4, v15, v14, v5}, Landroidx/compose/foundation/layout/SizeKt;->fillMaxSize$default(Landroidx/compose/ui/Modifier;FILjava/lang/Object;)Landroidx/compose/ui/Modifier;
 
     move-result-object v4
 
-    .line 147
+    .line 146
     invoke-static {v4, v3}, Landroidx/compose/foundation/layout/PaddingKt;->padding(Landroidx/compose/ui/Modifier;Landroidx/compose/foundation/layout/PaddingValues;)Landroidx/compose/ui/Modifier;
 
     move-result-object v3
 
     const v4, 0x4ff7456f
 
-    .line 144
+    .line 143
     const-string v6, "CC(Column)N(modifier,verticalArrangement,horizontalAlignment,content)87@4443L61,88@4509L134:Column.kt#2w3rfo"
 
-    .line 194
+    .line 193
     invoke-static {v10, v4, v6}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
-    .line 195
+    .line 194
     sget-object v4, Landroidx/compose/foundation/layout/Arrangement;->INSTANCE:Landroidx/compose/foundation/layout/Arrangement;
 
     invoke-virtual {v4}, Landroidx/compose/foundation/layout/Arrangement;->getTop()Landroidx/compose/foundation/layout/Arrangement$Vertical;
 
     move-result-object v4
 
-    .line 196
+    .line 195
     sget-object v6, Landroidx/compose/ui/Alignment;->Companion:Landroidx/compose/ui/Alignment$Companion;
 
     invoke-virtual {v6}, Landroidx/compose/ui/Alignment$Companion;->getStart()Landroidx/compose/ui/Alignment$Horizontal;
 
     move-result-object v6
 
-    .line 199
+    .line 198
     invoke-static {v4, v6, v10, v7}, Landroidx/compose/foundation/layout/ColumnKt;->columnMeasurePolicy(Landroidx/compose/foundation/layout/Arrangement$Vertical;Landroidx/compose/ui/Alignment$Horizontal;Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/layout/MeasurePolicy;
 
     move-result-object v4
 
     const v6, -0x451e1427
 
-    .line 200
+    .line 199
     const-string v8, "CC(Layout)N(content,modifier,measurePolicy)81@3355L27,84@3521L415:Layout.kt#80mrfh"
 
-    .line 204
+    .line 203
     invoke-static {v10, v6, v8}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
-    .line 205
+    .line 204
     invoke-static {v10, v7}, Landroidx/compose/runtime/ComposablesKt;->getCurrentCompositeKeyHashCode(Landroidx/compose/runtime/Composer;I)J
 
     move-result-wide v8
@@ -773,17 +773,17 @@
 
     move-result v6
 
-    .line 206
+    .line 205
     invoke-interface {v10}, Landroidx/compose/runtime/Composer;->getCurrentCompositionLocalMap()Landroidx/compose/runtime/CompositionLocalMap;
 
     move-result-object v8
 
-    .line 207
+    .line 206
     invoke-static {v10, v3}, Landroidx/compose/ui/ComposedModifierKt;->materializeModifier(Landroidx/compose/runtime/Composer;Landroidx/compose/ui/Modifier;)Landroidx/compose/ui/Modifier;
 
     move-result-object v3
 
-    .line 209
+    .line 208
     sget-object v9, Landroidx/compose/ui/node/ComposeUiNode;->Companion:Landroidx/compose/ui/node/ComposeUiNode$Companion;
 
     invoke-virtual {v9}, Landroidx/compose/ui/node/ComposeUiNode$Companion;->getConstructor()Lkotlin/jvm/functions/Function0;
@@ -792,13 +792,13 @@
 
     const v11, -0x20f7d59c
 
-    .line 208
+    .line 207
     const-string v12, "CC(ReusableComposeNode)N(factory,update,content)410@16187L9:Composables.kt#9igjgp"
 
-    .line 210
+    .line 209
     invoke-static {v10, v11, v12}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
-    .line 211
+    .line 210
     invoke-interface {v10}, Landroidx/compose/runtime/Composer;->getApplier()Landroidx/compose/runtime/Applier;
 
     move-result-object v11
@@ -809,33 +809,33 @@
 
     invoke-static {}, Landroidx/compose/runtime/ComposablesKt;->invalidApplier()V
 
-    .line 212
+    .line 211
     :cond_4
     invoke-interface {v10}, Landroidx/compose/runtime/Composer;->startReusableNode()V
 
-    .line 213
+    .line 212
     invoke-interface {v10}, Landroidx/compose/runtime/Composer;->getInserting()Z
 
     move-result v11
 
     if-eqz v11, :cond_5
 
-    .line 214
+    .line 213
     invoke-interface {v10, v9}, Landroidx/compose/runtime/Composer;->createNode(Lkotlin/jvm/functions/Function0;)V
 
     goto :goto_3
 
-    .line 216
+    .line 215
     :cond_5
     invoke-interface {v10}, Landroidx/compose/runtime/Composer;->useNode()V
 
-    .line 218
+    .line 217
     :goto_3
     invoke-static {v10}, Landroidx/compose/runtime/Updater;->constructor-impl(Landroidx/compose/runtime/Composer;)Landroidx/compose/runtime/Composer;
 
     move-result-object v9
 
-    .line 219
+    .line 218
     sget-object v11, Landroidx/compose/ui/node/ComposeUiNode;->Companion:Landroidx/compose/ui/node/ComposeUiNode$Companion;
 
     invoke-virtual {v11}, Landroidx/compose/ui/node/ComposeUiNode$Companion;->getSetMeasurePolicy()Lkotlin/jvm/functions/Function2;
@@ -844,7 +844,7 @@
 
     invoke-static {v9, v4, v11}, Landroidx/compose/runtime/Updater;->set-impl(Landroidx/compose/runtime/Composer;Ljava/lang/Object;Lkotlin/jvm/functions/Function2;)V
 
-    .line 220
+    .line 219
     sget-object v4, Landroidx/compose/ui/node/ComposeUiNode;->Companion:Landroidx/compose/ui/node/ComposeUiNode$Companion;
 
     invoke-virtual {v4}, Landroidx/compose/ui/node/ComposeUiNode$Companion;->getSetResolvedCompositionLocals()Lkotlin/jvm/functions/Function2;
@@ -853,7 +853,7 @@
 
     invoke-static {v9, v8, v4}, Landroidx/compose/runtime/Updater;->set-impl(Landroidx/compose/runtime/Composer;Ljava/lang/Object;Lkotlin/jvm/functions/Function2;)V
 
-    .line 221
+    .line 220
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -866,7 +866,7 @@
 
     invoke-static {v9, v4, v6}, Landroidx/compose/runtime/Updater;->set-impl(Landroidx/compose/runtime/Composer;Ljava/lang/Object;Lkotlin/jvm/functions/Function2;)V
 
-    .line 222
+    .line 221
     sget-object v4, Landroidx/compose/ui/node/ComposeUiNode;->Companion:Landroidx/compose/ui/node/ComposeUiNode$Companion;
 
     invoke-virtual {v4}, Landroidx/compose/ui/node/ComposeUiNode$Companion;->getApplyOnDeactivatedNodeAssertion()Lkotlin/jvm/functions/Function1;
@@ -875,7 +875,7 @@
 
     invoke-static {v9, v4}, Landroidx/compose/runtime/Updater;->reconcile-impl(Landroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function1;)V
 
-    .line 223
+    .line 222
     sget-object v4, Landroidx/compose/ui/node/ComposeUiNode;->Companion:Landroidx/compose/ui/node/ComposeUiNode$Companion;
 
     invoke-virtual {v4}, Landroidx/compose/ui/node/ComposeUiNode$Companion;->getSetModifier()Lkotlin/jvm/functions/Function2;
@@ -886,10 +886,10 @@
 
     const v3, 0x7cc0ae6e
 
-    .line 225
+    .line 224
     const-string v4, "C89@4557L9:Column.kt#2w3rfo"
 
-    .line 201
+    .line 200
     invoke-static {v10, v3, v4}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     sget-object v3, Landroidx/compose/foundation/layout/ColumnScopeInstance;->INSTANCE:Landroidx/compose/foundation/layout/ColumnScopeInstance;
@@ -898,19 +898,19 @@
 
     const v3, 0x26c8c52d
 
-    const-string v4, "C149@5054L45,151@5180L26,148@5010L210,158@5415L830,153@5233L1012:TaskerActivity.kt#cg5iov"
+    const-string v4, "C148@5069L45,150@5195L26,147@5025L210,157@5430L830,152@5248L1012:TaskerActivity.kt#cg5iov"
 
-    .line 149
+    .line 148
     invoke-static {v10, v3, v4}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
-    .line 150
+    .line 149
     sget v3, Lcom/v2ray/ang/R$string;->tasker_start_service:I
 
     invoke-static {v3, v10, v7}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 151
+    .line 150
     invoke-interface {v0}, Landroidx/compose/runtime/MutableState;->getValue()Ljava/lang/Object;
 
     move-result-object v3
@@ -923,7 +923,7 @@
 
     const v3, 0x53d4fe1d
 
-    .line 152
+    .line 151
     const-string v7, "CC(remember):TaskerActivity.kt#9igjgp"
 
     invoke-static {v10, v3, v7}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -932,14 +932,14 @@
 
     move-result v3
 
-    .line 226
+    .line 225
     invoke-interface {v10}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
     move-result-object v8
 
     if-nez v3, :cond_6
 
-    .line 227
+    .line 226
     sget-object v3, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v3}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -948,16 +948,16 @@
 
     if-ne v8, v3, :cond_7
 
-    .line 152
+    .line 151
     :cond_6
     new-instance v8, Lcom/v2ray/ang/ui/shortcut/TaskerActivityKt$$ExternalSyntheticLambda4;
 
     invoke-direct {v8, v0}, Lcom/v2ray/ang/ui/shortcut/TaskerActivityKt$$ExternalSyntheticLambda4;-><init>(Landroidx/compose/runtime/MutableState;)V
 
-    .line 229
+    .line 228
     invoke-interface {v10, v8}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 152
+    .line 151
     :cond_7
     check-cast v8, Lkotlin/jvm/functions/Function1;
 
@@ -987,15 +987,15 @@
 
     move-object/from16 v0, v16
 
-    .line 149
+    .line 148
     invoke-static/range {v3 .. v12}, Lcom/v2ray/ang/ui/compose/SettingsItemKt;->SettingsSwitchItem(Landroidx/compose/ui/graphics/painter/Painter;Ljava/lang/String;Ljava/lang/String;ZLkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;ZLandroidx/compose/runtime/Composer;II)V
 
-    .line 156
+    .line 155
     sget-object v3, Landroidx/compose/ui/Modifier;->Companion:Landroidx/compose/ui/Modifier$Companion;
 
     check-cast v3, Landroidx/compose/ui/Modifier;
 
-    .line 157
+    .line 156
     invoke-static {v3, v15, v14, v13}, Landroidx/compose/foundation/layout/SizeKt;->fillMaxSize$default(Landroidx/compose/ui/Modifier;FILjava/lang/Object;)Landroidx/compose/ui/Modifier;
 
     move-result-object v3
@@ -1004,14 +1004,14 @@
 
     const/4 v5, 0x2
 
-    .line 158
+    .line 157
     invoke-static {v3, v4, v13, v5, v13}, Lcom/v2ray/ang/ui/compose/ScrollbarKt;->verticalScrollbar$default(Landroidx/compose/ui/Modifier;Landroidx/compose/foundation/lazy/LazyListState;Lcom/v2ray/ang/ui/compose/ScrollbarConfig;ILjava/lang/Object;)Landroidx/compose/ui/Modifier;
 
     move-result-object v3
 
     const v5, 0x53d51ea1
 
-    .line 159
+    .line 158
     invoke-static {v10, v5, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     invoke-interface {v10, v1}, Landroidx/compose/runtime/Composer;->changedInstance(Ljava/lang/Object;)Z
@@ -1024,14 +1024,14 @@
 
     or-int/2addr v0, v5
 
-    .line 232
+    .line 231
     invoke-interface {v10}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
     move-result-object v5
 
     if-nez v0, :cond_8
 
-    .line 233
+    .line 232
     sget-object v0, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v0}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -1040,16 +1040,16 @@
 
     if-ne v5, v0, :cond_9
 
-    .line 159
+    .line 158
     :cond_8
     new-instance v5, Lcom/v2ray/ang/ui/shortcut/TaskerActivityKt$$ExternalSyntheticLambda5;
 
     invoke-direct {v5, v1, v2}, Lcom/v2ray/ang/ui/shortcut/TaskerActivityKt$$ExternalSyntheticLambda5;-><init>(Ljava/util/List;Landroidx/compose/runtime/MutableState;)V
 
-    .line 235
+    .line 234
     invoke-interface {v10, v5}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 159
+    .line 158
     :cond_9
     move-object v9, v5
 
@@ -1079,28 +1079,28 @@
 
     move-object/from16 v1, p1
 
-    .line 154
+    .line 153
     invoke-static/range {v0 .. v12}, Landroidx/compose/foundation/lazy/LazyDslKt;->LazyColumn(Landroidx/compose/ui/Modifier;Landroidx/compose/foundation/lazy/LazyListState;Landroidx/compose/foundation/layout/PaddingValues;ZLandroidx/compose/foundation/layout/Arrangement$Vertical;Landroidx/compose/ui/Alignment$Horizontal;Landroidx/compose/foundation/gestures/FlingBehavior;ZLandroidx/compose/foundation/OverscrollEffect;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)V
 
-    .line 149
+    .line 148
     invoke-static/range {p5 .. p5}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerEnd(Landroidx/compose/runtime/Composer;)V
 
-    .line 201
+    .line 200
     invoke-static/range {p5 .. p5}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerEnd(Landroidx/compose/runtime/Composer;)V
 
-    .line 238
+    .line 237
     invoke-interface/range {p5 .. p5}, Landroidx/compose/runtime/Composer;->endNode()V
 
-    .line 210
+    .line 209
     invoke-static/range {p5 .. p5}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerEnd(Landroidx/compose/runtime/Composer;)V
 
-    .line 204
+    .line 203
     invoke-static/range {p5 .. p5}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerEnd(Landroidx/compose/runtime/Composer;)V
 
-    .line 194
+    .line 193
     invoke-static/range {p5 .. p5}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerEnd(Landroidx/compose/runtime/Composer;)V
 
-    .line 241
+    .line 240
     invoke-static {}, Landroidx/compose/runtime/ComposerKt;->isTraceInProgress()Z
 
     move-result v0
@@ -1111,11 +1111,11 @@
 
     goto :goto_4
 
-    .line 143
+    .line 142
     :cond_a
     invoke-interface/range {p5 .. p5}, Landroidx/compose/runtime/Composer;->skipToGroupEnd()V
 
-    .line 178
+    .line 177
     :cond_b
     :goto_4
     sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -1126,7 +1126,7 @@
 .method private static final TaskerScreen$lambda$1$0$0$0(Landroidx/compose/runtime/MutableState;Z)Lkotlin/Unit;
     .locals 0
 
-    .line 152
+    .line 151
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
@@ -1145,19 +1145,19 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 188
+    .line 187
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    .line 187
+    .line 186
     new-instance v1, Lcom/v2ray/ang/ui/shortcut/TaskerActivityKt$TaskerScreen$lambda$1$0$1$0$$inlined$itemsIndexed$default$2;
 
     invoke-direct {v1, p0}, Lcom/v2ray/ang/ui/shortcut/TaskerActivityKt$TaskerScreen$lambda$1$0$1$0$$inlined$itemsIndexed$default$2;-><init>(Ljava/util/List;)V
 
     check-cast v1, Lkotlin/jvm/functions/Function1;
 
-    .line 191
+    .line 190
     new-instance v2, Lcom/v2ray/ang/ui/shortcut/TaskerActivityKt$TaskerScreen$lambda$1$0$1$0$$inlined$itemsIndexed$default$3;
 
     invoke-direct {v2, p0, p1}, Lcom/v2ray/ang/ui/shortcut/TaskerActivityKt$TaskerScreen$lambda$1$0$1$0$$inlined$itemsIndexed$default$3;-><init>(Ljava/util/List;Landroidx/compose/runtime/MutableState;)V
@@ -1174,10 +1174,10 @@
 
     const/4 p1, 0x0
 
-    .line 187
+    .line 186
     invoke-interface {p2, v0, p1, v1, p0}, Landroidx/compose/foundation/lazy/LazyListScope;->items(ILkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function4;)V
 
-    .line 176
+    .line 175
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p0

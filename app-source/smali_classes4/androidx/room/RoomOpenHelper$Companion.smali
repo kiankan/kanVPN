@@ -116,7 +116,7 @@
     .line 260
     invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    const-string v5, "sqlite_"
+    const-string/jumbo v5, "sqlite_"
 
     const/4 v6, 0x2
 

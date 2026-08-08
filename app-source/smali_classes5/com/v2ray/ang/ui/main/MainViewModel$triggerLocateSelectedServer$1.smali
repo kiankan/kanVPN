@@ -31,7 +31,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nMainViewModel.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$triggerLocateSelectedServer$1\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 4 StateFlow.kt\nkotlinx/coroutines/flow/StateFlowKt\n*L\n1#1,784:1\n363#2,7:785\n1#3:792\n230#4,5:793\n*S KotlinDebug\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$triggerLocateSelectedServer$1\n*L\n735#1:785,7\n737#1:793,5\n*E\n"
+    value = "SMAP\nMainViewModel.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$triggerLocateSelectedServer$1\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 4 StateFlow.kt\nkotlinx/coroutines/flow/StateFlowKt\n*L\n1#1,782:1\n363#2,7:783\n1#3:790\n230#4,5:791\n*S KotlinDebug\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$triggerLocateSelectedServer$1\n*L\n733#1:783,7\n735#1:791,5\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -57,12 +57,12 @@
     f = "MainViewModel.kt"
     i = {}
     l = {
-        0x2df
+        0x2dd
     }
     m = "invokeSuspend"
     n = {}
     nl = {
-        0x311
+        0x30f
     }
     s = {}
     v = 0x2
@@ -200,7 +200,7 @@
 
     move-result-object v1
 
-    .line 733
+    .line 731
     iget v2, v0, Lcom/v2ray/ang/ui/main/MainViewModel$triggerLocateSelectedServer$1;->label:I
 
     const/4 v3, 0x1
@@ -227,7 +227,7 @@
     :cond_1
     invoke-static/range {p1 .. p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 735
+    .line 733
     iget-object v2, v0, Lcom/v2ray/ang/ui/main/MainViewModel$triggerLocateSelectedServer$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     iget-object v4, v0, Lcom/v2ray/ang/ui/main/MainViewModel$triggerLocateSelectedServer$1;->$groupId:Ljava/lang/String;
@@ -254,14 +254,14 @@
 
     return-object v1
 
-    .line 733
+    .line 731
     :cond_2
     :goto_0
     check-cast v2, Ljava/util/List;
 
     iget-object v1, v0, Lcom/v2ray/ang/ui/main/MainViewModel$triggerLocateSelectedServer$1;->$selected:Ljava/lang/String;
 
-    .line 786
+    .line 784
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -279,10 +279,10 @@
 
     move-result-object v4
 
-    .line 787
+    .line 785
     check-cast v4, Lcom/v2ray/ang/dto/entities/ServersCache;
 
-    .line 735
+    .line 733
     invoke-virtual {v4}, Lcom/v2ray/ang/dto/entities/ServersCache;->getGuid()Ljava/lang/String;
 
     move-result-object v4
@@ -330,7 +330,7 @@
 
     move-result v1
 
-    .line 737
+    .line 735
     iget-object v2, v0, Lcom/v2ray/ang/ui/main/MainViewModel$triggerLocateSelectedServer$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {v2}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$get_uiState$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lkotlinx/coroutines/flow/MutableStateFlow;
@@ -341,18 +341,18 @@
 
     iget v0, v0, Lcom/v2ray/ang/ui/main/MainViewModel$triggerLocateSelectedServer$1;->$groupIndex:I
 
-    .line 794
+    .line 792
     :cond_6
     invoke-interface {v2}, Lkotlinx/coroutines/flow/MutableStateFlow;->getValue()Ljava/lang/Object;
 
     move-result-object v4
 
-    .line 795
+    .line 793
     move-object v5, v4
 
     check-cast v5, Lcom/v2ray/ang/ui/main/MainUiState;
 
-    .line 738
+    .line 736
     new-instance v12, Lcom/v2ray/ang/dto/LocateTarget;
 
     invoke-direct {v12, v3, v0, v1}, Lcom/v2ray/ang/dto/LocateTarget;-><init>(Ljava/lang/String;II)V
@@ -383,19 +383,19 @@
 
     move-result-object v5
 
-    .line 796
+    .line 794
     invoke-interface {v2, v4, v5}, Lkotlinx/coroutines/flow/MutableStateFlow;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_6
 
-    .line 740
+    .line 738
     sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 
-    .line 736
+    .line 734
     :cond_7
     sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 

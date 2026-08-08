@@ -259,7 +259,7 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "tableNames"
+    const-string/jumbo v0, "tableNames"
 
     invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -372,7 +372,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "tableNames"
+    const-string/jumbo v0, "tableNames"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -1020,7 +1020,7 @@
         }
     .end annotation
 
-    const-string v0, "tables"
+    const-string/jumbo v0, "tables"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -1051,7 +1051,7 @@
         }
     .end annotation
 
-    const-string v0, "tables"
+    const-string/jumbo v0, "tables"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -1144,7 +1144,7 @@
         .end subannotation
     .end annotation
 
-    const-string v0, "tableNames"
+    const-string/jumbo v0, "tableNames"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -1178,7 +1178,7 @@
         }
     .end annotation
 
-    const-string v0, "tableNames"
+    const-string/jumbo v0, "tableNames"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -1219,7 +1219,7 @@
         }
     .end annotation
 
-    const-string v0, "tableNames"
+    const-string/jumbo v0, "tableNames"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -1362,7 +1362,7 @@
         }
     .end annotation
 
-    const-string v0, "tables"
+    const-string/jumbo v0, "tables"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

@@ -179,7 +179,7 @@
     .line 120
     new-instance p0, Landroidx/camera/viewfinder/core/impl/SurfaceControlCompat$SurfaceControlApi29Impl;
 
-    invoke-static {p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/view/SurfaceView;)Landroid/view/SurfaceControl;
+    invoke-static {p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/view/SurfaceView;)Landroid/view/SurfaceControl;
 
     move-result-object p1
 

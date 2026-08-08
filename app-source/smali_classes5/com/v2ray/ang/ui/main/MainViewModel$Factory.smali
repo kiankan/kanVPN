@@ -77,7 +77,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 774
+    .line 772
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$Factory;->application:Landroid/app/Application;
@@ -105,7 +105,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 777
+    .line 775
     const-class v0, Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-virtual {p1, v0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -114,7 +114,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 778
+    .line 776
     new-instance p1, Lcom/v2ray/ang/ui/main/MainViewModel;
 
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel$Factory;->application:Landroid/app/Application;
@@ -127,7 +127,7 @@
 
     return-object p1
 
-    .line 780
+    .line 778
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -152,7 +152,7 @@
         }
     .end annotation
 
-    .line 774
+    .line 772
     invoke-super {p0, p1, p2}, Landroidx/lifecycle/ViewModelProvider$Factory;->create(Ljava/lang/Class;Landroidx/lifecycle/viewmodel/CreationExtras;)Landroidx/lifecycle/ViewModel;
 
     move-result-object p0
@@ -174,7 +174,7 @@
         }
     .end annotation
 
-    .line 774
+    .line 772
     invoke-super {p0, p1, p2}, Landroidx/lifecycle/ViewModelProvider$Factory;->create(Lkotlin/reflect/KClass;Landroidx/lifecycle/viewmodel/CreationExtras;)Landroidx/lifecycle/ViewModel;
 
     move-result-object p0

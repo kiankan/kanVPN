@@ -182,7 +182,7 @@
     sput-object v4, Landroidx/core/app/NotificationCompatJellybean;->sActionIconField:Ljava/lang/reflect/Field;
 
     .line 220
-    const-string v4, "title"
+    const-string/jumbo v4, "title"
 
     invoke-virtual {v3, v4}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
@@ -571,7 +571,7 @@
 
     move-result v5
 
-    const-string v2, "title"
+    const-string/jumbo v2, "title"
 
     .line 244
     invoke-virtual {v0, v2}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
@@ -791,7 +791,7 @@
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 262
-    const-string v1, "title"
+    const-string/jumbo v1, "title"
 
     invoke-virtual {p0}, Landroidx/core/app/NotificationCompat$Action;->getTitle()Ljava/lang/CharSequence;
 

@@ -99,7 +99,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
-    .line 213
+    .line 215
     invoke-virtual {p0}, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$SubSettingScreen$2$1$1$2$1$1$1$2$1$3$1;->invoke()V
 
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -110,7 +110,7 @@
 .method public final invoke()V
     .locals 1
 
-    .line 214
+    .line 216
     iget-boolean v0, p0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$SubSettingScreen$2$1$1$2$1$1$1$2$1$3$1;->$confirmRemove:Z
 
     if-eqz v0, :cond_0
@@ -127,7 +127,7 @@
 
     return-void
 
-    .line 215
+    .line 217
     :cond_0
     iget-object v0, p0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$SubSettingScreen$2$1$1$2$1$1$1$2$1$3$1;->$onRemoveSub:Lkotlin/jvm/functions/Function1;
 

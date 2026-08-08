@@ -48,6 +48,15 @@
     return p0
 .end method
 
+.method public static bridge synthetic m(Landroid/graphics/Insets;)I
+    .locals 0
+
+    .line 0
+    iget p0, p0, Landroid/graphics/Insets;->left:I
+
+    return p0
+.end method
+
 .method public static bridge synthetic m(Landroid/hardware/camera2/CameraDevice;)I
     .locals 0
 
@@ -235,17 +244,6 @@
     check-cast p0, Landroid/hardware/camera2/params/MultiResolutionStreamConfigurationMap;
 
     return-object p0
-.end method
-
-.method public static synthetic m(IILjava/lang/String;)Landroid/hardware/camera2/params/MultiResolutionStreamInfo;
-    .locals 1
-
-    .line 0
-    new-instance v0, Landroid/hardware/camera2/params/MultiResolutionStreamInfo;
-
-    invoke-direct {v0, p0, p1, p2}, Landroid/hardware/camera2/params/MultiResolutionStreamInfo;-><init>(IILjava/lang/String;)V
-
-    return-object v0
 .end method
 
 .method public static synthetic m(Landroid/util/Size;Ljava/lang/Class;)Landroid/hardware/camera2/params/OutputConfiguration;
@@ -627,6 +625,15 @@
     return p0
 .end method
 
+.method public static bridge synthetic m$1(Landroid/graphics/Insets;)I
+    .locals 0
+
+    .line 0
+    iget p0, p0, Landroid/graphics/Insets;->top:I
+
+    return p0
+.end method
+
 .method public static bridge synthetic m$1(Landroid/hardware/camera2/CameraExtensionSession;Landroid/hardware/camera2/CaptureRequest;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraExtensionSession$ExtensionCaptureCallback;)I
     .locals 0
 
@@ -703,26 +710,6 @@
     move-result-object p0
 
     return-object p0
-.end method
-
-.method public static bridge synthetic m$1(Landroid/hardware/camera2/TotalCaptureResult;)Ljava/util/Map;
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0}, Landroid/hardware/camera2/TotalCaptureResult;->getPhysicalCameraTotalResults()Ljava/util/Map;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic m$1()V
-    .locals 1
-
-    .line 0
-    new-instance v0, Landroid/hardware/camera2/params/InputConfiguration;
-
-    return-void
 .end method
 
 .method public static bridge synthetic m$1(Landroid/hardware/camera2/CameraExtensionSession;)V
@@ -835,6 +822,15 @@
     return p0
 .end method
 
+.method public static bridge synthetic m$2(Landroid/graphics/Insets;)I
+    .locals 0
+
+    .line 0
+    iget p0, p0, Landroid/graphics/Insets;->right:I
+
+    return p0
+.end method
+
 .method public static bridge synthetic m$2()Landroid/graphics/ColorSpace$Named;
     .locals 1
 
@@ -862,13 +858,13 @@
     return-object v0
 .end method
 
-.method public static synthetic m$2()V
-    .locals 1
+.method public static bridge synthetic m$3(Landroid/graphics/Insets;)I
+    .locals 0
 
     .line 0
-    new-instance v0, Landroid/hardware/camera2/params/MultiResolutionStreamInfo;
+    iget p0, p0, Landroid/graphics/Insets;->bottom:I
 
-    return-void
+    return p0
 .end method
 
 .method public static bridge synthetic m$3()Landroid/graphics/ColorSpace$Named;

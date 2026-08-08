@@ -56,12 +56,12 @@
     f = "AppPickerViewModel.kt"
     i = {}
     l = {
-        0x33
+        0x34
     }
     m = "invokeSuspend"
     n = {}
     nl = {
-        0x34
+        0x35
     }
     s = {}
     v = 0x2
@@ -182,7 +182,7 @@
 
     move-result-object v0
 
-    .line 50
+    .line 51
     iget v1, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel$loadApps$1$apps$1;->label:I
 
     const/4 v2, 0x1
@@ -207,7 +207,7 @@
     :cond_1
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 51
+    .line 52
     sget-object p1, Lcom/v2ray/ang/util/AppManagerUtil;->INSTANCE:Lcom/v2ray/ang/util/AppManagerUtil;
 
     iget-object v1, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel$loadApps$1$apps$1;->$applicationContext:Landroid/content/Context;
@@ -228,12 +228,12 @@
 
     return-object v0
 
-    .line 50
+    .line 51
     :cond_2
     :goto_0
     check-cast p1, Ljava/util/ArrayList;
 
-    .line 52
+    .line 53
     iget-object v0, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel$loadApps$1$apps$1;->this$0:Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;
 
     iget-object v1, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel$loadApps$1$apps$1;->$applicationContext:Landroid/content/Context;
@@ -244,7 +244,7 @@
 
     move-result-object v0
 
-    .line 53
+    .line 54
     iget-object p0, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel$loadApps$1$apps$1;->this$0:Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;
 
     check-cast p1, Ljava/util/Collection;

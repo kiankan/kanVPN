@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nServerCustomConfigActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ServerCustomConfigActivity.kt\ncom/v2ray/ang/ui/server/ServerCustomConfigActivity\n+ 2 Composer.kt\nandroidx/compose/runtime/ComposerKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,490:1\n1047#2,6:491\n1047#2,6:497\n1047#2,6:503\n1#3:509\n*S KotlinDebug\n*F\n+ 1 ServerCustomConfigActivity.kt\ncom/v2ray/ang/ui/server/ServerCustomConfigActivity\n*L\n100#1:491,6\n101#1:497,6\n102#1:503,6\n*E\n"
+    value = "SMAP\nServerCustomConfigActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ServerCustomConfigActivity.kt\ncom/v2ray/ang/ui/server/ServerCustomConfigActivity\n+ 2 Composer.kt\nandroidx/compose/runtime/ComposerKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,495:1\n1047#2,6:496\n1047#2,6:502\n1047#2,6:508\n1#3:514\n*S KotlinDebug\n*F\n+ 1 ServerCustomConfigActivity.kt\ncom/v2ray/ang/ui/server/ServerCustomConfigActivity\n*L\n100#1:496,6\n101#1:502,6\n102#1:508,6\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -207,7 +207,7 @@
 .method private final deleteServer()Z
     .locals 3
 
-    .line 165
+    .line 170
     invoke-direct {p0}, Lcom/v2ray/ang/ui/server/ServerCustomConfigActivity;->getEditGuid()Ljava/lang/String;
 
     move-result-object v0
@@ -224,7 +224,7 @@
 
     return v1
 
-    .line 169
+    .line 174
     :cond_0
     invoke-direct {p0}, Lcom/v2ray/ang/ui/server/ServerCustomConfigActivity;->getEditGuid()Ljava/lang/String;
 
@@ -242,7 +242,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 170
+    .line 175
     check-cast p0, Landroid/content/Context;
 
     sget v0, Lcom/v2ray/ang/R$string;->toast_action_not_allowed:I
@@ -251,7 +251,7 @@
 
     return v1
 
-    .line 174
+    .line 179
     :cond_1
     sget-object v0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
@@ -261,10 +261,10 @@
 
     invoke-virtual {v0, v1}, Lcom/v2ray/ang/handler/MmkvManager;->removeServer(Ljava/lang/String;)V
 
-    .line 176
+    .line 181
     sget-object v0, Lcom/v2ray/ang/ui/server/ProfileEditorResult;->INSTANCE:Lcom/v2ray/ang/ui/server/ProfileEditorResult;
 
-    .line 177
+    .line 182
     move-object v1, p0
 
     check-cast v1, Landroid/app/Activity;
@@ -393,20 +393,18 @@
 .end method
 
 .method private final saveServer(Ljava/lang/String;Ljava/lang/String;)Z
-    .locals 6
+    .locals 5
 
     .line 110
-    const-string v0, ""
-
     check-cast p1, Ljava/lang/CharSequence;
 
     invoke-static {p1}, Lkotlin/text/StringsKt;->isBlank(Ljava/lang/CharSequence;)Z
 
-    move-result v1
+    move-result v0
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_0
 
     .line 111
     check-cast p0, Landroid/content/Context;
@@ -415,133 +413,127 @@
 
     invoke-static {p0, p1}, Lcom/v2ray/ang/extension/ToastExtKt;->toast(Landroid/content/Context;I)V
 
-    return v2
+    return v1
 
     :cond_0
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
     .line 116
     :try_start_0
-    sget-object v3, Lcom/v2ray/ang/fmt/CustomFmt;->INSTANCE:Lcom/v2ray/ang/fmt/CustomFmt;
+    sget-object v2, Lcom/v2ray/ang/fmt/CustomFmt;->INSTANCE:Lcom/v2ray/ang/fmt/CustomFmt;
 
-    invoke-virtual {v3, p2}, Lcom/v2ray/ang/fmt/CustomFmt;->parse(Ljava/lang/String;)Lcom/v2ray/ang/dto/entities/ProfileItem;
+    invoke-virtual {v2, p2}, Lcom/v2ray/ang/fmt/CustomFmt;->parse(Ljava/lang/String;)Lcom/v2ray/ang/dto/entities/ProfileItem;
 
-    move-result-object v2
+    move-result-object v1
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 131
-    sget-object v3, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
+    .line 136
+    sget-object v2, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     invoke-direct {p0}, Lcom/v2ray/ang/ui/server/ServerCustomConfigActivity;->getEditGuid()Ljava/lang/String;
 
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Lcom/v2ray/ang/handler/MmkvManager;->decodeServerConfig(Ljava/lang/String;)Lcom/v2ray/ang/dto/entities/ProfileItem;
-
     move-result-object v3
 
-    if-nez v3, :cond_1
+    invoke-virtual {v2, v3}, Lcom/v2ray/ang/handler/MmkvManager;->decodeServerConfig(Ljava/lang/String;)Lcom/v2ray/ang/dto/entities/ProfileItem;
 
-    .line 132
-    sget-object v3, Lcom/v2ray/ang/dto/entities/ProfileItem;->Companion:Lcom/v2ray/ang/dto/entities/ProfileItem$Companion;
+    move-result-object v2
 
-    sget-object v4, Lcom/v2ray/ang/enums/EConfigType;->CUSTOM:Lcom/v2ray/ang/enums/EConfigType;
+    if-nez v2, :cond_1
 
-    invoke-virtual {v3, v4}, Lcom/v2ray/ang/dto/entities/ProfileItem$Companion;->create(Lcom/v2ray/ang/enums/EConfigType;)Lcom/v2ray/ang/dto/entities/ProfileItem;
+    .line 137
+    sget-object v2, Lcom/v2ray/ang/dto/entities/ProfileItem;->Companion:Lcom/v2ray/ang/dto/entities/ProfileItem$Companion;
 
-    move-result-object v3
+    sget-object v3, Lcom/v2ray/ang/enums/EConfigType;->CUSTOM:Lcom/v2ray/ang/enums/EConfigType;
 
-    .line 135
+    invoke-virtual {v2, v3}, Lcom/v2ray/ang/dto/entities/ProfileItem$Companion;->create(Lcom/v2ray/ang/enums/EConfigType;)Lcom/v2ray/ang/dto/entities/ProfileItem;
+
+    move-result-object v2
+
+    .line 140
     :cond_1
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
-    move-result v4
+    move-result v3
 
-    if-nez v4, :cond_4
+    if-nez v3, :cond_3
 
-    if-eqz v2, :cond_2
+    if-eqz v1, :cond_2
 
-    invoke-virtual {v2}, Lcom/v2ray/ang/dto/entities/ProfileItem;->getRemarks()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/v2ray/ang/dto/entities/ProfileItem;->getRemarks()Ljava/lang/String;
 
     move-result-object p1
 
     goto :goto_0
 
     :cond_2
-    move-object p1, v1
+    move-object p1, v0
 
     :goto_0
     if-nez p1, :cond_3
 
-    goto :goto_1
+    const-string p1, ""
 
     :cond_3
-    move-object v0, p1
-
-    :goto_1
-    move-object p1, v0
-
-    :cond_4
     check-cast p1, Ljava/lang/String;
 
-    .line 134
-    invoke-virtual {v3, p1}, Lcom/v2ray/ang/dto/entities/ProfileItem;->setRemarks(Ljava/lang/String;)V
-
-    if-eqz v2, :cond_5
-
-    .line 137
-    invoke-virtual {v2}, Lcom/v2ray/ang/dto/entities/ProfileItem;->getServer()Ljava/lang/String;
-
-    move-result-object p1
-
-    goto :goto_2
-
-    :cond_5
-    move-object p1, v1
-
-    :goto_2
-    invoke-virtual {v3, p1}, Lcom/v2ray/ang/dto/entities/ProfileItem;->setServer(Ljava/lang/String;)V
-
-    if-eqz v2, :cond_6
-
-    .line 138
-    invoke-virtual {v2}, Lcom/v2ray/ang/dto/entities/ProfileItem;->getServerPort()Ljava/lang/String;
-
-    move-result-object v1
-
-    :cond_6
-    invoke-virtual {v3, v1}, Lcom/v2ray/ang/dto/entities/ProfileItem;->setServerPort(Ljava/lang/String;)V
-
-    .line 140
-    sget-object p1, Lcom/v2ray/ang/handler/AngConfigManager;->INSTANCE:Lcom/v2ray/ang/handler/AngConfigManager;
-
-    invoke-virtual {p1, v3}, Lcom/v2ray/ang/handler/AngConfigManager;->generateDescription(Lcom/v2ray/ang/dto/entities/ProfileItem;)Ljava/lang/String;
-
-    move-result-object p1
-
     .line 139
-    invoke-virtual {v3, p1}, Lcom/v2ray/ang/dto/entities/ProfileItem;->setDescription(Ljava/lang/String;)V
+    invoke-virtual {v2, p1}, Lcom/v2ray/ang/dto/entities/ProfileItem;->setRemarks(Ljava/lang/String;)V
+
+    if-eqz v1, :cond_4
 
     .line 142
-    sget-object p1, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
+    invoke-virtual {v1}, Lcom/v2ray/ang/dto/entities/ProfileItem;->getServer()Ljava/lang/String;
+
+    move-result-object p1
+
+    goto :goto_1
+
+    :cond_4
+    move-object p1, v0
+
+    :goto_1
+    invoke-virtual {v2, p1}, Lcom/v2ray/ang/dto/entities/ProfileItem;->setServer(Ljava/lang/String;)V
+
+    if-eqz v1, :cond_5
 
     .line 143
+    invoke-virtual {v1}, Lcom/v2ray/ang/dto/entities/ProfileItem;->getServerPort()Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_5
+    invoke-virtual {v2, v0}, Lcom/v2ray/ang/dto/entities/ProfileItem;->setServerPort(Ljava/lang/String;)V
+
+    .line 145
+    sget-object p1, Lcom/v2ray/ang/handler/AngConfigManager;->INSTANCE:Lcom/v2ray/ang/handler/AngConfigManager;
+
+    invoke-virtual {p1, v2}, Lcom/v2ray/ang/handler/AngConfigManager;->generateDescription(Lcom/v2ray/ang/dto/entities/ProfileItem;)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 144
+    invoke-virtual {v2, p1}, Lcom/v2ray/ang/dto/entities/ProfileItem;->setDescription(Ljava/lang/String;)V
+
+    .line 147
+    sget-object p1, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
+
+    .line 148
     invoke-direct {p0}, Lcom/v2ray/ang/ui/server/ServerCustomConfigActivity;->getEditGuid()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 142
-    invoke-virtual {p1, v0, v3}, Lcom/v2ray/ang/handler/MmkvManager;->encodeServerConfig(Ljava/lang/String;Lcom/v2ray/ang/dto/entities/ProfileItem;)Ljava/lang/String;
+    .line 147
+    invoke-virtual {p1, v0, v2}, Lcom/v2ray/ang/handler/MmkvManager;->encodeServerConfig(Ljava/lang/String;Lcom/v2ray/ang/dto/entities/ProfileItem;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 147
+    .line 152
     sget-object v0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     invoke-virtual {v0, p1, p2}, Lcom/v2ray/ang/handler/MmkvManager;->encodeServerRaw(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 152
+    .line 157
     move-object p2, p0
 
     check-cast p2, Landroid/content/Context;
@@ -550,20 +542,20 @@
 
     invoke-static {p2, v0}, Lcom/v2ray/ang/extension/ToastExtKt;->toastSuccess(Landroid/content/Context;I)V
 
-    .line 154
+    .line 159
     sget-object p2, Lcom/v2ray/ang/ui/server/ProfileEditorResult;->INSTANCE:Lcom/v2ray/ang/ui/server/ProfileEditorResult;
 
-    .line 155
+    .line 160
     move-object v0, p0
 
     check-cast v0, Landroid/app/Activity;
 
-    .line 157
+    .line 162
     invoke-direct {p0}, Lcom/v2ray/ang/ui/server/ServerCustomConfigActivity;->isRunning()Z
 
     move-result p0
 
-    .line 155
+    .line 160
     invoke-virtual {p2, v0, p1, p0}, Lcom/v2ray/ang/ui/server/ProfileEditorResult;->finishSaved(Landroid/app/Activity;Ljava/lang/String;Z)V
 
     const/4 p0, 0x1
@@ -577,72 +569,132 @@
     sget-object p2, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
 
     .line 120
-    const-string v3, "Failed to parse custom configuration"
+    const-string v2, "Failed to parse custom configuration"
 
     .line 121
-    move-object v4, p1
+    move-object v3, p1
 
-    check-cast v4, Ljava/lang/Throwable;
+    check-cast v3, Ljava/lang/Throwable;
 
     .line 118
-    const-string v5, "com.kanvpn.client"
+    const-string v4, "com.kanvpn.client"
 
-    invoke-virtual {p2, v5, v3, v4}, Lcom/v2ray/ang/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {p2, v4, v2, v3}, Lcom/v2ray/ang/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 123
-    move-object p2, p0
-
-    check-cast p2, Landroid/content/Context;
-
-    .line 124
-    sget v3, Lcom/v2ray/ang/R$string;->toast_malformed_josn:I
-
-    invoke-virtual {p0, v3}, Lcom/v2ray/ang/ui/server/ServerCustomConfigActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    .line 125
     invoke-virtual {p1}, Ljava/lang/Exception;->getCause()Ljava/lang/Throwable;
 
-    move-result-object p1
+    move-result-object p2
 
-    if-eqz p1, :cond_7
+    if-eqz p2, :cond_8
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p2
 
-    :cond_7
-    if-nez v1, :cond_8
+    if-eqz p2, :cond_8
+
+    move-object v2, p2
+
+    check-cast v2, Ljava/lang/CharSequence;
+
+    invoke-static {v2}, Lkotlin/text/StringsKt;->isBlank(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_6
+
+    goto :goto_2
+
+    :cond_6
+    move-object p2, v0
+
+    :goto_2
+    if-nez p2, :cond_7
 
     goto :goto_3
 
+    :cond_7
+    move-object v0, p2
+
+    goto :goto_4
+
+    .line 124
     :cond_8
-    move-object v0, v1
-
     :goto_3
-    new-instance p1, Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+    move-result-object p1
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz p1, :cond_9
 
-    const-string p0, " "
+    move-object p2, p1
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast p2, Ljava/lang/CharSequence;
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p2}, Lkotlin/text/StringsKt;->isBlank(Ljava/lang/CharSequence;)Z
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result p2
+
+    if-nez p2, :cond_9
+
+    move-object v0, p1
+
+    .line 125
+    :cond_9
+    :goto_4
+    move-object p1, p0
+
+    check-cast p1, Landroid/content/Context;
+
+    .line 126
+    move-object p2, v0
+
+    check-cast p2, Ljava/lang/CharSequence;
+
+    if-eqz p2, :cond_b
+
+    invoke-static {p2}, Lkotlin/text/StringsKt;->isBlank(Ljava/lang/CharSequence;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_a
+
+    goto :goto_5
+
+    .line 129
+    :cond_a
+    sget p2, Lcom/v2ray/ang/R$string;->toast_malformed_json_detail:I
+
+    filled-new-array {v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {p0, p2, v0}, Lcom/v2ray/ang/ui/server/ServerCustomConfigActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
+    goto :goto_6
+
+    .line 127
+    :cond_b
+    :goto_5
+    sget p2, Lcom/v2ray/ang/R$string;->toast_malformed_json:I
+
+    invoke-virtual {p0, p2}, Lcom/v2ray/ang/ui/server/ServerCustomConfigActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    .line 129
+    :goto_6
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
     check-cast p0, Ljava/lang/CharSequence;
 
-    .line 123
-    invoke-static {p2, p0}, Lcom/v2ray/ang/extension/ToastExtKt;->toast(Landroid/content/Context;Ljava/lang/CharSequence;)V
+    .line 125
+    invoke-static {p1, p0}, Lcom/v2ray/ang/extension/ToastExtKt;->toast(Landroid/content/Context;Ljava/lang/CharSequence;)V
 
-    return v2
+    return v1
 .end method
 
 
@@ -749,14 +801,14 @@
 
     move-result p1
 
-    .line 491
+    .line 496
     invoke-interface {v8}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
     move-result-object v5
 
     if-nez p1, :cond_4
 
-    .line 492
+    .line 497
     sget-object p1, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {p1}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -771,7 +823,7 @@
 
     invoke-direct {v5, p0}, Lcom/v2ray/ang/ui/server/ServerCustomConfigActivity$$ExternalSyntheticLambda0;-><init>(Lcom/v2ray/ang/ui/server/ServerCustomConfigActivity;)V
 
-    .line 494
+    .line 499
     invoke-interface {v8, v5}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
     .line 100
@@ -789,14 +841,14 @@
 
     move-result p1
 
-    .line 497
+    .line 502
     invoke-interface {v8}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
     move-result-object v6
 
     if-nez p1, :cond_6
 
-    .line 498
+    .line 503
     sget-object p1, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {p1}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -811,7 +863,7 @@
 
     invoke-direct {v6, p0}, Lcom/v2ray/ang/ui/server/ServerCustomConfigActivity$$ExternalSyntheticLambda1;-><init>(Lcom/v2ray/ang/ui/server/ServerCustomConfigActivity;)V
 
-    .line 500
+    .line 505
     invoke-interface {v8, v6}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
     .line 101
@@ -829,14 +881,14 @@
 
     move-result p1
 
-    .line 503
+    .line 508
     invoke-interface {v8}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
     move-result-object v0
 
     if-nez p1, :cond_8
 
-    .line 504
+    .line 509
     sget-object p1, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {p1}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -851,7 +903,7 @@
 
     invoke-direct {v0, p0}, Lcom/v2ray/ang/ui/server/ServerCustomConfigActivity$$ExternalSyntheticLambda2;-><init>(Lcom/v2ray/ang/ui/server/ServerCustomConfigActivity;)V
 
-    .line 506
+    .line 511
     invoke-interface {v8, v0}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
     .line 102

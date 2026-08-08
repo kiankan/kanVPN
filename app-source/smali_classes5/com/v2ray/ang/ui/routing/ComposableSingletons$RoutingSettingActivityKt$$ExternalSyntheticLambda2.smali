@@ -3,7 +3,7 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Lkotlin/jvm/functions/Function2;
+.implements Lkotlin/jvm/functions/Function3;
 
 
 # direct methods
@@ -18,19 +18,21 @@
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
     .line 0
-    check-cast p1, Landroidx/compose/runtime/Composer;
+    check-cast p1, Landroidx/compose/foundation/lazy/LazyItemScope;
 
-    check-cast p2, Ljava/lang/Integer;
+    check-cast p2, Landroidx/compose/runtime/Composer;
 
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
+    check-cast p3, Ljava/lang/Integer;
+
+    invoke-virtual {p3}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
 
-    invoke-static {p1, p0}, Lcom/v2ray/ang/ui/routing/ComposableSingletons$RoutingSettingActivityKt;->lambda_2032980901$lambda$0(Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
+    invoke-static {p1, p2, p0}, Lcom/v2ray/ang/ui/routing/ComposableSingletons$RoutingSettingActivityKt;->lambda__560225082$lambda$0(Landroidx/compose/foundation/lazy/LazyItemScope;Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
 
     move-result-object p0
 

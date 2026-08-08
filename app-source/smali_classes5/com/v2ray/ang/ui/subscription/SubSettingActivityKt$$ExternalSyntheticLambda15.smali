@@ -3,40 +3,62 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Lkotlin/jvm/functions/Function1;
+.implements Lkotlin/jvm/functions/Function2;
 
 
 # instance fields
-.field public final synthetic f$0:Landroidx/compose/runtime/MutableState;
+.field public final synthetic f$0:Lkotlin/jvm/functions/Function0;
+
+.field public final synthetic f$1:Z
+
+.field public final synthetic f$2:Lkotlin/jvm/functions/Function0;
+
+.field public final synthetic f$3:Landroidx/compose/runtime/MutableState;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/compose/runtime/MutableState;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/functions/Function0;ZLkotlin/jvm/functions/Function0;Landroidx/compose/runtime/MutableState;)V
     .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$$ExternalSyntheticLambda15;->f$0:Landroidx/compose/runtime/MutableState;
+    iput-object p1, p0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$$ExternalSyntheticLambda15;->f$0:Lkotlin/jvm/functions/Function0;
+
+    iput-boolean p2, p0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$$ExternalSyntheticLambda15;->f$1:Z
+
+    iput-object p3, p0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$$ExternalSyntheticLambda15;->f$2:Lkotlin/jvm/functions/Function0;
+
+    iput-object p4, p0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$$ExternalSyntheticLambda15;->f$3:Landroidx/compose/runtime/MutableState;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
     .line 0
-    iget-object p0, p0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$$ExternalSyntheticLambda15;->f$0:Landroidx/compose/runtime/MutableState;
+    iget-object v0, p0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$$ExternalSyntheticLambda15;->f$0:Lkotlin/jvm/functions/Function0;
 
-    check-cast p1, Ljava/lang/Boolean;
+    iget-boolean v1, p0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$$ExternalSyntheticLambda15;->f$1:Z
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    iget-object v2, p0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$$ExternalSyntheticLambda15;->f$2:Lkotlin/jvm/functions/Function0;
 
-    move-result p1
+    iget-object v3, p0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$$ExternalSyntheticLambda15;->f$3:Landroidx/compose/runtime/MutableState;
 
-    invoke-static {p0, p1}, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt;->$r8$lambda$YozYXbjMHO9cfw-3YK46ce9k39o(Landroidx/compose/runtime/MutableState;Z)Lkotlin/Unit;
+    move-object v4, p1
+
+    check-cast v4, Landroidx/compose/runtime/Composer;
+
+    check-cast p2, Ljava/lang/Integer;
+
+    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v5
+
+    invoke-static/range {v0 .. v5}, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt;->SubSettingScreen$lambda$14(Lkotlin/jvm/functions/Function0;ZLkotlin/jvm/functions/Function0;Landroidx/compose/runtime/MutableState;Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
 
     move-result-object p0
 

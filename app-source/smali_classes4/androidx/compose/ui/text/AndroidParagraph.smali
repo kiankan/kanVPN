@@ -2439,7 +2439,7 @@
     .line 447
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "start("
+    const-string/jumbo v1, "start("
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 

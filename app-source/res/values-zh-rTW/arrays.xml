@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="config_backup_options">
-        <item>本地</item>
-        <item>WebDAV</item>
+    <string-array name="browser_dialer_mode">
+        <item>停用</item>
+        <item>OkHttp</item>
+        <item>WebView</item>
     </string-array>
     <string-array name="mode_entries">
         <item>VPN</item>
         <item>僅代理</item>
     </string-array>
     <string-array name="mux_xudp_quic_entries">
-        <item>不代理</item>
-        <item>多路復用</item>
-        <item>原生</item>
+        <item>拒絕</item>
+        <item>允許</item>
+        <item>略過</item>
     </string-array>
     <string-array name="outbound_domain_resolve_method">
         <item>不解析</item>
@@ -19,21 +20,10 @@
         <item>解析後替換原網域名稱</item>
     </string-array>
     <string-array name="policy_group_type">
-        <item>最低延遲</item>
-        <item>最少卡頓</item>
-        <item>隨機選擇</item>
-        <item>輪詢</item>
-    </string-array>
-    <string-array name="preset_rulesets">
-        <item>繞過大陸 (Whitelist)</item>
-        <item>黑名單 (Blacklist)</item>
-        <item>全域 (Global)</item>
-        <item>伊朗 (Iran)</item>
-        <item>俄羅斯白名單 (Russia Whitelist)</item>
-    </string-array>
-    <string-array name="share_sub_method">
-        <item>二維碼</item>
-        <item>匯出至剪貼簿</item>
+        <item>最低延遲 (leastPing)</item>
+        <item>最低負載 (leastLoad)</item>
+        <item>隨機選擇 (random)</item>
+        <item>輪詢 (roundRobin)</item>
     </string-array>
     <string-array name="ui_mode_night">
         <item>跟隨系統</item>

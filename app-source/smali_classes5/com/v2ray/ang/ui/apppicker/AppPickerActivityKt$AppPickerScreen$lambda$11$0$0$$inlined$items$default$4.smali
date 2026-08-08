@@ -30,7 +30,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nLazyDsl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 LazyDsl.kt\nandroidx/compose/foundation/lazy/LazyDslKt$items$4\n+ 2 AppPickerActivity.kt\ncom/v2ray/ang/ui/apppicker/AppPickerActivityKt\n+ 3 Composer.kt\nandroidx/compose/runtime/ComposerKt\n*L\n1#1,523:1\n186#2,7:524\n194#2,2:537\n1047#3,6:531\n*S KotlinDebug\n*F\n+ 1 AppPickerActivity.kt\ncom/v2ray/ang/ui/apppicker/AppPickerActivityKt\n*L\n192#1:531,6\n*E\n"
+    value = "SMAP\nLazyDsl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 LazyDsl.kt\nandroidx/compose/foundation/lazy/LazyDslKt$items$4\n+ 2 AppPickerActivity.kt\ncom/v2ray/ang/ui/apppicker/AppPickerActivityKt\n+ 3 Composer.kt\nandroidx/compose/runtime/ComposerKt\n*L\n1#1,523:1\n191#2,7:524\n199#2,2:537\n1047#3,6:531\n*S KotlinDebug\n*F\n+ 1 AppPickerActivity.kt\ncom/v2ray/ang/ui/apppicker/AppPickerActivityKt\n*L\n197#1:531,6\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -198,12 +198,12 @@
 
     check-cast p1, Lcom/v2ray/ang/dto/AppInfo;
 
-    const p2, 0x412d23b7
+    const p2, 0x412d22de
 
     .line 524
     invoke-interface {p3, p2}, Landroidx/compose/runtime/Composer;->startReplaceGroup(I)V
 
-    const-string p2, "CN(app)*191@7453L32,186@7229L274,193@7520L13:AppPickerActivity.kt#vm7hpy"
+    const-string p2, "CN(app)*196@7553L32,191@7336L267,198@7620L13:AppPickerActivity.kt#vm7hpy"
 
     invoke-static {p3, p2}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -227,12 +227,7 @@
 
     move-result-object v3
 
-    .line 528
-    invoke-virtual {p1}, Lcom/v2ray/ang/dto/AppInfo;->getAppIcon()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v4
-
-    const p2, -0x507a466d
+    const p2, -0x507a474d
 
     .line 529
     const-string p4, "CC(remember):AppPickerActivity.kt#9igjgp"
@@ -291,9 +286,11 @@
 
     invoke-static {p3}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerEnd(Landroidx/compose/runtime/Composer;)V
 
-    const/4 v9, 0x0
+    const/16 v9, 0x180
 
     const/16 v10, 0x20
+
+    const/4 v4, 0x0
 
     const/4 v7, 0x0
 

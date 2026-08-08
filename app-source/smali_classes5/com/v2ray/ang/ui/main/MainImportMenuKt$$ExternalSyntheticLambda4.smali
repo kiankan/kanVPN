@@ -3,15 +3,17 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Lkotlin/jvm/functions/Function0;
+.implements Lkotlin/jvm/functions/Function2;
 
 
 # instance fields
 .field public final synthetic f$0:Lkotlin/jvm/functions/Function1;
 
+.field public final synthetic f$1:I
+
 
 # direct methods
-.method public synthetic constructor <init>(Lkotlin/jvm/functions/Function1;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/functions/Function1;I)V
     .locals 0
 
     .line 0
@@ -19,18 +21,30 @@
 
     iput-object p1, p0, Lcom/v2ray/ang/ui/main/MainImportMenuKt$$ExternalSyntheticLambda4;->f$0:Lkotlin/jvm/functions/Function1;
 
+    iput p2, p0, Lcom/v2ray/ang/ui/main/MainImportMenuKt$$ExternalSyntheticLambda4;->f$1:I
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 0
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
     .line 0
-    iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainImportMenuKt$$ExternalSyntheticLambda4;->f$0:Lkotlin/jvm/functions/Function1;
+    iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainImportMenuKt$$ExternalSyntheticLambda4;->f$0:Lkotlin/jvm/functions/Function1;
 
-    invoke-static {p0}, Lcom/v2ray/ang/ui/main/MainImportMenuKt;->$r8$lambda$tX27uv0tih4TNH9tfaWATBt7R34(Lkotlin/jvm/functions/Function1;)Lkotlin/Unit;
+    iget p0, p0, Lcom/v2ray/ang/ui/main/MainImportMenuKt$$ExternalSyntheticLambda4;->f$1:I
+
+    check-cast p1, Landroidx/compose/runtime/Composer;
+
+    check-cast p2, Ljava/lang/Integer;
+
+    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
+
+    move-result p2
+
+    invoke-static {v0, p0, p1, p2}, Lcom/v2ray/ang/ui/main/MainImportMenuKt;->MoreMenuContent$lambda$1(Lkotlin/jvm/functions/Function1;ILandroidx/compose/runtime/Composer;I)Lkotlin/Unit;
 
     move-result-object p0
 

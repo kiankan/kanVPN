@@ -43,7 +43,7 @@
     move-result-object p0
 
     .line 31
-    const-string p1, "tel:"
+    const-string/jumbo p1, "tel:"
 
     invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 

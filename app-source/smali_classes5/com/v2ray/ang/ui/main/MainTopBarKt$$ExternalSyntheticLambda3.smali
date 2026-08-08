@@ -3,23 +3,23 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Lkotlin/jvm/functions/Function0;
+.implements Lkotlin/jvm/functions/Function1;
 
 
 # instance fields
-.field public final synthetic f$0:Lkotlin/jvm/functions/Function0;
+.field public final synthetic f$0:Lkotlin/jvm/functions/Function1;
 
 .field public final synthetic f$1:Landroidx/compose/runtime/MutableState;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/MutableState;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/MutableState;)V
     .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/v2ray/ang/ui/main/MainTopBarKt$$ExternalSyntheticLambda3;->f$0:Lkotlin/jvm/functions/Function0;
+    iput-object p1, p0, Lcom/v2ray/ang/ui/main/MainTopBarKt$$ExternalSyntheticLambda3;->f$0:Lkotlin/jvm/functions/Function1;
 
     iput-object p2, p0, Lcom/v2ray/ang/ui/main/MainTopBarKt$$ExternalSyntheticLambda3;->f$1:Landroidx/compose/runtime/MutableState;
 
@@ -28,15 +28,17 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainTopBarKt$$ExternalSyntheticLambda3;->f$0:Lkotlin/jvm/functions/Function0;
+    iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainTopBarKt$$ExternalSyntheticLambda3;->f$0:Lkotlin/jvm/functions/Function1;
 
     iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainTopBarKt$$ExternalSyntheticLambda3;->f$1:Landroidx/compose/runtime/MutableState;
 
-    invoke-static {v0, p0}, Lcom/v2ray/ang/ui/main/MainTopBarKt;->$r8$lambda$98YQPQl-30eIAqCIfKG8V7saR3k(Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/MutableState;)Lkotlin/Unit;
+    check-cast p1, Lcom/v2ray/ang/ui/main/MainAction;
+
+    invoke-static {v0, p0, p1}, Lcom/v2ray/ang/ui/main/MainTopBarKt;->$r8$lambda$qKJP8Y-uKLZucUhNhk8EkhAXgV8(Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/MutableState;Lcom/v2ray/ang/ui/main/MainAction;)Lkotlin/Unit;
 
     move-result-object p0
 

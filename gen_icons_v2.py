@@ -2,10 +2,9 @@ from PIL import Image, ImageDraw
 import os
 
 SRC = r"C:\Users\kiyan\Downloads\Gemini_Generated_Image_ehf9dkehf9dkehf9.png"
-ROOT = r"D:\claude\kanVPN_v232\decompiled\res"
+ROOT = r"D:\claude\kanVPN_v233\decompiled\res"
 
 src = Image.open(SRC).convert("RGBA")
-# crop to the shield glyph, square, excluding the "kanVPN" text below
 crop = src.crop((491, 164, 1515, 1188))  # 1024x1024
 
 densities = {
@@ -28,7 +27,6 @@ def make_legacy(size, round_mask):
     return img.convert("RGBA")
 
 def make_foreground(canvas_size):
-    # place the shield scaled to ~72% within the adaptive-icon safe zone, transparent padding
     glyph_size = int(canvas_size * 0.72)
     glyph = crop.resize((glyph_size, glyph_size), Image.LANCZOS)
     canvas = Image.new("RGBA", (canvas_size, canvas_size), (0, 0, 0, 0))

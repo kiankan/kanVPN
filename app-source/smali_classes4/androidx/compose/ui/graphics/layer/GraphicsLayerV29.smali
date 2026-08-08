@@ -260,7 +260,7 @@
     .line 51
     const-string p1, "graphicsLayer"
 
-    invoke-static {p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Ljava/lang/String;)Landroid/graphics/RenderNode;
+    invoke-static {p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Ljava/lang/String;)Landroid/graphics/RenderNode;
 
     move-result-object p1
 
@@ -713,7 +713,7 @@
 
     iget-object p0, p0, Landroidx/compose/ui/graphics/layer/GraphicsLayerV29;->renderNode:Landroid/graphics/RenderNode;
 
-    invoke-static {p1, p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/graphics/Canvas;Landroid/graphics/RenderNode;)V
+    invoke-static {p1, p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/graphics/Canvas;Landroid/graphics/RenderNode;)V
 
     return-void
 .end method
@@ -943,7 +943,7 @@
     .line 241
     iget-object v0, p0, Landroidx/compose/ui/graphics/layer/GraphicsLayerV29;->renderNode:Landroid/graphics/RenderNode;
 
-    invoke-static {v0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/graphics/RenderNode;)Landroid/graphics/RecordingCanvas;
+    invoke-static {v0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/graphics/RenderNode;)Landroid/graphics/RecordingCanvas;
 
     move-result-object v0
 
@@ -1017,7 +1017,7 @@
     .line 254
     iget-object p1, p0, Landroidx/compose/ui/graphics/layer/GraphicsLayerV29;->renderNode:Landroid/graphics/RenderNode;
 
-    invoke-static {p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/graphics/RenderNode;)V
+    invoke-static {p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/graphics/RenderNode;)V
 
     const/4 p1, 0x0
 
@@ -1032,7 +1032,7 @@
     .line 254
     iget-object p0, p0, Landroidx/compose/ui/graphics/layer/GraphicsLayerV29;->renderNode:Landroid/graphics/RenderNode;
 
-    invoke-static {p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/graphics/RenderNode;)V
+    invoke-static {p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/graphics/RenderNode;)V
 
     throw p1
 .end method
@@ -1278,7 +1278,7 @@
 
     add-int/2addr v2, p2
 
-    invoke-static {v0, p1, p2, v1, v2}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/graphics/RenderNode;IIII)Z
+    invoke-static {v0, p1, p2, v1, v2}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/graphics/RenderNode;IIII)Z
 
     .line 223
     invoke-static {p3, p4}, Landroidx/compose/ui/unit/IntSizeKt;->toSize-ozmzZPI(J)J

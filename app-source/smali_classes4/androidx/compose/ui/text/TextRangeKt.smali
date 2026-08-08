@@ -160,7 +160,7 @@
     .line 119
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "start and end cannot be negative. [start: "
+    const-string/jumbo v1, "start and end cannot be negative. [start: "
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 

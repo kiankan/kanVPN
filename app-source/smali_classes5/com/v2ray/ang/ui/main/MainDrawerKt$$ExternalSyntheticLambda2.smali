@@ -3,50 +3,42 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Lkotlin/jvm/functions/Function3;
+.implements Lkotlin/jvm/functions/Function2;
 
 
 # instance fields
-.field public final synthetic f$0:Landroidx/compose/foundation/ScrollState;
-
-.field public final synthetic f$1:Lkotlin/jvm/functions/Function1;
+.field public final synthetic f$0:Lcom/v2ray/ang/ui/main/MainDestination;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/compose/foundation/ScrollState;Lkotlin/jvm/functions/Function1;)V
+.method public synthetic constructor <init>(Lcom/v2ray/ang/ui/main/MainDestination;)V
     .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/v2ray/ang/ui/main/MainDrawerKt$$ExternalSyntheticLambda2;->f$0:Landroidx/compose/foundation/ScrollState;
-
-    iput-object p2, p0, Lcom/v2ray/ang/ui/main/MainDrawerKt$$ExternalSyntheticLambda2;->f$1:Lkotlin/jvm/functions/Function1;
+    iput-object p1, p0, Lcom/v2ray/ang/ui/main/MainDrawerKt$$ExternalSyntheticLambda2;->f$0:Lcom/v2ray/ang/ui/main/MainDestination;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainDrawerKt$$ExternalSyntheticLambda2;->f$0:Landroidx/compose/foundation/ScrollState;
+    iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainDrawerKt$$ExternalSyntheticLambda2;->f$0:Lcom/v2ray/ang/ui/main/MainDestination;
 
-    iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainDrawerKt$$ExternalSyntheticLambda2;->f$1:Lkotlin/jvm/functions/Function1;
+    check-cast p1, Landroidx/compose/runtime/Composer;
 
-    check-cast p1, Landroidx/compose/foundation/layout/ColumnScope;
+    check-cast p2, Ljava/lang/Integer;
 
-    check-cast p2, Landroidx/compose/runtime/Composer;
+    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
-    check-cast p3, Ljava/lang/Integer;
+    move-result p2
 
-    invoke-virtual {p3}, Ljava/lang/Integer;->intValue()I
-
-    move-result p3
-
-    invoke-static {v0, p0, p1, p2, p3}, Lcom/v2ray/ang/ui/main/MainDrawerKt;->MainDrawerContent$lambda$0(Landroidx/compose/foundation/ScrollState;Lkotlin/jvm/functions/Function1;Landroidx/compose/foundation/layout/ColumnScope;Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
+    invoke-static {p0, p1, p2}, Lcom/v2ray/ang/ui/main/MainDrawerKt;->$r8$lambda$Hs2OX-wtIt0v0z-Taq58KNzTg1I(Lcom/v2ray/ang/ui/main/MainDestination;Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
 
     move-result-object p0
 

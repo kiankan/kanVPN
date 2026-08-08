@@ -121,7 +121,7 @@
         }
     .end annotation
 
-    const-string v0, "timeout"
+    const-string/jumbo v0, "timeout"
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -172,7 +172,7 @@
         }
     .end annotation
 
-    const-string v0, "timeout"
+    const-string/jumbo v0, "timeout"
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

@@ -78,7 +78,7 @@
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v1, "srcRect must be contained by srcBm!"
+    const-string/jumbo v1, "srcRect must be contained by srcBm!"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 

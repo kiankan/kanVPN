@@ -268,7 +268,7 @@
     .line 129
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "start ("
+    const-string/jumbo v1, "start ("
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -820,7 +820,7 @@
     .line 160
     new-instance p3, Ljava/lang/StringBuilder;
 
-    const-string v1, "start ("
+    const-string/jumbo v1, "start ("
 
     invoke-direct {p3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -948,7 +948,7 @@
     .line 264
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v2, "start ("
+    const-string/jumbo v2, "start ("
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -1085,7 +1085,7 @@
     .line 233
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v2, "start ("
+    const-string/jumbo v2, "start ("
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 

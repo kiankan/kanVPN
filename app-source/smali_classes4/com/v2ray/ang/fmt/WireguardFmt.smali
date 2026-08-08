@@ -71,7 +71,7 @@
 .method public final parse(Ljava/lang/String;)Lcom/v2ray/ang/dto/entities/ProfileItem;
     .locals 5
 
-    const-string v0, "str"
+    const-string/jumbo v0, "str"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -299,7 +299,7 @@
 
     move-object/from16 v0, p1
 
-    const-string v1, "str"
+    const-string/jumbo v1, "str"
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -538,7 +538,7 @@
 
     move-result-object v8
 
-    const-string v9, "toLowerCase(...)"
+    const-string/jumbo v9, "toLowerCase(...)"
 
     invoke-static {v8, v9}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 

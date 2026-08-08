@@ -14,7 +14,7 @@
 
 
 # static fields
-.field public static hide_graphics_layer_in_inspector_tag:I = 0x7f08003c
+.field public static hide_graphics_layer_in_inspector_tag:I = 0x7f08003d
 
 
 # direct methods

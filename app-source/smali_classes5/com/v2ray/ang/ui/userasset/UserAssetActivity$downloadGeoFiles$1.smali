@@ -55,14 +55,14 @@
         0x0
     }
     l = {
-        0xd6
+        0xdc
     }
     m = "invokeSuspend"
     n = {
         "result"
     }
     nl = {
-        0xdf
+        0xe5
     }
     s = {
         "L$0"
@@ -202,7 +202,7 @@
 
     move-result-object v0
 
-    .line 212
+    .line 218
     iget v1, p0, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$downloadGeoFiles$1;->label:I
 
     const/4 v2, 0x1
@@ -231,7 +231,7 @@
     :cond_1
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 213
+    .line 219
     iget-object p1, p0, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$downloadGeoFiles$1;->this$0:Lcom/v2ray/ang/ui/userasset/UserAssetActivity;
 
     invoke-static {p1}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->access$getViewModel(Lcom/v2ray/ang/ui/userasset/UserAssetActivity;)Lcom/v2ray/ang/ui/userasset/UserAssetViewModel;
@@ -254,7 +254,7 @@
 
     move-result-object p1
 
-    .line 214
+    .line 220
     invoke-static {}, Lkotlinx/coroutines/Dispatchers;->getMain()Lkotlinx/coroutines/MainCoroutineDispatcher;
 
     move-result-object v1
@@ -291,7 +291,7 @@
 
     return-object v0
 
-    .line 223
+    .line 229
     :cond_2
     :goto_0
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;

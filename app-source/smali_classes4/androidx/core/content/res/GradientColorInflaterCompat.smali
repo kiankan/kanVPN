@@ -145,7 +145,7 @@
     move-result-object v1
 
     .line 97
-    const-string v5, "startX"
+    const-string/jumbo v5, "startX"
 
     sget v6, Landroidx/core/R$styleable;->GradientColor_android_startX:I
 
@@ -156,7 +156,7 @@
     move-result v9
 
     .line 99
-    const-string v5, "startY"
+    const-string/jumbo v5, "startY"
 
     sget v6, Landroidx/core/R$styleable;->GradientColor_android_startY:I
 
@@ -212,7 +212,7 @@
     move-result v5
 
     .line 111
-    const-string v6, "startColor"
+    const-string/jumbo v6, "startColor"
 
     sget v13, Landroidx/core/R$styleable;->GradientColor_android_startColor:I
 
@@ -244,7 +244,7 @@
     move-result v3
 
     .line 118
-    const-string v13, "tileMode"
+    const-string/jumbo v13, "tileMode"
 
     sget v4, Landroidx/core/R$styleable;->GradientColor_android_tileMode:I
 

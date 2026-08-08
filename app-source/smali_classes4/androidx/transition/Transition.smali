@@ -634,7 +634,7 @@
 
     .line 308
     :cond_0
-    const-string v2, "startDelay"
+    const-string/jumbo v2, "startDelay"
 
     const/4 v3, 0x2
 
@@ -5754,7 +5754,7 @@
 
     .line 2426
     :cond_3
-    const-string p1, "tgts("
+    const-string/jumbo p1, "tgts("
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

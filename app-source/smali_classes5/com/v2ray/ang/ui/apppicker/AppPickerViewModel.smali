@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nAppPickerViewModel.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AppPickerViewModel.kt\ncom/v2ray/ang/ui/apppicker/AppPickerViewModel\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,135:1\n1739#2:136\n1814#2,3:137\n1739#2:140\n1814#2,3:141\n777#2:144\n873#2,2:145\n*S KotlinDebug\n*F\n+ 1 AppPickerViewModel.kt\ncom/v2ray/ang/ui/apppicker/AppPickerViewModel\n*L\n83#1:136\n83#1:137,3\n89#1:140\n89#1:141,3\n101#1:144\n101#1:145,2\n*E\n"
+    value = "SMAP\nAppPickerViewModel.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AppPickerViewModel.kt\ncom/v2ray/ang/ui/apppicker/AppPickerViewModel\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,134:1\n2068#2,2:135\n1739#2:137\n1814#2,3:138\n777#2:141\n873#2,2:142\n*S KotlinDebug\n*F\n+ 1 AppPickerViewModel.kt\ncom/v2ray/ang/ui/apppicker/AppPickerViewModel\n*L\n88#1:135,2\n93#1:137\n93#1:138,3\n103#1:141\n103#1:142,2\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -159,10 +159,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 22
+    .line 23
     invoke-direct {p0, p1}, Lcom/v2ray/ang/ui/base/BaseViewModel;-><init>(Landroid/app/Application;)V
 
-    .line 24
+    .line 25
     invoke-static {}, Lkotlin/collections/SetsKt;->emptySet()Ljava/util/Set;
 
     move-result-object p1
@@ -173,14 +173,14 @@
 
     iput-object p1, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->_selectedPackages:Lkotlinx/coroutines/flow/MutableStateFlow;
 
-    .line 25
+    .line 26
     invoke-static {p1}, Lkotlinx/coroutines/flow/FlowKt;->asStateFlow(Lkotlinx/coroutines/flow/MutableStateFlow;)Lkotlinx/coroutines/flow/StateFlow;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->selectedPackages:Lkotlinx/coroutines/flow/StateFlow;
 
-    .line 27
+    .line 28
     invoke-static {}, Lkotlin/collections/CollectionsKt;->emptyList()Ljava/util/List;
 
     move-result-object p1
@@ -191,19 +191,19 @@
 
     iput-object p1, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->_displayedApps:Lkotlinx/coroutines/flow/MutableStateFlow;
 
-    .line 28
+    .line 29
     invoke-static {p1}, Lkotlinx/coroutines/flow/FlowKt;->asStateFlow(Lkotlinx/coroutines/flow/MutableStateFlow;)Lkotlinx/coroutines/flow/StateFlow;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->displayedApps:Lkotlinx/coroutines/flow/StateFlow;
 
-    .line 31
+    .line 32
     const-string p1, ""
 
     iput-object p1, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->currentQuery:Ljava/lang/String;
 
-    .line 32
+    .line 33
     invoke-static {}, Lkotlin/collections/SetsKt;->emptySet()Ljava/util/Set;
 
     move-result-object p1
@@ -216,7 +216,7 @@
 .method public static final synthetic access$applyFilter(Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;Ljava/lang/String;)Ljava/util/List;
     .locals 0
 
-    .line 22
+    .line 23
     invoke-direct {p0, p1}, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->applyFilter(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object p0
@@ -227,7 +227,7 @@
 .method public static final synthetic access$createSpecialItemUnidentified(Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;Landroid/content/Context;)Lcom/v2ray/ang/dto/AppInfo;
     .locals 0
 
-    .line 22
+    .line 23
     invoke-direct {p0, p1}, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->createSpecialItemUnidentified(Landroid/content/Context;)Lcom/v2ray/ang/dto/AppInfo;
 
     move-result-object p0
@@ -238,7 +238,7 @@
 .method public static final synthetic access$getCurrentQuery$p(Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;)Ljava/lang/String;
     .locals 0
 
-    .line 22
+    .line 23
     iget-object p0, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->currentQuery:Ljava/lang/String;
 
     return-object p0
@@ -247,7 +247,7 @@
 .method public static final synthetic access$get_displayedApps$p(Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;)Lkotlinx/coroutines/flow/MutableStateFlow;
     .locals 0
 
-    .line 22
+    .line 23
     iget-object p0, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->_displayedApps:Lkotlinx/coroutines/flow/MutableStateFlow;
 
     return-object p0
@@ -256,7 +256,7 @@
 .method public static final synthetic access$get_selectedPackages$p(Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;)Lkotlinx/coroutines/flow/MutableStateFlow;
     .locals 0
 
-    .line 22
+    .line 23
     iget-object p0, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->_selectedPackages:Lkotlinx/coroutines/flow/MutableStateFlow;
 
     return-object p0
@@ -265,7 +265,7 @@
 .method public static final synthetic access$setAllApps$p(Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;Ljava/util/List;)V
     .locals 0
 
-    .line 22
+    .line 23
     iput-object p1, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->allApps:Ljava/util/List;
 
     return-void
@@ -274,7 +274,7 @@
 .method public static final synthetic access$setAppListLoading$p(Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;Z)V
     .locals 0
 
-    .line 22
+    .line 23
     iput-boolean p1, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->isAppListLoading:Z
 
     return-void
@@ -283,7 +283,7 @@
 .method public static final synthetic access$setSelectedSnapshot$p(Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;Ljava/util/Set;)V
     .locals 0
 
-    .line 22
+    .line 23
     iput-object p1, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->selectedSnapshot:Ljava/util/Set;
 
     return-void
@@ -292,7 +292,7 @@
 .method public static final synthetic access$sortApps(Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;Ljava/util/List;)Ljava/util/List;
     .locals 0
 
-    .line 22
+    .line 23
     invoke-direct {p0, p1}, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->sortApps(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p0
@@ -301,7 +301,7 @@
 .end method
 
 .method private final applyFilter(Ljava/lang/String;)Ljava/util/List;
-    .locals 9
+    .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -313,7 +313,7 @@
         }
     .end annotation
 
-    .line 97
+    .line 100
     iget-object p0, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->allApps:Ljava/util/List;
 
     if-nez p0, :cond_0
@@ -324,13 +324,11 @@
 
     return-object p0
 
-    .line 98
+    .line 101
     :cond_0
-    move-object v0, p1
+    check-cast p1, Ljava/lang/CharSequence;
 
-    check-cast v0, Ljava/lang/CharSequence;
-
-    invoke-static {v0}, Lkotlin/text/StringsKt;->isBlank(Ljava/lang/CharSequence;)Z
+    invoke-static {p1}, Lkotlin/text/StringsKt;->isBlank(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -338,29 +336,18 @@
 
     return-object p0
 
-    .line 100
+    .line 103
     :cond_1
-    sget-object v0, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "toUpperCase(...)"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 101
     check-cast p0, Ljava/lang/Iterable;
 
-    .line 144
-    new-instance v1, Ljava/util/ArrayList;
+    .line 141
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    check-cast v1, Ljava/util/Collection;
+    check-cast v0, Ljava/util/Collection;
 
-    .line 145
+    .line 142
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -369,148 +356,85 @@
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_4
+    if-eqz v1, :cond_4
 
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v1
 
-    move-object v3, v2
+    move-object v2, v1
 
-    check-cast v3, Lcom/v2ray/ang/dto/AppInfo;
+    check-cast v2, Lcom/v2ray/ang/dto/AppInfo;
 
-    .line 102
-    invoke-virtual {v3}, Lcom/v2ray/ang/dto/AppInfo;->getAppName()Ljava/lang/String;
-
-    move-result-object v4
-
-    sget-object v5, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
-
-    invoke-virtual {v4, v5}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v4, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    check-cast v4, Ljava/lang/CharSequence;
-
-    move-object v5, p1
-
-    check-cast v5, Ljava/lang/CharSequence;
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x2
-
-    const/4 v8, 0x0
-
-    invoke-static {v4, v5, v6, v7, v8}, Lkotlin/text/StringsKt;->contains$default(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZILjava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_3
-
-    invoke-virtual {v3}, Lcom/v2ray/ang/dto/AppInfo;->getPackageName()Ljava/lang/String;
+    .line 104
+    invoke-virtual {v2}, Lcom/v2ray/ang/dto/AppInfo;->getAppName()Ljava/lang/String;
 
     move-result-object v3
-
-    sget-object v4, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
-
-    invoke-virtual {v3, v4}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v3, Ljava/lang/CharSequence;
 
-    invoke-static {v3, v5, v6, v7, v8}, Lkotlin/text/StringsKt;->contains$default(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZILjava/lang/Object;)Z
+    const/4 v4, 0x1
+
+    invoke-static {v3, p1, v4}, Lkotlin/text/StringsKt;->contains(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
 
     move-result v3
 
-    if-eqz v3, :cond_2
+    if-nez v3, :cond_3
 
-    .line 145
+    .line 105
+    invoke-virtual {v2}, Lcom/v2ray/ang/dto/AppInfo;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/CharSequence;
+
+    invoke-static {v2, p1, v4}, Lkotlin/text/StringsKt;->contains(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    .line 142
     :cond_3
-    invoke-interface {v1, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 146
+    .line 143
     :cond_4
-    check-cast v1, Ljava/util/List;
+    check-cast v0, Ljava/util/List;
 
-    return-object v1
+    return-object v0
 .end method
 
 .method private final createSpecialItemUnidentified(Landroid/content/Context;)Lcom/v2ray/ang/dto/AppInfo;
-    .locals 6
+    .locals 2
 
-    const p0, 0x1080040
+    .line 126
+    new-instance p0, Lcom/v2ray/ang/dto/AppInfo;
 
-    .line 123
-    invoke-virtual {p1, p0}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    .line 127
+    sget v0, Lcom/v2ray/ang/R$string;->app_picker_unknown_app:I
 
-    move-result-object p0
-
-    if-nez p0, :cond_1
-
-    const p0, 0x1080093
-
-    .line 124
-    invoke-virtual {p1, p0}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    goto :goto_0
-
-    .line 123
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    .line 125
-    const-string p1, "No fallback drawable available"
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const-string v0, "getString(...)"
 
-    throw p0
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    :cond_1
-    :goto_0
-    move-object v3, p0
+    .line 128
+    const-string v0, "__unknown_app__"
 
-    .line 126
-    new-instance v0, Lcom/v2ray/ang/dto/AppInfo;
-
-    .line 127
-    sget p0, Lcom/v2ray/ang/R$string;->app_picker_unknown_app:I
-
-    invoke-virtual {p1, p0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string p0, "getString(...)"
-
-    invoke-static {v1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
+    const/4 v1, 0x0
 
     .line 126
-    const-string v2, "__unknown_app__"
+    invoke-direct {p0, p1, v0, v1, v1}, Lcom/v2ray/ang/dto/AppInfo;-><init>(Ljava/lang/String;Ljava/lang/String;ZI)V
 
-    invoke-direct/range {v0 .. v5}, Lcom/v2ray/ang/dto/AppInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;ZI)V
-
-    return-object v0
+    return-object p0
 .end method
 
 .method private final sortApps(Ljava/util/List;)Ljava/util/List;
@@ -527,15 +451,15 @@
         }
     .end annotation
 
-    .line 107
+    .line 110
     invoke-static {}, Ljava/text/Collator;->getInstance()Ljava/text/Collator;
 
     move-result-object v0
 
-    .line 108
+    .line 111
     iget-object p0, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->selectedSnapshot:Ljava/util/Set;
 
-    .line 109
+    .line 112
     check-cast p1, Ljava/lang/Iterable;
 
     new-instance v1, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel$$ExternalSyntheticLambda0;
@@ -556,7 +480,7 @@
 .method static final sortApps$lambda$0(Ljava/util/Set;Ljava/text/Collator;Lcom/v2ray/ang/dto/AppInfo;Lcom/v2ray/ang/dto/AppInfo;)I
     .locals 3
 
-    .line 110
+    .line 113
     invoke-virtual {p2}, Lcom/v2ray/ang/dto/AppInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
@@ -565,7 +489,7 @@
 
     move-result v0
 
-    .line 111
+    .line 114
     invoke-virtual {p3}, Lcom/v2ray/ang/dto/AppInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -591,7 +515,7 @@
 
     return v2
 
-    .line 115
+    .line 118
     :cond_1
     invoke-virtual {p2}, Lcom/v2ray/ang/dto/AppInfo;->isSystemApp()Z
 
@@ -607,7 +531,7 @@
 
     return v2
 
-    .line 116
+    .line 119
     :cond_2
     invoke-virtual {p2}, Lcom/v2ray/ang/dto/AppInfo;->isSystemApp()Z
 
@@ -623,7 +547,7 @@
 
     return v1
 
-    .line 117
+    .line 120
     :cond_3
     invoke-virtual {p2}, Lcom/v2ray/ang/dto/AppInfo;->getAppName()Ljava/lang/String;
 
@@ -643,7 +567,7 @@
 .method static final sortApps$lambda$1(Lkotlin/jvm/functions/Function2;Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 109
+    .line 112
     invoke-interface {p0, p1, p2}, Lkotlin/jvm/functions/Function2;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -666,10 +590,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 69
+    .line 70
     iput-object p1, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->currentQuery:Ljava/lang/String;
 
-    .line 70
+    .line 71
     iget-object v0, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->_displayedApps:Lkotlinx/coroutines/flow/MutableStateFlow;
 
     invoke-direct {p0, p1}, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->applyFilter(Ljava/lang/String;)Ljava/util/List;
@@ -693,7 +617,7 @@
         }
     .end annotation
 
-    .line 28
+    .line 29
     iget-object p0, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->displayedApps:Lkotlinx/coroutines/flow/StateFlow;
 
     return-object p0
@@ -710,7 +634,7 @@
         }
     .end annotation
 
-    .line 94
+    .line 97
     iget-object p0, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->_selectedPackages:Lkotlinx/coroutines/flow/MutableStateFlow;
 
     invoke-interface {p0}, Lkotlinx/coroutines/flow/MutableStateFlow;->getValue()Ljava/lang/Object;
@@ -738,7 +662,7 @@
         }
     .end annotation
 
-    .line 25
+    .line 26
     iget-object p0, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->selectedPackages:Lkotlinx/coroutines/flow/StateFlow;
 
     return-object p0
@@ -759,7 +683,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 37
+    .line 38
     iget-boolean v0, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->initialized:Z
 
     if-eqz v0, :cond_0
@@ -769,10 +693,10 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 38
+    .line 39
     iput-boolean v0, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->initialized:Z
 
-    .line 39
+    .line 40
     iget-object p0, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->_selectedPackages:Lkotlinx/coroutines/flow/MutableStateFlow;
 
     check-cast p1, Ljava/lang/Iterable;
@@ -787,106 +711,83 @@
 .end method
 
 .method public final invertSelection()V
-    .locals 4
+    .locals 3
 
-    .line 88
-    iget-object v0, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->_selectedPackages:Lkotlinx/coroutines/flow/MutableStateFlow;
+    .line 93
+    iget-object v0, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->_displayedApps:Lkotlinx/coroutines/flow/MutableStateFlow;
 
     invoke-interface {v0}, Lkotlinx/coroutines/flow/MutableStateFlow;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/Set;
+    check-cast v0, Ljava/lang/Iterable;
 
-    .line 89
-    iget-object v1, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->_displayedApps:Lkotlinx/coroutines/flow/MutableStateFlow;
+    .line 137
+    new-instance v1, Ljava/util/ArrayList;
 
-    invoke-interface {v1}, Lkotlinx/coroutines/flow/MutableStateFlow;->getValue()Ljava/lang/Object;
+    const/16 v2, 0xa
 
-    move-result-object v1
+    invoke-static {v0, v2}, Lkotlin/collections/CollectionsKt;->collectionSizeOrDefault(Ljava/lang/Iterable;I)I
 
-    check-cast v1, Ljava/lang/Iterable;
+    move-result v2
 
-    .line 140
-    new-instance v2, Ljava/util/ArrayList;
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
 
-    const/16 v3, 0xa
+    check-cast v1, Ljava/util/Collection;
 
-    invoke-static {v1, v3}, Lkotlin/collections/CollectionsKt;->collectionSizeOrDefault(Ljava/lang/Iterable;I)I
+    .line 138
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    move-result v3
-
-    invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(I)V
-
-    check-cast v2, Ljava/util/Collection;
-
-    .line 141
-    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
+    move-result-object v0
 
     :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v3
+    move-result v2
 
-    if-eqz v3, :cond_0
+    if-eqz v2, :cond_0
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    .line 142
-    check-cast v3, Lcom/v2ray/ang/dto/AppInfo;
-
-    .line 89
-    invoke-virtual {v3}, Lcom/v2ray/ang/dto/AppInfo;->getPackageName()Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 142
-    invoke-interface {v2, v3}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    .line 143
-    :cond_0
-    check-cast v2, Ljava/util/List;
-
-    .line 140
-    check-cast v2, Ljava/lang/Iterable;
-
-    .line 89
-    invoke-static {v2}, Lkotlin/collections/CollectionsKt;->toSet(Ljava/lang/Iterable;)Ljava/util/Set;
-
-    move-result-object v1
-
-    .line 90
-    iget-object p0, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->_selectedPackages:Lkotlinx/coroutines/flow/MutableStateFlow;
-
-    move-object v2, v1
-
-    check-cast v2, Ljava/lang/Iterable;
-
-    invoke-static {v0, v2}, Lkotlin/collections/SetsKt;->minus(Ljava/util/Set;Ljava/lang/Iterable;)Ljava/util/Set;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 91
-    check-cast v0, Ljava/lang/Iterable;
+    .line 139
+    check-cast v2, Lcom/v2ray/ang/dto/AppInfo;
 
-    invoke-static {v1, v0}, Lkotlin/collections/SetsKt;->minus(Ljava/util/Set;Ljava/lang/Iterable;)Ljava/util/Set;
+    .line 93
+    invoke-virtual {v2}, Lcom/v2ray/ang/dto/AppInfo;->getPackageName()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v2
 
-    check-cast v0, Ljava/lang/Iterable;
+    .line 139
+    invoke-interface {v1, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    .line 90
-    invoke-static {v2, v0}, Lkotlin/collections/SetsKt;->plus(Ljava/util/Set;Ljava/lang/Iterable;)Ljava/util/Set;
+    goto :goto_0
 
-    move-result-object v0
+    .line 140
+    :cond_0
+    check-cast v1, Ljava/util/List;
 
-    invoke-interface {p0, v0}, Lkotlinx/coroutines/flow/MutableStateFlow;->setValue(Ljava/lang/Object;)V
+    .line 94
+    iget-object v0, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->_selectedPackages:Lkotlinx/coroutines/flow/MutableStateFlow;
+
+    sget-object v2, Lcom/v2ray/ang/ui/AppSelection;->INSTANCE:Lcom/v2ray/ang/ui/AppSelection;
+
+    iget-object p0, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->_selectedPackages:Lkotlinx/coroutines/flow/MutableStateFlow;
+
+    invoke-interface {p0}, Lkotlinx/coroutines/flow/MutableStateFlow;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/util/Set;
+
+    check-cast v1, Ljava/util/Collection;
+
+    invoke-virtual {v2, p0, v1}, Lcom/v2ray/ang/ui/AppSelection;->invert(Ljava/util/Set;Ljava/util/Collection;)Ljava/util/Set;
+
+    move-result-object p0
+
+    invoke-interface {v0, p0}, Lkotlinx/coroutines/flow/MutableStateFlow;->setValue(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -898,7 +799,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 43
+    .line 44
     iget-object v0, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->allApps:Ljava/util/List;
 
     if-nez v0, :cond_1
@@ -909,7 +810,7 @@
 
     goto :goto_0
 
-    .line 45
+    .line 46
     :cond_0
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -917,10 +818,10 @@
 
     const/4 v0, 0x1
 
-    .line 46
+    .line 47
     iput-boolean v0, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->isAppListLoading:Z
 
-    .line 47
+    .line 48
     new-instance v0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel$loadApps$1;
 
     const/4 v1, 0x0
@@ -937,31 +838,52 @@
 .end method
 
 .method public final selectAll()V
-    .locals 3
+    .locals 4
 
-    .line 83
+    .line 84
     iget-object v0, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->_displayedApps:Lkotlinx/coroutines/flow/MutableStateFlow;
 
     invoke-interface {v0}, Lkotlinx/coroutines/flow/MutableStateFlow;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Iterable;
+    check-cast v0, Ljava/util/List;
 
-    .line 136
-    new-instance v1, Ljava/util/ArrayList;
+    .line 85
+    iget-object v1, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->_selectedPackages:Lkotlinx/coroutines/flow/MutableStateFlow;
 
-    const/16 v2, 0xa
+    invoke-interface {v1}, Lkotlinx/coroutines/flow/MutableStateFlow;->getValue()Ljava/lang/Object;
 
-    invoke-static {v0, v2}, Lkotlin/collections/CollectionsKt;->collectionSizeOrDefault(Ljava/lang/Iterable;I)I
+    move-result-object v1
+
+    check-cast v1, Ljava/util/Set;
+
+    .line 86
+    iget-object p0, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->_selectedPackages:Lkotlinx/coroutines/flow/MutableStateFlow;
+
+    invoke-interface {v1}, Ljava/util/Set;->size()I
 
     move-result v2
 
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    invoke-static {v2}, Lkotlin/collections/SetsKt;->createSetBuilder(I)Ljava/util/Set;
+
+    move-result-object v2
+
+    .line 87
     check-cast v1, Ljava/util/Collection;
 
-    .line 137
+    invoke-interface {v2, v1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
+
+    .line 88
+    check-cast v0, Ljava/lang/Iterable;
+
+    .line 135
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -969,51 +891,28 @@
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_0
+    if-eqz v1, :cond_0
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v1
 
-    .line 138
-    check-cast v2, Lcom/v2ray/ang/dto/AppInfo;
+    check-cast v1, Lcom/v2ray/ang/dto/AppInfo;
 
-    .line 83
-    invoke-virtual {v2}, Lcom/v2ray/ang/dto/AppInfo;->getPackageName()Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 138
-    invoke-interface {v1, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    .line 139
-    :cond_0
-    check-cast v1, Ljava/util/List;
-
-    .line 136
-    check-cast v1, Ljava/lang/Iterable;
-
-    .line 83
-    invoke-static {v1}, Lkotlin/collections/CollectionsKt;->toSet(Ljava/lang/Iterable;)Ljava/util/Set;
-
-    move-result-object v0
-
-    .line 84
-    iget-object p0, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->_selectedPackages:Lkotlinx/coroutines/flow/MutableStateFlow;
-
-    invoke-interface {p0}, Lkotlinx/coroutines/flow/MutableStateFlow;->getValue()Ljava/lang/Object;
+    .line 88
+    invoke-virtual {v1}, Lcom/v2ray/ang/dto/AppInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    check-cast v1, Ljava/util/Set;
+    invoke-interface {v2, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    check-cast v0, Ljava/lang/Iterable;
+    goto :goto_0
 
-    invoke-static {v1, v0}, Lkotlin/collections/SetsKt;->plus(Ljava/util/Set;Ljava/lang/Iterable;)Ljava/util/Set;
+    .line 86
+    :cond_0
+    invoke-static {v2}, Lkotlin/collections/SetsKt;->build(Ljava/util/Set;)Ljava/util/Set;
 
     move-result-object v0
 
@@ -1029,7 +928,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 74
+    .line 75
     iget-object v0, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->_selectedPackages:Lkotlinx/coroutines/flow/MutableStateFlow;
 
     invoke-interface {v0}, Lkotlinx/coroutines/flow/MutableStateFlow;->getValue()Ljava/lang/Object;
@@ -1038,7 +937,7 @@
 
     check-cast v0, Ljava/util/Set;
 
-    .line 75
+    .line 76
     iget-object p0, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->_selectedPackages:Lkotlinx/coroutines/flow/MutableStateFlow;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -1047,20 +946,20 @@
 
     if-eqz v1, :cond_0
 
-    .line 76
+    .line 77
     invoke-static {v0, p1}, Lkotlin/collections/SetsKt;->minus(Ljava/util/Set;Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p1
 
     goto :goto_0
 
-    .line 78
+    .line 79
     :cond_0
     invoke-static {v0, p1}, Lkotlin/collections/SetsKt;->plus(Ljava/util/Set;Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p1
 
-    .line 75
+    .line 76
     :goto_0
     invoke-interface {p0, p1}, Lkotlinx/coroutines/flow/MutableStateFlow;->setValue(Ljava/lang/Object;)V
 

@@ -107,7 +107,7 @@
 
     move-result-object p0
 
-    const-string p1, "toHtml(...)"
+    const-string/jumbo p1, "toHtml(...)"
 
     invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -134,7 +134,7 @@
 
     move-result-object p0
 
-    const-string p1, "toHtml(...)"
+    const-string/jumbo p1, "toHtml(...)"
 
     invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 

@@ -1342,7 +1342,7 @@
     .line 180
     sget-object p0, Landroidx/camera/camera2/pipe/core/Debug;->INSTANCE:Landroidx/camera/camera2/pipe/core/Debug;
 
-    const-string p0, "onTotalCaptureResult"
+    const-string/jumbo p0, "onTotalCaptureResult"
 
     .line 474
     invoke-static {p0}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V

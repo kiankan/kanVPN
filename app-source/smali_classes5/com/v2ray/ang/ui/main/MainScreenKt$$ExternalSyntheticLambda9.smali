@@ -3,48 +3,34 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Lkotlin/jvm/functions/Function1;
+.implements Lkotlin/jvm/functions/Function0;
 
 
 # instance fields
-.field public final synthetic f$0:Z
-
-.field public final synthetic f$1:Lkotlin/jvm/functions/Function1;
-
-.field public final synthetic f$2:Landroidx/compose/runtime/MutableState;
+.field public final synthetic f$0:Lkotlin/jvm/functions/Function1;
 
 
 # direct methods
-.method public synthetic constructor <init>(ZLkotlin/jvm/functions/Function1;Landroidx/compose/runtime/MutableState;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/functions/Function1;)V
     .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$$ExternalSyntheticLambda9;->f$0:Z
-
-    iput-object p2, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$$ExternalSyntheticLambda9;->f$1:Lkotlin/jvm/functions/Function1;
-
-    iput-object p3, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$$ExternalSyntheticLambda9;->f$2:Landroidx/compose/runtime/MutableState;
+    iput-object p1, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$$ExternalSyntheticLambda9;->f$0:Lkotlin/jvm/functions/Function1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final invoke()Ljava/lang/Object;
+    .locals 0
 
     .line 0
-    iget-boolean v0, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$$ExternalSyntheticLambda9;->f$0:Z
+    iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$$ExternalSyntheticLambda9;->f$0:Lkotlin/jvm/functions/Function1;
 
-    iget-object v1, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$$ExternalSyntheticLambda9;->f$1:Lkotlin/jvm/functions/Function1;
-
-    iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$$ExternalSyntheticLambda9;->f$2:Landroidx/compose/runtime/MutableState;
-
-    check-cast p1, Ljava/lang/String;
-
-    invoke-static {v0, v1, p0, p1}, Lcom/v2ray/ang/ui/main/MainScreenKt;->$r8$lambda$b5kCKhFgwhhKfd_gZZjjRm35URU(ZLkotlin/jvm/functions/Function1;Landroidx/compose/runtime/MutableState;Ljava/lang/String;)Lkotlin/Unit;
+    invoke-static {p0}, Lcom/v2ray/ang/ui/main/MainScreenKt;->$r8$lambda$A-lAUydZDlxPzx0yDip38wfoOm4(Lkotlin/jvm/functions/Function1;)Lkotlin/Unit;
 
     move-result-object p0
 

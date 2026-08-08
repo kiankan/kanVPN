@@ -3,7 +3,7 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Lkotlin/jvm/functions/Function3;
+.implements Lkotlin/jvm/functions/Function2;
 
 
 # instance fields
@@ -24,23 +24,21 @@
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
     .line 0
     iget-object p0, p0, Lcom/v2ray/ang/ui/compose/DialogKt$$ExternalSyntheticLambda23;->f$0:Ljava/lang/String;
 
-    check-cast p1, Landroidx/compose/foundation/layout/RowScope;
+    check-cast p1, Landroidx/compose/runtime/Composer;
 
-    check-cast p2, Landroidx/compose/runtime/Composer;
+    check-cast p2, Ljava/lang/Integer;
 
-    check-cast p3, Ljava/lang/Integer;
+    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
-    invoke-virtual {p3}, Ljava/lang/Integer;->intValue()I
+    move-result p2
 
-    move-result p3
-
-    invoke-static {p0, p1, p2, p3}, Lcom/v2ray/ang/ui/compose/DialogKt;->$r8$lambda$XmfXVrAIpz3zNMECeW2p1lDcuMM(Ljava/lang/String;Landroidx/compose/foundation/layout/RowScope;Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
+    invoke-static {p0, p1, p2}, Lcom/v2ray/ang/ui/compose/DialogKt;->$r8$lambda$QI-6Rdqq8XWNe7jBstkjYFkhpW8(Ljava/lang/String;Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
 
     move-result-object p0
 

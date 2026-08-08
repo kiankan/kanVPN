@@ -190,7 +190,7 @@
 
     const-string v0, "AndroidEdgeEffectOverscrollEffect"
 
-    invoke-static {v0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Ljava/lang/String;)Landroid/graphics/RenderNode;
+    invoke-static {v0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Ljava/lang/String;)Landroid/graphics/RenderNode;
 
     move-result-object v0
 
@@ -412,7 +412,7 @@
 
     move-result v10
 
-    invoke-static {v8, v7, v7, v9, v10}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/graphics/RenderNode;IIII)Z
+    invoke-static {v8, v7, v7, v9, v10}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/graphics/RenderNode;IIII)Z
 
     goto :goto_0
 
@@ -443,7 +443,7 @@
     move-result v10
 
     .line 234
-    invoke-static {v8, v7, v7, v9, v10}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/graphics/RenderNode;IIII)Z
+    invoke-static {v8, v7, v7, v9, v10}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/graphics/RenderNode;IIII)Z
 
     goto :goto_0
 
@@ -474,7 +474,7 @@
     add-int/2addr v10, v11
 
     .line 242
-    invoke-static {v8, v7, v7, v9, v10}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/graphics/RenderNode;IIII)Z
+    invoke-static {v8, v7, v7, v9, v10}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/graphics/RenderNode;IIII)Z
 
     .line 254
     :goto_0
@@ -482,7 +482,7 @@
 
     move-result-object v8
 
-    invoke-static {v8}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/graphics/RenderNode;)Landroid/graphics/RecordingCanvas;
+    invoke-static {v8}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/graphics/RenderNode;)Landroid/graphics/RecordingCanvas;
 
     move-result-object v8
 
@@ -1086,7 +1086,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/graphics/RenderNode;)V
+    invoke-static {v0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/graphics/RenderNode;)V
 
     .line 359
     invoke-virtual {v2}, Landroid/graphics/Canvas;->save()I
@@ -1101,7 +1101,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/graphics/Canvas;Landroid/graphics/RenderNode;)V
+    invoke-static {v2, v1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/graphics/Canvas;Landroid/graphics/RenderNode;)V
 
     .line 362
     invoke-virtual {v2, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V

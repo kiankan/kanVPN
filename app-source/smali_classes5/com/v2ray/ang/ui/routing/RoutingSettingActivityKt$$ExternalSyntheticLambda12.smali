@@ -3,7 +3,7 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Lkotlin/jvm/functions/Function2;
+.implements Lkotlin/jvm/functions/Function1;
 
 
 # instance fields
@@ -28,7 +28,7 @@
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
     .line 0
@@ -36,15 +36,9 @@
 
     iget-object p0, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$$ExternalSyntheticLambda12;->f$1:Landroidx/compose/runtime/MutableState;
 
-    check-cast p1, Ljava/lang/Integer;
+    check-cast p1, Lcom/v2ray/ang/ui/routing/RoutingPreset;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    check-cast p2, Ljava/lang/String;
-
-    invoke-static {v0, p0, p1, p2}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt;->$r8$lambda$KENhbXmYmSY4ENH1WJL-SyGWSIs(Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/MutableState;ILjava/lang/String;)Lkotlin/Unit;
+    invoke-static {v0, p0, p1}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt;->$r8$lambda$O7S6HkJlcNps0kUH7opeEbgHh_k(Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/MutableState;Lcom/v2ray/ang/ui/routing/RoutingPreset;)Lkotlin/Unit;
 
     move-result-object p0
 

@@ -355,7 +355,7 @@
 
     move-result-object p0
 
-    const-string v1, "tls"
+    const-string/jumbo v1, "tls"
 
     invoke-static {p0, v1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -472,7 +472,7 @@
     invoke-virtual {p1, p0}, Lcom/v2ray/ang/dto/entities/ProfileItem;->setInsecure(Ljava/lang/Boolean;)V
 
     .line 83
-    const-string p0, "sni"
+    const-string/jumbo p0, "sni"
 
     invoke-interface {p2, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -560,7 +560,7 @@
     invoke-virtual {p1, p0}, Lcom/v2ray/ang/dto/entities/ProfileItem;->setShortId(Ljava/lang/String;)V
 
     .line 91
-    const-string p0, "spx"
+    const-string/jumbo p0, "spx"
 
     invoke-interface {p2, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -676,7 +676,7 @@
 
     if-eqz v1, :cond_3
 
-    const-string v5, "sni"
+    const-string/jumbo v5, "sni"
 
     invoke-interface {v0, v5, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -820,7 +820,7 @@
 
     if-eqz v1, :cond_b
 
-    const-string v5, "spx"
+    const-string/jumbo v5, "spx"
 
     invoke-interface {v0, v5, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -928,7 +928,7 @@
 
     move-result-object v1
 
-    const-string v5, "tls"
+    const-string/jumbo v5, "tls"
 
     invoke-static {v1, v5}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -1319,6 +1319,8 @@
     :cond_20
     :goto_6
     return-object p0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x1

@@ -31,7 +31,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nMainViewModel.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$moveServer$1\n+ 2 Mutex.kt\nkotlinx/coroutines/sync/MutexKt\n*L\n1#1,784:1\n117#2,10:785\n*S KotlinDebug\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$moveServer$1\n*L\n659#1:785,10\n*E\n"
+    value = "SMAP\nMainViewModel.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$moveServer$1\n+ 2 Mutex.kt\nkotlinx/coroutines/sync/MutexKt\n*L\n1#1,782:1\n117#2,10:783\n*S KotlinDebug\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$moveServer$1\n*L\n657#1:783,10\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -59,16 +59,16 @@
         0x1
     }
     l = {
-        0x291,
-        0x315
+        0x28f,
+        0x313
     }
     m = "invokeSuspend"
     n = {
         "$this$withLock_u24default$iv"
     }
     nl = {
-        0x292,
-        0x316
+        0x290,
+        0x314
     }
     s = {
         "L$0"
@@ -241,7 +241,7 @@
 
     move-result-object v0
 
-    .line 656
+    .line 654
     iget v1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$moveServer$1;->label:I
 
     const/4 v2, 0x0
@@ -293,7 +293,7 @@
     :cond_2
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 657
+    .line 655
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$moveServer$1;->$previousPersistenceJob:Lkotlinx/coroutines/Job;
 
     if-eqz p1, :cond_4
@@ -316,7 +316,7 @@
     :goto_0
     check-cast p1, Lkotlin/Unit;
 
-    .line 658
+    .line 656
     :cond_4
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$moveServer$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
@@ -330,7 +330,7 @@
 
     invoke-interface {p1, v1, v4}, Lcom/v2ray/ang/ui/main/MainDataSource;->encodeServerList(Ljava/util/List;Ljava/lang/String;)V
 
-    .line 659
+    .line 657
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$moveServer$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {p1}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getCacheMutex$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lkotlinx/coroutines/sync/Mutex;
@@ -343,7 +343,7 @@
 
     iget-object v5, p0, Lcom/v2ray/ang/ui/main/MainViewModel$moveServer$1;->$servers:Ljava/util/List;
 
-    .line 789
+    .line 787
     move-object v6, p0
 
     check-cast v6, Lkotlin/coroutines/Continuation;
@@ -376,7 +376,7 @@
 
     move-object v0, v5
 
-    .line 659
+    .line 657
     :goto_2
     :try_start_0
     invoke-static {v3}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getGroupDataCache$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Ljava/util/Map;
@@ -389,10 +389,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 793
+    .line 791
     invoke-interface {p0, v2}, Lkotlinx/coroutines/sync/Mutex;->unlock(Ljava/lang/Object;)V
 
-    .line 660
+    .line 658
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p0
@@ -400,7 +400,7 @@
     :catchall_0
     move-exception p1
 
-    .line 793
+    .line 791
     invoke-interface {p0, v2}, Lkotlinx/coroutines/sync/Mutex;->unlock(Ljava/lang/Object;)V
 
     throw p1

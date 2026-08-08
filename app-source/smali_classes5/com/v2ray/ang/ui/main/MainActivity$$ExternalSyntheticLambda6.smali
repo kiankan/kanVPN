@@ -22,7 +22,7 @@
     .locals 0
 
     .line 0
-    invoke-static {}, Lcom/v2ray/ang/ui/main/MainActivity;->startV2Ray$lambda$0()Lkotlin/Unit;
+    invoke-static {}, Lcom/v2ray/ang/ui/main/MainActivity;->onCreate$lambda$0()Lkotlin/Unit;
 
     move-result-object p0
 

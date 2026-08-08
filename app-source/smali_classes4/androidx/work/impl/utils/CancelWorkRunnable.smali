@@ -473,7 +473,7 @@
 .method public static final forTag(Ljava/lang/String;Landroidx/work/impl/WorkManagerImpl;)Landroidx/work/Operation;
     .locals 4
 
-    const-string v0, "tag"
+    const-string/jumbo v0, "tag"
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

@@ -501,7 +501,7 @@
 .method public compileStatement(Ljava/lang/String;)Landroidx/sqlite/db/SupportSQLiteStatement;
     .locals 1
 
-    const-string v0, "sql"
+    const-string/jumbo v0, "sql"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -520,7 +520,7 @@
 .method public delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
     .locals 1
 
-    const-string v0, "table"
+    const-string/jumbo v0, "table"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -616,7 +616,7 @@
         }
     .end annotation
 
-    const-string v0, "sql"
+    const-string/jumbo v0, "sql"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -640,7 +640,7 @@
         }
     .end annotation
 
-    const-string v0, "sql"
+    const-string/jumbo v0, "sql"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -822,7 +822,7 @@
         }
     .end annotation
 
-    const-string v0, "table"
+    const-string/jumbo v0, "table"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -1324,7 +1324,7 @@
 .method public update(Ljava/lang/String;ILandroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/Object;)I
     .locals 6
 
-    const-string v0, "table"
+    const-string/jumbo v0, "table"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

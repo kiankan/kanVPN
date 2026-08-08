@@ -31,7 +31,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nMainViewModel.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$reloadAllGroups$1\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,784:1\n777#2:785\n873#2,2:786\n2077#2,3:788\n*S KotlinDebug\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$reloadAllGroups$1\n*L\n603#1:785\n603#1:786,2\n605#1:788,3\n*E\n"
+    value = "SMAP\nMainViewModel.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$reloadAllGroups$1\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,782:1\n777#2:783\n873#2,2:784\n2077#2,3:786\n*S KotlinDebug\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$reloadAllGroups$1\n*L\n601#1:783\n601#1:784,2\n603#1:786,3\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -74,8 +74,8 @@
         0x1
     }
     l = {
-        0x25f,
-        0x260
+        0x25d,
+        0x25e
     }
     m = "invokeSuspend"
     n = {
@@ -97,8 +97,8 @@
         "index"
     }
     nl = {
-        0x260,
-        0x261
+        0x25e,
+        0x25f
     }
     s = {
         "L$0",
@@ -277,7 +277,7 @@
 
     move-result-object v2
 
-    .line 599
+    .line 597
     iget v3, v0, Lcom/v2ray/ang/ui/main/MainViewModel$reloadAllGroups$1;->label:I
 
     const/4 v4, 0x2
@@ -391,7 +391,7 @@
     :cond_2
     invoke-static/range {p1 .. p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 600
+    .line 598
     iget-object v3, v0, Lcom/v2ray/ang/ui/main/MainViewModel$reloadAllGroups$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-virtual {v3}, Lcom/v2ray/ang/ui/main/MainViewModel;->getUiState()Lkotlinx/coroutines/flow/StateFlow;
@@ -410,12 +410,12 @@
 
     iget-object v6, v0, Lcom/v2ray/ang/ui/main/MainViewModel$reloadAllGroups$1;->$groupIds:Ljava/util/List;
 
-    .line 601
+    .line 599
     invoke-static {}, Lkotlin/collections/CollectionsKt;->createListBuilder()Ljava/util/List;
 
     move-result-object v7
 
-    .line 602
+    .line 600
     invoke-interface {v6, v3}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v8
@@ -424,18 +424,18 @@
 
     invoke-interface {v7, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 603
+    .line 601
     :cond_3
     check-cast v6, Ljava/lang/Iterable;
 
-    .line 785
+    .line 783
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
     check-cast v8, Ljava/util/Collection;
 
-    .line 786
+    .line 784
     invoke-interface {v6}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v6
@@ -456,41 +456,41 @@
 
     check-cast v10, Ljava/lang/String;
 
-    .line 603
+    .line 601
     invoke-static {v10, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v10
 
     if-nez v10, :cond_4
 
-    .line 786
+    .line 784
     invoke-interface {v8, v9}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 787
+    .line 785
     :cond_5
     check-cast v8, Ljava/util/List;
 
-    .line 785
+    .line 783
     check-cast v8, Ljava/util/Collection;
 
-    .line 603
+    .line 601
     invoke-interface {v7, v8}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 601
+    .line 599
     invoke-static {v7}, Lkotlin/collections/CollectionsKt;->build(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v6
 
-    .line 605
+    .line 603
     move-object v7, v6
 
     check-cast v7, Ljava/lang/Iterable;
 
     iget-object v8, v0, Lcom/v2ray/ang/ui/main/MainViewModel$reloadAllGroups$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
-    .line 789
+    .line 787
     invoke-interface {v7}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v9
@@ -529,12 +529,12 @@
 
     check-cast v7, Ljava/lang/String;
 
-    .line 606
+    .line 604
     invoke-static {v1}, Lkotlinx/coroutines/CoroutineScopeKt;->ensureActive(Lkotlinx/coroutines/CoroutineScope;)V
 
     if-lez v3, :cond_7
 
-    .line 607
+    .line 605
     iput-object v1, v0, Lcom/v2ray/ang/ui/main/MainViewModel$reloadAllGroups$1;->L$0:Ljava/lang/Object;
 
     invoke-static {v13}, Lkotlin/coroutines/jvm/internal/SpillingKt;->nullOutSpilledVariable(Ljava/lang/Object;)Ljava/lang/Object;
@@ -603,7 +603,7 @@
 
     move-object/from16 v8, v16
 
-    .line 608
+    .line 606
     iput-object v1, v0, Lcom/v2ray/ang/ui/main/MainViewModel$reloadAllGroups$1;->L$0:Ljava/lang/Object;
 
     invoke-static {v13}, Lkotlin/coroutines/jvm/internal/SpillingKt;->nullOutSpilledVariable(Ljava/lang/Object;)Ljava/lang/Object;
@@ -674,7 +674,7 @@
 
     goto/16 :goto_1
 
-    .line 610
+    .line 608
     :cond_9
     sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 

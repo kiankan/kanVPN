@@ -317,7 +317,7 @@
     :cond_5
     iget-object p0, v0, Landroidx/core/net/MailTo;->mHeaders:Ljava/util/HashMap;
 
-    const-string v2, "to"
+    const-string/jumbo v2, "to"
 
     invoke-virtual {p0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -411,7 +411,7 @@
     .line 216
     iget-object p0, p0, Landroidx/core/net/MailTo;->mHeaders:Ljava/util/HashMap;
 
-    const-string v0, "subject"
+    const-string/jumbo v0, "subject"
 
     invoke-virtual {p0, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -428,7 +428,7 @@
     .line 187
     iget-object p0, p0, Landroidx/core/net/MailTo;->mHeaders:Ljava/util/HashMap;
 
-    const-string v0, "to"
+    const-string/jumbo v0, "to"
 
     invoke-virtual {p0, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 

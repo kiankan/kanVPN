@@ -3,7 +3,7 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Lkotlin/jvm/functions/Function2;
+.implements Lkotlin/jvm/functions/Function3;
 
 
 # direct methods
@@ -18,19 +18,21 @@
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
     .line 0
-    check-cast p1, Ljava/lang/Integer;
+    check-cast p1, Lcom/v2ray/ang/ui/subscription/SubscriptionShareAction;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    check-cast p2, Landroidx/compose/runtime/Composer;
+
+    check-cast p3, Ljava/lang/Integer;
+
+    invoke-virtual {p3}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
 
-    check-cast p2, Lcom/v2ray/ang/dto/entities/SubscriptionCache;
-
-    invoke-static {p0, p2}, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt;->$r8$lambda$PTvkZhDCjOUtOTRgd1A5mCVCp6I(ILcom/v2ray/ang/dto/entities/SubscriptionCache;)Ljava/lang/Object;
+    invoke-static {p1, p2, p0}, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt;->SubSettingScreen$lambda$16(Lcom/v2ray/ang/ui/subscription/SubscriptionShareAction;Landroidx/compose/runtime/Composer;I)Ljava/lang/String;
 
     move-result-object p0
 

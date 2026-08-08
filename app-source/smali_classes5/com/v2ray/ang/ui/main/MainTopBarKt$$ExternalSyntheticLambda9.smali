@@ -46,7 +46,7 @@
 
     move-result p3
 
-    invoke-static {v0, p0, p1, p2, p3}, Lcom/v2ray/ang/ui/main/MainTopBarKt;->$r8$lambda$lz8kG6g-d8ooE4WT9VRptAes8D4(Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/MutableState;Landroidx/compose/foundation/layout/ColumnScope;Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
+    invoke-static {v0, p0, p1, p2, p3}, Lcom/v2ray/ang/ui/main/MainTopBarKt;->$r8$lambda$r2Vay7y4wsyZeuVPommi7Ukh8X0(Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/MutableState;Landroidx/compose/foundation/layout/ColumnScope;Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
 
     move-result-object p0
 

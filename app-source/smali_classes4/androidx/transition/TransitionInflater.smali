@@ -505,7 +505,7 @@
 
     .line 159
     :cond_e
-    const-string v5, "targets"
+    const-string/jumbo v5, "targets"
 
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -850,7 +850,7 @@
     move-result-object v1
 
     .line 240
-    const-string v5, "target"
+    const-string/jumbo v5, "target"
 
     invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -868,7 +868,7 @@
     move-result-object v1
 
     .line 242
-    const-string v5, "targetId"
+    const-string/jumbo v5, "targetId"
 
     const/4 v6, 0x0
 
@@ -900,7 +900,7 @@
 
     .line 250
     :cond_3
-    const-string v4, "targetName"
+    const-string/jumbo v4, "targetName"
 
     const/4 v5, 0x4
 
@@ -955,7 +955,7 @@
 
     .line 263
     :cond_6
-    const-string v3, "targetClass"
+    const-string/jumbo v3, "targetClass"
 
     invoke-static {v1, p1, v3, v6}, Landroidx/core/content/res/TypedArrayUtils;->getNamedString(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Ljava/lang/String;
 
@@ -978,7 +978,7 @@
     :goto_1
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :catch_0
     move-exception p0

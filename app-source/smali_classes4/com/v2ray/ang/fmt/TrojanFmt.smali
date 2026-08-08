@@ -70,7 +70,7 @@
 .method public final parse(Ljava/lang/String;)Lcom/v2ray/ang/dto/entities/ProfileItem;
     .locals 3
 
-    const-string v0, "str"
+    const-string/jumbo v0, "str"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -157,7 +157,7 @@
 
     check-cast p1, Ljava/lang/CharSequence;
 
-    const-string v2, "tls"
+    const-string/jumbo v2, "tls"
 
     if-eqz p1, :cond_4
 

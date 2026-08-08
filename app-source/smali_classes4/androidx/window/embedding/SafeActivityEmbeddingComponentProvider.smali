@@ -1091,7 +1091,7 @@
     const-class v0, Landroidx/window/extensions/embedding/ActivityStack$Token;
 
     .line 813
-    const-string v1, "toBundle"
+    const-string/jumbo v1, "toBundle"
 
     const/4 v2, 0x0
 
@@ -3833,7 +3833,7 @@
     move-result-object v2
 
     .line 608
-    const-string v4, "splitEqually"
+    const-string/jumbo v4, "splitEqually"
 
     invoke-virtual {v0, v4, v3}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 

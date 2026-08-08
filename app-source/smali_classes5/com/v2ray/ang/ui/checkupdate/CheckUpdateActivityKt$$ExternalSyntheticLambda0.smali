@@ -36,7 +36,7 @@
 
     move-result p1
 
-    invoke-static {p0, p1}, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt;->$r8$lambda$gFeb1ufg0dyFolTUbwGJfytpFP4(Lcom/v2ray/ang/ui/checkupdate/CheckUpdateViewModel;Z)Lkotlin/Unit;
+    invoke-static {p0, p1}, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt;->$r8$lambda$sQok7QbJ-J2sosjzkxsSs-Am4bI(Lcom/v2ray/ang/ui/checkupdate/CheckUpdateViewModel;Z)Lkotlin/Unit;
 
     move-result-object p0
 

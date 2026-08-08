@@ -853,7 +853,7 @@
     move-result-object v4
 
     .line 245
-    const-string v5, "sqlite_"
+    const-string/jumbo v5, "sqlite_"
 
     const/4 v6, 0x2
 

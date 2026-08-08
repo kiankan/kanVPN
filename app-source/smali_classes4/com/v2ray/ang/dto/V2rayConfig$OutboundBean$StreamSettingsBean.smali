@@ -335,7 +335,7 @@
     if-eqz v1, :cond_0
 
     .line 111
-    const-string v1, "tcp"
+    const-string/jumbo v1, "tcp"
 
     goto :goto_0
 

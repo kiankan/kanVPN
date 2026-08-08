@@ -61,7 +61,7 @@
 .method static final invoke$lambda$0(Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/geometry/Offset;)Lkotlin/Unit;
     .locals 0
 
-    .line 241
+    .line 247
     invoke-interface {p0}, Lkotlin/jvm/functions/Function0;->invoke()Ljava/lang/Object;
 
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -85,7 +85,7 @@
         }
     .end annotation
 
-    .line 241
+    .line 247
     iget-object p0, p0, Lcom/v2ray/ang/ui/ScannerActivityKt$ScannerIdlePlaceholder$1$1;->$onStartClick:Lkotlin/jvm/functions/Function0;
 
     new-instance v4, Lcom/v2ray/ang/ui/ScannerActivityKt$ScannerIdlePlaceholder$1$1$$ExternalSyntheticLambda0;

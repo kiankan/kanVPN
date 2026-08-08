@@ -30,7 +30,7 @@
 
     move-result p0
 
-    invoke-static {p1, p0}, Lcom/v2ray/ang/ui/main/ComposableSingletons$MainTopBarKt;->lambda_478718616$lambda$0(Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
+    invoke-static {p1, p0}, Lcom/v2ray/ang/ui/main/ComposableSingletons$MainTopBarKt;->lambda__92135743$lambda$0(Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
 
     move-result-object p0
 

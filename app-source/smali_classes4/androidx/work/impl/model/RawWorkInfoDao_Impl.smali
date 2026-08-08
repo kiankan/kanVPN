@@ -542,7 +542,7 @@
     move-result v4
 
     .line 53
-    const-string v5, "state"
+    const-string/jumbo v5, "state"
 
     invoke-static {v3, v5}, Landroidx/room/util/SQLiteStatementUtil;->getColumnIndex(Landroidx/sqlite/SQLiteStatement;Ljava/lang/String;)I
 
@@ -632,7 +632,7 @@
     move/from16 p0, v2
 
     .line 67
-    const-string v2, "stop_reason"
+    const-string/jumbo v2, "stop_reason"
 
     invoke-static {v3, v2}, Landroidx/room/util/SQLiteStatementUtil;->getColumnIndex(Landroidx/sqlite/SQLiteStatement;Ljava/lang/String;)I
 
@@ -1615,7 +1615,7 @@
     move-result v4
 
     .line 538
-    const-string v5, "state"
+    const-string/jumbo v5, "state"
 
     invoke-static {v3, v5}, Landroidx/room/util/SQLiteStatementUtil;->getColumnIndex(Landroidx/sqlite/SQLiteStatement;Ljava/lang/String;)I
 
@@ -1705,7 +1705,7 @@
     move/from16 p0, v2
 
     .line 552
-    const-string v2, "stop_reason"
+    const-string/jumbo v2, "stop_reason"
 
     invoke-static {v3, v2}, Landroidx/room/util/SQLiteStatementUtil;->getColumnIndex(Landroidx/sqlite/SQLiteStatement;Ljava/lang/String;)I
 
@@ -2688,7 +2688,7 @@
     move-result v4
 
     .line 296
-    const-string v5, "state"
+    const-string/jumbo v5, "state"
 
     invoke-static {v3, v5}, Landroidx/room/util/SQLiteStatementUtil;->getColumnIndex(Landroidx/sqlite/SQLiteStatement;Ljava/lang/String;)I
 
@@ -2778,7 +2778,7 @@
     move/from16 p0, v2
 
     .line 310
-    const-string v2, "stop_reason"
+    const-string/jumbo v2, "stop_reason"
 
     invoke-static {v3, v2}, Landroidx/room/util/SQLiteStatementUtil;->getColumnIndex(Landroidx/sqlite/SQLiteStatement;Ljava/lang/String;)I
 

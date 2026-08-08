@@ -441,7 +441,7 @@
     move v4, v3
 
     :goto_0
-    const-string v5, "toLowerCase(...)"
+    const-string/jumbo v5, "toLowerCase(...)"
 
     if-ge v4, v2, :cond_1
 
@@ -482,7 +482,7 @@
 
     move-result-object v6
 
-    const-string v7, "substring(...)"
+    const-string/jumbo v7, "substring(...)"
 
     invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 

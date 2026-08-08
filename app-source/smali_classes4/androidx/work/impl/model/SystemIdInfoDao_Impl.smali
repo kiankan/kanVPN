@@ -149,7 +149,7 @@
     move-result p2
 
     .line 54
-    const-string p3, "system_id"
+    const-string/jumbo p3, "system_id"
 
     invoke-static {p0, p3}, Landroidx/room/util/SQLiteStatementUtil;->getColumnIndexOrThrow(Landroidx/sqlite/SQLiteStatement;Ljava/lang/String;)I
 
@@ -435,7 +435,7 @@
 .method public insertSystemIdInfo(Landroidx/work/impl/model/SystemIdInfo;)V
     .locals 2
 
-    const-string v0, "systemIdInfo"
+    const-string/jumbo v0, "systemIdInfo"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

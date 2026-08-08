@@ -14,7 +14,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nAppPickerActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AppPickerActivity.kt\ncom/v2ray/ang/ui/apppicker/AppPickerActivity$Companion\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,199:1\n1#2:200\n*E\n"
+    value = "SMAP\nAppPickerActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AppPickerActivity.kt\ncom/v2ray/ang/ui/apppicker/AppPickerActivity$Companion\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,204:1\n1#2:205\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -55,7 +55,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 43
+    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -76,7 +76,7 @@
 
     if-eqz p5, :cond_0
 
-    .line 49
+    .line 54
     invoke-static {}, Lkotlin/collections/CollectionsKt;->emptyList()Ljava/util/List;
 
     move-result-object p2
@@ -90,7 +90,7 @@
 
     const/4 p3, 0x0
 
-    .line 47
+    .line 52
     :cond_1
     invoke-virtual {p0, p1, p2, p3}, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity$Companion;->createIntent(Landroid/content/Context;Ljava/util/Collection;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -124,14 +124,14 @@
 
     invoke-static {p2, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 51
+    .line 56
     new-instance p0, Landroid/content/Intent;
 
     const-class v0, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity;
 
     invoke-direct {p0, p1, v0}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 52
+    .line 57
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1, p2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
@@ -142,7 +142,7 @@
 
     if-eqz p3, :cond_0
 
-    .line 53
+    .line 58
     const-string p1, "picker_title"
 
     invoke-virtual {p0, p1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
@@ -166,7 +166,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 57
+    .line 62
     const-string p0, "selected_packages"
 
     invoke-virtual {p1, p0}, Landroid/content/Intent;->getStringArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;

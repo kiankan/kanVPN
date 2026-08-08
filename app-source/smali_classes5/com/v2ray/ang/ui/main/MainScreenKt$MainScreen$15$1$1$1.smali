@@ -53,7 +53,7 @@
     f = "MainScreen.kt"
     i = {}
     l = {
-        0xc3
+        0xc2
     }
     m = "invokeSuspend"
     n = {}
@@ -171,7 +171,7 @@
 
     move-result-object v0
 
-    .line 195
+    .line 194
     iget v1, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$MainScreen$15$1$1$1;->label:I
 
     const/4 v2, 0x1

@@ -134,7 +134,7 @@
 .end method
 
 .method static final request$lambda$0(Lkotlin/jvm/functions/Function0;Lcom/v2ray/ang/helper/PermissionHelper;Lcom/v2ray/ang/enums/PermissionType;Z)Lkotlin/Unit;
-    .locals 0
+    .locals 1
 
     if-eqz p3, :cond_0
 
@@ -147,33 +147,34 @@
     :cond_0
     iget-object p0, p1, Lcom/v2ray/ang/helper/PermissionHelper;->activity:Landroidx/activity/ComponentActivity;
 
-    sget p3, Lcom/v2ray/ang/R$string;->toast_permission_denied:I
+    .line 40
+    sget p3, Lcom/v2ray/ang/R$string;->toast_permission_denied_for:I
 
-    invoke-virtual {p0, p3}, Landroidx/activity/ComponentActivity;->getString(I)Ljava/lang/String;
+    .line 41
+    iget-object v0, p1, Lcom/v2ray/ang/helper/PermissionHelper;->activity:Landroidx/activity/ComponentActivity;
 
-    move-result-object p0
+    invoke-virtual {p2}, Lcom/v2ray/ang/enums/PermissionType;->getLabelRes()I
 
-    invoke-virtual {p2}, Lcom/v2ray/ang/enums/PermissionType;->getLabel()Ljava/lang/String;
+    move-result p2
+
+    invoke-virtual {v0, p2}, Landroidx/activity/ComponentActivity;->getString(I)Ljava/lang/String;
 
     move-result-object p2
 
-    new-instance p3, Ljava/lang/StringBuilder;
+    filled-new-array {p2}, [Ljava/lang/Object;
 
-    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
+    move-result-object p2
 
-    invoke-virtual {p3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, "  "
-
-    invoke-virtual {p3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 39
+    invoke-virtual {p0, p3, p2}, Landroidx/activity/ComponentActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 40
+    const-string p2, "getString(...)"
+
+    invoke-static {p0, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 43
     iget-object p1, p1, Lcom/v2ray/ang/helper/PermissionHelper;->activity:Landroidx/activity/ComponentActivity;
 
     check-cast p1, Landroid/content/Context;
@@ -182,7 +183,7 @@
 
     invoke-static {p1, p0}, Lcom/v2ray/ang/extension/ToastExtKt;->toast(Landroid/content/Context;Ljava/lang/CharSequence;)V
 
-    .line 42
+    .line 45
     :goto_0
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
@@ -240,7 +241,7 @@
 
     iput-object v1, p0, Lcom/v2ray/ang/helper/PermissionHelper;->permissionCallback:Lkotlin/jvm/functions/Function1;
 
-    .line 43
+    .line 46
     iget-object p0, p0, Lcom/v2ray/ang/helper/PermissionHelper;->permissionLauncher:Landroidx/activity/result/ActivityResultLauncher;
 
     invoke-virtual {p0, v0}, Landroidx/activity/result/ActivityResultLauncher;->launch(Ljava/lang/Object;)V

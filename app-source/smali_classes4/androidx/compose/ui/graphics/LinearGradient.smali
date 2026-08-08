@@ -1053,7 +1053,7 @@
     .line 523
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v11, "start="
+    const-string/jumbo v11, "start="
 
     invoke-direct {v0, v11}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -1141,7 +1141,7 @@
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 529
-    const-string v0, "tileMode="
+    const-string/jumbo v0, "tileMode="
 
     .line 525
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;

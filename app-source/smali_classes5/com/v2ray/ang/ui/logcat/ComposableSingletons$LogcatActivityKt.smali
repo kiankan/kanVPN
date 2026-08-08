@@ -180,7 +180,7 @@
 .method static final lambda_1064666621$lambda$0(Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
     .locals 11
 
-    const-string v0, "C181@6979L42,182@7072L37,180@6945L190:LogcatActivity.kt#i4neol"
+    const-string v0, "C181@7008L42,182@7101L38,180@6974L191:LogcatActivity.kt#i4neol"
 
     invoke-static {p0, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -231,7 +231,7 @@
     move-result-object v3
 
     .line 183
-    sget p1, Lcom/v2ray/ang/R$string;->logcat_clear:I
+    sget p1, Lcom/v2ray/ang/R$string;->acc_clear_log:I
 
     invoke-static {p1, p0, v2}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
 
@@ -277,7 +277,7 @@
 .method static final lambda_1498630302$lambda$0(Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
     .locals 11
 
-    const-string v0, "C173@6594L41,174@6686L37,172@6560L189:LogcatActivity.kt#i4neol"
+    const-string v0, "C173@6622L41,174@6714L38,172@6588L190:LogcatActivity.kt#i4neol"
 
     invoke-static {p0, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -328,7 +328,7 @@
     move-result-object v3
 
     .line 175
-    sget p1, Lcom/v2ray/ang/R$string;->logcat_share:I
+    sget p1, Lcom/v2ray/ang/R$string;->acc_share_log:I
 
     invoke-static {p1, p0, v2}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
 
@@ -374,7 +374,7 @@
 .method static final lambda_1782923509$lambda$0(Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
     .locals 11
 
-    const-string v0, "C167@6301L35,168@6387L36,166@6267L182:LogcatActivity.kt#i4neol"
+    const-string v0, "C167@6328L35,168@6414L37,166@6294L183:LogcatActivity.kt#i4neol"
 
     invoke-static {p0, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -425,7 +425,7 @@
     move-result-object v3
 
     .line 169
-    sget p1, Lcom/v2ray/ang/R$string;->logcat_copy:I
+    sget p1, Lcom/v2ray/ang/R$string;->acc_copy_log:I
 
     invoke-static {p1, p0, v2}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
 
@@ -471,7 +471,7 @@
 .method static final lambda_276322705$lambda$0(Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
     .locals 11
 
-    const-string v0, "C193@7377L43,194@7463L45,192@7351L175:LogcatActivity.kt#i4neol"
+    const-string v0, "C193@7407L43,194@7493L36,192@7381L166:LogcatActivity.kt#i4neol"
 
     invoke-static {p0, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -522,7 +522,7 @@
     move-result-object v3
 
     .line 195
-    sget p1, Lcom/v2ray/ang/R$string;->pull_down_to_refresh:I
+    sget p1, Lcom/v2ray/ang/R$string;->acc_refresh:I
 
     invoke-static {p1, p0, v2}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
 
@@ -568,7 +568,7 @@
 .method static final lambda__381702918$lambda$0(Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
     .locals 11
 
-    const-string v0, "C160@5988L42,159@5950L173:LogcatActivity.kt#i4neol"
+    const-string v0, "C160@5988L42,161@6085L35,159@5950L200:LogcatActivity.kt#i4neol"
 
     invoke-static {p0, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -619,14 +619,15 @@
     move-result-object v3
 
     .line 162
-    sget p1, Landroidx/compose/ui/graphics/painter/Painter;->$stable:I
+    sget p1, Lcom/v2ray/ang/R$string;->acc_search:I
 
-    or-int/lit8 v9, p1, 0x30
+    invoke-static {p1, p0, v2}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
+
+    move-result-object v4
+
+    sget v9, Landroidx/compose/ui/graphics/painter/Painter;->$stable:I
 
     const/16 v10, 0xc
-
-    .line 160
-    const-string v4, "filter"
 
     const/4 v5, 0x0
 
@@ -634,6 +635,7 @@
 
     move-object v8, p0
 
+    .line 160
     invoke-static/range {v3 .. v10}, Landroidx/compose/material3/IconKt;->Icon-ww6aTOc(Landroidx/compose/ui/graphics/painter/Painter;Ljava/lang/String;Landroidx/compose/ui/Modifier;JLandroidx/compose/runtime/Composer;II)V
 
     invoke-static {}, Landroidx/compose/runtime/ComposerKt;->isTraceInProgress()Z

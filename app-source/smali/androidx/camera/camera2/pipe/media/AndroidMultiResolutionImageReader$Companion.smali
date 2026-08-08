@@ -318,7 +318,7 @@
     check-cast v2, Landroidx/camera/camera2/pipe/OutputStream;
 
     .line 348
-    invoke-static {}, Landroidx/activity/BackEventCompat$$ExternalSyntheticApiModelOutline0;->m$2()V
+    invoke-static {}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m$1()V
 
     invoke-interface {v2}, Landroidx/camera/camera2/pipe/OutputStream;->getSize()Landroid/util/Size;
 
@@ -340,7 +340,7 @@
 
     move-result-object v8
 
-    invoke-static {v4, v5, v8}, Landroidx/activity/BackEventCompat$$ExternalSyntheticApiModelOutline0;->m(IILjava/lang/String;)Landroid/hardware/camera2/params/MultiResolutionStreamInfo;
+    invoke-static {v4, v5, v8}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(IILjava/lang/String;)Landroid/hardware/camera2/params/MultiResolutionStreamInfo;
 
     move-result-object v4
 
@@ -420,7 +420,7 @@
     if-lt v4, v0, :cond_5
 
     .line 365
-    invoke-static {}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m()V
+    invoke-static {}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m$2()V
 
     check-cast v1, Ljava/util/Collection;
 
@@ -428,7 +428,7 @@
 
     move-result-wide v4
 
-    invoke-static {v1, p1, v3, v4, v5}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Ljava/util/Collection;IIJ)Landroid/hardware/camera2/MultiResolutionImageReader;
+    invoke-static {v1, p1, v3, v4, v5}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Ljava/util/Collection;IIJ)Landroid/hardware/camera2/MultiResolutionImageReader;
 
     move-result-object v1
 
@@ -436,17 +436,17 @@
 
     .line 367
     :cond_5
-    invoke-static {}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m()V
+    invoke-static {}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m$2()V
 
     check-cast v1, Ljava/util/Collection;
 
-    invoke-static {v1, p1, v3}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Ljava/util/Collection;II)Landroid/hardware/camera2/MultiResolutionImageReader;
+    invoke-static {v1, p1, v3}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Ljava/util/Collection;II)Landroid/hardware/camera2/MultiResolutionImageReader;
 
     move-result-object v1
 
     .line 371
     :goto_2
-    invoke-static {v1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/hardware/camera2/MultiResolutionImageReader;)Ljava/util/Collection;
+    invoke-static {v1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/hardware/camera2/MultiResolutionImageReader;)Ljava/util/Collection;
 
     move-result-object v0
 
@@ -600,7 +600,7 @@
     check-cast p0, Landroid/media/ImageReader$OnImageAvailableListener;
 
     .line 405
-    invoke-static {v1, p0, v10}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/hardware/camera2/MultiResolutionImageReader;Landroid/media/ImageReader$OnImageAvailableListener;Ljava/util/concurrent/Executor;)V
+    invoke-static {v1, p0, v10}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/hardware/camera2/MultiResolutionImageReader;Landroid/media/ImageReader$OnImageAvailableListener;Ljava/util/concurrent/Executor;)V
 
     .line 410
     check-cast v0, Landroidx/camera/camera2/pipe/media/ImageReaderWrapper;

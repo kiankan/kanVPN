@@ -3,40 +3,50 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Lkotlin/jvm/functions/Function1;
+.implements Lkotlin/jvm/functions/Function3;
 
 
 # instance fields
-.field public final synthetic f$0:Landroidx/compose/runtime/MutableState;
+.field public final synthetic f$0:Lkotlin/jvm/functions/Function0;
+
+.field public final synthetic f$1:Landroidx/compose/runtime/MutableState;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/compose/runtime/MutableState;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/MutableState;)V
     .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$$ExternalSyntheticLambda14;->f$0:Landroidx/compose/runtime/MutableState;
+    iput-object p1, p0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$$ExternalSyntheticLambda14;->f$0:Lkotlin/jvm/functions/Function0;
+
+    iput-object p2, p0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$$ExternalSyntheticLambda14;->f$1:Landroidx/compose/runtime/MutableState;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
     .line 0
-    iget-object p0, p0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$$ExternalSyntheticLambda14;->f$0:Landroidx/compose/runtime/MutableState;
+    iget-object v0, p0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$$ExternalSyntheticLambda14;->f$0:Lkotlin/jvm/functions/Function0;
 
-    check-cast p1, Ljava/lang/Boolean;
+    iget-object p0, p0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$$ExternalSyntheticLambda14;->f$1:Landroidx/compose/runtime/MutableState;
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    check-cast p1, Landroidx/compose/foundation/layout/RowScope;
 
-    move-result p1
+    check-cast p2, Landroidx/compose/runtime/Composer;
 
-    invoke-static {p0, p1}, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt;->$r8$lambda$5rOXWh-p4q1vmLTBc9RUaaXNtQQ(Landroidx/compose/runtime/MutableState;Z)Lkotlin/Unit;
+    check-cast p3, Ljava/lang/Integer;
+
+    invoke-virtual {p3}, Ljava/lang/Integer;->intValue()I
+
+    move-result p3
+
+    invoke-static {v0, p0, p1, p2, p3}, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt;->$r8$lambda$G559nqtSTzCzxWPu0-DZR94Siho(Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/MutableState;Landroidx/compose/foundation/layout/RowScope;Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
 
     move-result-object p0
 

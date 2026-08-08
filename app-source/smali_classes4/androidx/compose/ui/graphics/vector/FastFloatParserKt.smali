@@ -1716,7 +1716,7 @@
     const/16 v4, -0x7e
 
     .line 213
-    const-string v5, "substring(...)"
+    const-string/jumbo v5, "substring(...)"
 
     if-gt v4, v8, :cond_32
 

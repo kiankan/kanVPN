@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nNotificationManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NotificationManager.kt\ncom/v2ray/ang/handler/NotificationManager\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,290:1\n2068#2,2:291\n*S KotlinDebug\n*F\n+ 1 NotificationManager.kt\ncom/v2ray/ang/handler/NotificationManager\n*L\n242#1:291,2\n*E\n"
+    value = "SMAP\nNotificationManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NotificationManager.kt\ncom/v2ray/ang/handler/NotificationManager\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,291:1\n2068#2,2:292\n*S KotlinDebug\n*F\n+ 1 NotificationManager.kt\ncom/v2ray/ang/handler/NotificationManager\n*L\n242#1:292,2\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -313,7 +313,7 @@
 .method private final getService()Landroid/app/Service;
     .locals 0
 
-    .line 287
+    .line 288
     sget-object p0, Lcom/v2ray/ang/core/CoreServiceManager;->INSTANCE:Lcom/v2ray/ang/core/CoreServiceManager;
 
     invoke-virtual {p0}, Lcom/v2ray/ang/core/CoreServiceManager;->getServiceControl()Ljava/lang/ref/SoftReference;
@@ -455,7 +455,7 @@
 .end method
 
 .method private final updateSpeedNotificationOnce(Z)Z
-    .locals 30
+    .locals 33
 
     .line 226
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -517,7 +517,7 @@
 
     check-cast v4, Ljava/lang/Iterable;
 
-    .line 291
+    .line 292
     invoke-interface {v4}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -535,37 +535,37 @@
 
     move-result v15
 
-    const-wide/16 v16, 0x0
-
-    if-eqz v15, :cond_6
+    if-eqz v15, :cond_5
 
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v6
-
-    check-cast v6, Lcom/v2ray/ang/dto/OutboundTrafficStat;
-
-    .line 244
-    invoke-virtual {v6}, Lcom/v2ray/ang/dto/OutboundTrafficStat;->getTag()Ljava/lang/String;
-
     move-result-object v15
 
-    const-string v5, "direct"
+    check-cast v15, Lcom/v2ray/ang/dto/OutboundTrafficStat;
 
-    invoke-static {v15, v5}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const-wide/16 v16, 0x0
+
+    .line 244
+    invoke-virtual {v15}, Lcom/v2ray/ang/dto/OutboundTrafficStat;->getTag()Ljava/lang/String;
+
+    move-result-object v5
+
+    const-string v6, "direct"
+
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v5
 
-    const-string v15, "downlink"
+    const-string v6, "downlink"
 
-    move-wide/from16 v19, v0
+    move-wide/from16 v18, v0
 
     const-string/jumbo v0, "uplink"
 
-    if-eqz v5, :cond_3
+    if-eqz v5, :cond_2
 
     .line 245
-    invoke-virtual {v6}, Lcom/v2ray/ang/dto/OutboundTrafficStat;->getDirection()Ljava/lang/String;
+    invoke-virtual {v15}, Lcom/v2ray/ang/dto/OutboundTrafficStat;->getDirection()Ljava/lang/String;
 
     move-result-object v1
 
@@ -574,31 +574,25 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v6}, Lcom/v2ray/ang/dto/OutboundTrafficStat;->getValue()J
+    invoke-virtual {v15}, Lcom/v2ray/ang/dto/OutboundTrafficStat;->getValue()J
 
     move-result-wide v0
 
     add-long/2addr v11, v0
 
-    :cond_1
-    :goto_1
-    move-wide/from16 v21, v2
-
-    move-object/from16 v23, v4
-
-    goto :goto_2
+    goto :goto_1
 
     .line 247
-    :cond_2
-    invoke-static {v1, v15}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :cond_1
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_4
 
-    invoke-virtual {v6}, Lcom/v2ray/ang/dto/OutboundTrafficStat;->getValue()J
+    invoke-virtual {v15}, Lcom/v2ray/ang/dto/OutboundTrafficStat;->getValue()J
 
     move-result-wide v0
 
@@ -606,150 +600,135 @@
 
     goto :goto_1
 
-    .line 251
-    :cond_3
-    invoke-virtual {v6}, Lcom/v2ray/ang/dto/OutboundTrafficStat;->getTag()Ljava/lang/String;
+    .line 252
+    :cond_2
+    invoke-virtual {v15}, Lcom/v2ray/ang/dto/OutboundTrafficStat;->getTag()Ljava/lang/String;
 
     move-result-object v1
 
-    const/4 v5, 0x2
+    const-string v5, "block"
 
-    move-wide/from16 v21, v2
-
-    const/4 v2, 0x0
-
-    const-string v3, "proxy"
-
-    move-object/from16 v23, v4
-
-    const/4 v4, 0x0
-
-    invoke-static {v1, v3, v4, v5, v2}, Lkotlin/text/StringsKt;->startsWith$default(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
+    invoke-static {v1, v5}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_5
+    if-nez v1, :cond_4
 
-    .line 252
-    invoke-virtual {v6}, Lcom/v2ray/ang/dto/OutboundTrafficStat;->getDirection()Ljava/lang/String;
+    .line 253
+    invoke-virtual {v15}, Lcom/v2ray/ang/dto/OutboundTrafficStat;->getDirection()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 253
+    .line 254
     invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_3
 
-    invoke-virtual {v6}, Lcom/v2ray/ang/dto/OutboundTrafficStat;->getValue()J
+    invoke-virtual {v15}, Lcom/v2ray/ang/dto/OutboundTrafficStat;->getValue()J
 
     move-result-wide v0
 
     add-long/2addr v7, v0
 
-    goto :goto_2
+    goto :goto_1
 
-    .line 254
-    :cond_4
-    invoke-static {v1, v15}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .line 255
+    :cond_3
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_4
 
-    invoke-virtual {v6}, Lcom/v2ray/ang/dto/OutboundTrafficStat;->getValue()J
+    invoke-virtual {v15}, Lcom/v2ray/ang/dto/OutboundTrafficStat;->getValue()J
 
     move-result-wide v0
 
     add-long/2addr v9, v0
 
-    :cond_5
-    :goto_2
-    move-wide/from16 v0, v19
-
-    move-wide/from16 v2, v21
-
-    move-object/from16 v4, v23
+    :cond_4
+    :goto_1
+    move-wide/from16 v0, v18
 
     goto :goto_0
 
-    :cond_6
-    move-wide/from16 v19, v0
+    :cond_5
+    move-wide/from16 v18, v0
 
-    move-wide/from16 v21, v2
+    const-wide/16 v16, 0x0
 
-    const/4 v4, 0x0
+    add-long v22, v7, v9
 
-    add-long v2, v7, v9
+    add-long v24, v11, v13
 
-    move/from16 v18, v4
-
-    add-long v4, v11, v13
-
-    add-long v0, v2, v4
+    add-long v0, v22, v24
 
     cmp-long v0, v0, v16
 
-    if-nez v0, :cond_7
+    if-nez v0, :cond_6
 
     const/4 v0, 0x1
 
-    move/from16 v18, v0
+    goto :goto_2
 
-    :cond_7
-    if-eqz v18, :cond_8
+    :cond_6
+    const/4 v0, 0x0
 
-    if-nez p1, :cond_9
+    :goto_2
+    if-eqz v0, :cond_7
 
-    .line 264
-    :cond_8
-    new-instance v24, Ljava/lang/StringBuilder;
-
-    invoke-direct/range {v24 .. v24}, Ljava/lang/StringBuilder;-><init>()V
-
-    long-to-double v0, v7
-
-    div-double v26, v0, v21
-
-    long-to-double v0, v9
-
-    div-double v28, v0, v21
+    if-nez p1, :cond_8
 
     .line 265
-    const-string v25, "proxy"
+    :cond_7
+    new-instance v27, Ljava/lang/StringBuilder;
 
-    move-object/from16 v23, p0
+    invoke-direct/range {v27 .. v27}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct/range {v23 .. v29}, Lcom/v2ray/ang/handler/NotificationManager;->appendSpeedString(Ljava/lang/StringBuilder;Ljava/lang/String;DD)V
+    long-to-double v4, v7
 
-    long-to-double v0, v11
+    div-double v29, v4, v2
 
-    div-double v26, v0, v21
+    long-to-double v4, v9
 
-    long-to-double v0, v13
+    div-double v31, v4, v2
 
-    div-double v28, v0, v21
+    .line 266
+    const-string v28, "proxy"
 
-    .line 271
-    const-string v25, "direct"
+    move-object/from16 v26, p0
 
-    invoke-direct/range {v23 .. v29}, Lcom/v2ray/ang/handler/NotificationManager;->appendSpeedString(Ljava/lang/StringBuilder;Ljava/lang/String;DD)V
+    invoke-direct/range {v26 .. v32}, Lcom/v2ray/ang/handler/NotificationManager;->appendSpeedString(Ljava/lang/StringBuilder;Ljava/lang/String;DD)V
 
-    .line 276
-    invoke-virtual/range {v24 .. v24}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    long-to-double v4, v11
 
-    move-result-object v1
+    div-double v29, v4, v2
 
-    move-object/from16 v0, p0
+    long-to-double v4, v13
 
-    invoke-direct/range {v0 .. v5}, Lcom/v2ray/ang/handler/NotificationManager;->updateNotification(Ljava/lang/String;JJ)V
+    div-double v31, v4, v2
 
-    .line 278
-    :cond_9
-    sput-wide v19, Lcom/v2ray/ang/handler/NotificationManager;->lastQueryTime:J
+    .line 272
+    const-string v28, "direct"
 
-    return v18
+    invoke-direct/range {v26 .. v32}, Lcom/v2ray/ang/handler/NotificationManager;->appendSpeedString(Ljava/lang/StringBuilder;Ljava/lang/String;DD)V
+
+    .line 277
+    invoke-virtual/range {v27 .. v27}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v21
+
+    move-object/from16 v20, p0
+
+    invoke-direct/range {v20 .. v25}, Lcom/v2ray/ang/handler/NotificationManager;->updateNotification(Ljava/lang/String;JJ)V
+
+    .line 279
+    :cond_8
+    sput-wide v18, Lcom/v2ray/ang/handler/NotificationManager;->lastQueryTime:J
+
+    return v0
 .end method
 
 

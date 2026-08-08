@@ -1050,7 +1050,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Ljava/lang/Object;)Landroid/hardware/camera2/CameraExtensionCharacteristics;
+    invoke-static {v1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Ljava/lang/Object;)Landroid/hardware/camera2/CameraExtensionCharacteristics;
 
     move-result-object v1
     :try_end_0
@@ -1198,7 +1198,7 @@
     if-lt p0, v0, :cond_0
 
     .line 289
-    invoke-static {}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m$3()Landroid/hardware/camera2/CameraCharacteristics$Key;
+    invoke-static {}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m$3()Landroid/hardware/camera2/CameraCharacteristics$Key;
 
     move-result-object p0
 

@@ -70,7 +70,7 @@
 .method public final parse(Ljava/lang/String;)Lcom/v2ray/ang/dto/entities/ProfileItem;
     .locals 3
 
-    const-string v0, "str"
+    const-string/jumbo v0, "str"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -151,7 +151,7 @@
     invoke-virtual {v0, p1}, Lcom/v2ray/ang/dto/entities/ProfileItem;->setPassword(Ljava/lang/String;)V
 
     .line 28
-    const-string p1, "tls"
+    const-string/jumbo p1, "tls"
 
     invoke-virtual {v0, p1}, Lcom/v2ray/ang/dto/entities/ProfileItem;->setSecurity(Ljava/lang/String;)V
 
@@ -292,7 +292,7 @@
 
     check-cast v2, Ljava/util/Map;
 
-    const-string v3, "sni"
+    const-string/jumbo v3, "sni"
 
     invoke-interface {v2, v3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

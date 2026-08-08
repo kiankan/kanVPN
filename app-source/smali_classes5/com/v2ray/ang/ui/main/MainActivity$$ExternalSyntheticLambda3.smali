@@ -3,17 +3,15 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Lkotlin/jvm/functions/Function2;
+.implements Lkotlin/jvm/functions/Function1;
 
 
 # instance fields
 .field public final synthetic f$0:Lcom/v2ray/ang/ui/main/MainActivity;
 
-.field public final synthetic f$1:I
-
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/v2ray/ang/ui/main/MainActivity;I)V
+.method public synthetic constructor <init>(Lcom/v2ray/ang/ui/main/MainActivity;)V
     .locals 0
 
     .line 0
@@ -21,30 +19,20 @@
 
     iput-object p1, p0, Lcom/v2ray/ang/ui/main/MainActivity$$ExternalSyntheticLambda3;->f$0:Lcom/v2ray/ang/ui/main/MainActivity;
 
-    iput p2, p0, Lcom/v2ray/ang/ui/main/MainActivity$$ExternalSyntheticLambda3;->f$1:I
-
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainActivity$$ExternalSyntheticLambda3;->f$0:Lcom/v2ray/ang/ui/main/MainActivity;
+    iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainActivity$$ExternalSyntheticLambda3;->f$0:Lcom/v2ray/ang/ui/main/MainActivity;
 
-    iget p0, p0, Lcom/v2ray/ang/ui/main/MainActivity$$ExternalSyntheticLambda3;->f$1:I
+    check-cast p1, Lcom/v2ray/ang/ui/main/MainAction;
 
-    check-cast p1, Landroidx/compose/runtime/Composer;
-
-    check-cast p2, Ljava/lang/Integer;
-
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
-
-    move-result p2
-
-    invoke-static {v0, p0, p1, p2}, Lcom/v2ray/ang/ui/main/MainActivity;->ScreenContent$lambda$2(Lcom/v2ray/ang/ui/main/MainActivity;ILandroidx/compose/runtime/Composer;I)Lkotlin/Unit;
+    invoke-static {p0, p1}, Lcom/v2ray/ang/ui/main/MainActivity;->$r8$lambda$aW4gIHQdOdjAisDPkcHImzu6K7c(Lcom/v2ray/ang/ui/main/MainActivity;Lcom/v2ray/ang/ui/main/MainAction;)Lkotlin/Unit;
 
     move-result-object p0
 

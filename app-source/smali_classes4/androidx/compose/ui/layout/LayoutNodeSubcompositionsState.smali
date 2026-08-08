@@ -3532,7 +3532,7 @@
     if-nez v1, :cond_2
 
     .line 592
-    const-string v1, "subcompose can only be used inside the measure or layout blocks"
+    const-string/jumbo v1, "subcompose can only be used inside the measure or layout blocks"
 
     .line 1582
     invoke-static {v1}, Landroidx/compose/ui/internal/InlineClassHelperKt;->throwIllegalStateException(Ljava/lang/String;)V

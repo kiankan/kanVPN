@@ -79,7 +79,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
-    .line 287
+    .line 293
     invoke-virtual {p0}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$RoutingSettingScreen$2$1$1$3$1$1$1$1;->invoke()V
 
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -90,7 +90,7 @@
 .method public final invoke()V
     .locals 1
 
-    .line 287
+    .line 293
     iget-object v0, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$RoutingSettingScreen$2$1$1$3$1$1$1$1;->$onEditRule:Lkotlin/jvm/functions/Function1;
 
     iget p0, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$RoutingSettingScreen$2$1$1$3$1$1$1$1;->$index:I

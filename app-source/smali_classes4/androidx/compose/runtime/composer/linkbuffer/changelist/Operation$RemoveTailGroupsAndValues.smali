@@ -251,7 +251,7 @@
     if-ne p1, v0, :cond_1
 
     .line 364
-    const-string p0, "tailSlotCount"
+    const-string/jumbo p0, "tailSlotCount"
 
     return-object p0
 

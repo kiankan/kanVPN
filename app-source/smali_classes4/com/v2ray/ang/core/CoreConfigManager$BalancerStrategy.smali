@@ -73,16 +73,16 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1257
+    .line 1289
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1258
+    .line 1290
     iput-object p1, p0, Lcom/v2ray/ang/core/CoreConfigManager$BalancerStrategy;->balancer:Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;
 
-    .line 1259
+    .line 1291
     iput-object p2, p0, Lcom/v2ray/ang/core/CoreConfigManager$BalancerStrategy;->observatory:Lcom/v2ray/ang/dto/V2rayConfig$ObservatoryObject;
 
-    .line 1260
+    .line 1292
     iput-object p3, p0, Lcom/v2ray/ang/core/CoreConfigManager$BalancerStrategy;->burstObservatory:Lcom/v2ray/ang/dto/V2rayConfig$BurstObservatoryObject;
 
     return-void
@@ -106,7 +106,7 @@
 
     move-object p3, v0
 
-    .line 1257
+    .line 1289
     :cond_1
     invoke-direct {p0, p1, p2, p3}, Lcom/v2ray/ang/core/CoreConfigManager$BalancerStrategy;-><init>(Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;Lcom/v2ray/ang/dto/V2rayConfig$ObservatoryObject;Lcom/v2ray/ang/dto/V2rayConfig$BurstObservatoryObject;)V
 
@@ -250,7 +250,7 @@
 .method public final getBalancer()Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;
     .locals 0
 
-    .line 1258
+    .line 1290
     iget-object p0, p0, Lcom/v2ray/ang/core/CoreConfigManager$BalancerStrategy;->balancer:Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;
 
     return-object p0
@@ -259,7 +259,7 @@
 .method public final getBurstObservatory()Lcom/v2ray/ang/dto/V2rayConfig$BurstObservatoryObject;
     .locals 0
 
-    .line 1260
+    .line 1292
     iget-object p0, p0, Lcom/v2ray/ang/core/CoreConfigManager$BalancerStrategy;->burstObservatory:Lcom/v2ray/ang/dto/V2rayConfig$BurstObservatoryObject;
 
     return-object p0
@@ -268,7 +268,7 @@
 .method public final getObservatory()Lcom/v2ray/ang/dto/V2rayConfig$ObservatoryObject;
     .locals 0
 
-    .line 1259
+    .line 1291
     iget-object p0, p0, Lcom/v2ray/ang/core/CoreConfigManager$BalancerStrategy;->observatory:Lcom/v2ray/ang/dto/V2rayConfig$ObservatoryObject;
 
     return-object p0

@@ -1,6 +1,6 @@
 import re, sys, pathlib
 
-root = pathlib.Path(r"D:\claude\kanVPN_v232\decompiled")
+root = pathlib.Path(r"D:\claude\kanVPN_v233\decompiled")
 OLD = "com.v2ray.ang"
 NEW = "com.kanvpn.client"
 

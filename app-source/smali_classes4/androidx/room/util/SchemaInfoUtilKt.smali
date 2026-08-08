@@ -311,7 +311,7 @@
 
     move-result-object p0
 
-    const-string v0, "substring(...)"
+    const-string/jumbo v0, "substring(...)"
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -938,7 +938,7 @@
     move-result v2
 
     .line 138
-    const-string v3, "to"
+    const-string/jumbo v3, "to"
 
     invoke-static {p0, v3}, Landroidx/room/util/SQLiteStatementUtil;->columnIndexOf(Landroidx/sqlite/SQLiteStatement;Ljava/lang/String;)I
 
@@ -1071,7 +1071,7 @@
     move-result v3
 
     .line 76
-    const-string v4, "table"
+    const-string/jumbo v4, "table"
 
     invoke-static {v0, v4}, Landroidx/room/util/SQLiteStatementUtil;->columnIndexOf(Landroidx/sqlite/SQLiteStatement;Ljava/lang/String;)I
 
@@ -1314,7 +1314,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "tableName"
+    const-string/jumbo v0, "tableName"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -1433,7 +1433,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "tableName"
+    const-string/jumbo v0, "tableName"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -1473,7 +1473,7 @@
     if-eqz v0, :cond_0
 
     .line 278
-    const-string v0, "sql"
+    const-string/jumbo v0, "sql"
 
     invoke-static {p1, v0}, Landroidx/room/util/SQLiteStatementUtil;->columnIndexOf(Landroidx/sqlite/SQLiteStatement;Ljava/lang/String;)I
 
@@ -2064,7 +2064,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "tableName"
+    const-string/jumbo v0, "tableName"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

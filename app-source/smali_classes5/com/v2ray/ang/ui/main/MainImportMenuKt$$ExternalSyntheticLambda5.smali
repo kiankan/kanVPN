@@ -3,34 +3,36 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Lkotlin/jvm/functions/Function0;
-
-
-# instance fields
-.field public final synthetic f$0:Lkotlin/jvm/functions/Function1;
+.implements Lkotlin/jvm/functions/Function3;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lkotlin/jvm/functions/Function1;)V
+.method public synthetic constructor <init>()V
     .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/v2ray/ang/ui/main/MainImportMenuKt$$ExternalSyntheticLambda5;->f$0:Lkotlin/jvm/functions/Function1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
     .line 0
-    iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainImportMenuKt$$ExternalSyntheticLambda5;->f$0:Lkotlin/jvm/functions/Function1;
+    check-cast p1, Lcom/v2ray/ang/ui/main/ServerMenuAction;
 
-    invoke-static {p0}, Lcom/v2ray/ang/ui/main/MainImportMenuKt;->$r8$lambda$eT0wZFN81-D0KQ4zbzreLBvDaqg(Lkotlin/jvm/functions/Function1;)Lkotlin/Unit;
+    check-cast p2, Landroidx/compose/runtime/Composer;
+
+    check-cast p3, Ljava/lang/Integer;
+
+    invoke-virtual {p3}, Ljava/lang/Integer;->intValue()I
+
+    move-result p0
+
+    invoke-static {p1, p2, p0}, Lcom/v2ray/ang/ui/main/MainImportMenuKt;->ShareMethodDialog$lambda$0(Lcom/v2ray/ang/ui/main/ServerMenuAction;Landroidx/compose/runtime/Composer;I)Ljava/lang/String;
 
     move-result-object p0
 

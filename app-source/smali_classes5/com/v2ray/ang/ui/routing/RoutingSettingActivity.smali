@@ -5,12 +5,12 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nRoutingSettingActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 RoutingSettingActivity.kt\ncom/v2ray/ang/ui/routing/RoutingSettingActivity\n+ 2 ActivityViewModelLazy.kt\nandroidx/activity/ActivityViewModelLazyKt\n+ 3 Composer.kt\nandroidx/compose/runtime/ComposerKt\n*L\n1#1,388:1\n70#2,11:389\n1047#3,6:400\n1047#3,6:406\n1047#3,6:412\n1047#3,6:418\n1047#3,6:424\n1047#3,6:430\n1047#3,6:436\n1047#3,6:442\n*S KotlinDebug\n*F\n+ 1 RoutingSettingActivity.kt\ncom/v2ray/ang/ui/routing/RoutingSettingActivity\n*L\n73#1:389,11\n86#1:400,6\n87#1:406,6\n88#1:412,6\n91#1:418,6\n95#1:424,6\n96#1:430,6\n97#1:436,6\n98#1:442,6\n*E\n"
+    value = "SMAP\nRoutingSettingActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 RoutingSettingActivity.kt\ncom/v2ray/ang/ui/routing/RoutingSettingActivity\n+ 2 ActivityViewModelLazy.kt\nandroidx/activity/ActivityViewModelLazyKt\n+ 3 Composer.kt\nandroidx/compose/runtime/ComposerKt\n*L\n1#1,395:1\n70#2,11:396\n1047#3,6:407\n1047#3,6:413\n1047#3,6:419\n1047#3,6:425\n1047#3,6:431\n1047#3,6:437\n1047#3,6:443\n1047#3,6:449\n*S KotlinDebug\n*F\n+ 1 RoutingSettingActivity.kt\ncom/v2ray/ang/ui/routing/RoutingSettingActivity\n*L\n89#1:396,11\n102#1:407,6\n103#1:413,6\n104#1:419,6\n107#1:425,6\n111#1:431,6\n112#1:437,6\n113#1:443,6\n114#1:449,6\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000F\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0010\u0008\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\u0008\u0007\u0018\u00002\u00020\u0001B\u0007\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J\u0012\u0010\r\u001a\u00020\u000e2\u0008\u0010\u000f\u001a\u0004\u0018\u00010\u0010H\u0014J\u001f\u0010\u0011\u001a\u00020\u000eH\u0015b\u0002\u0008\u0013b\u000c\u0008\u0014\u0012\u0008\u0008\u0015\u0012\u0004\u0008\u0008(\u0016\u00a2\u0006\u0002\u0010\u0012J\u0008\u0010\u0017\u001a\u00020\u000eH\u0014J\u0008\u0010\u0018\u001a\u00020\u000cH\u0002J\u0010\u0010\u0019\u001a\u00020\u000e2\u0006\u0010\u001a\u001a\u00020\u001bH\u0002J\u0008\u0010\u001c\u001a\u00020\u000eH\u0002J\u0008\u0010\u001d\u001a\u00020\u000eH\u0002J\u0008\u0010\u001e\u001a\u00020\u000eH\u0002R\u001b\u0010\u0004\u001a\u00020\u00058BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u0008\u0010\t\u001a\u0004\u0008\u0006\u0010\u0007R\u0014\u0010\n\u001a\u0008\u0012\u0004\u0012\u00020\u000c0\u000bX\u0082\u0004\u00a2\u0006\u0002\n\u0000\u00ca\u0001\u000c\u0008 \u0012\u0008\u0008!\u0012\u0004\u0008\u0003\u0010\u0000\u00a8\u0006\u001f"
+        "\u0000F\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\u0008\u0007\u0018\u00002\u00020\u0001B\u0007\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J\u0012\u0010\r\u001a\u00020\u000e2\u0008\u0010\u000f\u001a\u0004\u0018\u00010\u0010H\u0014J\u001f\u0010\u0011\u001a\u00020\u000eH\u0015b\u0002\u0008\u0013b\u000c\u0008\u0014\u0012\u0008\u0008\u0015\u0012\u0004\u0008\u0008(\u0016\u00a2\u0006\u0002\u0010\u0012J\u0008\u0010\u0017\u001a\u00020\u000eH\u0014J\u0008\u0010\u0018\u001a\u00020\u000cH\u0002J\u0010\u0010\u0019\u001a\u00020\u000e2\u0006\u0010\u001a\u001a\u00020\u001bH\u0002J\u0008\u0010\u001c\u001a\u00020\u000eH\u0002J\u0008\u0010\u001d\u001a\u00020\u000eH\u0002J\u0008\u0010\u001e\u001a\u00020\u000eH\u0002R\u001b\u0010\u0004\u001a\u00020\u00058BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u0008\u0010\t\u001a\u0004\u0008\u0006\u0010\u0007R\u0014\u0010\n\u001a\u0008\u0012\u0004\u0012\u00020\u000c0\u000bX\u0082\u0004\u00a2\u0006\u0002\n\u0000\u00ca\u0001\u000c\u0008 \u0012\u0008\u0008!\u0012\u0004\u0008\u0003\u0010\u0000\u00a8\u0006\u001f"
     }
     d2 = {
         "Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;",
@@ -39,8 +39,8 @@
         "onResume",
         "getDomainStrategy",
         "importPredefined",
-        "index",
-        "",
+        "type",
+        "Lcom/v2ray/ang/enums/RoutingType;",
         "importFromClipboard",
         "importQRcode",
         "export2Clipboard",
@@ -97,6 +97,16 @@
     return-object p0
 .end method
 
+.method public static synthetic $r8$lambda$9SBNZA1EO_peyAqAR2B6-oh6Y8A(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;Lcom/v2ray/ang/enums/RoutingType;)Lkotlin/Unit;
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;->ScreenContent$lambda$4$0(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;Lcom/v2ray/ang/enums/RoutingType;)Lkotlin/Unit;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method public static synthetic $r8$lambda$BpXIcoDUx-ZAiZfnVJKyDiz7VYE(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;)Lkotlin/Unit;
     .locals 0
 
@@ -121,16 +131,6 @@
     .locals 0
 
     invoke-static {p0}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;->ScreenContent$lambda$1$0(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;)Lkotlin/Unit;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic $r8$lambda$Wnh4oizAdGp7bUvbjDTdm4BXxK8(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;I)Lkotlin/Unit;
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;->ScreenContent$lambda$4$0(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;I)Lkotlin/Unit;
 
     move-result-object p0
 
@@ -170,22 +170,22 @@
 .method public constructor <init>()V
     .locals 7
 
-    .line 72
+    .line 88
     invoke-direct {p0}, Lcom/v2ray/ang/ui/base/HelperBaseComponentActivity;-><init>()V
 
-    .line 73
+    .line 89
     move-object v0, p0
 
     check-cast v0, Landroidx/activity/ComponentActivity;
 
-    .line 393
+    .line 400
     new-instance v1, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$special$$inlined$viewModels$default$1;
 
     invoke-direct {v1, v0}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$special$$inlined$viewModels$default$1;-><init>(Landroidx/activity/ComponentActivity;)V
 
     check-cast v1, Lkotlin/jvm/functions/Function0;
 
-    .line 395
+    .line 402
     new-instance v2, Landroidx/lifecycle/ViewModelLazy;
 
     const-class v3, Lcom/v2ray/ang/ui/routing/RoutingSettingsViewModel;
@@ -194,14 +194,14 @@
 
     move-result-object v3
 
-    .line 397
+    .line 404
     new-instance v4, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$special$$inlined$viewModels$default$2;
 
     invoke-direct {v4, v0}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$special$$inlined$viewModels$default$2;-><init>(Landroidx/activity/ComponentActivity;)V
 
     check-cast v4, Lkotlin/jvm/functions/Function0;
 
-    .line 399
+    .line 406
     new-instance v5, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$special$$inlined$viewModels$default$3;
 
     const/4 v6, 0x0
@@ -210,15 +210,15 @@
 
     check-cast v5, Lkotlin/jvm/functions/Function0;
 
-    .line 395
+    .line 402
     invoke-direct {v2, v3, v4, v1, v5}, Landroidx/lifecycle/ViewModelLazy;-><init>(Lkotlin/reflect/KClass;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;)V
 
     check-cast v2, Lkotlin/Lazy;
 
-    .line 73
+    .line 89
     iput-object v2, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;->viewModel$delegate:Lkotlin/Lazy;
 
-    .line 74
+    .line 90
     const-string v0, ""
 
     invoke-static {v0}, Lkotlinx/coroutines/flow/StateFlowKt;->MutableStateFlow(Ljava/lang/Object;)Lkotlinx/coroutines/flow/MutableStateFlow;
@@ -233,7 +233,7 @@
 .method private static final ScreenContent$lambda$0$0(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;)Lkotlin/Unit;
     .locals 0
 
-    .line 86
+    .line 102
     invoke-virtual {p0}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;->finish()V
 
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -244,7 +244,7 @@
 .method private static final ScreenContent$lambda$1$0(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;)Lkotlin/Unit;
     .locals 3
 
-    .line 87
+    .line 103
     new-instance v0, Landroid/content/Intent;
 
     move-object v1, p0
@@ -265,7 +265,7 @@
 .method private static final ScreenContent$lambda$2$0(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;I)Lkotlin/Unit;
     .locals 3
 
-    .line 89
+    .line 105
     new-instance v0, Landroid/content/Intent;
 
     move-object v1, p0
@@ -284,7 +284,7 @@
 
     invoke-virtual {p0, p1}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 90
+    .line 106
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p0
@@ -297,29 +297,33 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 92
+    .line 108
     sget-object v0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v1, "pref_routing_domain_strategy"
 
     invoke-virtual {v0, v1, p1}, Lcom/v2ray/ang/handler/MmkvManager;->encodeSettings(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 93
+    .line 109
     iget-object p0, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;->domainStrategyState:Lkotlinx/coroutines/flow/MutableStateFlow;
 
     invoke-interface {p0, p1}, Lkotlinx/coroutines/flow/MutableStateFlow;->setValue(Ljava/lang/Object;)V
 
-    .line 94
+    .line 110
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p0
 .end method
 
-.method private static final ScreenContent$lambda$4$0(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;I)Lkotlin/Unit;
-    .locals 0
+.method private static final ScreenContent$lambda$4$0(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;Lcom/v2ray/ang/enums/RoutingType;)Lkotlin/Unit;
+    .locals 1
 
-    .line 95
-    invoke-direct {p0, p1}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;->importPredefined(I)V
+    const-string v0, "type"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 111
+    invoke-direct {p0, p1}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;->importPredefined(Lcom/v2ray/ang/enums/RoutingType;)V
 
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
@@ -329,7 +333,7 @@
 .method private static final ScreenContent$lambda$5$0(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;)Lkotlin/Unit;
     .locals 0
 
-    .line 96
+    .line 112
     invoke-direct {p0}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;->importFromClipboard()V
 
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -340,7 +344,7 @@
 .method private static final ScreenContent$lambda$6$0(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;)Lkotlin/Unit;
     .locals 0
 
-    .line 97
+    .line 113
     invoke-direct {p0}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;->importQRcode()V
 
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -351,7 +355,7 @@
 .method private static final ScreenContent$lambda$7$0(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;)Lkotlin/Unit;
     .locals 0
 
-    .line 98
+    .line 114
     invoke-direct {p0}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;->export2Clipboard()V
 
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -378,7 +382,7 @@
 .method public static final synthetic access$getViewModel(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;)Lcom/v2ray/ang/ui/routing/RoutingSettingsViewModel;
     .locals 0
 
-    .line 72
+    .line 88
     invoke-direct {p0}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;->getViewModel()Lcom/v2ray/ang/ui/routing/RoutingSettingsViewModel;
 
     move-result-object p0
@@ -389,14 +393,14 @@
 .method private final export2Clipboard()V
     .locals 3
 
-    .line 165
+    .line 181
     sget-object v0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     invoke-virtual {v0}, Lcom/v2ray/ang/handler/MmkvManager;->decodeRoutingRulesets()Ljava/util/List;
 
     move-result-object v0
 
-    .line 166
+    .line 182
     move-object v1, v0
 
     check-cast v1, Ljava/util/Collection;
@@ -411,7 +415,7 @@
 
     goto :goto_0
 
-    .line 169
+    .line 185
     :cond_0
     sget-object v1, Lcom/v2ray/ang/util/Utils;->INSTANCE:Lcom/v2ray/ang/util/Utils;
 
@@ -425,14 +429,14 @@
 
     invoke-virtual {v1, p0, v0}, Lcom/v2ray/ang/util/Utils;->setClipboard(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 170
+    .line 186
     sget v0, Lcom/v2ray/ang/R$string;->toast_success:I
 
     invoke-static {p0, v0}, Lcom/v2ray/ang/extension/ToastExtKt;->toastSuccess(Landroid/content/Context;I)V
 
     return-void
 
-    .line 167
+    .line 183
     :cond_1
     :goto_0
     check-cast p0, Landroid/content/Context;
@@ -447,7 +451,7 @@
 .method private final getDomainStrategy()Ljava/lang/String;
     .locals 2
 
-    .line 108
+    .line 124
     invoke-virtual {p0}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -462,7 +466,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 109
+    .line 125
     sget-object v0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v1, "pref_routing_domain_strategy"
@@ -492,7 +496,7 @@
 .method private final getViewModel()Lcom/v2ray/ang/ui/routing/RoutingSettingsViewModel;
     .locals 0
 
-    .line 73
+    .line 89
     iget-object p0, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;->viewModel$delegate:Lkotlin/Lazy;
 
     invoke-interface {p0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
@@ -507,7 +511,7 @@
 .method private final importFromClipboard()V
     .locals 8
 
-    .line 128
+    .line 144
     :try_start_0
     sget-object v0, Lcom/v2ray/ang/util/Utils;->INSTANCE:Lcom/v2ray/ang/util/Utils;
 
@@ -521,7 +525,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 133
+    .line 149
     move-object v1, p0
 
     check-cast v1, Landroidx/lifecycle/LifecycleOwner;
@@ -560,7 +564,7 @@
 
     return-void
 
-    .line 130
+    .line 146
     :catch_0
     check-cast p0, Landroid/content/Context;
 
@@ -571,10 +575,10 @@
     return-void
 .end method
 
-.method private final importPredefined(I)V
+.method private final importPredefined(Lcom/v2ray/ang/enums/RoutingType;)V
     .locals 7
 
-    .line 113
+    .line 129
     move-object v0, p0
 
     check-cast v0, Landroidx/lifecycle/LifecycleOwner;
@@ -599,7 +603,7 @@
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, p0, p1, v3}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$importPredefined$1;-><init>(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p0, p1, v3}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$importPredefined$1;-><init>(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;Lcom/v2ray/ang/enums/RoutingType;Lkotlin/coroutines/Continuation;)V
 
     move-object v4, v0
 
@@ -617,7 +621,7 @@
 .method private final importQRcode()V
     .locals 1
 
-    .line 147
+    .line 163
     new-instance v0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$$ExternalSyntheticLambda9;
 
     invoke-direct {v0, p0}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$$ExternalSyntheticLambda9;-><init>(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;)V
@@ -632,7 +636,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 149
+    .line 165
     move-object v0, p0
 
     check-cast v0, Landroidx/lifecycle/LifecycleOwner;
@@ -669,7 +673,7 @@
 
     invoke-static/range {v1 .. v6}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lkotlinx/coroutines/Job;
 
-    .line 161
+    .line 177
     :cond_0
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
@@ -689,12 +693,12 @@
 
     move-object/from16 v3, p1
 
-    .line 82
+    .line 98
     invoke-interface {v3, v2}, Landroidx/compose/runtime/Composer;->startRestartGroup(I)Landroidx/compose/runtime/Composer;
 
     move-result-object v13
 
-    const-string v3, "C(ScreenContent)85@3627L12,86@3665L64,87@3756L135,90@3932L164,94@4131L36,95@4201L25,96@4257L18,97@4309L22,82@3489L852:RoutingSettingActivity.kt#ni0ky5"
+    const-string v3, "C(ScreenContent)101@4508L12,102@4546L64,103@4637L135,106@4813L164,110@5012L34,111@5080L25,112@5136L18,113@5188L22,98@4370L850:RoutingSettingActivity.kt#ni0ky5"
 
     invoke-static {v13, v3}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -768,24 +772,24 @@
 
     const/4 v4, -0x1
 
-    const-string v6, "com.v2ray.ang.ui.routing.RoutingSettingActivity.ScreenContent (RoutingSettingActivity.kt:81)"
+    const-string v6, "com.v2ray.ang.ui.routing.RoutingSettingActivity.ScreenContent (RoutingSettingActivity.kt:97)"
 
     invoke-static {v2, v3, v4, v6}, Landroidx/compose/runtime/ComposerKt;->traceEventStart(IIILjava/lang/String;)V
 
     :cond_4
     move v2, v3
 
-    .line 84
+    .line 100
     invoke-direct {v0}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;->getViewModel()Lcom/v2ray/ang/ui/routing/RoutingSettingsViewModel;
 
     move-result-object v3
 
-    .line 85
+    .line 101
     iget-object v4, v0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;->domainStrategyState:Lkotlinx/coroutines/flow/MutableStateFlow;
 
     const v6, 0x2dd8b664
 
-    .line 86
+    .line 102
     const-string v9, "CC(remember):RoutingSettingActivity.kt#9igjgp"
 
     invoke-static {v13, v6, v9}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -815,7 +819,7 @@
     :goto_4
     const/4 v10, 0x1
 
-    .line 400
+    .line 407
     :goto_5
     invoke-interface {v13}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
@@ -823,7 +827,7 @@
 
     if-nez v10, :cond_7
 
-    .line 401
+    .line 408
     sget-object v10, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v10}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -832,16 +836,16 @@
 
     if-ne v11, v10, :cond_8
 
-    .line 86
+    .line 102
     :cond_7
     new-instance v11, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$$ExternalSyntheticLambda0;
 
     invoke-direct {v11, v0}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$$ExternalSyntheticLambda0;-><init>(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;)V
 
-    .line 403
+    .line 410
     invoke-interface {v13, v11}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 86
+    .line 102
     :cond_8
     check-cast v11, Lkotlin/jvm/functions/Function0;
 
@@ -849,7 +853,7 @@
 
     const v10, 0x2dd8bb58
 
-    .line 87
+    .line 103
     invoke-static {v13, v10, v9}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     if-eq v6, v5, :cond_a
@@ -875,7 +879,7 @@
     :goto_6
     const/4 v10, 0x1
 
-    .line 406
+    .line 413
     :goto_7
     invoke-interface {v13}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
@@ -883,7 +887,7 @@
 
     if-nez v10, :cond_b
 
-    .line 407
+    .line 414
     sget-object v10, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v10}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -892,16 +896,16 @@
 
     if-ne v12, v10, :cond_c
 
-    .line 87
+    .line 103
     :cond_b
     new-instance v12, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$$ExternalSyntheticLambda1;
 
     invoke-direct {v12, v0}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$$ExternalSyntheticLambda1;-><init>(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;)V
 
-    .line 409
+    .line 416
     invoke-interface {v13, v12}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 87
+    .line 103
     :cond_c
     check-cast v12, Lkotlin/jvm/functions/Function0;
 
@@ -909,7 +913,7 @@
 
     const v10, 0x2dd8c6ff
 
-    .line 88
+    .line 104
     invoke-static {v13, v10, v9}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     if-eq v6, v5, :cond_e
@@ -935,7 +939,7 @@
     :goto_8
     const/4 v10, 0x1
 
-    .line 412
+    .line 419
     :goto_9
     invoke-interface {v13}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
@@ -943,7 +947,7 @@
 
     if-nez v10, :cond_f
 
-    .line 413
+    .line 420
     sget-object v10, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v10}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -952,16 +956,16 @@
 
     if-ne v14, v10, :cond_10
 
-    .line 88
+    .line 104
     :cond_f
     new-instance v14, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$$ExternalSyntheticLambda2;
 
     invoke-direct {v14, v0}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$$ExternalSyntheticLambda2;-><init>(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;)V
 
-    .line 415
+    .line 422
     invoke-interface {v13, v14}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 88
+    .line 104
     :cond_10
     check-cast v14, Lkotlin/jvm/functions/Function1;
 
@@ -969,7 +973,7 @@
 
     const v10, 0x2dd8dd1c
 
-    .line 91
+    .line 107
     invoke-static {v13, v10, v9}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     if-eq v6, v5, :cond_12
@@ -995,7 +999,7 @@
     :goto_a
     const/4 v10, 0x1
 
-    .line 418
+    .line 425
     :goto_b
     invoke-interface {v13}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
@@ -1003,7 +1007,7 @@
 
     if-nez v10, :cond_13
 
-    .line 419
+    .line 426
     sget-object v10, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v10}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -1012,24 +1016,24 @@
 
     if-ne v15, v10, :cond_14
 
-    .line 91
+    .line 107
     :cond_13
     new-instance v15, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$$ExternalSyntheticLambda3;
 
     invoke-direct {v15, v0}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$$ExternalSyntheticLambda3;-><init>(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;)V
 
-    .line 421
+    .line 428
     invoke-interface {v13, v15}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 91
+    .line 107
     :cond_14
     check-cast v15, Lkotlin/jvm/functions/Function1;
 
     invoke-static {v13}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerEnd(Landroidx/compose/runtime/Composer;)V
 
-    const v10, 0x2dd8f57c
+    const v10, 0x2dd8f57a
 
-    .line 95
+    .line 111
     invoke-static {v13, v10, v9}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     if-eq v6, v5, :cond_16
@@ -1055,7 +1059,7 @@
     :goto_c
     const/4 v10, 0x1
 
-    .line 424
+    .line 431
     :goto_d
     invoke-interface {v13}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
@@ -1063,7 +1067,7 @@
 
     if-nez v10, :cond_17
 
-    .line 425
+    .line 432
     sget-object v10, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v10}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -1072,24 +1076,24 @@
 
     if-ne v7, v10, :cond_18
 
-    .line 95
+    .line 111
     :cond_17
     new-instance v7, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$$ExternalSyntheticLambda4;
 
     invoke-direct {v7, v0}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$$ExternalSyntheticLambda4;-><init>(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;)V
 
-    .line 427
+    .line 434
     invoke-interface {v13, v7}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 95
+    .line 111
     :cond_18
     check-cast v7, Lkotlin/jvm/functions/Function1;
 
     invoke-static {v13}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerEnd(Landroidx/compose/runtime/Composer;)V
 
-    const v10, 0x2dd8fe31
+    const v10, 0x2dd8fdf1
 
-    .line 96
+    .line 112
     invoke-static {v13, v10, v9}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     if-eq v6, v5, :cond_1a
@@ -1115,7 +1119,7 @@
     :goto_e
     const/4 v10, 0x1
 
-    .line 430
+    .line 437
     :goto_f
     invoke-interface {v13}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
@@ -1123,7 +1127,7 @@
 
     if-nez v10, :cond_1b
 
-    .line 431
+    .line 438
     sget-object v10, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v10}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -1132,16 +1136,16 @@
 
     if-ne v8, v10, :cond_1c
 
-    .line 96
+    .line 112
     :cond_1b
     new-instance v8, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$$ExternalSyntheticLambda5;
 
     invoke-direct {v8, v0}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$$ExternalSyntheticLambda5;-><init>(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;)V
 
-    .line 433
+    .line 440
     invoke-interface {v13, v8}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 96
+    .line 112
     :cond_1c
     move-object v10, v8
 
@@ -1149,9 +1153,9 @@
 
     invoke-static {v13}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerEnd(Landroidx/compose/runtime/Composer;)V
 
-    const v8, 0x2dd9052a
+    const v8, 0x2dd904ea
 
-    .line 97
+    .line 113
     invoke-static {v13, v8, v9}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     if-eq v6, v5, :cond_1e
@@ -1177,7 +1181,7 @@
     :goto_10
     const/4 v8, 0x1
 
-    .line 436
+    .line 443
     :goto_11
     invoke-interface {v13}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
@@ -1185,7 +1189,7 @@
 
     if-nez v8, :cond_1f
 
-    .line 437
+    .line 444
     sget-object v8, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v8}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -1194,24 +1198,24 @@
 
     if-ne v5, v8, :cond_20
 
-    .line 97
+    .line 113
     :cond_1f
     new-instance v5, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$$ExternalSyntheticLambda6;
 
     invoke-direct {v5, v0}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$$ExternalSyntheticLambda6;-><init>(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;)V
 
-    .line 439
+    .line 446
     invoke-interface {v13, v5}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 97
+    .line 113
     :cond_20
     check-cast v5, Lkotlin/jvm/functions/Function0;
 
     invoke-static {v13}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerEnd(Landroidx/compose/runtime/Composer;)V
 
-    const v8, 0x2dd90bae
+    const v8, 0x2dd90b6e
 
-    .line 98
+    .line 114
     invoke-static {v13, v8, v9}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     const/4 v8, 0x4
@@ -1239,7 +1243,7 @@
     :goto_12
     const/16 v16, 0x1
 
-    .line 442
+    .line 449
     :goto_13
     invoke-interface {v13}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
@@ -1247,7 +1251,7 @@
 
     if-nez v16, :cond_23
 
-    .line 443
+    .line 450
     sget-object v6, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v6}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -1256,16 +1260,16 @@
 
     if-ne v2, v6, :cond_24
 
-    .line 98
+    .line 114
     :cond_23
     new-instance v2, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$$ExternalSyntheticLambda7;
 
     invoke-direct {v2, v0}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$$ExternalSyntheticLambda7;-><init>(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;)V
 
-    .line 445
+    .line 452
     invoke-interface {v13, v2}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 98
+    .line 114
     :cond_24
     check-cast v2, Lkotlin/jvm/functions/Function0;
 
@@ -1289,7 +1293,7 @@
 
     move-object v12, v2
 
-    .line 83
+    .line 99
     invoke-static/range {v3 .. v14}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt;->RoutingSettingScreen(Lcom/v2ray/ang/ui/routing/RoutingSettingsViewModel;Lkotlinx/coroutines/flow/MutableStateFlow;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;I)V
 
     invoke-static {}, Landroidx/compose/runtime/ComposerKt;->isTraceInProgress()Z
@@ -1302,11 +1306,11 @@
 
     goto :goto_14
 
-    .line 82
+    .line 98
     :cond_25
     invoke-interface {v13}, Landroidx/compose/runtime/Composer;->skipToGroupEnd()V
 
-    .line 100
+    .line 116
     :cond_26
     :goto_14
     invoke-interface {v13}, Landroidx/compose/runtime/Composer;->endRestartGroup()Landroidx/compose/runtime/ScopeUpdateScope;
@@ -1328,10 +1332,10 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 0
 
-    .line 77
+    .line 93
     invoke-super {p0, p1}, Lcom/v2ray/ang/ui/base/HelperBaseComponentActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 78
+    .line 94
     iget-object p1, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;->domainStrategyState:Lkotlinx/coroutines/flow/MutableStateFlow;
 
     invoke-direct {p0}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;->getDomainStrategy()Ljava/lang/String;
@@ -1346,10 +1350,10 @@
 .method protected onResume()V
     .locals 0
 
-    .line 103
+    .line 119
     invoke-super {p0}, Lcom/v2ray/ang/ui/base/HelperBaseComponentActivity;->onResume()V
 
-    .line 104
+    .line 120
     invoke-direct {p0}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;->getViewModel()Lcom/v2ray/ang/ui/routing/RoutingSettingsViewModel;
 
     move-result-object p0

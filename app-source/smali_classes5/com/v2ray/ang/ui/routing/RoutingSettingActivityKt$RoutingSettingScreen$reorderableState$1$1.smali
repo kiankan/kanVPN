@@ -33,7 +33,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nRoutingSettingActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 RoutingSettingActivity.kt\ncom/v2ray/ang/ui/routing/RoutingSettingActivityKt$RoutingSettingScreen$reorderableState$1$1\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,388:1\n363#2,7:389\n363#2,7:396\n*S KotlinDebug\n*F\n+ 1 RoutingSettingActivity.kt\ncom/v2ray/ang/ui/routing/RoutingSettingActivityKt$RoutingSettingScreen$reorderableState$1$1\n*L\n200#1:389,7\n201#1:396,7\n*E\n"
+    value = "SMAP\nRoutingSettingActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 RoutingSettingActivity.kt\ncom/v2ray/ang/ui/routing/RoutingSettingActivityKt$RoutingSettingScreen$reorderableState$1$1\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,395:1\n363#2,7:396\n363#2,7:403\n*S KotlinDebug\n*F\n+ 1 RoutingSettingActivity.kt\ncom/v2ray/ang/ui/routing/RoutingSettingActivityKt$RoutingSettingScreen$reorderableState$1$1\n*L\n213#1:396,7\n214#1:403,7\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -191,21 +191,21 @@
 
     invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
 
-    .line 198
+    .line 211
     iget v2, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$RoutingSettingScreen$reorderableState$1$1;->label:I
 
     if-nez v2, :cond_4
 
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 200
+    .line 213
     iget-object p1, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$RoutingSettingScreen$reorderableState$1$1;->$rulesets$delegate:Landroidx/compose/runtime/State;
 
     invoke-static {p1}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt;->access$RoutingSettingScreen$lambda$0(Landroidx/compose/runtime/State;)Ljava/util/List;
 
     move-result-object p1
 
-    .line 390
+    .line 397
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -227,10 +227,10 @@
 
     move-result-object v4
 
-    .line 391
+    .line 398
     check-cast v4, Lcom/v2ray/ang/dto/entities/RulesetItem;
 
-    .line 200
+    .line 213
     invoke-virtual {v4}, Lcom/v2ray/ang/dto/entities/RulesetItem;->getId()Ljava/lang/String;
 
     move-result-object v4
@@ -255,7 +255,7 @@
     :cond_1
     move v3, v5
 
-    .line 201
+    .line 214
     :goto_1
     iget-object p1, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$RoutingSettingScreen$reorderableState$1$1;->$rulesets$delegate:Landroidx/compose/runtime/State;
 
@@ -263,7 +263,7 @@
 
     move-result-object p1
 
-    .line 397
+    .line 404
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -279,10 +279,10 @@
 
     move-result-object v0
 
-    .line 398
+    .line 405
     check-cast v0, Lcom/v2ray/ang/dto/entities/RulesetItem;
 
-    .line 201
+    .line 214
     invoke-virtual {v0}, Lcom/v2ray/ang/dto/entities/RulesetItem;->getId()Ljava/lang/String;
 
     move-result-object v0
@@ -306,19 +306,19 @@
 
     goto :goto_2
 
-    .line 202
+    .line 215
     :cond_3
     :goto_3
     iget-object p0, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$RoutingSettingScreen$reorderableState$1$1;->$viewModel:Lcom/v2ray/ang/ui/routing/RoutingSettingsViewModel;
 
     invoke-virtual {p0, v3, v5}, Lcom/v2ray/ang/ui/routing/RoutingSettingsViewModel;->move(II)V
 
-    .line 203
+    .line 216
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p0
 
-    .line 198
+    .line 211
     :cond_4
     new-instance p0, Ljava/lang/IllegalStateException;
 

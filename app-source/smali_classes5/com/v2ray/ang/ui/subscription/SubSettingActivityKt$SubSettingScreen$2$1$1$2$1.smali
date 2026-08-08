@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt;->SubSettingScreen(Lcom/v2ray/ang/ui/subscription/SubscriptionsViewModel;ZLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Ljava/util/List;Landroidx/compose/runtime/Composer;I)V
+    value = Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt;->SubSettingScreen(Lcom/v2ray/ang/ui/subscription/SubscriptionsViewModel;ZLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -145,7 +145,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 156
+    .line 158
     check-cast p1, Lsh/calvin/reorderable/ReorderableCollectionItemScope;
 
     check-cast p2, Ljava/lang/Boolean;
@@ -184,7 +184,7 @@
 
     invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v4, "CN(isDragging)159@6429L4657,156@6300L4786,239@11107L13:SubSettingActivity.kt#7ufd1m"
+    const-string v4, "CN(isDragging)161@6416L4751,158@6287L4880,241@11188L13:SubSettingActivity.kt#7ufd1m"
 
     invoke-static {v3, v4}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -269,13 +269,13 @@
 
     const/4 v5, -0x1
 
-    const-string v6, "com.v2ray.ang.ui.subscription.SubSettingScreen.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous> (SubSettingActivity.kt:156)"
+    const-string v6, "com.v2ray.ang.ui.subscription.SubSettingScreen.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous> (SubSettingActivity.kt:158)"
 
-    const v9, 0x6c4b557c
+    const v9, 0x5929df14
 
     invoke-static {v9, v4, v5, v6}, Landroidx/compose/runtime/ComposerKt;->traceEventStart(IIILjava/lang/String;)V
 
-    .line 160
+    .line 162
     :cond_5
     new-instance v10, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$SubSettingScreen$2$1$1$2$1$1;
 
@@ -301,7 +301,7 @@
 
     const/16 v0, 0x36
 
-    const v5, -0x6a370e93
+    const v5, -0x52bb2f7d
 
     invoke-static {v5, v8, v10, v3, v0}, Landroidx/compose/runtime/internal/ComposableLambdaKt;->rememberComposableLambda(IZLjava/lang/Object;Landroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/internal/ComposableLambda;
 
@@ -317,10 +317,10 @@
 
     or-int/2addr v4, v5
 
-    .line 157
+    .line 159
     invoke-static {v1, v2, v0, v3, v4}, Lcom/v2ray/ang/ui/compose/ComponentsKt;->ReorderableListItem(Lsh/calvin/reorderable/ReorderableCollectionItemScope;ZLkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;I)V
 
-    .line 240
+    .line 242
     invoke-static {v3, v7}, Lcom/v2ray/ang/ui/compose/ComponentsKt;->ItemDivider(Landroidx/compose/runtime/Composer;I)V
 
     invoke-static {}, Landroidx/compose/runtime/ComposerKt;->isTraceInProgress()Z
@@ -334,7 +334,7 @@
     :cond_6
     return-void
 
-    .line 156
+    .line 158
     :cond_7
     invoke-interface {v3}, Landroidx/compose/runtime/Composer;->skipToGroupEnd()V
 

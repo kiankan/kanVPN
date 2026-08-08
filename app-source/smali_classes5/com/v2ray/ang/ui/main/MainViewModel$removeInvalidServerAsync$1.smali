@@ -53,12 +53,12 @@
     f = "MainViewModel.kt"
     i = {}
     l = {
-        0x202
+        0x200
     }
     m = "invokeSuspend"
     n = {}
     nl = {
-        0x211
+        0x20f
     }
     s = {}
     v = 0x2
@@ -171,7 +171,7 @@
 
     move-result-object v0
 
-    .line 513
+    .line 511
     iget v1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$removeInvalidServerAsync$1;->label:I
 
     const/4 v2, 0x1
@@ -196,7 +196,7 @@
     :cond_1
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 514
+    .line 512
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$removeInvalidServerAsync$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {p1}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getIoDispatcher$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lkotlinx/coroutines/CoroutineDispatcher;
@@ -229,7 +229,7 @@
 
     return-object v0
 
-    .line 529
+    .line 527
     :cond_2
     :goto_0
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;

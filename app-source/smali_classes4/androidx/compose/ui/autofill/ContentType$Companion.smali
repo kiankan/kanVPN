@@ -339,7 +339,7 @@
     sput-object v0, Landroidx/compose/ui/autofill/ContentType$Companion;->AddressLocality:Landroidx/compose/ui/autofill/ContentType;
 
     .line 76
-    const-string v0, "streetAddress"
+    const-string/jumbo v0, "streetAddress"
 
     invoke-static {v0}, Landroidx/compose/ui/autofill/ContentType_androidKt;->ContentType(Ljava/lang/String;)Landroidx/compose/ui/autofill/ContentType;
 
@@ -510,7 +510,7 @@
     sput-object v0, Landroidx/compose/ui/autofill/ContentType$Companion;->BirthDateYear:Landroidx/compose/ui/autofill/ContentType;
 
     .line 97
-    const-string v0, "smsOTPCode"
+    const-string/jumbo v0, "smsOTPCode"
 
     invoke-static {v0}, Landroidx/compose/ui/autofill/ContentType_androidKt;->ContentType(Ljava/lang/String;)Landroidx/compose/ui/autofill/ContentType;
 

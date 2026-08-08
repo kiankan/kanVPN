@@ -76,7 +76,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
-    .line 164
+    .line 163
     invoke-virtual {p0}, Lcom/v2ray/ang/ui/shortcut/TaskerActivityKt$TaskerScreen$2$1$2$1$1$1$1;->invoke()V
 
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -87,7 +87,7 @@
 .method public final invoke()V
     .locals 1
 
-    .line 164
+    .line 163
     iget-object v0, p0, Lcom/v2ray/ang/ui/shortcut/TaskerActivityKt$TaskerScreen$2$1$2$1$1$1$1;->$selectedPosition:Landroidx/compose/runtime/MutableState;
 
     iget p0, p0, Lcom/v2ray/ang/ui/shortcut/TaskerActivityKt$TaskerScreen$2$1$2$1$1$1$1;->$index:I

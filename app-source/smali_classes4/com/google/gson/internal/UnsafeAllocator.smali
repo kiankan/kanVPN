@@ -92,14 +92,14 @@
     const/4 v3, 0x1
 
     :try_start_0
-    const-string v4, "sun.misc.Unsafe"
+    const-string/jumbo v4, "sun.misc.Unsafe"
 
     invoke-static {v4}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v4
 
     .line 55
-    const-string v5, "theUnsafe"
+    const-string/jumbo v5, "theUnsafe"
 
     invoke-virtual {v4, v5}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 

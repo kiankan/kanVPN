@@ -152,7 +152,7 @@
 
     const-string v21, "s"
 
-    const-string v22, "t"
+    const-string/jumbo v22, "t"
 
     const-string/jumbo v23, "u"
 

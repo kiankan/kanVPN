@@ -7,17 +7,21 @@
 
 
 # instance fields
-.field public final synthetic f$0:Landroidx/compose/runtime/MutableState;
+.field public final synthetic f$0:Lkotlin/jvm/functions/Function0;
+
+.field public final synthetic f$1:Landroidx/compose/runtime/MutableState;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/compose/runtime/MutableState;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/MutableState;)V
     .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$$ExternalSyntheticLambda6;->f$0:Landroidx/compose/runtime/MutableState;
+    iput-object p1, p0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$$ExternalSyntheticLambda6;->f$0:Lkotlin/jvm/functions/Function0;
+
+    iput-object p2, p0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$$ExternalSyntheticLambda6;->f$1:Landroidx/compose/runtime/MutableState;
 
     return-void
 .end method
@@ -25,12 +29,14 @@
 
 # virtual methods
 .method public final invoke()Ljava/lang/Object;
-    .locals 0
+    .locals 1
 
     .line 0
-    iget-object p0, p0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$$ExternalSyntheticLambda6;->f$0:Landroidx/compose/runtime/MutableState;
+    iget-object v0, p0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$$ExternalSyntheticLambda6;->f$0:Lkotlin/jvm/functions/Function0;
 
-    invoke-static {p0}, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt;->$r8$lambda$umVosdDr5Hq5M9Z_EpP6QJVWT2A(Landroidx/compose/runtime/MutableState;)Lkotlin/Unit;
+    iget-object p0, p0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$$ExternalSyntheticLambda6;->f$1:Landroidx/compose/runtime/MutableState;
+
+    invoke-static {v0, p0}, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt;->$r8$lambda$WSEi45KmPHYSdSwMf3W07EIh2dU(Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/MutableState;)Lkotlin/Unit;
 
     move-result-object p0
 

@@ -157,7 +157,7 @@
     .locals 0
 
     .line 359
-    invoke-static {p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/view/textclassifier/TextClassification;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/view/textclassifier/TextClassification;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
 
@@ -175,7 +175,7 @@
 
     .line 360
     :cond_0
-    invoke-static {p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/view/textclassifier/TextClassification;)Landroid/content/Intent;
+    invoke-static {p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/view/textclassifier/TextClassification;)Landroid/content/Intent;
 
     move-result-object p0
 

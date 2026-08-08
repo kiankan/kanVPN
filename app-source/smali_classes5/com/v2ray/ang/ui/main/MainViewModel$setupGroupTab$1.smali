@@ -31,7 +31,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nMainViewModel.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$setupGroupTab$1\n+ 2 Mutex.kt\nkotlinx/coroutines/sync/MutexKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 4 StateFlow.kt\nkotlinx/coroutines/flow/StateFlowKt\n*L\n1#1,784:1\n117#2,10:785\n117#2,10:809\n1739#3:795\n1814#3,3:796\n1814#3,3:799\n2068#3,2:807\n363#3,7:819\n230#4,5:802\n*S KotlinDebug\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$setupGroupTab$1\n*L\n317#1:785,10\n337#1:809,10\n319#1:795\n319#1:796,3\n323#1:799,3\n334#1:807,2\n349#1:819,7\n327#1:802,5\n*E\n"
+    value = "SMAP\nMainViewModel.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$setupGroupTab$1\n+ 2 Mutex.kt\nkotlinx/coroutines/sync/MutexKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 4 StateFlow.kt\nkotlinx/coroutines/flow/StateFlowKt\n*L\n1#1,782:1\n117#2,10:783\n117#2,10:807\n1739#3:793\n1814#3,3:794\n1814#3,3:797\n2068#3,2:805\n363#3,7:817\n230#4,5:800\n*S KotlinDebug\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$setupGroupTab$1\n*L\n315#1:783,10\n335#1:807,10\n317#1:793\n317#1:794,3\n321#1:797,3\n332#1:805,2\n347#1:817,7\n325#1:800,5\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -66,9 +66,9 @@
         0x2
     }
     l = {
-        0x315,
-        0x32d,
-        0x155
+        0x313,
+        0x32b,
+        0x153
     }
     m = "invokeSuspend"
     n = {
@@ -82,9 +82,9 @@
         "validIds"
     }
     nl = {
-        0x316,
-        0x32e,
-        0x156
+        0x314,
+        0x32c,
+        0x154
     }
     s = {
         "L$0",
@@ -146,7 +146,7 @@
 .method static final invokeSuspend$lambda$3(Ljava/util/HashSet;Ljava/lang/String;)Z
     .locals 0
 
-    .line 324
+    .line 322
     invoke-virtual {p0, p1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
     move-result p0
@@ -159,7 +159,7 @@
 .method static final invokeSuspend$lambda$4(Ljava/util/HashSet;Ljava/lang/String;)Z
     .locals 0
 
-    .line 325
+    .line 323
     invoke-virtual {p0, p1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
     move-result p0
@@ -252,7 +252,7 @@
 
     move-result-object v2
 
-    .line 314
+    .line 312
     iget v3, v1, Lcom/v2ray/ang/ui/main/MainViewModel$setupGroupTab$1;->label:I
 
     const/4 v4, 0x3
@@ -356,13 +356,13 @@
     :cond_3
     invoke-static/range {p1 .. p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 316
+    .line 314
     :try_start_3
     iget-boolean v3, v1, Lcom/v2ray/ang/ui/main/MainViewModel$setupGroupTab$1;->$forceRefresh:Z
 
     if-eqz v3, :cond_5
 
-    .line 317
+    .line 315
     iget-object v3, v1, Lcom/v2ray/ang/ui/main/MainViewModel$setupGroupTab$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {v3}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getCacheMutex$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lkotlinx/coroutines/sync/Mutex;
@@ -371,7 +371,7 @@
 
     iget-object v8, v1, Lcom/v2ray/ang/ui/main/MainViewModel$setupGroupTab$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
-    .line 789
+    .line 787
     move-object v9, v1
 
     check-cast v9, Lkotlin/coroutines/Continuation;
@@ -399,7 +399,7 @@
 
     move-object v3, v8
 
-    .line 317
+    .line 315
     :goto_0
     :try_start_4
     invoke-static {v3}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getGroupDataCache$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Ljava/util/Map;
@@ -412,7 +412,7 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 793
+    .line 791
     :try_start_5
     invoke-interface {v6, v7}, Lkotlinx/coroutines/sync/Mutex;->unlock(Ljava/lang/Object;)V
 
@@ -425,7 +425,7 @@
 
     throw v0
 
-    .line 319
+    .line 317
     :cond_5
     :goto_1
     iget-object v3, v1, Lcom/v2ray/ang/ui/main/MainViewModel$setupGroupTab$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
@@ -440,7 +440,7 @@
 
     check-cast v3, Ljava/lang/Iterable;
 
-    .line 795
+    .line 793
     new-instance v6, Ljava/util/ArrayList;
 
     const/16 v8, 0xa
@@ -453,7 +453,7 @@
 
     check-cast v6, Ljava/util/Collection;
 
-    .line 796
+    .line 794
     invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -469,10 +469,10 @@
 
     move-result-object v8
 
-    .line 797
+    .line 795
     check-cast v8, Lcom/v2ray/ang/dto/entities/SubscriptionCache;
 
-    .line 320
+    .line 318
     new-instance v9, Lcom/v2ray/ang/dto/GroupMapItem;
 
     invoke-virtual {v8}, Lcom/v2ray/ang/dto/entities/SubscriptionCache;->getGuid()Ljava/lang/String;
@@ -489,25 +489,25 @@
 
     invoke-direct {v9, v10, v8}, Lcom/v2ray/ang/dto/GroupMapItem;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 797
+    .line 795
     invoke-interface {v6, v9}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
 
-    .line 798
+    .line 796
     :cond_6
     move-object v9, v6
 
     check-cast v9, Ljava/util/List;
 
-    .line 322
+    .line 320
     iget-object v3, v1, Lcom/v2ray/ang/ui/main/MainViewModel$setupGroupTab$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {v3, v9}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$resolveSelectedGroup(Lcom/v2ray/ang/ui/main/MainViewModel;Ljava/util/List;)Ljava/lang/String;
 
     move-result-object v10
 
-    .line 323
+    .line 321
     move-object v3, v9
 
     check-cast v3, Ljava/lang/Iterable;
@@ -518,7 +518,7 @@
 
     check-cast v6, Ljava/util/Collection;
 
-    .line 799
+    .line 797
     invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -534,24 +534,24 @@
 
     move-result-object v8
 
-    .line 800
+    .line 798
     check-cast v8, Lcom/v2ray/ang/dto/GroupMapItem;
 
-    .line 323
+    .line 321
     invoke-virtual {v8}, Lcom/v2ray/ang/dto/GroupMapItem;->getId()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 800
+    .line 798
     invoke-interface {v6, v8}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_3
 
-    .line 323
+    .line 321
     :cond_7
     check-cast v6, Ljava/util/HashSet;
 
-    .line 324
+    .line 322
     iget-object v3, v1, Lcom/v2ray/ang/ui/main/MainViewModel$setupGroupTab$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {v3}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getGroupPageFlows$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -572,7 +572,7 @@
 
     invoke-static {v3, v8}, Lkotlin/collections/CollectionsKt;->removeAll(Ljava/lang/Iterable;Lkotlin/jvm/functions/Function1;)Z
 
-    .line 325
+    .line 323
     iget-object v3, v1, Lcom/v2ray/ang/ui/main/MainViewModel$setupGroupTab$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {v3}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getGroupLoadMutexes$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -593,7 +593,7 @@
 
     invoke-static {v3, v0}, Lkotlin/collections/CollectionsKt;->removeAll(Ljava/lang/Iterable;Lkotlin/jvm/functions/Function1;)Z
 
-    .line 327
+    .line 325
     iget-object v0, v1, Lcom/v2ray/ang/ui/main/MainViewModel$setupGroupTab$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {v0}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$get_uiState$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lkotlinx/coroutines/flow/MutableStateFlow;
@@ -602,7 +602,7 @@
 
     iget-object v3, v1, Lcom/v2ray/ang/ui/main/MainViewModel$setupGroupTab$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
-    .line 803
+    .line 801
     :goto_4
     invoke-interface {v0}, Lkotlinx/coroutines/flow/MutableStateFlow;->getValue()Ljava/lang/Object;
 
@@ -610,12 +610,12 @@
 
     move-object v11, v8
 
-    .line 804
+    .line 802
     move-object v8, v11
 
     check-cast v8, Lcom/v2ray/ang/ui/main/MainUiState;
 
-    .line 331
+    .line 329
     invoke-static {v3}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getDataSource$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lcom/v2ray/ang/ui/main/MainDataSource;
 
     move-result-object v12
@@ -660,26 +660,26 @@
 
     move-object/from16 v4, v21
 
-    .line 328
+    .line 326
     invoke-static/range {v8 .. v20}, Lcom/v2ray/ang/ui/main/MainUiState;->copy$default(Lcom/v2ray/ang/ui/main/MainUiState;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;Lcom/v2ray/ang/dto/LocateTarget;ZZLandroid/graphics/Bitmap;ILjava/lang/Object;)Lcom/v2ray/ang/ui/main/MainUiState;
 
     move-result-object v8
 
-    .line 805
+    .line 803
     invoke-interface {v0, v4, v8}, Lkotlinx/coroutines/flow/MutableStateFlow;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_10
 
-    .line 334
+    .line 332
     move-object v0, v9
 
     check-cast v0, Ljava/lang/Iterable;
 
     iget-object v3, v1, Lcom/v2ray/ang/ui/main/MainViewModel$setupGroupTab$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
-    .line 807
+    .line 805
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -697,7 +697,7 @@
 
     check-cast v4, Lcom/v2ray/ang/dto/GroupMapItem;
 
-    .line 334
+    .line 332
     invoke-virtual {v4}, Lcom/v2ray/ang/dto/GroupMapItem;->getId()Ljava/lang/String;
 
     move-result-object v4
@@ -706,7 +706,7 @@
 
     goto :goto_5
 
-    .line 336
+    .line 334
     :cond_8
     invoke-interface {v9}, Ljava/util/List;->isEmpty()Z
 
@@ -716,12 +716,12 @@
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    .line 341
+    .line 339
     iget-object v3, v1, Lcom/v2ray/ang/ui/main/MainViewModel$setupGroupTab$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     if-eqz v0, :cond_b
 
-    .line 337
+    .line 335
     :try_start_6
     invoke-static {v3}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getCacheMutex$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lkotlinx/coroutines/sync/Mutex;
 
@@ -729,7 +729,7 @@
 
     iget-object v3, v1, Lcom/v2ray/ang/ui/main/MainViewModel$setupGroupTab$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
-    .line 813
+    .line 811
     move-object v4, v1
 
     check-cast v4, Lkotlin/coroutines/Continuation;
@@ -775,7 +775,7 @@
 
     move-object v0, v3
 
-    .line 337
+    .line 335
     :goto_6
     :try_start_7
     invoke-static {v0}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getGroupDataCache$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Ljava/util/Map;
@@ -788,18 +788,18 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    .line 817
+    .line 815
     :try_start_8
     invoke-interface {v2, v7}, Lkotlinx/coroutines/sync/Mutex;->unlock(Ljava/lang/Object;)V
 
-    .line 338
+    .line 336
     sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
     :try_end_8
     .catch Ljava/util/concurrent/CancellationException; {:try_start_8 .. :try_end_8} :catch_1
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_0
     .catchall {:try_start_8 .. :try_end_8} :catchall_2
 
-    .line 364
+    .line 362
     iget-object v2, v1, Lcom/v2ray/ang/ui/main/MainViewModel$setupGroupTab$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {v2}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getInitialPageReady$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lkotlinx/coroutines/CompletableDeferred;
@@ -812,7 +812,7 @@
 
     if-nez v2, :cond_a
 
-    .line 365
+    .line 363
     iget-object v1, v1, Lcom/v2ray/ang/ui/main/MainViewModel$setupGroupTab$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {v1}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getInitialPageReady$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lkotlinx/coroutines/CompletableDeferred;
@@ -829,13 +829,13 @@
     :catchall_1
     move-exception v0
 
-    .line 817
+    .line 815
     :try_start_9
     invoke-interface {v2, v7}, Lkotlinx/coroutines/sync/Mutex;->unlock(Ljava/lang/Object;)V
 
     throw v0
 
-    .line 341
+    .line 339
     :cond_b
     iget-boolean v0, v1, Lcom/v2ray/ang/ui/main/MainViewModel$setupGroupTab$1;->$forceRefresh:Z
 
@@ -869,16 +869,16 @@
     :cond_c
     move-object v2, v9
 
-    .line 314
+    .line 312
     :goto_8
     check-cast v0, Ljava/util/List;
 
-    .line 342
+    .line 340
     iget-object v3, v1, Lcom/v2ray/ang/ui/main/MainViewModel$setupGroupTab$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {v3, v10, v0}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$updateGroupUi(Lcom/v2ray/ang/ui/main/MainViewModel;Ljava/lang/String;Ljava/util/List;)V
 
-    .line 344
+    .line 342
     iget-object v0, v1, Lcom/v2ray/ang/ui/main/MainViewModel$setupGroupTab$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {v0}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getInitialPageReady$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lkotlinx/coroutines/CompletableDeferred;
@@ -891,7 +891,7 @@
 
     if-nez v0, :cond_d
 
-    .line 345
+    .line 343
     iget-object v0, v1, Lcom/v2ray/ang/ui/main/MainViewModel$setupGroupTab$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {v0}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getInitialPageReady$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lkotlinx/coroutines/CompletableDeferred;
@@ -902,7 +902,7 @@
 
     invoke-interface {v0, v3}, Lkotlinx/coroutines/CompletableDeferred;->complete(Ljava/lang/Object;)Z
 
-    .line 820
+    .line 818
     :cond_d
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -923,10 +923,10 @@
 
     move-result-object v5
 
-    .line 821
+    .line 819
     check-cast v5, Lcom/v2ray/ang/dto/GroupMapItem;
 
-    .line 349
+    .line 347
     invoke-virtual {v5}, Lcom/v2ray/ang/dto/GroupMapItem;->getId()Ljava/lang/String;
 
     move-result-object v5
@@ -952,14 +952,14 @@
 
     move-result v0
 
-    .line 350
+    .line 348
     iget-object v3, v1, Lcom/v2ray/ang/ui/main/MainViewModel$setupGroupTab$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {v3, v2, v0}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$radialPreloadOrder(Lcom/v2ray/ang/ui/main/MainViewModel;Ljava/util/List;I)Ljava/util/List;
 
     move-result-object v0
 
-    .line 351
+    .line 349
     iget-object v2, v1, Lcom/v2ray/ang/ui/main/MainViewModel$setupGroupTab$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     move-object v3, v2
@@ -1008,7 +1008,7 @@
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_0
     .catchall {:try_start_9 .. :try_end_9} :catchall_2
 
-    .line 364
+    .line 362
     iget-object v0, v1, Lcom/v2ray/ang/ui/main/MainViewModel$setupGroupTab$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {v0}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getInitialPageReady$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lkotlinx/coroutines/CompletableDeferred;
@@ -1021,7 +1021,7 @@
 
     if-nez v0, :cond_11
 
-    .line 365
+    .line 363
     :goto_b
     iget-object v0, v1, Lcom/v2ray/ang/ui/main/MainViewModel$setupGroupTab$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
@@ -1048,7 +1048,7 @@
     :catch_0
     move-exception v0
 
-    .line 362
+    .line 360
     :try_start_a
     sget-object v2, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
 
@@ -1062,7 +1062,7 @@
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_2
 
-    .line 364
+    .line 362
     iget-object v0, v1, Lcom/v2ray/ang/ui/main/MainViewModel$setupGroupTab$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {v0}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getInitialPageReady$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lkotlinx/coroutines/CompletableDeferred;
@@ -1077,7 +1077,7 @@
 
     goto :goto_b
 
-    .line 368
+    .line 366
     :cond_11
     :goto_c
     sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -1087,13 +1087,13 @@
     :catch_1
     move-exception v0
 
-    .line 360
+    .line 358
     :try_start_b
     throw v0
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_2
 
-    .line 364
+    .line 362
     :goto_d
     iget-object v2, v1, Lcom/v2ray/ang/ui/main/MainViewModel$setupGroupTab$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
@@ -1107,7 +1107,7 @@
 
     if-nez v2, :cond_12
 
-    .line 365
+    .line 363
     iget-object v1, v1, Lcom/v2ray/ang/ui/main/MainViewModel$setupGroupTab$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {v1}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getInitialPageReady$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lkotlinx/coroutines/CompletableDeferred;

@@ -431,7 +431,7 @@
 
     const-string p0, "com.kanvpn.client"
 
-    const-string v0, "socketConnectTime IOException: "
+    const-string/jumbo v0, "socketConnectTime IOException: "
 
     const-string v1, "Failed to establish socket connection to "
 

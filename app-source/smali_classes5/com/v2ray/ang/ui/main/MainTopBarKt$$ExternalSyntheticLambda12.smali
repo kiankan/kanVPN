@@ -3,72 +3,54 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Lkotlin/jvm/functions/Function3;
+.implements Lkotlin/jvm/functions/Function2;
 
 
 # instance fields
-.field public final synthetic f$0:Lkotlin/jvm/functions/Function1;
+.field public final synthetic f$0:Z
 
 .field public final synthetic f$1:Lkotlin/jvm/functions/Function0;
 
 .field public final synthetic f$2:Lkotlin/jvm/functions/Function0;
 
-.field public final synthetic f$3:Lkotlin/jvm/functions/Function0;
-
-.field public final synthetic f$4:Landroidx/compose/runtime/MutableState;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/MutableState;)V
+.method public synthetic constructor <init>(ZLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;)V
     .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/v2ray/ang/ui/main/MainTopBarKt$$ExternalSyntheticLambda12;->f$0:Lkotlin/jvm/functions/Function1;
+    iput-boolean p1, p0, Lcom/v2ray/ang/ui/main/MainTopBarKt$$ExternalSyntheticLambda12;->f$0:Z
 
     iput-object p2, p0, Lcom/v2ray/ang/ui/main/MainTopBarKt$$ExternalSyntheticLambda12;->f$1:Lkotlin/jvm/functions/Function0;
 
     iput-object p3, p0, Lcom/v2ray/ang/ui/main/MainTopBarKt$$ExternalSyntheticLambda12;->f$2:Lkotlin/jvm/functions/Function0;
-
-    iput-object p4, p0, Lcom/v2ray/ang/ui/main/MainTopBarKt$$ExternalSyntheticLambda12;->f$3:Lkotlin/jvm/functions/Function0;
-
-    iput-object p5, p0, Lcom/v2ray/ang/ui/main/MainTopBarKt$$ExternalSyntheticLambda12;->f$4:Landroidx/compose/runtime/MutableState;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
     .line 0
-    iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainTopBarKt$$ExternalSyntheticLambda12;->f$0:Lkotlin/jvm/functions/Function1;
+    iget-boolean v0, p0, Lcom/v2ray/ang/ui/main/MainTopBarKt$$ExternalSyntheticLambda12;->f$0:Z
 
     iget-object v1, p0, Lcom/v2ray/ang/ui/main/MainTopBarKt$$ExternalSyntheticLambda12;->f$1:Lkotlin/jvm/functions/Function0;
 
-    iget-object v2, p0, Lcom/v2ray/ang/ui/main/MainTopBarKt$$ExternalSyntheticLambda12;->f$2:Lkotlin/jvm/functions/Function0;
+    iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainTopBarKt$$ExternalSyntheticLambda12;->f$2:Lkotlin/jvm/functions/Function0;
 
-    iget-object v3, p0, Lcom/v2ray/ang/ui/main/MainTopBarKt$$ExternalSyntheticLambda12;->f$3:Lkotlin/jvm/functions/Function0;
+    check-cast p1, Landroidx/compose/runtime/Composer;
 
-    iget-object v4, p0, Lcom/v2ray/ang/ui/main/MainTopBarKt$$ExternalSyntheticLambda12;->f$4:Landroidx/compose/runtime/MutableState;
+    check-cast p2, Ljava/lang/Integer;
 
-    move-object v5, p1
+    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
-    check-cast v5, Landroidx/compose/foundation/layout/ColumnScope;
+    move-result p2
 
-    move-object v6, p2
-
-    check-cast v6, Landroidx/compose/runtime/Composer;
-
-    check-cast p3, Ljava/lang/Integer;
-
-    invoke-virtual {p3}, Ljava/lang/Integer;->intValue()I
-
-    move-result v7
-
-    invoke-static/range {v0 .. v7}, Lcom/v2ray/ang/ui/main/MainTopBarKt;->$r8$lambda$ZI0NE1a-8QD-HdIvfFCl_-1f6Jc(Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/MutableState;Landroidx/compose/foundation/layout/ColumnScope;Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
+    invoke-static {v0, v1, p0, p1, p2}, Lcom/v2ray/ang/ui/main/MainTopBarKt;->MainTopBar$lambda$7(ZLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
 
     move-result-object p0
 

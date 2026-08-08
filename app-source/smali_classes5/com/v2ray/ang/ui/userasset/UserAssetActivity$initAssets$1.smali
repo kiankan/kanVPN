@@ -53,12 +53,12 @@
     f = "UserAssetActivity.kt"
     i = {}
     l = {
-        0xe5
+        0xeb
     }
     m = "invokeSuspend"
     n = {}
     nl = {
-        0xe8
+        0xee
     }
     s = {}
     v = 0x2
@@ -171,7 +171,7 @@
 
     move-result-object v0
 
-    .line 227
+    .line 233
     iget v1, p0, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$initAssets$1;->label:I
 
     const/4 v2, 0x1
@@ -196,7 +196,7 @@
     :cond_1
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 228
+    .line 234
     sget-object p1, Lcom/v2ray/ang/handler/SettingsManager;->INSTANCE:Lcom/v2ray/ang/handler/SettingsManager;
 
     iget-object v1, p0, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$initAssets$1;->this$0:Lcom/v2ray/ang/ui/userasset/UserAssetActivity;
@@ -215,7 +215,7 @@
 
     invoke-virtual {p1, v3, v1}, Lcom/v2ray/ang/handler/SettingsManager;->initAssets(Landroid/content/Context;Landroid/content/res/AssetManager;)V
 
-    .line 229
+    .line 235
     invoke-static {}, Lkotlinx/coroutines/Dispatchers;->getMain()Lkotlinx/coroutines/MainCoroutineDispatcher;
 
     move-result-object p1
@@ -246,7 +246,7 @@
 
     return-object v0
 
-    .line 232
+    .line 238
     :cond_2
     :goto_0
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;

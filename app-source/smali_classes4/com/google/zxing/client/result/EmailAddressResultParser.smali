@@ -145,7 +145,7 @@
     if-nez p1, :cond_5
 
     .line 60
-    const-string v1, "to"
+    const-string/jumbo v1, "to"
 
     invoke-interface {p0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -207,7 +207,7 @@
 
     .line 73
     :cond_7
-    const-string v2, "subject"
+    const-string/jumbo v2, "subject"
 
     invoke-interface {p0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 

@@ -120,7 +120,7 @@
 
     const/4 v1, 0x0
 
-    const-string v2, "tcp"
+    const-string/jumbo v2, "tcp"
 
     const-string v3, "TCP"
 

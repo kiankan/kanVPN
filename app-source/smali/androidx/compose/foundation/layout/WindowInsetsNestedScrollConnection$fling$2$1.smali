@@ -153,7 +153,7 @@
     iput p7, p3, Lkotlin/jvm/internal/Ref$FloatRef;->element:F
 
     .line 339
-    invoke-static {p4, p5}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/view/WindowInsetsAnimationController;Z)V
+    invoke-static {p4, p5}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/view/WindowInsetsAnimationController;Z)V
 
     const/4 p0, 0x0
 

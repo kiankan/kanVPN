@@ -119,7 +119,7 @@
     iput-object v0, p0, Landroidx/core/app/NotificationCompat$TvExtender;->mChannelId:Ljava/lang/String;
 
     .line 10300
-    const-string v0, "suppressShowOverApps"
+    const-string/jumbo v0, "suppressShowOverApps"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
@@ -189,7 +189,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 10326
-    const-string v1, "suppressShowOverApps"
+    const-string/jumbo v1, "suppressShowOverApps"
 
     iget-boolean v2, p0, Landroidx/core/app/NotificationCompat$TvExtender;->mSuppressShowOverApps:Z
 

@@ -24,7 +24,7 @@
     move-result-object p0
 
     .line 32
-    const-string p1, "smtp:"
+    const-string/jumbo p1, "smtp:"
 
     invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 

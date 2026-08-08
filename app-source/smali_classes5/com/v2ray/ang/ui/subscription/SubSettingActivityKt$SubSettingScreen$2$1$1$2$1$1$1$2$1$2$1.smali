@@ -81,7 +81,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
-    .line 207
+    .line 209
     invoke-virtual {p0}, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$SubSettingScreen$2$1$1$2$1$1$1$2$1$2$1;->invoke()V
 
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -92,7 +92,7 @@
 .method public final invoke()V
     .locals 1
 
-    .line 207
+    .line 209
     iget-object v0, p0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$SubSettingScreen$2$1$1$2$1$1$1$2$1$2$1;->$onEditSub:Lkotlin/jvm/functions/Function1;
 
     iget-object p0, p0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$SubSettingScreen$2$1$1$2$1$1$1$2$1$2$1;->$subCache:Lcom/v2ray/ang/dto/entities/SubscriptionCache;

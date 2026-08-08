@@ -148,7 +148,7 @@
 .method public containsValue(Ljava/lang/Void;)Z
     .locals 0
 
-    const-string/jumbo p0, "value"
+    const-string p0, "value"
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -399,7 +399,7 @@
     .locals 0
 
     .line 19
-    const-string/jumbo p0, "{}"
+    const-string p0, "{}"
 
     return-object p0
 .end method

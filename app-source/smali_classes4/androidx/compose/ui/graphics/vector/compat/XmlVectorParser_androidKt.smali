@@ -250,7 +250,7 @@
     move-result v6
 
     .line 199
-    const-string v7, "tint"
+    const-string/jumbo v7, "tint"
 
     invoke-virtual {v0, v2, v1, v7, v6}, Landroidx/compose/ui/graphics/vector/compat/AndroidVectorParser;->getNamedColorStateList(Landroid/content/res/TypedArray;Landroid/content/res/Resources$Theme;Ljava/lang/String;I)Landroid/content/res/ColorStateList;
 
@@ -498,8 +498,6 @@
     invoke-direct {v0, v1}, Lorg/xmlpull/v1/XmlPullParserException;-><init>(Ljava/lang/String;)V
 
     throw v0
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0xe
@@ -1291,7 +1289,7 @@
     move-result v2
 
     .line 294
-    const-string v3, "strokeLineCap"
+    const-string/jumbo v3, "strokeLineCap"
 
     const/4 v4, -0x1
 
@@ -1318,7 +1316,7 @@
     move-result v2
 
     .line 302
-    const-string v3, "strokeLineJoin"
+    const-string/jumbo v3, "strokeLineJoin"
 
     invoke-virtual {v0, v1, v3, v2, v4}, Landroidx/compose/ui/graphics/vector/compat/AndroidVectorParser;->getNamedInt(Landroid/content/res/TypedArray;Ljava/lang/String;II)I
 
@@ -1345,7 +1343,7 @@
     const/high16 v3, 0x40800000    # 4.0f
 
     .line 310
-    const-string v4, "strokeMiterLimit"
+    const-string/jumbo v4, "strokeMiterLimit"
 
     invoke-virtual {v0, v1, v4, v2, v3}, Landroidx/compose/ui/graphics/vector/compat/AndroidVectorParser;->getNamedFloat(Landroid/content/res/TypedArray;Ljava/lang/String;IF)F
 
@@ -1359,7 +1357,7 @@
     move-result v4
 
     .line 317
-    const-string v3, "strokeColor"
+    const-string/jumbo v3, "strokeColor"
 
     move-object/from16 v2, p2
 
@@ -1375,7 +1373,7 @@
     move-result v3
 
     .line 325
-    const-string v4, "strokeAlpha"
+    const-string/jumbo v4, "strokeAlpha"
 
     invoke-virtual {v0, v1, v4, v3, v9}, Landroidx/compose/ui/graphics/vector/compat/AndroidVectorParser;->getNamedFloat(Landroid/content/res/TypedArray;Ljava/lang/String;IF)F
 
@@ -1389,7 +1387,7 @@
     move-result v4
 
     .line 332
-    const-string v5, "strokeWidth"
+    const-string/jumbo v5, "strokeWidth"
 
     invoke-virtual {v0, v1, v5, v4, v9}, Landroidx/compose/ui/graphics/vector/compat/AndroidVectorParser;->getNamedFloat(Landroid/content/res/TypedArray;Ljava/lang/String;IF)F
 

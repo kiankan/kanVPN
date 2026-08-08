@@ -360,7 +360,7 @@
 
     if-eqz v0, :cond_3
 
-    const-string p0, "to"
+    const-string/jumbo p0, "to"
 
     return-object p0
 

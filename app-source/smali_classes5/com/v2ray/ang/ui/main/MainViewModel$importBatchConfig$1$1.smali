@@ -53,12 +53,12 @@
     f = "MainViewModel.kt"
     i = {}
     l = {
-        0x178
+        0x176
     }
     m = "invokeSuspend"
     n = {}
     nl = {
-        0x17b
+        0x179
     }
     s = {}
     v = 0x2
@@ -178,7 +178,7 @@
 
     move-result-object v0
 
-    .line 374
+    .line 372
     iget v1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$importBatchConfig$1$1;->label:I
 
     const/4 v2, 0x1
@@ -212,7 +212,7 @@
     :cond_1
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 376
+    .line 374
     :try_start_1
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$importBatchConfig$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
@@ -220,7 +220,7 @@
 
     move-result-object p1
 
-    .line 377
+    .line 375
     iget-object v1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$importBatchConfig$1$1;->$configText:Ljava/lang/String;
 
     iget-object v3, p0, Lcom/v2ray/ang/ui/main/MainViewModel$importBatchConfig$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
@@ -243,7 +243,7 @@
 
     check-cast v4, Lkotlin/coroutines/Continuation;
 
-    .line 376
+    .line 374
     iput v2, p0, Lcom/v2ray/ang/ui/main/MainViewModel$importBatchConfig$1$1;->label:I
 
     invoke-interface {p1, v1, v3, v2, v4}, Lcom/v2ray/ang/ui/main/MainDataSource;->importBatchConfig(Ljava/lang/String;Ljava/lang/String;ZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -280,7 +280,7 @@
 
     if-lez v0, :cond_3
 
-    .line 381
+    .line 379
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$importBatchConfig$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {p1}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getDataSource$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lcom/v2ray/ang/ui/main/MainDataSource;
@@ -303,7 +303,7 @@
 
     invoke-virtual {p1, v0}, Lcom/v2ray/ang/ui/main/MainViewModel;->toast(Ljava/lang/String;)V
 
-    .line 382
+    .line 380
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$importBatchConfig$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-virtual {p1, v2}, Lcom/v2ray/ang/ui/main/MainViewModel;->setupGroupTab(Z)Lkotlinx/coroutines/Job;
@@ -313,19 +313,19 @@
 
     goto :goto_2
 
-    .line 386
+    .line 384
     :cond_3
     iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel$importBatchConfig$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     if-lez p1, :cond_4
 
-    .line 385
+    .line 383
     :try_start_2
     invoke-virtual {v0, v2}, Lcom/v2ray/ang/ui/main/MainViewModel;->setupGroupTab(Z)Lkotlinx/coroutines/Job;
 
     goto :goto_2
 
-    .line 386
+    .line 384
     :cond_4
     sget p1, Lcom/v2ray/ang/R$string;->toast_failure:I
 
@@ -338,7 +338,7 @@
 
     goto :goto_2
 
-    .line 391
+    .line 389
     :goto_1
     sget-object v0, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
 
@@ -350,14 +350,14 @@
 
     invoke-virtual {v0, v2, v1, p1}, Lcom/v2ray/ang/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 392
+    .line 390
     iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainViewModel$importBatchConfig$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     sget p1, Lcom/v2ray/ang/R$string;->toast_failure:I
 
     invoke-virtual {p0, p1}, Lcom/v2ray/ang/ui/main/MainViewModel;->toastError(I)V
 
-    .line 394
+    .line 392
     :goto_2
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
@@ -366,6 +366,6 @@
     :catch_1
     move-exception p0
 
-    .line 389
+    .line 387
     throw p0
 .end method

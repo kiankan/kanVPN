@@ -242,7 +242,7 @@
 .method static final registerSplitInfoCallback$lambda$1(Landroidx/window/embedding/EmbeddingInterfaceCompat$EmbeddingCallbackInterface;Landroidx/window/embedding/EmbeddingCompat;Ljava/util/List;)V
     .locals 1
 
-    const-string v0, "splitInfoList"
+    const-string/jumbo v0, "splitInfoList"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -695,7 +695,7 @@
 .method public pinTopActivityStack(ILandroidx/window/embedding/SplitPinRule;)Z
     .locals 2
 
-    const-string v0, "splitPinRule"
+    const-string/jumbo v0, "splitPinRule"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -1218,11 +1218,11 @@
 .method public updateSplitAttributes(Landroidx/window/embedding/SplitInfo;Landroidx/window/embedding/SplitAttributes;)V
     .locals 3
 
-    const-string v0, "splitInfo"
+    const-string/jumbo v0, "splitInfo"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "splitAttributes"
+    const-string/jumbo v0, "splitAttributes"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

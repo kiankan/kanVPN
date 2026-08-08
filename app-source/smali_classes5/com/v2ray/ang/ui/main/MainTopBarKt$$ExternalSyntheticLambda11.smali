@@ -6,18 +6,12 @@
 .implements Lkotlin/jvm/functions/Function0;
 
 
-# instance fields
-.field public final synthetic f$0:Landroidx/compose/runtime/MutableState;
-
-
 # direct methods
-.method public synthetic constructor <init>(Landroidx/compose/runtime/MutableState;)V
+.method public synthetic constructor <init>()V
     .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/v2ray/ang/ui/main/MainTopBarKt$$ExternalSyntheticLambda11;->f$0:Landroidx/compose/runtime/MutableState;
 
     return-void
 .end method
@@ -28,9 +22,7 @@
     .locals 0
 
     .line 0
-    iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainTopBarKt$$ExternalSyntheticLambda11;->f$0:Landroidx/compose/runtime/MutableState;
-
-    invoke-static {p0}, Lcom/v2ray/ang/ui/main/MainTopBarKt;->$r8$lambda$znERx_rFIH_8qQqyS5-T-gA8eFM(Landroidx/compose/runtime/MutableState;)Lkotlin/Unit;
+    invoke-static {}, Lcom/v2ray/ang/ui/main/MainTopBarKt;->$r8$lambda$2LoGm4SNKga6Sc7jG03S2YTUI0Q()Lkotlin/Unit;
 
     move-result-object p0
 

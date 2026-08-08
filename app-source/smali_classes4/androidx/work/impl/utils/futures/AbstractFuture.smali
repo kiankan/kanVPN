@@ -94,7 +94,7 @@
 
     const-class v3, Ljava/lang/Thread;
 
-    const-string v4, "thread"
+    const-string/jumbo v4, "thread"
 
     .line 93
     invoke-static {v1, v3, v4}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
@@ -950,7 +950,7 @@
     if-ne p1, p0, :cond_0
 
     .line 1032
-    const-string p0, "this future"
+    const-string/jumbo p0, "this future"
 
     return-object p0
 

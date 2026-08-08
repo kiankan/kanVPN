@@ -228,7 +228,7 @@
 
     invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "sqliteOpenHelperFactory"
+    const-string/jumbo v0, "sqliteOpenHelperFactory"
 
     move-object/from16 v4, p3
 
@@ -358,7 +358,7 @@
 
     invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "sqliteOpenHelperFactory"
+    const-string/jumbo v0, "sqliteOpenHelperFactory"
 
     move-object/from16 v4, p3
 
@@ -660,7 +660,7 @@
 
     invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "sqliteOpenHelperFactory"
+    const-string/jumbo v0, "sqliteOpenHelperFactory"
 
     move-object/from16 v3, p3
 
@@ -787,7 +787,7 @@
 
     invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "sqliteOpenHelperFactory"
+    const-string/jumbo v0, "sqliteOpenHelperFactory"
 
     move-object/from16 v3, p3
 
@@ -916,7 +916,7 @@
 
     invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "sqliteOpenHelperFactory"
+    const-string/jumbo v0, "sqliteOpenHelperFactory"
 
     move-object/from16 v3, p3
 
@@ -1047,7 +1047,7 @@
 
     invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "sqliteOpenHelperFactory"
+    const-string/jumbo v0, "sqliteOpenHelperFactory"
 
     move-object/from16 v3, p3
 
@@ -1181,7 +1181,7 @@
 
     invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "sqliteOpenHelperFactory"
+    const-string/jumbo v0, "sqliteOpenHelperFactory"
 
     move-object/from16 v3, p3
 
@@ -1322,7 +1322,7 @@
 
     invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "sqliteOpenHelperFactory"
+    const-string/jumbo v0, "sqliteOpenHelperFactory"
 
     move-object/from16 v3, p3
 
@@ -1451,7 +1451,7 @@
 
     invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "sqliteOpenHelperFactory"
+    const-string/jumbo v0, "sqliteOpenHelperFactory"
 
     move-object/from16 v4, p3
 

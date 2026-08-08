@@ -441,7 +441,7 @@
     move-result-object v1
 
     .line 536
-    const-string v2, "text/vnd.android.intent"
+    const-string/jumbo v2, "text/vnd.android.intent"
 
     invoke-virtual {v1, v2}, Landroid/content/ClipDescription;->hasMimeType(Ljava/lang/String;)Z
 

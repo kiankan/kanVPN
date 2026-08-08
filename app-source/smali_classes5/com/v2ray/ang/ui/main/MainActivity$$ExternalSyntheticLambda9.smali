@@ -3,7 +3,7 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/activity/result/ActivityResultCallback;
+.implements Lkotlin/jvm/functions/Function0;
 
 
 # instance fields
@@ -24,15 +24,15 @@
 
 
 # virtual methods
-.method public final onActivityResult(Ljava/lang/Object;)V
+.method public final invoke()Ljava/lang/Object;
     .locals 0
 
     .line 0
     iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainActivity$$ExternalSyntheticLambda9;->f$0:Lcom/v2ray/ang/ui/main/MainActivity;
 
-    check-cast p1, Landroidx/activity/result/ActivityResult;
+    invoke-static {p0}, Lcom/v2ray/ang/ui/main/MainActivity;->mainViewModel_delegate$lambda$0(Lcom/v2ray/ang/ui/main/MainActivity;)Landroidx/lifecycle/ViewModelProvider$Factory;
 
-    invoke-static {p0, p1}, Lcom/v2ray/ang/ui/main/MainActivity;->profileEditorLauncher$lambda$0(Lcom/v2ray/ang/ui/main/MainActivity;Landroidx/activity/result/ActivityResult;)V
+    move-result-object p0
 
-    return-void
+    return-object p0
 .end method

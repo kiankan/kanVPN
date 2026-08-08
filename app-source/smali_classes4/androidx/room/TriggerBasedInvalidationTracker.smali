@@ -270,7 +270,7 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "tableNames"
+    const-string/jumbo v0, "tableNames"
 
     invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -327,7 +327,7 @@
     new-array p3, p1, [Ljava/lang/String;
 
     :goto_0
-    const-string p5, "toLowerCase(...)"
+    const-string/jumbo p5, "toLowerCase(...)"
 
     if-ge p2, p1, :cond_2
 
@@ -721,7 +721,7 @@
 .method static final checkInvalidatedTables$lambda$14(Landroidx/sqlite/SQLiteStatement;)Ljava/util/Set;
     .locals 3
 
-    const-string v0, "statement"
+    const-string/jumbo v0, "statement"
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -1147,7 +1147,7 @@
 
     move-result-object v6
 
-    const-string v7, "toLowerCase(...)"
+    const-string/jumbo v7, "toLowerCase(...)"
 
     invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -1803,7 +1803,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "tableIds"
+    const-string/jumbo v0, "tableIds"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -1851,7 +1851,7 @@
 .method public final onObserverAdded$room_runtime_release([I)Z
     .locals 1
 
-    const-string v0, "tableIds"
+    const-string/jumbo v0, "tableIds"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -1868,7 +1868,7 @@
 .method public final onObserverRemoved$room_runtime_release([I)Z
     .locals 1
 
-    const-string v0, "tableIds"
+    const-string/jumbo v0, "tableIds"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -2406,7 +2406,7 @@
 
     move-result-object v5
 
-    const-string v6, "toLowerCase(...)"
+    const-string/jumbo v6, "toLowerCase(...)"
 
     invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 

@@ -30,13 +30,9 @@
     .line 0
     iget-object p0, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$$ExternalSyntheticLambda4;->f$0:Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;
 
-    check-cast p1, Ljava/lang/Integer;
+    check-cast p1, Lcom/v2ray/ang/enums/RoutingType;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    invoke-static {p0, p1}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;->$r8$lambda$Wnh4oizAdGp7bUvbjDTdm4BXxK8(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;I)Lkotlin/Unit;
+    invoke-static {p0, p1}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;->$r8$lambda$9SBNZA1EO_peyAqAR2B6-oh6Y8A(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;Lcom/v2ray/ang/enums/RoutingType;)Lkotlin/Unit;
 
     move-result-object p0
 

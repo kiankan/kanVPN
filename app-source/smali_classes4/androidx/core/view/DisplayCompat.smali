@@ -39,7 +39,7 @@
     if-ge v0, v1, :cond_0
 
     .line 163
-    const-string v0, "sys.display-size"
+    const-string/jumbo v0, "sys.display-size"
 
     invoke-static {v0, p1}, Landroidx/core/view/DisplayCompat;->parsePhysicalDisplaySizeFromSystemProperties(Ljava/lang/String;Landroid/view/Display;)Landroid/graphics/Point;
 

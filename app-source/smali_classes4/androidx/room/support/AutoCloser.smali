@@ -145,7 +145,7 @@
 .method public constructor <init>(JLjava/util/concurrent/TimeUnit;Landroidx/room/support/AutoCloser$Watch;)V
     .locals 1
 
-    const-string v0, "timeUnit"
+    const-string/jumbo v0, "timeUnit"
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

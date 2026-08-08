@@ -30,7 +30,7 @@
     .line 0
     iget-object p0, p0, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt$$ExternalSyntheticLambda3;->f$0:Lcom/v2ray/ang/ui/checkupdate/CheckUpdateViewModel;
 
-    invoke-static {p0}, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt;->$r8$lambda$ZecaH97xAdYe51W4grCy4GlUThM(Lcom/v2ray/ang/ui/checkupdate/CheckUpdateViewModel;)Lkotlin/Unit;
+    invoke-static {p0}, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt;->$r8$lambda$Vu_lUIcgFI33XGQjs0fhRHRIxz4(Lcom/v2ray/ang/ui/checkupdate/CheckUpdateViewModel;)Lkotlin/Unit;
 
     move-result-object p0
 

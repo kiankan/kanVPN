@@ -14,9 +14,9 @@
 
 
 # static fields
-.field public static is_pooling_container_tag:I = 0x7f080044
+.field public static is_pooling_container_tag:I = 0x7f080045
 
-.field public static pooling_container_listener_holder_tag:I = 0x7f080053
+.field public static pooling_container_listener_holder_tag:I = 0x7f080054
 
 
 # direct methods

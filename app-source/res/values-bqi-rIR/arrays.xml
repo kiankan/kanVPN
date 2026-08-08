@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="config_backup_options">
-        <item>مهلی</item>
-        <item>WebDAV</item>
+    <string-array name="browser_dialer_mode">
+        <item>خامۊش</item>
+        <item>OkHttp</item>
+        <item>WebView</item>
     </string-array>
     <string-array name="mode_entries">
         <item>VPN</item>
@@ -19,21 +20,10 @@
         <item>هل وو جایونی دامنه</item>
     </string-array>
     <string-array name="policy_group_type">
-        <item>کم ترین پینگ</item>
-        <item>کم ترین بار (لود)</item>
-        <item>تساڌۊفی</item>
-        <item>گردشی</item>
-    </string-array>
-    <string-array name="preset_rulesets">
-        <item>نومگه اسبؽڌ چین</item>
-        <item>نومگه شه چین</item>
-        <item>جهۊوی (Global)</item>
-        <item>نومگه اسبؽڌ ایران</item>
-        <item>نومگه اسبؽڌ رۊسیه</item>
-    </string-array>
-    <string-array name="share_sub_method">
-        <item>QRcode</item>
-        <item>و در کشیڌن من کلیپ بورد</item>
+        <item>کم ترین پینگ (leastPing)</item>
+        <item>کم ترین بار (leastLoad)</item>
+        <item>تساڌۊفی (random)</item>
+        <item>گردشی (roundRobin)</item>
     </string-array>
     <string-array name="ui_mode_night">
         <item>و دین کردن سیستوم</item>
@@ -41,7 +31,7 @@
         <item>تاریک</item>
     </string-array>
     <string-array name="vpn_bypass_lan">
-        <item>پؽش فرز کانفیگ</item>
+        <item>پؽش فرض کانفیگ</item>
         <item>دور زیڌه بۊ</item>
         <item>دور زیڌه نبۊ</item>
     </string-array>

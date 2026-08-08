@@ -264,7 +264,7 @@
 .method public final onObserverAdded$room_runtime_release([I)Z
     .locals 10
 
-    const-string v0, "tableIds"
+    const-string/jumbo v0, "tableIds"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -334,7 +334,7 @@
 .method public final onObserverRemoved$room_runtime_release([I)Z
     .locals 12
 
-    const-string v0, "tableIds"
+    const-string/jumbo v0, "tableIds"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

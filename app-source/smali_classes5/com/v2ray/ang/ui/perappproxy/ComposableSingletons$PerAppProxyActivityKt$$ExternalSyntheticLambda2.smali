@@ -30,7 +30,7 @@
 
     move-result p0
 
-    invoke-static {p1, p0}, Lcom/v2ray/ang/ui/perappproxy/ComposableSingletons$PerAppProxyActivityKt;->lambda_651651074$lambda$0(Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
+    invoke-static {p1, p0}, Lcom/v2ray/ang/ui/perappproxy/ComposableSingletons$PerAppProxyActivityKt;->lambda_358472964$lambda$0(Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
 
     move-result-object p0
 

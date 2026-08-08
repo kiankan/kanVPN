@@ -30,7 +30,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nLazyDsl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 LazyDsl.kt\nandroidx/compose/foundation/lazy/LazyDslKt$itemsIndexed$4\n+ 2 RoutingSettingActivity.kt\ncom/v2ray/ang/ui/routing/RoutingSettingActivityKt\n*L\n1#1,523:1\n280#2:524\n295#2,2:525\n*E\n"
+    value = "SMAP\nLazyDsl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 LazyDsl.kt\nandroidx/compose/foundation/lazy/LazyDslKt$itemsIndexed$4\n+ 2 RoutingSettingActivity.kt\ncom/v2ray/ang/ui/routing/RoutingSettingActivityKt\n*L\n1#1,523:1\n286#2:524\n301#2,2:525\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -207,7 +207,7 @@
     .line 524
     invoke-interface {p3, v5}, Landroidx/compose/runtime/Composer;->startReplaceGroup(I)V
 
-    const-string v5, "CN(index,ruleset)*279@11631L649,279@11579L701:RoutingSettingActivity.kt#ni0ky5"
+    const-string v5, "CN(index,ruleset)*285@11904L649,285@11852L701:RoutingSettingActivity.kt#ni0ky5"
 
     invoke-static {p3, v5}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 

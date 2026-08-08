@@ -127,7 +127,7 @@
     .line 55
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "sms:"
+    const-string/jumbo v1, "sms:"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -252,7 +252,7 @@
 
     .line 82
     :cond_7
-    const-string v1, "subject="
+    const-string/jumbo v1, "subject="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

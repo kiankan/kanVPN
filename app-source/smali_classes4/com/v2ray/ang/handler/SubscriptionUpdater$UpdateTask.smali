@@ -94,7 +94,7 @@
 
     move-result-object p1
 
-    const-string v0, "subId"
+    const-string/jumbo v0, "subId"
 
     invoke-virtual {p1, v0}, Landroidx/work/Data;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -124,7 +124,7 @@
 
     check-cast v0, Ljava/lang/CharSequence;
 
-    const-string v1, "success(...)"
+    const-string/jumbo v1, "success(...)"
 
     if-eqz v0, :cond_1
 

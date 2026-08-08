@@ -6,18 +6,12 @@
 .implements Lkotlin/jvm/functions/Function2;
 
 
-# instance fields
-.field public final synthetic f$0:Landroidx/compose/runtime/MutableState;
-
-
 # direct methods
-.method public synthetic constructor <init>(Landroidx/compose/runtime/MutableState;)V
+.method public synthetic constructor <init>()V
     .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$$ExternalSyntheticLambda13;->f$0:Landroidx/compose/runtime/MutableState;
 
     return-void
 .end method
@@ -28,17 +22,15 @@
     .locals 0
 
     .line 0
-    iget-object p0, p0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$$ExternalSyntheticLambda13;->f$0:Landroidx/compose/runtime/MutableState;
+    check-cast p1, Ljava/lang/Integer;
 
-    check-cast p1, Landroidx/compose/runtime/Composer;
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    check-cast p2, Ljava/lang/Integer;
+    move-result p0
 
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
+    check-cast p2, Lcom/v2ray/ang/dto/entities/SubscriptionCache;
 
-    move-result p2
-
-    invoke-static {p0, p1, p2}, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt;->SubSettingScreen$lambda$31(Landroidx/compose/runtime/MutableState;Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
+    invoke-static {p0, p2}, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt;->$r8$lambda$PTvkZhDCjOUtOTRgd1A5mCVCp6I(ILcom/v2ray/ang/dto/entities/SubscriptionCache;)Ljava/lang/Object;
 
     move-result-object p0
 

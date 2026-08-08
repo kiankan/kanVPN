@@ -3,7 +3,7 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Lkotlin/jvm/functions/Function1;
+.implements Lkotlin/jvm/functions/Function0;
 
 
 # instance fields
@@ -24,15 +24,13 @@
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final invoke()Ljava/lang/Object;
     .locals 0
 
     .line 0
     iget-object p0, p0, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivityKt$$ExternalSyntheticLambda1;->f$0:Landroidx/compose/runtime/MutableState;
 
-    check-cast p1, Ljava/lang/String;
-
-    invoke-static {p0, p1}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivityKt;->$r8$lambda$NaSE5uftewR-qMRB1096XmkIRgU(Landroidx/compose/runtime/MutableState;Ljava/lang/String;)Lkotlin/Unit;
+    invoke-static {p0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivityKt;->$r8$lambda$cAd7gCj5YSloyHUThLUFffiBxuA(Landroidx/compose/runtime/MutableState;)Lkotlin/Unit;
 
     move-result-object p0
 

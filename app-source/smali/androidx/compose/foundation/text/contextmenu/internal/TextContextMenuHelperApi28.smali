@@ -767,7 +767,7 @@
     invoke-direct {v6, v2}, Landroidx/compose/foundation/text/contextmenu/internal/TextContextMenuHelperApi28$$ExternalSyntheticLambda14;-><init>(Landroid/view/textclassifier/TextClassification;)V
 
     .line 248
-    invoke-static {v2}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/view/textclassifier/TextClassification;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v2}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/view/textclassifier/TextClassification;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 

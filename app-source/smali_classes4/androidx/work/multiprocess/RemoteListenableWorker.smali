@@ -116,7 +116,7 @@
     .end annotation
 
     .line 75
-    const-string p0, "startWork() shouldn\'t never be called on RemoteListenableWorker"
+    const-string/jumbo p0, "startWork() shouldn\'t never be called on RemoteListenableWorker"
 
     .line 76
     invoke-static {p0}, Landroidx/work/multiprocess/RemoteListenableWorker;->getFailedFuture(Ljava/lang/String;)Lcom/google/common/util/concurrent/ListenableFuture;

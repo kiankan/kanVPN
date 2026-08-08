@@ -359,7 +359,7 @@
 
     move-result-object p0
 
-    const-string v0, "test"
+    const-string/jumbo v0, "test"
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 

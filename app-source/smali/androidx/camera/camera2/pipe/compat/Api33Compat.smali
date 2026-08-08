@@ -114,7 +114,7 @@
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 422
-    invoke-static {p0, p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m$1(Landroid/hardware/camera2/CameraExtensionCharacteristics;I)Ljava/util/Set;
+    invoke-static {p0, p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m$1(Landroid/hardware/camera2/CameraExtensionCharacteristics;I)Ljava/util/Set;
 
     move-result-object p0
 
@@ -147,7 +147,7 @@
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 429
-    invoke-static {p0, p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/hardware/camera2/CameraExtensionCharacteristics;I)Ljava/util/Set;
+    invoke-static {p0, p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/hardware/camera2/CameraExtensionCharacteristics;I)Ljava/util/Set;
 
     move-result-object p0
 
@@ -195,7 +195,7 @@
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 379
-    invoke-static {p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/hardware/camera2/params/OutputConfiguration;)J
+    invoke-static {p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/hardware/camera2/params/OutputConfiguration;)J
 
     move-result-wide v0
 
@@ -212,7 +212,7 @@
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 389
-    invoke-static {p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m$1(Landroid/hardware/camera2/params/OutputConfiguration;)I
+    invoke-static {p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m$1(Landroid/hardware/camera2/params/OutputConfiguration;)I
 
     move-result p0
 
@@ -229,7 +229,7 @@
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 404
-    invoke-static {p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m$1(Landroid/hardware/camera2/params/OutputConfiguration;)J
+    invoke-static {p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m$1(Landroid/hardware/camera2/params/OutputConfiguration;)J
 
     move-result-wide v0
 
@@ -246,7 +246,7 @@
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 414
-    invoke-static {p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/hardware/camera2/params/OutputConfiguration;)I
+    invoke-static {p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/hardware/camera2/params/OutputConfiguration;)I
 
     move-result p0
 
@@ -259,7 +259,7 @@
     .end annotation
 
     .line 447
-    invoke-static {p0, p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(II)Landroid/media/ImageReader$Builder;
+    invoke-static {p0, p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(II)Landroid/media/ImageReader$Builder;
 
     move-result-object p0
 
@@ -270,7 +270,7 @@
 
     move-result p1
 
-    invoke-static {p0, p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/media/ImageReader$Builder;I)Landroid/media/ImageReader$Builder;
+    invoke-static {p0, p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/media/ImageReader$Builder;I)Landroid/media/ImageReader$Builder;
 
     :cond_0
     if-eqz p3, :cond_1
@@ -280,7 +280,7 @@
 
     move-result p1
 
-    invoke-static {p0, p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m$1(Landroid/media/ImageReader$Builder;I)Landroid/media/ImageReader$Builder;
+    invoke-static {p0, p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m$1(Landroid/media/ImageReader$Builder;I)Landroid/media/ImageReader$Builder;
 
     :cond_1
     if-eqz p4, :cond_2
@@ -290,7 +290,7 @@
 
     move-result-wide p1
 
-    invoke-static {p0, p1, p2}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/media/ImageReader$Builder;J)Landroid/media/ImageReader$Builder;
+    invoke-static {p0, p1, p2}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/media/ImageReader$Builder;J)Landroid/media/ImageReader$Builder;
 
     :cond_2
     if-eqz p5, :cond_3
@@ -300,7 +300,7 @@
 
     move-result p1
 
-    invoke-static {p0, p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m$2(Landroid/media/ImageReader$Builder;I)Landroid/media/ImageReader$Builder;
+    invoke-static {p0, p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m$2(Landroid/media/ImageReader$Builder;I)Landroid/media/ImageReader$Builder;
 
     :cond_3
     if-eqz p6, :cond_4
@@ -310,11 +310,11 @@
 
     move-result p1
 
-    invoke-static {p0, p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m$3(Landroid/media/ImageReader$Builder;I)Landroid/media/ImageReader$Builder;
+    invoke-static {p0, p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m$3(Landroid/media/ImageReader$Builder;I)Landroid/media/ImageReader$Builder;
 
     .line 456
     :cond_4
-    invoke-static {p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/media/ImageReader$Builder;)Landroid/media/ImageReader;
+    invoke-static {p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/media/ImageReader$Builder;)Landroid/media/ImageReader;
 
     move-result-object p0
 
@@ -383,7 +383,7 @@
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 374
-    invoke-static {p0, p1, p2}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/hardware/camera2/params/OutputConfiguration;J)V
+    invoke-static {p0, p1, p2}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/hardware/camera2/params/OutputConfiguration;J)V
 
     return-void
 .end method
@@ -398,7 +398,7 @@
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 384
-    invoke-static {p0, p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m$2(Landroid/hardware/camera2/params/OutputConfiguration;I)V
+    invoke-static {p0, p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m$2(Landroid/hardware/camera2/params/OutputConfiguration;I)V
 
     return-void
 .end method
@@ -413,7 +413,7 @@
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 394
-    invoke-static {p0, p1, p2}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m$1(Landroid/hardware/camera2/params/OutputConfiguration;J)V
+    invoke-static {p0, p1, p2}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m$1(Landroid/hardware/camera2/params/OutputConfiguration;J)V
 
     return-void
 .end method
@@ -428,7 +428,7 @@
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 409
-    invoke-static {p0, p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m$1(Landroid/hardware/camera2/params/OutputConfiguration;I)V
+    invoke-static {p0, p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m$1(Landroid/hardware/camera2/params/OutputConfiguration;I)V
 
     return-void
 .end method

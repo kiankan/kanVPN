@@ -316,7 +316,7 @@
 
     const-class v2, Landroidx/compose/ui/semantics/SemanticsPropertiesKt;
 
-    const-string v3, "stateDescription"
+    const-string/jumbo v3, "stateDescription"
 
     const-string v4, "getStateDescription(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Ljava/lang/String;"
 
@@ -496,7 +496,7 @@
 
     new-instance v1, Lkotlin/jvm/internal/MutablePropertyReference1Impl;
 
-    const-string v3, "testTag"
+    const-string/jumbo v3, "testTag"
 
     const-string v4, "getTestTag(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Ljava/lang/String;"
 
@@ -508,7 +508,7 @@
 
     new-instance v1, Lkotlin/jvm/internal/MutablePropertyReference1Impl;
 
-    const-string v3, "textSubstitution"
+    const-string/jumbo v3, "textSubstitution"
 
     const-string v4, "getTextSubstitution(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Landroidx/compose/ui/text/AnnotatedString;"
 
@@ -556,7 +556,7 @@
 
     new-instance v1, Lkotlin/jvm/internal/MutablePropertyReference1Impl;
 
-    const-string v3, "textSelectionRange"
+    const-string/jumbo v3, "textSelectionRange"
 
     const-string v4, "getTextSelectionRange(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)J"
 
@@ -568,7 +568,7 @@
 
     new-instance v1, Lkotlin/jvm/internal/MutablePropertyReference1Impl;
 
-    const-string v3, "textCompositionRange"
+    const-string/jumbo v3, "textCompositionRange"
 
     const-string v4, "getTextCompositionRange(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Landroidx/compose/ui/text/TextRange;"
 

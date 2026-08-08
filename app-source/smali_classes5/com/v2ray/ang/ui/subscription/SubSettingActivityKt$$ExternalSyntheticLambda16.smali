@@ -3,7 +3,7 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Lkotlin/jvm/functions/Function1;
+.implements Lkotlin/jvm/functions/Function2;
 
 
 # instance fields
@@ -24,19 +24,21 @@
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
     .line 0
     iget-object p0, p0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$$ExternalSyntheticLambda16;->f$0:Landroidx/compose/runtime/MutableState;
 
-    check-cast p1, Ljava/lang/Boolean;
+    check-cast p1, Landroidx/compose/runtime/Composer;
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    check-cast p2, Ljava/lang/Integer;
 
-    move-result p1
+    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
-    invoke-static {p0, p1}, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt;->$r8$lambda$QXFNoXOq341PzKVgstQEtJWYxZc(Landroidx/compose/runtime/MutableState;Z)Lkotlin/Unit;
+    move-result p2
+
+    invoke-static {p0, p1, p2}, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt;->SubSettingScreen$lambda$32(Landroidx/compose/runtime/MutableState;Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
 
     move-result-object p0
 

@@ -96,7 +96,7 @@
 .method static constructor <clinit>()V
     .locals 10
 
-    .line 19
+    .line 47
     new-instance v0, Lcom/v2ray/ang/ui/main/ServerMenuAction;
 
     sget v3, Lcom/v2ray/ang/R$string;->share_method_qrcode:I
@@ -113,7 +113,7 @@
 
     sput-object v0, Lcom/v2ray/ang/ui/main/ServerMenuAction;->ShareQRCode:Lcom/v2ray/ang/ui/main/ServerMenuAction;
 
-    .line 20
+    .line 48
     new-instance v1, Lcom/v2ray/ang/ui/main/ServerMenuAction;
 
     sget v4, Lcom/v2ray/ang/R$string;->share_method_clipboard:I
@@ -130,7 +130,7 @@
 
     sput-object v1, Lcom/v2ray/ang/ui/main/ServerMenuAction;->ShareClipboard:Lcom/v2ray/ang/ui/main/ServerMenuAction;
 
-    .line 21
+    .line 49
     new-instance v2, Lcom/v2ray/ang/ui/main/ServerMenuAction;
 
     sget v5, Lcom/v2ray/ang/R$string;->share_method_full_content:I
@@ -147,7 +147,7 @@
 
     sput-object v2, Lcom/v2ray/ang/ui/main/ServerMenuAction;->ShareFullContent:Lcom/v2ray/ang/ui/main/ServerMenuAction;
 
-    .line 22
+    .line 50
     new-instance v3, Lcom/v2ray/ang/ui/main/ServerMenuAction;
 
     sget v6, Lcom/v2ray/ang/R$string;->action_edit:I
@@ -164,7 +164,7 @@
 
     sput-object v3, Lcom/v2ray/ang/ui/main/ServerMenuAction;->Edit:Lcom/v2ray/ang/ui/main/ServerMenuAction;
 
-    .line 23
+    .line 51
     new-instance v4, Lcom/v2ray/ang/ui/main/ServerMenuAction;
 
     sget v7, Lcom/v2ray/ang/R$string;->action_delete:I
@@ -206,16 +206,16 @@
         }
     .end annotation
 
-    .line 14
+    .line 42
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 15
+    .line 43
     iput p3, p0, Lcom/v2ray/ang/ui/main/ServerMenuAction;->labelRes:I
 
-    .line 16
+    .line 44
     iput-boolean p4, p0, Lcom/v2ray/ang/ui/main/ServerMenuAction;->isShareAction:Z
 
-    .line 17
+    .line 45
     iput-boolean p5, p0, Lcom/v2ray/ang/ui/main/ServerMenuAction;->supportsComplexProfiles:Z
 
     return-void
@@ -270,7 +270,7 @@
 .method public final getLabelRes()I
     .locals 0
 
-    .line 15
+    .line 43
     iget p0, p0, Lcom/v2ray/ang/ui/main/ServerMenuAction;->labelRes:I
 
     return p0
@@ -279,7 +279,7 @@
 .method public final getSupportsComplexProfiles()Z
     .locals 0
 
-    .line 17
+    .line 45
     iget-boolean p0, p0, Lcom/v2ray/ang/ui/main/ServerMenuAction;->supportsComplexProfiles:Z
 
     return p0
@@ -288,7 +288,7 @@
 .method public final isShareAction()Z
     .locals 0
 
-    .line 16
+    .line 44
     iget-boolean p0, p0, Lcom/v2ray/ang/ui/main/ServerMenuAction;->isShareAction:Z
 
     return p0

@@ -264,7 +264,7 @@
     .line 243
     new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string v3, "start index must be less than or equal to end index: "
+    const-string/jumbo v3, "start index must be less than or equal to end index: "
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -297,7 +297,7 @@
     .line 245
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v2, "start must be non-negative, but was "
+    const-string/jumbo v2, "start must be non-negative, but was "
 
     invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 

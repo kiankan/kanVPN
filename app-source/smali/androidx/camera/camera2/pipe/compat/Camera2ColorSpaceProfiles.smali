@@ -97,7 +97,7 @@
     iget-object p0, p0, Landroidx/camera/camera2/pipe/compat/Camera2ColorSpaceProfiles;->colorSpaceProfiles:Landroid/hardware/camera2/params/ColorSpaceProfiles;
 
     .line 40
-    invoke-static {p0, p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/hardware/camera2/params/ColorSpaceProfiles;I)Ljava/util/Set;
+    invoke-static {p0, p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/hardware/camera2/params/ColorSpaceProfiles;I)Ljava/util/Set;
 
     move-result-object p0
 
@@ -132,7 +132,7 @@
     move-result-object v0
 
     .line 112
-    invoke-static {v0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Ljava/lang/Object;)Landroid/graphics/ColorSpace$Named;
+    invoke-static {v0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Ljava/lang/Object;)Landroid/graphics/ColorSpace$Named;
 
     move-result-object v0
 
@@ -164,7 +164,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/graphics/ColorSpace$Named;)Ljava/lang/String;
+    invoke-static {v0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/graphics/ColorSpace$Named;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -230,7 +230,7 @@
     iget-object p0, p0, Landroidx/camera/camera2/pipe/compat/Camera2ColorSpaceProfiles;->colorSpaceProfiles:Landroid/hardware/camera2/params/ColorSpaceProfiles;
 
     .line 84
-    invoke-static {p0, p1, p2, p3}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/hardware/camera2/params/ColorSpaceProfiles;IJ)Ljava/util/Set;
+    invoke-static {p0, p1, p2, p3}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/hardware/camera2/params/ColorSpaceProfiles;IJ)Ljava/util/Set;
 
     move-result-object p0
 
@@ -265,7 +265,7 @@
     move-result-object p2
 
     .line 139
-    invoke-static {p2}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Ljava/lang/Object;)Landroid/graphics/ColorSpace$Named;
+    invoke-static {p2}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Ljava/lang/Object;)Landroid/graphics/ColorSpace$Named;
 
     move-result-object p2
 
@@ -297,7 +297,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p2}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/graphics/ColorSpace$Named;)Ljava/lang/String;
+    invoke-static {p2}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/graphics/ColorSpace$Named;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -413,7 +413,7 @@
     iget-object p0, p0, Landroidx/camera/camera2/pipe/compat/Camera2ColorSpaceProfiles;->colorSpaceProfiles:Landroid/hardware/camera2/params/ColorSpaceProfiles;
 
     .line 74
-    invoke-static {p0, v0, p2}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/hardware/camera2/params/ColorSpaceProfiles;Landroid/graphics/ColorSpace$Named;I)Ljava/util/Set;
+    invoke-static {p0, v0, p2}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/hardware/camera2/params/ColorSpaceProfiles;Landroid/graphics/ColorSpace$Named;I)Ljava/util/Set;
 
     move-result-object p0
 
@@ -555,7 +555,7 @@
     iget-object p0, p0, Landroidx/camera/camera2/pipe/compat/Camera2ColorSpaceProfiles;->colorSpaceProfiles:Landroid/hardware/camera2/params/ColorSpaceProfiles;
 
     .line 59
-    invoke-static {p0, v0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/hardware/camera2/params/ColorSpaceProfiles;Landroid/graphics/ColorSpace$Named;)Ljava/util/Set;
+    invoke-static {p0, v0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/hardware/camera2/params/ColorSpaceProfiles;Landroid/graphics/ColorSpace$Named;)Ljava/util/Set;
 
     move-result-object p0
 
@@ -649,7 +649,7 @@
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 97
-    invoke-static {}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m$1()Ljava/lang/Class;
+    invoke-static {}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m$1()Ljava/lang/Class;
 
     move-result-object v0
 

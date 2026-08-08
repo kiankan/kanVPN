@@ -2017,7 +2017,7 @@
 
     move-result-object v0
 
-    const-string v3, "tls"
+    const-string/jumbo v3, "tls"
 
     invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -2083,7 +2083,7 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    const-string v4, "tlshello"
+    const-string/jumbo v4, "tlshello"
 
     if-nez v0, :cond_4
 
@@ -2296,7 +2296,7 @@
 
     .line 654
     :cond_a
-    const-string v4, "tcp"
+    const-string/jumbo v4, "tcp"
 
     invoke-static {v1, v4, v0}, Lcom/v2ray/ang/core/CoreOutboundBuilder;->updateOutboundFragment$prependMask(Lcom/google/gson/JsonObject;Ljava/lang/String;Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$StreamSettingsBean$FinalMaskBean$MaskBean;)V
 
@@ -2907,7 +2907,7 @@
 
     aget v0, v0, v2
 
-    const-string v2, "toLowerCase(...)"
+    const-string/jumbo v2, "toLowerCase(...)"
 
     packed-switch v0, :pswitch_data_0
 
@@ -3156,6 +3156,8 @@
 
     return-object v5
 
+    nop
+
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_2
@@ -3177,7 +3179,7 @@
 
     move-object/from16 v1, p3
 
-    const-string v2, "streamSettings"
+    const-string/jumbo v2, "streamSettings"
 
     invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -3613,7 +3615,7 @@
 
     move-result-object v1
 
-    const-string v4, "tls"
+    const-string/jumbo v4, "tls"
 
     invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -3684,7 +3686,7 @@
 
     move-object/from16 v0, p1
 
-    const-string v1, "streamSettings"
+    const-string/jumbo v1, "streamSettings"
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -5114,7 +5116,7 @@
 .method public final updateOutboundFinalMask(Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$StreamSettingsBean;Lcom/v2ray/ang/dto/entities/ProfileItem;)V
     .locals 0
 
-    const-string p0, "streamSettings"
+    const-string/jumbo p0, "streamSettings"
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

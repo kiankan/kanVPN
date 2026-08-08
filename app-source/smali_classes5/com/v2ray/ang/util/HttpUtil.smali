@@ -1310,7 +1310,7 @@
     .line 155
     :cond_1
     :goto_1
-    const-string v1, "v2rayNG/2.3.2"
+    const-string v1, "v2rayNG/2.3.3"
 
     .line 159
     :goto_2

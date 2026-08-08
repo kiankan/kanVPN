@@ -490,7 +490,7 @@
     if-eqz p0, :cond_0
 
     .line 51
-    const-string v0, "to module com.google.gson"
+    const-string/jumbo v0, "to module com.google.gson"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 

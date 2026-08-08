@@ -3,7 +3,7 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Lkotlin/jvm/functions/Function0;
+.implements Lkotlin/jvm/functions/Function1;
 
 
 # instance fields
@@ -24,13 +24,15 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
     .line 0
     iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainActivity$$ExternalSyntheticLambda7;->f$0:Lcom/v2ray/ang/ui/main/MainActivity;
 
-    invoke-static {p0}, Lcom/v2ray/ang/ui/main/MainActivity;->mainViewModel_delegate$lambda$0(Lcom/v2ray/ang/ui/main/MainActivity;)Landroidx/lifecycle/ViewModelProvider$Factory;
+    check-cast p1, Ljava/lang/String;
+
+    invoke-static {p0, p1}, Lcom/v2ray/ang/ui/main/MainActivity;->importQRcode$lambda$0(Lcom/v2ray/ang/ui/main/MainActivity;Ljava/lang/String;)Lkotlin/Unit;
 
     move-result-object p0
 

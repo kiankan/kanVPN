@@ -53,12 +53,12 @@
     f = "BackupActivity.kt"
     i = {}
     l = {
-        0x43
+        0x45
     }
     m = "invokeSuspend"
     n = {}
     nl = {
-        0x54
+        0x56
     }
     s = {}
     v = 0x2
@@ -171,7 +171,7 @@
 
     move-result-object v0
 
-    .line 66
+    .line 68
     iget v1, p0, Lcom/v2ray/ang/ui/backup/BackupActivity$observeViewModel$1$1;->label:I
 
     const/4 v2, 0x1
@@ -196,7 +196,7 @@
     :cond_1
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 67
+    .line 69
     iget-object p1, p0, Lcom/v2ray/ang/ui/backup/BackupActivity$observeViewModel$1$1;->this$0:Lcom/v2ray/ang/ui/backup/BackupActivity;
 
     invoke-static {p1}, Lcom/v2ray/ang/ui/backup/BackupActivity;->access$getViewModel(Lcom/v2ray/ang/ui/backup/BackupActivity;)Lcom/v2ray/ang/ui/backup/BackupViewModel;
@@ -229,7 +229,7 @@
 
     return-object v0
 
-    .line 84
+    .line 86
     :cond_2
     :goto_0
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/v2ray/ang/ui/compose/DialogKt;->SelectListDialog(Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function0;ZLandroidx/compose/runtime/Composer;II)V
+    value = Lcom/v2ray/ang/ui/compose/DialogKt;->SelectListDialog(Ljava/util/List;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Ljava/lang/String;Ljava/lang/Object;ZLandroidx/compose/runtime/Composer;II)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -37,46 +37,42 @@
 
 
 # instance fields
-.field final synthetic $index:I
-
-.field final synthetic $onSelected:Lkotlin/jvm/functions/Function2;
+.field final synthetic $onSelected:Lkotlin/jvm/functions/Function1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/functions/Function2<",
-            "Ljava/lang/Integer;",
-            "Ljava/lang/String;",
+            "Lkotlin/jvm/functions/Function1<",
+            "TT;",
             "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field final synthetic $option:Ljava/lang/String;
+.field final synthetic $option:Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "TT;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/functions/Function2;ILjava/lang/String;)V
+.method constructor <init>(Lkotlin/jvm/functions/Function1;Ljava/lang/Object;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/functions/Function2<",
-            "-",
-            "Ljava/lang/Integer;",
-            "-",
-            "Ljava/lang/String;",
+            "Lkotlin/jvm/functions/Function1<",
+            "-TT;",
             "Lkotlin/Unit;",
-            ">;I",
-            "Ljava/lang/String;",
-            ")V"
+            ">;TT;)V"
         }
     .end annotation
 
-    iput-object p1, p0, Lcom/v2ray/ang/ui/compose/DialogKt$SelectListDialog$3$1$1$1$1$1;->$onSelected:Lkotlin/jvm/functions/Function2;
+    iput-object p1, p0, Lcom/v2ray/ang/ui/compose/DialogKt$SelectListDialog$3$1$1$1$1$1;->$onSelected:Lkotlin/jvm/functions/Function1;
 
-    iput p2, p0, Lcom/v2ray/ang/ui/compose/DialogKt$SelectListDialog$3$1$1$1$1$1;->$index:I
-
-    iput-object p3, p0, Lcom/v2ray/ang/ui/compose/DialogKt$SelectListDialog$3$1$1$1$1$1;->$option:Ljava/lang/String;
+    iput-object p2, p0, Lcom/v2ray/ang/ui/compose/DialogKt$SelectListDialog$3$1$1$1$1$1;->$option:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -88,7 +84,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
-    .line 214
+    .line 219
     invoke-virtual {p0}, Lcom/v2ray/ang/ui/compose/DialogKt$SelectListDialog$3$1$1$1$1$1;->invoke()V
 
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -97,20 +93,14 @@
 .end method
 
 .method public final invoke()V
-    .locals 2
+    .locals 1
 
-    .line 214
-    iget-object v0, p0, Lcom/v2ray/ang/ui/compose/DialogKt$SelectListDialog$3$1$1$1$1$1;->$onSelected:Lkotlin/jvm/functions/Function2;
+    .line 219
+    iget-object v0, p0, Lcom/v2ray/ang/ui/compose/DialogKt$SelectListDialog$3$1$1$1$1$1;->$onSelected:Lkotlin/jvm/functions/Function1;
 
-    iget v1, p0, Lcom/v2ray/ang/ui/compose/DialogKt$SelectListDialog$3$1$1$1$1$1;->$index:I
+    iget-object p0, p0, Lcom/v2ray/ang/ui/compose/DialogKt$SelectListDialog$3$1$1$1$1$1;->$option:Ljava/lang/Object;
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    iget-object p0, p0, Lcom/v2ray/ang/ui/compose/DialogKt$SelectListDialog$3$1$1$1$1$1;->$option:Ljava/lang/String;
-
-    invoke-interface {v0, v1, p0}, Lkotlin/jvm/functions/Function2;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p0}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

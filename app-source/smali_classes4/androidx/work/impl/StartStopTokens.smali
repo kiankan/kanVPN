@@ -96,7 +96,7 @@
 .method public remove(Landroidx/work/impl/model/WorkSpec;)Landroidx/work/impl/StartStopToken;
     .locals 1
 
-    const-string v0, "spec"
+    const-string/jumbo v0, "spec"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -131,7 +131,7 @@
 .method public tokenFor(Landroidx/work/impl/model/WorkSpec;)Landroidx/work/impl/StartStopToken;
     .locals 1
 
-    const-string v0, "spec"
+    const-string/jumbo v0, "spec"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

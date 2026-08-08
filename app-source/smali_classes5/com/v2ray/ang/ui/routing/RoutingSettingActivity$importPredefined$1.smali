@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;->importPredefined(I)V
+    value = Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;->importPredefined(Lcom/v2ray/ang/enums/RoutingType;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -62,7 +62,7 @@
 
 
 # instance fields
-.field final synthetic $index:I
+.field final synthetic $type:Lcom/v2ray/ang/enums/RoutingType;
 
 .field private synthetic L$0:Ljava/lang/Object;
 
@@ -72,13 +72,13 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;ILkotlin/coroutines/Continuation;)V
+.method constructor <init>(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;Lcom/v2ray/ang/enums/RoutingType;Lkotlin/coroutines/Continuation;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;",
-            "I",
+            "Lcom/v2ray/ang/enums/RoutingType;",
             "Lkotlin/coroutines/Continuation<",
             "-",
             "Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$importPredefined$1;",
@@ -88,7 +88,7 @@
 
     iput-object p1, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$importPredefined$1;->this$0:Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;
 
-    iput p2, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$importPredefined$1;->$index:I
+    iput-object p2, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$importPredefined$1;->$type:Lcom/v2ray/ang/enums/RoutingType;
 
     const/4 p1, 0x2
 
@@ -117,9 +117,9 @@
 
     iget-object v1, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$importPredefined$1;->this$0:Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;
 
-    iget p0, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$importPredefined$1;->$index:I
+    iget-object p0, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$importPredefined$1;->$type:Lcom/v2ray/ang/enums/RoutingType;
 
-    invoke-direct {v0, v1, p0, p2}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$importPredefined$1;-><init>(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1, p0, p2}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$importPredefined$1;-><init>(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;Lcom/v2ray/ang/enums/RoutingType;Lkotlin/coroutines/Continuation;)V
 
     iput-object p1, v0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$importPredefined$1;->L$0:Ljava/lang/Object;
 
@@ -182,14 +182,14 @@
 
     invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
 
-    .line 113
+    .line 129
     iget v0, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$importPredefined$1;->label:I
 
     if-nez v0, :cond_0
 
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 115
+    .line 131
     :try_start_0
     sget-object p1, Lcom/v2ray/ang/handler/SettingsManager;->INSTANCE:Lcom/v2ray/ang/handler/SettingsManager;
 
@@ -197,11 +197,11 @@
 
     check-cast v0, Landroid/content/Context;
 
-    iget v2, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$importPredefined$1;->$index:I
+    iget-object v2, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$importPredefined$1;->$type:Lcom/v2ray/ang/enums/RoutingType;
 
-    invoke-virtual {p1, v0, v2}, Lcom/v2ray/ang/handler/SettingsManager;->resetRoutingRulesetsFromPresets(Landroid/content/Context;I)V
+    invoke-virtual {p1, v0, v2}, Lcom/v2ray/ang/handler/SettingsManager;->resetRoutingRulesetsFromPresets(Landroid/content/Context;Lcom/v2ray/ang/enums/RoutingType;)V
 
-    .line 116
+    .line 132
     invoke-static {}, Lkotlinx/coroutines/Dispatchers;->getMain()Lkotlinx/coroutines/MainCoroutineDispatcher;
 
     move-result-object p1
@@ -239,7 +239,7 @@
 
     move-object p0, v0
 
-    .line 121
+    .line 137
     sget-object p1, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
 
     const-string v0, "Failed to import predefined ruleset"
@@ -250,13 +250,13 @@
 
     invoke-virtual {p1, v1, v0, p0}, Lcom/v2ray/ang/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 123
+    .line 139
     :goto_0
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p0
 
-    .line 113
+    .line 129
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 

@@ -188,29 +188,29 @@
 
     invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
 
-    .line 195
+    .line 183
     iget v0, p0, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel$selectProxyAppAuto$1$1;->label:I
 
     if-nez v0, :cond_0
 
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 196
+    .line 184
     sget-object p1, Lcom/v2ray/ang/util/HttpUtil;->INSTANCE:Lcom/v2ray/ang/util/HttpUtil;
 
-    .line 197
+    .line 185
     new-instance v0, Lcom/v2ray/ang/dto/UrlContentRequest;
 
-    .line 198
+    .line 186
     iget-object v1, p0, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel$selectProxyAppAuto$1$1;->$url:Ljava/lang/String;
 
-    .line 200
+    .line 188
     iget v3, p0, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel$selectProxyAppAuto$1$1;->$httpPort:I
 
-    .line 201
+    .line 189
     iget-object v4, p0, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel$selectProxyAppAuto$1$1;->$proxyUsername:Ljava/lang/String;
 
-    .line 202
+    .line 190
     iget-object v5, p0, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel$selectProxyAppAuto$1$1;->$proxyPassword:Ljava/lang/String;
 
     const/16 v8, 0x60
@@ -223,17 +223,17 @@
 
     const/4 v7, 0x0
 
-    .line 197
+    .line 185
     invoke-direct/range {v0 .. v9}, Lcom/v2ray/ang/dto/UrlContentRequest;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 196
+    .line 184
     invoke-virtual {p1, v0}, Lcom/v2ray/ang/util/HttpUtil;->getUrlContent(Lcom/v2ray/ang/dto/UrlContentRequest;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    .line 195
+    .line 183
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 

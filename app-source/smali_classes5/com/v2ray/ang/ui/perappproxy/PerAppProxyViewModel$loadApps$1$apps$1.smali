@@ -56,12 +56,12 @@
     f = "PerAppProxyViewModel.kt"
     i = {}
     l = {
-        0x81
+        0x65
     }
     m = "invokeSuspend"
     n = {}
     nl = {
-        0x82
+        0x66
     }
     s = {}
     v = 0x2
@@ -69,7 +69,7 @@
 
 
 # instance fields
-.field final synthetic $context:Landroid/content/Context;
+.field final synthetic $applicationContext:Landroid/content/Context;
 
 .field label:I
 
@@ -91,7 +91,7 @@
         }
     .end annotation
 
-    iput-object p1, p0, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel$loadApps$1$apps$1;->$context:Landroid/content/Context;
+    iput-object p1, p0, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel$loadApps$1$apps$1;->$applicationContext:Landroid/content/Context;
 
     iput-object p2, p0, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel$loadApps$1$apps$1;->this$0:Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel;
 
@@ -120,7 +120,7 @@
 
     new-instance p1, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel$loadApps$1$apps$1;
 
-    iget-object v0, p0, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel$loadApps$1$apps$1;->$context:Landroid/content/Context;
+    iget-object v0, p0, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel$loadApps$1$apps$1;->$applicationContext:Landroid/content/Context;
 
     iget-object p0, p0, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel$loadApps$1$apps$1;->this$0:Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel;
 
@@ -182,7 +182,7 @@
 
     move-result-object v0
 
-    .line 128
+    .line 100
     iget v1, p0, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel$loadApps$1$apps$1;->label:I
 
     const/4 v2, 0x1
@@ -207,10 +207,12 @@
     :cond_1
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 129
+    .line 101
     sget-object p1, Lcom/v2ray/ang/util/AppManagerUtil;->INSTANCE:Lcom/v2ray/ang/util/AppManagerUtil;
 
-    iget-object v1, p0, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel$loadApps$1$apps$1;->$context:Landroid/content/Context;
+    iget-object v1, p0, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel$loadApps$1$apps$1;->$applicationContext:Landroid/content/Context;
+
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
     move-object v3, p0
 
@@ -226,12 +228,12 @@
 
     return-object v0
 
-    .line 128
+    .line 100
     :cond_2
     :goto_0
     check-cast p1, Ljava/util/ArrayList;
 
-    .line 130
+    .line 102
     iget-object p0, p0, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel$loadApps$1$apps$1;->this$0:Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel;
 
     check-cast p1, Ljava/util/List;

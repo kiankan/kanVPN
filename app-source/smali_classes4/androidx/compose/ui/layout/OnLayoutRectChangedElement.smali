@@ -284,7 +284,7 @@
 
     move-result-object v1
 
-    const-string v2, "throttleMillis"
+    const-string/jumbo v2, "throttleMillis"
 
     invoke-virtual {v0, v2, v1}, Landroidx/compose/ui/platform/ValueElementSequence;->set(Ljava/lang/String;Ljava/lang/Object;)V
 

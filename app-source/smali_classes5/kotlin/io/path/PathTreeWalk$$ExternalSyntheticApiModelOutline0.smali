@@ -48,6 +48,26 @@
     return-wide v0
 .end method
 
+.method public static bridge synthetic m(Landroid/content/ContentResolver;Landroid/net/Uri;Ljava/lang/String;Landroid/os/Bundle;Landroid/os/CancellationSignal;)Landroid/content/res/AssetFileDescriptor;
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/content/ContentResolver;->openTypedAssetFile(Landroid/net/Uri;Ljava/lang/String;Landroid/os/Bundle;Landroid/os/CancellationSignal;)Landroid/content/res/AssetFileDescriptor;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic m(Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap$Config;
+    .locals 0
+
+    .line 0
+    iget-object p0, p0, Landroid/graphics/BitmapFactory$Options;->outConfig:Landroid/graphics/Bitmap$Config;
+
+    return-object p0
+.end method
+
 .method public static bridge synthetic m(Landroid/net/NetworkRequest;)Landroid/net/NetworkSpecifier;
     .locals 0
 
@@ -680,17 +700,6 @@
     return-object p0
 .end method
 
-.method public static bridge synthetic m(Ljava/nio/file/Path;Ljava/lang/String;[Ljava/nio/file/LinkOption;)Ljava/util/Map;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1, p2}, Ljava/nio/file/Files;->readAttributes(Ljava/nio/file/Path;Ljava/lang/String;[Ljava/nio/file/LinkOption;)Ljava/util/Map;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 .method public static bridge synthetic m(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Ljava/util/Set;
     .locals 0
 
@@ -707,6 +716,24 @@
 
     .line 0
     new-instance v0, Ljava/nio/file/FileSystemException;
+
+    return-void
+.end method
+
+.method public static bridge synthetic m(Landroid/graphics/BitmapFactory$Options;Landroid/graphics/ColorSpace;)V
+    .locals 0
+
+    .line 0
+    iput-object p1, p0, Landroid/graphics/BitmapFactory$Options;->inPreferredColorSpace:Landroid/graphics/ColorSpace;
+
+    return-void
+.end method
+
+.method public static bridge synthetic m(Landroid/graphics/drawable/Drawable;Landroid/graphics/BlendMode;)V
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setTintBlendMode(Landroid/graphics/BlendMode;)V
 
     return-void
 .end method
@@ -961,17 +988,6 @@
     return-object p0
 .end method
 
-.method public static bridge synthetic m$2(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1}, Ljava/nio/file/Files;->createFile(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 .method public static synthetic m$2()V
     .locals 1
 
@@ -1030,28 +1046,6 @@
 
     .line 0
     invoke-static {p0, p1}, Ljava/nio/file/Files;->notExists(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic m$4(Ljava/nio/file/Path;)Ljava/nio/file/Path;
-    .locals 0
-
-    .line 0
-    invoke-interface {p0}, Ljava/nio/file/Path;->toAbsolutePath()Ljava/nio/file/Path;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic m$4(Ljava/nio/file/Path;)Z
-    .locals 0
-
-    .line 0
-    invoke-static {p0}, Ljava/nio/file/Files;->isReadable(Ljava/nio/file/Path;)Z
 
     move-result p0
 

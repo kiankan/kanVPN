@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="config_backup_options">
-        <item>Local</item>
-        <item>WebDAV</item>
+    <string-array name="browser_dialer_mode">
+        <item>تعطيل</item>
+        <item>OkHttp</item>
+        <item>WebView</item>
     </string-array>
     <string-array name="mode_entries">
         <item>VPN</item>
@@ -14,19 +15,15 @@
         <item>تخطي</item>
     </string-array>
     <string-array name="outbound_domain_resolve_method">
-        <item>Do not resolve</item>
-        <item>Resolve and add to DNS Hosts</item>
-        <item>Resolve and replace domain</item>
+        <item>عدم الحل</item>
+        <item>الحل والإضافة إلى مضيفي DNS</item>
+        <item>الحل واستبدال النطاق</item>
     </string-array>
     <string-array name="policy_group_type">
-        <item>Least Ping</item>
-        <item>Least Load</item>
-        <item>Random</item>
-        <item>Round Robin</item>
-    </string-array>
-    <string-array name="share_sub_method">
-        <item>رمز استجابة سريعة (QRcode)</item>
-        <item>تصدير إلى الحافظة</item>
+        <item>أقل زمن استجابة (leastPing)</item>
+        <item>أقل حمل (leastLoad)</item>
+        <item>عشوائي (random)</item>
+        <item>تناوب دائري (roundRobin)</item>
     </string-array>
     <string-array name="ui_mode_night">
         <item>اتبع النظام</item>
@@ -34,8 +31,8 @@
         <item>داكن</item>
     </string-array>
     <string-array name="vpn_bypass_lan">
-        <item>Follow config</item>
-        <item>Bypass</item>
-        <item>Not Bypass</item>
+        <item>اتباع الإعداد</item>
+        <item>تجاوز</item>
+        <item>عدم التجاوز</item>
     </string-array>
 </resources>

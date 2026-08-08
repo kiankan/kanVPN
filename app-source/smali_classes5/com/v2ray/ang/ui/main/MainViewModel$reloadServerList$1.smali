@@ -53,12 +53,12 @@
     f = "MainViewModel.kt"
     i = {}
     l = {
-        0x251
+        0x24f
     }
     m = "invokeSuspend"
     n = {}
     nl = {
-        0x252
+        0x250
     }
     s = {}
     v = 0x2
@@ -182,7 +182,7 @@
 
     move-result-object v0
 
-    .line 592
+    .line 590
     iget v1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$reloadServerList$1;->label:I
 
     const/4 v2, 0x1
@@ -215,7 +215,7 @@
     :cond_1
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 593
+    .line 591
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$reloadServerList$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     iget-object v1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$reloadServerList$1;->$groupId:Ljava/lang/String;
@@ -252,7 +252,7 @@
 
     invoke-static {p0, v0, p1}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$updateGroupUi(Lcom/v2ray/ang/ui/main/MainViewModel;Ljava/lang/String;Ljava/util/List;)V
 
-    .line 594
+    .line 592
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p0

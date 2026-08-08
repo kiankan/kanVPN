@@ -53,7 +53,7 @@
 
     sput-object v0, Lcom/v2ray/ang/ui/server/ComposableSingletons$ServerCustomConfigActivityKt;->INSTANCE:Lcom/v2ray/ang/ui/server/ComposableSingletons$ServerCustomConfigActivityKt;
 
-    .line 315
+    .line 320
     new-instance v0, Lcom/v2ray/ang/ui/server/ComposableSingletons$ServerCustomConfigActivityKt$$ExternalSyntheticLambda0;
 
     invoke-direct {v0}, Lcom/v2ray/ang/ui/server/ComposableSingletons$ServerCustomConfigActivityKt$$ExternalSyntheticLambda0;-><init>()V
@@ -70,7 +70,7 @@
 
     sput-object v0, Lcom/v2ray/ang/ui/server/ComposableSingletons$ServerCustomConfigActivityKt;->lambda$-1976047582:Lkotlin/jvm/functions/Function2;
 
-    .line 322
+    .line 327
     new-instance v0, Lcom/v2ray/ang/ui/server/ComposableSingletons$ServerCustomConfigActivityKt$$ExternalSyntheticLambda1;
 
     invoke-direct {v0}, Lcom/v2ray/ang/ui/server/ComposableSingletons$ServerCustomConfigActivityKt$$ExternalSyntheticLambda1;-><init>()V
@@ -99,7 +99,7 @@
 .method static final lambda_389196487$lambda$0(Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
     .locals 11
 
-    const-string v0, "C323@11395L40,324@11486L46,322@11361L197:ServerCustomConfigActivity.kt#eymktg"
+    const-string v0, "C328@11617L40,329@11708L33,327@11583L184:ServerCustomConfigActivity.kt#eymktg"
 
     invoke-static {p0, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -135,13 +135,13 @@
 
     const/4 v0, -0x1
 
-    const-string v1, "com.v2ray.ang.ui.server.ComposableSingletons$ServerCustomConfigActivityKt.lambda$389196487.<anonymous> (ServerCustomConfigActivity.kt:322)"
+    const-string v1, "com.v2ray.ang.ui.server.ComposableSingletons$ServerCustomConfigActivityKt.lambda$389196487.<anonymous> (ServerCustomConfigActivity.kt:327)"
 
     const v3, 0x1732aac7
 
     invoke-static {v3, p1, v0, v1}, Landroidx/compose/runtime/ComposerKt;->traceEventStart(IIILjava/lang/String;)V
 
-    .line 324
+    .line 329
     :cond_1
     sget p1, Lcom/v2ray/ang/R$drawable;->ic_fab_check:I
 
@@ -149,8 +149,8 @@
 
     move-result-object v3
 
-    .line 325
-    sget p1, Lcom/v2ray/ang/R$string;->menu_item_save_config:I
+    .line 330
+    sget p1, Lcom/v2ray/ang/R$string;->acc_save:I
 
     invoke-static {p1, p0, v2}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
 
@@ -166,7 +166,7 @@
 
     move-object v8, p0
 
-    .line 323
+    .line 328
     invoke-static/range {v3 .. v10}, Landroidx/compose/material3/IconKt;->Icon-ww6aTOc(Landroidx/compose/ui/graphics/painter/Painter;Ljava/lang/String;Landroidx/compose/ui/Modifier;JLandroidx/compose/runtime/Composer;II)V
 
     invoke-static {}, Landroidx/compose/runtime/ComposerKt;->isTraceInProgress()Z
@@ -182,10 +182,10 @@
     :cond_2
     move-object v8, p0
 
-    .line 322
+    .line 327
     invoke-interface {v8}, Landroidx/compose/runtime/Composer;->skipToGroupEnd()V
 
-    .line 327
+    .line 332
     :cond_3
     :goto_1
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -196,7 +196,7 @@
 .method static final lambda__1976047582$lambda$0(Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
     .locals 11
 
-    const-string v0, "C316@11020L42,317@11117L45,315@10982L210:ServerCustomConfigActivity.kt#eymktg"
+    const-string v0, "C321@11252L42,322@11349L35,320@11214L200:ServerCustomConfigActivity.kt#eymktg"
 
     invoke-static {p0, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -232,13 +232,13 @@
 
     const/4 v0, -0x1
 
-    const-string v1, "com.v2ray.ang.ui.server.ComposableSingletons$ServerCustomConfigActivityKt.lambda$-1976047582.<anonymous> (ServerCustomConfigActivity.kt:315)"
+    const-string v1, "com.v2ray.ang.ui.server.ComposableSingletons$ServerCustomConfigActivityKt.lambda$-1976047582.<anonymous> (ServerCustomConfigActivity.kt:320)"
 
     const v3, -0x75c817de
 
     invoke-static {v3, p1, v0, v1}, Landroidx/compose/runtime/ComposerKt;->traceEventStart(IIILjava/lang/String;)V
 
-    .line 317
+    .line 322
     :cond_1
     sget p1, Lcom/v2ray/ang/R$drawable;->ic_delete_24dp:I
 
@@ -246,8 +246,8 @@
 
     move-result-object v3
 
-    .line 318
-    sget p1, Lcom/v2ray/ang/R$string;->menu_item_del_config:I
+    .line 323
+    sget p1, Lcom/v2ray/ang/R$string;->acc_delete:I
 
     invoke-static {p1, p0, v2}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
 
@@ -263,7 +263,7 @@
 
     move-object v8, p0
 
-    .line 316
+    .line 321
     invoke-static/range {v3 .. v10}, Landroidx/compose/material3/IconKt;->Icon-ww6aTOc(Landroidx/compose/ui/graphics/painter/Painter;Ljava/lang/String;Landroidx/compose/ui/Modifier;JLandroidx/compose/runtime/Composer;II)V
 
     invoke-static {}, Landroidx/compose/runtime/ComposerKt;->isTraceInProgress()Z
@@ -279,10 +279,10 @@
     :cond_2
     move-object v8, p0
 
-    .line 315
+    .line 320
     invoke-interface {v8}, Landroidx/compose/runtime/Composer;->skipToGroupEnd()V
 
-    .line 320
+    .line 325
     :cond_3
     :goto_1
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;

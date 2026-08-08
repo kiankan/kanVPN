@@ -99,7 +99,7 @@
 
     invoke-static {v1, v8}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v8, "srcIP"
+    const-string/jumbo v8, "srcIP"
 
     invoke-static {v2, v8}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -128,7 +128,7 @@
 
     .line 409
     :cond_1
-    const-string v8, "tcp"
+    const-string/jumbo v8, "tcp"
 
     invoke-static {v1, v8}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 

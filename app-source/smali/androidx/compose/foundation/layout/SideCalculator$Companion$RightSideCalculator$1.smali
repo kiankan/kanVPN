@@ -76,19 +76,19 @@
     .locals 1
 
     .line 531
-    invoke-static {p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m$1(Landroid/graphics/Insets;)I
+    invoke-static {p1}, Landroidx/activity/BackEventCompat$$ExternalSyntheticApiModelOutline0;->m(Landroid/graphics/Insets;)I
 
     move-result p0
 
-    invoke-static {p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m$2(Landroid/graphics/Insets;)I
+    invoke-static {p1}, Landroidx/activity/BackEventCompat$$ExternalSyntheticApiModelOutline0;->m$1(Landroid/graphics/Insets;)I
 
     move-result v0
 
-    invoke-static {p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/graphics/Insets;)I
+    invoke-static {p1}, Landroidx/activity/BackEventCompat$$ExternalSyntheticApiModelOutline0;->m$3(Landroid/graphics/Insets;)I
 
     move-result p1
 
-    invoke-static {p0, v0, p2, p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(IIII)Landroid/graphics/Insets;
+    invoke-static {p0, v0, p2, p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(IIII)Landroid/graphics/Insets;
 
     move-result-object p0
 
@@ -172,7 +172,7 @@
     .locals 0
 
     .line 526
-    invoke-static {p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m$3(Landroid/graphics/Insets;)I
+    invoke-static {p1}, Landroidx/activity/BackEventCompat$$ExternalSyntheticApiModelOutline0;->m$2(Landroid/graphics/Insets;)I
 
     move-result p0
 

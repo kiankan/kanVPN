@@ -964,7 +964,7 @@
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 633
-    const-string v0, "tileMode="
+    const-string/jumbo v0, "tileMode="
 
     .line 628
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;

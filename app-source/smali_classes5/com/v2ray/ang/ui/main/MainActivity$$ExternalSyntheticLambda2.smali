@@ -30,9 +30,9 @@
     .line 0
     iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainActivity$$ExternalSyntheticLambda2;->f$0:Lcom/v2ray/ang/ui/main/MainActivity;
 
-    check-cast p1, Ljava/lang/String;
+    check-cast p1, Landroid/net/Uri;
 
-    invoke-static {p0, p1}, Lcom/v2ray/ang/ui/main/MainActivity;->$r8$lambda$lokz5rHD826WfRU-3nJzqmn0_BY(Lcom/v2ray/ang/ui/main/MainActivity;Ljava/lang/String;)Lkotlin/Unit;
+    invoke-static {p0, p1}, Lcom/v2ray/ang/ui/main/MainActivity;->importConfigLocal$lambda$0(Lcom/v2ray/ang/ui/main/MainActivity;Landroid/net/Uri;)Lkotlin/Unit;
 
     move-result-object p0
 

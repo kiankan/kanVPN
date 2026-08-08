@@ -214,7 +214,7 @@
 
     aget-object v6, v6, v2
 
-    const-string v7, "text"
+    const-string/jumbo v7, "text"
 
     invoke-virtual {v5, v7, v6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -320,7 +320,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putStringArray(Ljava/lang/String;[Ljava/lang/String;)V
 
     .line 9928
-    const-string v1, "timestamp"
+    const-string/jumbo v1, "timestamp"
 
     invoke-virtual {p0}, Landroidx/core/app/NotificationCompat$CarExtender$UnreadConversation;->getLatestTimestamp()J
 
@@ -377,7 +377,7 @@
     :cond_1
     check-cast v7, Landroid/os/Bundle;
 
-    const-string v8, "text"
+    const-string/jumbo v8, "text"
 
     invoke-virtual {v7, v8}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -513,7 +513,7 @@
     :goto_3
     new-instance v7, Landroidx/core/app/NotificationCompat$CarExtender$UnreadConversation;
 
-    const-string v1, "timestamp"
+    const-string/jumbo v1, "timestamp"
 
     .line 9896
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J

@@ -165,14 +165,14 @@
 .end method
 
 .method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
+    .locals 7
 
     invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
 
     .line 18
     iget v0, p0, Lcom/v2ray/ang/util/AppManagerUtil$loadNetworkAppList$2;->label:I
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_3
 
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
@@ -209,7 +209,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_2
 
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -232,58 +232,46 @@
 
     invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v3
 
     .line 27
-    invoke-virtual {v2, p0}, Landroid/content/pm/ApplicationInfo;->loadIcon(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v7
-
-    if-nez v7, :cond_1
-
-    goto :goto_0
-
-    .line 28
-    :cond_1
     iget v2, v2, Landroid/content/pm/ApplicationInfo;->flags:I
 
-    const/4 v3, 0x1
+    const/4 v4, 0x1
 
-    and-int/2addr v2, v3
+    and-int/2addr v2, v4
 
-    if-lez v2, :cond_2
+    const/4 v5, 0x0
+
+    if-lez v2, :cond_1
 
     goto :goto_1
 
-    :cond_2
-    const/4 v3, 0x0
+    :cond_1
+    move v4, v5
 
+    .line 29
     :goto_1
-    move v8, v3
+    new-instance v2, Lcom/v2ray/ang/dto/AppInfo;
+
+    iget-object v1, v1, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
+
+    const-string v6, "packageName"
+
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-direct {v2, v3, v1, v4, v5}, Lcom/v2ray/ang/dto/AppInfo;-><init>(Ljava/lang/String;Ljava/lang/String;ZI)V
 
     .line 30
-    new-instance v4, Lcom/v2ray/ang/dto/AppInfo;
-
-    iget-object v6, v1, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
-
-    const-string v1, "packageName"
-
-    invoke-static {v6, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const/4 v9, 0x0
-
-    invoke-direct/range {v4 .. v9}, Lcom/v2ray/ang/dto/AppInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;ZI)V
-
-    .line 31
-    invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    :cond_3
+    :cond_2
     return-object v0
 
     .line 18
-    :cond_4
+    :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string p1, "call to \'resume\' before \'invoke\' with coroutine"

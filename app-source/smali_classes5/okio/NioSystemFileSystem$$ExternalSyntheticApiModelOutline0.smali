@@ -121,6 +121,17 @@
     return-object p0
 .end method
 
+.method public static bridge synthetic m(Ljava/nio/file/Path;)Ljava/nio/file/Path;
+    .locals 0
+
+    .line 0
+    invoke-interface {p0}, Ljava/nio/file/Path;->toAbsolutePath()Ljava/nio/file/Path;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method public static bridge synthetic m(Ljava/nio/file/Path;Ljava/lang/String;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;
     .locals 0
 
@@ -148,6 +159,17 @@
 
     .line 0
     invoke-static {p0, p1, p2}, Ljava/nio/file/Files;->move(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic m(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, Ljava/nio/file/Files;->createFile(Ljava/nio/file/Path;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;
 
     move-result-object p0
 
@@ -214,6 +236,17 @@
     return-object p0
 .end method
 
+.method public static bridge synthetic m(Ljava/nio/file/Path;Ljava/lang/String;[Ljava/nio/file/LinkOption;)Ljava/util/Map;
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1, p2}, Ljava/nio/file/Files;->readAttributes(Ljava/nio/file/Path;Ljava/lang/String;[Ljava/nio/file/LinkOption;)Ljava/util/Map;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method public static bridge synthetic m(Landroid/util/CloseGuard;)V
     .locals 0
 
@@ -272,7 +305,7 @@
     .locals 0
 
     .line 0
-    invoke-static {p0}, Ljava/nio/file/Files;->isExecutable(Ljava/nio/file/Path;)Z
+    invoke-static {p0}, Ljava/nio/file/Files;->isReadable(Ljava/nio/file/Path;)Z
 
     move-result p0
 
@@ -319,6 +352,17 @@
     move-result-object p0
 
     return-object p0
+.end method
+
+.method public static bridge synthetic m$1(Ljava/nio/file/Path;)Z
+    .locals 0
+
+    .line 0
+    invoke-static {p0}, Ljava/nio/file/Files;->isExecutable(Ljava/nio/file/Path;)Z
+
+    move-result p0
+
+    return p0
 .end method
 
 .method public static bridge synthetic m$1(Ljava/nio/file/attribute/BasicFileAttributes;)Z

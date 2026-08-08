@@ -83,7 +83,7 @@
 .method public prepare(Ljava/lang/String;)Landroidx/sqlite/SQLiteStatement;
     .locals 1
 
-    const-string v0, "sql"
+    const-string/jumbo v0, "sql"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

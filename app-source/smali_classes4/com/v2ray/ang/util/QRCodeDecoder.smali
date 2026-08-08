@@ -201,7 +201,7 @@
 .method public final createQRCode(Ljava/lang/String;I)Landroid/graphics/Bitmap;
     .locals 8
 
-    const-string v0, "text"
+    const-string/jumbo v0, "text"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

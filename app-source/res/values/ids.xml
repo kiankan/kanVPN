@@ -43,6 +43,7 @@
     <item type="id" name="androidx_window_activity_scope" />
     <item type="id" name="auto_clear_focus_behavior_tag" />
     <item type="id" name="chronometer" />
+    <item type="id" name="coil_request_manager" />
     <item type="id" name="compose_prefetch_scheduler" />
     <item type="id" name="compose_view_saveable_id_tag" />
     <item type="id" name="consume_window_insets_tag" />

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="config_backup_options">
-        <item>Local</item>
-        <item>WebDAV</item>
+    <string-array name="browser_dialer_mode">
+        <item>Tắt</item>
+        <item>OkHttp</item>
+        <item>WebView</item>
     </string-array>
     <string-array name="mode_entries">
         <item>Chế độ VPN</item>
@@ -14,19 +15,15 @@
         <item>Bỏ qua</item>
     </string-array>
     <string-array name="outbound_domain_resolve_method">
-        <item>Do not resolve</item>
-        <item>Resolve and add to DNS Hosts</item>
-        <item>Resolve and replace domain</item>
+        <item>Không phân giải</item>
+        <item>Phân giải và thêm vào DNS Hosts</item>
+        <item>Phân giải và thay thế tên miền</item>
     </string-array>
     <string-array name="policy_group_type">
-        <item>Least Ping</item>
-        <item>Least Load</item>
-        <item>Random</item>
-        <item>Round Robin</item>
-    </string-array>
-    <string-array name="share_sub_method">
-        <item>Xuất gói ra mã QR (Chụp màn hình để lưu)</item>
-        <item>Xuất gói vào Clipboard</item>
+        <item>Ping thấp nhất (leastPing)</item>
+        <item>Tải thấp nhất (leastLoad)</item>
+        <item>Ngẫu nhiên (random)</item>
+        <item>Luân phiên (roundRobin)</item>
     </string-array>
     <string-array name="ui_mode_night">
         <item>Theo hệ thống</item>
@@ -34,8 +31,8 @@
         <item>Tối</item>
     </string-array>
     <string-array name="vpn_bypass_lan">
-        <item>Follow config</item>
-        <item>Bypass</item>
-        <item>Not Bypass</item>
+        <item>Theo cấu hình</item>
+        <item>Bỏ qua</item>
+        <item>Không bỏ qua</item>
     </string-array>
 </resources>

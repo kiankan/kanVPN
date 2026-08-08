@@ -56,7 +56,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "taskExecutor"
+    const-string/jumbo v0, "taskExecutor"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -251,7 +251,7 @@
 
     .line 44
     :cond_0
-    const-string v1, "status"
+    const-string/jumbo v1, "status"
 
     const/4 v2, -0x1
 

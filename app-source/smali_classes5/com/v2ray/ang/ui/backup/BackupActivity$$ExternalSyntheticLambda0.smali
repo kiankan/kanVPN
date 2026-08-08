@@ -3,7 +3,7 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Lkotlin/jvm/functions/Function0;
+.implements Lkotlin/jvm/functions/Function1;
 
 
 # instance fields
@@ -24,13 +24,15 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
     .line 0
     iget-object p0, p0, Lcom/v2ray/ang/ui/backup/BackupActivity$$ExternalSyntheticLambda0;->f$0:Lcom/v2ray/ang/ui/backup/BackupActivity;
 
-    invoke-static {p0}, Lcom/v2ray/ang/ui/backup/BackupActivity;->configBackupOptions_delegate$lambda$0(Lcom/v2ray/ang/ui/backup/BackupActivity;)[Ljava/lang/String;
+    check-cast p1, Landroid/net/Uri;
+
+    invoke-static {p0, p1}, Lcom/v2ray/ang/ui/backup/BackupActivity;->backupViaLocal$lambda$0(Lcom/v2ray/ang/ui/backup/BackupActivity;Landroid/net/Uri;)Lkotlin/Unit;
 
     move-result-object p0
 

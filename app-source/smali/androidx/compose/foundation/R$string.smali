@@ -14,11 +14,11 @@
 
 
 # static fields
-.field public static androidx_compose_foundation_autofill:I = 0x7f0c0004
+.field public static androidx_compose_foundation_autofill:I = 0x7f0c0022
 
-.field public static tooltip_description:I = 0x7f0c01da
+.field public static tooltip_description:I = 0x7f0c0212
 
-.field public static tooltip_label:I = 0x7f0c01db
+.field public static tooltip_label:I = 0x7f0c0213
 
 
 # direct methods

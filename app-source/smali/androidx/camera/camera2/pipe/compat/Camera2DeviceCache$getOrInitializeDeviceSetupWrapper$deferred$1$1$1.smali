@@ -221,7 +221,7 @@
 
     check-cast v5, Landroid/hardware/camera2/CameraManager;
 
-    invoke-static {v5, v6}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/hardware/camera2/CameraManager;Ljava/lang/String;)Z
+    invoke-static {v5, v6}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/hardware/camera2/CameraManager;Ljava/lang/String;)Z
 
     move-result v5
 
@@ -451,7 +451,7 @@
 
     check-cast v5, Landroid/hardware/camera2/CameraManager;
 
-    invoke-static {v5, v6}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/hardware/camera2/CameraManager;Ljava/lang/String;)Landroid/hardware/camera2/CameraDevice$CameraDeviceSetup;
+    invoke-static {v5, v6}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/hardware/camera2/CameraManager;Ljava/lang/String;)Landroid/hardware/camera2/CameraDevice$CameraDeviceSetup;
 
     move-result-object p1
     :try_end_1

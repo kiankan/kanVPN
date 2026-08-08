@@ -31,7 +31,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nMainViewModel.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$removeDuplicateServerAsync$1$1\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,784:1\n2068#2,2:785\n2068#2,2:787\n*S KotlinDebug\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$removeDuplicateServerAsync$1$1\n*L\n492#1:785,2\n499#1:787,2\n*E\n"
+    value = "SMAP\nMainViewModel.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$removeDuplicateServerAsync$1$1\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,782:1\n2068#2,2:783\n2068#2,2:785\n*S KotlinDebug\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$removeDuplicateServerAsync$1$1\n*L\n490#1:783,2\n497#1:785,2\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -169,25 +169,25 @@
 
     invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
 
-    .line 488
+    .line 486
     iget v0, p0, Lcom/v2ray/ang/ui/main/MainViewModel$removeDuplicateServerAsync$1$1;->label:I
 
     if-nez v0, :cond_3
 
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 490
+    .line 488
     :try_start_0
     new-instance p1, Ljava/util/HashSet;
 
     invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
 
-    .line 491
+    .line 489
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 492
+    .line 490
     iget-object v1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$removeDuplicateServerAsync$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {v1}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$currentServers(Lcom/v2ray/ang/ui/main/MainViewModel;)Ljava/util/List;
@@ -196,7 +196,7 @@
 
     check-cast v1, Ljava/lang/Iterable;
 
-    .line 785
+    .line 783
     invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -215,12 +215,12 @@
 
     check-cast v2, Lcom/v2ray/ang/dto/entities/ServersCache;
 
-    .line 493
+    .line 491
     invoke-virtual {v2}, Lcom/v2ray/ang/dto/entities/ServersCache;->getProfile()Lcom/v2ray/ang/dto/entities/ProfileItem;
 
     move-result-object v3
 
-    .line 494
+    .line 492
     invoke-virtual {v3}, Lcom/v2ray/ang/dto/entities/ProfileItem;->getConfigType()Lcom/v2ray/ang/enums/EConfigType;
 
     move-result-object v4
@@ -231,12 +231,12 @@
 
     if-nez v4, :cond_0
 
-    .line 495
+    .line 493
     invoke-virtual {v3}, Lcom/v2ray/ang/dto/entities/ProfileItem;->duplicateIdentity()Lcom/v2ray/ang/dto/entities/ProfileItem;
 
     move-result-object v3
 
-    .line 496
+    .line 494
     invoke-virtual {p1, v3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     move-result v3
@@ -255,7 +255,7 @@
 
     goto :goto_0
 
-    .line 499
+    .line 497
     :cond_1
     move-object p1, v0
 
@@ -263,7 +263,7 @@
 
     iget-object v1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$removeDuplicateServerAsync$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
-    .line 787
+    .line 785
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -281,7 +281,7 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 499
+    .line 497
     invoke-static {v1}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getDataSource$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lcom/v2ray/ang/ui/main/MainDataSource;
 
     move-result-object v3
@@ -290,7 +290,7 @@
 
     goto :goto_1
 
-    .line 500
+    .line 498
     :cond_2
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$removeDuplicateServerAsync$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
@@ -298,7 +298,7 @@
 
     invoke-virtual {p1, v1}, Lcom/v2ray/ang/ui/main/MainViewModel;->setupGroupTab(Z)Lkotlinx/coroutines/Job;
 
-    .line 501
+    .line 499
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$removeDuplicateServerAsync$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {p1}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getDataSource$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lcom/v2ray/ang/ui/main/MainDataSource;
@@ -333,7 +333,7 @@
     :catch_0
     move-exception p1
 
-    .line 505
+    .line 503
     sget-object v0, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
 
     const-string v1, "Delete duplicate failed"
@@ -344,14 +344,14 @@
 
     invoke-virtual {v0, v2, v1, p1}, Lcom/v2ray/ang/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 506
+    .line 504
     iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainViewModel$removeDuplicateServerAsync$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     sget p1, Lcom/v2ray/ang/R$string;->toast_failure:I
 
     invoke-virtual {p0, p1}, Lcom/v2ray/ang/ui/main/MainViewModel;->toastError(I)V
 
-    .line 508
+    .line 506
     :goto_2
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
@@ -360,10 +360,10 @@
     :catch_1
     move-exception p0
 
-    .line 503
+    .line 501
     throw p0
 
-    .line 488
+    .line 486
     :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 

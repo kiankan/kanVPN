@@ -158,7 +158,7 @@
     const/16 p0, 0x15
 
     .line 49
-    const-string v0, "statement is closed"
+    const-string/jumbo v0, "statement is closed"
 
     invoke-static {p0, v0}, Landroidx/sqlite/SQLite;->throwSQLiteException(ILjava/lang/String;)Ljava/lang/Void;
 

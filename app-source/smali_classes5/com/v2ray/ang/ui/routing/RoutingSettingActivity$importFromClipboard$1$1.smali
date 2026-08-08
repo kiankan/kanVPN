@@ -171,29 +171,29 @@
 
     invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
 
-    .line 135
+    .line 151
     iget v0, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$importFromClipboard$1$1;->label:I
 
     if-nez v0, :cond_1
 
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 136
+    .line 152
     iget-boolean p1, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$importFromClipboard$1$1;->$result:Z
 
-    .line 140
+    .line 156
     iget-object v0, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$importFromClipboard$1$1;->this$0:Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;
 
     if-eqz p1, :cond_0
 
-    .line 137
+    .line 153
     invoke-static {v0}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;->access$getViewModel(Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;)Lcom/v2ray/ang/ui/routing/RoutingSettingsViewModel;
 
     move-result-object p1
 
     invoke-virtual {p1}, Lcom/v2ray/ang/ui/routing/RoutingSettingsViewModel;->reload()V
 
-    .line 138
+    .line 154
     iget-object p0, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivity$importFromClipboard$1$1;->this$0:Lcom/v2ray/ang/ui/routing/RoutingSettingActivity;
 
     check-cast p0, Landroid/content/Context;
@@ -204,7 +204,7 @@
 
     goto :goto_0
 
-    .line 140
+    .line 156
     :cond_0
     check-cast v0, Landroid/content/Context;
 
@@ -212,13 +212,13 @@
 
     invoke-static {v0, p0}, Lcom/v2ray/ang/extension/ToastExtKt;->toastError(Landroid/content/Context;I)V
 
-    .line 142
+    .line 158
     :goto_0
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p0
 
-    .line 135
+    .line 151
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 

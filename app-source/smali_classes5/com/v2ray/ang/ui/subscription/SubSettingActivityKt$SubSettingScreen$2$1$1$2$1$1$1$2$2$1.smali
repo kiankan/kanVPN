@@ -61,7 +61,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 226
+    .line 228
     check-cast p1, Ljava/lang/Boolean;
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -80,7 +80,7 @@
 
     move-object/from16 v0, p0
 
-    .line 227
+    .line 229
     iget-object v1, v0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$SubSettingScreen$2$1$1$2$1$1$1$2$2$1;->$subCache:Lcom/v2ray/ang/dto/entities/SubscriptionCache;
 
     invoke-virtual {v1}, Lcom/v2ray/ang/dto/entities/SubscriptionCache;->getSubscription()Lcom/v2ray/ang/dto/entities/SubscriptionItem;
@@ -123,10 +123,10 @@
 
     move/from16 v2, p1
 
-    .line 228
+    .line 230
     invoke-virtual {v1, v2}, Lcom/v2ray/ang/dto/entities/SubscriptionItem;->setEnabled(Z)V
 
-    .line 229
+    .line 231
     iget-object v2, v0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$SubSettingScreen$2$1$1$2$1$1$1$2$2$1;->$viewModel:Lcom/v2ray/ang/ui/subscription/SubscriptionsViewModel;
 
     iget-object v0, v0, Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt$SubSettingScreen$2$1$1$2$1$1$1$2$2$1;->$subCache:Lcom/v2ray/ang/dto/entities/SubscriptionCache;

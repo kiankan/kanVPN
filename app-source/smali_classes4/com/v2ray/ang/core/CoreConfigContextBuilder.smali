@@ -550,7 +550,7 @@
 .method static final resolveFallbackOutbounds$lambda$4(Ljava/lang/String;)Lcom/v2ray/ang/dto/CoreConfigContext$ResolvedOutbound;
     .locals 4
 
-    const-string v0, "tag"
+    const-string/jumbo v0, "tag"
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

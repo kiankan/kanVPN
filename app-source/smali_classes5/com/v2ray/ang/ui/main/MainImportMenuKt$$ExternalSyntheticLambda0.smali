@@ -3,34 +3,32 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Lkotlin/jvm/functions/Function0;
-
-
-# instance fields
-.field public final synthetic f$0:Lkotlin/jvm/functions/Function1;
+.implements Lkotlin/jvm/functions/Function1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lkotlin/jvm/functions/Function1;)V
+.method public synthetic constructor <init>()V
     .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/v2ray/ang/ui/main/MainImportMenuKt$$ExternalSyntheticLambda0;->f$0:Lkotlin/jvm/functions/Function1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
     .line 0
-    iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainImportMenuKt$$ExternalSyntheticLambda0;->f$0:Lkotlin/jvm/functions/Function1;
+    check-cast p1, Lcom/v2ray/ang/ui/main/ImportMenuAction;
 
-    invoke-static {p0}, Lcom/v2ray/ang/ui/main/MainImportMenuKt;->$r8$lambda$uUQRLScjRjbR8ff997AsmLktgjM(Lkotlin/jvm/functions/Function1;)Lkotlin/Unit;
+    invoke-static {p1}, Lcom/v2ray/ang/ui/main/MainImportMenuKt;->$r8$lambda$OCs_X_Mt2MBpRvd2nIrkSG3aYtc(Lcom/v2ray/ang/ui/main/ImportMenuAction;)I
+
+    move-result p0
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
 

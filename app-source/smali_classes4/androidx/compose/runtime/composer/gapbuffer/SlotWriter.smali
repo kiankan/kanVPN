@@ -4550,7 +4550,7 @@
     if-nez v1, :cond_3
 
     .line 1900
-    const-string v0, "startGroup/endGroup mismatch while inserting"
+    const-string/jumbo v0, "startGroup/endGroup mismatch while inserting"
 
     .line 4326
     invoke-static {v0}, Landroidx/compose/runtime/ComposerKt;->composeImmediateRuntimeError(Ljava/lang/String;)V

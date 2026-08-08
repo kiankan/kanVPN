@@ -185,7 +185,7 @@
 .method static final lambda__1124637166$lambda$0(Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
     .locals 11
 
-    const-string v0, "C230@8174L42,230@8239L45,230@8169L116:ServerProxyChainActivity.kt#eymktg"
+    const-string v0, "C230@8174L42,230@8239L35,230@8169L106:ServerProxyChainActivity.kt#eymktg"
 
     invoke-static {p0, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -235,7 +235,7 @@
 
     move-result-object v3
 
-    sget p1, Lcom/v2ray/ang/R$string;->menu_item_del_config:I
+    sget p1, Lcom/v2ray/ang/R$string;->acc_delete:I
 
     invoke-static {p1, p0, v2}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
 
@@ -280,7 +280,7 @@
 .method static final lambda__289922291$lambda$0(Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
     .locals 11
 
-    const-string v0, "C234@8436L40,234@8499L46,234@8431L115:ServerProxyChainActivity.kt#eymktg"
+    const-string v0, "C234@8426L40,234@8489L33,234@8421L102:ServerProxyChainActivity.kt#eymktg"
 
     invoke-static {p0, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -330,7 +330,7 @@
 
     move-result-object v3
 
-    sget p1, Lcom/v2ray/ang/R$string;->menu_item_save_config:I
+    sget p1, Lcom/v2ray/ang/R$string;->acc_save:I
 
     invoke-static {p1, p0, v2}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
 
@@ -385,7 +385,7 @@
 
     invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v2, "C278@9941L51,279@10036L10,277@9908L257:ServerProxyChainActivity.kt#eymktg"
+    const-string v2, "C278@9945L51,279@10040L10,277@9912L257:ServerProxyChainActivity.kt#eymktg"
 
     invoke-static {v0, v2}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -551,7 +551,7 @@
 .method static final lambda__611487831$lambda$0(Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
     .locals 11
 
-    const-string v0, "C249@9002L39,249@8997L80:ServerProxyChainActivity.kt#eymktg"
+    const-string v0, "C249@8979L39,249@9041L39,249@8974L107:ServerProxyChainActivity.kt#eymktg"
 
     invoke-static {p0, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -601,13 +601,15 @@
 
     move-result-object v3
 
-    sget p1, Landroidx/compose/ui/graphics/painter/Painter;->$stable:I
+    sget p1, Lcom/v2ray/ang/R$string;->acc_add_member:I
 
-    or-int/lit8 v9, p1, 0x30
+    invoke-static {p1, p0, v2}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
+
+    move-result-object v4
+
+    sget v9, Landroidx/compose/ui/graphics/painter/Painter;->$stable:I
 
     const/16 v10, 0xc
-
-    const-string v4, "Add member"
 
     const/4 v5, 0x0
 
@@ -644,7 +646,7 @@
 .method static final lambda__626368650$lambda$0(Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
     .locals 11
 
-    const-string v0, "C321@12410L42,320@12368L185:ServerProxyChainActivity.kt#eymktg"
+    const-string v0, "C321@12414L42,322@12515L35,320@12372L212:ServerProxyChainActivity.kt#eymktg"
 
     invoke-static {p0, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -695,14 +697,15 @@
     move-result-object v3
 
     .line 323
-    sget p1, Landroidx/compose/ui/graphics/painter/Painter;->$stable:I
+    sget p1, Lcom/v2ray/ang/R$string;->acc_remove:I
 
-    or-int/lit8 v9, p1, 0x30
+    invoke-static {p1, p0, v2}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
+
+    move-result-object v4
+
+    sget v9, Landroidx/compose/ui/graphics/painter/Painter;->$stable:I
 
     const/16 v10, 0xc
-
-    .line 321
-    const-string v4, "Remove"
 
     const/4 v5, 0x0
 
@@ -710,6 +713,7 @@
 
     move-object v8, p0
 
+    .line 321
     invoke-static/range {v3 .. v10}, Landroidx/compose/material3/IconKt;->Icon-ww6aTOc(Landroidx/compose/ui/graphics/painter/Painter;Ljava/lang/String;Landroidx/compose/ui/Modifier;JLandroidx/compose/runtime/Composer;II)V
 
     invoke-static {}, Landroidx/compose/runtime/ComposerKt;->isTraceInProgress()Z

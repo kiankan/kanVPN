@@ -3,38 +3,46 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Lkotlin/jvm/functions/Function2;
+.implements Lkotlin/jvm/functions/Function1;
 
 
 # instance fields
-.field public final synthetic f$0:Landroidx/compose/runtime/MutableState;
+.field public final synthetic f$0:Lkotlinx/coroutines/CoroutineScope;
+
+.field public final synthetic f$1:Landroidx/compose/foundation/pager/PagerState;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/compose/runtime/MutableState;)V
+.method public synthetic constructor <init>(Lkotlinx/coroutines/CoroutineScope;Landroidx/compose/foundation/pager/PagerState;)V
     .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$$ExternalSyntheticLambda1;->f$0:Landroidx/compose/runtime/MutableState;
+    iput-object p1, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$$ExternalSyntheticLambda1;->f$0:Lkotlinx/coroutines/CoroutineScope;
+
+    iput-object p2, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$$ExternalSyntheticLambda1;->f$1:Landroidx/compose/foundation/pager/PagerState;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
     .line 0
-    iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$$ExternalSyntheticLambda1;->f$0:Landroidx/compose/runtime/MutableState;
+    iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$$ExternalSyntheticLambda1;->f$0:Lkotlinx/coroutines/CoroutineScope;
 
-    check-cast p1, Ljava/lang/String;
+    iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$$ExternalSyntheticLambda1;->f$1:Landroidx/compose/foundation/pager/PagerState;
 
-    check-cast p2, Lcom/v2ray/ang/dto/entities/ProfileItem;
+    check-cast p1, Ljava/lang/Integer;
 
-    invoke-static {p0, p1, p2}, Lcom/v2ray/ang/ui/main/MainScreenKt;->$r8$lambda$KtM2DaOSQXkpYWmVwp7s8fNSPc8(Landroidx/compose/runtime/MutableState;Ljava/lang/String;Lcom/v2ray/ang/dto/entities/ProfileItem;)Lkotlin/Unit;
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    invoke-static {v0, p0, p1}, Lcom/v2ray/ang/ui/main/MainScreenKt;->$r8$lambda$Btx02LpoZb3fllIh5wa_nsmUlo8(Lkotlinx/coroutines/CoroutineScope;Landroidx/compose/foundation/pager/PagerState;I)Lkotlin/Unit;
 
     move-result-object p0
 

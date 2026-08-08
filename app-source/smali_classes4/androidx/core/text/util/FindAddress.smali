@@ -1154,7 +1154,7 @@
     .line 285
     rem-int/lit8 v3, v1, 0xa
 
-    const-string v4, "th"
+    const-string/jumbo v4, "th"
 
     if-eq v3, v2, :cond_8
 
@@ -1222,7 +1222,7 @@
     goto :goto_3
 
     :cond_9
-    const-string v4, "st"
+    const-string/jumbo v4, "st"
 
     :goto_3
     invoke-virtual {p0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z

@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="config_backup_options">
-        <item>本地</item>
-        <item>WebDAV</item>
+    <string-array name="browser_dialer_mode">
+        <item>禁用</item>
+        <item>OkHttp</item>
+        <item>WebView</item>
     </string-array>
     <string-array name="mode_entries">
         <item>VPN</item>
         <item>仅代理</item>
     </string-array>
     <string-array name="mux_xudp_quic_entries">
-        <item>不代理</item>
-        <item>多路复用</item>
-        <item>原生</item>
+        <item>拒绝</item>
+        <item>允许</item>
+        <item>跳过</item>
     </string-array>
     <string-array name="outbound_domain_resolve_method">
         <item>不解析</item>
@@ -19,21 +20,10 @@
         <item>解析后替换原域名</item>
     </string-array>
     <string-array name="policy_group_type">
-        <item>最低延迟</item>
-        <item>最稳定</item>
-        <item>随机选择</item>
-        <item>轮询</item>
-    </string-array>
-    <string-array name="preset_rulesets">
-        <item>绕过大陆 (Whitelist)</item>
-        <item>黑名单 (Blacklist)</item>
-        <item>全局 (Global)</item>
-        <item>伊朗 (Iran)</item>
-        <item>俄罗斯白名单 (Russia Whitelist)</item>
-    </string-array>
-    <string-array name="share_sub_method">
-        <item>二维码</item>
-        <item>导出至剪贴板</item>
+        <item>最低延迟 (leastPing)</item>
+        <item>最低负载 (leastLoad)</item>
+        <item>随机选择 (random)</item>
+        <item>轮询 (roundRobin)</item>
     </string-array>
     <string-array name="ui_mode_night">
         <item>跟随系统</item>

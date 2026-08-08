@@ -720,7 +720,7 @@
 .method public static final createWorkManagerScope(Landroidx/work/impl/utils/taskexecutor/TaskExecutor;)Lkotlinx/coroutines/CoroutineScope;
     .locals 1
 
-    const-string v0, "taskExecutor"
+    const-string/jumbo v0, "taskExecutor"
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

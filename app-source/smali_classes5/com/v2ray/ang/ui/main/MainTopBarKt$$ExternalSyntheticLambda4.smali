@@ -7,21 +7,17 @@
 
 
 # instance fields
-.field public final synthetic f$0:Lkotlin/jvm/functions/Function0;
-
-.field public final synthetic f$1:Landroidx/compose/runtime/MutableState;
+.field public final synthetic f$0:Landroidx/compose/runtime/MutableState;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/MutableState;)V
+.method public synthetic constructor <init>(Landroidx/compose/runtime/MutableState;)V
     .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/v2ray/ang/ui/main/MainTopBarKt$$ExternalSyntheticLambda4;->f$0:Lkotlin/jvm/functions/Function0;
-
-    iput-object p2, p0, Lcom/v2ray/ang/ui/main/MainTopBarKt$$ExternalSyntheticLambda4;->f$1:Landroidx/compose/runtime/MutableState;
+    iput-object p1, p0, Lcom/v2ray/ang/ui/main/MainTopBarKt$$ExternalSyntheticLambda4;->f$0:Landroidx/compose/runtime/MutableState;
 
     return-void
 .end method
@@ -29,14 +25,12 @@
 
 # virtual methods
 .method public final invoke()Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainTopBarKt$$ExternalSyntheticLambda4;->f$0:Lkotlin/jvm/functions/Function0;
+    iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainTopBarKt$$ExternalSyntheticLambda4;->f$0:Landroidx/compose/runtime/MutableState;
 
-    iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainTopBarKt$$ExternalSyntheticLambda4;->f$1:Landroidx/compose/runtime/MutableState;
-
-    invoke-static {v0, p0}, Lcom/v2ray/ang/ui/main/MainTopBarKt;->$r8$lambda$gSi0GCvGHfxPo9QEBRkSrzmRHBM(Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/MutableState;)Lkotlin/Unit;
+    invoke-static {p0}, Lcom/v2ray/ang/ui/main/MainTopBarKt;->$r8$lambda$k7S7LJM0TobKkFFbRkqqCC8lQhI(Landroidx/compose/runtime/MutableState;)Lkotlin/Unit;
 
     move-result-object p0
 

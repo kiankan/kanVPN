@@ -69,7 +69,7 @@
     const/4 v0, 0x1
 
     .line 58
-    invoke-static {p0, v0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/app/ActivityOptions;I)Landroid/app/ActivityOptions;
+    invoke-static {p0, v0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/app/ActivityOptions;I)Landroid/app/ActivityOptions;
 
     move-result-object p0
 
@@ -79,7 +79,7 @@
     move-result-object p0
 
     .line 56
-    invoke-static {p1, p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/app/PendingIntent;Landroid/os/Bundle;)V
+    invoke-static {p1, p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/app/PendingIntent;Landroid/os/Bundle;)V
     :try_end_0
     .catch Landroid/app/PendingIntent$CanceledException; {:try_start_0 .. :try_end_0} :catch_0
 

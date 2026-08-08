@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nUserAssetActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 UserAssetActivity.kt\ncom/v2ray/ang/ui/userasset/UserAssetActivity\n+ 2 ActivityViewModelLazy.kt\nandroidx/activity/ActivityViewModelLazyKt\n+ 3 Composer.kt\nandroidx/compose/runtime/ComposerKt\n+ 4 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 5 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,416:1\n70#2,11:417\n1047#3,6:428\n1047#3,6:434\n1047#3,6:440\n1047#3,6:446\n1047#3,6:452\n1047#3,6:458\n1047#3,6:464\n1047#3,6:470\n1#4:476\n1960#5,3:477\n*S KotlinDebug\n*F\n+ 1 UserAssetActivity.kt\ncom/v2ray/ang/ui/userasset/UserAssetActivity\n*L\n74#1:417,11\n94#1:428,6\n95#1:434,6\n100#1:440,6\n101#1:446,6\n102#1:452,6\n103#1:458,6\n104#1:464,6\n107#1:470,6\n141#1:477,3\n*E\n"
+    value = "SMAP\nUserAssetActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 UserAssetActivity.kt\ncom/v2ray/ang/ui/userasset/UserAssetActivity\n+ 2 ActivityViewModelLazy.kt\nandroidx/activity/ActivityViewModelLazyKt\n+ 3 Composer.kt\nandroidx/compose/runtime/ComposerKt\n+ 4 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 5 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,417:1\n70#2,11:418\n1047#3,6:429\n1047#3,6:435\n1047#3,6:441\n1047#3,6:447\n1047#3,6:453\n1047#3,6:459\n1047#3,6:465\n1047#3,6:471\n1#4:477\n1960#5,3:478\n*S KotlinDebug\n*F\n+ 1 UserAssetActivity.kt\ncom/v2ray/ang/ui/userasset/UserAssetActivity\n*L\n80#1:418,11\n100#1:429,6\n101#1:435,6\n106#1:441,6\n107#1:447,6\n108#1:453,6\n109#1:459,6\n110#1:465,6\n113#1:471,6\n147#1:478,3\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -206,22 +206,22 @@
 .method public constructor <init>()V
     .locals 7
 
-    .line 72
+    .line 78
     invoke-direct {p0}, Lcom/v2ray/ang/ui/base/HelperBaseComponentActivity;-><init>()V
 
-    .line 74
+    .line 80
     move-object v0, p0
 
     check-cast v0, Landroidx/activity/ComponentActivity;
 
-    .line 421
+    .line 422
     new-instance v1, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$special$$inlined$viewModels$default$1;
 
     invoke-direct {v1, v0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$special$$inlined$viewModels$default$1;-><init>(Landroidx/activity/ComponentActivity;)V
 
     check-cast v1, Lkotlin/jvm/functions/Function0;
 
-    .line 423
+    .line 424
     new-instance v2, Landroidx/lifecycle/ViewModelLazy;
 
     const-class v3, Lcom/v2ray/ang/ui/userasset/UserAssetViewModel;
@@ -230,14 +230,14 @@
 
     move-result-object v3
 
-    .line 425
+    .line 426
     new-instance v4, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$special$$inlined$viewModels$default$2;
 
     invoke-direct {v4, v0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$special$$inlined$viewModels$default$2;-><init>(Landroidx/activity/ComponentActivity;)V
 
     check-cast v4, Lkotlin/jvm/functions/Function0;
 
-    .line 427
+    .line 428
     new-instance v5, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$special$$inlined$viewModels$default$3;
 
     const/4 v6, 0x0
@@ -246,15 +246,15 @@
 
     check-cast v5, Lkotlin/jvm/functions/Function0;
 
-    .line 423
+    .line 424
     invoke-direct {v2, v3, v4, v1, v5}, Landroidx/lifecycle/ViewModelLazy;-><init>(Lkotlin/reflect/KClass;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;)V
 
     check-cast v2, Lkotlin/Lazy;
 
-    .line 74
+    .line 80
     iput-object v2, p0, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->viewModel$delegate:Lkotlin/Lazy;
 
-    .line 75
+    .line 81
     new-instance v0, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$$ExternalSyntheticLambda2;
 
     invoke-direct {v0, p0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$$ExternalSyntheticLambda2;-><init>(Lcom/v2ray/ang/ui/userasset/UserAssetActivity;)V
@@ -267,7 +267,7 @@
 
     const/4 v0, 0x0
 
-    .line 76
+    .line 82
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
@@ -278,7 +278,7 @@
 
     iput-object v1, p0, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->isLoadingState:Lkotlinx/coroutines/flow/MutableStateFlow;
 
-    .line 77
+    .line 83
     const-string v1, ""
 
     invoke-static {v1}, Lkotlinx/coroutines/flow/StateFlowKt;->MutableStateFlow(Ljava/lang/Object;)Lkotlinx/coroutines/flow/MutableStateFlow;
@@ -287,7 +287,7 @@
 
     iput-object v1, p0, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->geoFilesSourceState:Lkotlinx/coroutines/flow/MutableStateFlow;
 
-    .line 78
+    .line 84
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -304,7 +304,7 @@
 .method private static final ScreenContent$lambda$0$0(Lcom/v2ray/ang/ui/userasset/UserAssetActivity;)Lkotlin/Unit;
     .locals 0
 
-    .line 94
+    .line 100
     invoke-virtual {p0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->finish()V
 
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -319,22 +319,22 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 96
+    .line 102
     sget-object v0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v1, "pref_geo_files_sources"
 
     invoke-virtual {v0, v1, p1}, Lcom/v2ray/ang/handler/MmkvManager;->encodeSettings(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 97
+    .line 103
     iget-object v0, p0, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->geoFilesSourceState:Lkotlinx/coroutines/flow/MutableStateFlow;
 
     invoke-interface {v0, p1}, Lkotlinx/coroutines/flow/MutableStateFlow;->setValue(Ljava/lang/Object;)V
 
-    .line 98
+    .line 104
     invoke-virtual {p0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->refreshData()V
 
-    .line 99
+    .line 105
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p0
@@ -343,7 +343,7 @@
 .method private static final ScreenContent$lambda$2$0(Lcom/v2ray/ang/ui/userasset/UserAssetActivity;)Lkotlin/Unit;
     .locals 0
 
-    .line 100
+    .line 106
     invoke-direct {p0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->showFileChooser()V
 
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -354,7 +354,7 @@
 .method private static final ScreenContent$lambda$3$0(Lcom/v2ray/ang/ui/userasset/UserAssetActivity;)Lkotlin/Unit;
     .locals 3
 
-    .line 101
+    .line 107
     new-instance v0, Landroid/content/Intent;
 
     move-object v1, p0
@@ -375,7 +375,7 @@
 .method private static final ScreenContent$lambda$4$0(Lcom/v2ray/ang/ui/userasset/UserAssetActivity;)Lkotlin/Unit;
     .locals 0
 
-    .line 102
+    .line 108
     invoke-direct {p0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->importAssetFromQRcode()Z
 
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -386,7 +386,7 @@
 .method private static final ScreenContent$lambda$5$0(Lcom/v2ray/ang/ui/userasset/UserAssetActivity;)Lkotlin/Unit;
     .locals 0
 
-    .line 103
+    .line 109
     invoke-direct {p0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->downloadGeoFiles()V
 
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -401,7 +401,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 105
+    .line 111
     new-instance v0, Landroid/content/Intent;
 
     move-object v1, p0
@@ -420,7 +420,7 @@
 
     invoke-virtual {p0, p1}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 106
+    .line 112
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p0
@@ -433,7 +433,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 108
+    .line 114
     invoke-direct {p0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->getViewModel()Lcom/v2ray/ang/ui/userasset/UserAssetViewModel;
 
     move-result-object v0
@@ -485,7 +485,7 @@
 
     if-eqz v1, :cond_5
 
-    .line 110
+    .line 116
     invoke-virtual {p0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->getExtDir()Ljava/io/File;
 
     move-result-object v0
@@ -538,16 +538,16 @@
 
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
-    .line 111
+    .line 117
     :cond_4
     sget-object v0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     invoke-virtual {v0, p1}, Lcom/v2ray/ang/handler/MmkvManager;->removeAssetUrl(Ljava/lang/String;)V
 
-    .line 112
+    .line 118
     invoke-virtual {p0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->initAssets()V
 
-    .line 114
+    .line 120
     :cond_5
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
@@ -573,7 +573,7 @@
 .method public static final synthetic access$getViewModel(Lcom/v2ray/ang/ui/userasset/UserAssetActivity;)Lcom/v2ray/ang/ui/userasset/UserAssetViewModel;
     .locals 0
 
-    .line 72
+    .line 78
     invoke-direct {p0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->getViewModel()Lcom/v2ray/ang/ui/userasset/UserAssetViewModel;
 
     move-result-object p0
@@ -584,7 +584,7 @@
 .method public static final synthetic access$isLoadingState$p(Lcom/v2ray/ang/ui/userasset/UserAssetActivity;)Lkotlinx/coroutines/flow/MutableStateFlow;
     .locals 0
 
-    .line 72
+    .line 78
     iget-object p0, p0, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->isLoadingState:Lkotlinx/coroutines/flow/MutableStateFlow;
 
     return-object p0
@@ -593,7 +593,7 @@
 .method private final copyFile(Landroid/net/Uri;)Ljava/lang/String;
     .locals 7
 
-    .line 155
+    .line 161
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->getExtDir()Ljava/io/File;
@@ -617,7 +617,7 @@
     :cond_0
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 156
+    .line 162
     invoke-virtual {p0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -635,7 +635,7 @@
 
     new-instance v2, Ljava/io/FileOutputStream;
 
-    .line 157
+    .line 163
     invoke-direct {v2, v0}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
     check-cast v2, Ljava/io/Closeable;
@@ -651,7 +651,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 158
+    .line 164
     check-cast v3, Ljava/io/OutputStream;
 
     const/4 v5, 0x0
@@ -660,7 +660,7 @@
 
     invoke-static {v1, v3, v5, v6, v4}, Lkotlin/io/ByteStreamsKt;->copyTo$default(Ljava/io/InputStream;Ljava/io/OutputStream;IILjava/lang/Object;)J
 
-    .line 159
+    .line 165
     :cond_1
     move-object v1, p0
 
@@ -670,27 +670,27 @@
 
     invoke-static {v1, v3}, Lcom/v2ray/ang/extension/ToastExtKt;->toastSuccess(Landroid/content/Context;I)V
 
-    .line 160
+    .line 166
     invoke-virtual {p0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->refreshData()V
 
-    .line 161
+    .line 167
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 157
+    .line 163
     :try_start_2
     invoke-static {v2, v4}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
-    .line 162
+    .line 168
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 156
+    .line 162
     invoke-static {p1, v4}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
-    .line 163
+    .line 169
     invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object p0
@@ -704,7 +704,7 @@
     :catchall_0
     move-exception p0
 
-    .line 157
+    .line 163
     :try_start_3
     throw p0
     :try_end_3
@@ -723,7 +723,7 @@
     :catchall_2
     move-exception p0
 
-    .line 156
+    .line 162
     :try_start_5
     throw p0
     :try_end_5
@@ -740,10 +740,10 @@
 .method private final downloadGeoFiles()V
     .locals 12
 
-    .line 205
+    .line 211
     invoke-virtual {p0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->refreshData()V
 
-    .line 206
+    .line 212
     iget-object v0, p0, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->isLoadingState:Lkotlinx/coroutines/flow/MutableStateFlow;
 
     const/4 v1, 0x1
@@ -754,7 +754,7 @@
 
     invoke-interface {v0, v1}, Lkotlinx/coroutines/flow/MutableStateFlow;->setValue(Ljava/lang/Object;)V
 
-    .line 207
+    .line 213
     move-object v0, p0
 
     check-cast v0, Landroid/content/Context;
@@ -763,28 +763,28 @@
 
     invoke-static {v0, v1}, Lcom/v2ray/ang/extension/ToastExtKt;->toast(Landroid/content/Context;I)V
 
-    .line 209
+    .line 215
     sget-object v0, Lcom/v2ray/ang/handler/SettingsManager;->INSTANCE:Lcom/v2ray/ang/handler/SettingsManager;
 
     invoke-virtual {v0}, Lcom/v2ray/ang/handler/SettingsManager;->getSocksUsername()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 210
+    .line 216
     sget-object v0, Lcom/v2ray/ang/handler/SettingsManager;->INSTANCE:Lcom/v2ray/ang/handler/SettingsManager;
 
     invoke-virtual {v0}, Lcom/v2ray/ang/handler/SettingsManager;->getSocksPassword()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 211
+    .line 217
     sget-object v0, Lcom/v2ray/ang/handler/SettingsManager;->INSTANCE:Lcom/v2ray/ang/handler/SettingsManager;
 
     invoke-virtual {v0}, Lcom/v2ray/ang/handler/SettingsManager;->getHttpPort()I
 
     move-result v3
 
-    .line 212
+    .line 218
     move-object v0, p0
 
     check-cast v0, Landroidx/lifecycle/LifecycleOwner;
@@ -831,7 +831,7 @@
 .method static final extDir_delegate$lambda$0(Lcom/v2ray/ang/ui/userasset/UserAssetActivity;)Ljava/io/File;
     .locals 2
 
-    .line 75
+    .line 81
     new-instance v0, Ljava/io/File;
 
     sget-object v1, Lcom/v2ray/ang/util/Utils;->INSTANCE:Lcom/v2ray/ang/util/Utils;
@@ -852,7 +852,7 @@
 
     const/4 v1, 0x0
 
-    .line 167
+    .line 173
     :try_start_0
     invoke-virtual {p0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -874,7 +874,7 @@
 
     if-eqz p0, :cond_1
 
-    .line 169
+    .line 175
     invoke-interface {p0}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result p1
@@ -896,7 +896,7 @@
     :cond_0
     move-object p1, v1
 
-    .line 171
+    .line 177
     :goto_0
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
     :try_end_0
@@ -912,7 +912,7 @@
 
     move-object p0, v0
 
-    .line 174
+    .line 180
     sget-object p1, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
 
     const-string v0, "Failed to get cursor name"
@@ -929,7 +929,7 @@
 .method private final getGeoFilesSources()Ljava/lang/String;
     .locals 1
 
-    .line 124
+    .line 130
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v0, "pref_geo_files_sources"
@@ -961,7 +961,7 @@
 .method private final getViewModel()Lcom/v2ray/ang/ui/userasset/UserAssetViewModel;
     .locals 0
 
-    .line 74
+    .line 80
     iget-object p0, p0, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->viewModel$delegate:Lkotlin/Lazy;
 
     invoke-interface {p0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
@@ -978,7 +978,7 @@
 
     const/4 v0, 0x0
 
-    .line 189
+    .line 195
     :try_start_0
     sget-object v1, Lcom/v2ray/ang/util/Utils;->INSTANCE:Lcom/v2ray/ang/util/Utils;
 
@@ -988,7 +988,7 @@
 
     if-nez v1, :cond_0
 
-    .line 190
+    .line 196
     check-cast p0, Landroid/content/Context;
 
     sget p1, Lcom/v2ray/ang/R$string;->toast_invalid_url:I
@@ -997,7 +997,7 @@
 
     return v0
 
-    .line 194
+    .line 200
     :cond_0
     new-instance v1, Landroid/content/Intent;
 
@@ -1009,14 +1009,14 @@
 
     invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 195
+    .line 201
     const-string v2, "ASSET_URL_QRCODE"
 
     invoke-virtual {v1, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object p1
 
-    .line 193
+    .line 199
     invoke-virtual {p0, p1}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -1028,7 +1028,7 @@
     :catch_0
     move-exception p0
 
-    .line 198
+    .line 204
     sget-object p1, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
 
     const-string v1, "Failed to import asset from URL"
@@ -1045,7 +1045,7 @@
 .method private final importAssetFromQRcode()Z
     .locals 1
 
-    .line 179
+    .line 185
     new-instance v0, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$$ExternalSyntheticLambda0;-><init>(Lcom/v2ray/ang/ui/userasset/UserAssetActivity;)V
@@ -1062,10 +1062,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 181
+    .line 187
     invoke-direct {p0, p1}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->importAsset(Ljava/lang/String;)Z
 
-    .line 183
+    .line 189
     :cond_0
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
@@ -1075,7 +1075,7 @@
 .method private final showFileChooser()V
     .locals 3
 
-    .line 128
+    .line 134
     move-object v0, p0
 
     check-cast v0, Lcom/v2ray/ang/ui/base/HelperBaseComponentActivity;
@@ -1098,12 +1098,12 @@
 
     if-nez p1, :cond_0
 
-    .line 130
+    .line 136
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p0
 
-    .line 133
+    .line 139
     :cond_0
     sget-object v0, Lcom/v2ray/ang/util/Utils;->INSTANCE:Lcom/v2ray/ang/util/Utils;
 
@@ -1111,14 +1111,14 @@
 
     move-result-object v1
 
-    .line 134
+    .line 140
     :try_start_0
     sget-object v0, Lkotlin/Result;->Companion:Lkotlin/Result$Companion;
 
-    .line 135
+    .line 141
     new-instance v2, Lcom/v2ray/ang/dto/entities/AssetUrlItem;
 
-    .line 136
+    .line 142
     invoke-direct {p0, p1}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->getCursorName(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object v0
@@ -1136,7 +1136,7 @@
     :cond_1
     move-object v3, v0
 
-    .line 137
+    .line 143
     const-string v4, "file"
 
     const/16 v10, 0x1c
@@ -1149,20 +1149,20 @@
 
     const/4 v9, 0x0
 
-    .line 135
+    .line 141
     invoke-direct/range {v2 .. v11}, Lcom/v2ray/ang/dto/entities/AssetUrlItem;-><init>(Ljava/lang/String;Ljava/lang/String;JJLjava/lang/Boolean;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 140
+    .line 146
     sget-object v0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     invoke-virtual {v0}, Lcom/v2ray/ang/handler/MmkvManager;->decodeAssetUrls()Ljava/util/List;
 
     move-result-object v0
 
-    .line 141
+    .line 147
     check-cast v0, Ljava/lang/Iterable;
 
-    .line 477
+    .line 478
     instance-of v3, v0, Ljava/util/Collection;
 
     if-eqz v3, :cond_2
@@ -1179,7 +1179,7 @@
 
     goto :goto_0
 
-    .line 478
+    .line 479
     :cond_2
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -1198,7 +1198,7 @@
 
     check-cast v3, Lcom/v2ray/ang/dto/entities/AssetUrlCache;
 
-    .line 141
+    .line 147
     invoke-virtual {v3}, Lcom/v2ray/ang/dto/entities/AssetUrlCache;->getAssetUrl()Lcom/v2ray/ang/dto/entities/AssetUrlItem;
 
     move-result-object v4
@@ -1227,7 +1227,7 @@
 
     if-nez v3, :cond_3
 
-    .line 142
+    .line 148
     move-object p1, p0
 
     check-cast p1, Landroid/content/Context;
@@ -1240,19 +1240,19 @@
 
     goto :goto_1
 
-    .line 144
+    .line 150
     :cond_4
     :goto_0
     sget-object v0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     invoke-virtual {v0, v1, v2}, Lcom/v2ray/ang/handler/MmkvManager;->encodeAsset(Ljava/lang/String;Lcom/v2ray/ang/dto/entities/AssetUrlItem;)V
 
-    .line 145
+    .line 151
     invoke-direct {p0, p1}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->copyFile(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 134
+    .line 140
     :goto_1
     invoke-static {p1}, Lkotlin/Result;->constructor-impl(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1277,7 +1277,7 @@
 
     move-result-object p1
 
-    .line 147
+    .line 153
     :goto_2
     invoke-static {p1}, Lkotlin/Result;->exceptionOrNull-impl(Ljava/lang/Object;)Ljava/lang/Throwable;
 
@@ -1285,19 +1285,19 @@
 
     if-eqz p1, :cond_5
 
-    .line 148
+    .line 154
     check-cast p0, Landroid/content/Context;
 
     sget p1, Lcom/v2ray/ang/R$string;->toast_asset_copy_failed:I
 
     invoke-static {p0, p1}, Lcom/v2ray/ang/extension/ToastExtKt;->toastError(Landroid/content/Context;I)V
 
-    .line 149
+    .line 155
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     invoke-virtual {p0, v1}, Lcom/v2ray/ang/handler/MmkvManager;->removeAssetUrl(Ljava/lang/String;)V
 
-    .line 151
+    .line 157
     :cond_5
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
@@ -1317,12 +1317,12 @@
 
     move-object/from16 v3, p1
 
-    .line 86
+    .line 92
     invoke-interface {v3, v2}, Landroidx/compose/runtime/Composer;->startRestartGroup(I)Landroidx/compose/runtime/Composer;
 
     move-result-object v3
 
-    const-string v4, "C(ScreenContent)93@3886L12,94@3934L188,99@4153L21,100@4204L65,101@4302L27,102@4361L22,103@4411L127,106@4568L332,86@3562L1348:UserAssetActivity.kt#13ivsk"
+    const-string v4, "C(ScreenContent)99@4058L12,100@4106L188,105@4325L21,106@4376L65,107@4474L27,108@4533L22,109@4583L127,112@4740L332,92@3734L1348:UserAssetActivity.kt#13ivsk"
 
     invoke-static {v3, v4}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -1396,11 +1396,11 @@
 
     const/4 v5, -0x1
 
-    const-string v7, "com.v2ray.ang.ui.userasset.UserAssetActivity.ScreenContent (UserAssetActivity.kt:85)"
+    const-string v7, "com.v2ray.ang.ui.userasset.UserAssetActivity.ScreenContent (UserAssetActivity.kt:91)"
 
     invoke-static {v2, v4, v5, v7}, Landroidx/compose/runtime/ComposerKt;->traceEventStart(IIILjava/lang/String;)V
 
-    .line 88
+    .line 94
     :cond_4
     invoke-direct {v0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->getViewModel()Lcom/v2ray/ang/ui/userasset/UserAssetViewModel;
 
@@ -1408,25 +1408,25 @@
 
     move v5, v4
 
-    .line 89
+    .line 95
     invoke-virtual {v0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->getExtDir()Ljava/io/File;
 
     move-result-object v4
 
     move v7, v5
 
-    .line 90
+    .line 96
     iget-object v5, v0, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->isLoadingState:Lkotlinx/coroutines/flow/MutableStateFlow;
 
-    .line 91
+    .line 97
     iget-object v10, v0, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->geoFilesSourceState:Lkotlinx/coroutines/flow/MutableStateFlow;
 
     move v11, v7
 
-    .line 92
+    .line 98
     iget-object v7, v0, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->refreshTrigger:Lkotlinx/coroutines/flow/MutableStateFlow;
 
-    .line 93
+    .line 99
     sget-object v12, Lcom/v2ray/ang/AppConfig;->INSTANCE:Lcom/v2ray/ang/AppConfig;
 
     invoke-virtual {v12}, Lcom/v2ray/ang/AppConfig;->getGEO_FILES_SOURCES()Ljava/util/ArrayList;
@@ -1441,7 +1441,7 @@
 
     const v13, 0x8da5179
 
-    .line 94
+    .line 100
     const-string v14, "CC(remember):UserAssetActivity.kt#9igjgp"
 
     invoke-static {v3, v13, v14}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -1471,7 +1471,7 @@
     :goto_4
     const/4 v15, 0x1
 
-    .line 428
+    .line 429
     :goto_5
     invoke-interface {v3}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
@@ -1479,7 +1479,7 @@
 
     if-nez v15, :cond_7
 
-    .line 429
+    .line 430
     sget-object v15, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v15}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -1488,16 +1488,16 @@
 
     if-ne v8, v15, :cond_8
 
-    .line 94
+    .line 100
     :cond_7
     new-instance v8, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$$ExternalSyntheticLambda4;
 
     invoke-direct {v8, v0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$$ExternalSyntheticLambda4;-><init>(Lcom/v2ray/ang/ui/userasset/UserAssetActivity;)V
 
-    .line 431
+    .line 432
     invoke-interface {v3, v8}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 94
+    .line 100
     :cond_8
     check-cast v8, Lkotlin/jvm/functions/Function0;
 
@@ -1505,7 +1505,7 @@
 
     const v15, 0x8da5829
 
-    .line 95
+    .line 101
     invoke-static {v3, v15, v14}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     if-eq v13, v6, :cond_a
@@ -1531,7 +1531,7 @@
     :goto_6
     const/4 v15, 0x1
 
-    .line 434
+    .line 435
     :goto_7
     invoke-interface {v3}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
@@ -1539,7 +1539,7 @@
 
     if-nez v15, :cond_b
 
-    .line 435
+    .line 436
     sget-object v15, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v15}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -1548,16 +1548,16 @@
 
     if-ne v9, v15, :cond_c
 
-    .line 95
+    .line 101
     :cond_b
     new-instance v9, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$$ExternalSyntheticLambda5;
 
     invoke-direct {v9, v0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$$ExternalSyntheticLambda5;-><init>(Lcom/v2ray/ang/ui/userasset/UserAssetActivity;)V
 
-    .line 437
+    .line 438
     invoke-interface {v3, v9}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 95
+    .line 101
     :cond_c
     check-cast v9, Lkotlin/jvm/functions/Function1;
 
@@ -1565,7 +1565,7 @@
 
     const v15, 0x8da72e2
 
-    .line 100
+    .line 106
     invoke-static {v3, v15, v14}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     if-eq v13, v6, :cond_e
@@ -1591,7 +1591,7 @@
     :goto_8
     const/4 v15, 0x1
 
-    .line 440
+    .line 441
     :goto_9
     invoke-interface {v3}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
@@ -1599,7 +1599,7 @@
 
     if-nez v15, :cond_f
 
-    .line 441
+    .line 442
     sget-object v15, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v15}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -1608,16 +1608,16 @@
 
     if-ne v6, v15, :cond_10
 
-    .line 100
+    .line 106
     :cond_f
     new-instance v6, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$$ExternalSyntheticLambda6;
 
     invoke-direct {v6, v0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$$ExternalSyntheticLambda6;-><init>(Lcom/v2ray/ang/ui/userasset/UserAssetActivity;)V
 
-    .line 443
+    .line 444
     invoke-interface {v3, v6}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 100
+    .line 106
     :cond_10
     check-cast v6, Lkotlin/jvm/functions/Function0;
 
@@ -1625,7 +1625,7 @@
 
     const v15, 0x8da796e
 
-    .line 101
+    .line 107
     invoke-static {v3, v15, v14}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     const/4 v15, 0x4
@@ -1656,14 +1656,14 @@
     :goto_b
     move-object/from16 v18, v2
 
-    .line 446
+    .line 447
     invoke-interface {v3}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
     move-result-object v2
 
     if-nez v15, :cond_13
 
-    .line 447
+    .line 448
     sget-object v15, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v15}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -1672,16 +1672,16 @@
 
     if-ne v2, v15, :cond_14
 
-    .line 101
+    .line 107
     :cond_13
     new-instance v2, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$$ExternalSyntheticLambda7;
 
     invoke-direct {v2, v0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$$ExternalSyntheticLambda7;-><init>(Lcom/v2ray/ang/ui/userasset/UserAssetActivity;)V
 
-    .line 449
+    .line 450
     invoke-interface {v3, v2}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 101
+    .line 107
     :cond_14
     check-cast v2, Lkotlin/jvm/functions/Function0;
 
@@ -1689,7 +1689,7 @@
 
     const v15, 0x8da8588
 
-    .line 102
+    .line 108
     invoke-static {v3, v15, v14}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     const/4 v15, 0x4
@@ -1720,14 +1720,14 @@
     :goto_d
     move-object/from16 v19, v2
 
-    .line 452
+    .line 453
     invoke-interface {v3}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
     move-result-object v2
 
     if-nez v15, :cond_17
 
-    .line 453
+    .line 454
     sget-object v15, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v15}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -1736,16 +1736,16 @@
 
     if-ne v2, v15, :cond_18
 
-    .line 102
+    .line 108
     :cond_17
     new-instance v2, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$$ExternalSyntheticLambda8;
 
     invoke-direct {v2, v0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$$ExternalSyntheticLambda8;-><init>(Lcom/v2ray/ang/ui/userasset/UserAssetActivity;)V
 
-    .line 455
+    .line 456
     invoke-interface {v3, v2}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 102
+    .line 108
     :cond_18
     check-cast v2, Lkotlin/jvm/functions/Function0;
 
@@ -1753,7 +1753,7 @@
 
     const v15, 0x8da8ce3
 
-    .line 103
+    .line 109
     invoke-static {v3, v15, v14}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     const/4 v15, 0x4
@@ -1784,14 +1784,14 @@
     :goto_f
     move-object/from16 v20, v2
 
-    .line 458
+    .line 459
     invoke-interface {v3}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
     move-result-object v2
 
     if-nez v15, :cond_1b
 
-    .line 459
+    .line 460
     sget-object v15, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v15}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -1800,16 +1800,16 @@
 
     if-ne v2, v15, :cond_1c
 
-    .line 103
+    .line 109
     :cond_1b
     new-instance v2, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$$ExternalSyntheticLambda9;
 
     invoke-direct {v2, v0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$$ExternalSyntheticLambda9;-><init>(Lcom/v2ray/ang/ui/userasset/UserAssetActivity;)V
 
-    .line 461
+    .line 462
     invoke-interface {v3, v2}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 103
+    .line 109
     :cond_1c
     check-cast v2, Lkotlin/jvm/functions/Function0;
 
@@ -1817,7 +1817,7 @@
 
     const v15, 0x8da938c
 
-    .line 104
+    .line 110
     invoke-static {v3, v15, v14}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     const/4 v15, 0x4
@@ -1848,14 +1848,14 @@
     :goto_11
     move-object/from16 v21, v2
 
-    .line 464
+    .line 465
     invoke-interface {v3}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
     move-result-object v2
 
     if-nez v15, :cond_1f
 
-    .line 465
+    .line 466
     sget-object v15, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v15}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -1864,16 +1864,16 @@
 
     if-ne v2, v15, :cond_20
 
-    .line 104
+    .line 110
     :cond_1f
     new-instance v2, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$$ExternalSyntheticLambda10;
 
     invoke-direct {v2, v0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$$ExternalSyntheticLambda10;-><init>(Lcom/v2ray/ang/ui/userasset/UserAssetActivity;)V
 
-    .line 467
+    .line 468
     invoke-interface {v3, v2}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 104
+    .line 110
     :cond_20
     move-object v15, v2
 
@@ -1883,7 +1883,7 @@
 
     const v2, 0x8daa7f9
 
-    .line 107
+    .line 113
     invoke-static {v3, v2, v14}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     const/4 v2, 0x4
@@ -1911,7 +1911,7 @@
     :goto_12
     const/16 v16, 0x1
 
-    .line 470
+    .line 471
     :goto_13
     invoke-interface {v3}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
@@ -1919,7 +1919,7 @@
 
     if-nez v16, :cond_23
 
-    .line 471
+    .line 472
     sget-object v11, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v11}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -1928,16 +1928,16 @@
 
     if-ne v2, v11, :cond_24
 
-    .line 107
+    .line 113
     :cond_23
     new-instance v2, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$$ExternalSyntheticLambda11;
 
     invoke-direct {v2, v0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$$ExternalSyntheticLambda11;-><init>(Lcom/v2ray/ang/ui/userasset/UserAssetActivity;)V
 
-    .line 473
+    .line 474
     invoke-interface {v3, v2}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 107
+    .line 113
     :cond_24
     move-object/from16 v16, v2
 
@@ -1971,7 +1971,7 @@
 
     move-object v12, v2
 
-    .line 87
+    .line 93
     invoke-static/range {v3 .. v19}, Lcom/v2ray/ang/ui/userasset/UserAssetActivityKt;->UserAssetScreen(Lcom/v2ray/ang/ui/userasset/UserAssetViewModel;Ljava/io/File;Lkotlinx/coroutines/flow/MutableStateFlow;Lkotlinx/coroutines/flow/MutableStateFlow;Lkotlinx/coroutines/flow/MutableStateFlow;Ljava/util/List;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)V
 
     invoke-static {}, Landroidx/compose/runtime/ComposerKt;->isTraceInProgress()Z
@@ -1987,10 +1987,10 @@
     :cond_25
     move-object/from16 v17, v3
 
-    .line 86
+    .line 92
     invoke-interface/range {v17 .. v17}, Landroidx/compose/runtime/Composer;->skipToGroupEnd()V
 
-    .line 116
+    .line 122
     :cond_26
     :goto_14
     invoke-interface/range {v17 .. v17}, Landroidx/compose/runtime/Composer;->endRestartGroup()Landroidx/compose/runtime/ScopeUpdateScope;
@@ -2012,7 +2012,7 @@
 .method public final getExtDir()Ljava/io/File;
     .locals 0
 
-    .line 75
+    .line 81
     iget-object p0, p0, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->extDir$delegate:Lkotlin/Lazy;
 
     invoke-interface {p0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
@@ -2027,7 +2027,7 @@
 .method public final initAssets()V
     .locals 7
 
-    .line 227
+    .line 233
     move-object v0, p0
 
     check-cast v0, Landroidx/lifecycle/LifecycleOwner;
@@ -2070,10 +2070,10 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 0
 
-    .line 81
+    .line 87
     invoke-super {p0, p1}, Lcom/v2ray/ang/ui/base/HelperBaseComponentActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 82
+    .line 88
     iget-object p1, p0, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->geoFilesSourceState:Lkotlinx/coroutines/flow/MutableStateFlow;
 
     invoke-direct {p0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->getGeoFilesSources()Ljava/lang/String;
@@ -2088,10 +2088,10 @@
 .method protected onResume()V
     .locals 0
 
-    .line 119
+    .line 125
     invoke-super {p0}, Lcom/v2ray/ang/ui/base/HelperBaseComponentActivity;->onResume()V
 
-    .line 120
+    .line 126
     invoke-virtual {p0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->refreshData()V
 
     return-void
@@ -2100,7 +2100,7 @@
 .method public final refreshData()V
     .locals 2
 
-    .line 236
+    .line 242
     invoke-direct {p0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->getViewModel()Lcom/v2ray/ang/ui/userasset/UserAssetViewModel;
 
     move-result-object v0
@@ -2111,7 +2111,7 @@
 
     invoke-virtual {v0, v1}, Lcom/v2ray/ang/ui/userasset/UserAssetViewModel;->reload(Ljava/lang/String;)V
 
-    .line 237
+    .line 243
     iget-object p0, p0, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->refreshTrigger:Lkotlinx/coroutines/flow/MutableStateFlow;
 
     invoke-interface {p0}, Lkotlinx/coroutines/flow/MutableStateFlow;->getValue()Ljava/lang/Object;

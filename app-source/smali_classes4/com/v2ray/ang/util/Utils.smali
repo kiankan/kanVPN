@@ -531,7 +531,7 @@
 .method public final encode(Ljava/lang/String;Z)Ljava/lang/String;
     .locals 1
 
-    const-string p0, "text"
+    const-string/jumbo p0, "text"
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -707,7 +707,7 @@
 .method public final fixIllegalUrl(Ljava/lang/String;)Ljava/lang/String;
     .locals 12
 
-    const-string p0, "str"
+    const-string/jumbo p0, "str"
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -1140,7 +1140,7 @@
     if-nez p0, :cond_1
 
     .line 230
-    const-string p0, "tcp"
+    const-string/jumbo p0, "tcp"
 
     invoke-static {p1, p0, v0, v1, v2}, Lkotlin/text/StringsKt;->startsWith$default(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
 
@@ -1498,7 +1498,7 @@
 
     move-result-object p1
 
-    const-string v0, "substring(...)"
+    const-string/jumbo v0, "substring(...)"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 

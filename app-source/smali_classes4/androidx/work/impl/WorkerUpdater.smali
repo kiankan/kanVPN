@@ -665,7 +665,7 @@
 .method static final updateWorkImpl$lambda$0(Landroidx/work/impl/model/WorkSpec;)Ljava/lang/String;
     .locals 1
 
-    const-string v0, "spec"
+    const-string/jumbo v0, "spec"
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

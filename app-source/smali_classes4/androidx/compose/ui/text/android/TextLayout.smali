@@ -1149,7 +1149,7 @@
     if-nez v7, :cond_1
 
     .line 713
-    const-string v7, "startOffset must be > 0"
+    const-string/jumbo v7, "startOffset must be > 0"
 
     .line 1183
     invoke-static {v7}, Landroidx/compose/ui/text/internal/InlineClassHelperKt;->throwIllegalArgumentException(Ljava/lang/String;)V
@@ -1168,7 +1168,7 @@
     if-nez v7, :cond_3
 
     .line 715
-    const-string v7, "startOffset must be less than text length"
+    const-string/jumbo v7, "startOffset must be less than text length"
 
     .line 1187
     invoke-static {v7}, Landroidx/compose/ui/text/internal/InlineClassHelperKt;->throwIllegalArgumentException(Ljava/lang/String;)V

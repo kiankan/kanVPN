@@ -84,15 +84,15 @@
 
 .field public static auto_clear_focus_behavior_tag:I = 0x7f08002e
 
-.field public static compose_view_saveable_id_tag:I = 0x7f080033
+.field public static compose_view_saveable_id_tag:I = 0x7f080034
 
-.field public static consume_window_insets_tag:I = 0x7f080034
+.field public static consume_window_insets_tag:I = 0x7f080035
 
-.field public static hide_in_inspector_tag:I = 0x7f08003e
+.field public static hide_in_inspector_tag:I = 0x7f08003f
 
-.field public static inspection_slot_table_set:I = 0x7f080043
+.field public static inspection_slot_table_set:I = 0x7f080044
 
-.field public static wrapped_composition_tag:I = 0x7f08007d
+.field public static wrapped_composition_tag:I = 0x7f08007e
 
 
 # direct methods

@@ -72,7 +72,7 @@
 .method public final parse(Ljava/lang/String;)Lcom/v2ray/ang/dto/entities/ProfileItem;
     .locals 1
 
-    const-string v0, "str"
+    const-string/jumbo v0, "str"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -96,7 +96,7 @@
 .method public final parseLegacy(Ljava/lang/String;)Lcom/v2ray/ang/dto/entities/ProfileItem;
     .locals 10
 
-    const-string p0, "str"
+    const-string/jumbo p0, "str"
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -150,7 +150,7 @@
     move-result v1
 
     .line 81
-    const-string v3, "substring(...)"
+    const-string/jumbo v3, "substring(...)"
 
     if-lez v1, :cond_0
 
@@ -370,7 +370,7 @@
 
     move-result-object p1
 
-    const-string v0, "toLowerCase(...)"
+    const-string/jumbo v0, "toLowerCase(...)"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -382,7 +382,7 @@
 .method public final parseSip002(Ljava/lang/String;)Lcom/v2ray/ang/dto/entities/ProfileItem;
     .locals 14
 
-    const-string v0, "str"
+    const-string/jumbo v0, "str"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

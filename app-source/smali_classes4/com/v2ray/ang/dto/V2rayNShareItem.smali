@@ -2326,7 +2326,7 @@
 
     if-eqz v1, :cond_15
 
-    const-string v1, "tcp"
+    const-string/jumbo v1, "tcp"
 
     goto :goto_c
 

@@ -87,19 +87,19 @@
 
     invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 108
+    .line 110
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 109
+    .line 111
     iput-object p1, p0, Lcom/v2ray/ang/ui/compose/InputField;->label:Ljava/lang/String;
 
-    .line 110
+    .line 112
     iput-object p2, p0, Lcom/v2ray/ang/ui/compose/InputField;->value:Ljava/lang/String;
 
-    .line 111
+    .line 113
     iput-boolean p3, p0, Lcom/v2ray/ang/ui/compose/InputField;->singleLine:Z
 
-    .line 112
+    .line 114
     iput-object p4, p0, Lcom/v2ray/ang/ui/compose/InputField;->visualTransformation:Landroidx/compose/ui/text/input/VisualTransformation;
 
     return-void
@@ -119,14 +119,14 @@
 
     if-eqz p5, :cond_1
 
-    .line 112
+    .line 114
     sget-object p4, Landroidx/compose/ui/text/input/VisualTransformation;->Companion:Landroidx/compose/ui/text/input/VisualTransformation$Companion;
 
     invoke-virtual {p4}, Landroidx/compose/ui/text/input/VisualTransformation$Companion;->getNone()Landroidx/compose/ui/text/input/VisualTransformation;
 
     move-result-object p4
 
-    .line 108
+    .line 110
     :cond_1
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/v2ray/ang/ui/compose/InputField;-><init>(Ljava/lang/String;Ljava/lang/String;ZLandroidx/compose/ui/text/input/VisualTransformation;)V
 
@@ -302,7 +302,7 @@
 .method public final getLabel()Ljava/lang/String;
     .locals 0
 
-    .line 109
+    .line 111
     iget-object p0, p0, Lcom/v2ray/ang/ui/compose/InputField;->label:Ljava/lang/String;
 
     return-object p0
@@ -311,7 +311,7 @@
 .method public final getSingleLine()Z
     .locals 0
 
-    .line 111
+    .line 113
     iget-boolean p0, p0, Lcom/v2ray/ang/ui/compose/InputField;->singleLine:Z
 
     return p0
@@ -320,7 +320,7 @@
 .method public final getValue()Ljava/lang/String;
     .locals 0
 
-    .line 110
+    .line 112
     iget-object p0, p0, Lcom/v2ray/ang/ui/compose/InputField;->value:Ljava/lang/String;
 
     return-object p0
@@ -329,7 +329,7 @@
 .method public final getVisualTransformation()Landroidx/compose/ui/text/input/VisualTransformation;
     .locals 0
 
-    .line 112
+    .line 114
     iget-object p0, p0, Lcom/v2ray/ang/ui/compose/InputField;->visualTransformation:Landroidx/compose/ui/text/input/VisualTransformation;
 
     return-object p0

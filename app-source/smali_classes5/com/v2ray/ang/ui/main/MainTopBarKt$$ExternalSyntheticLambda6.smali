@@ -3,7 +3,7 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Lkotlin/jvm/functions/Function1;
+.implements Lkotlin/jvm/functions/Function3;
 
 
 # instance fields
@@ -28,7 +28,7 @@
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
     .line 0
@@ -36,9 +36,17 @@
 
     iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainTopBarKt$$ExternalSyntheticLambda6;->f$1:Landroidx/compose/runtime/MutableState;
 
-    check-cast p1, Lcom/v2ray/ang/ui/main/MainAction;
+    check-cast p1, Landroidx/compose/foundation/layout/ColumnScope;
 
-    invoke-static {v0, p0, p1}, Lcom/v2ray/ang/ui/main/MainTopBarKt;->$r8$lambda$qKJP8Y-uKLZucUhNhk8EkhAXgV8(Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/MutableState;Lcom/v2ray/ang/ui/main/MainAction;)Lkotlin/Unit;
+    check-cast p2, Landroidx/compose/runtime/Composer;
+
+    check-cast p3, Ljava/lang/Integer;
+
+    invoke-virtual {p3}, Ljava/lang/Integer;->intValue()I
+
+    move-result p3
+
+    invoke-static {v0, p0, p1, p2, p3}, Lcom/v2ray/ang/ui/main/MainTopBarKt;->$r8$lambda$lz8kG6g-d8ooE4WT9VRptAes8D4(Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/MutableState;Landroidx/compose/foundation/layout/ColumnScope;Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
 
     move-result-object p0
 

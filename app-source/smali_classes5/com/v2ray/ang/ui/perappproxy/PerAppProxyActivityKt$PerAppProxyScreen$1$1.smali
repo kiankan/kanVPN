@@ -195,14 +195,14 @@
 
     invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
 
-    .line 128
+    .line 135
     iget v0, p0, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivityKt$PerAppProxyScreen$1$1;->label:I
 
     if-nez v0, :cond_0
 
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 129
+    .line 136
     iget-object p1, p0, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivityKt$PerAppProxyScreen$1$1;->$onSearch:Lkotlin/jvm/functions/Function1;
 
     iget-object p0, p0, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivityKt$PerAppProxyScreen$1$1;->$searchQuery$delegate:Landroidx/compose/runtime/MutableState;
@@ -213,12 +213,12 @@
 
     invoke-interface {p1, p0}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 130
+    .line 137
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p0
 
-    .line 128
+    .line 135
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 

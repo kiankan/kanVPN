@@ -77,7 +77,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
-    .line 336
+    .line 337
     invoke-virtual {p0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivityKt$UserAssetScreen$2$1$1$3$2$1;->invoke()V
 
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -88,7 +88,7 @@
 .method public final invoke()V
     .locals 1
 
-    .line 336
+    .line 337
     iget-object v0, p0, Lcom/v2ray/ang/ui/userasset/UserAssetActivityKt$UserAssetScreen$2$1$1$3$2$1;->$deleteTargetGuid$delegate:Landroidx/compose/runtime/MutableState;
 
     iget-object p0, p0, Lcom/v2ray/ang/ui/userasset/UserAssetActivityKt$UserAssetScreen$2$1$1$3$2$1;->$item:Lcom/v2ray/ang/dto/entities/AssetUrlCache;

@@ -331,7 +331,7 @@
     .locals 1
 
     .line 1344
-    const-string v0, "substring(...)"
+    const-string/jumbo v0, "substring(...)"
 
     if-nez p2, :cond_0
 
@@ -582,7 +582,7 @@
     .locals 1
 
     .line 1369
-    const-string v0, "substring(...)"
+    const-string/jumbo v0, "substring(...)"
 
     if-nez p2, :cond_0
 
@@ -653,7 +653,7 @@
     .line 1529
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v2, "start ("
+    const-string/jumbo v2, "start ("
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -1966,7 +1966,7 @@
 
     move-result-object v1
 
-    const-string v2, "substring(...)"
+    const-string/jumbo v2, "substring(...)"
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -2054,7 +2054,7 @@
 
     move-result-object p1
 
-    const-string p2, "substring(...)"
+    const-string/jumbo p2, "substring(...)"
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -2110,7 +2110,7 @@
 
     move-result-object p1
 
-    const-string p2, "substring(...)"
+    const-string/jumbo p2, "substring(...)"
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 

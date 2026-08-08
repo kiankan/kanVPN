@@ -3229,7 +3229,7 @@
 
     .line 163
     :cond_a
-    const-string v0, "structuralUpdate requires a non-null tail"
+    const-string/jumbo v0, "structuralUpdate requires a non-null tail"
 
     .line 809
     invoke-static {v0}, Landroidx/compose/ui/internal/InlineClassHelperKt;->throwIllegalStateExceptionForNullCheck(Ljava/lang/String;)Ljava/lang/Void;

@@ -11,12 +11,12 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nSettingsManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SettingsManager.kt\ncom/v2ray/ang/handler/SettingsManager\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 4 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n+ 5 Maps.kt\nkotlin/collections/MapsKt__MapsKt\n+ 6 _Maps.kt\nkotlin/collections/MapsKt___MapsKt\n*L\n1#1,609:1\n2068#2,2:610\n777#2:612\n873#2,2:613\n1960#2,3:615\n777#2:618\n873#2,2:619\n1960#2,3:621\n1795#2,10:624\n2068#2:634\n2069#2:636\n1805#2:637\n296#2,2:638\n777#2:644\n873#2,2:645\n2068#2,2:647\n777#2:649\n873#2,2:650\n777#2:652\n873#2,2:653\n777#2:655\n873#2,2:656\n1#3:635\n1#3:640\n3938#4:641\n4474#4,2:642\n15101#4:658\n15102#4:666\n460#5,7:659\n221#6,2:667\n*S KotlinDebug\n*F\n+ 1 SettingsManager.kt\ncom/v2ray/ang/handler/SettingsManager\n*L\n118#1:610,2\n194#1:612\n194#1:613,2\n194#1:615,3\n201#1:618\n201#1:619,2\n201#1:621,3\n218#1:624,10\n218#1:634\n218#1:636\n218#1:637\n219#1:638,2\n317#1:644\n317#1:645,2\n318#1:647,2\n339#1:649\n339#1:650,2\n353#1:652\n353#1:653,2\n366#1:655\n366#1:656,2\n218#1:635\n316#1:641\n316#1:642,2\n571#1:658\n571#1:666\n575#1:659,7\n579#1:667,2\n*E\n"
+    value = "SMAP\nSettingsManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SettingsManager.kt\ncom/v2ray/ang/handler/SettingsManager\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 4 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n+ 5 Maps.kt\nkotlin/collections/MapsKt__MapsKt\n+ 6 _Maps.kt\nkotlin/collections/MapsKt___MapsKt\n*L\n1#1,608:1\n2068#2,2:609\n777#2:611\n873#2,2:612\n1960#2,3:614\n777#2:617\n873#2,2:618\n1960#2,3:620\n1795#2,10:623\n2068#2:633\n2069#2:635\n1805#2:636\n296#2,2:637\n777#2:643\n873#2,2:644\n2068#2,2:646\n777#2:648\n873#2,2:649\n777#2:651\n873#2,2:652\n777#2:654\n873#2,2:655\n1#3:634\n1#3:639\n3938#4:640\n4474#4,2:641\n15101#4:657\n15102#4:665\n460#5,7:658\n221#6,2:666\n*S KotlinDebug\n*F\n+ 1 SettingsManager.kt\ncom/v2ray/ang/handler/SettingsManager\n*L\n117#1:609,2\n193#1:611\n193#1:612,2\n193#1:614,3\n200#1:617\n200#1:618,2\n200#1:620,3\n217#1:623,10\n217#1:633\n217#1:635\n217#1:636\n218#1:637,2\n316#1:643\n316#1:644,2\n317#1:646,2\n338#1:648\n338#1:649,2\n352#1:651\n352#1:652,2\n365#1:654\n365#1:655,2\n217#1:634\n315#1:640\n315#1:641,2\n570#1:657\n570#1:665\n574#1:658,7\n578#1:666,2\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000r\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0003\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010!\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010 \n\u0000\n\u0002\u0010\"\n\u0002\u0018\u0002\n\u0002\u0008\u000c\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\r\n\u0002\u0018\u0002\n\u0000\u0008\u00c7\u0002\u0018\u00002\u00020\u0001B\t\u0008\u0002\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J\u000e\u0010\u0007\u001a\u00020\u00082\u0006\u0010\t\u001a\u00020\nJ\u0010\u0010\u000b\u001a\u00020\u00082\u0006\u0010\t\u001a\u00020\nH\u0002J\"\u0010\u000c\u001a\n\u0012\u0004\u0012\u00020\u000e\u0018\u00010\r2\u0006\u0010\t\u001a\u00020\n2\u0008\u0008\u0002\u0010\u000f\u001a\u00020\u0005H\u0002J\u0016\u0010\u0010\u001a\u00020\u00082\u0006\u0010\t\u001a\u00020\n2\u0006\u0010\u000f\u001a\u00020\u0005J\u0010\u0010\u0011\u001a\u00020\u00122\u0008\u0010\u0013\u001a\u0004\u0018\u00010\u0014J\u0016\u0010\u0015\u001a\u00020\u00082\u000c\u0010\u0016\u001a\u0008\u0012\u0004\u0012\u00020\u000e0\rH\u0002J\u0010\u0010\u0017\u001a\u0004\u0018\u00010\u000e2\u0006\u0010\u000f\u001a\u00020\u0005J\u0018\u0010\u0018\u001a\u00020\u00082\u0006\u0010\u000f\u001a\u00020\u00052\u0008\u0010\u0019\u001a\u0004\u0018\u00010\u000eJ\u000e\u0010\u001a\u001a\u00020\u00082\u0006\u0010\u000f\u001a\u00020\u0005J\u0006\u0010\u001b\u001a\u00020\u0012J\u0012\u0010\u001c\u001a\u0004\u0018\u00010\u001d2\u0008\u0010\u001e\u001a\u0004\u0018\u00010\u0014J\u001c\u0010\u001f\u001a\u0008\u0012\u0004\u0012\u00020\u00140 2\u000e\u0008\u0002\u0010!\u001a\u0008\u0012\u0004\u0012\u00020#0\"J\u000e\u0010$\u001a\u00020\u00082\u0006\u0010%\u001a\u00020\u0014J\u0006\u0010&\u001a\u00020\u0005J\r\u0010\'\u001a\u0004\u0018\u00010\u0005\u00a2\u0006\u0002\u0010(J\u0008\u0010)\u001a\u0004\u0018\u00010\u0014J\u0008\u0010*\u001a\u0004\u0018\u00010\u0014J\u0006\u0010+\u001a\u00020\u0005J\u0008\u0010,\u001a\u00020\u0012H\u0002J\u0008\u0010-\u001a\u00020\u0005H\u0002J\u0016\u0010.\u001a\u00020\u00082\u0006\u0010\t\u001a\u00020\n2\u0006\u0010/\u001a\u000200J\u000c\u00101\u001a\u0008\u0012\u0004\u0012\u00020\u00140 J\u000c\u00102\u001a\u0008\u0012\u0004\u0012\u00020\u00140 J\u000c\u00103\u001a\u0008\u0012\u0004\u0012\u00020\u00140 J\u0010\u00104\u001a\u00020\u00142\u0008\u0008\u0002\u00105\u001a\u00020\u0012J\u0006\u00106\u001a\u00020\u0005J\u0006\u00107\u001a\u000208J\u0006\u00109\u001a\u00020:J\u0006\u0010;\u001a\u00020\u0005J\u0006\u0010<\u001a\u00020\u0012J\u0006\u0010=\u001a\u00020\u0012J\u0006\u0010>\u001a\u00020\u0012J\u0006\u0010?\u001a\u00020\u0012J\u0008\u0010@\u001a\u00020\u0008H\u0002J\u0018\u0010A\u001a\u00020\u00082\u0006\u0010B\u001a\u00020\u00142\u0006\u0010C\u001a\u00020\u0014H\u0002J\u0008\u0010D\u001a\u00020\u0008H\u0002J\u0008\u0010E\u001a\u00020\u0008H\u0002J\u0008\u0010F\u001a\u00020\u0008H\u0002R\u0012\u0010\u0004\u001a\u0004\u0018\u00010\u0005X\u0082\u000e\u00a2\u0006\u0004\n\u0002\u0010\u0006\u00ca\u0001\u000c\u0008H\u0012\u0008\u0008I\u0012\u0004\u0008\u0003\u0010\u0002\u00a8\u0006G"
+        "\u0000x\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0003\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010!\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\t\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010 \n\u0000\n\u0002\u0010\"\n\u0002\u0018\u0002\n\u0002\u0008\u000c\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\r\n\u0002\u0018\u0002\n\u0000\u0008\u00c7\u0002\u0018\u00002\u00020\u0001B\t\u0008\u0002\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J\u000e\u0010\u0007\u001a\u00020\u00082\u0006\u0010\t\u001a\u00020\nJ\u0010\u0010\u000b\u001a\u00020\u00082\u0006\u0010\t\u001a\u00020\nH\u0002J\"\u0010\u000c\u001a\n\u0012\u0004\u0012\u00020\u000e\u0018\u00010\r2\u0006\u0010\t\u001a\u00020\n2\u0008\u0008\u0002\u0010\u000f\u001a\u00020\u0010H\u0002J\u0016\u0010\u0011\u001a\u00020\u00082\u0006\u0010\t\u001a\u00020\n2\u0006\u0010\u000f\u001a\u00020\u0010J\u0010\u0010\u0012\u001a\u00020\u00132\u0008\u0010\u0014\u001a\u0004\u0018\u00010\u0015J\u0016\u0010\u0016\u001a\u00020\u00082\u000c\u0010\u0017\u001a\u0008\u0012\u0004\u0012\u00020\u000e0\rH\u0002J\u0010\u0010\u0018\u001a\u0004\u0018\u00010\u000e2\u0006\u0010\u0019\u001a\u00020\u0005J\u0018\u0010\u001a\u001a\u00020\u00082\u0006\u0010\u0019\u001a\u00020\u00052\u0008\u0010\u001b\u001a\u0004\u0018\u00010\u000eJ\u000e\u0010\u001c\u001a\u00020\u00082\u0006\u0010\u0019\u001a\u00020\u0005J\u0006\u0010\u001d\u001a\u00020\u0013J\u0012\u0010\u001e\u001a\u0004\u0018\u00010\u001f2\u0008\u0010 \u001a\u0004\u0018\u00010\u0015J\u001c\u0010!\u001a\u0008\u0012\u0004\u0012\u00020\u00150\"2\u000e\u0008\u0002\u0010#\u001a\u0008\u0012\u0004\u0012\u00020%0$J\u000e\u0010&\u001a\u00020\u00082\u0006\u0010\'\u001a\u00020\u0015J\u0006\u0010(\u001a\u00020\u0005J\r\u0010)\u001a\u0004\u0018\u00010\u0005\u00a2\u0006\u0002\u0010*J\u0008\u0010+\u001a\u0004\u0018\u00010\u0015J\u0008\u0010,\u001a\u0004\u0018\u00010\u0015J\u0006\u0010-\u001a\u00020\u0005J\u0008\u0010.\u001a\u00020\u0013H\u0002J\u0008\u0010/\u001a\u00020\u0005H\u0002J\u0016\u00100\u001a\u00020\u00082\u0006\u0010\t\u001a\u00020\n2\u0006\u00101\u001a\u000202J\u000c\u00103\u001a\u0008\u0012\u0004\u0012\u00020\u00150\"J\u000c\u00104\u001a\u0008\u0012\u0004\u0012\u00020\u00150\"J\u000c\u00105\u001a\u0008\u0012\u0004\u0012\u00020\u00150\"J\u0010\u00106\u001a\u00020\u00152\u0008\u0008\u0002\u00107\u001a\u00020\u0013J\u0006\u00108\u001a\u00020\u0005J\u0006\u00109\u001a\u00020:J\u0006\u0010;\u001a\u00020<J\u0006\u0010=\u001a\u00020\u0005J\u0006\u0010>\u001a\u00020\u0013J\u0006\u0010?\u001a\u00020\u0013J\u0006\u0010@\u001a\u00020\u0013J\u0006\u0010A\u001a\u00020\u0013J\u0008\u0010B\u001a\u00020\u0008H\u0002J\u0018\u0010C\u001a\u00020\u00082\u0006\u0010D\u001a\u00020\u00152\u0006\u0010E\u001a\u00020\u0015H\u0002J\u0008\u0010F\u001a\u00020\u0008H\u0002J\u0008\u0010G\u001a\u00020\u0008H\u0002J\u0008\u0010H\u001a\u00020\u0008H\u0002R\u0012\u0010\u0004\u001a\u0004\u0018\u00010\u0005X\u0082\u000e\u00a2\u0006\u0004\n\u0002\u0010\u0006\u00ca\u0001\u000c\u0008J\u0012\u0008\u0008K\u0012\u0004\u0008\u0003\u0010\u0002\u00a8\u0006I"
     }
     d2 = {
         "Lcom/v2ray/ang/handler/SettingsManager;",
@@ -34,7 +34,8 @@
         "getPresetRoutingRulesets",
         "",
         "Lcom/v2ray/ang/dto/entities/RulesetItem;",
-        "index",
+        "type",
+        "Lcom/v2ray/ang/enums/RoutingType;",
         "resetRoutingRulesetsFromPresets",
         "resetRoutingRulesets",
         "",
@@ -43,6 +44,7 @@
         "resetRoutingRulesetsCommon",
         "rulesetList",
         "getRoutingRuleset",
+        "index",
         "saveRoutingRuleset",
         "ruleset",
         "removeRoutingRuleset",
@@ -137,7 +139,7 @@
 .method private final IsDynamicSocksPort()Z
     .locals 2
 
-    .line 298
+    .line 297
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v0, "pref_dynamic_socks_port"
@@ -154,131 +156,131 @@
 .method private final ensureDefaultSettings()V
     .locals 2
 
-    .line 486
+    .line 485
     const-string v0, "pref_mode"
 
     const-string v1, "VPN"
 
     invoke-direct {p0, v0, v1}, Lcom/v2ray/ang/handler/SettingsManager;->ensureDefaultValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 487
+    .line 486
     const-string v0, "pref_vpn_dns"
 
     const-string v1, "1.1.1.1"
 
     invoke-direct {p0, v0, v1}, Lcom/v2ray/ang/handler/SettingsManager;->ensureDefaultValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 488
+    .line 487
     const-string v0, "pref_vpn_mtu"
 
     const-string v1, "1500"
 
     invoke-direct {p0, v0, v1}, Lcom/v2ray/ang/handler/SettingsManager;->ensureDefaultValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 489
+    .line 488
     const-string v0, "pref_socks_port"
 
     const-string v1, "10808"
 
     invoke-direct {p0, v0, v1}, Lcom/v2ray/ang/handler/SettingsManager;->ensureDefaultValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 490
+    .line 489
     const-string v0, "pref_remote_dns"
 
     const-string v1, "https://cloudflare-dns.com/dns-query"
 
     invoke-direct {p0, v0, v1}, Lcom/v2ray/ang/handler/SettingsManager;->ensureDefaultValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 491
+    .line 490
     const-string v0, "pref_domestic_dns"
 
     const-string v1, "223.5.5.5"
 
     invoke-direct {p0, v0, v1}, Lcom/v2ray/ang/handler/SettingsManager;->ensureDefaultValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 492
+    .line 491
     const-string v0, "pref_delay_test_url"
 
     const-string v1, "https://www.gstatic.com/generate_204"
 
     invoke-direct {p0, v0, v1}, Lcom/v2ray/ang/handler/SettingsManager;->ensureDefaultValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 493
+    .line 492
     const-string v0, "pref_ip_api_url"
 
     const-string v1, "https://api.ip.sb/geoip"
 
     invoke-direct {p0, v0, v1}, Lcom/v2ray/ang/handler/SettingsManager;->ensureDefaultValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 494
+    .line 493
     const-string v0, "pref_hev_tunnel_rw_timeout_v2"
 
     const-string v1, "300,60"
 
     invoke-direct {p0, v0, v1}, Lcom/v2ray/ang/handler/SettingsManager;->ensureDefaultValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 495
+    .line 494
     const-string v0, "pref_mux_concurrency"
 
     const-string v1, "8"
 
     invoke-direct {p0, v0, v1}, Lcom/v2ray/ang/handler/SettingsManager;->ensureDefaultValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 496
+    .line 495
     const-string v0, "pref_mux_xudp_concurrency"
 
     invoke-direct {p0, v0, v1}, Lcom/v2ray/ang/handler/SettingsManager;->ensureDefaultValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 497
+    .line 496
     const-string v0, "pref_fragment_length"
 
     const-string v1, "50-100"
 
     invoke-direct {p0, v0, v1}, Lcom/v2ray/ang/handler/SettingsManager;->ensureDefaultValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 498
+    .line 497
     const-string v0, "pref_fragment_interval"
 
     const-string v1, "10-20"
 
     invoke-direct {p0, v0, v1}, Lcom/v2ray/ang/handler/SettingsManager;->ensureDefaultValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 499
+    .line 498
     const-string v0, "pref_fragment_maxsplit"
 
     const-string v1, "10"
 
     invoke-direct {p0, v0, v1}, Lcom/v2ray/ang/handler/SettingsManager;->ensureDefaultValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 500
+    .line 499
     const-string v0, "pref_observatory_least_ping_interval"
 
     const-string v1, "3m"
 
     invoke-direct {p0, v0, v1}, Lcom/v2ray/ang/handler/SettingsManager;->ensureDefaultValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 501
+    .line 500
     const-string v0, "pref_observatory_least_load_interval"
 
     const-string v1, "5m"
 
     invoke-direct {p0, v0, v1}, Lcom/v2ray/ang/handler/SettingsManager;->ensureDefaultValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 502
+    .line 501
     const-string v0, "pref_observatory_least_load_method"
 
     const-string v1, "HEAD"
 
     invoke-direct {p0, v0, v1}, Lcom/v2ray/ang/handler/SettingsManager;->ensureDefaultValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 503
+    .line 502
     const-string v0, "pref_observatory_least_load_sampling"
 
     const-string v1, "2"
 
     invoke-direct {p0, v0, v1}, Lcom/v2ray/ang/handler/SettingsManager;->ensureDefaultValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 504
+    .line 503
     const-string v0, "pref_observatory_least_load_timeout"
 
     const-string v1, "30s"
@@ -291,7 +293,7 @@
 .method private final ensureDefaultSubscription()V
     .locals 21
 
-    .line 594
+    .line 593
     sget-object v0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v1, "__default_subscription__"
@@ -302,7 +304,7 @@
 
     if-nez v0, :cond_0
 
-    .line 595
+    .line 594
     new-instance v2, Lcom/v2ray/ang/dto/entities/SubscriptionItem;
 
     const/16 v19, 0x1ffe
@@ -337,19 +339,19 @@
 
     invoke-direct/range {v2 .. v20}, Lcom/v2ray/ang/dto/entities/SubscriptionItem;-><init>(Ljava/lang/String;Ljava/lang/String;ZJJZJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 598
+    .line 597
     sget-object v0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     invoke-virtual {v0, v1, v2}, Lcom/v2ray/ang/handler/MmkvManager;->encodeSubscription(Ljava/lang/String;Lcom/v2ray/ang/dto/entities/SubscriptionItem;)V
 
-    .line 601
+    .line 600
     sget-object v0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     invoke-virtual {v0}, Lcom/v2ray/ang/handler/MmkvManager;->decodeSubsList()Ljava/util/List;
 
     move-result-object v0
 
-    .line 602
+    .line 601
     invoke-static {v0}, Lkotlin/collections/CollectionsKt;->getLastIndex(Ljava/util/List;)I
 
     move-result v1
@@ -362,7 +364,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 603
+    .line 602
     sget-object v1, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     invoke-virtual {v1, v0}, Lcom/v2ray/ang/handler/MmkvManager;->encodeSubsList(Ljava/util/List;)V
@@ -374,7 +376,7 @@
 .method private final ensureDefaultValue(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 508
+    .line 507
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     invoke-virtual {p0, p1}, Lcom/v2ray/ang/handler/MmkvManager;->decodeSettingsString(Ljava/lang/String;)Ljava/lang/String;
@@ -396,7 +398,7 @@
     :cond_0
     return-void
 
-    .line 509
+    .line 508
     :cond_1
     :goto_0
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
@@ -409,7 +411,7 @@
 .method private final generateRandomSocksPort()I
     .locals 2
 
-    .line 302
+    .line 301
     sget-object p0, Lkotlin/random/Random;->Default:Lkotlin/random/Random$Default;
 
     const/16 v0, 0x2710
@@ -432,7 +434,7 @@
 
     const/4 p1, 0x0
 
-    .line 374
+    .line 373
     :cond_0
     invoke-virtual {p0, p1}, Lcom/v2ray/ang/handler/SettingsManager;->getDelayTestUrl(Z)Ljava/lang/String;
 
@@ -441,13 +443,14 @@
     return-object p0
 .end method
 
-.method private final getPresetRoutingRulesets(Landroid/content/Context;I)Ljava/util/List;
+.method private final getPresetRoutingRulesets(Landroid/content/Context;Lcom/v2ray/ang/enums/RoutingType;)Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
-            "I)",
+            "Lcom/v2ray/ang/enums/RoutingType;",
+            ")",
             "Ljava/util/List<",
             "Lcom/v2ray/ang/dto/entities/RulesetItem;",
             ">;"
@@ -455,24 +458,17 @@
     .end annotation
 
     .line 69
-    sget-object p0, Lcom/v2ray/ang/enums/RoutingType;->Companion:Lcom/v2ray/ang/enums/RoutingType$Companion;
+    sget-object p0, Lcom/v2ray/ang/util/Utils;->INSTANCE:Lcom/v2ray/ang/util/Utils;
 
-    invoke-virtual {p0, p2}, Lcom/v2ray/ang/enums/RoutingType$Companion;->fromIndex(I)Lcom/v2ray/ang/enums/RoutingType;
+    invoke-virtual {p2}, Lcom/v2ray/ang/enums/RoutingType;->getFileName()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p2
 
-    invoke-virtual {p0}, Lcom/v2ray/ang/enums/RoutingType;->getFileName()Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Lcom/v2ray/ang/util/Utils;->readTextFromAssets(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     .line 70
-    sget-object p2, Lcom/v2ray/ang/util/Utils;->INSTANCE:Lcom/v2ray/ang/util/Utils;
-
-    invoke-virtual {p2, p1, p0}, Lcom/v2ray/ang/util/Utils;->readTextFromAssets(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    .line 71
     move-object p1, p0
 
     check-cast p1, Ljava/lang/CharSequence;
@@ -487,7 +483,7 @@
 
     return-object p2
 
-    .line 75
+    .line 74
     :cond_0
     sget-object p1, Lcom/v2ray/ang/util/JsonUtil;->INSTANCE:Lcom/v2ray/ang/util/JsonUtil;
 
@@ -511,18 +507,18 @@
     return-object p2
 .end method
 
-.method static synthetic getPresetRoutingRulesets$default(Lcom/v2ray/ang/handler/SettingsManager;Landroid/content/Context;IILjava/lang/Object;)Ljava/util/List;
+.method static synthetic getPresetRoutingRulesets$default(Lcom/v2ray/ang/handler/SettingsManager;Landroid/content/Context;Lcom/v2ray/ang/enums/RoutingType;ILjava/lang/Object;)Ljava/util/List;
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
 
     if-eqz p3, :cond_0
 
-    const/4 p2, 0x0
-
     .line 68
+    sget-object p2, Lcom/v2ray/ang/enums/RoutingType;->WHITE:Lcom/v2ray/ang/enums/RoutingType;
+
     :cond_0
-    invoke-direct {p0, p1, p2}, Lcom/v2ray/ang/handler/SettingsManager;->getPresetRoutingRulesets(Landroid/content/Context;I)Ljava/util/List;
+    invoke-direct {p0, p1, p2}, Lcom/v2ray/ang/handler/SettingsManager;->getPresetRoutingRulesets(Landroid/content/Context;Lcom/v2ray/ang/enums/RoutingType;)Ljava/util/List;
 
     move-result-object p0
 
@@ -536,7 +532,7 @@
 
     if-eqz p2, :cond_0
 
-    .line 225
+    .line 224
     sget-object p1, Lcom/v2ray/ang/enums/EConfigType;->CUSTOM:Lcom/v2ray/ang/enums/EConfigType;
 
     invoke-static {p1}, Lkotlin/collections/SetsKt;->setOf(Ljava/lang/Object;)Ljava/util/Set;
@@ -558,7 +554,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 228
+    .line 227
     sget-object v0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     invoke-virtual {v0, p0}, Lcom/v2ray/ang/handler/MmkvManager;->decodeServerConfig(Ljava/lang/String;)Lcom/v2ray/ang/dto/entities/ProfileItem;
@@ -575,7 +571,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 229
+    .line 228
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/entities/ProfileItem;->getConfigType()Lcom/v2ray/ang/enums/EConfigType;
 
     move-result-object p1
@@ -596,7 +592,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 230
+    .line 229
     invoke-virtual {p0}, Lcom/v2ray/ang/dto/entities/ProfileItem;->getRemarks()Ljava/lang/String;
 
     move-result-object p0
@@ -621,7 +617,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 231
+    .line 230
     check-cast p0, Ljava/lang/CharSequence;
 
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
@@ -641,7 +637,7 @@
 .end method
 
 .method private final initRoutingRulesets(Landroid/content/Context;)V
-    .locals 3
+    .locals 2
 
     .line 55
     sget-object v0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
@@ -672,10 +668,8 @@
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x0
-
     .line 57
-    invoke-static {p0, p1, v2, v0, v1}, Lcom/v2ray/ang/handler/SettingsManager;->getPresetRoutingRulesets$default(Lcom/v2ray/ang/handler/SettingsManager;Landroid/content/Context;IILjava/lang/Object;)Ljava/util/List;
+    invoke-static {p0, p1, v1, v0, v1}, Lcom/v2ray/ang/handler/SettingsManager;->getPresetRoutingRulesets$default(Lcom/v2ray/ang/handler/SettingsManager;Landroid/content/Context;Lcom/v2ray/ang/enums/RoutingType;ILjava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
 
@@ -690,7 +684,7 @@
 .method private final migrateHysteria2PinSHA256()V
     .locals 5
 
-    .line 516
+    .line 515
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const/4 v0, 0x0
@@ -705,7 +699,7 @@
 
     return-void
 
-    .line 520
+    .line 519
     :cond_0
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
@@ -713,7 +707,7 @@
 
     move-result-object p0
 
-    .line 522
+    .line 521
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -732,7 +726,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 523
+    .line 522
     sget-object v2, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     invoke-virtual {v2, v0}, Lcom/v2ray/ang/handler/MmkvManager;->decodeServerConfig(Ljava/lang/String;)Lcom/v2ray/ang/dto/entities/ProfileItem;
@@ -743,7 +737,7 @@
 
     goto :goto_0
 
-    .line 524
+    .line 523
     :cond_2
     invoke-virtual {v2}, Lcom/v2ray/ang/dto/entities/ProfileItem;->getConfigType()Lcom/v2ray/ang/enums/EConfigType;
 
@@ -755,7 +749,7 @@
 
     goto :goto_0
 
-    .line 527
+    .line 526
     :cond_3
     invoke-virtual {v2}, Lcom/v2ray/ang/dto/entities/ProfileItem;->getPinSHA256()Ljava/lang/String;
 
@@ -788,7 +782,7 @@
 
     if-nez v3, :cond_1
 
-    .line 530
+    .line 529
     :cond_5
     invoke-virtual {v2}, Lcom/v2ray/ang/dto/entities/ProfileItem;->getPinSHA256()Ljava/lang/String;
 
@@ -798,17 +792,17 @@
 
     const/4 v3, 0x0
 
-    .line 531
+    .line 530
     invoke-virtual {v2, v3}, Lcom/v2ray/ang/dto/entities/ProfileItem;->setPinSHA256(Ljava/lang/String;)V
 
-    .line 532
+    .line 531
     sget-object v3, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     invoke-virtual {v3, v0, v2}, Lcom/v2ray/ang/handler/MmkvManager;->encodeServerConfig(Ljava/lang/String;Lcom/v2ray/ang/dto/entities/ProfileItem;)Ljava/lang/String;
 
     goto :goto_0
 
-    .line 535
+    .line 534
     :cond_6
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
@@ -822,7 +816,7 @@
 .method private final migrateServerListToSubscriptions()V
     .locals 8
 
-    .line 548
+    .line 547
     sget-object v0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v1, "server_list_to_subscriptions_migrated"
@@ -837,18 +831,18 @@
 
     return-void
 
-    .line 553
+    .line 552
     :cond_0
     invoke-direct {p0}, Lcom/v2ray/ang/handler/SettingsManager;->ensureDefaultSubscription()V
 
-    .line 556
+    .line 555
     sget-object v0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     invoke-virtual {v0}, Lcom/v2ray/ang/handler/MmkvManager;->readLegacyServerList()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 557
+    .line 556
     move-object v3, v0
 
     check-cast v3, Ljava/lang/CharSequence;
@@ -865,7 +859,7 @@
 
     goto/16 :goto_3
 
-    .line 563
+    .line 562
     :cond_1
     sget-object v3, Lcom/v2ray/ang/util/JsonUtil;->INSTANCE:Lcom/v2ray/ang/util/JsonUtil;
 
@@ -881,14 +875,14 @@
 
     check-cast p0, Lcom/v2ray/ang/handler/SettingsManager;
 
-    .line 564
+    .line 563
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     invoke-virtual {p0, v1, v4}, Lcom/v2ray/ang/handler/MmkvManager;->encodeSettings(Ljava/lang/String;Z)Z
 
     return-void
 
-    .line 568
+    .line 567
     :cond_2
     new-instance p0, Ljava/util/LinkedHashMap;
 
@@ -896,7 +890,7 @@
 
     check-cast p0, Ljava/util/Map;
 
-    .line 658
+    .line 657
     array-length v3, v0
 
     :goto_0
@@ -904,7 +898,7 @@
 
     aget-object v5, v0, v2
 
-    .line 572
+    .line 571
     sget-object v6, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     invoke-virtual {v6, v5}, Lcom/v2ray/ang/handler/MmkvManager;->decodeServerConfig(Ljava/lang/String;)Lcom/v2ray/ang/dto/entities/ProfileItem;
@@ -915,7 +909,7 @@
 
     goto :goto_1
 
-    .line 573
+    .line 572
     :cond_3
     invoke-virtual {v6}, Lcom/v2ray/ang/dto/entities/ProfileItem;->getSubscriptionId()Ljava/lang/String;
 
@@ -934,28 +928,28 @@
     :cond_4
     check-cast v6, Ljava/lang/String;
 
-    .line 659
+    .line 658
     invoke-interface {p0, v6}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v7
 
     if-nez v7, :cond_5
 
-    .line 575
+    .line 574
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
     check-cast v7, Ljava/util/List;
 
-    .line 662
+    .line 661
     invoke-interface {p0, v6, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 660
+    .line 659
     :cond_5
     check-cast v7, Ljava/util/List;
 
-    .line 575
+    .line 574
     invoke-interface {v7, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :goto_1
@@ -963,7 +957,7 @@
 
     goto :goto_0
 
-    .line 667
+    .line 666
     :cond_6
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -998,14 +992,14 @@
 
     check-cast v0, Ljava/util/List;
 
-    .line 580
+    .line 579
     sget-object v3, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     invoke-virtual {v3, v0, v2}, Lcom/v2ray/ang/handler/MmkvManager;->encodeServerList(Ljava/util/List;Ljava/lang/String;)V
 
     goto :goto_2
 
-    .line 585
+    .line 584
     :cond_7
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
@@ -1013,7 +1007,7 @@
 
     return-void
 
-    .line 559
+    .line 558
     :cond_8
     :goto_3
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
@@ -1034,14 +1028,14 @@
         }
     .end annotation
 
-    .line 117
+    .line 116
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
     check-cast p0, Ljava/util/List;
 
-    .line 118
+    .line 117
     sget-object v0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     invoke-virtual {v0}, Lcom/v2ray/ang/handler/MmkvManager;->decodeRoutingRulesets()Ljava/util/List;
@@ -1052,7 +1046,7 @@
 
     check-cast v0, Ljava/lang/Iterable;
 
-    .line 610
+    .line 609
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -1071,7 +1065,7 @@
 
     check-cast v1, Lcom/v2ray/ang/dto/entities/RulesetItem;
 
-    .line 119
+    .line 118
     invoke-virtual {v1}, Lcom/v2ray/ang/dto/entities/RulesetItem;->getLocked()Ljava/lang/Boolean;
 
     move-result-object v2
@@ -1088,18 +1082,18 @@
 
     if-eqz v2, :cond_0
 
-    .line 120
+    .line 119
     invoke-interface {p0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 124
+    .line 123
     :cond_1
     check-cast p1, Ljava/util/Collection;
 
     invoke-interface {p0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 125
+    .line 124
     sget-object p1, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     invoke-virtual {p1, p0}, Lcom/v2ray/ang/handler/MmkvManager;->encodeRoutingRulesets(Ljava/util/List;)V
@@ -1112,7 +1106,7 @@
 .method public final canUseProcessRouting()Z
     .locals 3
 
-    .line 464
+    .line 463
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1d
@@ -1123,7 +1117,7 @@
 
     return v2
 
-    .line 469
+    .line 468
     :cond_0
     invoke-virtual {p0}, Lcom/v2ray/ang/handler/SettingsManager;->isUsingHevTun()Z
 
@@ -1133,7 +1127,7 @@
 
     return v2
 
-    .line 474
+    .line 473
     :cond_1
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
@@ -1156,7 +1150,7 @@
 .method public final getCurrentVpnInterfaceAddressConfig()Lcom/v2ray/ang/enums/VpnInterfaceAddressConfig;
     .locals 2
 
-    .line 424
+    .line 423
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v0, "pref_vpn_interface_address_config_index"
@@ -1182,7 +1176,7 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 425
+    .line 424
     :goto_0
     sget-object v0, Lcom/v2ray/ang/enums/VpnInterfaceAddressConfig;->Companion:Lcom/v2ray/ang/enums/VpnInterfaceAddressConfig$Companion;
 
@@ -1210,12 +1204,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 376
+    .line 375
     const-string p0, "https://www.google.com/generate_204"
 
     return-object p0
 
-    .line 378
+    .line 377
     :cond_0
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
@@ -1227,7 +1221,7 @@
 
     if-nez p0, :cond_1
 
-    .line 379
+    .line 378
     const-string p0, "https://www.gstatic.com/generate_204"
 
     :cond_1
@@ -1245,7 +1239,7 @@
         }
     .end annotation
 
-    .line 338
+    .line 337
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v0, "pref_domestic_dns"
@@ -1260,7 +1254,7 @@
 
     move-object p0, v0
 
-    .line 339
+    .line 338
     :cond_0
     move-object v1, p0
 
@@ -1286,14 +1280,14 @@
 
     check-cast p0, Ljava/lang/Iterable;
 
-    .line 649
+    .line 648
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     check-cast v1, Ljava/util/Collection;
 
-    .line 650
+    .line 649
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -1314,7 +1308,7 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 339
+    .line 338
     sget-object v4, Lcom/v2ray/ang/util/Utils;->INSTANCE:Lcom/v2ray/ang/util/Utils;
 
     invoke-virtual {v4, v3}, Lcom/v2ray/ang/util/Utils;->isPureIpAddress(Ljava/lang/String;)Z
@@ -1331,24 +1325,24 @@
 
     if-eqz v3, :cond_1
 
-    .line 650
+    .line 649
     :cond_2
     invoke-interface {v1, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 651
+    .line 650
     :cond_3
     check-cast v1, Ljava/util/List;
 
-    .line 340
+    .line 339
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
     move-result p0
 
     if-eqz p0, :cond_4
 
-    .line 341
+    .line 340
     invoke-static {v0}, Lkotlin/collections/CollectionsKt;->listOf(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
@@ -1362,7 +1356,7 @@
 .method public final getHttpPort()I
     .locals 1
 
-    .line 294
+    .line 293
     invoke-virtual {p0}, Lcom/v2ray/ang/handler/SettingsManager;->getSocksPort()I
 
     move-result p0
@@ -1383,7 +1377,7 @@
 .method public final getLocale()Ljava/util/Locale;
     .locals 1
 
-    .line 398
+    .line 397
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v0, "pref_language"
@@ -1400,7 +1394,7 @@
 
     move-result-object p0
 
-    .line 399
+    .line 398
     :cond_0
     sget-object v0, Lcom/v2ray/ang/enums/Language;->Companion:Lcom/v2ray/ang/enums/Language$Companion;
 
@@ -1408,7 +1402,7 @@
 
     move-result-object p0
 
-    .line 401
+    .line 400
     sget-object v0, Lcom/v2ray/ang/handler/SettingsManager$WhenMappings;->$EnumSwitchMapping$0:[I
 
     invoke-virtual {p0}, Lcom/v2ray/ang/enums/Language;->ordinal()I
@@ -1427,7 +1421,7 @@
 
     throw p0
 
-    .line 411
+    .line 410
     :pswitch_0
     const-string p0, "bqi-IR"
 
@@ -1439,7 +1433,7 @@
 
     return-object p0
 
-    .line 410
+    .line 409
     :pswitch_1
     const-string p0, "bn"
 
@@ -1451,7 +1445,7 @@
 
     return-object p0
 
-    .line 409
+    .line 408
     :pswitch_2
     const-string p0, "ar"
 
@@ -1463,7 +1457,7 @@
 
     return-object p0
 
-    .line 408
+    .line 407
     :pswitch_3
     const-string p0, "fa"
 
@@ -1475,7 +1469,7 @@
 
     return-object p0
 
-    .line 407
+    .line 406
     :pswitch_4
     const-string p0, "ru"
 
@@ -1487,7 +1481,7 @@
 
     return-object p0
 
-    .line 406
+    .line 405
     :pswitch_5
     const-string/jumbo p0, "vi"
 
@@ -1499,7 +1493,7 @@
 
     return-object p0
 
-    .line 405
+    .line 404
     :pswitch_6
     sget-object p0, Ljava/util/Locale;->TRADITIONAL_CHINESE:Ljava/util/Locale;
 
@@ -1509,7 +1503,7 @@
 
     return-object p0
 
-    .line 404
+    .line 403
     :pswitch_7
     sget-object p0, Ljava/util/Locale;->CHINA:Ljava/util/Locale;
 
@@ -1519,7 +1513,7 @@
 
     return-object p0
 
-    .line 403
+    .line 402
     :pswitch_8
     sget-object p0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
@@ -1529,7 +1523,7 @@
 
     return-object p0
 
-    .line 402
+    .line 401
     :pswitch_9
     sget-object p0, Lcom/v2ray/ang/util/Utils;->INSTANCE:Lcom/v2ray/ang/util/Utils;
 
@@ -1575,7 +1569,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 226
+    .line 225
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     invoke-virtual {p0}, Lcom/v2ray/ang/handler/MmkvManager;->decodeAllServerList()Ljava/util/List;
@@ -1584,12 +1578,12 @@
 
     check-cast p0, Ljava/lang/Iterable;
 
-    .line 227
+    .line 226
     invoke-static {p0}, Lkotlin/collections/CollectionsKt;->asSequence(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object p0
 
-    .line 228
+    .line 227
     new-instance v0, Lcom/v2ray/ang/handler/SettingsManager$$ExternalSyntheticLambda0;
 
     invoke-direct {v0}, Lcom/v2ray/ang/handler/SettingsManager$$ExternalSyntheticLambda0;-><init>()V
@@ -1598,7 +1592,7 @@
 
     move-result-object p0
 
-    .line 229
+    .line 228
     new-instance v0, Lcom/v2ray/ang/handler/SettingsManager$$ExternalSyntheticLambda1;
 
     invoke-direct {v0, p1}, Lcom/v2ray/ang/handler/SettingsManager$$ExternalSyntheticLambda1;-><init>(Ljava/util/Set;)V
@@ -1607,7 +1601,7 @@
 
     move-result-object p0
 
-    .line 230
+    .line 229
     new-instance p1, Lcom/v2ray/ang/handler/SettingsManager$$ExternalSyntheticLambda2;
 
     invoke-direct {p1}, Lcom/v2ray/ang/handler/SettingsManager$$ExternalSyntheticLambda2;-><init>()V
@@ -1616,7 +1610,7 @@
 
     move-result-object p0
 
-    .line 231
+    .line 230
     new-instance p1, Lcom/v2ray/ang/handler/SettingsManager$$ExternalSyntheticLambda3;
 
     invoke-direct {p1}, Lcom/v2ray/ang/handler/SettingsManager$$ExternalSyntheticLambda3;-><init>()V
@@ -1625,12 +1619,12 @@
 
     move-result-object p0
 
-    .line 232
+    .line 231
     invoke-static {p0}, Lkotlin/sequences/SequencesKt;->distinct(Lkotlin/sequences/Sequence;)Lkotlin/sequences/Sequence;
 
     move-result-object p0
 
-    .line 233
+    .line 232
     invoke-static {p0}, Lkotlin/sequences/SequencesKt;->toList(Lkotlin/sequences/Sequence;)Ljava/util/List;
 
     move-result-object p0
@@ -1641,7 +1635,7 @@
 .method public final getRealPingConcurrency()I
     .locals 2
 
-    .line 388
+    .line 387
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v0, "pref_real_ping_concurrency"
@@ -1672,7 +1666,7 @@
 
     const/16 v1, 0x80
 
-    .line 389
+    .line 388
     invoke-static {p0, v0, v1}, Lkotlin/ranges/RangesKt;->coerceIn(III)I
 
     move-result p0
@@ -1691,7 +1685,7 @@
         }
     .end annotation
 
-    .line 352
+    .line 351
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v0, "pref_remote_dns"
@@ -1706,7 +1700,7 @@
 
     move-object p0, v0
 
-    .line 353
+    .line 352
     :cond_0
     move-object v1, p0
 
@@ -1732,14 +1726,14 @@
 
     check-cast p0, Ljava/lang/Iterable;
 
-    .line 652
+    .line 651
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     check-cast v1, Ljava/util/Collection;
 
-    .line 653
+    .line 652
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -1760,7 +1754,7 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 353
+    .line 352
     sget-object v4, Lcom/v2ray/ang/util/Utils;->INSTANCE:Lcom/v2ray/ang/util/Utils;
 
     invoke-virtual {v4, v3}, Lcom/v2ray/ang/util/Utils;->isPureIpAddress(Ljava/lang/String;)Z
@@ -1777,24 +1771,24 @@
 
     if-eqz v3, :cond_1
 
-    .line 653
+    .line 652
     :cond_2
     invoke-interface {v1, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 654
+    .line 653
     :cond_3
     check-cast v1, Ljava/util/List;
 
-    .line 354
+    .line 353
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
     move-result p0
 
     if-eqz p0, :cond_4
 
-    .line 355
+    .line 354
     invoke-static {v0}, Lkotlin/collections/CollectionsKt;->listOf(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
@@ -1814,7 +1808,7 @@
 
     return-object p0
 
-    .line 136
+    .line 135
     :cond_0
     sget-object v0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
@@ -1822,7 +1816,7 @@
 
     move-result-object v0
 
-    .line 137
+    .line 136
     move-object v1, v0
 
     check-cast v1, Ljava/util/Collection;
@@ -1837,7 +1831,7 @@
 
     goto :goto_0
 
-    .line 139
+    .line 138
     :cond_1
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1853,7 +1847,7 @@
 .method public final getServerViaRemarks(Ljava/lang/String;)Lcom/v2ray/ang/dto/entities/ProfileItem;
     .locals 4
 
-    .line 213
+    .line 212
     move-object p0, p1
 
     check-cast p0, Ljava/lang/CharSequence;
@@ -1870,7 +1864,7 @@
 
     goto :goto_1
 
-    .line 216
+    .line 215
     :cond_0
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
@@ -1878,17 +1872,17 @@
 
     move-result-object p0
 
-    .line 217
+    .line 216
     check-cast p0, Ljava/lang/Iterable;
 
-    .line 624
+    .line 623
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     check-cast v1, Ljava/util/Collection;
 
-    .line 634
+    .line 633
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -1905,10 +1899,10 @@
 
     move-result-object v2
 
-    .line 633
+    .line 632
     check-cast v2, Ljava/lang/String;
 
-    .line 218
+    .line 217
     sget-object v3, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     invoke-virtual {v3, v2}, Lcom/v2ray/ang/handler/MmkvManager;->decodeServerConfig(Ljava/lang/String;)Lcom/v2ray/ang/dto/entities/ProfileItem;
@@ -1917,19 +1911,19 @@
 
     if-eqz v2, :cond_1
 
-    .line 633
+    .line 632
     invoke-interface {v1, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 637
+    .line 636
     :cond_2
     check-cast v1, Ljava/util/List;
 
-    .line 624
+    .line 623
     check-cast v1, Ljava/lang/Iterable;
 
-    .line 638
+    .line 637
     invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -1949,7 +1943,7 @@
 
     check-cast v2, Lcom/v2ray/ang/dto/entities/ProfileItem;
 
-    .line 219
+    .line 218
     invoke-virtual {v2}, Lcom/v2ray/ang/dto/entities/ProfileItem;->getRemarks()Ljava/lang/String;
 
     move-result-object v2
@@ -1962,7 +1956,7 @@
 
     move-object v0, v1
 
-    .line 639
+    .line 638
     :cond_4
     check-cast v0, Lcom/v2ray/ang/dto/entities/ProfileItem;
 
@@ -1974,7 +1968,7 @@
 .method public final getSocksPassword()Ljava/lang/String;
     .locals 2
 
-    .line 286
+    .line 285
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v0, "pref_socks_password"
@@ -2018,7 +2012,7 @@
 .method public final getSocksPort()I
     .locals 3
 
-    .line 264
+    .line 263
     invoke-direct {p0}, Lcom/v2ray/ang/handler/SettingsManager;->IsDynamicSocksPort()Z
 
     move-result v0
@@ -2027,7 +2021,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 265
+    .line 264
     sget-object v0, Lcom/v2ray/ang/handler/SettingsManager;->runtimeSocksPort:Ljava/lang/Integer;
 
     if-nez v0, :cond_1
@@ -2038,7 +2032,7 @@
 
     goto :goto_0
 
-    .line 267
+    .line 266
     :cond_0
     sget-object p0, Lcom/v2ray/ang/util/Utils;->INSTANCE:Lcom/v2ray/ang/util/Utils;
 
@@ -2066,7 +2060,7 @@
     :goto_0
     if-eqz v0, :cond_2
 
-    .line 269
+    .line 268
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -2084,7 +2078,7 @@
 .method public final getSocksUsername()Ljava/lang/String;
     .locals 2
 
-    .line 282
+    .line 281
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v0, "pref_socks_username"
@@ -2136,7 +2130,7 @@
         }
     .end annotation
 
-    .line 365
+    .line 364
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v0, "pref_vpn_dns"
@@ -2149,7 +2143,7 @@
 
     const-string p0, "1.1.1.1"
 
-    .line 366
+    .line 365
     :cond_0
     move-object v0, p0
 
@@ -2175,14 +2169,14 @@
 
     check-cast p0, Ljava/lang/Iterable;
 
-    .line 655
+    .line 654
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     check-cast v0, Ljava/util/Collection;
 
-    .line 656
+    .line 655
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -2203,7 +2197,7 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 366
+    .line 365
     sget-object v3, Lcom/v2ray/ang/util/Utils;->INSTANCE:Lcom/v2ray/ang/util/Utils;
 
     invoke-virtual {v3, v2}, Lcom/v2ray/ang/util/Utils;->isPureIpAddress(Ljava/lang/String;)Z
@@ -2212,12 +2206,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 656
+    .line 655
     invoke-interface {v0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 657
+    .line 656
     :cond_2
     check-cast v0, Ljava/util/List;
 
@@ -2227,7 +2221,7 @@
 .method public final getVpnMtu()I
     .locals 2
 
-    .line 432
+    .line 431
     sget-object p0, Lcom/v2ray/ang/util/Utils;->INSTANCE:Lcom/v2ray/ang/util/Utils;
 
     sget-object v0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
@@ -2282,14 +2276,14 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 311
+    .line 310
     sget-object v0, Lcom/v2ray/ang/util/Utils;->INSTANCE:Lcom/v2ray/ang/util/Utils;
 
     invoke-virtual {v0, p1}, Lcom/v2ray/ang/util/Utils;->userAssetPath(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 314
+    .line 313
     :try_start_0
     const-string v0, "geosite.dat"
 
@@ -2301,7 +2295,7 @@
 
     move-result-object v0
 
-    .line 315
+    .line 314
     const-string v1, ""
 
     invoke-virtual {p2, v1}, Landroid/content/res/AssetManager;->list(Ljava/lang/String;)[Ljava/lang/String;
@@ -2310,14 +2304,14 @@
 
     if-eqz v1, :cond_4
 
-    .line 641
+    .line 640
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     check-cast v2, Ljava/util/Collection;
 
-    .line 642
+    .line 641
     array-length v3, v1
 
     const/4 v4, 0x0
@@ -2329,14 +2323,14 @@
 
     aget-object v6, v1, v5
 
-    .line 316
+    .line 315
     invoke-static {v0, v6}, Lkotlin/collections/ArraysKt;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v7
 
     if-eqz v7, :cond_0
 
-    .line 642
+    .line 641
     invoke-interface {v2, v6}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     :cond_0
@@ -2344,21 +2338,21 @@
 
     goto :goto_0
 
-    .line 643
+    .line 642
     :cond_1
     check-cast v2, Ljava/util/List;
 
-    .line 315
+    .line 314
     check-cast v2, Ljava/lang/Iterable;
 
-    .line 644
+    .line 643
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     check-cast v0, Ljava/util/Collection;
 
-    .line 645
+    .line 644
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -2379,7 +2373,7 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 317
+    .line 316
     new-instance v5, Ljava/io/File;
 
     invoke-direct {v5, p1, v3}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
@@ -2390,19 +2384,19 @@
 
     if-nez v3, :cond_2
 
-    .line 645
+    .line 644
     invoke-interface {v0, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 646
+    .line 645
     :cond_3
     check-cast v0, Ljava/util/List;
 
-    .line 315
+    .line 314
     check-cast v0, Ljava/lang/Iterable;
 
-    .line 647
+    .line 646
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -2420,12 +2414,12 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 319
+    .line 318
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, p1, v1}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 320
+    .line 319
     invoke-virtual {p2, v1}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
 
     move-result-object v1
@@ -2439,7 +2433,7 @@
 
     check-cast v3, Ljava/io/InputStream;
 
-    .line 321
+    .line 320
     new-instance v5, Ljava/io/FileOutputStream;
 
     invoke-direct {v5, v2}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
@@ -2453,7 +2447,7 @@
 
     check-cast v6, Ljava/io/FileOutputStream;
 
-    .line 322
+    .line 321
     invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
     check-cast v6, Ljava/io/OutputStream;
@@ -2466,17 +2460,17 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 321
+    .line 320
     :try_start_3
     invoke-static {v5, v8}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 320
+    .line 319
     :try_start_4
     invoke-static {v1, v8}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
-    .line 325
+    .line 324
     sget-object v1, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
 
     invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
@@ -2506,7 +2500,7 @@
     :catchall_0
     move-exception p1
 
-    .line 321
+    .line 320
     :try_start_5
     throw p1
     :try_end_5
@@ -2525,7 +2519,7 @@
     :catchall_2
     move-exception p1
 
-    .line 320
+    .line 319
     :try_start_7
     throw p1
     :try_end_7
@@ -2547,7 +2541,7 @@
     :catch_0
     move-exception p1
 
-    .line 328
+    .line 327
     sget-object p2, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
 
     const-string v0, "asset copy failed"
@@ -2562,7 +2556,7 @@
 .method public final isRootMode()Z
     .locals 2
 
-    .line 456
+    .line 455
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v0, "pref_root_mode_enabled"
@@ -2579,7 +2573,7 @@
 .method public final isUsingHevTun()Z
     .locals 2
 
-    .line 440
+    .line 439
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v0, "pref_use_hev_tunnel_v2"
@@ -2596,7 +2590,7 @@
 .method public final isVpnMode()Z
     .locals 1
 
-    .line 448
+    .line 447
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v0, "pref_mode"
@@ -2607,7 +2601,7 @@
 
     if-eqz p0, :cond_1
 
-    .line 449
+    .line 448
     const-string v0, "VPN"
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -2635,7 +2629,7 @@
 
     monitor-enter p0
 
-    .line 274
+    .line 273
     :try_start_0
     invoke-direct {p0}, Lcom/v2ray/ang/handler/SettingsManager;->IsDynamicSocksPort()Z
 
@@ -2643,7 +2637,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 275
+    .line 274
     invoke-direct {p0}, Lcom/v2ray/ang/handler/SettingsManager;->generateRandomSocksPort()I
 
     move-result v0
@@ -2654,7 +2648,7 @@
 
     sput-object v0, Lcom/v2ray/ang/handler/SettingsManager;->runtimeSocksPort:Ljava/lang/Integer;
 
-    .line 276
+    .line 275
     sget-object v0, Lcom/v2ray/ang/handler/SettingsManager;->runtimeSocksPort:Ljava/lang/Integer;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2663,7 +2657,7 @@
 
     return-object v0
 
-    .line 278
+    .line 277
     :cond_0
     monitor-exit p0
 
@@ -2689,7 +2683,7 @@
 
     return-void
 
-    .line 170
+    .line 169
     :cond_0
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
@@ -2697,7 +2691,7 @@
 
     move-result-object p0
 
-    .line 171
+    .line 170
     move-object v0, p0
 
     check-cast v0, Ljava/util/Collection;
@@ -2712,11 +2706,11 @@
 
     goto :goto_0
 
-    .line 173
+    .line 172
     :cond_1
     invoke-interface {p0, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 174
+    .line 173
     sget-object p1, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     invoke-virtual {p1, p0}, Lcom/v2ray/ang/handler/MmkvManager;->encodeRoutingRulesets(Ljava/util/List;)V
@@ -2731,11 +2725,11 @@
 
     move-object/from16 v0, p1
 
-    const-string v1, "subid"
+    const-string/jumbo v1, "subid"
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 242
+    .line 241
     sget-object v1, Lcom/v2ray/ang/handler/SubscriptionUpdater;->INSTANCE:Lcom/v2ray/ang/handler/SubscriptionUpdater;
 
     const/4 v2, 0x0
@@ -2744,19 +2738,19 @@
 
     invoke-static {v1, v2, v0, v3, v2}, Lcom/v2ray/ang/handler/SubscriptionUpdater;->cancelOne$default(Lcom/v2ray/ang/handler/SubscriptionUpdater;Landroid/content/Context;Ljava/lang/String;ILjava/lang/Object;)V
 
-    .line 244
+    .line 243
     sget-object v1, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     invoke-virtual {v1, v0}, Lcom/v2ray/ang/handler/MmkvManager;->removeSubscription(Ljava/lang/String;)V
 
-    .line 247
+    .line 246
     sget-object v0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     invoke-virtual {v0}, Lcom/v2ray/ang/handler/MmkvManager;->decodeSubsList()Ljava/util/List;
 
     move-result-object v0
 
-    .line 248
+    .line 247
     check-cast v0, Ljava/util/Collection;
 
     invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
@@ -2767,7 +2761,7 @@
 
     return-void
 
-    .line 252
+    .line 251
     :cond_0
     new-instance v1, Lcom/v2ray/ang/dto/entities/SubscriptionItem;
 
@@ -2803,7 +2797,7 @@
 
     invoke-direct/range {v1 .. v19}, Lcom/v2ray/ang/dto/entities/SubscriptionItem;-><init>(Ljava/lang/String;Ljava/lang/String;ZJJZJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 255
+    .line 254
     sget-object v0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v2, "__default_subscription__"
@@ -2816,7 +2810,7 @@
 .method public final resetRoutingRulesets(Ljava/lang/String;)Z
     .locals 3
 
-    .line 94
+    .line 93
     move-object v0, p1
 
     check-cast v0, Ljava/lang/CharSequence;
@@ -2833,7 +2827,7 @@
 
     goto :goto_2
 
-    .line 99
+    .line 98
     :cond_0
     :try_start_0
     sget-object v0, Lcom/v2ray/ang/util/JsonUtil;->INSTANCE:Lcom/v2ray/ang/util/JsonUtil;
@@ -2857,7 +2851,7 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 100
+    .line 99
     :goto_0
     move-object v0, p1
 
@@ -2873,7 +2867,7 @@
 
     goto :goto_1
 
-    .line 104
+    .line 103
     :cond_2
     invoke-direct {p0, p1}, Lcom/v2ray/ang/handler/SettingsManager;->resetRoutingRulesetsCommon(Ljava/util/List;)V
     :try_end_0
@@ -2890,7 +2884,7 @@
     :catch_0
     move-exception p0
 
-    .line 107
+    .line 106
     sget-object p1, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
 
     const-string v0, "Failed to reset routing rulesets"
@@ -2906,15 +2900,19 @@
     return v1
 .end method
 
-.method public final resetRoutingRulesetsFromPresets(Landroid/content/Context;I)V
+.method public final resetRoutingRulesetsFromPresets(Landroid/content/Context;Lcom/v2ray/ang/enums/RoutingType;)V
     .locals 1
 
     const-string v0, "context"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 84
-    invoke-direct {p0, p1, p2}, Lcom/v2ray/ang/handler/SettingsManager;->getPresetRoutingRulesets(Landroid/content/Context;I)Ljava/util/List;
+    const-string/jumbo v0, "type"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 83
+    invoke-direct {p0, p1, p2}, Lcom/v2ray/ang/handler/SettingsManager;->getPresetRoutingRulesets(Landroid/content/Context;Lcom/v2ray/ang/enums/RoutingType;)Ljava/util/List;
 
     move-result-object p1
 
@@ -2922,7 +2920,7 @@
 
     return-void
 
-    .line 85
+    .line 84
     :cond_0
     invoke-direct {p0, p1}, Lcom/v2ray/ang/handler/SettingsManager;->resetRoutingRulesetsCommon(Ljava/util/List;)V
 
@@ -2932,7 +2930,7 @@
 .method public final routingRulesetsBypassLan()Z
     .locals 9
 
-    .line 182
+    .line 181
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v0, "pref_vpn_bypass_lan"
@@ -2947,7 +2945,7 @@
 
     move-object p0, v0
 
-    .line 183
+    .line 182
     :cond_0
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -2959,7 +2957,7 @@
 
     return v1
 
-    .line 185
+    .line 184
     :cond_1
     const-string v0, "2"
 
@@ -2973,7 +2971,7 @@
 
     return v0
 
-    .line 189
+    .line 188
     :cond_2
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
@@ -2985,7 +2983,7 @@
 
     return v0
 
-    .line 190
+    .line 189
     :cond_3
     sget-object v2, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
@@ -2997,7 +2995,7 @@
 
     return v0
 
-    .line 191
+    .line 190
     :cond_4
     invoke-virtual {v2}, Lcom/v2ray/ang/dto/entities/ProfileItem;->getConfigType()Lcom/v2ray/ang/enums/EConfigType;
 
@@ -3015,7 +3013,7 @@
 
     if-ne v2, v3, :cond_d
 
-    .line 192
+    .line 191
     sget-object v2, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     invoke-virtual {v2, p0}, Lcom/v2ray/ang/handler/MmkvManager;->decodeServerRaw(Ljava/lang/String;)Ljava/lang/String;
@@ -3026,7 +3024,7 @@
 
     return v0
 
-    .line 193
+    .line 192
     :cond_5
     sget-object v2, Lcom/v2ray/ang/util/JsonUtil;->INSTANCE:Lcom/v2ray/ang/util/JsonUtil;
 
@@ -3040,7 +3038,7 @@
 
     if-eqz p0, :cond_c
 
-    .line 194
+    .line 193
     invoke-virtual {p0}, Lcom/v2ray/ang/dto/V2rayConfig;->getRouting()Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean;
 
     move-result-object p0
@@ -3055,14 +3053,14 @@
 
     check-cast p0, Ljava/lang/Iterable;
 
-    .line 612
+    .line 611
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     check-cast v2, Ljava/util/Collection;
 
-    .line 613
+    .line 612
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -3083,7 +3081,7 @@
 
     check-cast v7, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$RulesBean;
 
-    .line 194
+    .line 193
     invoke-virtual {v7}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$RulesBean;->getOutboundTag()Ljava/lang/String;
 
     move-result-object v7
@@ -3094,19 +3092,19 @@
 
     if-eqz v7, :cond_6
 
-    .line 613
+    .line 612
     invoke-interface {v2, v3}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 614
+    .line 613
     :cond_7
     check-cast v2, Ljava/util/List;
 
-    .line 194
+    .line 193
     check-cast v2, Ljava/lang/Iterable;
 
-    .line 615
+    .line 614
     instance-of p0, v2, Ljava/util/Collection;
 
     if-eqz p0, :cond_8
@@ -3123,7 +3121,7 @@
 
     goto :goto_2
 
-    .line 616
+    .line 615
     :cond_8
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -3142,7 +3140,7 @@
 
     check-cast v2, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$RulesBean;
 
-    .line 195
+    .line 194
     invoke-virtual {v2}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$RulesBean;->getDomain()Ljava/util/List;
 
     move-result-object v3
@@ -3173,14 +3171,14 @@
     :goto_1
     move v0, v1
 
-    .line 617
+    .line 616
     :cond_b
     :goto_2
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v7
 
-    .line 197
+    .line 196
     :cond_c
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -3192,7 +3190,7 @@
 
     return p0
 
-    .line 200
+    .line 199
     :cond_d
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
@@ -3202,17 +3200,17 @@
 
     if-eqz p0, :cond_14
 
-    .line 201
+    .line 200
     check-cast p0, Ljava/lang/Iterable;
 
-    .line 618
+    .line 617
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     check-cast v2, Ljava/util/Collection;
 
-    .line 619
+    .line 618
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -3233,7 +3231,7 @@
 
     check-cast v7, Lcom/v2ray/ang/dto/entities/RulesetItem;
 
-    .line 201
+    .line 200
     invoke-virtual {v7}, Lcom/v2ray/ang/dto/entities/RulesetItem;->getEnabled()Z
 
     move-result v8
@@ -3250,19 +3248,19 @@
 
     if-eqz v7, :cond_e
 
-    .line 619
+    .line 618
     invoke-interface {v2, v3}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_3
 
-    .line 620
+    .line 619
     :cond_f
     check-cast v2, Ljava/util/List;
 
-    .line 201
+    .line 200
     check-cast v2, Ljava/lang/Iterable;
 
-    .line 621
+    .line 620
     instance-of p0, v2, Ljava/util/Collection;
 
     if-eqz p0, :cond_10
@@ -3279,7 +3277,7 @@
 
     goto :goto_5
 
-    .line 622
+    .line 621
     :cond_10
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -3298,7 +3296,7 @@
 
     check-cast v2, Lcom/v2ray/ang/dto/entities/RulesetItem;
 
-    .line 202
+    .line 201
     invoke-virtual {v2}, Lcom/v2ray/ang/dto/entities/RulesetItem;->getDomain()Ljava/util/List;
 
     move-result-object v3
@@ -3329,14 +3327,14 @@
     :goto_4
     move v0, v1
 
-    .line 623
+    .line 622
     :cond_13
     :goto_5
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v7
 
-    .line 204
+    .line 203
     :cond_14
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -3356,7 +3354,7 @@
 
     return-void
 
-    .line 150
+    .line 149
     :cond_0
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
@@ -3364,7 +3362,7 @@
 
     move-result-object p0
 
-    .line 151
+    .line 150
     move-object v0, p0
 
     check-cast v0, Ljava/util/Collection;
@@ -3377,7 +3375,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 152
+    .line 151
     :cond_1
     new-instance p0, Ljava/util/ArrayList;
 
@@ -3388,7 +3386,7 @@
     :cond_2
     if-ltz p1, :cond_4
 
-    .line 155
+    .line 154
     move-object v0, p0
 
     check-cast v0, Ljava/util/Collection;
@@ -3401,7 +3399,7 @@
 
     goto :goto_0
 
-    .line 158
+    .line 157
     :cond_3
     invoke-interface {p0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
@@ -3411,10 +3409,10 @@
     :goto_0
     const/4 p1, 0x0
 
-    .line 156
+    .line 155
     invoke-interface {p0, p1, p2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 160
+    .line 159
     :goto_1
     sget-object p1, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 

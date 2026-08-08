@@ -53,12 +53,12 @@
     f = "MainViewModel.kt"
     i = {}
     l = {
-        0x222
+        0x220
     }
     m = "invokeSuspend"
     n = {}
     nl = {
-        0x22e
+        0x22c
     }
     s = {}
     v = 0x2
@@ -171,7 +171,7 @@
 
     move-result-object v0
 
-    .line 545
+    .line 543
     iget v1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$sortByTestResultsAsync$1;->label:I
 
     const/4 v2, 0x1
@@ -196,7 +196,7 @@
     :cond_1
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 546
+    .line 544
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$sortByTestResultsAsync$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {p1}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getIoDispatcher$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lkotlinx/coroutines/CoroutineDispatcher;
@@ -229,7 +229,7 @@
 
     return-object v0
 
-    .line 558
+    .line 556
     :cond_2
     :goto_0
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;

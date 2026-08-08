@@ -31,7 +31,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nMainViewModel.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$filterConfig$1\n+ 2 Mutex.kt\nkotlinx/coroutines/sync/MutexKt\n+ 3 _Maps.kt\nkotlin/collections/MapsKt___MapsKt\n*L\n1#1,784:1\n117#2,10:785\n221#3,2:795\n*S KotlinDebug\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$filterConfig$1\n*L\n619#1:785,10\n621#1:795,2\n*E\n"
+    value = "SMAP\nMainViewModel.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$filterConfig$1\n+ 2 Mutex.kt\nkotlinx/coroutines/sync/MutexKt\n+ 3 _Maps.kt\nkotlin/collections/MapsKt___MapsKt\n*L\n1#1,782:1\n117#2,10:783\n221#3,2:793\n*S KotlinDebug\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$filterConfig$1\n*L\n617#1:783,10\n619#1:793,2\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -61,8 +61,8 @@
         0x1
     }
     l = {
-        0x26a,
-        0x315
+        0x268,
+        0x313
     }
     m = "invokeSuspend"
     n = {
@@ -71,8 +71,8 @@
         "$this$withLock_u24default$iv"
     }
     nl = {
-        0x26b,
-        0x316
+        0x269,
+        0x314
     }
     s = {
         "L$0",
@@ -201,7 +201,7 @@
 
     move-result-object v1
 
-    .line 617
+    .line 615
     iget v2, p0, Lcom/v2ray/ang/ui/main/MainViewModel$filterConfig$1;->label:I
 
     const/4 v3, 0x0
@@ -245,7 +245,7 @@
     :cond_2
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 618
+    .line 616
     move-object p1, p0
 
     check-cast p1, Lkotlin/coroutines/Continuation;
@@ -264,7 +264,7 @@
 
     goto :goto_1
 
-    .line 619
+    .line 617
     :cond_3
     :goto_0
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$filterConfig$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
@@ -275,7 +275,7 @@
 
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$filterConfig$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
-    .line 789
+    .line 787
     move-object v5, p0
 
     check-cast v5, Lkotlin/coroutines/Continuation;
@@ -300,7 +300,7 @@
     :cond_4
     move-object v1, p1
 
-    .line 619
+    .line 617
     :goto_2
     :try_start_0
     invoke-static {v1}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getGroupDataCache$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Ljava/util/Map;
@@ -313,16 +313,16 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 793
+    .line 791
     invoke-interface {v2, v3}, Lkotlinx/coroutines/sync/Mutex;->unlock(Ljava/lang/Object;)V
 
-    .line 620
+    .line 618
     invoke-static {v0}, Lkotlinx/coroutines/CoroutineScopeKt;->ensureActive(Lkotlinx/coroutines/CoroutineScope;)V
 
-    .line 621
+    .line 619
     iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainViewModel$filterConfig$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
-    .line 795
+    .line 793
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p1
@@ -356,15 +356,15 @@
 
     check-cast v1, Ljava/util/List;
 
-    .line 622
+    .line 620
     invoke-static {v0}, Lkotlinx/coroutines/CoroutineScopeKt;->ensureActive(Lkotlinx/coroutines/CoroutineScope;)V
 
-    .line 623
+    .line 621
     invoke-static {p0, v2, v1}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$updateGroupUi(Lcom/v2ray/ang/ui/main/MainViewModel;Ljava/lang/String;Ljava/util/List;)V
 
     goto :goto_3
 
-    .line 625
+    .line 623
     :cond_5
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
@@ -373,7 +373,7 @@
     :catchall_0
     move-exception p0
 
-    .line 793
+    .line 791
     invoke-interface {v2, v3}, Lkotlinx/coroutines/sync/Mutex;->unlock(Ljava/lang/Object;)V
 
     throw p0

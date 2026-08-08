@@ -1801,7 +1801,7 @@
 
     move-result-object p0
 
-    const-string p1, "substring(...)"
+    const-string/jumbo p1, "substring(...)"
 
     invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 

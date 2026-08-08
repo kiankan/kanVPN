@@ -5338,7 +5338,7 @@
     :cond_6
     new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p1, "tag shouldn\'t be null"
+    const-string/jumbo p1, "tag shouldn\'t be null"
 
     invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
@@ -8529,7 +8529,7 @@
     if-eq v6, v7, :cond_2
 
     .line 7435
-    const-string v0, "stripOffsets and stripByteCounts should have same length."
+    const-string/jumbo v0, "stripOffsets and stripByteCounts should have same length."
 
     invoke-static {v5, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -8730,7 +8730,7 @@
     .line 7431
     :cond_8
     :goto_3
-    const-string v0, "stripByteCounts should not be null or have zero length."
+    const-string/jumbo v0, "stripByteCounts should not be null or have zero length."
 
     invoke-static {v5, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -8739,7 +8739,7 @@
     .line 7427
     :cond_9
     :goto_4
-    const-string v0, "stripOffsets should not be null or have zero length."
+    const-string/jumbo v0, "stripOffsets should not be null or have zero length."
 
     invoke-static {v5, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -10749,7 +10749,7 @@
     .line 4857
     new-instance v5, Ljava/lang/StringBuilder;
 
-    const-string v6, "tagName: "
+    const-string/jumbo v6, "tagName: "
 
     invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -16039,7 +16039,7 @@
     :cond_6
     new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p1, "tag shouldn\'t be null"
+    const-string/jumbo p1, "tag shouldn\'t be null"
 
     invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
@@ -16072,7 +16072,7 @@
     :cond_1
     new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p1, "tag shouldn\'t be null"
+    const-string/jumbo p1, "tag shouldn\'t be null"
 
     invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
@@ -16114,7 +16114,7 @@
     :cond_1
     new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p1, "tag shouldn\'t be null"
+    const-string/jumbo p1, "tag shouldn\'t be null"
 
     invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
@@ -16156,7 +16156,7 @@
     :cond_1
     new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p1, "tag shouldn\'t be null"
+    const-string/jumbo p1, "tag shouldn\'t be null"
 
     invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
@@ -16222,7 +16222,7 @@
     :cond_2
     new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p1, "tag shouldn\'t be null"
+    const-string/jumbo p1, "tag shouldn\'t be null"
 
     invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
@@ -17481,9 +17481,9 @@
 
     .line 4908
     :try_start_0
-    const-string v3, "temp"
+    const-string/jumbo v3, "temp"
 
-    const-string v4, "tmp"
+    const-string/jumbo v4, "tmp"
 
     invoke-static {v3, v4}, Ljava/io/File;->createTempFile(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
 
@@ -19165,11 +19165,13 @@
     :cond_22
     new-instance v0, Ljava/lang/NullPointerException;
 
-    const-string v1, "tag shouldn\'t be null"
+    const-string/jumbo v1, "tag shouldn\'t be null"
 
     invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x1

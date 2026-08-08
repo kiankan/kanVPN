@@ -258,7 +258,7 @@
 
     move-result-object p1
 
-    const-string p2, "substring(...)"
+    const-string/jumbo p2, "substring(...)"
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -1533,7 +1533,7 @@
 
     if-ne v3, v7, :cond_10
 
-    const-string v3, "split-config"
+    const-string/jumbo v3, "split-config"
 
     invoke-interface {p2}, Landroid/content/res/XmlResourceParser;->getName()Ljava/lang/String;
 
@@ -1947,6 +1947,8 @@
 
     :catch_0
     return-object v1
+
+    nop
 
     :sswitch_data_0
     .sparse-switch

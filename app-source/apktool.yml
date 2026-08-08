@@ -1,5 +1,5 @@
 version: 2.9.3
-apkFileName: v2rayNG_2.3.2_universal.apk
+apkFileName: v2rayNG_2.3.3_universal.apk
 isFrameworkApk: false
 usesFramework:
   ids:
@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 4000742
-  versionName: 2.3.2
+  versionCode: 4000743
+  versionName: 0.1
 resourcesAreCompressed: false
 sharedLibrary: false
 sparseResources: false
@@ -26,6 +26,7 @@ doNotCompress:
 - META-INF/androidx.activity_activity-ktx.version
 - META-INF/androidx.activity_activity.version
 - META-INF/androidx.annotation_annotation-experimental.version
+- META-INF/androidx.appcompat_appcompat-resources.version
 - META-INF/androidx.autofill_autofill.version
 - META-INF/androidx.camera.featurecombinationquery_featurecombinationquery.version
 - META-INF/androidx.camera.viewfinder_viewfinder-compose.version
@@ -91,6 +92,8 @@ doNotCompress:
 - META-INF/androidx.tracing_tracing-ktx.version
 - META-INF/androidx.tracing_tracing.version
 - META-INF/androidx.transition_transition.version
+- META-INF/androidx.vectordrawable_vectordrawable-animated.version
+- META-INF/androidx.vectordrawable_vectordrawable.version
 - META-INF/androidx.versionedparcelable_versionedparcelable.version
 - META-INF/androidx.window_window-core.version
 - META-INF/androidx.window_window.version

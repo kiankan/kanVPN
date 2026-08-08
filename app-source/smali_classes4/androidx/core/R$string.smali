@@ -14,21 +14,21 @@
 
 
 # static fields
-.field public static call_notification_answer_action:I = 0x7f0c000d
+.field public static call_notification_answer_action:I = 0x7f0c002d
 
-.field public static call_notification_answer_video_action:I = 0x7f0c000e
+.field public static call_notification_answer_video_action:I = 0x7f0c002e
 
-.field public static call_notification_decline_action:I = 0x7f0c000f
+.field public static call_notification_decline_action:I = 0x7f0c002f
 
-.field public static call_notification_hang_up_action:I = 0x7f0c0010
+.field public static call_notification_hang_up_action:I = 0x7f0c0030
 
-.field public static call_notification_incoming_text:I = 0x7f0c0011
+.field public static call_notification_incoming_text:I = 0x7f0c0031
 
-.field public static call_notification_ongoing_text:I = 0x7f0c0012
+.field public static call_notification_ongoing_text:I = 0x7f0c0032
 
-.field public static call_notification_screening_text:I = 0x7f0c0013
+.field public static call_notification_screening_text:I = 0x7f0c0033
 
-.field public static status_bar_notification_info_overflow:I = 0x7f0c010e
+.field public static status_bar_notification_info_overflow:I = 0x7f0c0141
 
 
 # direct methods

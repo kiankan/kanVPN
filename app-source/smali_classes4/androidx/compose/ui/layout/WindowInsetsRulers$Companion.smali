@@ -164,7 +164,7 @@
     .line 122
     new-instance v5, Landroidx/compose/ui/layout/WindowInsetsRulersImpl;
 
-    const-string v6, "status bars"
+    const-string/jumbo v6, "status bars"
 
     invoke-direct {v5, v6}, Landroidx/compose/ui/layout/WindowInsetsRulersImpl;-><init>(Ljava/lang/String;)V
 
@@ -191,7 +191,7 @@
 
     aput-object v0, v8, v11
 
-    const-string v12, "system bars"
+    const-string/jumbo v12, "system bars"
 
     invoke-direct {v6, v12, v8}, Landroidx/compose/ui/layout/InnermostInsetsRulers;-><init>(Ljava/lang/String;[Landroidx/compose/ui/layout/WindowInsetsRulers;)V
 
@@ -202,7 +202,7 @@
     .line 142
     new-instance v6, Landroidx/compose/ui/layout/WindowInsetsRulersImpl;
 
-    const-string v8, "system gestures"
+    const-string/jumbo v8, "system gestures"
 
     invoke-direct {v6, v8}, Landroidx/compose/ui/layout/WindowInsetsRulersImpl;-><init>(Ljava/lang/String;)V
 
@@ -213,7 +213,7 @@
     .line 150
     new-instance v8, Landroidx/compose/ui/layout/WindowInsetsRulersImpl;
 
-    const-string v12, "tappable element"
+    const-string/jumbo v12, "tappable element"
 
     invoke-direct {v8, v12}, Landroidx/compose/ui/layout/WindowInsetsRulersImpl;-><init>(Ljava/lang/String;)V
 

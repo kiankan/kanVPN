@@ -53,14 +53,14 @@
     f = "MainViewModel.kt"
     i = {}
     l = {
-        0xd2,
-        0xd3
+        0xd0,
+        0xd1
     }
     m = "invokeSuspend"
     n = {}
     nl = {
-        0xd3,
-        0xd4
+        0xd1,
+        0xd2
     }
     s = {}
     v = 0x2
@@ -173,7 +173,7 @@
 
     move-result-object v0
 
-    .line 208
+    .line 206
     iget v1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$initialize$1;->label:I
 
     const/4 v2, 0x2
@@ -215,7 +215,7 @@
     :cond_2
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 210
+    .line 208
     :try_start_2
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$initialize$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
@@ -237,7 +237,7 @@
 
     goto :goto_1
 
-    .line 211
+    .line 209
     :cond_3
     :goto_0
     move-object p1, p0
@@ -257,7 +257,7 @@
     :goto_1
     return-object v0
 
-    .line 212
+    .line 210
     :cond_4
     :goto_2
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$initialize$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
@@ -268,7 +268,7 @@
 
     invoke-interface {p1}, Lcom/v2ray/ang/ui/main/MainDataSource;->initAssets()V
 
-    .line 213
+    .line 211
     iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainViewModel$initialize$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {p0}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getDataSource$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lcom/v2ray/ang/ui/main/MainDataSource;
@@ -285,7 +285,7 @@
     :catch_0
     move-exception p0
 
-    .line 217
+    .line 215
     sget-object p1, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
 
     const-string v0, "Main background initialization failed"
@@ -296,7 +296,7 @@
 
     invoke-virtual {p1, v1, v0, p0}, Lcom/v2ray/ang/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 219
+    .line 217
     :goto_3
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
@@ -305,6 +305,6 @@
     :catch_1
     move-exception p0
 
-    .line 215
+    .line 213
     throw p0
 .end method

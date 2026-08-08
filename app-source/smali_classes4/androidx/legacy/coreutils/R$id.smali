@@ -30,45 +30,45 @@
 
 .field public static chronometer:I = 0x7f080031
 
-.field public static forever:I = 0x7f080039
+.field public static forever:I = 0x7f08003a
 
-.field public static icon:I = 0x7f08003f
+.field public static icon:I = 0x7f080040
 
-.field public static icon_group:I = 0x7f080040
+.field public static icon_group:I = 0x7f080041
 
-.field public static info:I = 0x7f080042
+.field public static info:I = 0x7f080043
 
-.field public static italic:I = 0x7f080045
+.field public static italic:I = 0x7f080046
 
-.field public static line1:I = 0x7f080049
+.field public static line1:I = 0x7f08004a
 
-.field public static line3:I = 0x7f08004a
+.field public static line3:I = 0x7f08004b
 
-.field public static normal:I = 0x7f08004e
+.field public static normal:I = 0x7f08004f
 
-.field public static notification_background:I = 0x7f08004f
+.field public static notification_background:I = 0x7f080050
 
-.field public static notification_main_column:I = 0x7f080050
+.field public static notification_main_column:I = 0x7f080051
 
-.field public static notification_main_column_container:I = 0x7f080051
+.field public static notification_main_column_container:I = 0x7f080052
 
-.field public static right_icon:I = 0x7f080055
+.field public static right_icon:I = 0x7f080056
 
-.field public static right_side:I = 0x7f080056
+.field public static right_side:I = 0x7f080057
 
-.field public static tag_transition_group:I = 0x7f080066
+.field public static tag_transition_group:I = 0x7f080067
 
-.field public static tag_unhandled_key_event_manager:I = 0x7f080067
+.field public static tag_unhandled_key_event_manager:I = 0x7f080068
 
-.field public static tag_unhandled_key_listeners:I = 0x7f080068
+.field public static tag_unhandled_key_listeners:I = 0x7f080069
 
-.field public static text:I = 0x7f08006a
+.field public static text:I = 0x7f08006b
 
-.field public static text2:I = 0x7f08006b
+.field public static text2:I = 0x7f08006c
 
-.field public static time:I = 0x7f08006c
+.field public static time:I = 0x7f08006d
 
-.field public static title:I = 0x7f08006d
+.field public static title:I = 0x7f08006e
 
 
 # direct methods

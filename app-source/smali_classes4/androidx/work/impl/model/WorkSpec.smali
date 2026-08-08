@@ -231,7 +231,7 @@
 
     move-result-object v0
 
-    const-string v1, "tagWithPrefix(...)"
+    const-string/jumbo v1, "tagWithPrefix(...)"
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -260,7 +260,7 @@
 
     invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v3, "state"
+    const-string/jumbo v3, "state"
 
     invoke-static {p2, v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -1767,7 +1767,7 @@
 
     invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "state"
+    const-string/jumbo v0, "state"
 
     move-object/from16 v3, p2
 

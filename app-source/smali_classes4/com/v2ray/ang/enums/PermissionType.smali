@@ -23,7 +23,7 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\u0008\u0006\n\u0002\u0010\u000e\n\u0002\u0008\u0002\u0008\u0086\u0081\u0002\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00000\u0001B\t\u0008\u0002\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J\u0008\u0010\u0007\u001a\u00020\u0008H&J\u0006\u0010\t\u001a\u00020\u0008j\u0002\u0008\u0004j\u0002\u0008\u0005j\u0002\u0008\u0006\u00a8\u0006\n"
+        "\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\u0008\u0006\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0008\n\u0002\u0018\u0002\n\u0000\u0008\u0086\u0081\u0002\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00000\u0001B\t\u0008\u0002\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J\u0008\u0010\u0007\u001a\u00020\u0008H&J\u000c\u0010\t\u001a\u00020\nH\u0007b\u0002\u0008\u000bj\u0002\u0008\u0004j\u0002\u0008\u0005j\u0002\u0008\u0006\u00a8\u0006\u000c"
     }
     d2 = {
         "Lcom/v2ray/ang/enums/PermissionType;",
@@ -35,7 +35,9 @@
         "ACCESS_LOCAL_NETWORK",
         "getPermission",
         "",
-        "getLabel",
+        "getLabelRes",
+        "",
+        "Landroidx/annotation/StringRes;",
         "v2rayNG:app_playstoreRelease"
     }
     k = 0x1
@@ -80,7 +82,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 12
+    .line 14
     new-instance v0, Lcom/v2ray/ang/enums/PermissionType$CAMERA;
 
     const-string v1, "CAMERA"
@@ -91,7 +93,7 @@
 
     sput-object v0, Lcom/v2ray/ang/enums/PermissionType;->CAMERA:Lcom/v2ray/ang/enums/PermissionType;
 
-    .line 17
+    .line 19
     new-instance v0, Lcom/v2ray/ang/enums/PermissionType$POST_NOTIFICATIONS;
 
     const-string v1, "POST_NOTIFICATIONS"
@@ -102,7 +104,7 @@
 
     sput-object v0, Lcom/v2ray/ang/enums/PermissionType;->POST_NOTIFICATIONS:Lcom/v2ray/ang/enums/PermissionType;
 
-    .line 23
+    .line 25
     new-instance v0, Lcom/v2ray/ang/enums/PermissionType$ACCESS_LOCAL_NETWORK;
 
     const-string v1, "ACCESS_LOCAL_NETWORK"
@@ -138,7 +140,7 @@
         }
     .end annotation
 
-    .line 10
+    .line 12
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -198,10 +200,10 @@
 
 
 # virtual methods
-.method public final getLabel()Ljava/lang/String;
+.method public final getLabelRes()I
     .locals 1
 
-    .line 33
+    .line 36
     sget-object v0, Lcom/v2ray/ang/enums/PermissionType$WhenMappings;->$EnumSwitchMapping$0:[I
 
     invoke-virtual {p0}, Lcom/v2ray/ang/enums/PermissionType;->ordinal()I
@@ -222,12 +224,12 @@
 
     if-ne p0, v0, :cond_0
 
+    .line 39
+    sget p0, Lcom/v2ray/ang/R$string;->permission_local_network:I
+
+    return p0
+
     .line 36
-    const-string p0, "Local Network"
-
-    return-object p0
-
-    .line 33
     :cond_0
     new-instance p0, Lkotlin/NoWhenBranchMatchedException;
 
@@ -235,17 +237,17 @@
 
     throw p0
 
-    .line 35
+    .line 38
     :cond_1
-    const-string p0, "Notification"
+    sget p0, Lcom/v2ray/ang/R$string;->permission_notification:I
 
-    return-object p0
+    return p0
 
-    .line 34
+    .line 37
     :cond_2
-    const-string p0, "Camera"
+    sget p0, Lcom/v2ray/ang/R$string;->permission_camera:I
 
-    return-object p0
+    return p0
 .end method
 
 .method public abstract getPermission()Ljava/lang/String;

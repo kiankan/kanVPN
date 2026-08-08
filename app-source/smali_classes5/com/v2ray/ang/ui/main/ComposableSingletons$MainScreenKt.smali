@@ -41,7 +41,7 @@
 
     sput-object v0, Lcom/v2ray/ang/ui/main/ComposableSingletons$MainScreenKt;->INSTANCE:Lcom/v2ray/ang/ui/main/ComposableSingletons$MainScreenKt;
 
-    .line 233
+    .line 243
     new-instance v0, Lcom/v2ray/ang/ui/main/ComposableSingletons$MainScreenKt$$ExternalSyntheticLambda0;
 
     invoke-direct {v0}, Lcom/v2ray/ang/ui/main/ComposableSingletons$MainScreenKt$$ExternalSyntheticLambda0;-><init>()V
@@ -106,13 +106,13 @@
 
     const/4 p0, -0x1
 
-    const-string v0, "com.v2ray.ang.ui.main.ComposableSingletons$MainScreenKt.lambda$65630774.<anonymous> (MainScreen.kt:232)"
+    const-string v0, "com.v2ray.ang.ui.main.ComposableSingletons$MainScreenKt.lambda$65630774.<anonymous> (MainScreen.kt:242)"
 
     const v1, 0x3e97236
 
     invoke-static {v1, p1, p0, v0}, Landroidx/compose/runtime/ComposerKt;->traceEventStart(IIILjava/lang/String;)V
 
-    .line 233
+    .line 243
     :cond_1
     invoke-static {}, Landroidx/compose/runtime/ComposerKt;->isTraceInProgress()Z
 

@@ -17,7 +17,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nEffects.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Effects.kt\nandroidx/compose/runtime/DisposableEffectScope$onDispose$1\n+ 2 ScannerActivity.kt\ncom/v2ray/ang/ui/ScannerActivityKt\n*L\n1#1,629:1\n387#2,3:630\n*E\n"
+    value = "SMAP\nEffects.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Effects.kt\nandroidx/compose/runtime/DisposableEffectScope$onDispose$1\n+ 2 ScannerActivity.kt\ncom/v2ray/ang/ui/ScannerActivityKt\n*L\n1#1,629:1\n393#2,3:630\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;

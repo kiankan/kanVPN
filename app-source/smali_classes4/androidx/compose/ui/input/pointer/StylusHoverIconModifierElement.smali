@@ -350,7 +350,7 @@
     .locals 3
 
     .line 178
-    const-string v0, "stylusHoverIcon"
+    const-string/jumbo v0, "stylusHoverIcon"
 
     invoke-virtual {p1, v0}, Landroidx/compose/ui/platform/InspectorInfo;->setName(Ljava/lang/String;)V
 

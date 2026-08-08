@@ -70,7 +70,7 @@
 
     const-class v2, Landroidx/compose/ui/semantics/SemanticsProperties_androidKt;
 
-    const-string v3, "testTagsAsResourceId"
+    const-string/jumbo v3, "testTagsAsResourceId"
 
     const-string v4, "getTestTagsAsResourceId(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Z"
 

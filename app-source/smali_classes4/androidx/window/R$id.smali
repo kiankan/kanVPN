@@ -26,23 +26,23 @@
 
 .field public static bottomToTop:I = 0x7f080030
 
-.field public static draggable:I = 0x7f080036
+.field public static draggable:I = 0x7f080037
 
-.field public static fixed:I = 0x7f080038
+.field public static fixed:I = 0x7f080039
 
-.field public static jumpCut:I = 0x7f080046
+.field public static jumpCut:I = 0x7f080047
 
-.field public static locale:I = 0x7f08004b
+.field public static locale:I = 0x7f08004c
 
-.field public static ltr:I = 0x7f08004c
+.field public static ltr:I = 0x7f08004d
 
-.field public static never:I = 0x7f08004d
+.field public static never:I = 0x7f08004e
 
-.field public static rtl:I = 0x7f080057
+.field public static rtl:I = 0x7f080058
 
-.field public static systemDefault:I = 0x7f08005a
+.field public static systemDefault:I = 0x7f08005b
 
-.field public static topToBottom:I = 0x7f08006e
+.field public static topToBottom:I = 0x7f08006f
 
 
 # direct methods

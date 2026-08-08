@@ -191,7 +191,7 @@
 .method declared-synchronized get(I)Lgo/Seq$Ref;
     .locals 3
 
-    const-string/jumbo v0, "unknown java Ref: "
+    const-string v0, "unknown java Ref: "
 
     const-string v1, "ref called with Go refnum "
 

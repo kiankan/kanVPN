@@ -1656,7 +1656,7 @@
     .line 178
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "start ("
+    const-string/jumbo v1, "start ("
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -1701,7 +1701,7 @@
 
     move-result-object v0
 
-    const-string v1, "substring(...)"
+    const-string/jumbo v1, "substring(...)"
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 

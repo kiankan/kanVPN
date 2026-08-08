@@ -482,7 +482,7 @@
 
     move-result-object p1
 
-    const-string v0, "onValueChange"
+    const-string/jumbo v0, "onValueChange"
 
     iget-object p0, p0, Landroidx/compose/foundation/selection/ToggleableElement;->onValueChange:Lkotlin/jvm/functions/Function1;
 

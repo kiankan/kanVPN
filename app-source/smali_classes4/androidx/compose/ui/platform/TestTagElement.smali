@@ -143,7 +143,7 @@
     .locals 1
 
     .line 45
-    const-string v0, "testTag"
+    const-string/jumbo v0, "testTag"
 
     invoke-virtual {p1, v0}, Landroidx/compose/ui/platform/InspectorInfo;->setName(Ljava/lang/String;)V
 
@@ -152,7 +152,7 @@
 
     move-result-object p1
 
-    const-string v0, "tag"
+    const-string/jumbo v0, "tag"
 
     iget-object p0, p0, Landroidx/compose/ui/platform/TestTagElement;->tag:Ljava/lang/String;
 

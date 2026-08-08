@@ -131,7 +131,7 @@
         }
     .end annotation
 
-    const-string p0, "src"
+    const-string/jumbo p0, "src"
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -162,7 +162,7 @@
         }
     .end annotation
 
-    const-string p0, "src"
+    const-string/jumbo p0, "src"
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -408,7 +408,7 @@
 
     move-result-object p0
 
-    const-string p1, "toJson(...)"
+    const-string/jumbo p1, "toJson(...)"
 
     invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 

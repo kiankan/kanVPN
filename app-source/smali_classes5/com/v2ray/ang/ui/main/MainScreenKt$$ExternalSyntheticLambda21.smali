@@ -30,7 +30,7 @@
     .line 0
     iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$$ExternalSyntheticLambda21;->f$0:Landroidx/compose/runtime/MutableState;
 
-    invoke-static {p0}, Lcom/v2ray/ang/ui/main/MainScreenKt;->$r8$lambda$SLmwhOCggkZEftchhdobF0ombE4(Landroidx/compose/runtime/MutableState;)Lkotlin/Unit;
+    invoke-static {p0}, Lcom/v2ray/ang/ui/main/MainScreenKt;->$r8$lambda$-jxIeCjHW81kF3RR2Om3HJ4e0XI(Landroidx/compose/runtime/MutableState;)Lkotlin/Unit;
 
     move-result-object p0
 

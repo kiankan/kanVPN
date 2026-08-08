@@ -198,7 +198,7 @@
 
     invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v3, "CN(isDragging)286@10411L48,287@10517L2114,287@10480L2151:ServerProxyChainActivity.kt#eymktg"
+    const-string v3, "CN(isDragging)286@10415L48,287@10521L2141,287@10484L2178:ServerProxyChainActivity.kt#eymktg"
 
     invoke-static {v6, v3}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 

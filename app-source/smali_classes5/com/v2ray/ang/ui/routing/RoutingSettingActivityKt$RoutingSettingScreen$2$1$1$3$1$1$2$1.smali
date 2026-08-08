@@ -65,7 +65,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 288
+    .line 294
     check-cast p1, Ljava/lang/Boolean;
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -82,7 +82,7 @@
 .method public final invoke(Z)V
     .locals 14
 
-    .line 289
+    .line 295
     iget-object v0, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$RoutingSettingScreen$2$1$1$3$1$1$2$1;->$ruleset:Lcom/v2ray/ang/dto/entities/RulesetItem;
 
     const/16 v12, 0x5ff
@@ -115,7 +115,7 @@
 
     move-result-object p1
 
-    .line 290
+    .line 296
     iget-object v0, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$RoutingSettingScreen$2$1$1$3$1$1$2$1;->$viewModel:Lcom/v2ray/ang/ui/routing/RoutingSettingsViewModel;
 
     iget p0, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$RoutingSettingScreen$2$1$1$3$1$1$2$1;->$index:I

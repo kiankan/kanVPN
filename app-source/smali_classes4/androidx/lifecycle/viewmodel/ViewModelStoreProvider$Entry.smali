@@ -76,7 +76,7 @@
 .method public constructor <init>(Ljava/lang/Object;Landroidx/lifecycle/ViewModelStore;IZ)V
     .locals 1
 
-    const-string v0, "store"
+    const-string/jumbo v0, "store"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -208,7 +208,7 @@
 .method public final copy(Ljava/lang/Object;Landroidx/lifecycle/ViewModelStore;IZ)Landroidx/lifecycle/viewmodel/ViewModelStoreProvider$Entry;
     .locals 0
 
-    const-string p0, "store"
+    const-string/jumbo p0, "store"
 
     invoke-static {p2, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

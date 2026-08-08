@@ -82,7 +82,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 277
+    .line 276
     check-cast p1, Ljava/lang/Boolean;
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -99,7 +99,7 @@
 .method public final invoke(Z)V
     .locals 0
 
-    .line 277
+    .line 276
     iget-object p1, p0, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivityKt$PerAppProxyScreen$3$1$2$1$2$1$1;->$onToggleApp:Lkotlin/jvm/functions/Function1;
 
     iget-object p0, p0, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivityKt$PerAppProxyScreen$3$1$2$1$2$1$1;->$app:Lcom/v2ray/ang/dto/AppInfo;

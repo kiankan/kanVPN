@@ -159,7 +159,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string p0, "C112@4639L83:Components.kt#gaxpeh"
+    const-string p0, "C112@4665L83:Components.kt#gaxpeh"
 
     invoke-static {p1, p0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -329,7 +329,7 @@
 .method static final lambda__2047520061$lambda$0(Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
     .locals 9
 
-    const-string v0, "C150@6371L62,150@6366L77:Components.kt#gaxpeh"
+    const-string v0, "C150@6397L62,150@6392L77:Components.kt#gaxpeh"
 
     invoke-static {p0, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -422,7 +422,7 @@
 .method static final lambda__248409057$lambda$0(Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
     .locals 11
 
-    const-string v0, "C93@3880L46,92@3836L173:Components.kt#gaxpeh"
+    const-string v0, "C93@3879L46,94@3976L33,92@3835L200:Components.kt#gaxpeh"
 
     invoke-static {p0, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -473,14 +473,15 @@
     move-result-object v3
 
     .line 95
-    sget p1, Landroidx/compose/ui/graphics/painter/Painter;->$stable:I
+    sget p1, Lcom/v2ray/ang/R$string;->acc_back:I
 
-    or-int/lit8 v9, p1, 0x30
+    invoke-static {p1, p0, v2}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
+
+    move-result-object v4
+
+    sget v9, Landroidx/compose/ui/graphics/painter/Painter;->$stable:I
 
     const/16 v10, 0xc
-
-    .line 93
-    const-string v4, "Back"
 
     const/4 v5, 0x0
 
@@ -488,6 +489,7 @@
 
     move-object v8, p0
 
+    .line 93
     invoke-static/range {v3 .. v10}, Landroidx/compose/material3/IconKt;->Icon-ww6aTOc(Landroidx/compose/ui/graphics/painter/Painter;Ljava/lang/String;Landroidx/compose/ui/Modifier;JLandroidx/compose/runtime/Composer;II)V
 
     invoke-static {}, Landroidx/compose/runtime/ComposerKt;->isTraceInProgress()Z

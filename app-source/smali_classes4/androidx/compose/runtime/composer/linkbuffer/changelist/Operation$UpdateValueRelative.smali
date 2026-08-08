@@ -208,7 +208,7 @@
     if-nez p1, :cond_0
 
     .line 475
-    const-string p0, "slotIndex"
+    const-string/jumbo p0, "slotIndex"
 
     return-object p0
 

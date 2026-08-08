@@ -824,13 +824,13 @@
 
     check-cast v2, Ljava/lang/CharSequence;
 
-    const-string/jumbo v0, "{"
+    const-string v0, "{"
 
     move-object v3, v0
 
     check-cast v3, Ljava/lang/CharSequence;
 
-    const-string/jumbo v0, "}"
+    const-string v0, "}"
 
     move-object v4, v0
 

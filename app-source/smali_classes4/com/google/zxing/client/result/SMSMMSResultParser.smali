@@ -118,7 +118,7 @@
     move-result-object p0
 
     .line 46
-    const-string p1, "sms:"
+    const-string/jumbo p1, "sms:"
 
     invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -173,7 +173,7 @@
     if-nez v2, :cond_1
 
     .line 57
-    const-string v0, "subject"
+    const-string/jumbo v0, "subject"
 
     invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 

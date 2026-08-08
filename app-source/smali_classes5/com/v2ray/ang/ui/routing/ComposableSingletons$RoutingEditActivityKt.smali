@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nRoutingEditActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 RoutingEditActivity.kt\ncom/v2ray/ang/ui/routing/ComposableSingletons$RoutingEditActivityKt\n+ 2 Dp.kt\nandroidx/compose/ui/unit/DpKt\n*L\n1#1,304:1\n118#2:305\n*S KotlinDebug\n*F\n+ 1 RoutingEditActivity.kt\ncom/v2ray/ang/ui/routing/ComposableSingletons$RoutingEditActivityKt\n*L\n264#1:305\n*E\n"
+    value = "SMAP\nRoutingEditActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 RoutingEditActivity.kt\ncom/v2ray/ang/ui/routing/ComposableSingletons$RoutingEditActivityKt\n+ 2 Dp.kt\nandroidx/compose/ui/unit/DpKt\n*L\n1#1,308:1\n118#2:309\n*S KotlinDebug\n*F\n+ 1 RoutingEditActivity.kt\ncom/v2ray/ang/ui/routing/ComposableSingletons$RoutingEditActivityKt\n*L\n264#1:309\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -141,7 +141,7 @@
 
     invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v1, "C260@10649L44,259@10619L147,263@10787L39,264@10852L56,264@10847L62:RoutingEditActivity.kt#ni0ky5"
+    const-string v1, "C260@10626L44,259@10596L147,263@10764L39,264@10829L56,264@10824L62:RoutingEditActivity.kt#ni0ky5"
 
     invoke-static {v5, v1}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -214,7 +214,7 @@
 
     const/high16 v1, 0x41000000    # 8.0f
 
-    .line 305
+    .line 309
     invoke-static {v1}, Landroidx/compose/ui/unit/Dp;->constructor-impl(F)F
 
     move-result v1
@@ -304,7 +304,7 @@
 .method static final lambda_1794586931$lambda$0(Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
     .locals 11
 
-    const-string v0, "C187@7582L42,188@7679L45,186@7544L210:RoutingEditActivity.kt#ni0ky5"
+    const-string v0, "C187@7582L42,188@7679L35,186@7544L200:RoutingEditActivity.kt#ni0ky5"
 
     invoke-static {p0, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -355,7 +355,7 @@
     move-result-object v3
 
     .line 189
-    sget p1, Lcom/v2ray/ang/R$string;->menu_item_del_config:I
+    sget p1, Lcom/v2ray/ang/R$string;->acc_delete:I
 
     invoke-static {p1, p0, v2}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
 
@@ -401,7 +401,7 @@
 .method static final lambda__1218703762$lambda$0(Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
     .locals 11
 
-    const-string v0, "C194@7932L40,195@8023L46,193@7898L197:RoutingEditActivity.kt#ni0ky5"
+    const-string v0, "C194@7922L40,195@8013L33,193@7888L184:RoutingEditActivity.kt#ni0ky5"
 
     invoke-static {p0, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -452,7 +452,7 @@
     move-result-object v3
 
     .line 196
-    sget p1, Lcom/v2ray/ang/R$string;->menu_item_save_config:I
+    sget p1, Lcom/v2ray/ang/R$string;->acc_save:I
 
     invoke-static {p1, p0, v2}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
 

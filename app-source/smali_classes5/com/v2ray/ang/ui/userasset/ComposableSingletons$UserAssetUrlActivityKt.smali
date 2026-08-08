@@ -99,7 +99,7 @@
 .method static final lambda_1278625581$lambda$0(Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
     .locals 11
 
-    const-string v0, "C160@5476L40,161@5567L46,159@5442L197:UserAssetUrlActivity.kt#13ivsk"
+    const-string v0, "C160@5466L40,161@5557L33,159@5432L184:UserAssetUrlActivity.kt#13ivsk"
 
     invoke-static {p0, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -150,7 +150,7 @@
     move-result-object v3
 
     .line 162
-    sget p1, Lcom/v2ray/ang/R$string;->menu_item_save_config:I
+    sget p1, Lcom/v2ray/ang/R$string;->acc_save:I
 
     invoke-static {p1, p0, v2}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
 
@@ -196,7 +196,7 @@
 .method static final lambda_1991744626$lambda$0(Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
     .locals 11
 
-    const-string v0, "C153@5128L42,154@5225L45,152@5090L210:UserAssetUrlActivity.kt#13ivsk"
+    const-string v0, "C153@5128L42,154@5225L35,152@5090L200:UserAssetUrlActivity.kt#13ivsk"
 
     invoke-static {p0, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -247,7 +247,7 @@
     move-result-object v3
 
     .line 155
-    sget p1, Lcom/v2ray/ang/R$string;->menu_item_del_config:I
+    sget p1, Lcom/v2ray/ang/R$string;->acc_delete:I
 
     invoke-static {p1, p0, v2}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
 

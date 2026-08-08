@@ -32,7 +32,7 @@
 
     move-result p0
 
-    invoke-static {p1, p2, p0}, Lcom/v2ray/ang/ui/subscription/ComposableSingletons$SubSettingActivityKt;->lambda__954746210$lambda$0(Landroidx/compose/foundation/layout/RowScope;Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
+    invoke-static {p1, p2, p0}, Lcom/v2ray/ang/ui/subscription/ComposableSingletons$SubSettingActivityKt;->lambda__2141762382$lambda$0(Landroidx/compose/foundation/layout/RowScope;Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
 
     move-result-object p0
 

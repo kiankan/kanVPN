@@ -3,54 +3,44 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Lkotlin/jvm/functions/Function1;
+.implements Lkotlin/jvm/functions/Function3;
 
 
 # instance fields
-.field public final synthetic f$0:Ljava/util/List;
-
-.field public final synthetic f$1:Lkotlin/jvm/functions/Function2;
-
-.field public final synthetic f$2:Z
-
-.field public final synthetic f$3:I
+.field public final synthetic f$0:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/List;Lkotlin/jvm/functions/Function2;ZI)V
+.method public synthetic constructor <init>(Ljava/lang/String;)V
     .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/v2ray/ang/ui/compose/DialogKt$$ExternalSyntheticLambda22;->f$0:Ljava/util/List;
-
-    iput-object p2, p0, Lcom/v2ray/ang/ui/compose/DialogKt$$ExternalSyntheticLambda22;->f$1:Lkotlin/jvm/functions/Function2;
-
-    iput-boolean p3, p0, Lcom/v2ray/ang/ui/compose/DialogKt$$ExternalSyntheticLambda22;->f$2:Z
-
-    iput p4, p0, Lcom/v2ray/ang/ui/compose/DialogKt$$ExternalSyntheticLambda22;->f$3:I
+    iput-object p1, p0, Lcom/v2ray/ang/ui/compose/DialogKt$$ExternalSyntheticLambda22;->f$0:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Lcom/v2ray/ang/ui/compose/DialogKt$$ExternalSyntheticLambda22;->f$0:Ljava/util/List;
+    iget-object p0, p0, Lcom/v2ray/ang/ui/compose/DialogKt$$ExternalSyntheticLambda22;->f$0:Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/v2ray/ang/ui/compose/DialogKt$$ExternalSyntheticLambda22;->f$1:Lkotlin/jvm/functions/Function2;
+    check-cast p1, Landroidx/compose/foundation/layout/RowScope;
 
-    iget-boolean v2, p0, Lcom/v2ray/ang/ui/compose/DialogKt$$ExternalSyntheticLambda22;->f$2:Z
+    check-cast p2, Landroidx/compose/runtime/Composer;
 
-    iget p0, p0, Lcom/v2ray/ang/ui/compose/DialogKt$$ExternalSyntheticLambda22;->f$3:I
+    check-cast p3, Ljava/lang/Integer;
 
-    check-cast p1, Landroidx/compose/foundation/lazy/LazyListScope;
+    invoke-virtual {p3}, Ljava/lang/Integer;->intValue()I
 
-    invoke-static {v0, v1, v2, p0, p1}, Lcom/v2ray/ang/ui/compose/DialogKt;->$r8$lambda$T7e2NhaGK52GxCSbZssUHksI_0U(Ljava/util/List;Lkotlin/jvm/functions/Function2;ZILandroidx/compose/foundation/lazy/LazyListScope;)Lkotlin/Unit;
+    move-result p3
+
+    invoke-static {p0, p1, p2, p3}, Lcom/v2ray/ang/ui/compose/DialogKt;->$r8$lambda$XmfXVrAIpz3zNMECeW2p1lDcuMM(Ljava/lang/String;Landroidx/compose/foundation/layout/RowScope;Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
 
     move-result-object p0
 

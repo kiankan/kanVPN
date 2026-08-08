@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt;->SubSettingScreen(Lcom/v2ray/ang/ui/subscription/SubscriptionsViewModel;ZLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Ljava/util/List;Landroidx/compose/runtime/Composer;I)V
+    value = Lcom/v2ray/ang/ui/subscription/SubSettingActivityKt;->SubSettingScreen(Lcom/v2ray/ang/ui/subscription/SubscriptionsViewModel;ZLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -30,7 +30,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nLazyDsl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 LazyDsl.kt\nandroidx/compose/foundation/lazy/LazyDslKt$itemsIndexed$4\n+ 2 SubSettingActivity.kt\ncom/v2ray/ang/ui/subscription/SubSettingActivityKt\n*L\n1#1,523:1\n156#2:524\n241#2,2:525\n*E\n"
+    value = "SMAP\nLazyDsl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 LazyDsl.kt\nandroidx/compose/foundation/lazy/LazyDslKt$itemsIndexed$4\n+ 2 SubSettingActivity.kt\ncom/v2ray/ang/ui/subscription/SubSettingActivityKt\n*L\n1#1,523:1\n158#2:524\n243#2,2:525\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -230,12 +230,12 @@
 
     check-cast v9, Lcom/v2ray/ang/dto/entities/SubscriptionCache;
 
-    const v1, -0x53a13920
+    const v1, 0xbe7e736
 
     .line 524
     invoke-interface {v7, v1}, Landroidx/compose/runtime/Composer;->startReplaceGroup(I)V
 
-    const-string v1, "CN(subCache)*155@6264L4874,155@6209L4929:SubSettingActivity.kt#7ufd1m"
+    const-string v1, "CN(subCache)*157@6251L4968,157@6196L5023:SubSettingActivity.kt#7ufd1m"
 
     invoke-static {v7, v1}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -263,7 +263,7 @@
 
     const/16 v0, 0x36
 
-    const v4, 0x6c4b557c
+    const v4, 0x5929df14
 
     invoke-static {v4, v6, v8, v7, v0}, Landroidx/compose/runtime/internal/ComposableLambdaKt;->rememberComposableLambda(IZLjava/lang/Object;Landroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/internal/ComposableLambda;
 

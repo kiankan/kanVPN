@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nServerCustomConfigActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ServerCustomConfigActivity.kt\ncom/v2ray/ang/ui/server/EditorConstants\n+ 2 Dp.kt\nandroidx/compose/ui/unit/DpKt\n*L\n1#1,490:1\n118#2:491\n118#2:492\n118#2:493\n118#2:494\n*S KotlinDebug\n*F\n+ 1 ServerCustomConfigActivity.kt\ncom/v2ray/ang/ui/server/EditorConstants\n*L\n187#1:491\n188#1:492\n189#1:493\n190#1:494\n*E\n"
+    value = "SMAP\nServerCustomConfigActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ServerCustomConfigActivity.kt\ncom/v2ray/ang/ui/server/EditorConstants\n+ 2 Dp.kt\nandroidx/compose/ui/unit/DpKt\n*L\n1#1,495:1\n118#2:496\n118#2:497\n118#2:498\n118#2:499\n*S KotlinDebug\n*F\n+ 1 ServerCustomConfigActivity.kt\ncom/v2ray/ang/ui/server/EditorConstants\n*L\n192#1:496\n193#1:497\n194#1:498\n195#1:499\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -75,7 +75,7 @@
 
     const/16 v0, 0xe
 
-    .line 185
+    .line 190
     invoke-static {v0}, Landroidx/compose/ui/unit/TextUnitKt;->getSp(I)J
 
     move-result-wide v0
@@ -84,7 +84,7 @@
 
     const/16 v0, 0x14
 
-    .line 186
+    .line 191
     invoke-static {v0}, Landroidx/compose/ui/unit/TextUnitKt;->getSp(I)J
 
     move-result-wide v0
@@ -93,42 +93,42 @@
 
     const/high16 v0, 0x41000000    # 8.0f
 
-    .line 491
+    .line 496
     invoke-static {v0}, Landroidx/compose/ui/unit/Dp;->constructor-impl(F)F
 
     move-result v0
 
-    .line 187
+    .line 192
     sput v0, Lcom/v2ray/ang/ui/server/EditorConstants;->LINE_NUMBER_HORIZONTAL_PADDING:F
 
     const/high16 v0, 0x40800000    # 4.0f
 
-    .line 492
+    .line 497
     invoke-static {v0}, Landroidx/compose/ui/unit/Dp;->constructor-impl(F)F
 
     move-result v0
 
-    .line 188
+    .line 193
     sput v0, Lcom/v2ray/ang/ui/server/EditorConstants;->SCROLLBAR_THICKNESS:F
 
     const/high16 v0, 0x40000000    # 2.0f
 
-    .line 493
+    .line 498
     invoke-static {v0}, Landroidx/compose/ui/unit/Dp;->constructor-impl(F)F
 
     move-result v0
 
-    .line 189
+    .line 194
     sput v0, Lcom/v2ray/ang/ui/server/EditorConstants;->SCROLLBAR_PADDING:F
 
     const/high16 v0, 0x42700000    # 60.0f
 
-    .line 494
+    .line 499
     invoke-static {v0}, Landroidx/compose/ui/unit/Dp;->constructor-impl(F)F
 
     move-result v0
 
-    .line 190
+    .line 195
     sput v0, Lcom/v2ray/ang/ui/server/EditorConstants;->SCROLL_PADDING:F
 
     return-void
@@ -137,7 +137,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 184
+    .line 189
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -148,7 +148,7 @@
 .method public final getFONT_SIZE-XSAIIZE()J
     .locals 2
 
-    .line 185
+    .line 190
     sget-wide v0, Lcom/v2ray/ang/ui/server/EditorConstants;->FONT_SIZE:J
 
     return-wide v0
@@ -157,7 +157,7 @@
 .method public final getLINE_HEIGHT-XSAIIZE()J
     .locals 2
 
-    .line 186
+    .line 191
     sget-wide v0, Lcom/v2ray/ang/ui/server/EditorConstants;->LINE_HEIGHT:J
 
     return-wide v0
@@ -166,7 +166,7 @@
 .method public final getLINE_NUMBER_HORIZONTAL_PADDING-D9Ej5fM()F
     .locals 0
 
-    .line 187
+    .line 192
     sget p0, Lcom/v2ray/ang/ui/server/EditorConstants;->LINE_NUMBER_HORIZONTAL_PADDING:F
 
     return p0
@@ -175,7 +175,7 @@
 .method public final getSCROLLBAR_PADDING-D9Ej5fM()F
     .locals 0
 
-    .line 189
+    .line 194
     sget p0, Lcom/v2ray/ang/ui/server/EditorConstants;->SCROLLBAR_PADDING:F
 
     return p0
@@ -184,7 +184,7 @@
 .method public final getSCROLLBAR_THICKNESS-D9Ej5fM()F
     .locals 0
 
-    .line 188
+    .line 193
     sget p0, Lcom/v2ray/ang/ui/server/EditorConstants;->SCROLLBAR_THICKNESS:F
 
     return p0
@@ -193,7 +193,7 @@
 .method public final getSCROLL_PADDING-D9Ej5fM()F
     .locals 0
 
-    .line 190
+    .line 195
     sget p0, Lcom/v2ray/ang/ui/server/EditorConstants;->SCROLL_PADDING:F
 
     return p0

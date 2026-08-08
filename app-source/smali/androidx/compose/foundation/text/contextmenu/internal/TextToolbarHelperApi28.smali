@@ -120,7 +120,7 @@
     invoke-interface {p0, p1}, Landroid/view/MenuItem;->setShowAsAction(I)V
 
     .line 489
-    invoke-static {p4}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/view/textclassifier/TextClassification;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p4}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/view/textclassifier/TextClassification;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 

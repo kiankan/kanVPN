@@ -3295,7 +3295,7 @@
     .line 1366
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "onSuggestedStreamSpecUpdated: primaryStreamSpec = "
+    const-string/jumbo v1, "onSuggestedStreamSpecUpdated: primaryStreamSpec = "
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 

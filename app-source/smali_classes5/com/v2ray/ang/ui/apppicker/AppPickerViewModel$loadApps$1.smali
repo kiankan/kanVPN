@@ -53,12 +53,12 @@
     f = "AppPickerViewModel.kt"
     i = {}
     l = {
-        0x32
+        0x33
     }
     m = "invokeSuspend"
     n = {}
     nl = {
-        0x37
+        0x38
     }
     s = {}
     v = 0x2
@@ -178,7 +178,7 @@
 
     move-result-object v0
 
-    .line 47
+    .line 48
     iget v1, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel$loadApps$1;->label:I
 
     const/4 v2, 0x1
@@ -225,7 +225,7 @@
     :cond_1
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 49
+    .line 50
     :try_start_1
     iget-object p1, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel$loadApps$1;->this$0:Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;
 
@@ -241,7 +241,7 @@
 
     invoke-static {p1, v1}, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->access$setSelectedSnapshot$p(Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;Ljava/util/Set;)V
 
-    .line 50
+    .line 51
     invoke-static {}, Lkotlinx/coroutines/Dispatchers;->getIO()Lkotlinx/coroutines/CoroutineDispatcher;
 
     move-result-object p1
@@ -274,17 +274,17 @@
 
     return-object v0
 
-    .line 47
+    .line 48
     :cond_2
     :goto_0
     check-cast p1, Ljava/util/List;
 
-    .line 55
+    .line 56
     iget-object v0, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel$loadApps$1;->this$0:Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;
 
     invoke-static {v0, p1}, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->access$setAllApps$p(Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;Ljava/util/List;)V
 
-    .line 56
+    .line 57
     iget-object p1, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel$loadApps$1;->this$0:Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;
 
     invoke-static {p1}, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->access$get_displayedApps$p(Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;)Lkotlinx/coroutines/flow/MutableStateFlow;
@@ -309,7 +309,7 @@
 
     goto :goto_2
 
-    .line 60
+    .line 61
     :goto_1
     :try_start_2
     sget-object v0, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
@@ -322,7 +322,7 @@
 
     invoke-virtual {v0, v1, v2, p1}, Lcom/v2ray/ang/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 61
+    .line 62
     iget-object p1, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel$loadApps$1;->this$0:Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;
 
     sget v0, Lcom/v2ray/ang/R$string;->toast_failure:I
@@ -331,25 +331,25 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 63
+    .line 64
     :goto_2
     iget-object p0, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel$loadApps$1;->this$0:Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;
 
     invoke-static {p0, v3}, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->access$setAppListLoading$p(Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;Z)V
 
-    .line 65
+    .line 66
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p0
 
-    .line 58
+    .line 59
     :goto_3
     :try_start_3
     throw p1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 63
+    .line 64
     :goto_4
     iget-object p0, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel$loadApps$1;->this$0:Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;
 

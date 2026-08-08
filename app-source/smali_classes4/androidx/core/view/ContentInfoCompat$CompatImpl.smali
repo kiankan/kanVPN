@@ -52,7 +52,7 @@
 
     const/4 v1, 0x5
 
-    const-string v2, "source"
+    const-string/jumbo v2, "source"
 
     const/4 v3, 0x0
 

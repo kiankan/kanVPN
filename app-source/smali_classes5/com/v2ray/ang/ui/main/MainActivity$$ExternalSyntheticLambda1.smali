@@ -3,7 +3,7 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Lkotlin/jvm/functions/Function1;
+.implements Landroidx/activity/result/ActivityResultCallback;
 
 
 # instance fields
@@ -24,17 +24,15 @@
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onActivityResult(Ljava/lang/Object;)V
     .locals 0
 
     .line 0
     iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainActivity$$ExternalSyntheticLambda1;->f$0:Lcom/v2ray/ang/ui/main/MainActivity;
 
-    check-cast p1, Landroid/net/Uri;
+    check-cast p1, Landroidx/activity/result/ActivityResult;
 
-    invoke-static {p0, p1}, Lcom/v2ray/ang/ui/main/MainActivity;->importConfigLocal$lambda$0(Lcom/v2ray/ang/ui/main/MainActivity;Landroid/net/Uri;)Lkotlin/Unit;
+    invoke-static {p0, p1}, Lcom/v2ray/ang/ui/main/MainActivity;->settingsActivityLauncher$lambda$0(Lcom/v2ray/ang/ui/main/MainActivity;Landroidx/activity/result/ActivityResult;)V
 
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

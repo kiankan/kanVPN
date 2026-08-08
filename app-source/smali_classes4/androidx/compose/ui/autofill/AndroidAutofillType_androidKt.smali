@@ -269,7 +269,7 @@
     .line 88
     sget-object v1, Landroidx/compose/ui/autofill/AutofillType;->AddressStreet:Landroidx/compose/ui/autofill/AutofillType;
 
-    const-string v2, "streetAddress"
+    const-string/jumbo v2, "streetAddress"
 
     invoke-static {v1, v2}, Lkotlin/TuplesKt;->to(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
@@ -516,7 +516,7 @@
     .line 107
     sget-object v1, Landroidx/compose/ui/autofill/AutofillType;->SmsOtpCode:Landroidx/compose/ui/autofill/AutofillType;
 
-    const-string v2, "smsOTPCode"
+    const-string/jumbo v2, "smsOTPCode"
 
     invoke-static {v1, v2}, Lkotlin/TuplesKt;->to(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 

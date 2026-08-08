@@ -120,7 +120,7 @@
 
     move-result-object p1
 
-    const-string p2, "substring(...)"
+    const-string/jumbo p2, "substring(...)"
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -178,7 +178,7 @@
 
     move-result-object p1
 
-    const-string p2, "substring(...)"
+    const-string/jumbo p2, "substring(...)"
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -206,7 +206,7 @@
 
     move-result-object p0
 
-    const-string p1, "toLowerCase(...)"
+    const-string/jumbo p1, "toLowerCase(...)"
 
     invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 

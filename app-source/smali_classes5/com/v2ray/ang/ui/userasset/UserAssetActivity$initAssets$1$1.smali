@@ -165,24 +165,24 @@
 
     invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
 
-    .line 229
+    .line 235
     iget v0, p0, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$initAssets$1$1;->label:I
 
     if-nez v0, :cond_0
 
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 230
+    .line 236
     iget-object p0, p0, Lcom/v2ray/ang/ui/userasset/UserAssetActivity$initAssets$1$1;->this$0:Lcom/v2ray/ang/ui/userasset/UserAssetActivity;
 
     invoke-virtual {p0}, Lcom/v2ray/ang/ui/userasset/UserAssetActivity;->refreshData()V
 
-    .line 231
+    .line 237
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p0
 
-    .line 229
+    .line 235
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 

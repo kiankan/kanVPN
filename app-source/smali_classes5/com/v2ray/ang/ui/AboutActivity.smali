@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nAboutActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AboutActivity.kt\ncom/v2ray/ang/ui/AboutActivity\n+ 2 Composer.kt\nandroidx/compose/runtime/ComposerKt\n*L\n1#1,132:1\n1047#2,6:133\n*S KotlinDebug\n*F\n+ 1 AboutActivity.kt\ncom/v2ray/ang/ui/AboutActivity\n*L\n47#1:133,6\n*E\n"
+    value = "SMAP\nAboutActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AboutActivity.kt\ncom/v2ray/ang/ui/AboutActivity\n+ 2 Composer.kt\nandroidx/compose/runtime/ComposerKt\n*L\n1#1,133:1\n1047#2,6:134\n*S KotlinDebug\n*F\n+ 1 AboutActivity.kt\ncom/v2ray/ang/ui/AboutActivity\n*L\n47#1:134,6\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -223,7 +223,7 @@
     :cond_5
     move v5, v6
 
-    .line 133
+    .line 134
     :cond_6
     :goto_4
     invoke-interface {p1}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
@@ -232,7 +232,7 @@
 
     if-nez v5, :cond_7
 
-    .line 134
+    .line 135
     sget-object v1, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v1}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -247,7 +247,7 @@
 
     invoke-direct {v0, p0}, Lcom/v2ray/ang/ui/AboutActivity$$ExternalSyntheticLambda0;-><init>(Lcom/v2ray/ang/ui/AboutActivity;)V
 
-    .line 136
+    .line 137
     invoke-interface {p1, v0}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
     .line 47

@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nScannerActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ScannerActivity.kt\ncom/v2ray/ang/ui/ScannerActivity\n+ 2 Composer.kt\nandroidx/compose/runtime/ComposerKt\n*L\n1#1,440:1\n1047#2,6:441\n1047#2,6:447\n1047#2,6:453\n1047#2,6:459\n1047#2,6:465\n*S KotlinDebug\n*F\n+ 1 ScannerActivity.kt\ncom/v2ray/ang/ui/ScannerActivity\n*L\n91#1:441,6\n92#1:447,6\n93#1:453,6\n94#1:459,6\n95#1:465,6\n*E\n"
+    value = "SMAP\nScannerActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ScannerActivity.kt\ncom/v2ray/ang/ui/ScannerActivity\n+ 2 Composer.kt\nandroidx/compose/runtime/ComposerKt\n*L\n1#1,468:1\n1047#2,6:469\n1047#2,6:475\n1047#2,6:481\n1047#2,6:487\n1047#2,6:493\n*S KotlinDebug\n*F\n+ 1 ScannerActivity.kt\ncom/v2ray/ang/ui/ScannerActivity\n*L\n92#1:469,6\n93#1:475,6\n94#1:481,6\n95#1:487,6\n96#1:493,6\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -130,10 +130,10 @@
 .method public constructor <init>()V
     .locals 3
 
-    .line 78
+    .line 79
     invoke-direct {p0}, Lcom/v2ray/ang/ui/base/HelperBaseComponentActivity;-><init>()V
 
-    .line 80
+    .line 81
     sget-object v0, Lcom/v2ray/ang/ui/ScannerUiState;->IDLE:Lcom/v2ray/ang/ui/ScannerUiState;
 
     const/4 v1, 0x0
@@ -152,7 +152,7 @@
 .method private static final ScreenContent$lambda$0$0(Lcom/v2ray/ang/ui/ScannerActivity;)Lkotlin/Unit;
     .locals 0
 
-    .line 91
+    .line 92
     invoke-virtual {p0}, Lcom/v2ray/ang/ui/ScannerActivity;->finish()V
 
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -163,7 +163,7 @@
 .method private static final ScreenContent$lambda$1$0(Lcom/v2ray/ang/ui/ScannerActivity;)Lkotlin/Unit;
     .locals 0
 
-    .line 92
+    .line 93
     invoke-direct {p0}, Lcom/v2ray/ang/ui/ScannerActivity;->showFileChooser()V
 
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -174,7 +174,7 @@
 .method private static final ScreenContent$lambda$2$0(Lcom/v2ray/ang/ui/ScannerActivity;)Lkotlin/Unit;
     .locals 0
 
-    .line 93
+    .line 94
     invoke-direct {p0}, Lcom/v2ray/ang/ui/ScannerActivity;->startScan()V
 
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -185,7 +185,7 @@
 .method private static final ScreenContent$lambda$3$0(Lcom/v2ray/ang/ui/ScannerActivity;)Lkotlin/Unit;
     .locals 0
 
-    .line 94
+    .line 95
     invoke-direct {p0}, Lcom/v2ray/ang/ui/ScannerActivity;->stopScan()V
 
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -200,7 +200,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 95
+    .line 96
     invoke-direct {p0, p1}, Lcom/v2ray/ang/ui/ScannerActivity;->finished(Ljava/lang/String;)V
 
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -227,22 +227,22 @@
 .method private final finished(Ljava/lang/String;)V
     .locals 2
 
-    .line 110
+    .line 111
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 111
+    .line 112
     const-string v1, "SCAN_RESULT"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const/4 p1, -0x1
 
-    .line 112
+    .line 113
     invoke-virtual {p0, p1, v0}, Lcom/v2ray/ang/ui/ScannerActivity;->setResult(ILandroid/content/Intent;)V
 
-    .line 113
+    .line 114
     invoke-virtual {p0}, Lcom/v2ray/ang/ui/ScannerActivity;->finish()V
 
     return-void
@@ -251,7 +251,7 @@
 .method private final showFileChooser()V
     .locals 2
 
-    .line 117
+    .line 118
     new-instance v0, Lcom/v2ray/ang/ui/ScannerActivity$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0}, Lcom/v2ray/ang/ui/ScannerActivity$$ExternalSyntheticLambda0;-><init>(Lcom/v2ray/ang/ui/ScannerActivity;)V
@@ -268,12 +268,12 @@
 
     if-nez p1, :cond_0
 
-    .line 118
+    .line 119
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p0
 
-    .line 120
+    .line 121
     :cond_0
     :try_start_0
     invoke-virtual {p0}, Lcom/v2ray/ang/ui/ScannerActivity;->getContentResolver()Landroid/content/ContentResolver;
@@ -284,17 +284,17 @@
 
     move-result-object p1
 
-    .line 121
+    .line 122
     invoke-static {p1}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     if-eqz p1, :cond_1
 
-    .line 122
+    .line 123
     invoke-virtual {p1}, Ljava/io/InputStream;->close()V
 
-    .line 123
+    .line 124
     :cond_1
     sget-object p1, Lcom/v2ray/ang/util/QRCodeDecoder;->INSTANCE:Lcom/v2ray/ang/util/QRCodeDecoder;
 
@@ -302,7 +302,7 @@
 
     move-result-object p1
 
-    .line 124
+    .line 125
     move-object v0, p1
 
     check-cast v0, Ljava/lang/CharSequence;
@@ -317,13 +317,13 @@
 
     goto :goto_0
 
-    .line 127
+    .line 128
     :cond_2
     invoke-direct {p0, p1}, Lcom/v2ray/ang/ui/ScannerActivity;->finished(Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 125
+    .line 126
     :cond_3
     :goto_0
     move-object p1, p0
@@ -341,7 +341,7 @@
     :catch_0
     move-exception p1
 
-    .line 130
+    .line 131
     sget-object v0, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
 
     const-string v1, "Failed to decode QR code from file"
@@ -352,14 +352,14 @@
 
     invoke-virtual {v0, v2, v1, p1}, Lcom/v2ray/ang/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 131
+    .line 132
     check-cast p0, Landroid/content/Context;
 
     sget p1, Lcom/v2ray/ang/R$string;->toast_decoding_failed:I
 
     invoke-static {p0, p1}, Lcom/v2ray/ang/extension/ToastExtKt;->toast(Landroid/content/Context;I)V
 
-    .line 133
+    .line 134
     :goto_1
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
@@ -369,7 +369,7 @@
 .method private final startScan()V
     .locals 2
 
-    .line 100
+    .line 101
     sget-object v0, Lcom/v2ray/ang/enums/PermissionType;->CAMERA:Lcom/v2ray/ang/enums/PermissionType;
 
     new-instance v1, Lcom/v2ray/ang/ui/ScannerActivity$$ExternalSyntheticLambda7;
@@ -384,14 +384,14 @@
 .method static final startScan$lambda$0(Lcom/v2ray/ang/ui/ScannerActivity;)Lkotlin/Unit;
     .locals 1
 
-    .line 101
+    .line 102
     iget-object p0, p0, Lcom/v2ray/ang/ui/ScannerActivity;->uiState:Landroidx/compose/runtime/MutableState;
 
     sget-object v0, Lcom/v2ray/ang/ui/ScannerUiState;->ACTIVE:Lcom/v2ray/ang/ui/ScannerUiState;
 
     invoke-interface {p0, v0}, Landroidx/compose/runtime/MutableState;->setValue(Ljava/lang/Object;)V
 
-    .line 102
+    .line 103
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p0
@@ -400,7 +400,7 @@
 .method private final stopScan()V
     .locals 1
 
-    .line 106
+    .line 107
     iget-object p0, p0, Lcom/v2ray/ang/ui/ScannerActivity;->uiState:Landroidx/compose/runtime/MutableState;
 
     sget-object v0, Lcom/v2ray/ang/ui/ScannerUiState;->IDLE:Lcom/v2ray/ang/ui/ScannerUiState;
@@ -417,12 +417,12 @@
 
     const v0, 0x4677764
 
-    .line 88
+    .line 89
     invoke-interface {p1, v0}, Landroidx/compose/runtime/Composer;->startRestartGroup(I)Landroidx/compose/runtime/Composer;
 
     move-result-object v7
 
-    const-string p1, "C(ScreenContent)90@3665L12,91@3707L21,92@3756L15,93@3798L14,94@3841L26,88@3587L290:ScannerActivity.kt#66hgl1"
+    const-string p1, "C(ScreenContent)91@3692L12,92@3734L21,93@3783L15,94@3825L14,95@3868L26,89@3614L290:ScannerActivity.kt#66hgl1"
 
     invoke-static {v7, p1}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -500,11 +500,11 @@
 
     const/4 v1, -0x1
 
-    const-string v3, "com.v2ray.ang.ui.ScannerActivity.ScreenContent (ScannerActivity.kt:87)"
+    const-string v3, "com.v2ray.ang.ui.ScannerActivity.ScreenContent (ScannerActivity.kt:88)"
 
     invoke-static {v0, p1, v1, v3}, Landroidx/compose/runtime/ComposerKt;->traceEventStart(IIILjava/lang/String;)V
 
-    .line 90
+    .line 91
     :cond_4
     iget-object v0, p0, Lcom/v2ray/ang/ui/ScannerActivity;->uiState:Landroidx/compose/runtime/MutableState;
 
@@ -518,7 +518,7 @@
 
     const v0, -0x7798c410
 
-    .line 91
+    .line 92
     const-string v3, "CC(remember):ScannerActivity.kt#9igjgp"
 
     invoke-static {v7, v0, v3}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -548,7 +548,7 @@
     :goto_4
     move v6, v5
 
-    .line 441
+    .line 469
     :goto_5
     invoke-interface {v7}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
@@ -556,7 +556,7 @@
 
     if-nez v6, :cond_7
 
-    .line 442
+    .line 470
     sget-object v6, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v6}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -565,16 +565,16 @@
 
     if-ne v8, v6, :cond_8
 
-    .line 91
+    .line 92
     :cond_7
     new-instance v8, Lcom/v2ray/ang/ui/ScannerActivity$$ExternalSyntheticLambda1;
 
     invoke-direct {v8, p0}, Lcom/v2ray/ang/ui/ScannerActivity$$ExternalSyntheticLambda1;-><init>(Lcom/v2ray/ang/ui/ScannerActivity;)V
 
-    .line 444
+    .line 472
     invoke-interface {v7, v8}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 91
+    .line 92
     :cond_8
     check-cast v8, Lkotlin/jvm/functions/Function0;
 
@@ -582,7 +582,7 @@
 
     const v6, -0x7798bec7
 
-    .line 92
+    .line 93
     invoke-static {v7, v6, v3}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     if-eq v0, v2, :cond_a
@@ -608,7 +608,7 @@
     :goto_6
     move v6, v5
 
-    .line 447
+    .line 475
     :goto_7
     invoke-interface {v7}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
@@ -616,7 +616,7 @@
 
     if-nez v6, :cond_b
 
-    .line 448
+    .line 476
     sget-object v6, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v6}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -625,16 +625,16 @@
 
     if-ne v9, v6, :cond_c
 
-    .line 92
+    .line 93
     :cond_b
     new-instance v9, Lcom/v2ray/ang/ui/ScannerActivity$$ExternalSyntheticLambda2;
 
     invoke-direct {v9, p0}, Lcom/v2ray/ang/ui/ScannerActivity$$ExternalSyntheticLambda2;-><init>(Lcom/v2ray/ang/ui/ScannerActivity;)V
 
-    .line 450
+    .line 478
     invoke-interface {v7, v9}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 92
+    .line 93
     :cond_c
     check-cast v9, Lkotlin/jvm/functions/Function0;
 
@@ -642,7 +642,7 @@
 
     const v6, -0x7798b8ad
 
-    .line 93
+    .line 94
     invoke-static {v7, v6, v3}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     if-eq v0, v2, :cond_e
@@ -668,7 +668,7 @@
     :goto_8
     move v6, v5
 
-    .line 453
+    .line 481
     :goto_9
     invoke-interface {v7}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
@@ -676,7 +676,7 @@
 
     if-nez v6, :cond_f
 
-    .line 454
+    .line 482
     sget-object v6, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v6}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -685,16 +685,16 @@
 
     if-ne v10, v6, :cond_10
 
-    .line 93
+    .line 94
     :cond_f
     new-instance v10, Lcom/v2ray/ang/ui/ScannerActivity$$ExternalSyntheticLambda3;
 
     invoke-direct {v10, p0}, Lcom/v2ray/ang/ui/ScannerActivity$$ExternalSyntheticLambda3;-><init>(Lcom/v2ray/ang/ui/ScannerActivity;)V
 
-    .line 456
+    .line 484
     invoke-interface {v7, v10}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 93
+    .line 94
     :cond_10
     check-cast v10, Lkotlin/jvm/functions/Function0;
 
@@ -702,7 +702,7 @@
 
     const v6, -0x7798b36e
 
-    .line 94
+    .line 95
     invoke-static {v7, v6, v3}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     if-eq v0, v2, :cond_12
@@ -728,7 +728,7 @@
     :goto_a
     move v6, v5
 
-    .line 459
+    .line 487
     :goto_b
     invoke-interface {v7}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
@@ -736,7 +736,7 @@
 
     if-nez v6, :cond_13
 
-    .line 460
+    .line 488
     sget-object v6, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v6}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -745,16 +745,16 @@
 
     if-ne v11, v6, :cond_14
 
-    .line 94
+    .line 95
     :cond_13
     new-instance v11, Lcom/v2ray/ang/ui/ScannerActivity$$ExternalSyntheticLambda4;
 
     invoke-direct {v11, p0}, Lcom/v2ray/ang/ui/ScannerActivity$$ExternalSyntheticLambda4;-><init>(Lcom/v2ray/ang/ui/ScannerActivity;)V
 
-    .line 462
+    .line 490
     invoke-interface {v7, v11}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 94
+    .line 95
     :cond_14
     check-cast v11, Lkotlin/jvm/functions/Function0;
 
@@ -762,7 +762,7 @@
 
     const v6, -0x7798ae02
 
-    .line 95
+    .line 96
     invoke-static {v7, v6, v3}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     if-eq v0, v2, :cond_15
@@ -780,7 +780,7 @@
     :cond_15
     move v4, v5
 
-    .line 465
+    .line 493
     :cond_16
     invoke-interface {v7}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
@@ -788,7 +788,7 @@
 
     if-nez v4, :cond_17
 
-    .line 466
+    .line 494
     sget-object v0, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v0}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -797,16 +797,16 @@
 
     if-ne p1, v0, :cond_18
 
-    .line 95
+    .line 96
     :cond_17
     new-instance p1, Lcom/v2ray/ang/ui/ScannerActivity$$ExternalSyntheticLambda5;
 
     invoke-direct {p1, p0}, Lcom/v2ray/ang/ui/ScannerActivity$$ExternalSyntheticLambda5;-><init>(Lcom/v2ray/ang/ui/ScannerActivity;)V
 
-    .line 468
+    .line 496
     invoke-interface {v7, p1}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 95
+    .line 96
     :cond_18
     move-object v6, p1
 
@@ -824,7 +824,7 @@
 
     move-object v5, v11
 
-    .line 89
+    .line 90
     invoke-static/range {v1 .. v8}, Lcom/v2ray/ang/ui/ScannerActivityKt;->ScannerScreen(Lcom/v2ray/ang/ui/ScannerUiState;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;I)V
 
     invoke-static {}, Landroidx/compose/runtime/ComposerKt;->isTraceInProgress()Z
@@ -837,11 +837,11 @@
 
     goto :goto_c
 
-    .line 88
+    .line 89
     :cond_19
     invoke-interface {v7}, Landroidx/compose/runtime/Composer;->skipToGroupEnd()V
 
-    .line 97
+    .line 98
     :cond_1a
     :goto_c
     invoke-interface {v7}, Landroidx/compose/runtime/Composer;->endRestartGroup()Landroidx/compose/runtime/ScopeUpdateScope;
@@ -863,10 +863,10 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 0
 
-    .line 83
+    .line 84
     invoke-super {p0, p1}, Lcom/v2ray/ang/ui/base/HelperBaseComponentActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 84
+    .line 85
     invoke-direct {p0}, Lcom/v2ray/ang/ui/ScannerActivity;->startScan()V
 
     return-void

@@ -2552,7 +2552,7 @@
     if-eqz p0, :cond_0
 
     .line 360
-    invoke-static {p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/hardware/camera2/CameraExtensionSession$StillCaptureLatency;)J
+    invoke-static {p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/hardware/camera2/CameraExtensionSession$StillCaptureLatency;)J
 
     move-result-wide v0
 
@@ -2561,7 +2561,7 @@
     mul-long/2addr v0, v2
 
     .line 361
-    invoke-static {p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m$1(Landroid/hardware/camera2/CameraExtensionSession$StillCaptureLatency;)J
+    invoke-static {p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m$1(Landroid/hardware/camera2/CameraExtensionSession$StillCaptureLatency;)J
 
     move-result-wide p0
 

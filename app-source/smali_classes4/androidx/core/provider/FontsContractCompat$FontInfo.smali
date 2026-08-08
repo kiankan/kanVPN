@@ -98,7 +98,7 @@
 
     invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
 
-    const-string v1, "systemfont"
+    const-string/jumbo v1, "systemfont"
 
     .line 460
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
@@ -250,7 +250,7 @@
 
     move-result-object p0
 
-    const-string v0, "systemfont"
+    const-string/jumbo v0, "systemfont"
 
     invoke-static {p0, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 

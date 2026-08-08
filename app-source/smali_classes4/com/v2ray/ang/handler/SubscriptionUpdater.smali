@@ -308,7 +308,7 @@
     .line 142
     new-array v8, v8, [Lkotlin/Pair;
 
-    const-string v9, "subId"
+    const-string/jumbo v9, "subId"
 
     invoke-static {v9, v0}, Lkotlin/TuplesKt;->to(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
@@ -361,7 +361,7 @@
     check-cast v4, Landroidx/work/PeriodicWorkRequest$Builder;
 
     .line 144
-    const-string v8, "subscription_updater"
+    const-string/jumbo v8, "subscription_updater"
 
     invoke-virtual {v4, v8}, Landroidx/work/PeriodicWorkRequest$Builder;->addTag(Ljava/lang/String;)Landroidx/work/WorkRequest$Builder;
 
@@ -493,7 +493,7 @@
     .line 96
     new-instance p0, Ljava/lang/StringBuilder;
 
-    const-string v0, "subscription_updater_"
+    const-string/jumbo v0, "subscription_updater_"
 
     invoke-direct {p0, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -537,7 +537,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "subId"
+    const-string/jumbo v0, "subId"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -714,7 +714,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "subId"
+    const-string/jumbo v0, "subId"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -734,7 +734,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "subId"
+    const-string/jumbo v0, "subId"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

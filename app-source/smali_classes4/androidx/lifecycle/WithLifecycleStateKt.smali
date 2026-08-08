@@ -1090,7 +1090,7 @@
     .line 44
     new-instance p0, Ljava/lang/StringBuilder;
 
-    const-string p1, "target state must be CREATED or greater, found "
+    const-string/jumbo p1, "target state must be CREATED or greater, found "
 
     invoke-direct {p0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -1233,7 +1233,7 @@
     .line 209
     new-instance p0, Ljava/lang/StringBuilder;
 
-    const-string p1, "target state must be CREATED or greater, found "
+    const-string/jumbo p1, "target state must be CREATED or greater, found "
 
     invoke-direct {p0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -1301,7 +1301,7 @@
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
-    const-string p2, "target state must be CREATED or greater, found "
+    const-string/jumbo p2, "target state must be CREATED or greater, found "
 
     invoke-direct {p0, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -1372,7 +1372,7 @@
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
-    const-string p2, "target state must be CREATED or greater, found "
+    const-string/jumbo p2, "target state must be CREATED or greater, found "
 
     invoke-direct {p0, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 

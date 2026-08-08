@@ -7,17 +7,17 @@
 
 
 # instance fields
-.field public final synthetic f$0:Lcom/v2ray/ang/ui/checkupdate/CheckUpdateViewModel;
+.field public final synthetic f$0:Lcom/v2ray/ang/dto/CheckUpdateResult;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/v2ray/ang/ui/checkupdate/CheckUpdateViewModel;)V
+.method public synthetic constructor <init>(Lcom/v2ray/ang/dto/CheckUpdateResult;)V
     .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt$$ExternalSyntheticLambda9;->f$0:Lcom/v2ray/ang/ui/checkupdate/CheckUpdateViewModel;
+    iput-object p1, p0, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt$$ExternalSyntheticLambda9;->f$0:Lcom/v2ray/ang/dto/CheckUpdateResult;
 
     return-void
 .end method
@@ -28,7 +28,7 @@
     .locals 0
 
     .line 0
-    iget-object p0, p0, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt$$ExternalSyntheticLambda9;->f$0:Lcom/v2ray/ang/ui/checkupdate/CheckUpdateViewModel;
+    iget-object p0, p0, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt$$ExternalSyntheticLambda9;->f$0:Lcom/v2ray/ang/dto/CheckUpdateResult;
 
     check-cast p1, Landroidx/compose/runtime/Composer;
 
@@ -38,7 +38,7 @@
 
     move-result p2
 
-    invoke-static {p0, p1, p2}, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt;->CheckUpdateScreen$lambda$9(Lcom/v2ray/ang/ui/checkupdate/CheckUpdateViewModel;Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
+    invoke-static {p0, p1, p2}, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt;->CheckUpdateScreen$lambda$9(Lcom/v2ray/ang/dto/CheckUpdateResult;Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
 
     move-result-object p0
 

@@ -68,7 +68,7 @@
     .locals 2
 
     .line 44
-    invoke-static {p2}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/view/textclassifier/TextClassification;)Ljava/lang/String;
+    invoke-static {p2}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/view/textclassifier/TextClassification;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -85,7 +85,7 @@
 
     .line 45
     :goto_0
-    invoke-static {p2}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/view/textclassifier/TextClassification;)Landroid/content/Intent;
+    invoke-static {p2}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/view/textclassifier/TextClassification;)Landroid/content/Intent;
 
     move-result-object p2
 

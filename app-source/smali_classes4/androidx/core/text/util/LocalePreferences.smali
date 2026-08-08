@@ -342,7 +342,7 @@
 
     const-string v6, "sat"
 
-    const-string v0, "sun"
+    const-string/jumbo v0, "sun"
 
     const-string v1, "mon"
 
@@ -350,7 +350,7 @@
 
     const-string/jumbo v3, "wed"
 
-    const-string v4, "thu"
+    const-string/jumbo v4, "thu"
 
     filled-new-array/range {v0 .. v6}, [Ljava/lang/String;
 

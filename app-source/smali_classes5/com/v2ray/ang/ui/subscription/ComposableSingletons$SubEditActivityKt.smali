@@ -99,7 +99,7 @@
 .method static final lambda_500504975$lambda$0(Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
     .locals 11
 
-    const-string v0, "C175@6972L42,175@7037L45,175@6967L116:SubEditActivity.kt#7ufd1m"
+    const-string v0, "C175@6972L42,175@7037L35,175@6967L106:SubEditActivity.kt#7ufd1m"
 
     invoke-static {p0, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -149,7 +149,7 @@
 
     move-result-object v3
 
-    sget p1, Lcom/v2ray/ang/R$string;->menu_item_del_config:I
+    sget p1, Lcom/v2ray/ang/R$string;->acc_delete:I
 
     invoke-static {p1, p0, v2}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
 
@@ -194,7 +194,7 @@
 .method static final lambda__131348940$lambda$0(Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
     .locals 11
 
-    const-string v0, "C179@7244L40,179@7307L46,179@7239L115:SubEditActivity.kt#7ufd1m"
+    const-string v0, "C179@7234L40,179@7297L33,179@7229L102:SubEditActivity.kt#7ufd1m"
 
     invoke-static {p0, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -244,7 +244,7 @@
 
     move-result-object v3
 
-    sget p1, Lcom/v2ray/ang/R$string;->menu_item_save_config:I
+    sget p1, Lcom/v2ray/ang/R$string;->acc_save:I
 
     invoke-static {p1, p0, v2}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
 

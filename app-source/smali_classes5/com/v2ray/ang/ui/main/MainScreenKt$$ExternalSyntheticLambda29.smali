@@ -3,7 +3,7 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Lkotlin/jvm/functions/Function0;
+.implements Lkotlin/jvm/functions/Function2;
 
 
 # instance fields
@@ -24,13 +24,17 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
     .line 0
     iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$$ExternalSyntheticLambda29;->f$0:Landroidx/compose/runtime/MutableState;
 
-    invoke-static {p0}, Lcom/v2ray/ang/ui/main/MainScreenKt;->$r8$lambda$o3PRBG0ToznyecDvahvM7m1d4Vs(Landroidx/compose/runtime/MutableState;)Lkotlin/Unit;
+    check-cast p1, Ljava/lang/String;
+
+    check-cast p2, Lcom/v2ray/ang/dto/entities/ProfileItem;
+
+    invoke-static {p0, p1, p2}, Lcom/v2ray/ang/ui/main/MainScreenKt;->$r8$lambda$KtM2DaOSQXkpYWmVwp7s8fNSPc8(Landroidx/compose/runtime/MutableState;Ljava/lang/String;Lcom/v2ray/ang/dto/entities/ProfileItem;)Lkotlin/Unit;
 
     move-result-object p0
 

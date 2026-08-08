@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="config_backup_options">
-        <item>Local</item>
-        <item>WebDAV</item>
+    <string-array name="browser_dialer_mode">
+        <item>নিষ্ক্রিয়</item>
+        <item>OkHttp</item>
+        <item>WebView</item>
     </string-array>
     <string-array name="mode_entries">
         <item>VPN</item>
@@ -14,26 +15,15 @@
         <item>এড়িয়ে যান</item>
     </string-array>
     <string-array name="outbound_domain_resolve_method">
-        <item>Do not resolve</item>
-        <item>Resolve and add to DNS Hosts</item>
-        <item>Resolve and replace domain</item>
+        <item>রেজলভ করবেন না</item>
+        <item>রেজলভ করে DNS Hosts-এ যোগ করুন</item>
+        <item>রেজলভ করে ডোমেইন প্রতিস্থাপন করুন</item>
     </string-array>
     <string-array name="policy_group_type">
-        <item>Least Ping</item>
-        <item>Least Load</item>
-        <item>Random</item>
-        <item>Round Robin</item>
-    </string-array>
-    <string-array name="preset_rulesets">
-        <item>চায়না হোয়াইটলিস্ট</item>
-        <item>চায়না ব্ল্যাকলিস্ট</item>
-        <item>গ্লোবাল</item>
-        <item>ইরান হোয়াইটলিস্ট</item>
-        <item>রাশিয়া হোয়াইটলিস্ট</item>
-    </string-array>
-    <string-array name="share_sub_method">
-        <item>QR কোড</item>
-        <item>ক্লিপবোর্ডে রপ্তানি করুন</item>
+        <item>সর্বনিম্ন পিং (leastPing)</item>
+        <item>সর্বনিম্ন লোড (leastLoad)</item>
+        <item>এলোমেলো (random)</item>
+        <item>রাউন্ড রবিন (roundRobin)</item>
     </string-array>
     <string-array name="ui_mode_night">
         <item>সিস্টেম অনুসরণ করুন</item>
@@ -41,8 +31,8 @@
         <item>ডার্ক</item>
     </string-array>
     <string-array name="vpn_bypass_lan">
-        <item>Follow config</item>
-        <item>Bypass</item>
-        <item>Not Bypass</item>
+        <item>কনফিগ অনুসরণ করুন</item>
+        <item>বাইপাস</item>
+        <item>বাইপাস নয়</item>
     </string-array>
 </resources>

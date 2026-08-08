@@ -53,12 +53,12 @@
     f = "MainScreen.kt"
     i = {}
     l = {
-        0xfa
+        0x104
     }
     m = "invokeSuspend"
     n = {}
     nl = {
-        0xfe
+        0x108
     }
     s = {}
     v = 0x2
@@ -178,7 +178,7 @@
 
     move-result-object v0
 
-    .line 249
+    .line 259
     iget v1, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$MainScreen$16$3$1$1$1$1;->label:I
 
     const/4 v2, 0x1
@@ -203,18 +203,18 @@
     :cond_1
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 250
+    .line 260
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$MainScreen$16$3$1$1$1$1;->$pagerState:Landroidx/compose/foundation/pager/PagerState;
 
-    .line 251
+    .line 261
     iget v1, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$MainScreen$16$3$1$1$1$1;->$targetIndex:I
 
-    .line 252
+    .line 262
     move-object v3, p0
 
     check-cast v3, Lkotlin/coroutines/Continuation;
 
-    .line 250
+    .line 260
     iput v2, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$MainScreen$16$3$1$1$1$1;->label:I
 
     invoke-static {p1, v1, v2, v3}, Lcom/v2ray/ang/ui/main/MainServerPagerKt;->navigateToPageOptimized(Landroidx/compose/foundation/pager/PagerState;IZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -225,7 +225,7 @@
 
     return-object v0
 
-    .line 254
+    .line 264
     :cond_2
     :goto_0
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;

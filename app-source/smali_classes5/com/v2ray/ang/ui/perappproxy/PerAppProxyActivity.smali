@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nPerAppProxyActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PerAppProxyActivity.kt\ncom/v2ray/ang/ui/perappproxy/PerAppProxyActivity\n+ 2 ActivityViewModelLazy.kt\nandroidx/activity/ActivityViewModelLazyKt\n+ 3 Composer.kt\nandroidx/compose/runtime/ComposerKt\n+ 4 SnapshotState.kt\nandroidx/compose/runtime/SnapshotStateKt__SnapshotStateKt\n*L\n1#1,285:1\n70#2,11:286\n1047#3,6:297\n1047#3,6:303\n1047#3,6:309\n1047#3,6:315\n1047#3,6:321\n1047#3,6:327\n1047#3,6:333\n1047#3,6:339\n1047#3,6:345\n1047#3,6:351\n1047#3,6:357\n85#4:363\n85#4:364\n85#4:365\n85#4:366\n85#4:367\n*S KotlinDebug\n*F\n+ 1 PerAppProxyActivity.kt\ncom/v2ray/ang/ui/perappproxy/PerAppProxyActivity\n*L\n58#1:286,11\n79#1:297,6\n80#1:303,6\n81#1:309,6\n82#1:315,6\n85#1:321,6\n86#1:327,6\n87#1:333,6\n88#1:339,6\n89#1:345,6\n90#1:351,6\n94#1:357,6\n67#1:363\n68#1:364\n69#1:365\n70#1:366\n71#1:367\n*E\n"
+    value = "SMAP\nPerAppProxyActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PerAppProxyActivity.kt\ncom/v2ray/ang/ui/perappproxy/PerAppProxyActivity\n+ 2 ActivityViewModelLazy.kt\nandroidx/activity/ActivityViewModelLazyKt\n+ 3 Composer.kt\nandroidx/compose/runtime/ComposerKt\n+ 4 SnapshotState.kt\nandroidx/compose/runtime/SnapshotStateKt__SnapshotStateKt\n*L\n1#1,284:1\n70#2,11:285\n1047#3,6:296\n1047#3,6:302\n1047#3,6:308\n1047#3,6:314\n1047#3,6:320\n1047#3,6:326\n1047#3,6:332\n1047#3,6:338\n1047#3,6:344\n1047#3,6:350\n1047#3,6:356\n85#4:362\n85#4:363\n85#4:364\n85#4:365\n85#4:366\n*S KotlinDebug\n*F\n+ 1 PerAppProxyActivity.kt\ncom/v2ray/ang/ui/perappproxy/PerAppProxyActivity\n*L\n66#1:285,11\n87#1:296,6\n88#1:302,6\n89#1:308,6\n90#1:314,6\n93#1:320,6\n94#1:326,6\n95#1:332,6\n96#1:338,6\n97#1:344,6\n98#1:350,6\n102#1:356,6\n75#1:362\n76#1:363\n77#1:364\n78#1:365\n79#1:366\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -189,22 +189,22 @@
 .method public constructor <init>()V
     .locals 7
 
-    .line 56
+    .line 64
     invoke-direct {p0}, Lcom/v2ray/ang/ui/base/BaseComponentActivity;-><init>()V
 
-    .line 58
+    .line 66
     move-object v0, p0
 
     check-cast v0, Landroidx/activity/ComponentActivity;
 
-    .line 290
+    .line 289
     new-instance v1, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity$special$$inlined$viewModels$default$1;
 
     invoke-direct {v1, v0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity$special$$inlined$viewModels$default$1;-><init>(Landroidx/activity/ComponentActivity;)V
 
     check-cast v1, Lkotlin/jvm/functions/Function0;
 
-    .line 292
+    .line 291
     new-instance v2, Landroidx/lifecycle/ViewModelLazy;
 
     const-class v3, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel;
@@ -213,14 +213,14 @@
 
     move-result-object v3
 
-    .line 294
+    .line 293
     new-instance v4, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity$special$$inlined$viewModels$default$2;
 
     invoke-direct {v4, v0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity$special$$inlined$viewModels$default$2;-><init>(Landroidx/activity/ComponentActivity;)V
 
     check-cast v4, Lkotlin/jvm/functions/Function0;
 
-    .line 296
+    .line 295
     new-instance v5, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity$special$$inlined$viewModels$default$3;
 
     const/4 v6, 0x0
@@ -229,12 +229,12 @@
 
     check-cast v5, Lkotlin/jvm/functions/Function0;
 
-    .line 292
+    .line 291
     invoke-direct {v2, v3, v4, v1, v5}, Landroidx/lifecycle/ViewModelLazy;-><init>(Lkotlin/reflect/KClass;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;)V
 
     check-cast v2, Lkotlin/Lazy;
 
-    .line 58
+    .line 66
     iput-object v2, p0, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;->viewModel$delegate:Lkotlin/Lazy;
 
     return-void
@@ -256,7 +256,7 @@
         }
     .end annotation
 
-    .line 363
+    .line 362
     invoke-interface {p0}, Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -277,7 +277,7 @@
         }
     .end annotation
 
-    .line 364
+    .line 363
     invoke-interface {p0}, Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -298,7 +298,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 86
+    .line 94
     invoke-direct {p0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;->getViewModel()Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel;
 
     move-result-object p0
@@ -313,7 +313,7 @@
 .method private static final ScreenContent$lambda$11$0(Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;)Lkotlin/Unit;
     .locals 0
 
-    .line 87
+    .line 95
     invoke-direct {p0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;->getViewModel()Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel;
 
     move-result-object p0
@@ -328,7 +328,7 @@
 .method private static final ScreenContent$lambda$12$0(Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;)Lkotlin/Unit;
     .locals 0
 
-    .line 88
+    .line 96
     invoke-direct {p0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;->getViewModel()Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel;
 
     move-result-object p0
@@ -343,7 +343,7 @@
 .method private static final ScreenContent$lambda$13$0(Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;)Lkotlin/Unit;
     .locals 1
 
-    .line 89
+    .line 97
     invoke-direct {p0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;->getViewModel()Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel;
 
     move-result-object v0
@@ -360,7 +360,7 @@
 .method private static final ScreenContent$lambda$14$0(Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;)Lkotlin/Unit;
     .locals 3
 
-    .line 91
+    .line 99
     sget-object v0, Lcom/v2ray/ang/util/Utils;->INSTANCE:Lcom/v2ray/ang/util/Utils;
 
     invoke-virtual {p0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;->getApplicationContext()Landroid/content/Context;
@@ -375,7 +375,7 @@
 
     move-result-object v0
 
-    .line 92
+    .line 100
     invoke-direct {p0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;->getViewModel()Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel;
 
     move-result-object v1
@@ -384,7 +384,7 @@
 
     invoke-virtual {v1, v0, p0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel;->importProxyApp(Ljava/lang/String;Landroid/content/Context;)V
 
-    .line 93
+    .line 101
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p0
@@ -393,7 +393,7 @@
 .method private static final ScreenContent$lambda$15$0(Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;)Lkotlin/Unit;
     .locals 4
 
-    .line 95
+    .line 103
     invoke-direct {p0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;->getViewModel()Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel;
 
     move-result-object v0
@@ -402,7 +402,7 @@
 
     move-result-object v0
 
-    .line 96
+    .line 104
     sget-object v1, Lcom/v2ray/ang/util/Utils;->INSTANCE:Lcom/v2ray/ang/util/Utils;
 
     invoke-virtual {p0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;->getApplicationContext()Landroid/content/Context;
@@ -415,14 +415,14 @@
 
     invoke-virtual {v1, v2, v0}, Lcom/v2ray/ang/util/Utils;->setClipboard(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 97
+    .line 105
     check-cast p0, Landroid/content/Context;
 
     sget v0, Lcom/v2ray/ang/R$string;->toast_success:I
 
     invoke-static {p0, v0}, Lcom/v2ray/ang/extension/ToastExtKt;->toastSuccess(Landroid/content/Context;I)V
 
-    .line 98
+    .line 106
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p0
@@ -460,7 +460,7 @@
         }
     .end annotation
 
-    .line 365
+    .line 364
     invoke-interface {p0}, Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -481,7 +481,7 @@
         }
     .end annotation
 
-    .line 366
+    .line 365
     invoke-interface {p0}, Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -506,7 +506,7 @@
         }
     .end annotation
 
-    .line 367
+    .line 366
     invoke-interface {p0}, Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -523,7 +523,7 @@
 .method private static final ScreenContent$lambda$5$0(Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;)Lkotlin/Unit;
     .locals 0
 
-    .line 79
+    .line 87
     invoke-virtual {p0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;->finish()V
 
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -534,7 +534,7 @@
 .method private static final ScreenContent$lambda$6$0(Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;Z)Lkotlin/Unit;
     .locals 0
 
-    .line 80
+    .line 88
     invoke-direct {p0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;->getViewModel()Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel;
 
     move-result-object p0
@@ -549,7 +549,7 @@
 .method private static final ScreenContent$lambda$7$0(Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;Z)Lkotlin/Unit;
     .locals 0
 
-    .line 81
+    .line 89
     invoke-direct {p0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;->getViewModel()Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel;
 
     move-result-object p0
@@ -564,14 +564,14 @@
 .method private static final ScreenContent$lambda$8$0(Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;)Lkotlin/Unit;
     .locals 1
 
-    .line 83
+    .line 91
     check-cast p0, Landroid/content/Context;
 
     sget v0, Lcom/v2ray/ang/R$string;->summary_pref_per_app_proxy:I
 
     invoke-static {p0, v0}, Lcom/v2ray/ang/extension/ToastExtKt;->toastInfo(Landroid/content/Context;I)V
 
-    .line 84
+    .line 92
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p0
@@ -584,7 +584,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 85
+    .line 93
     invoke-direct {p0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;->getViewModel()Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel;
 
     move-result-object p0
@@ -599,7 +599,7 @@
 .method private final getViewModel()Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel;
     .locals 0
 
-    .line 58
+    .line 66
     iget-object p0, p0, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;->viewModel$delegate:Lkotlin/Lazy;
 
     invoke-interface {p0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
@@ -624,12 +624,12 @@
 
     move-object/from16 v3, p1
 
-    .line 66
+    .line 74
     invoke-interface {v3, v2}, Landroidx/compose/runtime/Composer;->startRestartGroup(I)Landroidx/compose/runtime/Composer;
 
     move-result-object v7
 
-    const-string v3, "C(ScreenContent)66@2732L29,67@2807L29,68@2882L29,69@2975L29,70@3052L29,78@3321L12,79@3370L39,80@3445L38,81@3511L78,84@3617L24,85@3666L28,86@3722L25,87@3781L31,88@3846L38,89@3917L140,93@4090L187,72@3091L1196:PerAppProxyActivity.kt#t83ju7"
+    const-string v3, "C(ScreenContent)74@3060L29,75@3135L29,76@3210L29,77@3303L29,78@3380L29,86@3649L12,87@3698L39,88@3773L38,89@3839L78,92@3945L24,93@3994L28,94@4050L25,95@4109L31,96@4174L38,97@4245L140,101@4418L187,80@3419L1196:PerAppProxyActivity.kt#t83ju7"
 
     invoke-static {v7, v3}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -705,11 +705,11 @@
 
     const/4 v3, -0x1
 
-    const-string v4, "com.v2ray.ang.ui.perappproxy.PerAppProxyActivity.ScreenContent (PerAppProxyActivity.kt:65)"
+    const-string v4, "com.v2ray.ang.ui.perappproxy.PerAppProxyActivity.ScreenContent (PerAppProxyActivity.kt:73)"
 
     invoke-static {v2, v11, v3, v4}, Landroidx/compose/runtime/ComposerKt;->traceEventStart(IIILjava/lang/String;)V
 
-    .line 67
+    .line 75
     :cond_4
     invoke-direct {v0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;->getViewModel()Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel;
 
@@ -733,7 +733,7 @@
 
     move-result-object v2
 
-    .line 68
+    .line 76
     invoke-direct {v0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;->getViewModel()Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel;
 
     move-result-object v3
@@ -746,7 +746,7 @@
 
     move-result-object v14
 
-    .line 69
+    .line 77
     invoke-direct {v0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;->getViewModel()Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel;
 
     move-result-object v3
@@ -759,7 +759,7 @@
 
     move-result-object v15
 
-    .line 70
+    .line 78
     invoke-direct {v0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;->getViewModel()Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel;
 
     move-result-object v3
@@ -772,7 +772,7 @@
 
     move-result-object v16
 
-    .line 71
+    .line 79
     invoke-direct {v0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;->getViewModel()Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel;
 
     move-result-object v3
@@ -785,34 +785,34 @@
 
     move-result-object v3
 
-    .line 74
+    .line 82
     invoke-static {v2}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;->ScreenContent$lambda$0(Landroidx/compose/runtime/State;)Ljava/util/List;
 
     move-result-object v2
 
-    .line 75
+    .line 83
     invoke-static {v14}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;->ScreenContent$lambda$1(Landroidx/compose/runtime/State;)Z
 
     move-result v4
 
-    .line 76
+    .line 84
     invoke-static {v15}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;->ScreenContent$lambda$2(Landroidx/compose/runtime/State;)Ljava/util/Set;
 
     move-result-object v5
 
-    .line 77
+    .line 85
     invoke-static/range {v16 .. v16}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;->ScreenContent$lambda$3(Landroidx/compose/runtime/State;)Z
 
     move-result v6
 
-    .line 78
+    .line 86
     invoke-static {v3}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;->ScreenContent$lambda$4(Landroidx/compose/runtime/State;)Z
 
     move-result v3
 
     const v8, -0x244ee1ac
 
-    .line 79
+    .line 87
     const-string v9, "CC(remember):PerAppProxyActivity.kt#9igjgp"
 
     invoke-static {v7, v8, v9}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -842,7 +842,7 @@
     :goto_4
     const/4 v14, 0x1
 
-    .line 297
+    .line 296
     :goto_5
     invoke-interface {v7}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
@@ -850,7 +850,7 @@
 
     if-nez v14, :cond_7
 
-    .line 298
+    .line 297
     sget-object v14, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v14}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -859,16 +859,16 @@
 
     if-ne v15, v14, :cond_8
 
-    .line 79
+    .line 87
     :cond_7
     new-instance v15, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity$$ExternalSyntheticLambda0;
 
     invoke-direct {v15, v0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity$$ExternalSyntheticLambda0;-><init>(Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;)V
 
-    .line 300
+    .line 299
     invoke-interface {v7, v15}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 79
+    .line 87
     :cond_8
     check-cast v15, Lkotlin/jvm/functions/Function0;
 
@@ -876,7 +876,7 @@
 
     const v14, -0x244edb71
 
-    .line 80
+    .line 88
     invoke-static {v7, v14, v9}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     if-eq v8, v10, :cond_a
@@ -902,7 +902,7 @@
     :goto_6
     const/4 v14, 0x1
 
-    .line 303
+    .line 302
     :goto_7
     invoke-interface {v7}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
@@ -910,7 +910,7 @@
 
     if-nez v14, :cond_b
 
-    .line 304
+    .line 303
     sget-object v14, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v14}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -919,16 +919,16 @@
 
     if-ne v12, v14, :cond_c
 
-    .line 80
+    .line 88
     :cond_b
     new-instance v12, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity$$ExternalSyntheticLambda5;
 
     invoke-direct {v12, v0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity$$ExternalSyntheticLambda5;-><init>(Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;)V
 
-    .line 306
+    .line 305
     invoke-interface {v7, v12}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 80
+    .line 88
     :cond_c
     check-cast v12, Lkotlin/jvm/functions/Function1;
 
@@ -936,7 +936,7 @@
 
     const v14, -0x244ed212
 
-    .line 81
+    .line 89
     invoke-static {v7, v14, v9}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     if-eq v8, v10, :cond_e
@@ -962,7 +962,7 @@
     :goto_8
     const/4 v14, 0x1
 
-    .line 309
+    .line 308
     :goto_9
     invoke-interface {v7}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
@@ -970,7 +970,7 @@
 
     if-nez v14, :cond_f
 
-    .line 310
+    .line 309
     sget-object v14, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v14}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -979,16 +979,16 @@
 
     if-ne v13, v14, :cond_10
 
-    .line 81
+    .line 89
     :cond_f
     new-instance v13, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity$$ExternalSyntheticLambda6;
 
     invoke-direct {v13, v0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity$$ExternalSyntheticLambda6;-><init>(Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;)V
 
-    .line 312
+    .line 311
     invoke-interface {v7, v13}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 81
+    .line 89
     :cond_10
     check-cast v13, Lkotlin/jvm/functions/Function1;
 
@@ -996,7 +996,7 @@
 
     const v14, -0x244ec9aa
 
-    .line 82
+    .line 90
     invoke-static {v7, v14, v9}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     if-eq v8, v10, :cond_12
@@ -1022,7 +1022,7 @@
     :goto_a
     const/4 v14, 0x1
 
-    .line 315
+    .line 314
     :goto_b
     invoke-interface {v7}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
@@ -1030,7 +1030,7 @@
 
     if-nez v14, :cond_13
 
-    .line 316
+    .line 315
     sget-object v14, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v14}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -1039,16 +1039,16 @@
 
     if-ne v10, v14, :cond_14
 
-    .line 82
+    .line 90
     :cond_13
     new-instance v10, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity$$ExternalSyntheticLambda7;
 
     invoke-direct {v10, v0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity$$ExternalSyntheticLambda7;-><init>(Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;)V
 
-    .line 318
+    .line 317
     invoke-interface {v7, v10}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 82
+    .line 90
     :cond_14
     check-cast v10, Lkotlin/jvm/functions/Function0;
 
@@ -1056,7 +1056,7 @@
 
     const v14, -0x244ebca0
 
-    .line 85
+    .line 93
     invoke-static {v7, v14, v9}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     const/4 v14, 0x4
@@ -1087,14 +1087,14 @@
     :goto_d
     move-object/from16 v18, v2
 
-    .line 321
+    .line 320
     invoke-interface {v7}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
     move-result-object v2
 
     if-nez v14, :cond_17
 
-    .line 322
+    .line 321
     sget-object v14, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v14}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -1103,16 +1103,16 @@
 
     if-ne v2, v14, :cond_18
 
-    .line 85
+    .line 93
     :cond_17
     new-instance v2, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity$$ExternalSyntheticLambda8;
 
     invoke-direct {v2, v0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity$$ExternalSyntheticLambda8;-><init>(Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;)V
 
-    .line 324
+    .line 323
     invoke-interface {v7, v2}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 85
+    .line 93
     :cond_18
     check-cast v2, Lkotlin/jvm/functions/Function1;
 
@@ -1120,7 +1120,7 @@
 
     const v14, -0x244eb67c
 
-    .line 86
+    .line 94
     invoke-static {v7, v14, v9}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     const/4 v14, 0x4
@@ -1151,14 +1151,14 @@
     :goto_f
     move-object/from16 v19, v2
 
-    .line 327
+    .line 326
     invoke-interface {v7}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
     move-result-object v2
 
     if-nez v14, :cond_1b
 
-    .line 328
+    .line 327
     sget-object v14, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v14}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -1167,16 +1167,16 @@
 
     if-ne v2, v14, :cond_1c
 
-    .line 86
+    .line 94
     :cond_1b
     new-instance v2, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity$$ExternalSyntheticLambda9;
 
     invoke-direct {v2, v0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity$$ExternalSyntheticLambda9;-><init>(Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;)V
 
-    .line 330
+    .line 329
     invoke-interface {v7, v2}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 86
+    .line 94
     :cond_1c
     check-cast v2, Lkotlin/jvm/functions/Function1;
 
@@ -1184,7 +1184,7 @@
 
     const v14, -0x244eaf7f
 
-    .line 87
+    .line 95
     invoke-static {v7, v14, v9}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     const/4 v14, 0x4
@@ -1215,14 +1215,14 @@
     :goto_11
     move-object/from16 v20, v2
 
-    .line 333
+    .line 332
     invoke-interface {v7}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
     move-result-object v2
 
     if-nez v14, :cond_1f
 
-    .line 334
+    .line 333
     sget-object v14, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v14}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -1231,16 +1231,16 @@
 
     if-ne v2, v14, :cond_20
 
-    .line 87
+    .line 95
     :cond_1f
     new-instance v2, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity$$ExternalSyntheticLambda10;
 
     invoke-direct {v2, v0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity$$ExternalSyntheticLambda10;-><init>(Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;)V
 
-    .line 336
+    .line 335
     invoke-interface {v7, v2}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 87
+    .line 95
     :cond_20
     move-object v14, v2
 
@@ -1250,7 +1250,7 @@
 
     const v2, -0x244ea819
 
-    .line 88
+    .line 96
     invoke-static {v7, v2, v9}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     const/4 v2, 0x4
@@ -1278,7 +1278,7 @@
     :goto_12
     const/16 v21, 0x1
 
-    .line 339
+    .line 338
     :goto_13
     invoke-interface {v7}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
@@ -1286,7 +1286,7 @@
 
     if-nez v21, :cond_23
 
-    .line 340
+    .line 339
     sget-object v21, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     move/from16 v22, v3
@@ -1302,16 +1302,16 @@
     :cond_23
     move/from16 v22, v3
 
-    .line 88
+    .line 96
     :goto_14
     new-instance v2, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity$$ExternalSyntheticLambda11;
 
     invoke-direct {v2, v0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity$$ExternalSyntheticLambda11;-><init>(Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;)V
 
-    .line 342
+    .line 341
     invoke-interface {v7, v2}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 88
+    .line 96
     :cond_24
     check-cast v2, Lkotlin/jvm/functions/Function0;
 
@@ -1319,7 +1319,7 @@
 
     const v3, -0x244e9ff2
 
-    .line 89
+    .line 97
     invoke-static {v7, v3, v9}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     const/4 v3, 0x4
@@ -1350,14 +1350,14 @@
     :goto_16
     move-object/from16 v21, v2
 
-    .line 345
+    .line 344
     invoke-interface {v7}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
     move-result-object v2
 
     if-nez v3, :cond_27
 
-    .line 346
+    .line 345
     sget-object v3, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v3}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -1366,16 +1366,16 @@
 
     if-ne v2, v3, :cond_28
 
-    .line 89
+    .line 97
     :cond_27
     new-instance v2, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity$$ExternalSyntheticLambda1;
 
     invoke-direct {v2, v0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity$$ExternalSyntheticLambda1;-><init>(Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;)V
 
-    .line 348
+    .line 347
     invoke-interface {v7, v2}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 89
+    .line 97
     :cond_28
     check-cast v2, Lkotlin/jvm/functions/Function0;
 
@@ -1383,7 +1383,7 @@
 
     const v3, -0x244e96ac
 
-    .line 90
+    .line 98
     invoke-static {v7, v3, v9}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     const/4 v3, 0x4
@@ -1414,14 +1414,14 @@
     :goto_18
     move-object/from16 v23, v2
 
-    .line 351
+    .line 350
     invoke-interface {v7}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
     move-result-object v2
 
     if-nez v3, :cond_2b
 
-    .line 352
+    .line 351
     sget-object v3, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v3}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -1430,16 +1430,16 @@
 
     if-ne v2, v3, :cond_2c
 
-    .line 90
+    .line 98
     :cond_2b
     new-instance v2, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity$$ExternalSyntheticLambda2;
 
     invoke-direct {v2, v0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity$$ExternalSyntheticLambda2;-><init>(Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;)V
 
-    .line 354
+    .line 353
     invoke-interface {v7, v2}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 90
+    .line 98
     :cond_2c
     check-cast v2, Lkotlin/jvm/functions/Function0;
 
@@ -1447,7 +1447,7 @@
 
     const v3, -0x244e80dd
 
-    .line 94
+    .line 102
     invoke-static {v7, v3, v9}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     const/4 v3, 0x4
@@ -1475,7 +1475,7 @@
     :goto_19
     const/16 v16, 0x1
 
-    .line 357
+    .line 356
     :goto_1a
     invoke-interface {v7}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
@@ -1483,7 +1483,7 @@
 
     if-nez v16, :cond_2f
 
-    .line 358
+    .line 357
     sget-object v8, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v8}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -1492,16 +1492,16 @@
 
     if-ne v3, v8, :cond_30
 
-    .line 94
+    .line 102
     :cond_2f
     new-instance v3, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity$$ExternalSyntheticLambda3;
 
     invoke-direct {v3, v0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity$$ExternalSyntheticLambda3;-><init>(Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;)V
 
-    .line 360
+    .line 359
     invoke-interface {v7, v3}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 94
+    .line 102
     :cond_30
     check-cast v3, Lkotlin/jvm/functions/Function0;
 
@@ -1539,7 +1539,7 @@
 
     move/from16 v7, v22
 
-    .line 73
+    .line 81
     invoke-static/range {v3 .. v21}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivityKt;->PerAppProxyScreen(Ljava/util/List;ZLjava/util/Set;ZZLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
 
     move-object/from16 v7, v19
@@ -1554,11 +1554,11 @@
 
     goto :goto_1b
 
-    .line 66
+    .line 74
     :cond_31
     invoke-interface {v7}, Landroidx/compose/runtime/Composer;->skipToGroupEnd()V
 
-    .line 100
+    .line 108
     :cond_32
     :goto_1b
     invoke-interface {v7}, Landroidx/compose/runtime/Composer;->endRestartGroup()Landroidx/compose/runtime/ScopeUpdateScope;
@@ -1580,10 +1580,10 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 0
 
-    .line 61
+    .line 69
     invoke-super {p0, p1}, Lcom/v2ray/ang/ui/base/BaseComponentActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 62
+    .line 70
     invoke-direct {p0}, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyActivity;->getViewModel()Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel;
 
     move-result-object p1

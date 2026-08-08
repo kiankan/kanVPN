@@ -31,7 +31,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nMainViewModel.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$sortByTestResultsAsync$1$1\n+ 2 Mutex.kt\nkotlinx/coroutines/sync/MutexKt\n*L\n1#1,784:1\n117#2,10:785\n*S KotlinDebug\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$sortByTestResultsAsync$1$1\n*L\n549#1:785,10\n*E\n"
+    value = "SMAP\nMainViewModel.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$sortByTestResultsAsync$1$1\n+ 2 Mutex.kt\nkotlinx/coroutines/sync/MutexKt\n*L\n1#1,782:1\n117#2,10:783\n*S KotlinDebug\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$sortByTestResultsAsync$1$1\n*L\n547#1:783,10\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -59,14 +59,14 @@
         0x0
     }
     l = {
-        0x315
+        0x313
     }
     m = "invokeSuspend"
     n = {
         "$this$withLock_u24default$iv"
     }
     nl = {
-        0x316
+        0x314
     }
     s = {
         "L$0"
@@ -185,7 +185,7 @@
 
     move-result-object v0
 
-    .line 546
+    .line 544
     iget v1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$sortByTestResultsAsync$1$1;->label:I
 
     const/4 v2, 0x0
@@ -224,13 +224,13 @@
     :cond_1
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 548
+    .line 546
     :try_start_1
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$sortByTestResultsAsync$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {p1}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$sortByTestResultsInternal(Lcom/v2ray/ang/ui/main/MainViewModel;)V
 
-    .line 549
+    .line 547
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$sortByTestResultsAsync$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {p1}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getCacheMutex$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lkotlinx/coroutines/sync/Mutex;
@@ -239,7 +239,7 @@
 
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$sortByTestResultsAsync$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
-    .line 789
+    .line 787
     move-object v4, p0
 
     check-cast v4, Lkotlin/coroutines/Continuation;
@@ -264,7 +264,7 @@
     :cond_2
     move-object v0, p1
 
-    .line 549
+    .line 547
     :goto_0
     :try_start_2
     invoke-static {v0}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getGroupDataCache$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Ljava/util/Map;
@@ -277,11 +277,11 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 793
+    .line 791
     :try_start_3
     invoke-interface {v1, v2}, Lkotlinx/coroutines/sync/Mutex;->unlock(Ljava/lang/Object;)V
 
-    .line 550
+    .line 548
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$sortByTestResultsAsync$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-virtual {p1, v3}, Lcom/v2ray/ang/ui/main/MainViewModel;->setupGroupTab(Z)Lkotlinx/coroutines/Job;
@@ -291,7 +291,7 @@
     :catchall_0
     move-exception p1
 
-    .line 793
+    .line 791
     invoke-interface {v1, v2}, Lkotlinx/coroutines/sync/Mutex;->unlock(Ljava/lang/Object;)V
 
     throw p1
@@ -302,7 +302,7 @@
     :catch_0
     move-exception p1
 
-    .line 554
+    .line 552
     sget-object v0, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
 
     const-string v1, "Sort by test results failed"
@@ -313,14 +313,14 @@
 
     invoke-virtual {v0, v2, v1, p1}, Lcom/v2ray/ang/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 555
+    .line 553
     iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainViewModel$sortByTestResultsAsync$1$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     sget p1, Lcom/v2ray/ang/R$string;->toast_failure:I
 
     invoke-virtual {p0, p1}, Lcom/v2ray/ang/ui/main/MainViewModel;->toastError(I)V
 
-    .line 557
+    .line 555
     :goto_1
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
@@ -329,6 +329,6 @@
     :catch_1
     move-exception p0
 
-    .line 552
+    .line 550
     throw p0
 .end method

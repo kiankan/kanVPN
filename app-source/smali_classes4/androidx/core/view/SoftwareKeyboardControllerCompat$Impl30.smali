@@ -87,7 +87,7 @@
     if-eqz v0, :cond_1
 
     .line 202
-    invoke-static {v0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/view/View;)Landroid/view/WindowInsetsController;
+    invoke-static {v0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/view/View;)Landroid/view/WindowInsetsController;
 
     move-result-object v0
 
@@ -217,7 +217,7 @@
     if-eqz v0, :cond_2
 
     .line 186
-    invoke-static {v0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/view/View;)Landroid/view/WindowInsetsController;
+    invoke-static {v0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/view/View;)Landroid/view/WindowInsetsController;
 
     move-result-object v0
 

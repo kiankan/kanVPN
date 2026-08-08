@@ -310,7 +310,7 @@
 
     invoke-direct {v1, v2}, Lcom/v2ray/ang/handler/AngConfigManager$configFmtParsers$2$4;-><init>(Ljava/lang/Object;)V
 
-    const-string v2, "socks4://"
+    const-string/jumbo v2, "socks4://"
 
     invoke-static {v2, v1}, Lkotlin/TuplesKt;->to(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
@@ -327,7 +327,7 @@
 
     invoke-direct {v1, v2}, Lcom/v2ray/ang/handler/AngConfigManager$configFmtParsers$2$5;-><init>(Ljava/lang/Object;)V
 
-    const-string v2, "socks5://"
+    const-string/jumbo v2, "socks5://"
 
     invoke-static {v2, v1}, Lkotlin/TuplesKt;->to(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
@@ -2650,7 +2650,7 @@
         }
     .end annotation
 
-    const-string v0, "subid"
+    const-string/jumbo v0, "subid"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -2725,7 +2725,7 @@
 .method public final removeInvalidServer(Ljava/lang/String;)V
     .locals 6
 
-    const-string p0, "subId"
+    const-string/jumbo p0, "subId"
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -3128,7 +3128,7 @@
 .method public final sortByTestResultsForSub(Ljava/lang/String;)V
     .locals 8
 
-    const-string p0, "subId"
+    const-string/jumbo p0, "subId"
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

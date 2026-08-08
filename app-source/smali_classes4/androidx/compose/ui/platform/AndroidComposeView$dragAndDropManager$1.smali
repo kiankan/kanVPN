@@ -50,13 +50,13 @@
 
     const-class v3, Landroidx/compose/ui/platform/AndroidComposeView;
 
-    const-string v5, "startDrag-12SF9DM(Landroidx/compose/ui/draganddrop/DragAndDropTransferData;JLkotlin/jvm/functions/Function1;)Z"
+    const-string/jumbo v5, "startDrag-12SF9DM(Landroidx/compose/ui/draganddrop/DragAndDropTransferData;JLkotlin/jvm/functions/Function1;)Z"
 
     const/4 v6, 0x0
 
     const/4 v1, 0x3
 
-    const-string v4, "startDrag"
+    const-string/jumbo v4, "startDrag"
 
     move-object v0, p0
 

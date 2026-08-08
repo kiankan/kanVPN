@@ -45,7 +45,7 @@
 
     const/4 v0, 0x0
 
-    .line 12
+    .line 14
     invoke-direct {p0, p1, p2, v0}, Lcom/v2ray/ang/enums/PermissionType;-><init>(Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
@@ -56,7 +56,7 @@
 .method public getPermission()Ljava/lang/String;
     .locals 0
 
-    .line 13
+    .line 15
     const-string p0, "android.permission.CAMERA"
 
     return-object p0

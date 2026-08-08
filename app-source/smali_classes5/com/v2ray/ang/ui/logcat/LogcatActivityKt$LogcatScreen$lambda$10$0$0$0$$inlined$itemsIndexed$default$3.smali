@@ -199,7 +199,7 @@
     .line 524
     invoke-interface {p3, p2}, Landroidx/compose/runtime/Composer;->startReplaceGroup(I)V
 
-    const-string p2, "CN(log)*211@8041L36,211@8005L73,212@8099L13:LogcatActivity.kt#i4neol"
+    const-string p2, "CN(log)*211@8062L36,211@8026L73,212@8120L13:LogcatActivity.kt#i4neol"
 
     invoke-static {p3, p2}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 

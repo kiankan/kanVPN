@@ -42,9 +42,9 @@
 
     iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$$ExternalSyntheticLambda0;->f$2:Landroidx/compose/material3/DrawerState;
 
-    check-cast p1, Ljava/lang/String;
+    check-cast p1, Lcom/v2ray/ang/ui/main/MainDestination;
 
-    invoke-static {v0, v1, p0, p1}, Lcom/v2ray/ang/ui/main/MainScreenKt;->$r8$lambda$Gg9ZL5o42NWNRPl1Weo-d_ayQ7U(Lkotlinx/coroutines/CoroutineScope;Lkotlin/jvm/functions/Function1;Landroidx/compose/material3/DrawerState;Ljava/lang/String;)Lkotlin/Unit;
+    invoke-static {v0, v1, p0, p1}, Lcom/v2ray/ang/ui/main/MainScreenKt;->$r8$lambda$4ftYrTLR6-IryU7KTuMAwxKbvQs(Lkotlinx/coroutines/CoroutineScope;Lkotlin/jvm/functions/Function1;Landroidx/compose/material3/DrawerState;Lcom/v2ray/ang/ui/main/MainDestination;)Lkotlin/Unit;
 
     move-result-object p0
 

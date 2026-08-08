@@ -63,7 +63,7 @@
 .method protected bind(Landroidx/sqlite/SQLiteStatement;Landroidx/work/impl/model/Dependency;)V
     .locals 1
 
-    const-string p0, "statement"
+    const-string/jumbo p0, "statement"
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

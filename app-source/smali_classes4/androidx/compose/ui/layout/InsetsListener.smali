@@ -248,7 +248,7 @@
 
     new-instance v1, Landroidx/compose/ui/layout/WindowWindowInsetsAnimationValues;
 
-    const-string v2, "status bars"
+    const-string/jumbo v2, "status bars"
 
     invoke-direct {v1, v2}, Landroidx/compose/ui/layout/WindowWindowInsetsAnimationValues;-><init>(Ljava/lang/String;)V
 
@@ -263,7 +263,7 @@
 
     new-instance v1, Landroidx/compose/ui/layout/WindowWindowInsetsAnimationValues;
 
-    const-string v2, "system gestures"
+    const-string/jumbo v2, "system gestures"
 
     invoke-direct {v1, v2}, Landroidx/compose/ui/layout/WindowWindowInsetsAnimationValues;-><init>(Ljava/lang/String;)V
 
@@ -278,7 +278,7 @@
 
     new-instance v1, Landroidx/compose/ui/layout/WindowWindowInsetsAnimationValues;
 
-    const-string v2, "tappable element"
+    const-string/jumbo v2, "tappable element"
 
     invoke-direct {v1, v2}, Landroidx/compose/ui/layout/WindowWindowInsetsAnimationValues;-><init>(Ljava/lang/String;)V
 

@@ -14,11 +14,11 @@
 
 
 # static fields
-.field public static image_switch:I = 0x7f080041
+.field public static image_switch:I = 0x7f080042
 
-.field public static layout_background:I = 0x7f080047
+.field public static layout_background:I = 0x7f080048
 
-.field public static layout_switch:I = 0x7f080048
+.field public static layout_switch:I = 0x7f080049
 
 
 # direct methods

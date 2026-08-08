@@ -149,7 +149,7 @@
     :cond_4
     new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p1, "source cannot be null"
+    const-string/jumbo p1, "source cannot be null"
 
     invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 

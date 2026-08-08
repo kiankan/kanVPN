@@ -67,7 +67,7 @@
 
     sget-object v3, Lcom/google/gson/stream/JsonToken;->END_OBJECT:Lcom/google/gson/stream/JsonToken;
 
-    const-string v4, "time"
+    const-string/jumbo v4, "time"
 
     const-string v5, "date"
 
@@ -189,7 +189,7 @@
     invoke-virtual {v0, p1, v1}, Lcom/google/gson/TypeAdapter;->write(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
 
     .line 146
-    const-string v0, "time"
+    const-string/jumbo v0, "time"
 
     invoke-virtual {p1, v0}, Lcom/google/gson/stream/JsonWriter;->name(Ljava/lang/String;)Lcom/google/gson/stream/JsonWriter;
 

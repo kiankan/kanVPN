@@ -858,7 +858,7 @@
 
     move-result-object v8
 
-    const-string v5, "C(SettingsScreen)N(viewModel,onBackClick,onModeHelpClicked)67@2511L21,68@2574L29,69@2651L24,69@2634L41,70@2724L24,70@2707L41,71@2798L24,71@2781L41,72@2871L25,72@2854L42,73@2950L25,73@2933L42,74@3032L25,74@3015L42,75@3111L25,75@3094L42,76@3186L25,76@3169L42,78@3233L57,79@3310L56,80@3394L57,81@3470L46,82@3541L54,83@3627L74,84@3720L46,86@3783L51,87@3861L55,88@3947L60,89@4031L58,91@4111L56,92@4195L63,93@4285L60,94@4374L61,95@4464L58,96@4563L109,97@4713L109,98@4861L105,99@5007L109,100@5156L107,102@5281L44,103@5352L56,104@5431L56,106@5515L65,107@5608L60,108@5690L53,110@5773L57,111@5852L49,112@5930L58,113@6014L53,114@6093L53,115@6173L56,116@6254L53,118@6333L53,119@6412L54,120@6498L61,121@6587L57,122@6665L51,123@6740L53,125@6818L52,126@6893L51,127@6972L55,128@7056L58,129@7136L49,130@7209L51,131@7281L48,132@7354L54,133@7442L70,135@7534L49,136@7608L53,137@7693L62,138@7776L49,146@8103L44,147@8182L50,148@8271L42,149@8351L48,150@8436L43,151@8515L49,152@8605L50,153@8695L56,154@8785L48,155@8866L48,156@8954L42,157@9035L42,158@9120L59,159@9221L65,160@9322L50,161@9407L48,162@9498L45,163@9585L45,164@9684L58,165@9795L58,166@9885L41,167@9957L39,170@10068L19,171@10106L194,178@10307L22008,169@10011L22304:SettingsActivity.kt#t6wfus"
+    const-string v5, "C(SettingsScreen)N(viewModel,onBackClick,onModeHelpClicked)67@2511L21,68@2574L29,69@2651L24,69@2634L41,70@2724L24,70@2707L41,71@2798L24,71@2781L41,72@2871L25,72@2854L42,73@2950L25,73@2933L42,74@3032L25,74@3015L42,75@3111L25,75@3094L42,76@3186L25,76@3169L42,78@3233L57,79@3310L56,80@3394L57,81@3470L46,82@3541L54,83@3627L74,84@3720L46,86@3783L51,87@3861L55,88@3947L60,89@4031L58,91@4111L56,92@4195L63,93@4285L60,94@4374L61,95@4464L58,96@4563L109,97@4713L109,98@4861L105,99@5007L109,100@5156L107,102@5281L44,103@5352L56,104@5431L56,106@5515L65,107@5608L60,108@5690L53,110@5773L57,111@5852L49,112@5930L58,113@6014L53,114@6093L53,115@6173L56,116@6254L53,118@6333L53,119@6412L54,120@6498L61,121@6587L57,122@6665L51,123@6740L53,125@6818L52,126@6893L51,127@6972L55,128@7056L58,129@7136L49,130@7209L51,131@7281L48,132@7354L54,133@7442L70,135@7534L49,136@7608L53,137@7693L62,138@7776L49,146@8103L44,147@8182L50,148@8271L42,149@8351L48,150@8436L43,151@8515L49,152@8605L50,153@8695L56,154@8785L48,155@8866L48,156@8954L42,157@9035L42,158@9120L59,159@9221L65,160@9322L50,161@9407L48,162@9498L45,163@9585L45,164@9684L58,165@9795L58,166@9885L41,167@9957L39,170@10068L19,171@10106L194,178@10307L22010,169@10011L22306:SettingsActivity.kt#t6wfus"
 
     invoke-static {v8, v5}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -3467,7 +3467,7 @@
 
     invoke-static {v15, v13}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v13, "CN(innerPadding)179@10333L21976:SettingsActivity.kt#t6wfus"
+    const-string v13, "CN(innerPadding)179@10333L21978:SettingsActivity.kt#t6wfus"
 
     invoke-static {v14, v13}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -3756,9 +3756,9 @@
 
     check-cast v9, Landroidx/compose/foundation/layout/ColumnScope;
 
-    const v9, -0x4d8faaa7
+    const v9, -0x4d8faa69
 
-    const-string v10, "C187@10618L42,189@10744L27,186@10560L225,242@13197L43,244@13325L28,241@13139L228,339@17793L44,341@17923L29,338@17735L231,443@22897L43,445@23025L28,442@22839L228,479@24524L48,481@24662L33,478@24466L243,519@26351L51,521@26495L36,518@26293L252,571@28890L39,573@29019L33,570@28832L234,601@30251L44,603@30381L29,600@30193L231,647@32258L41:SettingsActivity.kt#t6wfus"
+    const-string v10, "C187@10618L42,189@10744L27,186@10560L225,242@13197L43,244@13325L28,241@13139L228,339@17793L44,341@17923L29,338@17735L231,443@22897L43,445@23025L28,442@22839L228,479@24526L48,481@24664L33,478@24468L243,519@26353L51,521@26497L36,518@26295L252,571@28892L39,573@29021L33,570@28834L234,601@30253L44,603@30383L29,600@30195L231,647@32260L41:SettingsActivity.kt#t6wfus"
 
     .line 187
     invoke-static {v14, v9, v10}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -7128,11 +7128,11 @@
 
     if-eqz v0, :cond_5d
 
-    const v0, -0x4cdb6c20
+    const v0, -0x4cdb6be2
 
     invoke-interface {v14, v0}, Landroidx/compose/runtime/Composer;->startReplaceGroup(I)V
 
-    const-string v0, "449@23171L47,450@23250L49,452@23374L12,448@23123L281,455@23467L50,459@23678L23,454@23421L298,462@23782L55,466@24002L27,461@23736L311,469@24110L49,474@24400L20,468@24064L374"
+    const-string v0, "449@23171L47,450@23250L49,452@23374L12,448@23123L281,455@23467L51,459@23679L23,454@23421L299,462@23783L56,466@24004L27,461@23737L312,469@24112L49,474@24402L20,468@24066L374"
 
     invoke-static {v14, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -7233,7 +7233,7 @@
     invoke-static/range {p0 .. p9}, Lcom/v2ray/ang/ui/compose/SettingsItemKt;->SettingsSwitchItem(Landroidx/compose/ui/graphics/painter/Painter;Ljava/lang/String;Ljava/lang/String;ZLkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;ZLandroidx/compose/runtime/Composer;II)V
 
     .line 456
-    sget v0, Lcom/v2ray/ang/R$string;->title_pref_mux_concurency:I
+    sget v0, Lcom/v2ray/ang/R$string;->title_pref_mux_concurrency:I
 
     const/4 v15, 0x0
 
@@ -7251,7 +7251,7 @@
 
     move-result v2
 
-    const v4, -0x6dd5452a
+    const v4, -0x6dd5450a
 
     .line 460
     invoke-static {v14, v4, v11}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -7331,7 +7331,7 @@
     invoke-static/range {p0 .. p10}, Lcom/v2ray/ang/ui/compose/SettingsItemKt;->SettingsEditItem(Landroidx/compose/ui/graphics/painter/Painter;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;ZZZLandroidx/compose/runtime/Composer;II)V
 
     .line 463
-    sget v0, Lcom/v2ray/ang/R$string;->title_pref_mux_xudp_concurency:I
+    sget v0, Lcom/v2ray/ang/R$string;->title_pref_mux_xudp_concurrency:I
 
     const/4 v15, 0x0
 
@@ -7349,7 +7349,7 @@
 
     move-result v2
 
-    const v4, -0x6dd51ca6
+    const v4, -0x6dd51c66
 
     .line 467
     invoke-static {v14, v4, v11}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -7459,7 +7459,7 @@
     const/4 v10, 0x0
 
     :goto_a
-    const v2, -0x6dd4eaed
+    const v2, -0x6dd4eaad
 
     .line 475
     invoke-static {v14, v2, v11}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -7540,7 +7540,7 @@
     goto :goto_b
 
     :cond_5d
-    const v0, -0x4cc7ab9d
+    const v0, -0x4cc7a3dd
 
     .line 477
     invoke-interface {v14, v0}, Landroidx/compose/runtime/Composer;->startReplaceGroup(I)V
@@ -7562,7 +7562,7 @@
 
     move-result v1
 
-    const v2, -0x6dd4ca20
+    const v2, -0x6dd4c9e0
 
     .line 482
     invoke-static {v14, v2, v11}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -7634,11 +7634,11 @@
 
     if-eqz v0, :cond_6a
 
-    const v0, -0x4cc26834
+    const v0, -0x4cc26074
 
     invoke-interface {v14, v0}, Landroidx/compose/runtime/Composer;->startReplaceGroup(I)V
 
-    const-string v0, "485@24818L52,487@24950L17,484@24770L215,490@25048L52,495@25334L24,489@25002L374,498@25439L51,501@25613L23,497@25393L261,504@25717L53,507@25895L25,503@25671L267,510@26001L53,514@26222L25,509@25955L310"
+    const-string v0, "485@24820L52,487@24952L17,484@24772L215,490@25050L52,495@25336L24,489@25004L374,498@25441L51,501@25615L23,497@25395L261,504@25719L53,507@25897L25,503@25673L267,510@26003L53,514@26224L25,509@25957L310"
 
     invoke-static {v14, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -7656,7 +7656,7 @@
 
     move-result v1
 
-    const v2, -0x6dd4a630
+    const v2, -0x6dd4a5f0
 
     .line 488
     invoke-static {v14, v2, v11}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -7752,7 +7752,7 @@
 
     move-result v3
 
-    const v4, -0x6dd47629
+    const v4, -0x6dd475e9
 
     .line 496
     invoke-static {v14, v4, v11}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -7846,7 +7846,7 @@
 
     move-result v3
 
-    const v4, -0x6dd4534a
+    const v4, -0x6dd4530a
 
     .line 502
     invoke-static {v14, v4, v11}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -7944,7 +7944,7 @@
 
     move-result v3
 
-    const v4, -0x6dd43008
+    const v4, -0x6dd42fc8
 
     .line 508
     invoke-static {v14, v4, v11}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -8042,7 +8042,7 @@
 
     move-result v2
 
-    const v3, -0x6dd40728
+    const v3, -0x6dd406e8
 
     .line 515
     invoke-static {v14, v3, v11}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -8127,7 +8127,7 @@
     goto :goto_c
 
     :cond_6a
-    const v0, -0x4cac03fd
+    const v0, -0x4cabfc3d
 
     .line 517
     invoke-interface {v14, v0}, Landroidx/compose/runtime/Composer;->startReplaceGroup(I)V
@@ -8149,7 +8149,7 @@
 
     move-result v1
 
-    const v2, -0x6dd3e4fd
+    const v2, -0x6dd3e4bd
 
     .line 522
     invoke-static {v14, v2, v11}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -8221,11 +8221,11 @@
 
     if-eqz v0, :cond_77
 
-    const v0, -0x4ca63d50
+    const v0, -0x4ca63590
 
     invoke-interface {v14, v0}, Landroidx/compose/runtime/Composer;->startReplaceGroup(I)V
 
-    const-string v0, "525@26655L67,527@26819L196,524@26609L424,534@27096L67,536@27260L196,533@27050L424,543@27537L65,547@27829L35,542@27491L391,550@27945L67,553@28152L196,549@27899L467,560@28429L66,562@28591L195,559@28383L421"
+    const-string v0, "525@26657L67,527@26821L196,524@26611L424,534@27098L67,536@27262L196,533@27052L424,543@27539L65,547@27831L35,542@27493L391,550@27947L67,553@28154L196,549@27901L467,560@28431L66,562@28593L195,559@28385L421"
 
     invoke-static {v14, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -8243,7 +8243,7 @@
 
     move-result-object v1
 
-    const v2, -0x6dd3bbdd
+    const v2, -0x6dd3bb9d
 
     .line 528
     invoke-static {v14, v2, v11}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -8346,7 +8346,7 @@
 
     move-result-object v1
 
-    const v3, -0x6dd384bd
+    const v3, -0x6dd3847d
 
     .line 537
     invoke-static {v14, v3, v11}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -8447,7 +8447,7 @@
 
     move-result-object v1
 
-    const v3, -0x6dd33e3e
+    const v3, -0x6dd33dfe
 
     .line 548
     invoke-static {v14, v3, v11}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -8538,7 +8538,7 @@
 
     move-result-object v1
 
-    const v3, -0x6dd3153d
+    const v3, -0x6dd314fd
 
     .line 554
     invoke-static {v14, v3, v11}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -8639,7 +8639,7 @@
 
     move-result-object v1
 
-    const v3, -0x6dd2de5e
+    const v3, -0x6dd2de1e
 
     .line 563
     invoke-static {v14, v3, v11}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -8734,7 +8734,7 @@
     :cond_77
     move-object/from16 v2, p71
 
-    const v0, -0x4c85955d
+    const v0, -0x4c858d9d
 
     .line 569
     invoke-interface {v14, v0}, Landroidx/compose/runtime/Composer;->startReplaceGroup(I)V
@@ -8756,7 +8756,7 @@
 
     move-result v1
 
-    const v3, -0x6dd2a980
+    const v3, -0x6dd2a940
 
     .line 574
     invoke-static {v14, v3, v11}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -8828,11 +8828,11 @@
 
     if-eqz v0, :cond_82
 
-    const v0, -0x4c80ac2b
+    const v0, -0x4c80a46b
 
     invoke-interface {v14, v0}, Landroidx/compose/runtime/Composer;->startReplaceGroup(I)V
 
-    const-string v0, "577@29175L45,578@29252L47,580@29379L17,576@29127L287,583@29477L50,585@29608L21,582@29431L216,588@29710L57,591@29898L28,587@29664L280,594@30007L46,596@30130L17,593@29961L204"
+    const-string v0, "577@29177L45,578@29254L47,580@29381L17,576@29129L287,583@29479L50,585@29610L21,582@29433L216,588@29712L57,591@29900L28,587@29666L280,594@30009L46,596@30132L17,593@29963L204"
 
     invoke-static {v14, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -8857,7 +8857,7 @@
 
     move-result v3
 
-    const v4, -0x6dd27c90
+    const v4, -0x6dd27c50
 
     .line 581
     invoke-static {v14, v4, v11}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -8946,7 +8946,7 @@
 
     move-result-object v1
 
-    const v3, -0x6dd25fec
+    const v3, -0x6dd25fac
 
     .line 586
     invoke-static {v14, v3, v11}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -9041,7 +9041,7 @@
 
     move-result-object v1
 
-    const v3, -0x6dd23ba5
+    const v3, -0x6dd23b65
 
     .line 592
     invoke-static {v14, v3, v11}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -9136,7 +9136,7 @@
 
     move-result-object v1
 
-    const v3, -0x6dd21eb0
+    const v3, -0x6dd21e70
 
     .line 597
     invoke-static {v14, v3, v11}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -9223,7 +9223,7 @@
     goto :goto_e
 
     :cond_82
-    const v0, -0x4c70fb7d
+    const v0, -0x4c70f3bd
 
     .line 599
     invoke-interface {v14, v0}, Landroidx/compose/runtime/Composer;->startReplaceGroup(I)V
@@ -9245,7 +9245,7 @@
 
     move-result v1
 
-    const v3, -0x6dd1ff44
+    const v3, -0x6dd1ff04
 
     .line 604
     invoke-static {v14, v3, v11}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -9317,11 +9317,11 @@
 
     if-eqz v0, :cond_8b
 
-    const v0, -0x4c6bd752
+    const v0, -0x4c6bcf92
 
     invoke-interface {v14, v0}, Landroidx/compose/runtime/Composer;->startReplaceGroup(I)V
 
-    const-string v0, "607@30527L35,611@30723L13,606@30481L273,614@30817L40,613@30771L153,618@30989L48,619@31069L50,621@31205L361,617@30941L643,632@31649L47,633@31728L49,635@31859L353,631@31601L629"
+    const-string v0, "607@30529L35,611@30725L13,606@30483L273,614@30819L40,613@30773L153,618@30991L48,619@31071L50,621@31207L361,617@30943L643,632@31651L47,633@31730L49,635@31861L353,631@31603L629"
 
     invoke-static {v14, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -9339,7 +9339,7 @@
 
     move-result-object v1
 
-    const v3, -0x6dd1d494
+    const v3, -0x6dd1d454
 
     .line 612
     invoke-static {v14, v3, v11}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -9471,7 +9471,7 @@
 
     move-result v3
 
-    const v4, -0x6dd196f8
+    const v4, -0x6dd196b8
 
     .line 622
     invoke-static {v14, v4, v11}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -9573,7 +9573,7 @@
 
     move-result v3
 
-    const v4, -0x6dd14540
+    const v4, -0x6dd14500
 
     .line 636
     invoke-static {v14, v4, v11}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -9660,7 +9660,7 @@
     goto :goto_f
 
     :cond_8b
-    const v0, -0x4c51b99d
+    const v0, -0x4c51b1dd
 
     .line 646
     invoke-interface {v14, v0}, Landroidx/compose/runtime/Composer;->startReplaceGroup(I)V

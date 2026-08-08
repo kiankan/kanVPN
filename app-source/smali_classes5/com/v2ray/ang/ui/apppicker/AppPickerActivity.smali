@@ -11,7 +11,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nAppPickerActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AppPickerActivity.kt\ncom/v2ray/ang/ui/apppicker/AppPickerActivity\n+ 2 ActivityViewModelLazy.kt\nandroidx/activity/ActivityViewModelLazyKt\n+ 3 Composer.kt\nandroidx/compose/runtime/ComposerKt\n+ 4 SnapshotState.kt\nandroidx/compose/runtime/SnapshotStateKt__SnapshotStateKt\n*L\n1#1,199:1\n70#2,11:200\n1047#3,6:211\n1047#3,6:217\n1047#3,6:223\n1047#3,6:229\n1047#3,6:235\n85#4:241\n85#4:242\n85#4:243\n*S KotlinDebug\n*F\n+ 1 AppPickerActivity.kt\ncom/v2ray/ang/ui/apppicker/AppPickerActivity\n*L\n61#1:200,11\n91#1:211,6\n92#1:217,6\n93#1:223,6\n94#1:229,6\n95#1:235,6\n82#1:241\n83#1:242\n84#1:243\n*E\n"
+    value = "SMAP\nAppPickerActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AppPickerActivity.kt\ncom/v2ray/ang/ui/apppicker/AppPickerActivity\n+ 2 ActivityViewModelLazy.kt\nandroidx/activity/ActivityViewModelLazyKt\n+ 3 Composer.kt\nandroidx/compose/runtime/ComposerKt\n+ 4 SnapshotState.kt\nandroidx/compose/runtime/SnapshotStateKt__SnapshotStateKt\n*L\n1#1,204:1\n70#2,11:205\n1047#3,6:216\n1047#3,6:222\n1047#3,6:228\n1047#3,6:234\n1047#3,6:240\n85#4:246\n85#4:247\n85#4:248\n*S KotlinDebug\n*F\n+ 1 AppPickerActivity.kt\ncom/v2ray/ang/ui/apppicker/AppPickerActivity\n*L\n66#1:205,11\n96#1:216,6\n97#1:222,6\n98#1:228,6\n99#1:234,6\n100#1:240,6\n87#1:246\n88#1:247\n89#1:248\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -150,22 +150,22 @@
 .method public constructor <init>()V
     .locals 7
 
-    .line 41
+    .line 46
     invoke-direct {p0}, Lcom/v2ray/ang/ui/base/BaseComponentActivity;-><init>()V
 
-    .line 61
+    .line 66
     move-object v0, p0
 
     check-cast v0, Landroidx/activity/ComponentActivity;
 
-    .line 204
+    .line 209
     new-instance v1, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity$special$$inlined$viewModels$default$1;
 
     invoke-direct {v1, v0}, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity$special$$inlined$viewModels$default$1;-><init>(Landroidx/activity/ComponentActivity;)V
 
     check-cast v1, Lkotlin/jvm/functions/Function0;
 
-    .line 206
+    .line 211
     new-instance v2, Landroidx/lifecycle/ViewModelLazy;
 
     const-class v3, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;
@@ -174,14 +174,14 @@
 
     move-result-object v3
 
-    .line 208
+    .line 213
     new-instance v4, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity$special$$inlined$viewModels$default$2;
 
     invoke-direct {v4, v0}, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity$special$$inlined$viewModels$default$2;-><init>(Landroidx/activity/ComponentActivity;)V
 
     check-cast v4, Lkotlin/jvm/functions/Function0;
 
-    .line 210
+    .line 215
     new-instance v5, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity$special$$inlined$viewModels$default$3;
 
     const/4 v6, 0x0
@@ -190,12 +190,12 @@
 
     check-cast v5, Lkotlin/jvm/functions/Function0;
 
-    .line 206
+    .line 211
     invoke-direct {v2, v3, v4, v1, v5}, Landroidx/lifecycle/ViewModelLazy;-><init>(Lkotlin/reflect/KClass;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;)V
 
     check-cast v2, Lkotlin/Lazy;
 
-    .line 61
+    .line 66
     iput-object v2, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity;->viewModel$delegate:Lkotlin/Lazy;
 
     return-void
@@ -217,7 +217,7 @@
         }
     .end annotation
 
-    .line 241
+    .line 246
     invoke-interface {p0}, Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -238,7 +238,7 @@
         }
     .end annotation
 
-    .line 242
+    .line 247
     invoke-interface {p0}, Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -268,7 +268,7 @@
         }
     .end annotation
 
-    .line 243
+    .line 248
     invoke-interface {p0}, Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -281,7 +281,7 @@
 .method private static final ScreenContent$lambda$3$0(Lcom/v2ray/ang/ui/apppicker/AppPickerActivity;)Lkotlin/Unit;
     .locals 0
 
-    .line 91
+    .line 96
     invoke-virtual {p0}, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity;->finish()V
 
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -296,7 +296,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 92
+    .line 97
     invoke-direct {p0}, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity;->getViewModel()Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;
 
     move-result-object p0
@@ -315,7 +315,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 93
+    .line 98
     invoke-direct {p0}, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity;->getViewModel()Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;
 
     move-result-object p0
@@ -330,7 +330,7 @@
 .method private static final ScreenContent$lambda$6$0(Lcom/v2ray/ang/ui/apppicker/AppPickerActivity;)Lkotlin/Unit;
     .locals 0
 
-    .line 94
+    .line 99
     invoke-direct {p0}, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity;->getViewModel()Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;
 
     move-result-object p0
@@ -345,7 +345,7 @@
 .method private static final ScreenContent$lambda$7$0(Lcom/v2ray/ang/ui/apppicker/AppPickerActivity;)Lkotlin/Unit;
     .locals 0
 
-    .line 95
+    .line 100
     invoke-direct {p0}, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity;->getViewModel()Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;
 
     move-result-object p0
@@ -376,7 +376,7 @@
 .method private final getViewModel()Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;
     .locals 0
 
-    .line 61
+    .line 66
     iget-object p0, p0, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity;->viewModel$delegate:Lkotlin/Lazy;
 
     invoke-interface {p0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
@@ -391,7 +391,7 @@
 .method private final resolveScreenTitle()Ljava/lang/String;
     .locals 2
 
-    .line 100
+    .line 105
     invoke-virtual {p0}, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -433,12 +433,12 @@
 
     move-object/from16 v3, p1
 
-    .line 81
+    .line 86
     invoke-interface {v3, v2}, Landroidx/compose/runtime/Composer;->startRestartGroup(I)Landroidx/compose/runtime/Composer;
 
     move-result-object v7
 
-    const-string v3, "C(ScreenContent)81@3141L29,82@3216L29,83@3305L29,90@3538L12,91@3578L27,92@3630L28,93@3686L25,94@3745L31,85@3344L442:AppPickerActivity.kt#vm7hpy"
+    const-string v3, "C(ScreenContent)86@3298L29,87@3373L29,88@3462L29,95@3695L12,96@3735L27,97@3787L28,98@3843L25,99@3902L31,90@3501L442:AppPickerActivity.kt#vm7hpy"
 
     invoke-static {v7, v3}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -514,11 +514,11 @@
 
     const/4 v3, -0x1
 
-    const-string v4, "com.v2ray.ang.ui.apppicker.AppPickerActivity.ScreenContent (AppPickerActivity.kt:80)"
+    const-string v4, "com.v2ray.ang.ui.apppicker.AppPickerActivity.ScreenContent (AppPickerActivity.kt:85)"
 
     invoke-static {v2, v11, v3, v4}, Landroidx/compose/runtime/ComposerKt;->traceEventStart(IIILjava/lang/String;)V
 
-    .line 82
+    .line 87
     :cond_4
     invoke-direct {v0}, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity;->getViewModel()Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;
 
@@ -542,7 +542,7 @@
 
     move-result-object v2
 
-    .line 83
+    .line 88
     invoke-direct {v0}, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity;->getViewModel()Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;
 
     move-result-object v3
@@ -555,7 +555,7 @@
 
     move-result-object v14
 
-    .line 84
+    .line 89
     invoke-direct {v0}, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity;->getViewModel()Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;
 
     move-result-object v3
@@ -570,29 +570,29 @@
 
     move-object v4, v3
 
-    .line 87
+    .line 92
     invoke-direct {v0}, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity;->resolveScreenTitle()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 88
+    .line 93
     invoke-static {v2}, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity;->ScreenContent$lambda$0(Landroidx/compose/runtime/State;)Ljava/util/List;
 
     move-result-object v2
 
-    .line 89
+    .line 94
     invoke-static {v14}, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity;->ScreenContent$lambda$1(Landroidx/compose/runtime/State;)Z
 
     move-result v5
 
-    .line 90
+    .line 95
     invoke-static {v4}, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity;->ScreenContent$lambda$2(Landroidx/compose/runtime/State;)Ljava/util/Set;
 
     move-result-object v6
 
     const v4, 0x745b7faf
 
-    .line 91
+    .line 96
     const-string v8, "CC(remember):AppPickerActivity.kt#9igjgp"
 
     invoke-static {v7, v4, v8}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -622,7 +622,7 @@
     :goto_4
     const/4 v9, 0x1
 
-    .line 211
+    .line 216
     :goto_5
     invoke-interface {v7}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
@@ -630,7 +630,7 @@
 
     if-nez v9, :cond_7
 
-    .line 212
+    .line 217
     sget-object v9, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v9}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -639,16 +639,16 @@
 
     if-ne v14, v9, :cond_8
 
-    .line 91
+    .line 96
     :cond_7
     new-instance v14, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity$$ExternalSyntheticLambda0;
 
     invoke-direct {v14, v0}, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity$$ExternalSyntheticLambda0;-><init>(Lcom/v2ray/ang/ui/apppicker/AppPickerActivity;)V
 
-    .line 214
+    .line 219
     invoke-interface {v7, v14}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 91
+    .line 96
     :cond_8
     check-cast v14, Lkotlin/jvm/functions/Function0;
 
@@ -656,7 +656,7 @@
 
     const v9, 0x745b84be
 
-    .line 92
+    .line 97
     invoke-static {v7, v9, v8}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     if-eq v4, v10, :cond_a
@@ -682,7 +682,7 @@
     :goto_6
     const/4 v9, 0x1
 
-    .line 217
+    .line 222
     :goto_7
     invoke-interface {v7}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
@@ -690,7 +690,7 @@
 
     if-nez v9, :cond_b
 
-    .line 218
+    .line 223
     sget-object v9, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v9}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -699,16 +699,16 @@
 
     if-ne v15, v9, :cond_c
 
-    .line 92
+    .line 97
     :cond_b
     new-instance v15, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity$$ExternalSyntheticLambda1;
 
     invoke-direct {v15, v0}, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity$$ExternalSyntheticLambda1;-><init>(Lcom/v2ray/ang/ui/apppicker/AppPickerActivity;)V
 
-    .line 220
+    .line 225
     invoke-interface {v7, v15}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 92
+    .line 97
     :cond_c
     check-cast v15, Lkotlin/jvm/functions/Function1;
 
@@ -716,7 +716,7 @@
 
     const v9, 0x745b8b3f
 
-    .line 93
+    .line 98
     invoke-static {v7, v9, v8}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     if-eq v4, v10, :cond_e
@@ -742,7 +742,7 @@
     :goto_8
     const/4 v9, 0x1
 
-    .line 223
+    .line 228
     :goto_9
     invoke-interface {v7}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
@@ -750,7 +750,7 @@
 
     if-nez v9, :cond_f
 
-    .line 224
+    .line 229
     sget-object v9, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v9}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -759,16 +759,16 @@
 
     if-ne v12, v9, :cond_10
 
-    .line 93
+    .line 98
     :cond_f
     new-instance v12, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity$$ExternalSyntheticLambda2;
 
     invoke-direct {v12, v0}, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity$$ExternalSyntheticLambda2;-><init>(Lcom/v2ray/ang/ui/apppicker/AppPickerActivity;)V
 
-    .line 226
+    .line 231
     invoke-interface {v7, v12}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 93
+    .line 98
     :cond_10
     move-object v9, v12
 
@@ -778,7 +778,7 @@
 
     const v12, 0x745b923c
 
-    .line 94
+    .line 99
     invoke-static {v7, v12, v8}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     if-eq v4, v10, :cond_12
@@ -804,7 +804,7 @@
     :goto_a
     const/4 v12, 0x1
 
-    .line 229
+    .line 234
     :goto_b
     invoke-interface {v7}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
@@ -812,7 +812,7 @@
 
     if-nez v12, :cond_13
 
-    .line 230
+    .line 235
     sget-object v12, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v12}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -821,16 +821,16 @@
 
     if-ne v13, v12, :cond_14
 
-    .line 94
+    .line 99
     :cond_13
     new-instance v13, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity$$ExternalSyntheticLambda3;
 
     invoke-direct {v13, v0}, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity$$ExternalSyntheticLambda3;-><init>(Lcom/v2ray/ang/ui/apppicker/AppPickerActivity;)V
 
-    .line 232
+    .line 237
     invoke-interface {v7, v13}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 94
+    .line 99
     :cond_14
     check-cast v13, Lkotlin/jvm/functions/Function0;
 
@@ -838,7 +838,7 @@
 
     const v12, 0x745b99a2
 
-    .line 95
+    .line 100
     invoke-static {v7, v12, v8}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     if-eq v4, v10, :cond_16
@@ -864,7 +864,7 @@
     :goto_c
     const/4 v12, 0x1
 
-    .line 235
+    .line 240
     :goto_d
     invoke-interface {v7}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
@@ -872,7 +872,7 @@
 
     if-nez v12, :cond_17
 
-    .line 236
+    .line 241
     sget-object v8, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v8}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -881,16 +881,16 @@
 
     if-ne v4, v8, :cond_18
 
-    .line 95
+    .line 100
     :cond_17
     new-instance v4, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity$$ExternalSyntheticLambda4;
 
     invoke-direct {v4, v0}, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity$$ExternalSyntheticLambda4;-><init>(Lcom/v2ray/ang/ui/apppicker/AppPickerActivity;)V
 
-    .line 238
+    .line 243
     invoke-interface {v7, v4}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 95
+    .line 100
     :cond_18
     move-object v11, v4
 
@@ -910,7 +910,7 @@
 
     move-object v8, v15
 
-    .line 86
+    .line 91
     invoke-static/range {v3 .. v13}, Lcom/v2ray/ang/ui/apppicker/AppPickerActivityKt;->AppPickerScreen(Ljava/lang/String;Ljava/util/List;ZLjava/util/Set;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;I)V
 
     move-object v7, v12
@@ -925,11 +925,11 @@
 
     goto :goto_e
 
-    .line 81
+    .line 86
     :cond_19
     invoke-interface {v7}, Landroidx/compose/runtime/Composer;->skipToGroupEnd()V
 
-    .line 97
+    .line 102
     :cond_1a
     :goto_e
     invoke-interface {v7}, Landroidx/compose/runtime/Composer;->endRestartGroup()Landroidx/compose/runtime/ScopeUpdateScope;
@@ -951,12 +951,12 @@
 .method public finish()V
     .locals 3
 
-    .line 73
+    .line 78
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 74
+    .line 79
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity;->getViewModel()Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;
@@ -975,15 +975,15 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putStringArrayListExtra(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;
 
-    .line 75
+    .line 80
     sget-object v1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     const/4 v1, -0x1
 
-    .line 71
+    .line 76
     invoke-virtual {p0, v1, v0}, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity;->setResult(ILandroid/content/Intent;)V
 
-    .line 77
+    .line 82
     invoke-super {p0}, Lcom/v2ray/ang/ui/base/BaseComponentActivity;->finish()V
 
     return-void
@@ -992,10 +992,10 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 1
 
-    .line 64
+    .line 69
     invoke-super {p0, p1}, Lcom/v2ray/ang/ui/base/BaseComponentActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 65
+    .line 70
     invoke-virtual {p0}, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object p1
@@ -1014,7 +1014,7 @@
 
     move-result-object p1
 
-    .line 66
+    .line 71
     :cond_0
     invoke-direct {p0}, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity;->getViewModel()Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;
 
@@ -1024,7 +1024,7 @@
 
     invoke-virtual {v0, p1}, Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;->initialize(Ljava/util/Collection;)V
 
-    .line 67
+    .line 72
     invoke-direct {p0}, Lcom/v2ray/ang/ui/apppicker/AppPickerActivity;->getViewModel()Lcom/v2ray/ang/ui/apppicker/AppPickerViewModel;
 
     move-result-object p1

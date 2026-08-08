@@ -3,46 +3,48 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Lkotlin/jvm/functions/Function0;
+.implements Lkotlin/jvm/functions/Function2;
 
 
 # instance fields
-.field public final synthetic f$0:Lcom/v2ray/ang/ui/checkupdate/CheckUpdateViewModel;
+.field public final synthetic f$0:Lkotlin/jvm/functions/Function0;
 
-.field public final synthetic f$1:Lcom/v2ray/ang/dto/CheckUpdateResult;
-
-.field public final synthetic f$2:Landroid/content/Context;
+.field public final synthetic f$1:Landroidx/compose/runtime/State;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/v2ray/ang/ui/checkupdate/CheckUpdateViewModel;Lcom/v2ray/ang/dto/CheckUpdateResult;Landroid/content/Context;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/State;)V
     .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt$$ExternalSyntheticLambda4;->f$0:Lcom/v2ray/ang/ui/checkupdate/CheckUpdateViewModel;
+    iput-object p1, p0, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt$$ExternalSyntheticLambda4;->f$0:Lkotlin/jvm/functions/Function0;
 
-    iput-object p2, p0, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt$$ExternalSyntheticLambda4;->f$1:Lcom/v2ray/ang/dto/CheckUpdateResult;
-
-    iput-object p3, p0, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt$$ExternalSyntheticLambda4;->f$2:Landroid/content/Context;
+    iput-object p2, p0, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt$$ExternalSyntheticLambda4;->f$1:Landroidx/compose/runtime/State;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt$$ExternalSyntheticLambda4;->f$0:Lcom/v2ray/ang/ui/checkupdate/CheckUpdateViewModel;
+    iget-object v0, p0, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt$$ExternalSyntheticLambda4;->f$0:Lkotlin/jvm/functions/Function0;
 
-    iget-object v1, p0, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt$$ExternalSyntheticLambda4;->f$1:Lcom/v2ray/ang/dto/CheckUpdateResult;
+    iget-object p0, p0, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt$$ExternalSyntheticLambda4;->f$1:Landroidx/compose/runtime/State;
 
-    iget-object p0, p0, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt$$ExternalSyntheticLambda4;->f$2:Landroid/content/Context;
+    check-cast p1, Landroidx/compose/runtime/Composer;
 
-    invoke-static {v0, v1, p0}, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt;->$r8$lambda$jntrZYutwRH4cmZH8EOKnWUfITw(Lcom/v2ray/ang/ui/checkupdate/CheckUpdateViewModel;Lcom/v2ray/ang/dto/CheckUpdateResult;Landroid/content/Context;)Lkotlin/Unit;
+    check-cast p2, Ljava/lang/Integer;
+
+    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
+
+    move-result p2
+
+    invoke-static {v0, p0, p1, p2}, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivityKt;->CheckUpdateScreen$lambda$4(Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/State;Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
 
     move-result-object p0
 

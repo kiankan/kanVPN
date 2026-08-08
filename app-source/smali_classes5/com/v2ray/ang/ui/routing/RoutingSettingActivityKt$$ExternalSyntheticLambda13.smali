@@ -30,7 +30,7 @@
     .line 0
     iget-object p0, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$$ExternalSyntheticLambda13;->f$0:Landroidx/compose/runtime/MutableState;
 
-    invoke-static {p0}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt;->$r8$lambda$dzvuavP4bKBalEEtMo7ag_fC8dw(Landroidx/compose/runtime/MutableState;)Lkotlin/Unit;
+    invoke-static {p0}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt;->$r8$lambda$LY95qX1B6_pXGWPWMDPllgT94J8(Landroidx/compose/runtime/MutableState;)Lkotlin/Unit;
 
     move-result-object p0
 

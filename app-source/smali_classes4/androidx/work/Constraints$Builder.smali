@@ -462,7 +462,7 @@
 .method public final setTriggerContentMaxDelay(JLjava/util/concurrent/TimeUnit;)Landroidx/work/Constraints$Builder;
     .locals 1
 
-    const-string v0, "timeUnit"
+    const-string/jumbo v0, "timeUnit"
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -496,7 +496,7 @@
 .method public final setTriggerContentUpdateDelay(JLjava/util/concurrent/TimeUnit;)Landroidx/work/Constraints$Builder;
     .locals 1
 
-    const-string v0, "timeUnit"
+    const-string/jumbo v0, "timeUnit"
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

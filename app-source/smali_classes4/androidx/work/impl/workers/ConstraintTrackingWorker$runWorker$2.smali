@@ -289,7 +289,7 @@
 
     move-result-object v11
 
-    const-string p1, "startWork(...)"
+    const-string/jumbo p1, "startWork(...)"
 
     invoke-static {v11, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 

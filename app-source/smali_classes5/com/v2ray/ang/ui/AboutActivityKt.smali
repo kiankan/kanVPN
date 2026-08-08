@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nAboutActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AboutActivity.kt\ncom/v2ray/ang/ui/AboutActivityKt\n+ 2 CompositionLocal.kt\nandroidx/compose/runtime/CompositionLocal\n+ 3 Composer.kt\nandroidx/compose/runtime/ComposerKt\n+ 4 Dp.kt\nandroidx/compose/ui/unit/DpKt\n+ 5 SnapshotState.kt\nandroidx/compose/runtime/SnapshotStateKt__SnapshotStateKt\n+ 6 Column.kt\nandroidx/compose/foundation/layout/ColumnKt\n+ 7 Layout.kt\nandroidx/compose/ui/layout/LayoutKt\n+ 8 Composables.kt\nandroidx/compose/runtime/ComposablesKt\n*L\n1#1,132:1\n75#2:133\n1047#3,6:134\n1047#3,6:141\n1047#3,6:182\n1047#3,6:188\n1047#3,6:194\n1047#3,6:200\n1047#3,6:206\n1047#3,6:216\n118#4:140\n85#5:147\n117#5,2:148\n87#6:150\n84#6,9:151\n94#6:215\n81#7,6:160\n88#7,6:175\n96#7:214\n402#8,9:166\n411#8:181\n412#8,2:212\n*S KotlinDebug\n*F\n+ 1 AboutActivity.kt\ncom/v2ray/ang/ui/AboutActivityKt\n*L\n53#1:133\n54#1:134,6\n108#1:141,6\n77#1:182,6\n82#1:188,6\n87#1:194,6\n92#1:200,6\n97#1:206,6\n123#1:216,6\n128#1:140\n54#1:147\n54#1:148,2\n68#1:150\n68#1:151,9\n68#1:215\n68#1:160,6\n68#1:175,6\n68#1:214\n68#1:166,9\n68#1:181\n68#1:212,2\n*E\n"
+    value = "SMAP\nAboutActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AboutActivity.kt\ncom/v2ray/ang/ui/AboutActivityKt\n+ 2 CompositionLocal.kt\nandroidx/compose/runtime/CompositionLocal\n+ 3 Composer.kt\nandroidx/compose/runtime/ComposerKt\n+ 4 Dp.kt\nandroidx/compose/ui/unit/DpKt\n+ 5 SnapshotState.kt\nandroidx/compose/runtime/SnapshotStateKt__SnapshotStateKt\n+ 6 Column.kt\nandroidx/compose/foundation/layout/ColumnKt\n+ 7 Layout.kt\nandroidx/compose/ui/layout/LayoutKt\n+ 8 Composables.kt\nandroidx/compose/runtime/ComposablesKt\n*L\n1#1,133:1\n75#2:134\n1047#3,6:135\n1047#3,6:142\n1047#3,6:183\n1047#3,6:189\n1047#3,6:195\n1047#3,6:201\n1047#3,6:207\n1047#3,6:217\n118#4:141\n85#5:148\n117#5,2:149\n87#6:151\n84#6,9:152\n94#6:216\n81#7,6:161\n88#7,6:176\n96#7:215\n402#8,9:167\n411#8:182\n412#8,2:213\n*S KotlinDebug\n*F\n+ 1 AboutActivity.kt\ncom/v2ray/ang/ui/AboutActivityKt\n*L\n53#1:134\n54#1:135,6\n109#1:142,6\n78#1:183,6\n83#1:189,6\n88#1:195,6\n93#1:201,6\n98#1:207,6\n124#1:217,6\n129#1:141\n54#1:148\n54#1:149,2\n69#1:151\n69#1:152,9\n69#1:216\n69#1:161,6\n69#1:176,6\n69#1:215\n69#1:167,9\n69#1:182\n69#1:213,2\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -135,7 +135,7 @@
 
     move-result-object v15
 
-    const-string v3, "C(AboutScreen)N(onBackClick)52@1899L7,53@1932L34,59@2169L19,60@2207L152,66@2366L1614,58@2112L1868:AboutActivity.kt#66hgl1"
+    const-string v3, "C(AboutScreen)N(onBackClick)52@1899L7,53@1932L34,60@2199L19,61@2237L152,67@2396L1614,59@2142L1868:AboutActivity.kt#66hgl1"
 
     invoke-static {v15, v3}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -215,7 +215,7 @@
 
     const-string v5, "CC(<get-current>):CompositionLocal.kt#9igjgp"
 
-    .line 133
+    .line 134
     invoke-static {v15, v3, v5}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     invoke-interface {v15, v2}, Landroidx/compose/runtime/Composer;->consume(Landroidx/compose/runtime/CompositionLocal;)Ljava/lang/Object;
@@ -234,12 +234,12 @@
 
     invoke-static {v15, v3, v5}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
-    .line 134
+    .line 135
     invoke-interface {v15}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
     move-result-object v3
 
-    .line 135
+    .line 136
     sget-object v8, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v8}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -259,7 +259,7 @@
 
     move-result-object v3
 
-    .line 137
+    .line 138
     invoke-interface {v15, v3}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
     .line 54
@@ -275,9 +275,10 @@
 
     move-result-object v4
 
+    .line 57
     new-instance v6, Ljava/lang/StringBuilder;
 
-    const-string v8, "v2.3.2 ("
+    const-string v8, "v2.3.3 ("
 
     invoke-direct {v6, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -291,7 +292,7 @@
 
     move-result-object v4
 
-    .line 60
+    .line 61
     sget-object v6, Landroidx/compose/material3/ScaffoldDefaults;->INSTANCE:Landroidx/compose/material3/ScaffoldDefaults;
 
     const/4 v8, 0x6
@@ -300,7 +301,7 @@
 
     move-result-object v13
 
-    .line 61
+    .line 62
     new-instance v6, Lcom/v2ray/ang/ui/AboutActivityKt$$ExternalSyntheticLambda7;
 
     invoke-direct {v6, v0}, Lcom/v2ray/ang/ui/AboutActivityKt$$ExternalSyntheticLambda7;-><init>(Lkotlin/jvm/functions/Function0;)V
@@ -315,7 +316,7 @@
 
     check-cast v6, Lkotlin/jvm/functions/Function2;
 
-    .line 67
+    .line 68
     new-instance v9, Lcom/v2ray/ang/ui/AboutActivityKt$$ExternalSyntheticLambda8;
 
     const-string v11, "com.kanvpn.client"
@@ -374,26 +375,26 @@
 
     move/from16 v1, v21
 
-    .line 59
+    .line 60
     invoke-static/range {v3 .. v17}, Landroidx/compose/material3/ScaffoldKt;->Scaffold-TvnljyQ(Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;IJJLandroidx/compose/foundation/layout/WindowInsets;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
 
-    .line 106
+    .line 107
     invoke-static {v2}, Lcom/v2ray/ang/ui/AboutActivityKt;->AboutScreen$lambda$1(Landroidx/compose/runtime/MutableState;)Z
 
     move-result v3
 
     if-eqz v3, :cond_6
 
-    const v3, -0x664d3c6e
+    const v3, -0x664cc82e
 
-    .line 107
+    .line 108
     invoke-interface {v15, v3}, Landroidx/compose/runtime/Composer;->startReplaceGroup(I)V
 
-    const-string v3, "126@4825L11,107@4059L25,121@4619L161,106@4015L896"
+    const-string v3, "127@4855L11,108@4089L25,122@4649L161,107@4045L896"
 
     invoke-static {v15, v3}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
-    .line 127
+    .line 128
     sget-object v3, Landroidx/compose/material3/MaterialTheme;->INSTANCE:Landroidx/compose/material3/MaterialTheme;
 
     invoke-virtual {v3, v15, v1}, Landroidx/compose/material3/MaterialTheme;->getColorScheme(Landroidx/compose/runtime/Composer;I)Landroidx/compose/material3/ColorScheme;
@@ -404,7 +405,7 @@
 
     move-result-wide v11
 
-    .line 128
+    .line 129
     sget-object v1, Landroidx/compose/ui/Modifier;->Companion:Landroidx/compose/ui/Modifier$Companion;
 
     move-object v3, v1
@@ -413,7 +414,7 @@
 
     const/high16 v1, 0x42700000    # 60.0f
 
-    .line 140
+    .line 141
     invoke-static {v1}, Landroidx/compose/ui/unit/Dp;->constructor-impl(F)F
 
     move-result v7
@@ -428,22 +429,22 @@
 
     const/4 v6, 0x0
 
-    .line 128
+    .line 129
     invoke-static/range {v3 .. v9}, Landroidx/compose/foundation/layout/PaddingKt;->padding-qDBjuR0$default(Landroidx/compose/ui/Modifier;FFFFILjava/lang/Object;)Landroidx/compose/ui/Modifier;
 
     move-result-object v5
 
-    const v1, -0x55e17377
+    const v1, -0x55e16fb7
 
-    .line 108
+    .line 109
     invoke-static {v15, v1, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
-    .line 141
+    .line 142
     invoke-interface {v15}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 142
+    .line 143
     sget-object v1, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v1}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -452,15 +453,15 @@
 
     if-ne v0, v1, :cond_5
 
-    .line 108
+    .line 109
     new-instance v0, Lcom/v2ray/ang/ui/AboutActivityKt$$ExternalSyntheticLambda9;
 
     invoke-direct {v0, v2}, Lcom/v2ray/ang/ui/AboutActivityKt$$ExternalSyntheticLambda9;-><init>(Landroidx/compose/runtime/MutableState;)V
 
-    .line 144
+    .line 145
     invoke-interface {v15, v0}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 108
+    .line 109
     :cond_5
     move-object v3, v0
 
@@ -468,7 +469,7 @@
 
     invoke-static {v15}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerEnd(Landroidx/compose/runtime/Composer;)V
 
-    .line 122
+    .line 123
     new-instance v0, Lcom/v2ray/ang/ui/AboutActivityKt$$ExternalSyntheticLambda10;
 
     invoke-direct {v0, v2}, Lcom/v2ray/ang/ui/AboutActivityKt$$ExternalSyntheticLambda10;-><init>(Landroidx/compose/runtime/MutableState;)V
@@ -487,7 +488,7 @@
 
     check-cast v4, Lkotlin/jvm/functions/Function2;
 
-    .line 128
+    .line 129
     sget-object v0, Lcom/v2ray/ang/ui/ComposableSingletons$AboutActivityKt;->INSTANCE:Lcom/v2ray/ang/ui/ComposableSingletons$AboutActivityKt;
 
     invoke-virtual {v0}, Lcom/v2ray/ang/ui/ComposableSingletons$AboutActivityKt;->getLambda$1255386943$v2rayNG_app_playstoreRelease()Lkotlin/jvm/functions/Function2;
@@ -524,7 +525,7 @@
 
     const v22, 0x1b01b6
 
-    .line 107
+    .line 108
     invoke-static/range {v3 .. v24}, Landroidx/compose/material3/AndroidAlertDialog_androidKt;->AlertDialog-Oix01E0(Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function2;Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Landroidx/compose/ui/graphics/Shape;JJJJFLandroidx/compose/ui/window/DialogProperties;Landroidx/compose/runtime/Composer;III)V
 
     move-object/from16 v15, v21
@@ -534,9 +535,9 @@
     goto :goto_3
 
     :cond_6
-    const v0, -0x664001ae
+    const v0, -0x663f8d6e
 
-    .line 130
+    .line 131
     invoke-interface {v15, v0}, Landroidx/compose/runtime/Composer;->startReplaceGroup(I)V
 
     invoke-interface {v15}, Landroidx/compose/runtime/Composer;->endReplaceGroup()V
@@ -556,7 +557,7 @@
     :cond_7
     invoke-interface {v15}, Landroidx/compose/runtime/Composer;->skipToGroupEnd()V
 
-    .line 131
+    .line 132
     :cond_8
     :goto_4
     invoke-interface {v15}, Landroidx/compose/runtime/Composer;->endRestartGroup()Landroidx/compose/runtime/ScopeUpdateScope;
@@ -593,7 +594,7 @@
     .line 54
     check-cast p0, Landroidx/compose/runtime/State;
 
-    .line 147
+    .line 148
     invoke-interface {p0}, Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -623,7 +624,7 @@
 
     move-result-object p1
 
-    .line 148
+    .line 149
     invoke-interface {p0, p1}, Landroidx/compose/runtime/MutableState;->setValue(Ljava/lang/Object;)V
 
     return-void
@@ -632,7 +633,7 @@
 .method static final AboutScreen$lambda$3(Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
     .locals 13
 
-    const-string v1, "C62@2256L36,61@2221L128:AboutActivity.kt#66hgl1"
+    const-string v1, "C63@2286L36,62@2251L128:AboutActivity.kt#66hgl1"
 
     invoke-static {p1, v1}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -668,13 +669,13 @@
 
     const/4 v1, -0x1
 
-    const-string v2, "com.v2ray.ang.ui.AboutScreen.<anonymous> (AboutActivity.kt:61)"
+    const-string v2, "com.v2ray.ang.ui.AboutScreen.<anonymous> (AboutActivity.kt:62)"
 
     const v4, -0x28c38e0c
 
     invoke-static {v4, p2, v1, v2}, Landroidx/compose/runtime/ComposerKt;->traceEventStart(IIILjava/lang/String;)V
 
-    .line 63
+    .line 64
     :cond_1
     sget v0, Lcom/v2ray/ang/R$string;->title_about:I
 
@@ -706,7 +707,7 @@
 
     move-object v10, p1
 
-    .line 62
+    .line 63
     invoke-static/range {v0 .. v12}, Lcom/v2ray/ang/ui/compose/ComponentsKt;->AppTopBar(Ljava/lang/String;Lkotlin/jvm/functions/Function0;ZZLjava/lang/String;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Ljava/lang/String;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
 
     invoke-static {}, Landroidx/compose/runtime/ComposerKt;->isTraceInProgress()Z
@@ -719,11 +720,11 @@
 
     goto :goto_1
 
-    .line 61
+    .line 62
     :cond_2
     invoke-interface {p1}, Landroidx/compose/runtime/Composer;->skipToGroupEnd()V
 
-    .line 66
+    .line 67
     :cond_3
     :goto_1
     sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -744,7 +745,7 @@
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v2, "CN(innerPadding)71@2534L21,67@2392L1582:AboutActivity.kt#66hgl1"
+    const-string v2, "CN(innerPadding)72@2564L21,68@2422L1582:AboutActivity.kt#66hgl1"
 
     invoke-static {v6, v2}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -808,13 +809,13 @@
 
     const/4 v3, -0x1
 
-    const-string v4, "com.v2ray.ang.ui.AboutScreen.<anonymous> (AboutActivity.kt:67)"
+    const-string v4, "com.v2ray.ang.ui.AboutScreen.<anonymous> (AboutActivity.kt:68)"
 
     const v7, -0x472ed241
 
     invoke-static {v7, v2, v3, v4}, Landroidx/compose/runtime/ComposerKt;->traceEventStart(IIILjava/lang/String;)V
 
-    .line 69
+    .line 70
     :cond_3
     sget-object v2, Landroidx/compose/ui/Modifier;->Companion:Landroidx/compose/ui/Modifier$Companion;
 
@@ -824,17 +825,17 @@
 
     const/4 v4, 0x0
 
-    .line 70
+    .line 71
     invoke-static {v2, v3, v5, v4}, Landroidx/compose/foundation/layout/SizeKt;->fillMaxSize$default(Landroidx/compose/ui/Modifier;FILjava/lang/Object;)Landroidx/compose/ui/Modifier;
 
     move-result-object v2
 
-    .line 71
+    .line 72
     invoke-static {v2, v1}, Landroidx/compose/foundation/layout/PaddingKt;->padding(Landroidx/compose/ui/Modifier;Landroidx/compose/foundation/layout/PaddingValues;)Landroidx/compose/ui/Modifier;
 
     move-result-object v10
 
-    .line 72
+    .line 73
     invoke-static {v9, v6, v9, v5}, Landroidx/compose/foundation/ScrollKt;->rememberScrollState(ILandroidx/compose/runtime/Composer;II)Landroidx/compose/foundation/ScrollState;
 
     move-result-object v11
@@ -855,40 +856,40 @@
 
     const v2, 0x4ff7456f
 
-    .line 68
+    .line 69
     const-string v3, "CC(Column)N(modifier,verticalArrangement,horizontalAlignment,content)87@4443L61,88@4509L134:Column.kt#2w3rfo"
 
-    .line 150
+    .line 151
     invoke-static {v6, v2, v3}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
-    .line 151
+    .line 152
     sget-object v2, Landroidx/compose/foundation/layout/Arrangement;->INSTANCE:Landroidx/compose/foundation/layout/Arrangement;
 
     invoke-virtual {v2}, Landroidx/compose/foundation/layout/Arrangement;->getTop()Landroidx/compose/foundation/layout/Arrangement$Vertical;
 
     move-result-object v2
 
-    .line 152
+    .line 153
     sget-object v3, Landroidx/compose/ui/Alignment;->Companion:Landroidx/compose/ui/Alignment$Companion;
 
     invoke-virtual {v3}, Landroidx/compose/ui/Alignment$Companion;->getStart()Landroidx/compose/ui/Alignment$Horizontal;
 
     move-result-object v3
 
-    .line 155
+    .line 156
     invoke-static {v2, v3, v6, v9}, Landroidx/compose/foundation/layout/ColumnKt;->columnMeasurePolicy(Landroidx/compose/foundation/layout/Arrangement$Vertical;Landroidx/compose/ui/Alignment$Horizontal;Landroidx/compose/runtime/Composer;I)Landroidx/compose/ui/layout/MeasurePolicy;
 
     move-result-object v2
 
     const v3, -0x451e1427
 
-    .line 156
+    .line 157
     const-string v4, "CC(Layout)N(content,modifier,measurePolicy)81@3355L27,84@3521L415:Layout.kt#80mrfh"
 
-    .line 160
+    .line 161
     invoke-static {v6, v3, v4}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
-    .line 161
+    .line 162
     invoke-static {v6, v9}, Landroidx/compose/runtime/ComposablesKt;->getCurrentCompositeKeyHashCode(Landroidx/compose/runtime/Composer;I)J
 
     move-result-wide v3
@@ -897,17 +898,17 @@
 
     move-result v3
 
-    .line 162
+    .line 163
     invoke-interface {v6}, Landroidx/compose/runtime/Composer;->getCurrentCompositionLocalMap()Landroidx/compose/runtime/CompositionLocalMap;
 
     move-result-object v4
 
-    .line 163
+    .line 164
     invoke-static {v6, v1}, Landroidx/compose/ui/ComposedModifierKt;->materializeModifier(Landroidx/compose/runtime/Composer;Landroidx/compose/ui/Modifier;)Landroidx/compose/ui/Modifier;
 
     move-result-object v1
 
-    .line 165
+    .line 166
     sget-object v5, Landroidx/compose/ui/node/ComposeUiNode;->Companion:Landroidx/compose/ui/node/ComposeUiNode$Companion;
 
     invoke-virtual {v5}, Landroidx/compose/ui/node/ComposeUiNode$Companion;->getConstructor()Lkotlin/jvm/functions/Function0;
@@ -916,13 +917,13 @@
 
     const v7, -0x20f7d59c
 
-    .line 164
+    .line 165
     const-string v8, "CC(ReusableComposeNode)N(factory,update,content)410@16187L9:Composables.kt#9igjgp"
 
-    .line 166
+    .line 167
     invoke-static {v6, v7, v8}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
-    .line 167
+    .line 168
     invoke-interface {v6}, Landroidx/compose/runtime/Composer;->getApplier()Landroidx/compose/runtime/Applier;
 
     move-result-object v7
@@ -933,33 +934,33 @@
 
     invoke-static {}, Landroidx/compose/runtime/ComposablesKt;->invalidApplier()V
 
-    .line 168
+    .line 169
     :cond_4
     invoke-interface {v6}, Landroidx/compose/runtime/Composer;->startReusableNode()V
 
-    .line 169
+    .line 170
     invoke-interface {v6}, Landroidx/compose/runtime/Composer;->getInserting()Z
 
     move-result v7
 
     if-eqz v7, :cond_5
 
-    .line 170
+    .line 171
     invoke-interface {v6, v5}, Landroidx/compose/runtime/Composer;->createNode(Lkotlin/jvm/functions/Function0;)V
 
     goto :goto_3
 
-    .line 172
+    .line 173
     :cond_5
     invoke-interface {v6}, Landroidx/compose/runtime/Composer;->useNode()V
 
-    .line 174
+    .line 175
     :goto_3
     invoke-static {v6}, Landroidx/compose/runtime/Updater;->constructor-impl(Landroidx/compose/runtime/Composer;)Landroidx/compose/runtime/Composer;
 
     move-result-object v5
 
-    .line 175
+    .line 176
     sget-object v7, Landroidx/compose/ui/node/ComposeUiNode;->Companion:Landroidx/compose/ui/node/ComposeUiNode$Companion;
 
     invoke-virtual {v7}, Landroidx/compose/ui/node/ComposeUiNode$Companion;->getSetMeasurePolicy()Lkotlin/jvm/functions/Function2;
@@ -968,7 +969,7 @@
 
     invoke-static {v5, v2, v7}, Landroidx/compose/runtime/Updater;->set-impl(Landroidx/compose/runtime/Composer;Ljava/lang/Object;Lkotlin/jvm/functions/Function2;)V
 
-    .line 176
+    .line 177
     sget-object v2, Landroidx/compose/ui/node/ComposeUiNode;->Companion:Landroidx/compose/ui/node/ComposeUiNode$Companion;
 
     invoke-virtual {v2}, Landroidx/compose/ui/node/ComposeUiNode$Companion;->getSetResolvedCompositionLocals()Lkotlin/jvm/functions/Function2;
@@ -977,7 +978,7 @@
 
     invoke-static {v5, v4, v2}, Landroidx/compose/runtime/Updater;->set-impl(Landroidx/compose/runtime/Composer;Ljava/lang/Object;Lkotlin/jvm/functions/Function2;)V
 
-    .line 177
+    .line 178
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -990,7 +991,7 @@
 
     invoke-static {v5, v2, v3}, Landroidx/compose/runtime/Updater;->set-impl(Landroidx/compose/runtime/Composer;Ljava/lang/Object;Lkotlin/jvm/functions/Function2;)V
 
-    .line 178
+    .line 179
     sget-object v2, Landroidx/compose/ui/node/ComposeUiNode;->Companion:Landroidx/compose/ui/node/ComposeUiNode$Companion;
 
     invoke-virtual {v2}, Landroidx/compose/ui/node/ComposeUiNode$Companion;->getApplyOnDeactivatedNodeAssertion()Lkotlin/jvm/functions/Function1;
@@ -999,7 +1000,7 @@
 
     invoke-static {v5, v2}, Landroidx/compose/runtime/Updater;->reconcile-impl(Landroidx/compose/runtime/Composer;Lkotlin/jvm/functions/Function1;)V
 
-    .line 179
+    .line 180
     sget-object v2, Landroidx/compose/ui/node/ComposeUiNode;->Companion:Landroidx/compose/ui/node/ComposeUiNode$Companion;
 
     invoke-virtual {v2}, Landroidx/compose/ui/node/ComposeUiNode$Companion;->getSetModifier()Lkotlin/jvm/functions/Function2;
@@ -1010,10 +1011,10 @@
 
     const v1, 0x7cc0ae6e
 
-    .line 181
+    .line 182
     const-string v2, "C89@4557L9:Column.kt#2w3rfo"
 
-    .line 157
+    .line 158
     invoke-static {v6, v1, v2}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     sget-object v1, Landroidx/compose/foundation/layout/ColumnScopeInstance;->INSTANCE:Landroidx/compose/foundation/layout/ColumnScopeInstance;
@@ -1022,19 +1023,19 @@
 
     const v1, 0x5d76b993
 
-    const-string v2, "C74@2622L47,75@2695L42,76@2765L45,73@2581L243,79@2878L40,80@2944L42,81@3014L24,78@2837L215,84@3106L44,85@3176L44,86@3248L52,83@3065L249,89@3368L44,90@3438L41,91@3507L52,88@3327L246,94@3627L43,95@3696L45,96@3769L56,93@3586L253,98@3852L112:AboutActivity.kt#66hgl1"
-
-    .line 74
-    invoke-static {v6, v1, v2}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
+    const-string v2, "C75@2652L47,76@2725L42,77@2795L45,74@2611L243,80@2908L40,81@2974L42,82@3044L24,79@2867L215,85@3136L44,86@3206L44,87@3278L52,84@3095L249,90@3398L44,91@3468L41,92@3537L52,89@3357L246,95@3657L43,96@3726L45,97@3799L56,94@3616L253,99@3882L112:AboutActivity.kt#66hgl1"
 
     .line 75
+    invoke-static {v6, v1, v2}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
+
+    .line 76
     sget v1, Lcom/v2ray/ang/R$drawable;->ic_source_code_24dp:I
 
     invoke-static {v1, v6, v9}, Landroidx/compose/ui/res/PainterResources_androidKt;->painterResource(ILandroidx/compose/runtime/Composer;I)Landroidx/compose/ui/graphics/painter/Painter;
 
     move-result-object v1
 
-    .line 76
+    .line 77
     sget v2, Lcom/v2ray/ang/R$string;->title_source_code:I
 
     invoke-static {v2, v6, v9}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
@@ -1043,7 +1044,7 @@
 
     const v3, 0x303e636
 
-    .line 77
+    .line 78
     const-string v10, "CC(remember):AboutActivity.kt#9igjgp"
 
     invoke-static {v6, v3, v10}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -1052,14 +1053,14 @@
 
     move-result v3
 
-    .line 182
+    .line 183
     invoke-interface {v6}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
     move-result-object v4
 
     if-nez v3, :cond_6
 
-    .line 183
+    .line 184
     sget-object v3, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v3}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -1068,16 +1069,16 @@
 
     if-ne v4, v3, :cond_7
 
-    .line 77
+    .line 78
     :cond_6
     new-instance v4, Lcom/v2ray/ang/ui/AboutActivityKt$$ExternalSyntheticLambda0;
 
     invoke-direct {v4, v0}, Lcom/v2ray/ang/ui/AboutActivityKt$$ExternalSyntheticLambda0;-><init>(Landroid/content/Context;)V
 
-    .line 185
+    .line 186
     invoke-interface {v6, v4}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 77
+    .line 78
     :cond_7
     move-object v3, v4
 
@@ -1093,17 +1094,17 @@
 
     const/4 v5, 0x0
 
-    .line 74
+    .line 75
     invoke-static/range {v1 .. v8}, Lcom/v2ray/ang/ui/compose/SettingsItemKt;->SettingsMenuItem(Landroidx/compose/ui/graphics/painter/Painter;Ljava/lang/String;Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;Ljava/lang/String;Landroidx/compose/runtime/Composer;II)V
 
-    .line 80
+    .line 81
     sget v1, Lcom/v2ray/ang/R$drawable;->license_24px:I
 
     invoke-static {v1, v6, v9}, Landroidx/compose/ui/res/PainterResources_androidKt;->painterResource(ILandroidx/compose/runtime/Composer;I)Landroidx/compose/ui/graphics/painter/Painter;
 
     move-result-object v1
 
-    .line 81
+    .line 82
     sget v2, Lcom/v2ray/ang/R$string;->title_oss_license:I
 
     invoke-static {v2, v6, v9}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
@@ -1112,15 +1113,15 @@
 
     const v3, 0x3040541
 
-    .line 82
+    .line 83
     invoke-static {v6, v3, v10}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
-    .line 188
+    .line 189
     invoke-interface {v6}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
     move-result-object v3
 
-    .line 189
+    .line 190
     sget-object v4, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v4}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -1129,17 +1130,17 @@
 
     if-ne v3, v4, :cond_8
 
-    .line 82
+    .line 83
     new-instance v3, Lcom/v2ray/ang/ui/AboutActivityKt$$ExternalSyntheticLambda2;
 
     move-object/from16 v4, p3
 
     invoke-direct {v3, v4}, Lcom/v2ray/ang/ui/AboutActivityKt$$ExternalSyntheticLambda2;-><init>(Landroidx/compose/runtime/MutableState;)V
 
-    .line 191
+    .line 192
     invoke-interface {v6, v3}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 82
+    .line 83
     :cond_8
     check-cast v3, Lkotlin/jvm/functions/Function0;
 
@@ -1155,17 +1156,17 @@
 
     const/4 v5, 0x0
 
-    .line 79
+    .line 80
     invoke-static/range {v1 .. v8}, Lcom/v2ray/ang/ui/compose/SettingsItemKt;->SettingsMenuItem(Landroidx/compose/ui/graphics/painter/Painter;Ljava/lang/String;Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;Ljava/lang/String;Landroidx/compose/runtime/Composer;II)V
 
-    .line 85
+    .line 86
     sget v1, Lcom/v2ray/ang/R$drawable;->ic_feedback_24dp:I
 
     invoke-static {v1, v6, v9}, Landroidx/compose/ui/res/PainterResources_androidKt;->painterResource(ILandroidx/compose/runtime/Composer;I)Landroidx/compose/ui/graphics/painter/Painter;
 
     move-result-object v1
 
-    .line 86
+    .line 87
     sget v2, Lcom/v2ray/ang/R$string;->title_pref_feedback:I
 
     invoke-static {v2, v6, v9}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
@@ -1174,21 +1175,21 @@
 
     const v3, 0x304229d
 
-    .line 87
+    .line 88
     invoke-static {v6, v3, v10}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     invoke-interface {v6, v0}, Landroidx/compose/runtime/Composer;->changedInstance(Ljava/lang/Object;)Z
 
     move-result v3
 
-    .line 194
+    .line 195
     invoke-interface {v6}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
     move-result-object v4
 
     if-nez v3, :cond_9
 
-    .line 195
+    .line 196
     sget-object v3, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v3}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -1197,16 +1198,16 @@
 
     if-ne v4, v3, :cond_a
 
-    .line 87
+    .line 88
     :cond_9
     new-instance v4, Lcom/v2ray/ang/ui/AboutActivityKt$$ExternalSyntheticLambda3;
 
     invoke-direct {v4, v0}, Lcom/v2ray/ang/ui/AboutActivityKt$$ExternalSyntheticLambda3;-><init>(Landroid/content/Context;)V
 
-    .line 197
+    .line 198
     invoke-interface {v6, v4}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 87
+    .line 88
     :cond_a
     move-object v3, v4
 
@@ -1222,17 +1223,17 @@
 
     const/4 v5, 0x0
 
-    .line 84
+    .line 85
     invoke-static/range {v1 .. v8}, Lcom/v2ray/ang/ui/compose/SettingsItemKt;->SettingsMenuItem(Landroidx/compose/ui/graphics/painter/Painter;Ljava/lang/String;Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;Ljava/lang/String;Landroidx/compose/runtime/Composer;II)V
 
-    .line 90
+    .line 91
     sget v1, Lcom/v2ray/ang/R$drawable;->ic_telegram_24dp:I
 
     invoke-static {v1, v6, v9}, Landroidx/compose/ui/res/PainterResources_androidKt;->painterResource(ILandroidx/compose/runtime/Composer;I)Landroidx/compose/ui/graphics/painter/Painter;
 
     move-result-object v1
 
-    .line 91
+    .line 92
     sget v2, Lcom/v2ray/ang/R$string;->title_tg_channel:I
 
     invoke-static {v2, v6, v9}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
@@ -1241,21 +1242,21 @@
 
     const v3, 0x30442fd
 
-    .line 92
+    .line 93
     invoke-static {v6, v3, v10}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     invoke-interface {v6, v0}, Landroidx/compose/runtime/Composer;->changedInstance(Ljava/lang/Object;)Z
 
     move-result v3
 
-    .line 200
+    .line 201
     invoke-interface {v6}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
     move-result-object v4
 
     if-nez v3, :cond_b
 
-    .line 201
+    .line 202
     sget-object v3, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v3}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -1264,16 +1265,16 @@
 
     if-ne v4, v3, :cond_c
 
-    .line 92
+    .line 93
     :cond_b
     new-instance v4, Lcom/v2ray/ang/ui/AboutActivityKt$$ExternalSyntheticLambda4;
 
     invoke-direct {v4, v0}, Lcom/v2ray/ang/ui/AboutActivityKt$$ExternalSyntheticLambda4;-><init>(Landroid/content/Context;)V
 
-    .line 203
+    .line 204
     invoke-interface {v6, v4}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 92
+    .line 93
     :cond_c
     move-object v3, v4
 
@@ -1289,17 +1290,17 @@
 
     const/4 v5, 0x0
 
-    .line 89
+    .line 90
     invoke-static/range {v1 .. v8}, Lcom/v2ray/ang/ui/compose/SettingsItemKt;->SettingsMenuItem(Landroidx/compose/ui/graphics/painter/Painter;Ljava/lang/String;Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;Ljava/lang/String;Landroidx/compose/runtime/Composer;II)V
 
-    .line 95
+    .line 96
     sget v1, Lcom/v2ray/ang/R$drawable;->ic_privacy_24dp:I
 
     invoke-static {v1, v6, v9}, Landroidx/compose/ui/res/PainterResources_androidKt;->painterResource(ILandroidx/compose/runtime/Composer;I)Landroidx/compose/ui/graphics/painter/Painter;
 
     move-result-object v1
 
-    .line 96
+    .line 97
     sget v2, Lcom/v2ray/ang/R$string;->title_privacy_policy:I
 
     invoke-static {v2, v6, v9}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
@@ -1308,21 +1309,21 @@
 
     const v3, 0x30463c1
 
-    .line 97
+    .line 98
     invoke-static {v6, v3, v10}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
     invoke-interface {v6, v0}, Landroidx/compose/runtime/Composer;->changedInstance(Ljava/lang/Object;)Z
 
     move-result v3
 
-    .line 206
+    .line 207
     invoke-interface {v6}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
     move-result-object v4
 
     if-nez v3, :cond_d
 
-    .line 207
+    .line 208
     sget-object v3, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v3}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -1331,16 +1332,16 @@
 
     if-ne v4, v3, :cond_e
 
-    .line 97
+    .line 98
     :cond_d
     new-instance v4, Lcom/v2ray/ang/ui/AboutActivityKt$$ExternalSyntheticLambda5;
 
     invoke-direct {v4, v0}, Lcom/v2ray/ang/ui/AboutActivityKt$$ExternalSyntheticLambda5;-><init>(Landroid/content/Context;)V
 
-    .line 209
+    .line 210
     invoke-interface {v6, v4}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 97
+    .line 98
     :cond_e
     check-cast v4, Lkotlin/jvm/functions/Function0;
 
@@ -1362,7 +1363,7 @@
 
     move-object/from16 v5, p5
 
-    .line 94
+    .line 95
     invoke-static/range {v0 .. v7}, Lcom/v2ray/ang/ui/compose/SettingsItemKt;->SettingsMenuItem(Landroidx/compose/ui/graphics/painter/Painter;Ljava/lang/String;Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;Ljava/lang/String;Landroidx/compose/runtime/Composer;II)V
 
     const/16 v4, 0x30
@@ -1377,28 +1378,28 @@
 
     move-object/from16 v3, p5
 
-    .line 99
+    .line 100
     invoke-static/range {v0 .. v5}, Lcom/v2ray/ang/ui/compose/ComponentsKt;->VersionInfoBlock(Ljava/lang/String;Ljava/lang/String;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
 
-    .line 74
+    .line 75
     invoke-static/range {p5 .. p5}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerEnd(Landroidx/compose/runtime/Composer;)V
 
-    .line 157
+    .line 158
     invoke-static/range {p5 .. p5}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerEnd(Landroidx/compose/runtime/Composer;)V
 
-    .line 212
+    .line 213
     invoke-interface/range {p5 .. p5}, Landroidx/compose/runtime/Composer;->endNode()V
 
-    .line 166
+    .line 167
     invoke-static/range {p5 .. p5}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerEnd(Landroidx/compose/runtime/Composer;)V
 
-    .line 160
+    .line 161
     invoke-static/range {p5 .. p5}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerEnd(Landroidx/compose/runtime/Composer;)V
 
-    .line 150
+    .line 151
     invoke-static/range {p5 .. p5}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerEnd(Landroidx/compose/runtime/Composer;)V
 
-    .line 215
+    .line 216
     invoke-static {}, Landroidx/compose/runtime/ComposerKt;->isTraceInProgress()Z
 
     move-result v0
@@ -1409,11 +1410,11 @@
 
     goto :goto_4
 
-    .line 67
+    .line 68
     :cond_f
     invoke-interface/range {p5 .. p5}, Landroidx/compose/runtime/Composer;->skipToGroupEnd()V
 
-    .line 104
+    .line 105
     :cond_10
     :goto_4
     sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -1424,7 +1425,7 @@
 .method private static final AboutScreen$lambda$4$0$0$0(Landroid/content/Context;)Lkotlin/Unit;
     .locals 2
 
-    .line 77
+    .line 78
     sget-object v0, Lcom/v2ray/ang/util/Utils;->INSTANCE:Lcom/v2ray/ang/util/Utils;
 
     const-string v1, "https://github.com/2dust/v2rayNG"
@@ -1441,7 +1442,7 @@
 
     const/4 v0, 0x1
 
-    .line 82
+    .line 83
     invoke-static {p0, v0}, Lcom/v2ray/ang/ui/AboutActivityKt;->AboutScreen$lambda$2(Landroidx/compose/runtime/MutableState;Z)V
 
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -1452,7 +1453,7 @@
 .method private static final AboutScreen$lambda$4$0$2$0(Landroid/content/Context;)Lkotlin/Unit;
     .locals 2
 
-    .line 87
+    .line 88
     sget-object v0, Lcom/v2ray/ang/util/Utils;->INSTANCE:Lcom/v2ray/ang/util/Utils;
 
     const-string v1, "https://github.com/2dust/v2rayNG/issues"
@@ -1467,7 +1468,7 @@
 .method private static final AboutScreen$lambda$4$0$3$0(Landroid/content/Context;)Lkotlin/Unit;
     .locals 2
 
-    .line 92
+    .line 93
     sget-object v0, Lcom/v2ray/ang/util/Utils;->INSTANCE:Lcom/v2ray/ang/util/Utils;
 
     const-string v1, "https://t.me/github_2dust"
@@ -1482,7 +1483,7 @@
 .method private static final AboutScreen$lambda$4$0$4$0(Landroid/content/Context;)Lkotlin/Unit;
     .locals 2
 
-    .line 97
+    .line 98
     sget-object v0, Lcom/v2ray/ang/util/Utils;->INSTANCE:Lcom/v2ray/ang/util/Utils;
 
     const-string v1, "https://raw.githubusercontent.com/2dust/v2rayNG/master/CR.md"
@@ -1499,7 +1500,7 @@
 
     const/4 v0, 0x0
 
-    .line 108
+    .line 109
     invoke-static {p0, v0}, Lcom/v2ray/ang/ui/AboutActivityKt;->AboutScreen$lambda$2(Landroidx/compose/runtime/MutableState;Z)V
 
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -1510,7 +1511,7 @@
 .method static final AboutScreen$lambda$6(Landroidx/compose/runtime/MutableState;Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
     .locals 13
 
-    const-string v0, "C122@4658L25,122@4637L129:AboutActivity.kt#66hgl1"
+    const-string v0, "C123@4688L25,123@4667L129:AboutActivity.kt#66hgl1"
 
     invoke-static {p1, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -1544,7 +1545,7 @@
 
     const/4 v0, -0x1
 
-    const-string v1, "com.v2ray.ang.ui.AboutScreen.<anonymous> (AboutActivity.kt:122)"
+    const-string v1, "com.v2ray.ang.ui.AboutScreen.<anonymous> (AboutActivity.kt:123)"
 
     const v2, 0x295b1cc3
 
@@ -1555,15 +1556,15 @@
 
     const-string v0, "CC(remember):AboutActivity.kt#9igjgp"
 
-    .line 123
+    .line 124
     invoke-static {p1, p2, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
 
-    .line 216
+    .line 217
     invoke-interface {p1}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
     move-result-object p2
 
-    .line 217
+    .line 218
     sget-object v0, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v0}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -1572,15 +1573,15 @@
 
     if-ne p2, v0, :cond_2
 
-    .line 123
+    .line 124
     new-instance p2, Lcom/v2ray/ang/ui/AboutActivityKt$$ExternalSyntheticLambda6;
 
     invoke-direct {p2, p0}, Lcom/v2ray/ang/ui/AboutActivityKt$$ExternalSyntheticLambda6;-><init>(Landroidx/compose/runtime/MutableState;)V
 
-    .line 219
+    .line 220
     invoke-interface {p1, p2}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 123
+    .line 124
     :cond_2
     move-object v0, p2
 
@@ -1631,10 +1632,10 @@
     :cond_3
     move-object v10, p1
 
-    .line 122
+    .line 123
     invoke-interface {v10}, Landroidx/compose/runtime/Composer;->skipToGroupEnd()V
 
-    .line 126
+    .line 127
     :cond_4
     :goto_1
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -1647,7 +1648,7 @@
 
     const/4 v0, 0x0
 
-    .line 123
+    .line 124
     invoke-static {p0, v0}, Lcom/v2ray/ang/ui/AboutActivityKt;->AboutScreen$lambda$2(Landroidx/compose/runtime/MutableState;Z)V
 
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;

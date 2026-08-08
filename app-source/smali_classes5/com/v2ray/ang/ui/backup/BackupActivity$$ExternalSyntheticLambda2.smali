@@ -30,9 +30,9 @@
     .line 0
     iget-object p0, p0, Lcom/v2ray/ang/ui/backup/BackupActivity$$ExternalSyntheticLambda2;->f$0:Lcom/v2ray/ang/ui/backup/BackupActivity;
 
-    check-cast p1, Landroid/net/Uri;
+    check-cast p1, Lcom/v2ray/ang/ui/backup/BackupLocation;
 
-    invoke-static {p0, p1}, Lcom/v2ray/ang/ui/backup/BackupActivity;->restoreViaLocal$lambda$0(Lcom/v2ray/ang/ui/backup/BackupActivity;Landroid/net/Uri;)Lkotlin/Unit;
+    invoke-static {p0, p1}, Lcom/v2ray/ang/ui/backup/BackupActivity;->$r8$lambda$7HBp5ZJXYH_pnY9VFgwgwXNb0OQ(Lcom/v2ray/ang/ui/backup/BackupActivity;Lcom/v2ray/ang/ui/backup/BackupLocation;)Lkotlin/Unit;
 
     move-result-object p0
 

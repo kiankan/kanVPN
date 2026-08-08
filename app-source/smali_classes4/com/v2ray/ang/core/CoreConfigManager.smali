@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nCoreConfigManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CoreConfigManager.kt\ncom/v2ray/ang/core/CoreConfigManager\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 4 _Sequences.kt\nkotlin/sequences/SequencesKt___SequencesKt\n*L\n1#1,1265:1\n1#2:1266\n1#2:1278\n1#2:1305\n1#2:1332\n1#2:1399\n1#2:1413\n1795#3,10:1267\n2068#3:1277\n2069#3:1279\n1805#3:1280\n2068#3,2:1281\n2945#3,3:1283\n296#3,2:1286\n1814#3,3:1288\n2077#3,3:1291\n1795#3,10:1294\n2068#3:1304\n2069#3:1306\n1805#3:1307\n1749#3:1308\n1782#3,4:1309\n1960#3,3:1313\n2077#3,3:1316\n2068#3,2:1319\n1795#3,10:1321\n2068#3:1331\n2069#3:1333\n1805#3:1334\n2077#3,3:1335\n2945#3,3:1338\n2068#3,2:1341\n296#3,2:1343\n2068#3:1345\n2068#3,2:1346\n2069#3:1348\n2068#3:1349\n2068#3,2:1350\n2069#3:1352\n2945#3,3:1353\n2945#3,3:1356\n2945#3,3:1359\n2068#3,2:1362\n1739#3:1364\n1814#3,3:1365\n777#3:1368\n873#3,2:1369\n1358#3,2:1371\n1435#3,4:1373\n2077#3,3:1379\n2077#3,2:1382\n2077#3,3:1384\n2079#3:1387\n1795#3,10:1388\n2068#3:1398\n2069#3:1400\n1805#3:1401\n1795#3,10:1402\n2068#3:1412\n2069#3:1414\n1805#3:1415\n2068#3,2:1416\n2068#3,2:1418\n2945#3,3:1420\n1439#4,2:1377\n*S KotlinDebug\n*F\n+ 1 CoreConfigManager.kt\ncom/v2ray/ang/core/CoreConfigManager\n*L\n100#1:1278\n279#1:1305\n338#1:1332\n1085#1:1399\n1099#1:1413\n100#1:1267,10\n100#1:1277\n100#1:1279\n100#1:1280\n105#1:1281,2\n112#1:1283,3\n121#1:1286,2\n149#1:1288,3\n155#1:1291,3\n279#1:1294,10\n279#1:1304\n279#1:1306\n279#1:1307\n297#1:1308\n297#1:1309,4\n304#1:1313,3\n312#1:1316,3\n324#1:1319,2\n338#1:1321,10\n338#1:1331\n338#1:1333\n338#1:1334\n348#1:1335,3\n392#1:1338,3\n411#1:1341,2\n524#1:1343,2\n548#1:1345\n550#1:1346,2\n548#1:1348\n566#1:1349\n570#1:1350,2\n566#1:1352\n628#1:1353,3\n651#1:1356,3\n661#1:1359,3\n838#1:1362,2\n896#1:1364\n896#1:1365,3\n918#1:1368\n918#1:1369,2\n919#1:1371,2\n919#1:1373,4\n959#1:1379,3\n982#1:1382,2\n985#1:1384,3\n982#1:1387\n1085#1:1388,10\n1085#1:1398\n1085#1:1400\n1085#1:1401\n1099#1:1402,10\n1099#1:1412\n1099#1:1414\n1099#1:1415\n1125#1:1416,2\n1149#1:1418,2\n1183#1:1420,3\n941#1:1377,2\n*E\n"
+    value = "SMAP\nCoreConfigManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CoreConfigManager.kt\ncom/v2ray/ang/core/CoreConfigManager\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 4 _Sequences.kt\nkotlin/sequences/SequencesKt___SequencesKt\n*L\n1#1,1297:1\n1#2:1298\n1#2:1310\n1#2:1337\n1#2:1364\n1#2:1431\n1#2:1445\n1795#3,10:1299\n2068#3:1309\n2069#3:1311\n1805#3:1312\n2068#3,2:1313\n2945#3,3:1315\n296#3,2:1318\n1814#3,3:1320\n2077#3,3:1323\n1795#3,10:1326\n2068#3:1336\n2069#3:1338\n1805#3:1339\n1749#3:1340\n1782#3,4:1341\n1960#3,3:1345\n2077#3,3:1348\n2068#3,2:1351\n1795#3,10:1353\n2068#3:1363\n2069#3:1365\n1805#3:1366\n2077#3,3:1367\n2945#3,3:1370\n2068#3,2:1373\n296#3,2:1375\n2068#3:1377\n2068#3,2:1378\n2069#3:1380\n2068#3:1381\n2068#3,2:1382\n2069#3:1384\n2945#3,3:1385\n2945#3,3:1388\n2945#3,3:1391\n2068#3,2:1394\n1739#3:1396\n1814#3,3:1397\n777#3:1400\n873#3,2:1401\n1358#3,2:1403\n1435#3,4:1405\n2077#3,3:1411\n2077#3,2:1414\n2077#3,3:1416\n2079#3:1419\n1795#3,10:1420\n2068#3:1430\n2069#3:1432\n1805#3:1433\n1795#3,10:1434\n2068#3:1444\n2069#3:1446\n1805#3:1447\n2068#3,2:1448\n2068#3,2:1450\n2945#3,3:1452\n1439#4,2:1409\n*S KotlinDebug\n*F\n+ 1 CoreConfigManager.kt\ncom/v2ray/ang/core/CoreConfigManager\n*L\n132#1:1310\n311#1:1337\n370#1:1364\n1117#1:1431\n1131#1:1445\n132#1:1299,10\n132#1:1309\n132#1:1311\n132#1:1312\n137#1:1313,2\n144#1:1315,3\n153#1:1318,2\n181#1:1320,3\n187#1:1323,3\n311#1:1326,10\n311#1:1336\n311#1:1338\n311#1:1339\n329#1:1340\n329#1:1341,4\n336#1:1345,3\n344#1:1348,3\n356#1:1351,2\n370#1:1353,10\n370#1:1363\n370#1:1365\n370#1:1366\n380#1:1367,3\n424#1:1370,3\n443#1:1373,2\n556#1:1375,2\n580#1:1377\n582#1:1378,2\n580#1:1380\n598#1:1381\n602#1:1382,2\n598#1:1384\n660#1:1385,3\n683#1:1388,3\n693#1:1391,3\n870#1:1394,2\n928#1:1396\n928#1:1397,3\n950#1:1400\n950#1:1401,2\n951#1:1403,2\n951#1:1405,4\n991#1:1411,3\n1014#1:1414,2\n1017#1:1416,3\n1014#1:1419\n1117#1:1420,10\n1117#1:1430\n1117#1:1432\n1117#1:1433\n1131#1:1434,10\n1131#1:1444\n1131#1:1446\n1131#1:1447\n1157#1:1448,2\n1181#1:1450,2\n1215#1:1452,3\n973#1:1409,2\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -141,7 +141,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 24
+    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -162,14 +162,14 @@
         }
     .end annotation
 
-    .line 1139
+    .line 1171
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext;->getContext()Landroid/content/Context;
 
     move-result-object p0
 
     if-eqz p2, :cond_f
 
-    .line 1140
+    .line 1172
     invoke-virtual {p2}, Lcom/v2ray/ang/dto/entities/RulesetItem;->getEnabled()Z
 
     move-result p1
@@ -178,7 +178,7 @@
 
     goto/16 :goto_4
 
-    .line 1144
+    .line 1176
     :cond_0
     sget-object p1, Lcom/v2ray/ang/util/JsonUtil;->INSTANCE:Lcom/v2ray/ang/util/JsonUtil;
 
@@ -200,7 +200,7 @@
 
     goto/16 :goto_4
 
-    .line 1147
+    .line 1179
     :cond_1
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$RulesBean;->getIp()Ljava/util/List;
 
@@ -208,15 +208,15 @@
 
     if-eqz p2, :cond_5
 
-    .line 1148
+    .line 1180
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1149
+    .line 1181
     check-cast p2, Ljava/lang/Iterable;
 
-    .line 1418
+    .line 1450
     invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -234,7 +234,7 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 1151
+    .line 1183
     const-string v2, "geoip:cn"
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -249,7 +249,7 @@
 
     goto :goto_0
 
-    .line 1152
+    .line 1184
     :cond_2
     const-string v2, "geoip:private"
 
@@ -265,19 +265,19 @@
 
     goto :goto_0
 
-    .line 1153
+    .line 1185
     :cond_3
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 1156
+    .line 1188
     :cond_4
     check-cast v0, Ljava/util/List;
 
     invoke-virtual {p1, v0}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$RulesBean;->setIp(Ljava/util/List;)V
 
-    .line 1159
+    .line 1191
     :cond_5
     sget-object p2, Lcom/v2ray/ang/handler/SettingsManager;->INSTANCE:Lcom/v2ray/ang/handler/SettingsManager;
 
@@ -289,14 +289,14 @@
 
     if-eqz p2, :cond_7
 
-    .line 1161
+    .line 1193
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$RulesBean;->getProcess()Ljava/util/List;
 
     move-result-object p2
 
     if-eqz p2, :cond_8
 
-    .line 1162
+    .line 1194
     move-object v1, p2
 
     check-cast v1, Ljava/util/Collection;
@@ -307,14 +307,14 @@
 
     if-nez v1, :cond_8
 
-    .line 1163
+    .line 1195
     sget-object v1, Lcom/v2ray/ang/util/PackageUidResolver;->INSTANCE:Lcom/v2ray/ang/util/PackageUidResolver;
 
     invoke-virtual {v1, p0, p2}, Lcom/v2ray/ang/util/PackageUidResolver;->packageNamesToUids(Landroid/content/Context;Ljava/util/List;)Ljava/util/List;
 
     move-result-object p0
 
-    .line 1164
+    .line 1196
     check-cast p0, Ljava/util/Collection;
 
     invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
@@ -332,18 +332,18 @@
 
     goto :goto_1
 
-    .line 1168
+    .line 1200
     :cond_7
     invoke-virtual {p1, v0}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$RulesBean;->setProcess(Ljava/util/List;)V
 
-    .line 1171
+    .line 1203
     :cond_8
     :goto_1
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$RulesBean;->getOutboundTag()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 1174
+    .line 1206
     invoke-interface {p4, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
@@ -352,13 +352,13 @@
 
     if-eqz p2, :cond_9
 
-    .line 1175
+    .line 1207
     invoke-virtual {p1, v0}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$RulesBean;->setOutboundTag(Ljava/lang/String;)V
 
-    .line 1176
+    .line 1208
     invoke-virtual {p1, p2}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$RulesBean;->setBalancerTag(Ljava/lang/String;)V
 
-    .line 1180
+    .line 1212
     :cond_9
     move-object p2, p0
 
@@ -374,7 +374,7 @@
 
     goto :goto_3
 
-    .line 1181
+    .line 1213
     :cond_a
     invoke-interface {p4, p0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
@@ -382,7 +382,7 @@
 
     if-nez p2, :cond_e
 
-    .line 1182
+    .line 1214
     sget-object p2, Lcom/v2ray/ang/AppConfig;->INSTANCE:Lcom/v2ray/ang/AppConfig;
 
     invoke-virtual {p2}, Lcom/v2ray/ang/AppConfig;->getBUILTIN_OUTBOUND_TAGS()Ljava/util/Set;
@@ -395,14 +395,14 @@
 
     if-nez p2, :cond_e
 
-    .line 1183
+    .line 1215
     invoke-virtual {p3}, Lcom/v2ray/ang/dto/V2rayConfig;->getOutbounds()Ljava/util/ArrayList;
 
     move-result-object p2
 
     check-cast p2, Ljava/lang/Iterable;
 
-    .line 1420
+    .line 1452
     instance-of p4, p2, Ljava/util/Collection;
 
     if-eqz p4, :cond_b
@@ -419,7 +419,7 @@
 
     goto :goto_2
 
-    .line 1421
+    .line 1453
     :cond_b
     invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -438,7 +438,7 @@
 
     check-cast p4, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;
 
-    .line 1183
+    .line 1215
     invoke-virtual {p4}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;->getTag()Ljava/lang/String;
 
     move-result-object p4
@@ -451,7 +451,7 @@
 
     goto :goto_3
 
-    .line 1185
+    .line 1217
     :cond_d
     :goto_2
     sget-object p2, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
@@ -476,12 +476,12 @@
 
     invoke-virtual {p2, p4, p0}, Lcom/v2ray/ang/util/LogUtil;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1186
+    .line 1218
     const-string p0, "proxy"
 
     invoke-virtual {p1, p0}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$RulesBean;->setOutboundTag(Ljava/lang/String;)V
 
-    .line 1189
+    .line 1221
     :cond_e
     :goto_3
     invoke-virtual {p3}, Lcom/v2ray/ang/dto/V2rayConfig;->getRouting()Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean;
@@ -511,17 +511,17 @@
         }
     .end annotation
 
-    .line 1084
+    .line 1116
     check-cast p2, Ljava/lang/Iterable;
 
-    .line 1388
+    .line 1420
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
     check-cast p0, Ljava/util/Collection;
 
-    .line 1398
+    .line 1430
     invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -540,10 +540,10 @@
 
     move-result-object v1
 
-    .line 1397
+    .line 1429
     check-cast v1, Lcom/v2ray/ang/core/CoreConfigManager$BalancerStrategy;
 
-    .line 1085
+    .line 1117
     invoke-virtual {v1}, Lcom/v2ray/ang/core/CoreConfigManager$BalancerStrategy;->getObservatory()Lcom/v2ray/ang/dto/V2rayConfig$ObservatoryObject;
 
     move-result-object v1
@@ -557,31 +557,31 @@
     :cond_1
     if-eqz v2, :cond_0
 
-    .line 1397
+    .line 1429
     invoke-interface {p0, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 1401
+    .line 1433
     :cond_2
     check-cast p0, Ljava/util/List;
 
-    .line 1388
+    .line 1420
     check-cast p0, Ljava/lang/Iterable;
 
-    .line 1086
+    .line 1118
     invoke-static {p0}, Lkotlin/collections/CollectionsKt;->flatten(Ljava/lang/Iterable;)Ljava/util/List;
 
     move-result-object p0
 
     check-cast p0, Ljava/lang/Iterable;
 
-    .line 1087
+    .line 1119
     invoke-static {p0}, Lkotlin/collections/CollectionsKt;->distinct(Ljava/lang/Iterable;)Ljava/util/List;
 
     move-result-object p0
 
-    .line 1088
+    .line 1120
     invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -613,7 +613,7 @@
     :goto_1
     if-eqz v1, :cond_5
 
-    .line 1089
+    .line 1121
     move-object v0, p0
 
     check-cast v0, Ljava/util/Collection;
@@ -624,30 +624,30 @@
 
     if-nez v0, :cond_5
 
-    .line 1090
+    .line 1122
     new-instance v0, Lcom/v2ray/ang/dto/V2rayConfig$ObservatoryObject;
 
-    .line 1092
+    .line 1124
     invoke-virtual {v1}, Lcom/v2ray/ang/dto/V2rayConfig$ObservatoryObject;->getProbeUrl()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1093
+    .line 1125
     invoke-virtual {v1}, Lcom/v2ray/ang/dto/V2rayConfig$ObservatoryObject;->getProbeInterval()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 1094
+    .line 1126
     invoke-virtual {v1}, Lcom/v2ray/ang/dto/V2rayConfig$ObservatoryObject;->getEnableConcurrency()Z
 
     move-result v1
 
-    .line 1090
+    .line 1122
     invoke-direct {v0, p0, v3, v4, v1}, Lcom/v2ray/ang/dto/V2rayConfig$ObservatoryObject;-><init>(Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Z)V
 
     invoke-virtual {p1, v0}, Lcom/v2ray/ang/dto/V2rayConfig;->setObservatory(Ljava/lang/Object;)V
 
-    .line 1402
+    .line 1434
     :cond_5
     new-instance p0, Ljava/util/ArrayList;
 
@@ -655,7 +655,7 @@
 
     check-cast p0, Ljava/util/Collection;
 
-    .line 1412
+    .line 1444
     invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -672,10 +672,10 @@
 
     move-result-object v1
 
-    .line 1411
+    .line 1443
     check-cast v1, Lcom/v2ray/ang/core/CoreConfigManager$BalancerStrategy;
 
-    .line 1099
+    .line 1131
     invoke-virtual {v1}, Lcom/v2ray/ang/core/CoreConfigManager$BalancerStrategy;->getBurstObservatory()Lcom/v2ray/ang/dto/V2rayConfig$BurstObservatoryObject;
 
     move-result-object v1
@@ -694,31 +694,31 @@
     :goto_3
     if-eqz v1, :cond_6
 
-    .line 1411
+    .line 1443
     invoke-interface {p0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
 
-    .line 1415
+    .line 1447
     :cond_8
     check-cast p0, Ljava/util/List;
 
-    .line 1402
+    .line 1434
     check-cast p0, Ljava/lang/Iterable;
 
-    .line 1100
+    .line 1132
     invoke-static {p0}, Lkotlin/collections/CollectionsKt;->flatten(Ljava/lang/Iterable;)Ljava/util/List;
 
     move-result-object p0
 
     check-cast p0, Ljava/lang/Iterable;
 
-    .line 1101
+    .line 1133
     invoke-static {p0}, Lkotlin/collections/CollectionsKt;->distinct(Ljava/lang/Iterable;)Ljava/util/List;
 
     move-result-object p0
 
-    .line 1102
+    .line 1134
     invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -747,7 +747,7 @@
     :cond_a
     if-eqz v2, :cond_b
 
-    .line 1103
+    .line 1135
     move-object p2, p0
 
     check-cast p2, Ljava/util/Collection;
@@ -758,15 +758,15 @@
 
     if-nez p2, :cond_b
 
-    .line 1104
+    .line 1136
     new-instance p2, Lcom/v2ray/ang/dto/V2rayConfig$BurstObservatoryObject;
 
-    .line 1106
+    .line 1138
     invoke-virtual {v2}, Lcom/v2ray/ang/dto/V2rayConfig$BurstObservatoryObject;->getPingConfig()Lcom/v2ray/ang/dto/V2rayConfig$BurstObservatoryObject$PingConfigObject;
 
     move-result-object v0
 
-    .line 1104
+    .line 1136
     invoke-direct {p2, p0, v0}, Lcom/v2ray/ang/dto/V2rayConfig$BurstObservatoryObject;-><init>(Ljava/util/List;Lcom/v2ray/ang/dto/V2rayConfig$BurstObservatoryObject$PingConfigObject;)V
 
     invoke-virtual {p1, p2}, Lcom/v2ray/ang/dto/V2rayConfig;->setBurstObservatory(Ljava/lang/Object;)V
@@ -778,7 +778,7 @@
 .method private final applySpeedDisabled(Lcom/v2ray/ang/dto/V2rayConfig;)V
     .locals 1
 
-    .line 678
+    .line 710
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v0, "pref_speed_enabled"
@@ -793,10 +793,10 @@
 
     const/4 p0, 0x0
 
-    .line 679
+    .line 711
     invoke-virtual {p1, p0}, Lcom/v2ray/ang/dto/V2rayConfig;->setStats(Ljava/lang/Object;)V
 
-    .line 680
+    .line 712
     invoke-virtual {p1, p0}, Lcom/v2ray/ang/dto/V2rayConfig;->setPolicy(Lcom/v2ray/ang/dto/V2rayConfig$PolicyBean;)V
 
     :cond_0
@@ -819,7 +819,7 @@
         }
     .end annotation
 
-    .line 1202
+    .line 1234
     sget-object v0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v1, "pref_delay_test_url"
@@ -835,7 +835,7 @@
     :cond_0
     move-object v2, v0
 
-    .line 1203
+    .line 1235
     const-string v0, "pref_observatory_least_ping_interval"
 
     const-string v1, "3m"
@@ -844,7 +844,7 @@
 
     move-result-object v0
 
-    .line 1204
+    .line 1236
     const-string v1, "pref_observatory_least_load_interval"
 
     const-string v3, "5m"
@@ -853,7 +853,7 @@
 
     move-result-object v5
 
-    .line 1205
+    .line 1237
     sget-object v1, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v3, "pref_observatory_least_load_method"
@@ -864,12 +864,12 @@
 
     move-result-object v4
 
-    .line 1206
+    .line 1238
     invoke-direct {p0}, Lcom/v2ray/ang/core/CoreConfigManager;->decodeObservatorySampling()I
 
     move-result v6
 
-    .line 1207
+    .line 1239
     const-string v1, "pref_observatory_least_load_timeout"
 
     const-string v3, "30s"
@@ -878,10 +878,10 @@
 
     move-result-object v7
 
-    .line 1208
+    .line 1240
     new-instance p0, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;
 
-    .line 1212
+    .line 1244
     new-instance v1, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategyObject;
 
     invoke-virtual {p1}, Lcom/v2ray/ang/enums/BalancerStrategyType;->getPolicyGroupType()Ljava/lang/String;
@@ -894,10 +894,10 @@
 
     invoke-direct {v1, v3, v9, v8, v9}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategyObject;-><init>(Ljava/lang/String;Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategySettingsObject;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 1208
+    .line 1240
     invoke-direct {p0, p3, p2, p4, v1}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$StrategyObject;)V
 
-    .line 1214
+    .line 1246
     invoke-virtual {p1}, Lcom/v2ray/ang/enums/BalancerStrategyType;->getRequiresObservatory()Z
 
     move-result p3
@@ -913,7 +913,7 @@
 
     goto :goto_1
 
-    .line 1215
+    .line 1247
     :cond_2
     :goto_0
     new-instance p3, Lcom/v2ray/ang/dto/V2rayConfig$ObservatoryObject;
@@ -922,7 +922,7 @@
 
     invoke-direct {p3, p2, v2, v0, p4}, Lcom/v2ray/ang/dto/V2rayConfig$ObservatoryObject;-><init>(Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 1222
+    .line 1254
     :goto_1
     invoke-virtual {p1}, Lcom/v2ray/ang/enums/BalancerStrategyType;->getRequiresBurstObservatory()Z
 
@@ -930,10 +930,10 @@
 
     if-eqz p1, :cond_3
 
-    .line 1223
+    .line 1255
     new-instance p1, Lcom/v2ray/ang/dto/V2rayConfig$BurstObservatoryObject;
 
-    .line 1225
+    .line 1257
     new-instance v1, Lcom/v2ray/ang/dto/V2rayConfig$BurstObservatoryObject$PingConfigObject;
 
     const/4 v8, 0x2
@@ -944,12 +944,12 @@
 
     invoke-direct/range {v1 .. v9}, Lcom/v2ray/ang/dto/V2rayConfig$BurstObservatoryObject$PingConfigObject;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 1223
+    .line 1255
     invoke-direct {p1, p2, v1}, Lcom/v2ray/ang/dto/V2rayConfig$BurstObservatoryObject;-><init>(Ljava/util/List;Lcom/v2ray/ang/dto/V2rayConfig$BurstObservatoryObject$PingConfigObject;)V
 
     move-object v9, p1
 
-    .line 1234
+    .line 1266
     :cond_3
     new-instance p1, Lcom/v2ray/ang/core/CoreConfigManager$BalancerStrategy;
 
@@ -965,7 +965,7 @@
 
     if-eqz p6, :cond_0
 
-    .line 1199
+    .line 1231
     const-string p3, "balancer-main"
 
     :cond_0
@@ -975,7 +975,7 @@
 
     const/4 p4, 0x0
 
-    .line 1196
+    .line 1228
     :cond_1
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/v2ray/ang/core/CoreConfigManager;->buildBalancerStrategy(Lcom/v2ray/ang/enums/BalancerStrategyType;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)Lcom/v2ray/ang/core/CoreConfigManager$BalancerStrategy;
 
@@ -1002,24 +1002,24 @@
         }
     .end annotation
 
-    .line 933
+    .line 965
     new-instance p0, Lcom/v2ray/ang/core/CoreConfigManager$$ExternalSyntheticLambda8;
 
     invoke-direct {p0}, Lcom/v2ray/ang/core/CoreConfigManager$$ExternalSyntheticLambda8;-><init>()V
 
-    .line 937
+    .line 969
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext;->getRoutingDomainRules()Ljava/util/List;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/Iterable;
 
-    .line 938
+    .line 970
     invoke-static {v0}, Lkotlin/collections/CollectionsKt;->asSequence(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
-    .line 939
+    .line 971
     new-instance v1, Lcom/v2ray/ang/core/CoreConfigManager$$ExternalSyntheticLambda9;
 
     invoke-direct {v1}, Lcom/v2ray/ang/core/CoreConfigManager$$ExternalSyntheticLambda9;-><init>()V
@@ -1028,7 +1028,7 @@
 
     move-result-object v0
 
-    .line 940
+    .line 972
     new-instance v1, Lcom/v2ray/ang/core/CoreConfigManager$$ExternalSyntheticLambda10;
 
     invoke-direct {v1}, Lcom/v2ray/ang/core/CoreConfigManager$$ExternalSyntheticLambda10;-><init>()V
@@ -1037,7 +1037,7 @@
 
     move-result-object v0
 
-    .line 1377
+    .line 1409
     invoke-interface {v0}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -1055,7 +1055,7 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 941
+    .line 973
     const-string v2, "geosite:cn"
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -1064,7 +1064,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 947
+    .line 979
     const-string v0, "geoip:cn"
 
     filled-new-array {v0}, [Ljava/lang/String;
@@ -1075,19 +1075,19 @@
 
     move-result-object v0
 
-    .line 948
+    .line 980
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext;->getRoutingDomainRules()Ljava/util/List;
 
     move-result-object p1
 
     check-cast p1, Ljava/lang/Iterable;
 
-    .line 949
+    .line 981
     invoke-static {p1}, Lkotlin/collections/CollectionsKt;->asSequence(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
-    .line 950
+    .line 982
     new-instance v1, Lcom/v2ray/ang/core/CoreConfigManager$$ExternalSyntheticLambda11;
 
     invoke-direct {v1}, Lcom/v2ray/ang/core/CoreConfigManager$$ExternalSyntheticLambda11;-><init>()V
@@ -1096,7 +1096,7 @@
 
     move-result-object p1
 
-    .line 951
+    .line 983
     new-instance v1, Lcom/v2ray/ang/core/CoreConfigManager$$ExternalSyntheticLambda1;
 
     invoke-direct {v1}, Lcom/v2ray/ang/core/CoreConfigManager$$ExternalSyntheticLambda1;-><init>()V
@@ -1105,7 +1105,7 @@
 
     move-result-object p1
 
-    .line 952
+    .line 984
     new-instance v1, Lcom/v2ray/ang/core/CoreConfigManager$$ExternalSyntheticLambda2;
 
     invoke-direct {v1, p0}, Lcom/v2ray/ang/core/CoreConfigManager$$ExternalSyntheticLambda2;-><init>(Lkotlin/jvm/functions/Function1;)V
@@ -1114,26 +1114,26 @@
 
     move-result-object p0
 
-    .line 953
+    .line 985
     invoke-static {p0}, Lkotlin/sequences/SequencesKt;->toList(Lkotlin/sequences/Sequence;)Ljava/util/List;
 
     move-result-object v4
 
-    .line 954
+    .line 986
     invoke-interface {v4}, Ljava/util/List;->isEmpty()Z
 
     move-result p0
 
     if-eqz p0, :cond_1
 
-    .line 955
+    .line 987
     invoke-static {}, Lkotlin/collections/CollectionsKt;->emptyList()Ljava/util/List;
 
     move-result-object p0
 
     return-object p0
 
-    .line 958
+    .line 990
     :cond_1
     new-instance p0, Ljava/util/ArrayList;
 
@@ -1141,10 +1141,10 @@
 
     check-cast p0, Ljava/util/List;
 
-    .line 959
+    .line 991
     check-cast p3, Ljava/lang/Iterable;
 
-    .line 1380
+    .line 1412
     invoke-interface {p3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -1173,7 +1173,7 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 960
+    .line 992
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v3, "domestic-dns_cn_expect_"
@@ -1186,17 +1186,17 @@
 
     move-result-object v8
 
-    .line 962
+    .line 994
     new-instance v1, Lcom/v2ray/ang/dto/V2rayConfig$DnsBean$ServersBean;
 
-    .line 965
+    .line 997
     move-object v5, v0
 
     check-cast v5, Ljava/util/List;
 
     const/4 p3, 0x1
 
-    .line 966
+    .line 998
     invoke-static {p3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v7
@@ -1209,13 +1209,13 @@
 
     const/4 v6, 0x0
 
-    .line 962
+    .line 994
     invoke-direct/range {v1 .. v10}, Lcom/v2ray/ang/dto/V2rayConfig$DnsBean$ServersBean;-><init>(Ljava/lang/String;Ljava/lang/Integer;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 961
+    .line 993
     invoke-virtual {p2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 970
+    .line 1002
     invoke-interface {p0, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     move p3, v11
@@ -1225,7 +1225,7 @@
     :cond_3
     return-object p0
 
-    .line 944
+    .line 976
     :cond_4
     invoke-static {}, Lkotlin/collections/CollectionsKt;->emptyList()Ljava/util/List;
 
@@ -1241,7 +1241,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 934
+    .line 966
     const-string v0, "geosite:"
 
     const/4 v1, 0x0
@@ -1272,7 +1272,7 @@
 
     if-nez v0, :cond_1
 
-    .line 935
+    .line 967
     :cond_0
     const-string v0, "geosite:cn"
 
@@ -1298,7 +1298,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 939
+    .line 971
     invoke-virtual {p0}, Lcom/v2ray/ang/dto/CoreConfigContext$RoutingDomainRule;->getOutboundTag()Ljava/lang/String;
 
     move-result-object p0
@@ -1319,7 +1319,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 940
+    .line 972
     invoke-virtual {p0}, Lcom/v2ray/ang/dto/CoreConfigContext$RoutingDomainRule;->getDomain()Ljava/util/List;
 
     move-result-object p0
@@ -1340,7 +1340,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 950
+    .line 982
     invoke-virtual {p0}, Lcom/v2ray/ang/dto/CoreConfigContext$RoutingDomainRule;->getOutboundTag()Ljava/lang/String;
 
     move-result-object p0
@@ -1361,7 +1361,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 951
+    .line 983
     invoke-virtual {p0}, Lcom/v2ray/ang/dto/CoreConfigContext$RoutingDomainRule;->getDomain()Ljava/util/List;
 
     move-result-object p0
@@ -1382,7 +1382,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 952
+    .line 984
     invoke-interface {p0, p1}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1419,21 +1419,21 @@
 
     move-object/from16 v0, p2
 
-    .line 981
+    .line 1013
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     check-cast v1, Ljava/util/List;
 
-    .line 982
+    .line 1014
     invoke-virtual/range {p1 .. p1}, Lcom/v2ray/ang/dto/CoreConfigContext;->getRoutingDomainRules()Ljava/util/List;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/Iterable;
 
-    .line 1383
+    .line 1415
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -1462,12 +1462,12 @@
     :cond_0
     check-cast v5, Lcom/v2ray/ang/dto/CoreConfigContext$RoutingDomainRule;
 
-    .line 983
+    .line 1015
     invoke-virtual {v5}, Lcom/v2ray/ang/dto/CoreConfigContext$RoutingDomainRule;->getOutboundTag()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 984
+    .line 1016
     const-string v8, "direct"
 
     invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -1476,12 +1476,12 @@
 
     if-eqz v8, :cond_2
 
-    .line 985
+    .line 1017
     move-object/from16 v7, p4
 
     check-cast v7, Ljava/lang/Iterable;
 
-    .line 1385
+    .line 1417
     invoke-interface {v7}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v7
@@ -1510,7 +1510,7 @@
 
     check-cast v12, Ljava/lang/String;
 
-    .line 986
+    .line 1018
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v11, "domestic-dns_"
@@ -1529,17 +1529,17 @@
 
     move-result-object v18
 
-    .line 988
+    .line 1020
     new-instance v11, Lcom/v2ray/ang/dto/V2rayConfig$DnsBean$ServersBean;
 
-    .line 990
+    .line 1022
     invoke-virtual {v5}, Lcom/v2ray/ang/dto/CoreConfigContext$RoutingDomainRule;->getDomain()Ljava/util/List;
 
     move-result-object v14
 
     const/4 v8, 0x1
 
-    .line 991
+    .line 1023
     invoke-static {v8}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v17
@@ -1554,22 +1554,22 @@
 
     const/16 v16, 0x0
 
-    .line 988
+    .line 1020
     invoke-direct/range {v11 .. v20}, Lcom/v2ray/ang/dto/V2rayConfig$DnsBean$ServersBean;-><init>(Ljava/lang/String;Ljava/lang/Integer;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     move-object/from16 v8, v18
 
-    .line 987
+    .line 1019
     invoke-virtual {v0, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 995
+    .line 1027
     invoke-interface {v1, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     move v8, v10
 
     goto :goto_1
 
-    .line 999
+    .line 1031
     :cond_2
     const-string v4, "block"
 
@@ -1579,10 +1579,10 @@
 
     if-nez v4, :cond_3
 
-    .line 1002
+    .line 1034
     new-instance v7, Lcom/v2ray/ang/dto/V2rayConfig$DnsBean$ServersBean;
 
-    .line 1003
+    .line 1035
     invoke-static/range {p3 .. p3}, Lkotlin/collections/CollectionsKt;->first(Ljava/util/List;)Ljava/lang/Object;
 
     move-result-object v4
@@ -1591,7 +1591,7 @@
 
     check-cast v8, Ljava/lang/String;
 
-    .line 1004
+    .line 1036
     invoke-virtual {v5}, Lcom/v2ray/ang/dto/CoreConfigContext$RoutingDomainRule;->getDomain()Ljava/util/List;
 
     move-result-object v10
@@ -1610,10 +1610,10 @@
 
     const/4 v14, 0x0
 
-    .line 1002
+    .line 1034
     invoke-direct/range {v7 .. v16}, Lcom/v2ray/ang/dto/V2rayConfig$DnsBean$ServersBean;-><init>(Ljava/lang/String;Ljava/lang/Integer;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 1001
+    .line 1033
     invoke-virtual {v0, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_3
@@ -1639,26 +1639,26 @@
         }
     .end annotation
 
-    .line 888
+    .line 920
     new-instance p0, Ljava/util/LinkedHashMap;
 
     invoke-direct {p0}, Ljava/util/LinkedHashMap;-><init>()V
 
     check-cast p0, Ljava/util/Map;
 
-    .line 890
+    .line 922
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext;->getRoutingDomainRules()Ljava/util/List;
 
     move-result-object p1
 
     check-cast p1, Ljava/lang/Iterable;
 
-    .line 891
+    .line 923
     invoke-static {p1}, Lkotlin/collections/CollectionsKt;->asSequence(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
-    .line 892
+    .line 924
     new-instance v0, Lcom/v2ray/ang/core/CoreConfigManager$$ExternalSyntheticLambda0;
 
     invoke-direct {v0}, Lcom/v2ray/ang/core/CoreConfigManager$$ExternalSyntheticLambda0;-><init>()V
@@ -1667,7 +1667,7 @@
 
     move-result-object p1
 
-    .line 893
+    .line 925
     new-instance v0, Lcom/v2ray/ang/core/CoreConfigManager$$ExternalSyntheticLambda3;
 
     invoke-direct {v0}, Lcom/v2ray/ang/core/CoreConfigManager$$ExternalSyntheticLambda3;-><init>()V
@@ -1676,12 +1676,12 @@
 
     move-result-object p1
 
-    .line 894
+    .line 926
     invoke-static {p1}, Lkotlin/sequences/SequencesKt;->toList(Lkotlin/sequences/Sequence;)Ljava/util/List;
 
     move-result-object p1
 
-    .line 895
+    .line 927
     move-object v0, p1
 
     check-cast v0, Ljava/util/Collection;
@@ -1694,10 +1694,10 @@
 
     if-nez v0, :cond_1
 
-    .line 896
+    .line 928
     check-cast p1, Ljava/lang/Iterable;
 
-    .line 1364
+    .line 1396
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-static {p1, v1}, Lkotlin/collections/CollectionsKt;->collectionSizeOrDefault(Ljava/lang/Iterable;I)I
@@ -1708,7 +1708,7 @@
 
     check-cast v0, Ljava/util/Collection;
 
-    .line 1365
+    .line 1397
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -1724,32 +1724,32 @@
 
     move-result-object v2
 
-    .line 1366
+    .line 1398
     check-cast v2, Ljava/lang/String;
 
-    .line 896
+    .line 928
     const-string v3, "127.0.0.1"
 
     invoke-static {v2, v3}, Lkotlin/TuplesKt;->to(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v2
 
-    .line 1366
+    .line 1398
     invoke-interface {v0, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 1367
+    .line 1399
     :cond_0
     check-cast v0, Ljava/util/List;
 
-    .line 1364
+    .line 1396
     check-cast v0, Ljava/lang/Iterable;
 
-    .line 896
+    .line 928
     invoke-static {p0, v0}, Lkotlin/collections/MapsKt;->putAll(Ljava/util/Map;Ljava/lang/Iterable;)V
 
-    .line 899
+    .line 931
     :cond_1
     const-string p1, "domain:googleapis.cn"
 
@@ -1757,7 +1757,7 @@
 
     invoke-interface {p0, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 900
+    .line 932
     sget-object p1, Lcom/v2ray/ang/AppConfig;->INSTANCE:Lcom/v2ray/ang/AppConfig;
 
     invoke-virtual {p1}, Lcom/v2ray/ang/AppConfig;->getDNS_ALIDNS_ADDRESSES()Ljava/util/ArrayList;
@@ -1768,7 +1768,7 @@
 
     invoke-interface {p0, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 901
+    .line 933
     sget-object p1, Lcom/v2ray/ang/AppConfig;->INSTANCE:Lcom/v2ray/ang/AppConfig;
 
     invoke-virtual {p1}, Lcom/v2ray/ang/AppConfig;->getDNS_CISCO_SSE_ADDRESSES()Ljava/util/ArrayList;
@@ -1779,7 +1779,7 @@
 
     invoke-interface {p0, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 902
+    .line 934
     sget-object p1, Lcom/v2ray/ang/AppConfig;->INSTANCE:Lcom/v2ray/ang/AppConfig;
 
     invoke-virtual {p1}, Lcom/v2ray/ang/AppConfig;->getDNS_CISCO_UMBRELLA_ADDRESSES()Ljava/util/ArrayList;
@@ -1790,7 +1790,7 @@
 
     invoke-interface {p0, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 903
+    .line 935
     sget-object p1, Lcom/v2ray/ang/AppConfig;->INSTANCE:Lcom/v2ray/ang/AppConfig;
 
     invoke-virtual {p1}, Lcom/v2ray/ang/AppConfig;->getDNS_CLOUDFLARE_ONE_ADDRESSES()Ljava/util/ArrayList;
@@ -1801,7 +1801,7 @@
 
     invoke-interface {p0, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 904
+    .line 936
     sget-object p1, Lcom/v2ray/ang/AppConfig;->INSTANCE:Lcom/v2ray/ang/AppConfig;
 
     invoke-virtual {p1}, Lcom/v2ray/ang/AppConfig;->getDNS_CLOUDFLARE_ONEDOT_DNS_ADDRESSES()Ljava/util/ArrayList;
@@ -1812,7 +1812,7 @@
 
     invoke-interface {p0, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 905
+    .line 937
     sget-object p1, Lcom/v2ray/ang/AppConfig;->INSTANCE:Lcom/v2ray/ang/AppConfig;
 
     invoke-virtual {p1}, Lcom/v2ray/ang/AppConfig;->getDNS_CLOUDFLARE_DNS_COM_ADDRESSES()Ljava/util/ArrayList;
@@ -1823,7 +1823,7 @@
 
     invoke-interface {p0, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 906
+    .line 938
     sget-object p1, Lcom/v2ray/ang/AppConfig;->INSTANCE:Lcom/v2ray/ang/AppConfig;
 
     invoke-virtual {p1}, Lcom/v2ray/ang/AppConfig;->getDNS_CLOUDFLARE_DNS_ADDRESSES()Ljava/util/ArrayList;
@@ -1834,7 +1834,7 @@
 
     invoke-interface {p0, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 907
+    .line 939
     sget-object p1, Lcom/v2ray/ang/AppConfig;->INSTANCE:Lcom/v2ray/ang/AppConfig;
 
     invoke-virtual {p1}, Lcom/v2ray/ang/AppConfig;->getDNS_CLOUDFLARE_WARP_ADDRESSES()Ljava/util/ArrayList;
@@ -1845,7 +1845,7 @@
 
     invoke-interface {p0, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 908
+    .line 940
     sget-object p1, Lcom/v2ray/ang/AppConfig;->INSTANCE:Lcom/v2ray/ang/AppConfig;
 
     invoke-virtual {p1}, Lcom/v2ray/ang/AppConfig;->getDNS_DNSPOD_DOH_ADDRESSES()Ljava/util/ArrayList;
@@ -1856,7 +1856,7 @@
 
     invoke-interface {p0, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 909
+    .line 941
     sget-object p1, Lcom/v2ray/ang/AppConfig;->INSTANCE:Lcom/v2ray/ang/AppConfig;
 
     invoke-virtual {p1}, Lcom/v2ray/ang/AppConfig;->getDNS_DNSPOD_DOT_ADDRESSES()Ljava/util/ArrayList;
@@ -1867,7 +1867,7 @@
 
     invoke-interface {p0, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 910
+    .line 942
     sget-object p1, Lcom/v2ray/ang/AppConfig;->INSTANCE:Lcom/v2ray/ang/AppConfig;
 
     invoke-virtual {p1}, Lcom/v2ray/ang/AppConfig;->getDNS_GOOGLE_ADDRESSES()Ljava/util/ArrayList;
@@ -1878,7 +1878,7 @@
 
     invoke-interface {p0, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 911
+    .line 943
     sget-object p1, Lcom/v2ray/ang/AppConfig;->INSTANCE:Lcom/v2ray/ang/AppConfig;
 
     invoke-virtual {p1}, Lcom/v2ray/ang/AppConfig;->getDNS_QUAD9_ADDRESSES()Ljava/util/ArrayList;
@@ -1889,7 +1889,7 @@
 
     invoke-interface {p0, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 912
+    .line 944
     sget-object p1, Lcom/v2ray/ang/AppConfig;->INSTANCE:Lcom/v2ray/ang/AppConfig;
 
     invoke-virtual {p1}, Lcom/v2ray/ang/AppConfig;->getDNS_SB_ADDRESSES()Ljava/util/ArrayList;
@@ -1900,7 +1900,7 @@
 
     invoke-interface {p0, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 913
+    .line 945
     sget-object p1, Lcom/v2ray/ang/AppConfig;->INSTANCE:Lcom/v2ray/ang/AppConfig;
 
     invoke-virtual {p1}, Lcom/v2ray/ang/AppConfig;->getDNS_YANDEX_ADDRESSES()Ljava/util/ArrayList;
@@ -1911,7 +1911,7 @@
 
     invoke-interface {p0, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 915
+    .line 947
     sget-object p1, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v0, "pref_dns_hosts"
@@ -1920,7 +1920,7 @@
 
     move-result-object p1
 
-    .line 916
+    .line 948
     move-object v2, p1
 
     check-cast v2, Ljava/lang/CharSequence;
@@ -1935,7 +1935,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 917
+    .line 949
     const-string p1, ","
 
     filled-new-array {p1}, [Ljava/lang/String;
@@ -1969,14 +1969,14 @@
     :cond_3
     check-cast p1, Ljava/lang/Iterable;
 
-    .line 1368
+    .line 1400
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     check-cast v2, Ljava/util/Collection;
 
-    .line 1369
+    .line 1401
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -2001,7 +2001,7 @@
 
     check-cast v6, Ljava/lang/String;
 
-    .line 918
+    .line 950
     check-cast v6, Ljava/lang/CharSequence;
 
     invoke-static {v6}, Lkotlin/text/StringsKt;->isBlank(Ljava/lang/CharSequence;)Z
@@ -2020,19 +2020,19 @@
 
     if-eqz v4, :cond_4
 
-    .line 1369
+    .line 1401
     invoke-interface {v2, v3}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
 
-    .line 1370
+    .line 1402
     :cond_5
     check-cast v2, Ljava/util/List;
 
-    .line 1368
+    .line 1400
     check-cast v2, Ljava/lang/Iterable;
 
-    .line 1371
+    .line 1403
     invoke-static {v2, v1}, Lkotlin/collections/CollectionsKt;->collectionSizeOrDefault(Ljava/lang/Iterable;I)I
 
     move-result p1
@@ -2047,14 +2047,14 @@
 
     move-result p1
 
-    .line 1372
+    .line 1404
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0, p1}, Ljava/util/LinkedHashMap;-><init>(I)V
 
     check-cast v0, Ljava/util/Map;
 
-    .line 1373
+    .line 1405
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -2070,10 +2070,10 @@
 
     move-result-object v1
 
-    .line 1374
+    .line 1406
     check-cast v1, Ljava/lang/String;
 
-    .line 923
+    .line 955
     move-object v6, v1
 
     check-cast v6, Ljava/lang/CharSequence;
@@ -2094,7 +2094,7 @@
 
     move-result-object v1
 
-    .line 924
+    .line 956
     invoke-interface {v1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -2133,7 +2133,7 @@
 
     move-result-object v1
 
-    .line 1374
+    .line 1406
     invoke-virtual {v1}, Lkotlin/Pair;->getFirst()Ljava/lang/Object;
 
     move-result-object v2
@@ -2146,7 +2146,7 @@
 
     goto :goto_3
 
-    .line 926
+    .line 958
     :cond_6
     invoke-interface {p0, v0}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
@@ -2161,7 +2161,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 892
+    .line 924
     invoke-virtual {p0}, Lcom/v2ray/ang/dto/CoreConfigContext$RoutingDomainRule;->getOutboundTag()Ljava/lang/String;
 
     move-result-object p0
@@ -2182,7 +2182,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 893
+    .line 925
     invoke-virtual {p0}, Lcom/v2ray/ang/dto/CoreConfigContext$RoutingDomainRule;->getDomain()Ljava/util/List;
 
     move-result-object p0
@@ -2217,7 +2217,7 @@
         }
     .end annotation
 
-    .line 212
+    .line 244
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext$ResolvedOutbound;->getTag()Ljava/lang/String;
 
     move-result-object v0
@@ -2228,7 +2228,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 213
+    .line 245
     sget-object p0, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
 
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext$ResolvedOutbound;->getTag()Ljava/lang/String;
@@ -2257,7 +2257,7 @@
 
     return-void
 
-    .line 217
+    .line 249
     :cond_0
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext$ResolvedOutbound;->getResolvedType()Lcom/v2ray/ang/enums/CoreResolvedType;
 
@@ -2283,12 +2283,12 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 232
+    .line 264
     invoke-direct/range {p0 .. p6}, Lcom/v2ray/ang/core/CoreConfigManager;->handlePolicyGroupResolvedOutbound(Lcom/v2ray/ang/dto/CoreConfigContext$ResolvedOutbound;ZLjava/util/Set;Lcom/v2ray/ang/dto/V2rayConfig;Ljava/util/Map;Ljava/util/List;)V
 
     return-void
 
-    .line 217
+    .line 249
     :cond_1
     new-instance p0, Lkotlin/NoWhenBranchMatchedException;
 
@@ -2296,13 +2296,13 @@
 
     throw p0
 
-    .line 225
+    .line 257
     :cond_2
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/v2ray/ang/core/CoreConfigManager;->handleProxyChainResolvedOutbound(Lcom/v2ray/ang/dto/CoreConfigContext$ResolvedOutbound;ZLjava/util/Set;Lcom/v2ray/ang/dto/V2rayConfig;)V
 
     return-void
 
-    .line 218
+    .line 250
     :cond_3
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/v2ray/ang/core/CoreConfigManager;->handleNormalResolvedOutbound(Lcom/v2ray/ang/dto/CoreConfigContext$ResolvedOutbound;ZLjava/util/Set;Lcom/v2ray/ang/dto/V2rayConfig;)V
 
@@ -2316,7 +2316,7 @@
 
     move-object/from16 v1, p1
 
-    .line 137
+    .line 169
     invoke-virtual {v1}, Lcom/v2ray/ang/dto/CoreConfigContext;->getResolvedOutbounds()Ljava/util/List;
 
     move-result-object v2
@@ -2329,7 +2329,7 @@
 
     if-nez v2, :cond_8
 
-    .line 138
+    .line 170
     invoke-virtual {v1}, Lcom/v2ray/ang/dto/CoreConfigContext;->getResolvedOutbounds()Ljava/util/List;
 
     move-result-object v2
@@ -2340,12 +2340,12 @@
 
     check-cast v2, Lcom/v2ray/ang/dto/CoreConfigContext$ResolvedOutbound;
 
-    .line 140
+    .line 172
     invoke-direct/range {p0 .. p1}, Lcom/v2ray/ang/core/CoreConfigManager;->initV2rayConfig(Lcom/v2ray/ang/dto/CoreConfigContext;)Lcom/v2ray/ang/dto/V2rayConfig;
 
     move-result-object v7
 
-    .line 141
+    .line 173
     invoke-virtual {v7}, Lcom/v2ray/ang/dto/V2rayConfig;->getLog()Lcom/v2ray/ang/dto/V2rayConfig$LogBean;
 
     move-result-object v3
@@ -2365,7 +2365,7 @@
     :cond_0
     invoke-virtual {v3, v4}, Lcom/v2ray/ang/dto/V2rayConfig$LogBean;->setLoglevel(Ljava/lang/String;)V
 
-    .line 142
+    .line 174
     invoke-virtual {v2}, Lcom/v2ray/ang/dto/CoreConfigContext$ResolvedOutbound;->getProfile()Lcom/v2ray/ang/dto/entities/ProfileItem;
 
     move-result-object v3
@@ -2376,10 +2376,10 @@
 
     invoke-virtual {v7, v3}, Lcom/v2ray/ang/dto/V2rayConfig;->setRemarks(Ljava/lang/String;)V
 
-    .line 144
+    .line 176
     invoke-direct {v0, v7}, Lcom/v2ray/ang/core/CoreConfigManager;->configureInbounds(Lcom/v2ray/ang/dto/V2rayConfig;)V
 
-    .line 146
+    .line 178
     invoke-virtual {v7}, Lcom/v2ray/ang/dto/V2rayConfig;->getOutbounds()Ljava/util/ArrayList;
 
     move-result-object v3
@@ -2394,14 +2394,14 @@
 
     if-nez v3, :cond_1
 
-    .line 147
+    .line 179
     invoke-virtual {v7}, Lcom/v2ray/ang/dto/V2rayConfig;->getOutbounds()Ljava/util/ArrayList;
 
     move-result-object v3
 
     invoke-virtual {v3, v10}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 149
+    .line 181
     :cond_1
     invoke-virtual {v7}, Lcom/v2ray/ang/dto/V2rayConfig;->getOutbounds()Ljava/util/ArrayList;
 
@@ -2417,7 +2417,7 @@
 
     check-cast v4, Ljava/util/Collection;
 
-    .line 1288
+    .line 1320
     invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -2433,26 +2433,26 @@
 
     move-result-object v5
 
-    .line 1289
+    .line 1321
     check-cast v5, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;
 
-    .line 149
+    .line 181
     invoke-virtual {v5}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;->getTag()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 1289
+    .line 1321
     invoke-interface {v4, v5}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 149
+    .line 181
     :cond_2
     move-object v6, v4
 
     check-cast v6, Ljava/util/Set;
 
-    .line 150
+    .line 182
     new-instance v3, Ljava/util/LinkedHashMap;
 
     invoke-direct {v3}, Ljava/util/LinkedHashMap;-><init>()V
@@ -2461,7 +2461,7 @@
 
     check-cast v8, Ljava/util/Map;
 
-    .line 151
+    .line 183
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
@@ -2470,14 +2470,14 @@
 
     check-cast v9, Ljava/util/List;
 
-    .line 155
+    .line 187
     invoke-virtual {v1}, Lcom/v2ray/ang/dto/CoreConfigContext;->getResolvedOutbounds()Ljava/util/List;
 
     move-result-object v3
 
     check-cast v3, Ljava/lang/Iterable;
 
-    .line 1292
+    .line 1324
     invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v11
@@ -2506,7 +2506,7 @@
 
     move v5, v3
 
-    .line 156
+    .line 188
     sget-object v3, Lcom/v2ray/ang/core/CoreConfigManager;->INSTANCE:Lcom/v2ray/ang/core/CoreConfigManager;
 
     if-nez v5, :cond_4
@@ -2525,23 +2525,23 @@
 
     goto :goto_1
 
-    .line 167
+    .line 199
     :cond_5
     invoke-direct {v0, v1, v7, v8}, Lcom/v2ray/ang/core/CoreConfigManager;->configureRouting(Lcom/v2ray/ang/dto/CoreConfigContext;Lcom/v2ray/ang/dto/V2rayConfig;Ljava/util/Map;)V
 
-    .line 168
+    .line 200
     invoke-direct {v0, v7}, Lcom/v2ray/ang/core/CoreConfigManager;->configureFakeDns(Lcom/v2ray/ang/dto/V2rayConfig;)V
 
-    .line 169
+    .line 201
     invoke-direct {v0, v1, v7, v8}, Lcom/v2ray/ang/core/CoreConfigManager;->configureDns(Lcom/v2ray/ang/dto/CoreConfigContext;Lcom/v2ray/ang/dto/V2rayConfig;Ljava/util/Map;)V
 
-    .line 170
+    .line 202
     invoke-direct {v0, v1, v7}, Lcom/v2ray/ang/core/CoreConfigManager;->configureLocalDns(Lcom/v2ray/ang/dto/CoreConfigContext;Lcom/v2ray/ang/dto/V2rayConfig;)V
 
-    .line 171
+    .line 203
     invoke-direct {v0, v7}, Lcom/v2ray/ang/core/CoreConfigManager;->configureRootModeDns(Lcom/v2ray/ang/dto/V2rayConfig;)V
 
-    .line 175
+    .line 207
     invoke-virtual {v2}, Lcom/v2ray/ang/dto/CoreConfigContext$ResolvedOutbound;->getResolvedType()Lcom/v2ray/ang/enums/CoreResolvedType;
 
     move-result-object v1
@@ -2550,7 +2550,7 @@
 
     if-ne v1, v2, :cond_7
 
-    .line 176
+    .line 208
     invoke-virtual {v7}, Lcom/v2ray/ang/dto/V2rayConfig;->getRouting()Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean;
 
     move-result-object v1
@@ -2567,7 +2567,7 @@
 
     if-eqz v1, :cond_6
 
-    .line 177
+    .line 209
     invoke-virtual {v7}, Lcom/v2ray/ang/dto/V2rayConfig;->getRouting()Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean;
 
     move-result-object v1
@@ -2576,10 +2576,10 @@
 
     move-result-object v1
 
-    .line 178
+    .line 210
     new-instance v10, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$RulesBean;
 
-    .line 179
+    .line 211
     const-string v2, "0.0.0.0/0"
 
     const-string v3, "::/0"
@@ -2608,7 +2608,7 @@
 
     const/4 v15, 0x0
 
-    .line 178
+    .line 210
     const-string v16, "balancer-main"
 
     const/16 v17, 0x0
@@ -2631,12 +2631,12 @@
 
     invoke-direct/range {v10 .. v27}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$RulesBean;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 177
+    .line 209
     invoke-virtual {v1, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_3
 
-    .line 184
+    .line 216
     :cond_6
     invoke-virtual {v7}, Lcom/v2ray/ang/dto/V2rayConfig;->getRouting()Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean;
 
@@ -2646,7 +2646,7 @@
 
     move-result-object v1
 
-    .line 185
+    .line 217
     new-instance v10, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$RulesBean;
 
     const/16 v26, 0x7edf
@@ -2669,7 +2669,7 @@
 
     const/16 v18, 0x0
 
-    const-string v19, "tcp,udp"
+    const-string/jumbo v19, "tcp,udp"
 
     const/16 v20, 0x0
 
@@ -2685,23 +2685,23 @@
 
     invoke-direct/range {v10 .. v27}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$RulesBean;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 184
+    .line 216
     invoke-virtual {v1, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 193
+    .line 225
     :cond_7
     :goto_3
     invoke-direct {v0, v7, v9}, Lcom/v2ray/ang/core/CoreConfigManager;->applyObservability(Lcom/v2ray/ang/dto/V2rayConfig;Ljava/util/List;)V
 
-    .line 194
+    .line 226
     invoke-direct {v0, v7}, Lcom/v2ray/ang/core/CoreConfigManager;->applySpeedDisabled(Lcom/v2ray/ang/dto/V2rayConfig;)V
 
-    .line 195
+    .line 227
     invoke-direct {v0, v7}, Lcom/v2ray/ang/core/CoreConfigManager;->resolveOutboundDomainsToHosts(Lcom/v2ray/ang/dto/V2rayConfig;)V
 
     return-object v7
 
-    .line 137
+    .line 169
     :cond_8
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -2719,12 +2719,12 @@
 .method private final buildV2rayCustomConfig(Lcom/v2ray/ang/dto/CoreConfigContext;)Lcom/v2ray/ang/dto/ConfigResult;
     .locals 14
 
-    .line 81
+    .line 90
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 82
+    .line 91
     sget-object v1, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext;->getGuid()Ljava/lang/String;
@@ -2737,9 +2737,10 @@
 
     if-nez v6, :cond_0
 
-    .line 83
+    .line 92
     new-instance v7, Lcom/v2ray/ang/dto/ConfigResult;
 
+    .line 94
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext;->getGuid()Ljava/lang/String;
 
     move-result-object v9
@@ -2752,13 +2753,14 @@
 
     const/4 v10, 0x0
 
-    const-string v11, "Custom config is empty"
+    .line 92
+    const-string v11, "Failed to build config context, config is empty"
 
     invoke-direct/range {v7 .. v13}, Lcom/v2ray/ang/dto/ConfigResult;-><init>(ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v7
 
-    .line 84
+    .line 97
     :cond_0
     new-instance v3, Lcom/v2ray/ang/dto/ConfigResult;
 
@@ -2776,24 +2778,14 @@
 
     invoke-direct/range {v3 .. v9}, Lcom/v2ray/ang/dto/ConfigResult;-><init>(ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 85
-    invoke-direct {p0}, Lcom/v2ray/ang/core/CoreConfigManager;->needTun()Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    goto/16 :goto_12
-
-    .line 89
-    :cond_1
+    .line 99
     sget-object v1, Lcom/v2ray/ang/util/JsonUtil;->INSTANCE:Lcom/v2ray/ang/util/JsonUtil;
 
     invoke-virtual {v1, v6}, Lcom/v2ray/ang/util/JsonUtil;->parseString(Ljava/lang/String;)Lcom/google/gson/JsonObject;
 
     move-result-object v1
 
-    if-eqz v1, :cond_22
+    if-eqz v1, :cond_25
 
     invoke-virtual {v1}, Lcom/google/gson/JsonObject;->isJsonObject()Z
 
@@ -2801,594 +2793,132 @@
 
     const/4 v4, 0x0
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_1
 
     goto :goto_0
 
-    :cond_2
+    :cond_1
     move-object v1, v4
 
     :goto_0
-    if-eqz v1, :cond_22
+    if-eqz v1, :cond_25
 
     invoke-virtual {v1}, Lcom/google/gson/JsonObject;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v1
 
-    if-nez v1, :cond_3
+    if-nez v1, :cond_2
 
-    goto/16 :goto_12
+    goto/16 :goto_13
 
-    .line 92
-    :cond_3
-    sget-object v2, Lcom/v2ray/ang/handler/SettingsManager;->INSTANCE:Lcom/v2ray/ang/handler/SettingsManager;
+    .line 102
+    :cond_2
+    sget-object v2, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
-    invoke-virtual {v2}, Lcom/v2ray/ang/handler/SettingsManager;->canUseProcessRouting()Z
+    const-string v5, "pref_speed_enabled"
+
+    invoke-virtual {v2, v5}, Lcom/v2ray/ang/handler/MmkvManager;->decodeSettingsBool(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_15
+    const-string v5, "policy"
 
-    .line 93
-    const-string v2, "routing"
+    const-string/jumbo v6, "stats"
 
-    invoke-virtual {v1, v2}, Lcom/google/gson/JsonObject;->get(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+    const/4 v7, 0x1
 
-    move-result-object v2
+    if-ne v2, v7, :cond_4
 
-    if-eqz v2, :cond_6
+    .line 103
+    invoke-virtual {v1, v6}, Lcom/google/gson/JsonObject;->has(Ljava/lang/String;)Z
 
-    invoke-virtual {v2}, Lcom/google/gson/JsonElement;->isJsonObject()Z
+    move-result v2
 
-    move-result v5
+    if-nez v2, :cond_3
 
-    if-eqz v5, :cond_4
+    .line 104
+    new-instance v2, Lcom/google/gson/JsonObject;
+
+    invoke-direct {v2}, Lcom/google/gson/JsonObject;-><init>()V
+
+    check-cast v2, Lcom/google/gson/JsonElement;
+
+    invoke-virtual {v1, v6, v2}, Lcom/google/gson/JsonObject;->add(Ljava/lang/String;Lcom/google/gson/JsonElement;)V
+
+    .line 106
+    :cond_3
+    invoke-virtual {v1, v5}, Lcom/google/gson/JsonObject;->has(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_5
+
+    .line 107
+    new-instance v2, Lcom/google/gson/JsonObject;
+
+    invoke-direct {v2}, Lcom/google/gson/JsonObject;-><init>()V
+
+    .line 108
+    new-instance v6, Lcom/google/gson/JsonObject;
+
+    invoke-direct {v6}, Lcom/google/gson/JsonObject;-><init>()V
+
+    .line 109
+    const-string/jumbo v8, "statsOutboundUplink"
+
+    invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v9
+
+    invoke-virtual {v6, v8, v9}, Lcom/google/gson/JsonObject;->addProperty(Ljava/lang/String;Ljava/lang/Boolean;)V
+
+    .line 110
+    const-string/jumbo v8, "statsOutboundDownlink"
+
+    invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v8, v7}, Lcom/google/gson/JsonObject;->addProperty(Ljava/lang/String;Ljava/lang/Boolean;)V
+
+    .line 111
+    const-string/jumbo v7, "system"
+
+    check-cast v6, Lcom/google/gson/JsonElement;
+
+    invoke-virtual {v2, v7, v6}, Lcom/google/gson/JsonObject;->add(Ljava/lang/String;Lcom/google/gson/JsonElement;)V
+
+    .line 112
+    check-cast v2, Lcom/google/gson/JsonElement;
+
+    invoke-virtual {v1, v5, v2}, Lcom/google/gson/JsonObject;->add(Ljava/lang/String;Lcom/google/gson/JsonElement;)V
 
     goto :goto_1
 
-    :cond_4
-    move-object v2, v4
-
-    :goto_1
-    if-eqz v2, :cond_6
-
-    invoke-virtual {v2}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_6
-
-    .line 94
-    const-string v5, "rules"
-
-    invoke-virtual {v2, v5}, Lcom/google/gson/JsonObject;->get(Ljava/lang/String;)Lcom/google/gson/JsonElement;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_6
-
-    invoke-virtual {v2}, Lcom/google/gson/JsonElement;->isJsonArray()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_5
-
-    goto :goto_2
-
-    :cond_5
-    move-object v2, v4
-
-    :goto_2
-    if-eqz v2, :cond_6
-
-    invoke-virtual {v2}, Lcom/google/gson/JsonElement;->getAsJsonArray()Lcom/google/gson/JsonArray;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_6
-
-    goto :goto_3
-
-    .line 95
-    :cond_6
-    new-instance v2, Lcom/google/gson/JsonArray;
-
-    invoke-direct {v2}, Lcom/google/gson/JsonArray;-><init>()V
-
-    .line 97
-    :goto_3
-    invoke-virtual {v2}, Lcom/google/gson/JsonArray;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    const-string v5, "iterator(...)"
-
-    invoke-static {v2, v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    :cond_7
-    :goto_4
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_15
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lcom/google/gson/JsonElement;
-
-    .line 98
-    invoke-virtual {v5}, Lcom/google/gson/JsonElement;->isJsonObject()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_8
-
-    goto :goto_5
-
-    :cond_8
-    move-object v5, v4
-
-    :goto_5
-    if-eqz v5, :cond_7
-
-    invoke-virtual {v5}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
-
-    move-result-object v5
-
-    if-nez v5, :cond_9
-
-    goto :goto_4
-
-    .line 99
-    :cond_9
-    const-string v6, "process"
-
-    invoke-virtual {v5, v6}, Lcom/google/gson/JsonObject;->get(Ljava/lang/String;)Lcom/google/gson/JsonElement;
-
-    move-result-object v7
-
-    if-eqz v7, :cond_7
-
-    invoke-virtual {v7}, Lcom/google/gson/JsonElement;->isJsonArray()Z
-
-    move-result v8
-
-    if-eqz v8, :cond_a
-
-    goto :goto_6
-
-    :cond_a
-    move-object v7, v4
-
-    :goto_6
-    if-eqz v7, :cond_7
-
-    invoke-virtual {v7}, Lcom/google/gson/JsonElement;->getAsJsonArray()Lcom/google/gson/JsonArray;
-
-    move-result-object v7
-
-    if-nez v7, :cond_b
-
-    goto :goto_4
-
-    .line 100
-    :cond_b
-    check-cast v7, Ljava/lang/Iterable;
-
-    .line 1267
-    new-instance v8, Ljava/util/ArrayList;
-
-    invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
-
-    check-cast v8, Ljava/util/Collection;
-
-    .line 1277
-    invoke-interface {v7}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v7
-
-    :cond_c
-    :goto_7
-    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v9
-
-    if-eqz v9, :cond_f
-
-    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v9
-
-    .line 1276
-    check-cast v9, Lcom/google/gson/JsonElement;
-
-    .line 101
-    invoke-virtual {v9}, Lcom/google/gson/JsonElement;->isJsonPrimitive()Z
-
-    move-result v10
-
-    if-eqz v10, :cond_d
-
-    invoke-virtual {v9}, Lcom/google/gson/JsonElement;->getAsJsonPrimitive()Lcom/google/gson/JsonPrimitive;
-
-    move-result-object v10
-
-    invoke-virtual {v10}, Lcom/google/gson/JsonPrimitive;->isString()Z
-
-    move-result v10
-
-    if-eqz v10, :cond_d
-
-    goto :goto_8
-
-    :cond_d
-    move-object v9, v4
-
-    :goto_8
-    if-eqz v9, :cond_e
-
-    invoke-virtual {v9}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
-
-    move-result-object v9
-
-    goto :goto_9
-
-    :cond_e
-    move-object v9, v4
-
-    :goto_9
-    if-eqz v9, :cond_c
-
-    .line 1276
-    invoke-interface {v8, v9}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    goto :goto_7
-
-    .line 1280
-    :cond_f
-    check-cast v8, Ljava/util/List;
-
-    .line 102
-    move-object v7, v8
-
-    check-cast v7, Ljava/util/Collection;
-
-    invoke-interface {v7}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v7
-
-    if-nez v7, :cond_10
-
-    goto :goto_a
-
-    :cond_10
-    move-object v8, v4
-
-    :goto_a
-    if-nez v8, :cond_11
-
-    goto :goto_4
-
-    .line 103
-    :cond_11
-    sget-object v7, Lcom/v2ray/ang/util/PackageUidResolver;->INSTANCE:Lcom/v2ray/ang/util/PackageUidResolver;
-
-    invoke-virtual {v7, v0, v8}, Lcom/v2ray/ang/util/PackageUidResolver;->packageNamesToUids(Landroid/content/Context;Ljava/util/List;)Ljava/util/List;
-
-    move-result-object v7
-
-    move-object v8, v7
-
-    check-cast v8, Ljava/util/Collection;
-
-    invoke-interface {v8}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v8
-
-    if-nez v8, :cond_12
-
-    goto :goto_b
-
-    :cond_12
-    move-object v7, v4
-
-    :goto_b
-    if-nez v7, :cond_13
-
-    goto/16 :goto_4
-
-    .line 105
-    :cond_13
-    new-instance v8, Lcom/google/gson/JsonArray;
-
-    invoke-direct {v8}, Lcom/google/gson/JsonArray;-><init>()V
-
-    check-cast v7, Ljava/lang/Iterable;
-
-    .line 1281
-    invoke-interface {v7}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v7
-
-    :goto_c
-    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v9
-
-    if-eqz v9, :cond_14
-
-    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Ljava/lang/String;
-
-    .line 105
-    invoke-virtual {v8, v9}, Lcom/google/gson/JsonArray;->add(Ljava/lang/String;)V
-
-    goto :goto_c
-
-    :cond_14
-    sget-object v7, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
-
-    check-cast v8, Lcom/google/gson/JsonElement;
-
-    invoke-virtual {v5, v6, v8}, Lcom/google/gson/JsonObject;->add(Ljava/lang/String;Lcom/google/gson/JsonElement;)V
-
-    goto/16 :goto_4
-
-    .line 110
-    :cond_15
-    const-string v0, "inbounds"
-
-    invoke-virtual {v1, v0}, Lcom/google/gson/JsonObject;->get(Ljava/lang/String;)Lcom/google/gson/JsonElement;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_17
-
-    invoke-virtual {v2}, Lcom/google/gson/JsonElement;->isJsonArray()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_16
-
-    goto :goto_d
-
-    :cond_16
-    move-object v2, v4
-
-    :goto_d
-    if-eqz v2, :cond_17
-
-    invoke-virtual {v2}, Lcom/google/gson/JsonElement;->getAsJsonArray()Lcom/google/gson/JsonArray;
-
-    move-result-object v2
-
-    if-nez v2, :cond_18
-
-    .line 111
-    :cond_17
-    new-instance v2, Lcom/google/gson/JsonArray;
-
-    invoke-direct {v2}, Lcom/google/gson/JsonArray;-><init>()V
-
-    move-object v5, v2
-
-    check-cast v5, Lcom/google/gson/JsonElement;
-
-    invoke-virtual {v1, v0, v5}, Lcom/google/gson/JsonObject;->add(Ljava/lang/String;Lcom/google/gson/JsonElement;)V
-
-    .line 112
-    :cond_18
-    move-object v0, v2
-
-    check-cast v0, Ljava/lang/Iterable;
-
-    .line 1283
-    instance-of v5, v0, Ljava/util/Collection;
-
-    const-string/jumbo v6, "tun"
-
-    if-eqz v5, :cond_19
-
-    move-object v5, v0
-
-    check-cast v5, Ljava/util/Collection;
-
-    invoke-interface {v5}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_19
-
-    goto :goto_10
-
-    .line 1284
-    :cond_19
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_1a
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_1d
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lcom/google/gson/JsonElement;
-
-    .line 113
-    invoke-virtual {v5}, Lcom/google/gson/JsonElement;->isJsonObject()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_1a
-
-    invoke-virtual {v5}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
-
-    move-result-object v5
-
-    const-string v7, "protocol"
-
-    invoke-virtual {v5, v7}, Lcom/google/gson/JsonObject;->get(Ljava/lang/String;)Lcom/google/gson/JsonElement;
-
-    move-result-object v5
-
-    if-eqz v5, :cond_1c
-
-    .line 114
-    invoke-virtual {v5}, Lcom/google/gson/JsonElement;->isJsonPrimitive()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_1b
-
-    invoke-virtual {v5}, Lcom/google/gson/JsonElement;->getAsJsonPrimitive()Lcom/google/gson/JsonPrimitive;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Lcom/google/gson/JsonPrimitive;->isString()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_1b
-
-    goto :goto_e
-
-    :cond_1b
-    move-object v5, v4
-
-    :goto_e
-    if-eqz v5, :cond_1c
-
     .line 115
-    invoke-virtual {v5}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
+    :cond_4
+    invoke-virtual {v1, v6}, Lcom/google/gson/JsonObject;->remove(Ljava/lang/String;)Lcom/google/gson/JsonElement;
 
-    move-result-object v5
+    .line 116
+    invoke-virtual {v1, v5}, Lcom/google/gson/JsonObject;->remove(Ljava/lang/String;)Lcom/google/gson/JsonElement;
 
-    goto :goto_f
+    .line 119
+    :cond_5
+    :goto_1
+    invoke-direct {p0}, Lcom/v2ray/ang/core/CoreConfigManager;->needTun()Z
 
-    :cond_1c
-    move-object v5, v4
+    move-result v2
 
-    .line 113
-    :goto_f
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_1a
-
-    goto :goto_11
+    if-nez v2, :cond_6
 
     .line 120
-    :cond_1d
-    :goto_10
-    invoke-direct {p0, p1}, Lcom/v2ray/ang/core/CoreConfigManager;->initV2rayConfig(Lcom/v2ray/ang/dto/CoreConfigContext;)Lcom/v2ray/ang/dto/V2rayConfig;
-
-    move-result-object p0
-
-    .line 121
-    invoke-virtual {p0}, Lcom/v2ray/ang/dto/V2rayConfig;->getInbounds()Ljava/util/ArrayList;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Iterable;
-
-    .line 1286
-    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_1e
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1f
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v5, v0
-
-    check-cast v5, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;
-
-    .line 121
-    invoke-virtual {v5}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;->getTag()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_1e
-
-    move-object v4, v0
-
-    :cond_1f
-    check-cast v4, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;
-
-    if-eqz v4, :cond_21
-
-    .line 122
-    invoke-virtual {v4}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;->getSettings()Lcom/v2ray/ang/dto/V2rayConfig$InboundBean$InSettingsBean;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_20
-
-    sget-object v0, Lcom/v2ray/ang/handler/SettingsManager;->INSTANCE:Lcom/v2ray/ang/handler/SettingsManager;
-
-    invoke-virtual {v0}, Lcom/v2ray/ang/handler/SettingsManager;->getVpnMtu()I
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean$InSettingsBean;->setMtu(Ljava/lang/Integer;)V
-
-    .line 123
-    :cond_20
-    sget-object p0, Lcom/v2ray/ang/util/JsonUtil;->INSTANCE:Lcom/v2ray/ang/util/JsonUtil;
-
-    sget-object v0, Lcom/v2ray/ang/util/JsonUtil;->INSTANCE:Lcom/v2ray/ang/util/JsonUtil;
-
-    invoke-virtual {v0, v4}, Lcom/v2ray/ang/util/JsonUtil;->toJson(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/v2ray/ang/util/JsonUtil;->parseString(Ljava/lang/String;)Lcom/google/gson/JsonObject;
-
-    move-result-object p0
-
-    check-cast p0, Lcom/google/gson/JsonElement;
-
-    invoke-virtual {v2, p0}, Lcom/google/gson/JsonArray;->add(Lcom/google/gson/JsonElement;)V
-
-    .line 127
-    :cond_21
-    :goto_11
     sget-object p0, Lcom/v2ray/ang/util/JsonUtil;->INSTANCE:Lcom/v2ray/ang/util/JsonUtil;
 
     invoke-virtual {p0, v1}, Lcom/v2ray/ang/util/JsonUtil;->toJsonPretty(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v7
 
-    if-eqz v7, :cond_22
+    if-eqz v7, :cond_25
 
     new-instance v4, Lcom/v2ray/ang/dto/ConfigResult;
 
@@ -3408,8 +2938,597 @@
 
     return-object v4
 
+    .line 124
+    :cond_6
+    sget-object v2, Lcom/v2ray/ang/handler/SettingsManager;->INSTANCE:Lcom/v2ray/ang/handler/SettingsManager;
+
+    invoke-virtual {v2}, Lcom/v2ray/ang/handler/SettingsManager;->canUseProcessRouting()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_18
+
+    .line 125
+    const-string v2, "routing"
+
+    invoke-virtual {v1, v2}, Lcom/google/gson/JsonObject;->get(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_9
+
+    invoke-virtual {v2}, Lcom/google/gson/JsonElement;->isJsonObject()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_7
+
+    goto :goto_2
+
+    :cond_7
+    move-object v2, v4
+
+    :goto_2
+    if-eqz v2, :cond_9
+
+    invoke-virtual {v2}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_9
+
+    .line 126
+    const-string v5, "rules"
+
+    invoke-virtual {v2, v5}, Lcom/google/gson/JsonObject;->get(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_9
+
+    invoke-virtual {v2}, Lcom/google/gson/JsonElement;->isJsonArray()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_8
+
+    goto :goto_3
+
+    :cond_8
+    move-object v2, v4
+
+    :goto_3
+    if-eqz v2, :cond_9
+
+    invoke-virtual {v2}, Lcom/google/gson/JsonElement;->getAsJsonArray()Lcom/google/gson/JsonArray;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_9
+
+    goto :goto_4
+
+    .line 127
+    :cond_9
+    new-instance v2, Lcom/google/gson/JsonArray;
+
+    invoke-direct {v2}, Lcom/google/gson/JsonArray;-><init>()V
+
+    .line 129
+    :goto_4
+    invoke-virtual {v2}, Lcom/google/gson/JsonArray;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    const-string v5, "iterator(...)"
+
+    invoke-static {v2, v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    :cond_a
+    :goto_5
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_18
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lcom/google/gson/JsonElement;
+
+    .line 130
+    invoke-virtual {v5}, Lcom/google/gson/JsonElement;->isJsonObject()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_b
+
+    goto :goto_6
+
+    :cond_b
+    move-object v5, v4
+
+    :goto_6
+    if-eqz v5, :cond_a
+
+    invoke-virtual {v5}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
+
+    move-result-object v5
+
+    if-nez v5, :cond_c
+
+    goto :goto_5
+
+    .line 131
+    :cond_c
+    const-string v6, "process"
+
+    invoke-virtual {v5, v6}, Lcom/google/gson/JsonObject;->get(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+
+    move-result-object v7
+
+    if-eqz v7, :cond_a
+
+    invoke-virtual {v7}, Lcom/google/gson/JsonElement;->isJsonArray()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_d
+
+    goto :goto_7
+
+    :cond_d
+    move-object v7, v4
+
+    :goto_7
+    if-eqz v7, :cond_a
+
+    invoke-virtual {v7}, Lcom/google/gson/JsonElement;->getAsJsonArray()Lcom/google/gson/JsonArray;
+
+    move-result-object v7
+
+    if-nez v7, :cond_e
+
+    goto :goto_5
+
+    .line 132
+    :cond_e
+    check-cast v7, Ljava/lang/Iterable;
+
+    .line 1299
+    new-instance v8, Ljava/util/ArrayList;
+
+    invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
+
+    check-cast v8, Ljava/util/Collection;
+
+    .line 1309
+    invoke-interface {v7}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v7
+
+    :cond_f
+    :goto_8
+    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v9
+
+    if-eqz v9, :cond_12
+
+    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v9
+
+    .line 1308
+    check-cast v9, Lcom/google/gson/JsonElement;
+
+    .line 133
+    invoke-virtual {v9}, Lcom/google/gson/JsonElement;->isJsonPrimitive()Z
+
+    move-result v10
+
+    if-eqz v10, :cond_10
+
+    invoke-virtual {v9}, Lcom/google/gson/JsonElement;->getAsJsonPrimitive()Lcom/google/gson/JsonPrimitive;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Lcom/google/gson/JsonPrimitive;->isString()Z
+
+    move-result v10
+
+    if-eqz v10, :cond_10
+
+    goto :goto_9
+
+    :cond_10
+    move-object v9, v4
+
+    :goto_9
+    if-eqz v9, :cond_11
+
+    invoke-virtual {v9}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
+
+    move-result-object v9
+
+    goto :goto_a
+
+    :cond_11
+    move-object v9, v4
+
+    :goto_a
+    if-eqz v9, :cond_f
+
+    .line 1308
+    invoke-interface {v8, v9}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    goto :goto_8
+
+    .line 1312
+    :cond_12
+    check-cast v8, Ljava/util/List;
+
+    .line 134
+    move-object v7, v8
+
+    check-cast v7, Ljava/util/Collection;
+
+    invoke-interface {v7}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v7
+
+    if-nez v7, :cond_13
+
+    goto :goto_b
+
+    :cond_13
+    move-object v8, v4
+
+    :goto_b
+    if-nez v8, :cond_14
+
+    goto :goto_5
+
+    .line 135
+    :cond_14
+    sget-object v7, Lcom/v2ray/ang/util/PackageUidResolver;->INSTANCE:Lcom/v2ray/ang/util/PackageUidResolver;
+
+    invoke-virtual {v7, v0, v8}, Lcom/v2ray/ang/util/PackageUidResolver;->packageNamesToUids(Landroid/content/Context;Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v7
+
+    move-object v8, v7
+
+    check-cast v8, Ljava/util/Collection;
+
+    invoke-interface {v8}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v8
+
+    if-nez v8, :cond_15
+
+    goto :goto_c
+
+    :cond_15
+    move-object v7, v4
+
+    :goto_c
+    if-nez v7, :cond_16
+
+    goto/16 :goto_5
+
+    .line 137
+    :cond_16
+    new-instance v8, Lcom/google/gson/JsonArray;
+
+    invoke-direct {v8}, Lcom/google/gson/JsonArray;-><init>()V
+
+    check-cast v7, Ljava/lang/Iterable;
+
+    .line 1313
+    invoke-interface {v7}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v7
+
+    :goto_d
+    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v9
+
+    if-eqz v9, :cond_17
+
+    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Ljava/lang/String;
+
+    .line 137
+    invoke-virtual {v8, v9}, Lcom/google/gson/JsonArray;->add(Ljava/lang/String;)V
+
+    goto :goto_d
+
+    :cond_17
+    sget-object v7, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    check-cast v8, Lcom/google/gson/JsonElement;
+
+    invoke-virtual {v5, v6, v8}, Lcom/google/gson/JsonObject;->add(Ljava/lang/String;Lcom/google/gson/JsonElement;)V
+
+    goto/16 :goto_5
+
+    .line 142
+    :cond_18
+    const-string v0, "inbounds"
+
+    invoke-virtual {v1, v0}, Lcom/google/gson/JsonObject;->get(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_1a
+
+    invoke-virtual {v2}, Lcom/google/gson/JsonElement;->isJsonArray()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_19
+
+    goto :goto_e
+
+    :cond_19
+    move-object v2, v4
+
+    :goto_e
+    if-eqz v2, :cond_1a
+
+    invoke-virtual {v2}, Lcom/google/gson/JsonElement;->getAsJsonArray()Lcom/google/gson/JsonArray;
+
+    move-result-object v2
+
+    if-nez v2, :cond_1b
+
+    .line 143
+    :cond_1a
+    new-instance v2, Lcom/google/gson/JsonArray;
+
+    invoke-direct {v2}, Lcom/google/gson/JsonArray;-><init>()V
+
+    move-object v5, v2
+
+    check-cast v5, Lcom/google/gson/JsonElement;
+
+    invoke-virtual {v1, v0, v5}, Lcom/google/gson/JsonObject;->add(Ljava/lang/String;Lcom/google/gson/JsonElement;)V
+
+    .line 144
+    :cond_1b
+    move-object v0, v2
+
+    check-cast v0, Ljava/lang/Iterable;
+
+    .line 1315
+    instance-of v5, v0, Ljava/util/Collection;
+
+    const-string/jumbo v6, "tun"
+
+    if-eqz v5, :cond_1c
+
+    move-object v5, v0
+
+    check-cast v5, Ljava/util/Collection;
+
+    invoke-interface {v5}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_1c
+
+    goto :goto_11
+
+    .line 1316
+    :cond_1c
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_1d
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_20
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lcom/google/gson/JsonElement;
+
+    .line 145
+    invoke-virtual {v5}, Lcom/google/gson/JsonElement;->isJsonObject()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_1d
+
+    invoke-virtual {v5}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
+
+    move-result-object v5
+
+    const-string v7, "protocol"
+
+    invoke-virtual {v5, v7}, Lcom/google/gson/JsonObject;->get(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+
+    move-result-object v5
+
+    if-eqz v5, :cond_1f
+
+    .line 146
+    invoke-virtual {v5}, Lcom/google/gson/JsonElement;->isJsonPrimitive()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_1e
+
+    invoke-virtual {v5}, Lcom/google/gson/JsonElement;->getAsJsonPrimitive()Lcom/google/gson/JsonPrimitive;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Lcom/google/gson/JsonPrimitive;->isString()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_1e
+
+    goto :goto_f
+
+    :cond_1e
+    move-object v5, v4
+
+    :goto_f
+    if-eqz v5, :cond_1f
+
+    .line 147
+    invoke-virtual {v5}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
+
+    move-result-object v5
+
+    goto :goto_10
+
+    :cond_1f
+    move-object v5, v4
+
+    .line 145
+    :goto_10
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_1d
+
+    goto :goto_12
+
+    .line 152
+    :cond_20
+    :goto_11
+    invoke-direct {p0, p1}, Lcom/v2ray/ang/core/CoreConfigManager;->initV2rayConfig(Lcom/v2ray/ang/dto/CoreConfigContext;)Lcom/v2ray/ang/dto/V2rayConfig;
+
+    move-result-object p0
+
+    .line 153
+    invoke-virtual {p0}, Lcom/v2ray/ang/dto/V2rayConfig;->getInbounds()Ljava/util/ArrayList;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/lang/Iterable;
+
+    .line 1318
+    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :cond_21
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_22
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v5, v0
+
+    check-cast v5, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;
+
+    .line 153
+    invoke-virtual {v5}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;->getTag()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_21
+
+    move-object v4, v0
+
     :cond_22
+    check-cast v4, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;
+
+    if-eqz v4, :cond_24
+
+    .line 154
+    invoke-virtual {v4}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;->getSettings()Lcom/v2ray/ang/dto/V2rayConfig$InboundBean$InSettingsBean;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_23
+
+    sget-object v0, Lcom/v2ray/ang/handler/SettingsManager;->INSTANCE:Lcom/v2ray/ang/handler/SettingsManager;
+
+    invoke-virtual {v0}, Lcom/v2ray/ang/handler/SettingsManager;->getVpnMtu()I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean$InSettingsBean;->setMtu(Ljava/lang/Integer;)V
+
+    .line 155
+    :cond_23
+    sget-object p0, Lcom/v2ray/ang/util/JsonUtil;->INSTANCE:Lcom/v2ray/ang/util/JsonUtil;
+
+    sget-object v0, Lcom/v2ray/ang/util/JsonUtil;->INSTANCE:Lcom/v2ray/ang/util/JsonUtil;
+
+    invoke-virtual {v0, v4}, Lcom/v2ray/ang/util/JsonUtil;->toJson(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/v2ray/ang/util/JsonUtil;->parseString(Ljava/lang/String;)Lcom/google/gson/JsonObject;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/google/gson/JsonElement;
+
+    invoke-virtual {v2, p0}, Lcom/google/gson/JsonArray;->add(Lcom/google/gson/JsonElement;)V
+
+    .line 159
+    :cond_24
     :goto_12
+    sget-object p0, Lcom/v2ray/ang/util/JsonUtil;->INSTANCE:Lcom/v2ray/ang/util/JsonUtil;
+
+    invoke-virtual {p0, v1}, Lcom/v2ray/ang/util/JsonUtil;->toJsonPretty(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v7
+
+    if-eqz v7, :cond_25
+
+    new-instance v4, Lcom/v2ray/ang/dto/ConfigResult;
+
+    invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext;->getGuid()Ljava/lang/String;
+
+    move-result-object v6
+
+    const/16 v9, 0x8
+
+    const/4 v10, 0x0
+
+    const/4 v5, 0x1
+
+    const/4 v8, 0x0
+
+    invoke-direct/range {v4 .. v10}, Lcom/v2ray/ang/dto/ConfigResult;-><init>(ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    return-object v4
+
+    :cond_25
+    :goto_13
     return-object v3
 .end method
 
@@ -3424,12 +3543,12 @@
         }
     .end annotation
 
-    .line 563
+    .line 595
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 565
+    .line 597
     sget-object v0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     invoke-virtual {v0}, Lcom/v2ray/ang/handler/MmkvManager;->decodeRoutingRulesets()Ljava/util/List;
@@ -3438,10 +3557,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 566
+    .line 598
     check-cast v0, Ljava/lang/Iterable;
 
-    .line 1349
+    .line 1381
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -3460,7 +3579,7 @@
 
     check-cast v1, Lcom/v2ray/ang/dto/entities/RulesetItem;
 
-    .line 567
+    .line 599
     invoke-virtual {v1}, Lcom/v2ray/ang/dto/entities/RulesetItem;->getEnabled()Z
 
     move-result v2
@@ -3483,7 +3602,7 @@
 
     if-nez v2, :cond_0
 
-    .line 568
+    .line 600
     invoke-virtual {v1}, Lcom/v2ray/ang/dto/entities/RulesetItem;->getDomain()Ljava/util/List;
 
     move-result-object v2
@@ -3500,7 +3619,7 @@
 
     goto :goto_0
 
-    .line 570
+    .line 602
     :cond_1
     invoke-virtual {v1}, Lcom/v2ray/ang/dto/entities/RulesetItem;->getDomain()Ljava/util/List;
 
@@ -3510,7 +3629,7 @@
 
     check-cast v1, Ljava/lang/Iterable;
 
-    .line 1350
+    .line 1382
     invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -3528,7 +3647,7 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 571
+    .line 603
     invoke-virtual {p0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
@@ -3550,12 +3669,12 @@
         }
     .end annotation
 
-    .line 545
+    .line 577
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 547
+    .line 579
     sget-object v0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     invoke-virtual {v0}, Lcom/v2ray/ang/handler/MmkvManager;->decodeRoutingRulesets()Ljava/util/List;
@@ -3564,10 +3683,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 548
+    .line 580
     check-cast v0, Ljava/lang/Iterable;
 
-    .line 1345
+    .line 1377
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -3586,7 +3705,7 @@
 
     check-cast v1, Lcom/v2ray/ang/dto/entities/RulesetItem;
 
-    .line 549
+    .line 581
     invoke-virtual {v1}, Lcom/v2ray/ang/dto/entities/RulesetItem;->getEnabled()Z
 
     move-result v2
@@ -3619,7 +3738,7 @@
 
     goto :goto_0
 
-    .line 550
+    .line 582
     :cond_1
     invoke-virtual {v1}, Lcom/v2ray/ang/dto/entities/RulesetItem;->getDomain()Ljava/util/List;
 
@@ -3629,7 +3748,7 @@
 
     check-cast v1, Ljava/lang/Iterable;
 
-    .line 1346
+    .line 1378
     invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -3647,7 +3766,7 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 551
+    .line 583
     invoke-virtual {p0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
@@ -3674,31 +3793,31 @@
 
     move-object/from16 v1, p1
 
-    .line 834
+    .line 866
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 835
+    .line 867
     sget-object v3, Lcom/v2ray/ang/handler/SettingsManager;->INSTANCE:Lcom/v2ray/ang/handler/SettingsManager;
 
     invoke-virtual {v3}, Lcom/v2ray/ang/handler/SettingsManager;->getRemoteDnsServers()Ljava/util/List;
 
     move-result-object v3
 
-    .line 836
+    .line 868
     sget-object v4, Lcom/v2ray/ang/handler/SettingsManager;->INSTANCE:Lcom/v2ray/ang/handler/SettingsManager;
 
     invoke-virtual {v4}, Lcom/v2ray/ang/handler/SettingsManager;->getDomesticDnsServers()Ljava/util/List;
 
     move-result-object v4
 
-    .line 838
+    .line 870
     move-object v5, v3
 
     check-cast v5, Ljava/lang/Iterable;
 
-    .line 1362
+    .line 1394
     invoke-interface {v5}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -3716,33 +3835,33 @@
 
     check-cast v6, Ljava/lang/String;
 
-    .line 838
+    .line 870
     invoke-virtual {v2, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 840
+    .line 872
     :cond_0
     invoke-direct/range {p0 .. p1}, Lcom/v2ray/ang/core/CoreConfigManager;->buildDnsHostsFromRoutingRules(Lcom/v2ray/ang/dto/CoreConfigContext;)Ljava/util/Map;
 
     move-result-object v5
 
-    .line 841
+    .line 873
     invoke-direct {v0, v1, v2, v4}, Lcom/v2ray/ang/core/CoreConfigManager;->buildDnsCnModeFromRoutingRules(Lcom/v2ray/ang/dto/CoreConfigContext;Ljava/util/ArrayList;Ljava/util/List;)Ljava/util/List;
 
     move-result-object v6
 
-    .line 842
+    .line 874
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/v2ray/ang/core/CoreConfigManager;->buildDnsFromRoutingRules(Lcom/v2ray/ang/dto/CoreConfigContext;Ljava/util/ArrayList;Ljava/util/List;Ljava/util/List;)Ljava/util/List;
 
     move-result-object v10
 
-    .line 848
+    .line 880
     check-cast v6, Ljava/util/Collection;
 
     invoke-interface {v10, v6}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 854
+    .line 886
     invoke-interface {v4}, Ljava/util/List;->size()I
 
     move-result v0
@@ -3771,7 +3890,7 @@
     :goto_1
     move-object v6, v0
 
-    .line 850
+    .line 882
     new-instance v0, Lcom/v2ray/ang/dto/V2rayConfig$DnsBean;
 
     const/16 v8, 0x1c
@@ -3798,7 +3917,7 @@
 
     invoke-virtual {v0, v1}, Lcom/v2ray/ang/dto/V2rayConfig;->setDns(Lcom/v2ray/ang/dto/V2rayConfig$DnsBean;)V
 
-    .line 857
+    .line 889
     check-cast v10, Ljava/util/Collection;
 
     invoke-interface {v10}, Ljava/util/Collection;->isEmpty()Z
@@ -3807,7 +3926,7 @@
 
     if-nez v1, :cond_2
 
-    .line 858
+    .line 890
     invoke-virtual {v0}, Lcom/v2ray/ang/dto/V2rayConfig;->getRouting()Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean;
 
     move-result-object v1
@@ -3816,15 +3935,15 @@
 
     move-result-object v1
 
-    .line 861
+    .line 893
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2, v10}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 859
+    .line 891
     new-instance v11, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$RulesBean;
 
-    .line 861
+    .line 893
     move-object/from16 v23, v2
 
     check-cast v23, Ljava/util/List;
@@ -3841,7 +3960,7 @@
 
     const/4 v15, 0x0
 
-    .line 859
+    .line 891
     const-string v16, "direct"
 
     const/16 v17, 0x0
@@ -3864,10 +3983,10 @@
 
     invoke-direct/range {v11 .. v28}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$RulesBean;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 858
+    .line 890
     invoke-virtual {v1, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 867
+    .line 899
     :cond_2
     const-string v1, "proxy"
 
@@ -3881,12 +4000,12 @@
 
     check-cast v8, Ljava/lang/String;
 
-    .line 868
+    .line 900
     const-string v1, "dns-module"
 
     if-eqz v8, :cond_3
 
-    .line 869
+    .line 901
     invoke-virtual {v0}, Lcom/v2ray/ang/dto/V2rayConfig;->getRouting()Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean;
 
     move-result-object v0
@@ -3895,7 +4014,7 @@
 
     move-result-object v0
 
-    .line 872
+    .line 904
     filled-new-array {v1}, [Ljava/lang/String;
 
     move-result-object v1
@@ -3904,10 +4023,10 @@
 
     move-result-object v1
 
-    .line 870
+    .line 902
     new-instance v2, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$RulesBean;
 
-    .line 872
+    .line 904
     move-object v14, v1
 
     check-cast v14, Ljava/util/List;
@@ -3942,15 +4061,15 @@
 
     const/16 v17, 0x0
 
-    .line 870
+    .line 902
     invoke-direct/range {v2 .. v19}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$RulesBean;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 869
+    .line 901
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
 
-    .line 877
+    .line 909
     :cond_3
     invoke-virtual {v0}, Lcom/v2ray/ang/dto/V2rayConfig;->getRouting()Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean;
 
@@ -3960,7 +4079,7 @@
 
     move-result-object v0
 
-    .line 880
+    .line 912
     filled-new-array {v1}, [Ljava/lang/String;
 
     move-result-object v1
@@ -3969,10 +4088,10 @@
 
     move-result-object v1
 
-    .line 878
+    .line 910
     new-instance v2, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$RulesBean;
 
-    .line 880
+    .line 912
     move-object v14, v1
 
     check-cast v14, Ljava/util/List;
@@ -3989,7 +4108,7 @@
 
     const/4 v6, 0x0
 
-    .line 878
+    .line 910
     const-string v7, "proxy"
 
     const/4 v8, 0x0
@@ -4012,7 +4131,7 @@
 
     invoke-direct/range {v2 .. v19}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$RulesBean;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 877
+    .line 909
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
@@ -4021,7 +4140,7 @@
 .method private final configureFakeDns(Lcom/v2ray/ang/dto/V2rayConfig;)V
     .locals 3
 
-    .line 534
+    .line 566
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v0, "pref_local_dns_enabled"
@@ -4034,7 +4153,7 @@
 
     if-ne p0, v0, :cond_0
 
-    .line 535
+    .line 567
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v1, "pref_fake_dns_enabled"
@@ -4045,7 +4164,7 @@
 
     if-ne p0, v0, :cond_0
 
-    .line 537
+    .line 569
     new-instance p0, Lcom/v2ray/ang/dto/V2rayConfig$FakednsBean;
 
     const/4 v0, 0x0
@@ -4069,14 +4188,14 @@
 .method private final configureInbounds(Lcom/v2ray/ang/dto/V2rayConfig;)V
     .locals 17
 
-    .line 462
+    .line 494
     sget-object v0, Lcom/v2ray/ang/handler/SettingsManager;->INSTANCE:Lcom/v2ray/ang/handler/SettingsManager;
 
     invoke-virtual {v0}, Lcom/v2ray/ang/handler/SettingsManager;->isVpnMode()Z
 
     move-result v0
 
-    .line 463
+    .line 495
     sget-object v1, Lcom/v2ray/ang/handler/SettingsManager;->INSTANCE:Lcom/v2ray/ang/handler/SettingsManager;
 
     invoke-virtual {v1}, Lcom/v2ray/ang/handler/SettingsManager;->isUsingHevTun()Z
@@ -4098,7 +4217,7 @@
     :cond_0
     move v0, v2
 
-    .line 465
+    .line 497
     :goto_0
     sget-object v1, Lcom/v2ray/ang/handler/SettingsManager;->INSTANCE:Lcom/v2ray/ang/handler/SettingsManager;
 
@@ -4108,7 +4227,7 @@
 
     if-nez v1, :cond_2
 
-    .line 466
+    .line 498
     sget-object v1, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v4, "pref_root_lan_sharing"
@@ -4135,7 +4254,7 @@
 
     if-nez v1, :cond_4
 
-    .line 468
+    .line 500
     sget-object v0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v1, "pref_enable_local_proxy"
@@ -4157,7 +4276,7 @@
     :goto_3
     move v0, v3
 
-    .line 470
+    .line 502
     :goto_4
     sget-object v1, Lcom/v2ray/ang/handler/SettingsManager;->INSTANCE:Lcom/v2ray/ang/handler/SettingsManager;
 
@@ -4165,21 +4284,21 @@
 
     move-result v1
 
-    .line 471
+    .line 503
     sget-object v4, Lcom/v2ray/ang/handler/SettingsManager;->INSTANCE:Lcom/v2ray/ang/handler/SettingsManager;
 
     invoke-virtual {v4}, Lcom/v2ray/ang/handler/SettingsManager;->getSocksUsername()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 472
+    .line 504
     sget-object v5, Lcom/v2ray/ang/handler/SettingsManager;->INSTANCE:Lcom/v2ray/ang/handler/SettingsManager;
 
     invoke-virtual {v5}, Lcom/v2ray/ang/handler/SettingsManager;->getSocksPassword()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 473
+    .line 505
     invoke-virtual/range {p1 .. p1}, Lcom/v2ray/ang/dto/V2rayConfig;->getInbounds()Ljava/util/ArrayList;
 
     move-result-object v6
@@ -4194,14 +4313,14 @@
 
     check-cast v6, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;
 
-    .line 474
+    .line 506
     invoke-virtual {v6}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;->getSettings()Lcom/v2ray/ang/dto/V2rayConfig$InboundBean$InSettingsBean;
 
     move-result-object v7
 
     if-nez v7, :cond_5
 
-    .line 475
+    .line 507
     new-instance v8, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean$InSettingsBean;
 
     const/16 v15, 0x3f
@@ -4224,7 +4343,7 @@
 
     invoke-virtual {v6, v8}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;->setSettings(Lcom/v2ray/ang/dto/V2rayConfig$InboundBean$InSettingsBean;)V
 
-    .line 478
+    .line 510
     :cond_5
     sget-object v7, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
@@ -4236,12 +4355,12 @@
 
     if-eq v7, v3, :cond_6
 
-    .line 479
+    .line 511
     const-string v7, "127.0.0.1"
 
     invoke-virtual {v6, v7}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;->setListen(Ljava/lang/String;)V
 
-    .line 481
+    .line 513
     :cond_6
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4249,7 +4368,7 @@
 
     invoke-virtual {v6, v1}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;->setPort(Ljava/lang/Integer;)V
 
-    .line 482
+    .line 514
     invoke-virtual {v6}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;->getSettings()Lcom/v2ray/ang/dto/V2rayConfig$InboundBean$InSettingsBean;
 
     move-result-object v1
@@ -4277,7 +4396,7 @@
 
     if-eqz v5, :cond_9
 
-    .line 484
+    .line 516
     invoke-virtual {v6}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;->getSettings()Lcom/v2ray/ang/dto/V2rayConfig$InboundBean$InSettingsBean;
 
     move-result-object v7
@@ -4288,7 +4407,7 @@
 
     invoke-virtual {v7, v8}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean$InSettingsBean;->setAuth(Ljava/lang/String;)V
 
-    .line 485
+    .line 517
     :cond_8
     invoke-virtual {v6}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;->getSettings()Lcom/v2ray/ang/dto/V2rayConfig$InboundBean$InSettingsBean;
 
@@ -4296,12 +4415,12 @@
 
     if-eqz v7, :cond_b
 
-    .line 486
+    .line 518
     new-instance v8, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean$InSettingsBean$SocksAccountBean;
 
     invoke-direct {v8, v4, v5}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean$InSettingsBean$SocksAccountBean;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 485
+    .line 517
     invoke-static {v8}, Lkotlin/collections/CollectionsKt;->listOf(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v4
@@ -4310,7 +4429,7 @@
 
     goto :goto_5
 
-    .line 492
+    .line 524
     :cond_9
     invoke-virtual {v6}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;->getSettings()Lcom/v2ray/ang/dto/V2rayConfig$InboundBean$InSettingsBean;
 
@@ -4322,7 +4441,7 @@
 
     invoke-virtual {v4, v5}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean$InSettingsBean;->setAuth(Ljava/lang/String;)V
 
-    .line 493
+    .line 525
     :cond_a
     invoke-virtual {v6}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;->getSettings()Lcom/v2ray/ang/dto/V2rayConfig$InboundBean$InSettingsBean;
 
@@ -4332,7 +4451,7 @@
 
     invoke-virtual {v4, v1}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean$InSettingsBean;->setAccounts(Ljava/util/List;)V
 
-    .line 495
+    .line 527
     :cond_b
     :goto_5
     sget-object v4, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
@@ -4352,7 +4471,7 @@
     :cond_c
     move v4, v2
 
-    .line 497
+    .line 529
     :goto_6
     sget-object v5, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
@@ -4362,7 +4481,7 @@
 
     move-result v5
 
-    .line 498
+    .line 530
     invoke-virtual {v6}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;->getSniffing()Lcom/v2ray/ang/dto/V2rayConfig$InboundBean$SniffingBean;
 
     move-result-object v7
@@ -4382,7 +4501,7 @@
     :goto_7
     invoke-virtual {v7, v3}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean$SniffingBean;->setEnabled(Z)V
 
-    .line 499
+    .line 531
     :cond_f
     invoke-virtual {v6}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;->getSniffing()Lcom/v2ray/ang/dto/V2rayConfig$InboundBean$SniffingBean;
 
@@ -4390,7 +4509,7 @@
 
     if-eqz v3, :cond_10
 
-    .line 500
+    .line 532
     sget-object v7, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v8, "pref_route_only_enabled"
@@ -4403,13 +4522,13 @@
 
     move-result-object v2
 
-    .line 499
+    .line 531
     invoke-virtual {v3, v2}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean$SniffingBean;->setRouteOnly(Ljava/lang/Boolean;)V
 
     :cond_10
     if-nez v5, :cond_11
 
-    .line 502
+    .line 534
     invoke-virtual {v6}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;->getSniffing()Lcom/v2ray/ang/dto/V2rayConfig$InboundBean$SniffingBean;
 
     move-result-object v2
@@ -4427,7 +4546,7 @@
     :cond_11
     if-eqz v4, :cond_12
 
-    .line 505
+    .line 537
     invoke-virtual {v6}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;->getSniffing()Lcom/v2ray/ang/dto/V2rayConfig$InboundBean$SniffingBean;
 
     move-result-object v2
@@ -4444,7 +4563,7 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 508
+    .line 540
     :cond_12
     sget-object v2, Lcom/v2ray/ang/util/Utils;->INSTANCE:Lcom/v2ray/ang/util/Utils;
 
@@ -4454,7 +4573,7 @@
 
     if-nez v2, :cond_16
 
-    .line 509
+    .line 541
     sget-object v2, Lcom/v2ray/ang/util/JsonUtil;->INSTANCE:Lcom/v2ray/ang/util/JsonUtil;
 
     sget-object v3, Lcom/v2ray/ang/util/JsonUtil;->INSTANCE:Lcom/v2ray/ang/util/JsonUtil;
@@ -4473,7 +4592,7 @@
 
     if-eqz v2, :cond_15
 
-    .line 511
+    .line 543
     sget-object v3, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
 
     const-string v4, "HTTP"
@@ -4482,13 +4601,13 @@
 
     move-result-object v3
 
-    const-string v5, "toLowerCase(...)"
+    const-string/jumbo v5, "toLowerCase(...)"
 
     invoke-static {v3, v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2, v3}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;->setTag(Ljava/lang/String;)V
 
-    .line 512
+    .line 544
     sget-object v3, Lcom/v2ray/ang/handler/SettingsManager;->INSTANCE:Lcom/v2ray/ang/handler/SettingsManager;
 
     invoke-virtual {v3}, Lcom/v2ray/ang/handler/SettingsManager;->getHttpPort()I
@@ -4501,7 +4620,7 @@
 
     invoke-virtual {v2, v3}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;->setPort(Ljava/lang/Integer;)V
 
-    .line 513
+    .line 545
     sget-object v3, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
 
     invoke-virtual {v4, v3}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
@@ -4512,7 +4631,7 @@
 
     invoke-virtual {v2, v3}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;->setProtocol(Ljava/lang/String;)V
 
-    .line 514
+    .line 546
     invoke-virtual {v2}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;->getSettings()Lcom/v2ray/ang/dto/V2rayConfig$InboundBean$InSettingsBean;
 
     move-result-object v3
@@ -4521,7 +4640,7 @@
 
     invoke-virtual {v3, v1}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean$InSettingsBean;->setAuth(Ljava/lang/String;)V
 
-    .line 515
+    .line 547
     :cond_13
     invoke-virtual {v2}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;->getSettings()Lcom/v2ray/ang/dto/V2rayConfig$InboundBean$InSettingsBean;
 
@@ -4531,7 +4650,7 @@
 
     invoke-virtual {v3, v1}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean$InSettingsBean;->setUdp(Ljava/lang/Boolean;)V
 
-    .line 516
+    .line 548
     :cond_14
     invoke-virtual/range {p1 .. p1}, Lcom/v2ray/ang/dto/V2rayConfig;->getInbounds()Ljava/util/ArrayList;
 
@@ -4541,11 +4660,11 @@
 
     goto :goto_8
 
-    .line 509
+    .line 541
     :cond_15
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    .line 510
+    .line 542
     const-string v1, "Failed to clone inbound template"
 
     invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -4560,7 +4679,7 @@
     :goto_8
     if-nez v0, :cond_17
 
-    .line 520
+    .line 552
     invoke-virtual/range {p1 .. p1}, Lcom/v2ray/ang/dto/V2rayConfig;->getInbounds()Ljava/util/ArrayList;
 
     move-result-object v0
@@ -4575,7 +4694,7 @@
 
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->removeIf(Ljava/util/function/Predicate;)Z
 
-    .line 523
+    .line 555
     :cond_17
     invoke-direct/range {p0 .. p0}, Lcom/v2ray/ang/core/CoreConfigManager;->needTun()Z
 
@@ -4583,14 +4702,14 @@
 
     if-eqz v0, :cond_1b
 
-    .line 524
+    .line 556
     invoke-virtual/range {p1 .. p1}, Lcom/v2ray/ang/dto/V2rayConfig;->getInbounds()Ljava/util/ArrayList;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/Iterable;
 
-    .line 1343
+    .line 1375
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -4610,7 +4729,7 @@
 
     check-cast v3, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;
 
-    .line 524
+    .line 556
     invoke-virtual {v3}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;->getTag()Ljava/lang/String;
 
     move-result-object v3
@@ -4630,7 +4749,7 @@
 
     if-eqz v1, :cond_1a
 
-    .line 525
+    .line 557
     invoke-virtual {v1}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;->getSettings()Lcom/v2ray/ang/dto/V2rayConfig$InboundBean$InSettingsBean;
 
     move-result-object v0
@@ -4652,7 +4771,7 @@
     :cond_1a
     if-eqz v1, :cond_1b
 
-    .line 526
+    .line 558
     invoke-virtual {v6}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;->getSniffing()Lcom/v2ray/ang/dto/V2rayConfig$InboundBean$SniffingBean;
 
     move-result-object v0
@@ -4670,12 +4789,12 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 520
+    .line 552
     invoke-virtual {p0}, Lcom/v2ray/ang/dto/V2rayConfig$InboundBean;->getProtocol()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "socks"
+    const-string/jumbo v1, "socks"
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -4712,7 +4831,7 @@
 .method static final configureInbounds$lambda$1(Lkotlin/jvm/functions/Function1;Ljava/lang/Object;)Z
     .locals 0
 
-    .line 520
+    .line 552
     invoke-interface {p0, p1}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -4729,7 +4848,7 @@
 .method private final configureLocalDns(Lcom/v2ray/ang/dto/CoreConfigContext;Lcom/v2ray/ang/dto/V2rayConfig;)V
     .locals 21
 
-    .line 583
+    .line 615
     sget-object v0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v1, "pref_local_dns_enabled"
@@ -4744,7 +4863,7 @@
 
     return-void
 
-    .line 587
+    .line 619
     :cond_0
     sget-object v0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
@@ -4758,7 +4877,7 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 588
+    .line 620
     const-string v0, "geosite:cn"
 
     filled-new-array {v0}, [Ljava/lang/String;
@@ -4769,19 +4888,19 @@
 
     move-result-object v0
 
-    .line 589
+    .line 621
     invoke-virtual/range {p1 .. p1}, Lcom/v2ray/ang/dto/CoreConfigContext;->getRoutingDomainRules()Ljava/util/List;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/Iterable;
 
-    .line 590
+    .line 622
     invoke-static {v1}, Lkotlin/collections/CollectionsKt;->asSequence(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v1
 
-    .line 591
+    .line 623
     new-instance v3, Lcom/v2ray/ang/core/CoreConfigManager$$ExternalSyntheticLambda6;
 
     invoke-direct {v3}, Lcom/v2ray/ang/core/CoreConfigManager$$ExternalSyntheticLambda6;-><init>()V
@@ -4790,7 +4909,7 @@
 
     move-result-object v1
 
-    .line 592
+    .line 624
     new-instance v3, Lcom/v2ray/ang/core/CoreConfigManager$$ExternalSyntheticLambda7;
 
     invoke-direct {v3}, Lcom/v2ray/ang/core/CoreConfigManager$$ExternalSyntheticLambda7;-><init>()V
@@ -4799,19 +4918,19 @@
 
     move-result-object v1
 
-    .line 593
+    .line 625
     invoke-static {v1}, Lkotlin/sequences/SequencesKt;->toList(Lkotlin/sequences/Sequence;)Ljava/util/List;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/Iterable;
 
-    .line 594
+    .line 626
     invoke-static {v1}, Lkotlin/collections/CollectionsKt;->distinct(Ljava/lang/Iterable;)Ljava/util/List;
 
     move-result-object v1
 
-    .line 595
+    .line 627
     check-cast v0, Ljava/util/Collection;
 
     check-cast v1, Ljava/lang/Iterable;
@@ -4820,7 +4939,7 @@
 
     move-result-object v6
 
-    .line 597
+    .line 629
     invoke-virtual/range {p2 .. p2}, Lcom/v2ray/ang/dto/V2rayConfig;->getDns()Lcom/v2ray/ang/dto/V2rayConfig$DnsBean;
 
     move-result-object v0
@@ -4833,7 +4952,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 599
+    .line 631
     new-instance v3, Lcom/v2ray/ang/dto/V2rayConfig$DnsBean$ServersBean;
 
     const/16 v11, 0x7a
@@ -4854,10 +4973,10 @@
 
     invoke-direct/range {v3 .. v12}, Lcom/v2ray/ang/dto/V2rayConfig$DnsBean$ServersBean;-><init>(Ljava/lang/String;Ljava/lang/Integer;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 597
+    .line 629
     invoke-virtual {v0, v2, v3}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 606
+    .line 638
     :cond_1
     sget-object v0, Lcom/v2ray/ang/handler/SettingsManager;->INSTANCE:Lcom/v2ray/ang/handler/SettingsManager;
 
@@ -4867,7 +4986,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 607
+    .line 639
     sget-object v0, Lcom/v2ray/ang/handler/SettingsManager;->INSTANCE:Lcom/v2ray/ang/handler/SettingsManager;
 
     invoke-virtual {v0}, Lcom/v2ray/ang/handler/SettingsManager;->isUsingHevTun()Z
@@ -4876,7 +4995,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 609
+    .line 641
     invoke-virtual/range {p2 .. p2}, Lcom/v2ray/ang/dto/V2rayConfig;->getRouting()Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean;
 
     move-result-object v0
@@ -4885,8 +5004,8 @@
 
     move-result-object v0
 
-    .line 611
-    const-string v1, "socks"
+    .line 643
+    const-string/jumbo v1, "socks"
 
     filled-new-array {v1}, [Ljava/lang/String;
 
@@ -4896,10 +5015,10 @@
 
     move-result-object v1
 
-    .line 610
+    .line 642
     new-instance v3, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$RulesBean;
 
-    .line 611
+    .line 643
     move-object v15, v1
 
     check-cast v15, Ljava/util/List;
@@ -4916,7 +5035,7 @@
 
     const/4 v7, 0x0
 
-    .line 610
+    .line 642
     const-string v8, "dns-out"
 
     const/4 v9, 0x0
@@ -4939,12 +5058,12 @@
 
     invoke-direct/range {v3 .. v20}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$RulesBean;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 609
+    .line 641
     invoke-virtual {v0, v2, v3}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
     goto :goto_0
 
-    .line 617
+    .line 649
     :cond_2
     invoke-virtual/range {p2 .. p2}, Lcom/v2ray/ang/dto/V2rayConfig;->getRouting()Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean;
 
@@ -4954,7 +5073,7 @@
 
     move-result-object v0
 
-    .line 619
+    .line 651
     const-string/jumbo v1, "tun"
 
     filled-new-array {v1}, [Ljava/lang/String;
@@ -4965,10 +5084,10 @@
 
     move-result-object v1
 
-    .line 618
+    .line 650
     new-instance v3, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$RulesBean;
 
-    .line 619
+    .line 651
     move-object v15, v1
 
     check-cast v15, Ljava/util/List;
@@ -4985,7 +5104,7 @@
 
     const/4 v7, 0x0
 
-    .line 618
+    .line 650
     const-string v8, "dns-out"
 
     const/4 v9, 0x0
@@ -5008,10 +5127,10 @@
 
     invoke-direct/range {v3 .. v20}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$RulesBean;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 617
+    .line 649
     invoke-virtual {v0, v2, v3}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 628
+    .line 660
     :cond_3
     :goto_0
     invoke-virtual/range {p2 .. p2}, Lcom/v2ray/ang/dto/V2rayConfig;->getOutbounds()Ljava/util/ArrayList;
@@ -5020,7 +5139,7 @@
 
     check-cast v0, Ljava/lang/Iterable;
 
-    .line 1353
+    .line 1385
     instance-of v1, v0, Ljava/util/Collection;
 
     if-eqz v1, :cond_4
@@ -5037,7 +5156,7 @@
 
     goto :goto_1
 
-    .line 1354
+    .line 1386
     :cond_4
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -5056,7 +5175,7 @@
 
     check-cast v1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;
 
-    .line 628
+    .line 660
     invoke-virtual {v1}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;->getProtocol()Ljava/lang/String;
 
     move-result-object v2
@@ -5083,14 +5202,14 @@
 
     return-void
 
-    .line 629
+    .line 661
     :cond_6
     :goto_1
     invoke-virtual/range {p2 .. p2}, Lcom/v2ray/ang/dto/V2rayConfig;->getOutbounds()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 630
+    .line 662
     new-instance v1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;
 
     const/16 v8, 0x10
@@ -5111,7 +5230,7 @@
 
     invoke-direct/range {v1 .. v9}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$StreamSettingsBean;Ljava/lang/String;Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$MuxBean;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 629
+    .line 661
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
@@ -5124,7 +5243,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 591
+    .line 623
     invoke-virtual {p0}, Lcom/v2ray/ang/dto/CoreConfigContext$RoutingDomainRule;->getOutboundTag()Ljava/lang/String;
 
     move-result-object p0
@@ -5147,7 +5266,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 592
+    .line 624
     invoke-virtual {p0}, Lcom/v2ray/ang/dto/CoreConfigContext$RoutingDomainRule;->getDomain()Ljava/util/List;
 
     move-result-object p0
@@ -5164,7 +5283,7 @@
 .method private final configureRootModeDns(Lcom/v2ray/ang/dto/V2rayConfig;)V
     .locals 21
 
-    .line 649
+    .line 681
     sget-object v0, Lcom/v2ray/ang/handler/SettingsManager;->INSTANCE:Lcom/v2ray/ang/handler/SettingsManager;
 
     invoke-virtual {v0}, Lcom/v2ray/ang/handler/SettingsManager;->isRootMode()Z
@@ -5175,7 +5294,7 @@
 
     return-void
 
-    .line 651
+    .line 683
     :cond_0
     invoke-virtual/range {p1 .. p1}, Lcom/v2ray/ang/dto/V2rayConfig;->getRouting()Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean;
 
@@ -5187,7 +5306,7 @@
 
     check-cast v0, Ljava/lang/Iterable;
 
-    .line 1356
+    .line 1388
     instance-of v1, v0, Ljava/util/Collection;
 
     const-string v2, "dns-out"
@@ -5206,7 +5325,7 @@
 
     goto :goto_0
 
-    .line 1357
+    .line 1389
     :cond_1
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -5225,7 +5344,7 @@
 
     check-cast v1, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$RulesBean;
 
-    .line 651
+    .line 683
     invoke-virtual {v1}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$RulesBean;->getOutboundTag()Ljava/lang/String;
 
     move-result-object v3
@@ -5250,7 +5369,7 @@
 
     goto :goto_1
 
-    .line 652
+    .line 684
     :cond_3
     :goto_0
     invoke-virtual/range {p1 .. p1}, Lcom/v2ray/ang/dto/V2rayConfig;->getRouting()Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean;
@@ -5261,8 +5380,8 @@
 
     move-result-object v0
 
-    .line 655
-    const-string v1, "socks"
+    .line 687
+    const-string/jumbo v1, "socks"
 
     filled-new-array {v1}, [Ljava/lang/String;
 
@@ -5272,10 +5391,10 @@
 
     move-result-object v1
 
-    .line 654
+    .line 686
     new-instance v3, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$RulesBean;
 
-    .line 655
+    .line 687
     move-object v15, v1
 
     check-cast v15, Ljava/util/List;
@@ -5292,7 +5411,7 @@
 
     const/4 v7, 0x0
 
-    .line 654
+    .line 686
     const-string v8, "dns-out"
 
     const/4 v9, 0x0
@@ -5317,10 +5436,10 @@
 
     const/4 v1, 0x0
 
-    .line 652
+    .line 684
     invoke-virtual {v0, v1, v3}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 661
+    .line 693
     :goto_1
     invoke-virtual/range {p1 .. p1}, Lcom/v2ray/ang/dto/V2rayConfig;->getOutbounds()Ljava/util/ArrayList;
 
@@ -5328,7 +5447,7 @@
 
     check-cast v0, Ljava/lang/Iterable;
 
-    .line 1359
+    .line 1391
     instance-of v1, v0, Ljava/util/Collection;
 
     if-eqz v1, :cond_4
@@ -5345,7 +5464,7 @@
 
     goto :goto_2
 
-    .line 1360
+    .line 1392
     :cond_4
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -5364,7 +5483,7 @@
 
     check-cast v1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;
 
-    .line 661
+    .line 693
     invoke-virtual {v1}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;->getProtocol()Ljava/lang/String;
 
     move-result-object v3
@@ -5389,14 +5508,14 @@
 
     return-void
 
-    .line 662
+    .line 694
     :cond_6
     :goto_2
     invoke-virtual/range {p1 .. p1}, Lcom/v2ray/ang/dto/V2rayConfig;->getOutbounds()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 663
+    .line 695
     new-instance v1, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;
 
     const/16 v8, 0x10
@@ -5417,7 +5536,7 @@
 
     invoke-direct/range {v1 .. v9}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$OutSettingsBean;Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$StreamSettingsBean;Ljava/lang/String;Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$MuxBean;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 662
+    .line 694
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
@@ -5437,12 +5556,12 @@
         }
     .end annotation
 
-    .line 1120
+    .line 1152
     invoke-virtual {p2}, Lcom/v2ray/ang/dto/V2rayConfig;->getRouting()Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean;
 
     move-result-object p0
 
-    .line 1121
+    .line 1153
     sget-object v0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v1, "pref_routing_domain_strategy"
@@ -5453,14 +5572,14 @@
 
     if-nez v0, :cond_0
 
-    .line 1122
+    .line 1154
     const-string v0, "AsIs"
 
-    .line 1120
+    .line 1152
     :cond_0
     invoke-virtual {p0, v0}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean;->setDomainStrategy(Ljava/lang/String;)V
 
-    .line 1124
+    .line 1156
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     invoke-virtual {p0}, Lcom/v2ray/ang/handler/MmkvManager;->decodeRoutingRulesets()Ljava/util/List;
@@ -5469,10 +5588,10 @@
 
     if-eqz p0, :cond_1
 
-    .line 1125
+    .line 1157
     check-cast p0, Ljava/lang/Iterable;
 
-    .line 1416
+    .line 1448
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -5490,7 +5609,7 @@
 
     check-cast v0, Lcom/v2ray/ang/dto/entities/RulesetItem;
 
-    .line 1126
+    .line 1158
     sget-object v1, Lcom/v2ray/ang/core/CoreConfigManager;->INSTANCE:Lcom/v2ray/ang/core/CoreConfigManager;
 
     invoke-direct {v1, p1, v0, p2, p3}, Lcom/v2ray/ang/core/CoreConfigManager;->appendRoutingUserRule(Lcom/v2ray/ang/dto/CoreConfigContext;Lcom/v2ray/ang/dto/entities/RulesetItem;Lcom/v2ray/ang/dto/V2rayConfig;Ljava/util/Map;)V
@@ -5504,7 +5623,7 @@
 .method private final convertProfile2Outbound(Lcom/v2ray/ang/dto/entities/ProfileItem;)Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;
     .locals 0
 
-    .line 1071
+    .line 1103
     sget-object p0, Lcom/v2ray/ang/core/CoreOutboundBuilder;->INSTANCE:Lcom/v2ray/ang/core/CoreOutboundBuilder;
 
     invoke-virtual {p0, p1}, Lcom/v2ray/ang/core/CoreOutboundBuilder;->convert(Lcom/v2ray/ang/dto/entities/ProfileItem;)Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;
@@ -5517,7 +5636,7 @@
 .method private final decodeObservatoryDuration(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 1238
+    .line 1270
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     invoke-virtual {p0, p1}, Lcom/v2ray/ang/handler/MmkvManager;->decodeSettingsString(Ljava/lang/String;)Ljava/lang/String;
@@ -5541,7 +5660,7 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 1239
+    .line 1271
     :goto_0
     move-object p1, p0
 
@@ -5580,7 +5699,7 @@
 .method private final decodeObservatorySampling()I
     .locals 1
 
-    .line 1247
+    .line 1279
     sget-object p0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v0, "pref_observatory_least_load_sampling"
@@ -5603,14 +5722,14 @@
 
     if-eqz p0, :cond_1
 
-    .line 1249
+    .line 1281
     invoke-static {p0}, Lkotlin/text/StringsKt;->toIntOrNull(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
-    .line 1250
+    .line 1282
     move-object v0, p0
 
     check-cast v0, Ljava/lang/Number;
@@ -5629,14 +5748,14 @@
     :goto_0
     if-eqz p0, :cond_1
 
-    .line 1247
+    .line 1279
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
 
     return p0
 
-    .line 1251
+    .line 1283
     :cond_1
     const-string p0, "2"
 
@@ -5662,7 +5781,7 @@
         }
     .end annotation
 
-    .line 252
+    .line 284
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext$ResolvedOutbound;->getResolvedProfiles()Ljava/util/List;
 
     move-result-object v0
@@ -5679,7 +5798,7 @@
 
     check-cast p0, Lcom/v2ray/ang/core/CoreConfigManager;
 
-    .line 253
+    .line 285
     sget-object p0, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
 
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext$ResolvedOutbound;->getTag()Ljava/lang/String;
@@ -5706,7 +5825,7 @@
 
     return-void
 
-    .line 256
+    .line 288
     :cond_0
     invoke-direct {p0, v0}, Lcom/v2ray/ang/core/CoreConfigManager;->convertProfile2Outbound(Lcom/v2ray/ang/dto/entities/ProfileItem;)Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;
 
@@ -5716,7 +5835,7 @@
 
     check-cast p0, Lcom/v2ray/ang/core/CoreConfigManager;
 
-    .line 257
+    .line 289
     sget-object p0, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
 
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext$ResolvedOutbound;->getTag()Ljava/lang/String;
@@ -5743,7 +5862,7 @@
 
     return-void
 
-    .line 260
+    .line 292
     :cond_1
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext$ResolvedOutbound;->getTag()Ljava/lang/String;
 
@@ -5753,7 +5872,7 @@
 
     if-eqz p2, :cond_2
 
-    .line 262
+    .line 294
     invoke-virtual {p4}, Lcom/v2ray/ang/dto/V2rayConfig;->getOutbounds()Ljava/util/ArrayList;
 
     move-result-object p0
@@ -5764,7 +5883,7 @@
 
     goto :goto_0
 
-    .line 264
+    .line 296
     :cond_2
     invoke-virtual {p4}, Lcom/v2ray/ang/dto/V2rayConfig;->getOutbounds()Ljava/util/ArrayList;
 
@@ -5772,7 +5891,7 @@
 
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 266
+    .line 298
     :goto_0
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext$ResolvedOutbound;->getTag()Ljava/lang/String;
 
@@ -5806,21 +5925,21 @@
 
     move-object/from16 v0, p3
 
-    .line 338
+    .line 370
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext$ResolvedOutbound;->getResolvedProfiles()Ljava/util/List;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/Iterable;
 
-    .line 1321
+    .line 1353
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     check-cast v2, Ljava/util/Collection;
 
-    .line 1331
+    .line 1363
     invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -5839,10 +5958,10 @@
 
     move-result-object v3
 
-    .line 1330
+    .line 1362
     check-cast v3, Lcom/v2ray/ang/dto/entities/ProfileItem;
 
-    .line 339
+    .line 371
     sget-object v5, Lcom/v2ray/ang/core/CoreConfigManager;->INSTANCE:Lcom/v2ray/ang/core/CoreConfigManager;
 
     invoke-direct {v5, v3}, Lcom/v2ray/ang/core/CoreConfigManager;->convertProfile2Outbound(Lcom/v2ray/ang/dto/entities/ProfileItem;)Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;
@@ -5858,16 +5977,16 @@
     :cond_1
     if-eqz v4, :cond_0
 
-    .line 1330
+    .line 1362
     invoke-interface {v2, v4}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 1334
+    .line 1366
     :cond_2
     check-cast v2, Ljava/util/List;
 
-    .line 341
+    .line 373
     invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
@@ -5878,7 +5997,7 @@
 
     if-eqz v1, :cond_3
 
-    .line 342
+    .line 374
     sget-object p0, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
 
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext$ResolvedOutbound;->getTag()Ljava/lang/String;
@@ -5903,7 +6022,7 @@
 
     return-void
 
-    .line 346
+    .line 378
     :cond_3
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext$ResolvedOutbound;->getTag()Ljava/lang/String;
 
@@ -5925,17 +6044,17 @@
 
     move-result-object v6
 
-    .line 347
+    .line 379
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
     check-cast v7, Ljava/util/List;
 
-    .line 348
+    .line 380
     check-cast v2, Ljava/lang/Iterable;
 
-    .line 1336
+    .line 1368
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -5976,7 +6095,7 @@
 
     check-cast v10, Lcom/v2ray/ang/dto/entities/ProfileItem;
 
-    .line 349
+    .line 381
     invoke-virtual {v10}, Lcom/v2ray/ang/dto/entities/ProfileItem;->getRemarks()Ljava/lang/String;
 
     move-result-object v10
@@ -6007,7 +6126,7 @@
 
     move-result-object v10
 
-    .line 350
+    .line 382
     invoke-interface {v0, v10}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v12
@@ -6016,14 +6135,14 @@
 
     goto :goto_2
 
-    .line 353
+    .line 385
     :cond_5
     invoke-virtual {v9, v10}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;->setTag(Ljava/lang/String;)V
 
-    .line 354
+    .line 386
     invoke-interface {v7, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 355
+    .line 387
     invoke-interface {v0, v10}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     :goto_2
@@ -6031,7 +6150,7 @@
 
     goto :goto_1
 
-    .line 358
+    .line 390
     :cond_6
     invoke-interface {v7}, Ljava/util/List;->isEmpty()Z
 
@@ -6039,10 +6158,10 @@
 
     if-eqz v0, :cond_7
 
-    .line 359
+    .line 391
     sget-object p0, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
 
-    .line 361
+    .line 393
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext$ResolvedOutbound;->getTag()Ljava/lang/String;
 
     move-result-object p1
@@ -6061,7 +6180,7 @@
 
     move-result-object p1
 
-    .line 359
+    .line 391
     invoke-virtual {p0, v5, p1}, Lcom/v2ray/ang/util/LogUtil;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -6069,7 +6188,7 @@
     :cond_7
     if-eqz p2, :cond_8
 
-    .line 367
+    .line 399
     invoke-virtual/range {p4 .. p4}, Lcom/v2ray/ang/dto/V2rayConfig;->getOutbounds()Ljava/util/ArrayList;
 
     move-result-object p2
@@ -6082,7 +6201,7 @@
 
     goto :goto_3
 
-    .line 369
+    .line 401
     :cond_8
     invoke-virtual/range {p4 .. p4}, Lcom/v2ray/ang/dto/V2rayConfig;->getOutbounds()Ljava/util/ArrayList;
 
@@ -6094,7 +6213,7 @@
 
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 372
+    .line 404
     :goto_3
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext$ResolvedOutbound;->getTag()Ljava/lang/String;
 
@@ -6108,12 +6227,12 @@
 
     if-eqz p2, :cond_9
 
-    .line 373
+    .line 405
     const-string p2, "balancer-main"
 
     goto :goto_4
 
-    .line 375
+    .line 407
     :cond_9
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext$ResolvedOutbound;->getTag()Ljava/lang/String;
 
@@ -6131,7 +6250,7 @@
 
     move-result-object p2
 
-    .line 377
+    .line 409
     :goto_4
     sget-object v1, Lcom/v2ray/ang/enums/BalancerStrategyType;->Companion:Lcom/v2ray/ang/enums/BalancerStrategyType$Companion;
 
@@ -6147,7 +6266,7 @@
 
     move-result-object v1
 
-    .line 378
+    .line 410
     invoke-virtual {v1}, Lcom/v2ray/ang/enums/BalancerStrategyType;->getSupportsObservatory()Z
 
     move-result v2
@@ -6172,7 +6291,7 @@
 
     if-nez v2, :cond_c
 
-    .line 379
+    .line 411
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext$ResolvedOutbound;->getProfile()Lcom/v2ray/ang/dto/entities/ProfileItem;
 
     move-result-object v2
@@ -6183,7 +6302,7 @@
 
     if-eqz v2, :cond_b
 
-    .line 380
+    .line 412
     move-object v3, v2
 
     check-cast v3, Ljava/lang/CharSequence;
@@ -6207,7 +6326,7 @@
 
     goto :goto_5
 
-    .line 383
+    .line 415
     :cond_b
     invoke-static {v7}, Lkotlin/collections/CollectionsKt;->first(Ljava/util/List;)Ljava/lang/Object;
 
@@ -6219,19 +6338,19 @@
 
     move-result-object v4
 
-    .line 387
+    .line 419
     :cond_c
     :goto_5
     invoke-static {v6}, Lkotlin/collections/CollectionsKt;->listOf(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 385
+    .line 417
     invoke-direct {p0, v1, v0, p2, v4}, Lcom/v2ray/ang/core/CoreConfigManager;->buildBalancerStrategy(Lcom/v2ray/ang/enums/BalancerStrategyType;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)Lcom/v2ray/ang/core/CoreConfigManager$BalancerStrategy;
 
     move-result-object p0
 
-    .line 391
+    .line 423
     invoke-virtual/range {p4 .. p4}, Lcom/v2ray/ang/dto/V2rayConfig;->getRouting()Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean;
 
     move-result-object v0
@@ -6257,13 +6376,13 @@
 
     check-cast v0, Ljava/util/List;
 
-    .line 392
+    .line 424
     :cond_e
     move-object v1, v0
 
     check-cast v1, Ljava/lang/Iterable;
 
-    .line 1338
+    .line 1370
     instance-of v2, v1, Ljava/util/Collection;
 
     if-eqz v2, :cond_f
@@ -6280,7 +6399,7 @@
 
     goto :goto_7
 
-    .line 1339
+    .line 1371
     :cond_f
     invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -6299,7 +6418,7 @@
 
     check-cast v2, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;
 
-    .line 392
+    .line 424
     invoke-virtual {v2}, Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;->getTag()Ljava/lang/String;
 
     move-result-object v2
@@ -6315,7 +6434,7 @@
 
     goto :goto_8
 
-    .line 393
+    .line 425
     :cond_11
     :goto_7
     invoke-virtual {p0}, Lcom/v2ray/ang/core/CoreConfigManager$BalancerStrategy;->getBalancer()Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean$BalancerBean;
@@ -6324,7 +6443,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 394
+    .line 426
     invoke-virtual/range {p4 .. p4}, Lcom/v2ray/ang/dto/V2rayConfig;->getRouting()Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean;
 
     move-result-object v1
@@ -6333,11 +6452,11 @@
 
     goto :goto_6
 
-    .line 396
+    .line 428
     :goto_8
     invoke-interface {v0, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 397
+    .line 429
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext$ResolvedOutbound;->getTag()Ljava/lang/String;
 
     move-result-object p0
@@ -6366,21 +6485,21 @@
 
     move-object/from16 p0, p3
 
-    .line 278
+    .line 310
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext$ResolvedOutbound;->getResolvedProfiles()Ljava/util/List;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/Iterable;
 
-    .line 1294
+    .line 1326
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     check-cast v1, Ljava/util/Collection;
 
-    .line 1304
+    .line 1336
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -6397,10 +6516,10 @@
 
     move-result-object v2
 
-    .line 1303
+    .line 1335
     check-cast v2, Lcom/v2ray/ang/dto/entities/ProfileItem;
 
-    .line 279
+    .line 311
     sget-object v3, Lcom/v2ray/ang/core/CoreConfigManager;->INSTANCE:Lcom/v2ray/ang/core/CoreConfigManager;
 
     invoke-direct {v3, v2}, Lcom/v2ray/ang/core/CoreConfigManager;->convertProfile2Outbound(Lcom/v2ray/ang/dto/entities/ProfileItem;)Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;
@@ -6409,24 +6528,24 @@
 
     if-eqz v2, :cond_0
 
-    .line 1303
+    .line 1335
     invoke-interface {v1, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 1307
+    .line 1339
     :cond_1
     check-cast v1, Ljava/util/List;
 
-    .line 1294
+    .line 1326
     check-cast v1, Ljava/util/Collection;
 
-    .line 280
+    .line 312
     invoke-static {v1}, Lkotlin/collections/CollectionsKt;->toMutableList(Ljava/util/Collection;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 281
+    .line 313
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
@@ -6437,7 +6556,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 282
+    .line 314
     sget-object p0, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
 
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext$ResolvedOutbound;->getTag()Ljava/lang/String;
@@ -6462,7 +6581,7 @@
 
     return-void
 
-    .line 285
+    .line 317
     :cond_2
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -6474,14 +6593,14 @@
 
     if-ne v1, v5, :cond_4
 
-    .line 286
+    .line 318
     invoke-static {v0}, Lkotlin/collections/CollectionsKt;->first(Ljava/util/List;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;
 
-    .line 287
+    .line 319
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext$ResolvedOutbound;->getTag()Ljava/lang/String;
 
     move-result-object v1
@@ -6490,7 +6609,7 @@
 
     if-eqz p2, :cond_3
 
-    .line 289
+    .line 321
     invoke-virtual/range {p4 .. p4}, Lcom/v2ray/ang/dto/V2rayConfig;->getOutbounds()Ljava/util/ArrayList;
 
     move-result-object v1
@@ -6499,7 +6618,7 @@
 
     goto :goto_1
 
-    .line 291
+    .line 323
     :cond_3
     invoke-virtual/range {p4 .. p4}, Lcom/v2ray/ang/dto/V2rayConfig;->getOutbounds()Ljava/util/ArrayList;
 
@@ -6507,7 +6626,7 @@
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 293
+    .line 325
     :goto_1
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext$ResolvedOutbound;->getTag()Ljava/lang/String;
 
@@ -6517,13 +6636,13 @@
 
     return-void
 
-    .line 297
+    .line 329
     :cond_4
     move-object v1, v0
 
     check-cast v1, Ljava/lang/Iterable;
 
-    .line 1308
+    .line 1340
     new-instance v6, Ljava/util/ArrayList;
 
     const/16 v7, 0xa
@@ -6536,7 +6655,7 @@
 
     check-cast v6, Ljava/util/Collection;
 
-    .line 1310
+    .line 1342
     invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v7
@@ -6558,7 +6677,7 @@
 
     if-gez v8, :cond_5
 
-    .line 1311
+    .line 1343
     invoke-static {}, Lkotlin/collections/CollectionsKt;->throwIndexOverflow()V
 
     :cond_5
@@ -6566,14 +6685,14 @@
 
     if-nez v8, :cond_6
 
-    .line 299
+    .line 331
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext$ResolvedOutbound;->getTag()Ljava/lang/String;
 
     move-result-object v8
 
     goto :goto_3
 
-    .line 301
+    .line 333
     :cond_6
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext$ResolvedOutbound;->getTag()Ljava/lang/String;
 
@@ -6597,7 +6716,7 @@
 
     move-result-object v8
 
-    .line 1311
+    .line 1343
     :goto_3
     invoke-interface {v6, v8}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
@@ -6605,16 +6724,16 @@
 
     goto :goto_2
 
-    .line 1312
+    .line 1344
     :cond_7
     check-cast v6, Ljava/util/List;
 
-    .line 304
+    .line 336
     move-object v7, v6
 
     check-cast v7, Ljava/lang/Iterable;
 
-    .line 1313
+    .line 1345
     instance-of v8, v7, Ljava/util/Collection;
 
     if-eqz v8, :cond_8
@@ -6631,7 +6750,7 @@
 
     goto :goto_4
 
-    .line 1314
+    .line 1346
     :cond_8
     invoke-interface {v7}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -6650,17 +6769,17 @@
 
     check-cast v8, Ljava/lang/String;
 
-    .line 304
+    .line 336
     invoke-interface {p0, v8}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v8
 
     if-eqz v8, :cond_9
 
-    .line 305
+    .line 337
     sget-object p0, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
 
-    .line 307
+    .line 339
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext$ResolvedOutbound;->getTag()Ljava/lang/String;
 
     move-result-object p1
@@ -6679,12 +6798,12 @@
 
     move-result-object p1
 
-    .line 305
+    .line 337
     invoke-virtual {p0, v3, p1}, Lcom/v2ray/ang/util/LogUtil;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    .line 1317
+    .line 1349
     :cond_a
     :goto_4
     invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -6713,7 +6832,7 @@
     :cond_b
     check-cast v3, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;
 
-    .line 313
+    .line 345
     invoke-interface {v6, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -6726,7 +6845,7 @@
 
     goto :goto_5
 
-    .line 315
+    .line 347
     :cond_c
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -6739,7 +6858,7 @@
     :goto_6
     if-ge v2, p1, :cond_d
 
-    .line 316
+    .line 348
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -6769,7 +6888,7 @@
     :cond_d
     if-eqz p2, :cond_e
 
-    .line 320
+    .line 352
     invoke-virtual/range {p4 .. p4}, Lcom/v2ray/ang/dto/V2rayConfig;->getOutbounds()Ljava/util/ArrayList;
 
     move-result-object p1
@@ -6780,7 +6899,7 @@
 
     goto :goto_7
 
-    .line 322
+    .line 354
     :cond_e
     invoke-virtual/range {p4 .. p4}, Lcom/v2ray/ang/dto/V2rayConfig;->getOutbounds()Ljava/util/ArrayList;
 
@@ -6790,7 +6909,7 @@
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 1319
+    .line 1351
     :goto_7
     invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -6809,7 +6928,7 @@
 
     check-cast v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;
 
-    .line 324
+    .line 356
     invoke-virtual {v0}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;->getTag()Ljava/lang/String;
 
     move-result-object v0
@@ -6825,19 +6944,19 @@
 .method private final initV2rayConfig(Lcom/v2ray/ang/dto/CoreConfigContext;)Lcom/v2ray/ang/dto/V2rayConfig;
     .locals 1
 
-    .line 429
+    .line 461
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    .line 431
+    .line 463
     invoke-direct {p0}, Lcom/v2ray/ang/core/CoreConfigManager;->needTun()Z
 
     move-result p0
 
     if-eqz p0, :cond_2
 
-    .line 432
+    .line 464
     sget-object p0, Lcom/v2ray/ang/core/CoreConfigManager;->initConfigCacheWithTun:Ljava/lang/String;
 
     if-nez p0, :cond_0
@@ -6850,7 +6969,7 @@
 
     move-result-object p0
 
-    .line 433
+    .line 465
     :cond_0
     move-object p1, p0
 
@@ -6862,16 +6981,16 @@
 
     if-nez p1, :cond_1
 
-    .line 436
+    .line 468
     sput-object p0, Lcom/v2ray/ang/core/CoreConfigManager;->initConfigCacheWithTun:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 433
+    .line 465
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
-    .line 434
+    .line 466
     const-string p1, "Missing asset: v2ray_config_with_tun.json"
 
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -6882,7 +7001,7 @@
 
     throw p0
 
-    .line 438
+    .line 470
     :cond_2
     sget-object p0, Lcom/v2ray/ang/core/CoreConfigManager;->initConfigCache:Ljava/lang/String;
 
@@ -6896,7 +7015,7 @@
 
     move-result-object p0
 
-    .line 439
+    .line 471
     :cond_3
     move-object p1, p0
 
@@ -6908,10 +7027,10 @@
 
     if-nez p1, :cond_5
 
-    .line 442
+    .line 474
     sput-object p0, Lcom/v2ray/ang/core/CoreConfigManager;->initConfigCache:Ljava/lang/String;
 
-    .line 444
+    .line 476
     :goto_0
     sget-object p1, Lcom/v2ray/ang/util/JsonUtil;->INSTANCE:Lcom/v2ray/ang/util/JsonUtil;
 
@@ -6930,7 +7049,7 @@
     :cond_4
     new-instance p0, Ljava/lang/IllegalStateException;
 
-    .line 445
+    .line 477
     const-string p1, "Failed to parse config template"
 
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -6941,11 +7060,11 @@
 
     throw p0
 
-    .line 439
+    .line 471
     :cond_5
     new-instance p0, Ljava/lang/IllegalStateException;
 
-    .line 440
+    .line 472
     const-string p1, "Missing asset: v2ray_config.json"
 
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -6960,7 +7079,7 @@
 .method private final needTun()Z
     .locals 0
 
-    .line 455
+    .line 487
     sget-object p0, Lcom/v2ray/ang/handler/SettingsManager;->INSTANCE:Lcom/v2ray/ang/handler/SettingsManager;
 
     invoke-virtual {p0}, Lcom/v2ray/ang/handler/SettingsManager;->isVpnMode()Z
@@ -6990,7 +7109,7 @@
 .method private final postProcessForSpeedtest(Lcom/v2ray/ang/dto/V2rayConfig;)V
     .locals 2
 
-    .line 404
+    .line 436
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/V2rayConfig;->getLog()Lcom/v2ray/ang/dto/V2rayConfig$LogBean;
 
     move-result-object p0
@@ -7010,14 +7129,14 @@
     :cond_0
     invoke-virtual {p0, v0}, Lcom/v2ray/ang/dto/V2rayConfig$LogBean;->setLoglevel(Ljava/lang/String;)V
 
-    .line 405
+    .line 437
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/V2rayConfig;->getInbounds()Ljava/util/ArrayList;
 
     move-result-object p0
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
 
-    .line 406
+    .line 438
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/V2rayConfig;->getRouting()Lcom/v2ray/ang/dto/V2rayConfig$RoutingBean;
 
     move-result-object p0
@@ -7030,26 +7149,26 @@
 
     const/4 p0, 0x0
 
-    .line 407
+    .line 439
     invoke-virtual {p1, p0}, Lcom/v2ray/ang/dto/V2rayConfig;->setDns(Lcom/v2ray/ang/dto/V2rayConfig$DnsBean;)V
 
-    .line 408
+    .line 440
     invoke-virtual {p1, p0}, Lcom/v2ray/ang/dto/V2rayConfig;->setFakedns(Ljava/lang/Object;)V
 
-    .line 409
+    .line 441
     invoke-virtual {p1, p0}, Lcom/v2ray/ang/dto/V2rayConfig;->setStats(Ljava/lang/Object;)V
 
-    .line 410
+    .line 442
     invoke-virtual {p1, p0}, Lcom/v2ray/ang/dto/V2rayConfig;->setPolicy(Lcom/v2ray/ang/dto/V2rayConfig$PolicyBean;)V
 
-    .line 411
+    .line 443
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/V2rayConfig;->getOutbounds()Ljava/util/ArrayList;
 
     move-result-object p1
 
     check-cast p1, Ljava/lang/Iterable;
 
-    .line 1341
+    .line 1373
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -7067,7 +7186,7 @@
 
     check-cast v0, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;
 
-    .line 411
+    .line 443
     invoke-virtual {v0, p0}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;->setMux(Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$MuxBean;)V
 
     goto :goto_0
@@ -7079,7 +7198,7 @@
 .method private final resolveOutboundDomainsToHosts(Lcom/v2ray/ang/dto/V2rayConfig;)V
     .locals 17
 
-    .line 1023
+    .line 1055
     sget-object v0, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
     const-string v1, "pref_outbound_domain_resolve_method"
@@ -7098,13 +7217,13 @@
 
     goto :goto_0
 
-    .line 1027
+    .line 1059
     :cond_0
     invoke-virtual/range {p1 .. p1}, Lcom/v2ray/ang/dto/V2rayConfig;->getAllProxyOutbound()Ljava/util/List;
 
     move-result-object v0
 
-    .line 1028
+    .line 1060
     invoke-virtual/range {p1 .. p1}, Lcom/v2ray/ang/dto/V2rayConfig;->getDns()Lcom/v2ray/ang/dto/V2rayConfig$DnsBean;
 
     move-result-object v1
@@ -7114,7 +7233,7 @@
     :goto_0
     return-void
 
-    .line 1029
+    .line 1061
     :cond_1
     invoke-virtual {v1}, Lcom/v2ray/ang/dto/V2rayConfig$DnsBean;->getHosts()Ljava/util/Map;
 
@@ -7135,7 +7254,7 @@
 
     check-cast v2, Ljava/util/Map;
 
-    .line 1030
+    .line 1062
     :cond_3
     sget-object v3, Lcom/v2ray/ang/handler/MmkvManager;->INSTANCE:Lcom/v2ray/ang/handler/MmkvManager;
 
@@ -7158,7 +7277,7 @@
     :cond_4
     move v3, v4
 
-    .line 1032
+    .line 1064
     :goto_1
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -7178,12 +7297,12 @@
 
     check-cast v6, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;
 
-    .line 1033
+    .line 1065
     invoke-virtual {v6}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;->getServerAddress()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 1034
+    .line 1066
     move-object v8, v7
 
     check-cast v8, Ljava/lang/CharSequence;
@@ -7198,7 +7317,7 @@
 
     goto :goto_2
 
-    .line 1038
+    .line 1070
     :cond_6
     invoke-interface {v2, v7}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
@@ -7210,26 +7329,26 @@
 
     if-eqz v8, :cond_7
 
-    .line 1039
+    .line 1071
     invoke-virtual {v6}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;->ensureSockopt()Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$StreamSettingsBean$SockoptBean;
 
     move-result-object v7
 
     invoke-virtual {v7, v10}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$StreamSettingsBean$SockoptBean;->setDomainStrategy(Ljava/lang/String;)V
 
-    .line 1040
+    .line 1072
     invoke-virtual {v6}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;->ensureSockopt()Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$StreamSettingsBean$SockoptBean;
 
     move-result-object v6
 
     new-instance v10, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$StreamSettingsBean$HappyEyeballsBean;
 
-    .line 1041
+    .line 1073
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v11
 
-    .line 1042
+    .line 1074
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v14
@@ -7242,14 +7361,14 @@
 
     const/4 v13, 0x0
 
-    .line 1040
+    .line 1072
     invoke-direct/range {v10 .. v16}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$StreamSettingsBean$HappyEyeballsBean;-><init>(Ljava/lang/Boolean;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v6, v10}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$StreamSettingsBean$SockoptBean;->setHappyEyeballs(Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$StreamSettingsBean$HappyEyeballsBean;)V
 
     goto :goto_2
 
-    .line 1047
+    .line 1079
     :cond_7
     sget-object v8, Lcom/v2ray/ang/util/HttpUtil;->INSTANCE:Lcom/v2ray/ang/util/HttpUtil;
 
@@ -7257,7 +7376,7 @@
 
     move-result-object v8
 
-    .line 1048
+    .line 1080
     move-object v11, v8
 
     check-cast v11, Ljava/util/Collection;
@@ -7272,7 +7391,7 @@
 
     goto :goto_2
 
-    .line 1052
+    .line 1084
     :cond_8
     invoke-virtual {v6}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;->ensureSockopt()Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$StreamSettingsBean$SockoptBean;
 
@@ -7280,19 +7399,19 @@
 
     invoke-virtual {v11, v10}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$StreamSettingsBean$SockoptBean;->setDomainStrategy(Ljava/lang/String;)V
 
-    .line 1053
+    .line 1085
     invoke-virtual {v6}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean;->ensureSockopt()Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$StreamSettingsBean$SockoptBean;
 
     move-result-object v6
 
     new-instance v10, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$StreamSettingsBean$HappyEyeballsBean;
 
-    .line 1054
+    .line 1086
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v11
 
-    .line 1055
+    .line 1087
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v14
@@ -7305,30 +7424,30 @@
 
     const/4 v13, 0x0
 
-    .line 1053
+    .line 1085
     invoke-direct/range {v10 .. v16}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$StreamSettingsBean$HappyEyeballsBean;-><init>(Ljava/lang/Boolean;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v6, v10}, Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$StreamSettingsBean$SockoptBean;->setHappyEyeballs(Lcom/v2ray/ang/dto/V2rayConfig$OutboundBean$StreamSettingsBean$HappyEyeballsBean;)V
 
-    .line 1057
+    .line 1089
     invoke-interface {v8}, Ljava/util/List;->size()I
 
     move-result v6
 
     if-ne v6, v5, :cond_9
 
-    .line 1058
+    .line 1090
     invoke-interface {v8, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v8
 
-    .line 1060
+    .line 1092
     :cond_9
     invoke-interface {v2, v7, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto/16 :goto_2
 
-    .line 1064
+    .line 1096
     :cond_a
     invoke-virtual {v1, v2}, Lcom/v2ray/ang/dto/V2rayConfig$DnsBean;->setHosts(Ljava/util/Map;)V
 
@@ -7338,15 +7457,15 @@
 .method private final toConfigResult(Lcom/v2ray/ang/dto/CoreConfigContext;Lcom/v2ray/ang/dto/V2rayConfig;)Lcom/v2ray/ang/dto/ConfigResult;
     .locals 7
 
-    .line 418
+    .line 450
     new-instance v0, Lcom/v2ray/ang/dto/ConfigResult;
 
-    .line 420
+    .line 452
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext;->getGuid()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 421
+    .line 453
     sget-object p0, Lcom/v2ray/ang/util/JsonUtil;->INSTANCE:Lcom/v2ray/ang/util/JsonUtil;
 
     invoke-virtual {p0, p2}, Lcom/v2ray/ang/util/JsonUtil;->toJsonPretty(Ljava/lang/Object;)Ljava/lang/String;
@@ -7368,7 +7487,7 @@
 
     const/4 v4, 0x0
 
-    .line 418
+    .line 450
     invoke-direct/range {v0 .. v6}, Lcom/v2ray/ang/dto/ConfigResult;-><init>(ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v0
@@ -7387,7 +7506,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 35
+    .line 36
     :try_start_0
     sget-object v0, Lcom/v2ray/ang/core/CoreConfigContextBuilder;->INSTANCE:Lcom/v2ray/ang/core/CoreConfigContextBuilder;
 
@@ -7397,9 +7516,10 @@
 
     if-nez p1, :cond_0
 
-    .line 36
+    .line 37
     new-instance v0, Lcom/v2ray/ang/dto/ConfigResult;
 
+    .line 40
     const-string v4, "Failed to build config context"
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
@@ -7414,6 +7534,7 @@
 
     move-object v2, p2
 
+    .line 37
     :try_start_1
     invoke-direct/range {v0 .. v6}, Lcom/v2ray/ang/dto/ConfigResult;-><init>(ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
@@ -7422,21 +7543,21 @@
     :cond_0
     move-object v2, p2
 
-    .line 37
+    .line 42
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext;->isCustom()Z
 
     move-result p2
 
     if-eqz p2, :cond_1
 
-    .line 38
+    .line 43
     invoke-direct {p0, p1}, Lcom/v2ray/ang/core/CoreConfigManager;->buildV2rayCustomConfig(Lcom/v2ray/ang/dto/CoreConfigContext;)Lcom/v2ray/ang/dto/ConfigResult;
 
     move-result-object p0
 
     return-object p0
 
-    .line 40
+    .line 45
     :cond_1
     invoke-direct {p0, p1}, Lcom/v2ray/ang/core/CoreConfigManager;->buildUnifiedConfig(Lcom/v2ray/ang/dto/CoreConfigContext;)Lcom/v2ray/ang/dto/V2rayConfig;
 
@@ -7463,7 +7584,7 @@
     :goto_0
     move-object p0, v0
 
-    .line 42
+    .line 47
     sget-object p1, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
 
     const-string p2, "Failed to get V2ray config"
@@ -7476,10 +7597,10 @@
 
     invoke-virtual {p1, v1, p2, v0}, Lcom/v2ray/ang/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 43
+    .line 48
     new-instance v1, Lcom/v2ray/ang/dto/ConfigResult;
 
-    .line 46
+    .line 51
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p1
@@ -7517,7 +7638,7 @@
 
     const/4 v4, 0x0
 
-    .line 43
+    .line 48
     invoke-direct/range {v1 .. v7}, Lcom/v2ray/ang/dto/ConfigResult;-><init>(ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v1
@@ -7534,7 +7655,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 58
+    .line 63
     :try_start_0
     sget-object v0, Lcom/v2ray/ang/core/CoreConfigContextBuilder;->INSTANCE:Lcom/v2ray/ang/core/CoreConfigContextBuilder;
 
@@ -7544,9 +7665,10 @@
 
     if-nez p1, :cond_0
 
-    .line 59
+    .line 64
     new-instance v0, Lcom/v2ray/ang/dto/ConfigResult;
 
+    .line 67
     const-string v4, "Failed to build config context"
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
@@ -7561,6 +7683,7 @@
 
     move-object v2, p2
 
+    .line 64
     :try_start_1
     invoke-direct/range {v0 .. v6}, Lcom/v2ray/ang/dto/ConfigResult;-><init>(ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
@@ -7569,30 +7692,30 @@
     :cond_0
     move-object v2, p2
 
-    .line 60
+    .line 69
     invoke-virtual {p1}, Lcom/v2ray/ang/dto/CoreConfigContext;->isCustom()Z
 
     move-result p2
 
     if-eqz p2, :cond_1
 
-    .line 61
+    .line 70
     invoke-direct {p0, p1}, Lcom/v2ray/ang/core/CoreConfigManager;->buildV2rayCustomConfig(Lcom/v2ray/ang/dto/CoreConfigContext;)Lcom/v2ray/ang/dto/ConfigResult;
 
     move-result-object p0
 
     return-object p0
 
-    .line 63
+    .line 72
     :cond_1
     invoke-direct {p0, p1}, Lcom/v2ray/ang/core/CoreConfigManager;->buildUnifiedConfig(Lcom/v2ray/ang/dto/CoreConfigContext;)Lcom/v2ray/ang/dto/V2rayConfig;
 
     move-result-object p2
 
-    .line 64
+    .line 73
     invoke-direct {p0, p2}, Lcom/v2ray/ang/core/CoreConfigManager;->postProcessForSpeedtest(Lcom/v2ray/ang/dto/V2rayConfig;)V
 
-    .line 66
+    .line 75
     invoke-direct {p0, p1, p2}, Lcom/v2ray/ang/core/CoreConfigManager;->toConfigResult(Lcom/v2ray/ang/dto/CoreConfigContext;Lcom/v2ray/ang/dto/V2rayConfig;)Lcom/v2ray/ang/dto/ConfigResult;
 
     move-result-object p0
@@ -7614,7 +7737,7 @@
     :goto_0
     move-object p0, v0
 
-    .line 68
+    .line 77
     sget-object p1, Lcom/v2ray/ang/util/LogUtil;->INSTANCE:Lcom/v2ray/ang/util/LogUtil;
 
     const-string p2, "Failed to get V2ray config for speedtest"
@@ -7627,10 +7750,10 @@
 
     invoke-virtual {p1, v1, p2, v0}, Lcom/v2ray/ang/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 69
+    .line 78
     new-instance v1, Lcom/v2ray/ang/dto/ConfigResult;
 
-    .line 72
+    .line 81
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p1
@@ -7648,7 +7771,7 @@
     :cond_2
     new-instance p0, Ljava/lang/StringBuilder;
 
-    const-string p2, "Failed to get V2ray config for speedtest: "
+    const-string p2, "Failed to get V2ray config: "
 
     invoke-direct {p0, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -7668,7 +7791,7 @@
 
     const/4 v4, 0x0
 
-    .line 69
+    .line 78
     invoke-direct/range {v1 .. v7}, Lcom/v2ray/ang/dto/ConfigResult;-><init>(ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v1

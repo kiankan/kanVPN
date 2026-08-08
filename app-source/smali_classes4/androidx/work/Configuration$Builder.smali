@@ -1069,7 +1069,7 @@
 .method public final setTaskExecutor(Ljava/util/concurrent/Executor;)Landroidx/work/Configuration$Builder;
     .locals 1
 
-    const-string v0, "taskExecutor"
+    const-string/jumbo v0, "taskExecutor"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

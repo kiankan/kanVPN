@@ -5,10 +5,6 @@
         <item>OkHttp</item>
         <item>WebView</item>
     </string-array>
-    <string-array name="config_backup_options">
-        <item>Локально</item>
-        <item>WebDAV</item>
-    </string-array>
     <string-array name="mode_entries">
         <item>VPN</item>
         <item>Прокси</item>
@@ -24,21 +20,10 @@
         <item>Определять и заменять домен</item>
     </string-array>
     <string-array name="policy_group_type">
-        <item>Наименьшая задержка</item>
-        <item>Наименьшая нагрузка</item>
-        <item>Случайно</item>
-        <item>По очереди</item>
-    </string-array>
-    <string-array name="preset_rulesets">
-        <item>Белый список Китая</item>
-        <item>Чёрный список Китая</item>
-        <item>Общие</item>
-        <item>Белый список Ирана</item>
-        <item>Белый список России</item>
-    </string-array>
-    <string-array name="share_sub_method">
-        <item>QR-код</item>
-        <item>Экспорт в буфер обмена</item>
+        <item>Наименьшая задержка (leastPing)</item>
+        <item>Наименьшая нагрузка (leastLoad)</item>
+        <item>Случайный выбор (random)</item>
+        <item>Циклический выбор (roundRobin)</item>
     </string-array>
     <string-array name="ui_mode_night">
         <item>Как в системе</item>

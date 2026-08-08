@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nCheckUpdateActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CheckUpdateActivity.kt\ncom/v2ray/ang/ui/checkupdate/CheckUpdateActivity\n+ 2 ActivityViewModelLazy.kt\nandroidx/activity/ActivityViewModelLazyKt\n+ 3 Composer.kt\nandroidx/compose/runtime/ComposerKt\n*L\n1#1,120:1\n70#2,11:121\n1047#3,6:132\n*S KotlinDebug\n*F\n+ 1 CheckUpdateActivity.kt\ncom/v2ray/ang/ui/checkupdate/CheckUpdateActivity\n*L\n36#1:121,11\n44#1:132,6\n*E\n"
+    value = "SMAP\nCheckUpdateActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CheckUpdateActivity.kt\ncom/v2ray/ang/ui/checkupdate/CheckUpdateActivity\n+ 2 ActivityViewModelLazy.kt\nandroidx/activity/ActivityViewModelLazyKt\n+ 3 Composer.kt\nandroidx/compose/runtime/ComposerKt\n*L\n1#1,119:1\n70#2,11:120\n1047#3,6:131\n*S KotlinDebug\n*F\n+ 1 CheckUpdateActivity.kt\ncom/v2ray/ang/ui/checkupdate/CheckUpdateActivity\n*L\n35#1:120,11\n46#1:131,6\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -79,22 +79,22 @@
 .method public constructor <init>()V
     .locals 7
 
-    .line 34
+    .line 33
     invoke-direct {p0}, Lcom/v2ray/ang/ui/base/BaseComponentActivity;-><init>()V
 
-    .line 36
+    .line 35
     move-object v0, p0
 
     check-cast v0, Landroidx/activity/ComponentActivity;
 
-    .line 125
+    .line 124
     new-instance v1, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivity$special$$inlined$viewModels$default$1;
 
     invoke-direct {v1, v0}, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivity$special$$inlined$viewModels$default$1;-><init>(Landroidx/activity/ComponentActivity;)V
 
     check-cast v1, Lkotlin/jvm/functions/Function0;
 
-    .line 127
+    .line 126
     new-instance v2, Landroidx/lifecycle/ViewModelLazy;
 
     const-class v3, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateViewModel;
@@ -103,14 +103,14 @@
 
     move-result-object v3
 
-    .line 129
+    .line 128
     new-instance v4, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivity$special$$inlined$viewModels$default$2;
 
     invoke-direct {v4, v0}, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivity$special$$inlined$viewModels$default$2;-><init>(Landroidx/activity/ComponentActivity;)V
 
     check-cast v4, Lkotlin/jvm/functions/Function0;
 
-    .line 131
+    .line 130
     new-instance v5, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivity$special$$inlined$viewModels$default$3;
 
     const/4 v6, 0x0
@@ -119,12 +119,12 @@
 
     check-cast v5, Lkotlin/jvm/functions/Function0;
 
-    .line 127
+    .line 126
     invoke-direct {v2, v3, v4, v1, v5}, Landroidx/lifecycle/ViewModelLazy;-><init>(Lkotlin/reflect/KClass;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;)V
 
     check-cast v2, Lkotlin/Lazy;
 
-    .line 36
+    .line 35
     iput-object v2, p0, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivity;->viewModel$delegate:Lkotlin/Lazy;
 
     return-void
@@ -133,7 +133,7 @@
 .method private static final ScreenContent$lambda$0$0(Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivity;)Lkotlin/Unit;
     .locals 0
 
-    .line 44
+    .line 46
     invoke-virtual {p0}, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivity;->finish()V
 
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -160,7 +160,7 @@
 .method private final getViewModel()Lcom/v2ray/ang/ui/checkupdate/CheckUpdateViewModel;
     .locals 0
 
-    .line 36
+    .line 35
     iget-object p0, p0, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivity;->viewModel$delegate:Lkotlin/Lazy;
 
     invoke-interface {p0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
@@ -179,12 +179,12 @@
 
     const v0, -0xc97971f
 
-    .line 43
+    .line 45
     invoke-interface {p1, v0}, Landroidx/compose/runtime/Composer;->startRestartGroup(I)Landroidx/compose/runtime/Composer;
 
     move-result-object p1
 
-    const-string v1, "C(ScreenContent)43@1716L12,43@1661L68:CheckUpdateActivity.kt#c9mg0o"
+    const-string v1, "C(ScreenContent)45@1761L12,45@1706L68:CheckUpdateActivity.kt#c9mg0o"
 
     invoke-static {p1, v1}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -262,11 +262,11 @@
 
     const/4 v3, -0x1
 
-    const-string v4, "com.v2ray.ang.ui.checkupdate.CheckUpdateActivity.ScreenContent (CheckUpdateActivity.kt:42)"
+    const-string v4, "com.v2ray.ang.ui.checkupdate.CheckUpdateActivity.ScreenContent (CheckUpdateActivity.kt:44)"
 
     invoke-static {v0, v1, v3, v4}, Landroidx/compose/runtime/ComposerKt;->traceEventStart(IIILjava/lang/String;)V
 
-    .line 44
+    .line 46
     :cond_4
     invoke-direct {p0}, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivity;->getViewModel()Lcom/v2ray/ang/ui/checkupdate/CheckUpdateViewModel;
 
@@ -295,7 +295,7 @@
     :cond_5
     move v5, v6
 
-    .line 132
+    .line 131
     :cond_6
     invoke-interface {p1}, Landroidx/compose/runtime/Composer;->rememberedValue()Ljava/lang/Object;
 
@@ -303,7 +303,7 @@
 
     if-nez v5, :cond_7
 
-    .line 133
+    .line 132
     sget-object v2, Landroidx/compose/runtime/Composer;->Companion:Landroidx/compose/runtime/Composer$Companion;
 
     invoke-virtual {v2}, Landroidx/compose/runtime/Composer$Companion;->getEmpty()Ljava/lang/Object;
@@ -312,16 +312,16 @@
 
     if-ne v1, v2, :cond_8
 
-    .line 44
+    .line 46
     :cond_7
     new-instance v1, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivity$$ExternalSyntheticLambda0;
 
     invoke-direct {v1, p0}, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivity$$ExternalSyntheticLambda0;-><init>(Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivity;)V
 
-    .line 135
+    .line 134
     invoke-interface {p1, v1}, Landroidx/compose/runtime/Composer;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 44
+    .line 46
     :cond_8
     check-cast v1, Lkotlin/jvm/functions/Function0;
 
@@ -341,11 +341,11 @@
 
     goto :goto_4
 
-    .line 43
+    .line 45
     :cond_9
     invoke-interface {p1}, Landroidx/compose/runtime/Composer;->skipToGroupEnd()V
 
-    .line 45
+    .line 47
     :cond_a
     :goto_4
     invoke-interface {p1}, Landroidx/compose/runtime/Composer;->endRestartGroup()Landroidx/compose/runtime/ScopeUpdateScope;
@@ -367,8 +367,18 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 0
 
-    .line 39
+    .line 38
     invoke-super {p0, p1}, Lcom/v2ray/ang/ui/base/BaseComponentActivity;->onCreate(Landroid/os/Bundle;)V
 
+    if-nez p1, :cond_0
+
+    .line 40
+    invoke-direct {p0}, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateActivity;->getViewModel()Lcom/v2ray/ang/ui/checkupdate/CheckUpdateViewModel;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/v2ray/ang/ui/checkupdate/CheckUpdateViewModel;->checkForUpdates()V
+
+    :cond_0
     return-void
 .end method

@@ -10,10 +10,6 @@
         <item>OkHttp</item>
         <item>WebView</item>
     </string-array>
-    <string-array name="config_backup_options">
-        <item>Local</item>
-        <item>WebDAV</item>
-    </string-array>
     <string-array name="core_loglevel">
         <item>debug</item>
         <item>info</item>
@@ -132,13 +128,6 @@
         <item>Random</item>
         <item>Round Robin</item>
     </string-array>
-    <string-array name="preset_rulesets">
-        <item>China Whitelist</item>
-        <item>China Blacklist</item>
-        <item>Global</item>
-        <item>Iran Whitelist</item>
-        <item>Russia Whitelist</item>
-    </string-array>
     <string-array name="routing_domain_strategy">
         <item>AsIs</item>
         <item>IPIfNonMatch</item>
@@ -150,10 +139,6 @@
         <item>auto</item>
         <item>none</item>
         <item>zero</item>
-    </string-array>
-    <string-array name="share_sub_method">
-        <item>QRcode</item>
-        <item>Export to clipboard</item>
     </string-array>
     <string-array name="ss_securitys">
         <item>aes-256-gcm</item>

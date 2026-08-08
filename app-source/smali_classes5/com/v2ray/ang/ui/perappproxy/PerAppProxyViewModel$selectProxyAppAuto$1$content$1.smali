@@ -165,20 +165,20 @@
 
     invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
 
-    .line 183
+    .line 171
     iget v0, p0, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel$selectProxyAppAuto$1$content$1;->label:I
 
     if-nez v0, :cond_0
 
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 184
+    .line 172
     sget-object p1, Lcom/v2ray/ang/util/HttpUtil;->INSTANCE:Lcom/v2ray/ang/util/HttpUtil;
 
-    .line 185
+    .line 173
     new-instance v0, Lcom/v2ray/ang/dto/UrlContentRequest;
 
-    .line 186
+    .line 174
     iget-object v1, p0, Lcom/v2ray/ang/ui/perappproxy/PerAppProxyViewModel$selectProxyAppAuto$1$content$1;->$url:Ljava/lang/String;
 
     const/16 v8, 0x7c
@@ -197,17 +197,17 @@
 
     const/4 v7, 0x0
 
-    .line 185
+    .line 173
     invoke-direct/range {v0 .. v9}, Lcom/v2ray/ang/dto/UrlContentRequest;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 184
+    .line 172
     invoke-virtual {p1, v0}, Lcom/v2ray/ang/util/HttpUtil;->getUrlContent(Lcom/v2ray/ang/dto/UrlContentRequest;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    .line 183
+    .line 171
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 

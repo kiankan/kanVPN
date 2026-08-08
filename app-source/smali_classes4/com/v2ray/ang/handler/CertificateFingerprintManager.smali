@@ -405,7 +405,7 @@
 
     move-result-object p0
 
-    const-string p1, "tls"
+    const-string/jumbo p1, "tls"
 
     invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -554,7 +554,7 @@
 
     invoke-direct {p1}, Lcom/v2ray/ang/handler/CertificateFingerprintManager$$ExternalSyntheticLambda1;-><init>()V
 
-    const-string v2, "tls"
+    const-string/jumbo v2, "tls"
 
     invoke-direct {p0, v2, v0, p1}, Lcom/v2ray/ang/handler/CertificateFingerprintManager;->fetch(Ljava/lang/String;Lcom/v2ray/ang/dto/CertSha256Request;Lkotlin/jvm/functions/Function1;)Lcom/v2ray/ang/dto/CertSha256Result;
 

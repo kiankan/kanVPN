@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="config_backup_options">
-        <item>محلی</item>
-        <item>WebDAV</item>
+    <string-array name="browser_dialer_mode">
+        <item>غیرفعال</item>
+        <item>OkHttp</item>
+        <item>WebView</item>
     </string-array>
     <string-array name="mode_entries">
         <item>VPN</item>
@@ -14,26 +15,15 @@
         <item>پریدن</item>
     </string-array>
     <string-array name="outbound_domain_resolve_method">
-        <item>Do not resolve</item>
-        <item>Resolve and add to DNS Hosts</item>
-        <item>Resolve and replace domain</item>
+        <item>نام‌گشایی نشود</item>
+        <item>نام‌گشایی و به DNS Hosts افزوده شود</item>
+        <item>نام‌گشایی و جایگزین دامنه شود</item>
     </string-array>
     <string-array name="policy_group_type">
-        <item>کمترین پینگ</item>
-        <item>کمترین بار(لود)</item>
-        <item>تصادفی</item>
-        <item>گردشی</item>
-    </string-array>
-    <string-array name="preset_rulesets">
-        <item>لیست سفید چین ( دور زدن سرزمین اصلی )</item>
-        <item>لیست سیاه چین</item>
-        <item>جهانی(GLOBAL)</item>
-        <item>ایران</item>
-        <item>لیست سفید روسیه</item>
-    </string-array>
-    <string-array name="share_sub_method">
-        <item>QRcode</item>
-        <item>خروجی گرفتن در کلیپ‌ بورد</item>
+        <item>کمترین پینگ (leastPing)</item>
+        <item>کمترین بار (leastLoad)</item>
+        <item>تصادفی (random)</item>
+        <item>چرخشی (roundRobin)</item>
     </string-array>
     <string-array name="ui_mode_night">
         <item>پیش فرض سیستم</item>

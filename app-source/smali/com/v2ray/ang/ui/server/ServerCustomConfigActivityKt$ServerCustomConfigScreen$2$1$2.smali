@@ -38,7 +38,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nServerCustomConfigActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ServerCustomConfigActivity.kt\ncom/v2ray/ang/ui/server/ServerCustomConfigActivityKt$ServerCustomConfigScreen$2$1$2\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,490:1\n1#2:491\n*E\n"
+    value = "SMAP\nServerCustomConfigActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ServerCustomConfigActivity.kt\ncom/v2ray/ang/ui/server/ServerCustomConfigActivityKt$ServerCustomConfigScreen$2$1$2\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,495:1\n1#2:496\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -96,8 +96,8 @@
         0x1
     }
     l = {
-        0x116,
-        0x12d
+        0x11b,
+        0x132
     }
     m = "invokeSuspend"
     n = {
@@ -131,8 +131,8 @@
         "it"
     }
     nl = {
-        0x119,
-        0x12e
+        0x11e,
+        0x133
     }
     s = {
         "L$0",
@@ -351,7 +351,7 @@
 
     move-result-object v7
 
-    .line 252
+    .line 257
     iget v0, v3, Lcom/v2ray/ang/ui/server/ServerCustomConfigActivityKt$ServerCustomConfigScreen$2$1$2;->label:I
 
     const/4 v10, 0x0
@@ -431,7 +431,7 @@
 
     move-result-wide v14
 
-    .line 253
+    .line 258
     iget-object v0, v3, Lcom/v2ray/ang/ui/server/ServerCustomConfigActivityKt$ServerCustomConfigScreen$2$1$2;->$textLayoutResult$delegate:Landroidx/compose/runtime/MutableState;
 
     invoke-static {v0}, Lcom/v2ray/ang/ui/server/ServerCustomConfigActivityKt;->access$ServerCustomConfigScreen$lambda$7(Landroidx/compose/runtime/MutableState;)Landroidx/compose/ui/text/TextLayoutResult;
@@ -444,13 +444,13 @@
 
     return-object v0
 
-    .line 254
+    .line 259
     :cond_3
     invoke-static {v14, v15}, Landroidx/compose/ui/text/TextRange;->getStart-impl(J)I
 
     move-result v13
 
-    .line 255
+    .line 260
     invoke-virtual {v8}, Landroidx/compose/ui/text/TextLayoutResult;->getLayoutInput()Landroidx/compose/ui/text/TextLayoutInput;
 
     move-result-object v0
@@ -471,23 +471,23 @@
 
     goto/16 :goto_8
 
-    .line 259
+    .line 264
     :cond_4
     invoke-virtual {v8, v13}, Landroidx/compose/ui/text/TextLayoutResult;->getLineForOffset(I)I
 
     move-result v1
 
-    .line 260
+    .line 265
     invoke-virtual {v8, v1}, Landroidx/compose/ui/text/TextLayoutResult;->getLineTop(I)F
 
     move-result v2
 
-    .line 261
+    .line 266
     invoke-virtual {v8, v1}, Landroidx/compose/ui/text/TextLayoutResult;->getLineBottom(I)F
 
     move-result v4
 
-    .line 263
+    .line 268
     iget-object v5, v3, Lcom/v2ray/ang/ui/server/ServerCustomConfigActivityKt$ServerCustomConfigScreen$2$1$2;->$verticalScroll:Landroidx/compose/foundation/ScrollState;
 
     invoke-virtual {v5}, Landroidx/compose/foundation/ScrollState;->getViewportSize()I
@@ -502,7 +502,7 @@
 
     move/from16 v17, v10
 
-    .line 265
+    .line 270
     iget-object v10, v3, Lcom/v2ray/ang/ui/server/ServerCustomConfigActivityKt$ServerCustomConfigScreen$2$1$2;->$verticalScroll:Landroidx/compose/foundation/ScrollState;
 
     invoke-virtual {v10}, Landroidx/compose/foundation/ScrollState;->getValue()I
@@ -511,7 +511,7 @@
 
     int-to-float v10, v10
 
-    .line 266
+    .line 271
     iget-object v11, v3, Lcom/v2ray/ang/ui/server/ServerCustomConfigActivityKt$ServerCustomConfigScreen$2$1$2;->$density:Landroidx/compose/ui/unit/Density;
 
     sget-object v18, Lcom/v2ray/ang/ui/server/EditorConstants;->INSTANCE:Lcom/v2ray/ang/ui/server/EditorConstants;
@@ -538,7 +538,7 @@
 
     float-to-int v12, v12
 
-    .line 270
+    .line 275
     invoke-static {v12}, Lkotlin/coroutines/jvm/internal/Boxing;->boxInt(I)Ljava/lang/Integer;
 
     move-result-object v12
@@ -556,7 +556,7 @@
 
     float-to-int v12, v12
 
-    .line 273
+    .line 278
     invoke-static {v12}, Lkotlin/coroutines/jvm/internal/Boxing;->boxInt(I)Ljava/lang/Integer;
 
     move-result-object v12
@@ -569,7 +569,7 @@
     :goto_0
     if-eqz v12, :cond_8
 
-    .line 277
+    .line 282
     iget-object v9, v3, Lcom/v2ray/ang/ui/server/ServerCustomConfigActivityKt$ServerCustomConfigScreen$2$1$2;->$verticalScroll:Landroidx/compose/foundation/ScrollState;
 
     move-object/from16 v19, v12
@@ -584,7 +584,7 @@
 
     move-object/from16 v19, v9
 
-    .line 279
+    .line 284
     invoke-virtual/range {v19 .. v19}, Landroidx/compose/foundation/ScrollState;->getMaxValue()I
 
     move-result v9
@@ -597,7 +597,7 @@
 
     move-result v9
 
-    .line 278
+    .line 283
     invoke-static/range {v20 .. v20}, Lkotlin/coroutines/jvm/internal/SpillingKt;->nullOutSpilledVariable(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v12
@@ -744,13 +744,13 @@
 
     goto :goto_2
 
-    .line 284
+    .line 289
     :goto_4
     invoke-virtual {v8, v13, v6}, Landroidx/compose/ui/text/TextLayoutResult;->getHorizontalPosition(IZ)F
 
     move-result v6
 
-    .line 285
+    .line 290
     iget-object v9, v3, Lcom/v2ray/ang/ui/server/ServerCustomConfigActivityKt$ServerCustomConfigScreen$2$1$2;->$horizontalScroll:Landroidx/compose/foundation/ScrollState;
 
     invoke-virtual {v9}, Landroidx/compose/foundation/ScrollState;->getViewportSize()I
@@ -763,7 +763,7 @@
 
     if-lez v10, :cond_c
 
-    .line 287
+    .line 292
     iget-object v10, v3, Lcom/v2ray/ang/ui/server/ServerCustomConfigActivityKt$ServerCustomConfigScreen$2$1$2;->$horizontalScroll:Landroidx/compose/foundation/ScrollState;
 
     invoke-virtual {v10}, Landroidx/compose/foundation/ScrollState;->getValue()I
@@ -772,7 +772,7 @@
 
     int-to-float v10, v10
 
-    .line 288
+    .line 293
     iget-object v11, v3, Lcom/v2ray/ang/ui/server/ServerCustomConfigActivityKt$ServerCustomConfigScreen$2$1$2;->$density:Landroidx/compose/ui/unit/Density;
 
     sget-object v12, Lcom/v2ray/ang/ui/server/EditorConstants;->INSTANCE:Lcom/v2ray/ang/ui/server/EditorConstants;
@@ -799,7 +799,7 @@
 
     const/4 v8, 0x0
 
-    .line 292
+    .line 297
     invoke-static {v12, v8}, Lkotlin/ranges/RangesKt;->coerceAtLeast(II)I
 
     move-result v8
@@ -827,7 +827,7 @@
 
     float-to-int v8, v8
 
-    .line 296
+    .line 301
     iget-object v12, v3, Lcom/v2ray/ang/ui/server/ServerCustomConfigActivityKt$ServerCustomConfigScreen$2$1$2;->$horizontalScroll:Landroidx/compose/foundation/ScrollState;
 
     invoke-virtual {v12}, Landroidx/compose/foundation/ScrollState;->getMaxValue()I
@@ -850,7 +850,7 @@
     :goto_5
     if-eqz v8, :cond_c
 
-    .line 300
+    .line 305
     iget-object v12, v3, Lcom/v2ray/ang/ui/server/ServerCustomConfigActivityKt$ServerCustomConfigScreen$2$1$2;->$horizontalScroll:Landroidx/compose/foundation/ScrollState;
 
     move-object/from16 v16, v8
@@ -865,7 +865,7 @@
 
     move-object/from16 v16, v12
 
-    .line 301
+    .line 306
     invoke-static/range {v20 .. v20}, Lkotlin/coroutines/jvm/internal/SpillingKt;->nullOutSpilledVariable(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v12
@@ -931,14 +931,14 @@
     :goto_6
     return-object v7
 
-    .line 304
+    .line 309
     :cond_c
     :goto_7
     sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 
-    .line 257
+    .line 262
     :cond_d
     :goto_8
     sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;

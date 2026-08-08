@@ -32,7 +32,7 @@
 
     check-cast p1, Landroid/net/Uri;
 
-    invoke-static {p0, p1}, Lcom/v2ray/ang/ui/backup/BackupActivity;->backupViaLocal$lambda$0(Lcom/v2ray/ang/ui/backup/BackupActivity;Landroid/net/Uri;)Lkotlin/Unit;
+    invoke-static {p0, p1}, Lcom/v2ray/ang/ui/backup/BackupActivity;->restoreViaLocal$lambda$0(Lcom/v2ray/ang/ui/backup/BackupActivity;Landroid/net/Uri;)Lkotlin/Unit;
 
     move-result-object p0
 

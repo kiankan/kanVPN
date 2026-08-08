@@ -49,13 +49,13 @@
 
     const-class v3, Landroidx/compose/foundation/gestures/ScrollableNode;
 
-    const-string v5, "onTrackpadScrollStopped-TH1AsA0(J)V"
+    const-string/jumbo v5, "onTrackpadScrollStopped-TH1AsA0(J)V"
 
     const/4 v6, 0x4
 
     const/4 v1, 0x2
 
-    const-string v4, "onTrackpadScrollStopped"
+    const-string/jumbo v4, "onTrackpadScrollStopped"
 
     move-object v0, p0
 

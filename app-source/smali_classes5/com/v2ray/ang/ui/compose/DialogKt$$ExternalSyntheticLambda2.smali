@@ -38,7 +38,7 @@
 
     move-result p2
 
-    invoke-static {p0, p1, p2}, Lcom/v2ray/ang/ui/compose/DialogKt;->$r8$lambda$QI-6Rdqq8XWNe7jBstkjYFkhpW8(Ljava/lang/String;Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
+    invoke-static {p0, p1, p2}, Lcom/v2ray/ang/ui/compose/DialogKt;->$r8$lambda$BLvIGDIeRrgaD4VNpZFuNuaD2bY(Ljava/lang/String;Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
 
     move-result-object p0
 

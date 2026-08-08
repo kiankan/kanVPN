@@ -129,7 +129,7 @@
 .method public bindTo(Landroidx/sqlite/db/SupportSQLiteProgram;)V
     .locals 1
 
-    const-string v0, "statement"
+    const-string/jumbo v0, "statement"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

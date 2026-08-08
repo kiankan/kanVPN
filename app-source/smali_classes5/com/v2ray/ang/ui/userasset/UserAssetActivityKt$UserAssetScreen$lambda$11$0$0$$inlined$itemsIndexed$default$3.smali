@@ -30,7 +30,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nLazyDsl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 LazyDsl.kt\nandroidx/compose/foundation/lazy/LazyDslKt$itemsIndexed$4\n+ 2 UserAssetActivity.kt\ncom/v2ray/ang/ui/userasset/UserAssetActivityKt\n+ 3 Composer.kt\nandroidx/compose/runtime/ComposerKt\n*L\n1#1,523:1\n332#2,4:524\n336#2:534\n338#2,2:541\n1047#3,6:528\n1047#3,6:535\n*S KotlinDebug\n*F\n+ 1 UserAssetActivity.kt\ncom/v2ray/ang/ui/userasset/UserAssetActivityKt\n*L\n335#1:528,6\n336#1:535,6\n*E\n"
+    value = "SMAP\nLazyDsl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 LazyDsl.kt\nandroidx/compose/foundation/lazy/LazyDslKt$itemsIndexed$4\n+ 2 UserAssetActivity.kt\ncom/v2ray/ang/ui/userasset/UserAssetActivityKt\n+ 3 Composer.kt\nandroidx/compose/runtime/ComposerKt\n*L\n1#1,523:1\n333#2,4:524\n337#2:534\n339#2,2:541\n1047#3,6:528\n1047#3,6:535\n*S KotlinDebug\n*F\n+ 1 UserAssetActivity.kt\ncom/v2ray/ang/ui/userasset/UserAssetActivityKt\n*L\n336#1:528,6\n337#1:535,6\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -209,7 +209,7 @@
     .line 524
     invoke-interface {p3, p1}, Landroidx/compose/runtime/Composer;->startReplaceGroup(I)V
 
-    const-string p1, "CN(item)*334@13238L26,335@13302L32,331@13124L228,337@13369L13:UserAssetActivity.kt#13ivsk"
+    const-string p1, "CN(item)*335@13105L26,336@13169L32,332@12991L228,338@13236L13:UserAssetActivity.kt#13ivsk"
 
     invoke-static {p3, p1}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 

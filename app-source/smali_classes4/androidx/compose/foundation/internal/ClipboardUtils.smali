@@ -86,7 +86,7 @@
 
     move-result-object p0
 
-    const-string v0, "text/*"
+    const-string/jumbo v0, "text/*"
 
     invoke-virtual {p0, v0}, Landroid/content/ClipDescription;->hasMimeType(Ljava/lang/String;)Z
 
@@ -113,7 +113,7 @@
 
     if-eqz p0, :cond_0
 
-    const-string v1, "text/*"
+    const-string/jumbo v1, "text/*"
 
     invoke-virtual {p0, v1}, Landroid/content/ClipDescription;->hasMimeType(Ljava/lang/String;)Z
 

@@ -33,7 +33,7 @@
 
     move-result-object p0
 
-    const-string v0, "startedFromLauncher"
+    const-string/jumbo v0, "startedFromLauncher"
 
     .line 55
     invoke-interface {p0, v0, v1}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
@@ -56,7 +56,7 @@
     move-result-object v0
 
     .line 71
-    const-string v2, "startedFromLauncher"
+    const-string/jumbo v2, "startedFromLauncher"
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 

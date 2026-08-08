@@ -136,7 +136,7 @@
 .method public constructor <init>(Ljava/lang/String;Landroidx/room/support/AutoCloser;)V
     .locals 1
 
-    const-string v0, "sql"
+    const-string/jumbo v0, "sql"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -414,7 +414,7 @@
 .method static final execute$lambda$0(Landroidx/sqlite/db/SupportSQLiteStatement;)Lkotlin/Unit;
     .locals 1
 
-    const-string v0, "statement"
+    const-string/jumbo v0, "statement"
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

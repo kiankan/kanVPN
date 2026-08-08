@@ -92,7 +92,7 @@
     .line 45
     iget-object p0, p0, Landroidx/camera/camera2/pipe/compat/Camera2MultiResolutionStreamConfigurationMap;->multiResolutionStreamConfigurationMap:Landroid/hardware/camera2/params/MultiResolutionStreamConfigurationMap;
 
-    invoke-static {p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m$1(Landroid/hardware/camera2/params/MultiResolutionStreamConfigurationMap;)[I
+    invoke-static {p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m$1(Landroid/hardware/camera2/params/MultiResolutionStreamConfigurationMap;)[I
 
     move-result-object p0
 
@@ -156,7 +156,7 @@
     .line 53
     iget-object p0, p0, Landroidx/camera/camera2/pipe/compat/Camera2MultiResolutionStreamConfigurationMap;->multiResolutionStreamConfigurationMap:Landroid/hardware/camera2/params/MultiResolutionStreamConfigurationMap;
 
-    invoke-static {p0, p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/hardware/camera2/params/MultiResolutionStreamConfigurationMap;I)Ljava/util/Collection;
+    invoke-static {p0, p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/hardware/camera2/params/MultiResolutionStreamConfigurationMap;I)Ljava/util/Collection;
 
     move-result-object p0
 
@@ -187,7 +187,7 @@
     .line 41
     iget-object p0, p0, Landroidx/camera/camera2/pipe/compat/Camera2MultiResolutionStreamConfigurationMap;->multiResolutionStreamConfigurationMap:Landroid/hardware/camera2/params/MultiResolutionStreamConfigurationMap;
 
-    invoke-static {p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/hardware/camera2/params/MultiResolutionStreamConfigurationMap;)[I
+    invoke-static {p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/hardware/camera2/params/MultiResolutionStreamConfigurationMap;)[I
 
     move-result-object p0
 
@@ -251,7 +251,7 @@
     .line 49
     iget-object p0, p0, Landroidx/camera/camera2/pipe/compat/Camera2MultiResolutionStreamConfigurationMap;->multiResolutionStreamConfigurationMap:Landroid/hardware/camera2/params/MultiResolutionStreamConfigurationMap;
 
-    invoke-static {p0, p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m$1(Landroid/hardware/camera2/params/MultiResolutionStreamConfigurationMap;I)Ljava/util/Collection;
+    invoke-static {p0, p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m$1(Landroid/hardware/camera2/params/MultiResolutionStreamConfigurationMap;I)Ljava/util/Collection;
 
     move-result-object p0
 
@@ -298,7 +298,7 @@
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 63
-    invoke-static {}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m$2()Ljava/lang/Class;
+    invoke-static {}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m$2()Ljava/lang/Class;
 
     move-result-object v0
 

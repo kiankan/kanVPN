@@ -39,7 +39,7 @@
     .line 324
     iget-object p0, p0, Landroidx/core/view/WindowInsetsAnimationControllerCompat$Impl30;->mController:Landroid/view/WindowInsetsAnimationController;
 
-    invoke-static {p0, p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/view/WindowInsetsAnimationController;Z)V
+    invoke-static {p0, p1}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/view/WindowInsetsAnimationController;Z)V
 
     return-void
 .end method
@@ -76,7 +76,7 @@
     .line 295
     iget-object p0, p0, Landroidx/core/view/WindowInsetsAnimationControllerCompat$Impl30;->mController:Landroid/view/WindowInsetsAnimationController;
 
-    invoke-static {p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/view/WindowInsetsAnimationController;)Landroid/graphics/Insets;
+    invoke-static {p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/view/WindowInsetsAnimationController;)Landroid/graphics/Insets;
 
     move-result-object p0
 
@@ -93,7 +93,7 @@
     .line 285
     iget-object p0, p0, Landroidx/core/view/WindowInsetsAnimationControllerCompat$Impl30;->mController:Landroid/view/WindowInsetsAnimationController;
 
-    invoke-static {p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m$1(Landroid/view/WindowInsetsAnimationController;)Landroid/graphics/Insets;
+    invoke-static {p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m$1(Landroid/view/WindowInsetsAnimationController;)Landroid/graphics/Insets;
 
     move-result-object p0
 
@@ -110,7 +110,7 @@
     .line 290
     iget-object p0, p0, Landroidx/core/view/WindowInsetsAnimationControllerCompat$Impl30;->mController:Landroid/view/WindowInsetsAnimationController;
 
-    invoke-static {p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m$2(Landroid/view/WindowInsetsAnimationController;)Landroid/graphics/Insets;
+    invoke-static {p0}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m$2(Landroid/view/WindowInsetsAnimationController;)Landroid/graphics/Insets;
 
     move-result-object p0
 
@@ -178,7 +178,7 @@
     move-result-object p1
 
     :goto_0
-    invoke-static {p0, p1, p2, p3}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline4;->m(Landroid/view/WindowInsetsAnimationController;Landroid/graphics/Insets;FF)V
+    invoke-static {p0, p1, p2, p3}, Landroidx/camera/camera2/pipe/compat/Api31Compat$$ExternalSyntheticApiModelOutline1;->m(Landroid/view/WindowInsetsAnimationController;Landroid/graphics/Insets;FF)V
 
     return-void
 .end method

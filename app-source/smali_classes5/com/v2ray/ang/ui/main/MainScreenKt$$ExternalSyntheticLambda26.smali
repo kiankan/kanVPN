@@ -7,17 +7,29 @@
 
 
 # instance fields
-.field public final synthetic f$0:Landroidx/compose/runtime/MutableState;
+.field public final synthetic f$0:Lkotlin/jvm/functions/Function1;
+
+.field public final synthetic f$1:Landroidx/compose/runtime/MutableState;
+
+.field public final synthetic f$2:Landroidx/compose/runtime/MutableState;
+
+.field public final synthetic f$3:Landroidx/compose/runtime/MutableState;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/compose/runtime/MutableState;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/MutableState;Landroidx/compose/runtime/MutableState;Landroidx/compose/runtime/MutableState;)V
     .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$$ExternalSyntheticLambda26;->f$0:Landroidx/compose/runtime/MutableState;
+    iput-object p1, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$$ExternalSyntheticLambda26;->f$0:Lkotlin/jvm/functions/Function1;
+
+    iput-object p2, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$$ExternalSyntheticLambda26;->f$1:Landroidx/compose/runtime/MutableState;
+
+    iput-object p3, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$$ExternalSyntheticLambda26;->f$2:Landroidx/compose/runtime/MutableState;
+
+    iput-object p4, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$$ExternalSyntheticLambda26;->f$3:Landroidx/compose/runtime/MutableState;
 
     return-void
 .end method
@@ -25,18 +37,20 @@
 
 # virtual methods
 .method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    .locals 3
 
     .line 0
-    iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$$ExternalSyntheticLambda26;->f$0:Landroidx/compose/runtime/MutableState;
+    iget-object v0, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$$ExternalSyntheticLambda26;->f$0:Lkotlin/jvm/functions/Function1;
 
-    check-cast p1, Ljava/lang/Boolean;
+    iget-object v1, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$$ExternalSyntheticLambda26;->f$1:Landroidx/compose/runtime/MutableState;
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    iget-object v2, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$$ExternalSyntheticLambda26;->f$2:Landroidx/compose/runtime/MutableState;
 
-    move-result p1
+    iget-object p0, p0, Lcom/v2ray/ang/ui/main/MainScreenKt$$ExternalSyntheticLambda26;->f$3:Landroidx/compose/runtime/MutableState;
 
-    invoke-static {p0, p1}, Lcom/v2ray/ang/ui/main/MainScreenKt;->$r8$lambda$VZeZ4sQqDd5PJV12qFyTx6AuBS0(Landroidx/compose/runtime/MutableState;Z)Lkotlin/Unit;
+    check-cast p1, Lcom/v2ray/ang/ui/main/MainMoreMenuAction;
+
+    invoke-static {v0, v1, v2, p0, p1}, Lcom/v2ray/ang/ui/main/MainScreenKt;->$r8$lambda$6nujnDG0KOg6-fXYiEJj4Ree99A(Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/MutableState;Landroidx/compose/runtime/MutableState;Landroidx/compose/runtime/MutableState;Lcom/v2ray/ang/ui/main/MainMoreMenuAction;)Lkotlin/Unit;
 
     move-result-object p0
 

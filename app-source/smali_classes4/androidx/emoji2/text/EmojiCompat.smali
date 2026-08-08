@@ -1202,7 +1202,7 @@
     invoke-static {v0, v1}, Landroidx/core/util/Preconditions;->checkState(ZLjava/lang/String;)V
 
     .line 1096
-    const-string v0, "start cannot be negative"
+    const-string/jumbo v0, "start cannot be negative"
 
     invoke-static {p2, v0}, Landroidx/core/util/Preconditions;->checkArgumentNonnegative(ILjava/lang/String;)I
 
@@ -1231,7 +1231,7 @@
 
     .line 1099
     :goto_0
-    const-string v3, "start should be <= than end"
+    const-string/jumbo v3, "start should be <= than end"
 
     invoke-static {v2, v3}, Landroidx/core/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
@@ -1257,7 +1257,7 @@
     move v2, v0
 
     :goto_1
-    const-string v3, "start should be < than charSequence length"
+    const-string/jumbo v3, "start should be < than charSequence length"
 
     invoke-static {v2, v3}, Landroidx/core/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 

@@ -127,7 +127,7 @@
 .method static final lambda_195136588$lambda$0(Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
     .locals 11
 
-    const-string v0, "C349@15207L42,349@15251L45,349@15202L95:ServerActivity.kt#eymktg"
+    const-string v0, "C349@15207L42,349@15251L35,349@15202L85:ServerActivity.kt#eymktg"
 
     invoke-static {p0, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -177,7 +177,7 @@
 
     move-result-object v3
 
-    sget p1, Lcom/v2ray/ang/R$string;->menu_item_del_config:I
+    sget p1, Lcom/v2ray/ang/R$string;->acc_delete:I
 
     invoke-static {p1, p0, v2}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
 
@@ -232,7 +232,7 @@
 
     invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v2, "C505@25562L50,505@25557L56:ServerActivity.kt#eymktg"
+    const-string v2, "C505@25539L50,505@25534L56:ServerActivity.kt#eymktg"
 
     invoke-static {v0, v2}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -351,7 +351,7 @@
 .method static final lambda__1426086991$lambda$0(Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
     .locals 11
 
-    const-string v0, "C355@15494L40,355@15536L46,355@15489L94:ServerActivity.kt#eymktg"
+    const-string v0, "C355@15484L40,355@15526L33,355@15479L81:ServerActivity.kt#eymktg"
 
     invoke-static {p0, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -401,7 +401,7 @@
 
     move-result-object v3
 
-    sget p1, Lcom/v2ray/ang/R$string;->menu_item_save_config:I
+    sget p1, Lcom/v2ray/ang/R$string;->acc_save:I
 
     invoke-static {p1, p0, v2}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
 

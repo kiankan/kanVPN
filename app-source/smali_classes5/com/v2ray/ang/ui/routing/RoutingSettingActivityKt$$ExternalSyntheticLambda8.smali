@@ -3,62 +3,74 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Lkotlin/jvm/functions/Function2;
+.implements Lkotlin/jvm/functions/Function1;
 
 
 # instance fields
-.field public final synthetic f$0:Lcom/v2ray/ang/dto/entities/RulesetItem;
+.field public final synthetic f$0:Ljava/util/List;
 
-.field public final synthetic f$1:Lkotlin/jvm/functions/Function0;
+.field public final synthetic f$1:Lkotlin/jvm/functions/Function1;
 
-.field public final synthetic f$2:Lkotlin/jvm/functions/Function1;
+.field public final synthetic f$2:Landroidx/compose/runtime/State;
 
-.field public final synthetic f$3:I
+.field public final synthetic f$3:Landroidx/compose/runtime/State;
+
+.field public final synthetic f$4:Lsh/calvin/reorderable/ReorderableLazyListState;
+
+.field public final synthetic f$5:Lkotlin/jvm/functions/Function1;
+
+.field public final synthetic f$6:Lcom/v2ray/ang/ui/routing/RoutingSettingsViewModel;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/v2ray/ang/dto/entities/RulesetItem;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;I)V
+.method public synthetic constructor <init>(Ljava/util/List;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/State;Landroidx/compose/runtime/State;Lsh/calvin/reorderable/ReorderableLazyListState;Lkotlin/jvm/functions/Function1;Lcom/v2ray/ang/ui/routing/RoutingSettingsViewModel;)V
     .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$$ExternalSyntheticLambda8;->f$0:Lcom/v2ray/ang/dto/entities/RulesetItem;
+    iput-object p1, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$$ExternalSyntheticLambda8;->f$0:Ljava/util/List;
 
-    iput-object p2, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$$ExternalSyntheticLambda8;->f$1:Lkotlin/jvm/functions/Function0;
+    iput-object p2, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$$ExternalSyntheticLambda8;->f$1:Lkotlin/jvm/functions/Function1;
 
-    iput-object p3, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$$ExternalSyntheticLambda8;->f$2:Lkotlin/jvm/functions/Function1;
+    iput-object p3, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$$ExternalSyntheticLambda8;->f$2:Landroidx/compose/runtime/State;
 
-    iput p4, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$$ExternalSyntheticLambda8;->f$3:I
+    iput-object p4, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$$ExternalSyntheticLambda8;->f$3:Landroidx/compose/runtime/State;
+
+    iput-object p5, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$$ExternalSyntheticLambda8;->f$4:Lsh/calvin/reorderable/ReorderableLazyListState;
+
+    iput-object p6, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$$ExternalSyntheticLambda8;->f$5:Lkotlin/jvm/functions/Function1;
+
+    iput-object p7, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$$ExternalSyntheticLambda8;->f$6:Lcom/v2ray/ang/ui/routing/RoutingSettingsViewModel;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
     .line 0
-    iget-object v0, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$$ExternalSyntheticLambda8;->f$0:Lcom/v2ray/ang/dto/entities/RulesetItem;
+    iget-object v0, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$$ExternalSyntheticLambda8;->f$0:Ljava/util/List;
 
-    iget-object v1, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$$ExternalSyntheticLambda8;->f$1:Lkotlin/jvm/functions/Function0;
+    iget-object v1, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$$ExternalSyntheticLambda8;->f$1:Lkotlin/jvm/functions/Function1;
 
-    iget-object v2, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$$ExternalSyntheticLambda8;->f$2:Lkotlin/jvm/functions/Function1;
+    iget-object v2, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$$ExternalSyntheticLambda8;->f$2:Landroidx/compose/runtime/State;
 
-    iget v3, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$$ExternalSyntheticLambda8;->f$3:I
+    iget-object v3, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$$ExternalSyntheticLambda8;->f$3:Landroidx/compose/runtime/State;
 
-    move-object v4, p1
+    iget-object v4, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$$ExternalSyntheticLambda8;->f$4:Lsh/calvin/reorderable/ReorderableLazyListState;
 
-    check-cast v4, Landroidx/compose/runtime/Composer;
+    iget-object v5, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$$ExternalSyntheticLambda8;->f$5:Lkotlin/jvm/functions/Function1;
 
-    check-cast p2, Ljava/lang/Integer;
+    iget-object v6, p0, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt$$ExternalSyntheticLambda8;->f$6:Lcom/v2ray/ang/ui/routing/RoutingSettingsViewModel;
 
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
+    move-object v7, p1
 
-    move-result v5
+    check-cast v7, Landroidx/compose/foundation/lazy/LazyListScope;
 
-    invoke-static/range {v0 .. v5}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt;->RoutingRulesetItem$lambda$1(Lcom/v2ray/ang/dto/entities/RulesetItem;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;ILandroidx/compose/runtime/Composer;I)Lkotlin/Unit;
+    invoke-static/range {v0 .. v7}, Lcom/v2ray/ang/ui/routing/RoutingSettingActivityKt;->$r8$lambda$iJRdCKzd7bpHOpJiARVHwY7SH8c(Ljava/util/List;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/State;Landroidx/compose/runtime/State;Lsh/calvin/reorderable/ReorderableLazyListState;Lkotlin/jvm/functions/Function1;Lcom/v2ray/ang/ui/routing/RoutingSettingsViewModel;Landroidx/compose/foundation/lazy/LazyListScope;)Lkotlin/Unit;
 
     move-result-object p0
 

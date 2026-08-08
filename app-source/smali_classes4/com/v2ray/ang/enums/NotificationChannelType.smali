@@ -94,7 +94,7 @@
 
     const/4 v2, 0x0
 
-    const-string v3, "subscription_update_channel"
+    const-string/jumbo v3, "subscription_update_channel"
 
     invoke-direct/range {v0 .. v5}, Lcom/v2ray/ang/enums/NotificationChannelType;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;I)V
 

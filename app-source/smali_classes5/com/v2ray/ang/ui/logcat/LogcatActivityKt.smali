@@ -188,7 +188,7 @@
 
     move-result-object v14
 
-    const-string v2, "C(LogcatItem)N(log,onLongClick)234@8697L2,231@8592L421:LogcatActivity.kt#i4neol"
+    const-string v2, "C(LogcatItem)N(log,onLongClick)234@8718L2,231@8613L421:LogcatActivity.kt#i4neol"
 
     invoke-static {v14, v2}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -654,7 +654,7 @@
 
     const v1, -0x5136c07d
 
-    const-string v3, "C237@8810L10,237@8771L60:LogcatActivity.kt#i4neol"
+    const-string v3, "C237@8831L10,237@8792L60:LogcatActivity.kt#i4neol"
 
     .line 238
     invoke-static {v14, v1, v3}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -732,7 +732,7 @@
 
     invoke-interface {v1, v4}, Landroidx/compose/runtime/Composer;->startReplaceGroup(I)V
 
-    const-string v4, "239@8880L40,240@8976L10,240@8933L64"
+    const-string v4, "239@8901L40,240@8997L10,240@8954L64"
 
     invoke-static {v1, v4}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -947,7 +947,7 @@
 
     move-result-object v13
 
-    const-string v3, "C(LogcatScreen)N(viewModel,onBackClick,onShareLogcat)127@4694L7,128@4718L24,129@4782L29,130@4853L29,132@4907L31,133@4961L34,135@5017L23,138@5103L19,139@5141L2058,188@7232L318,198@7557L603,137@5046L3114:LogcatActivity.kt#i4neol"
+    const-string v3, "C(LogcatScreen)N(viewModel,onBackClick,onShareLogcat)127@4694L7,128@4718L24,129@4782L29,130@4853L29,132@4907L31,133@4961L34,135@5017L23,138@5103L19,139@5141L2088,188@7262L309,198@7578L603,137@5046L3135:LogcatActivity.kt#i4neol"
 
     invoke-static {v13, v3}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -1470,7 +1470,7 @@
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v2, "CN(innerPadding)199@7583L571:LogcatActivity.kt#i4neol"
+    const-string v2, "CN(innerPadding)199@7604L571:LogcatActivity.kt#i4neol"
 
     invoke-static {v10, v2}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -1731,7 +1731,7 @@
 
     const v1, -0x20aa94a9
 
-    const-string v2, "C209@7899L245,204@7717L427:LogcatActivity.kt#i4neol"
+    const-string v2, "C209@7920L245,204@7738L427:LogcatActivity.kt#i4neol"
 
     .line 205
     invoke-static {v10, v1, v2}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -2061,7 +2061,7 @@
 
     move/from16 v2, p8
 
-    const-string v3, "C141@5190L37,146@5437L97,150@5568L136,155@5742L41,156@5811L1364,140@5155L2034:LogcatActivity.kt#i4neol"
+    const-string v3, "C141@5190L37,146@5437L97,150@5568L136,155@5742L41,156@5811L1394,140@5155L2064:LogcatActivity.kt#i4neol"
 
     invoke-static {v10, v3}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -2339,7 +2339,7 @@
 
     invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v2, "C165@6213L26,165@6192L279,171@6513L19,171@6492L279,177@6813L104,177@6792L365:LogcatActivity.kt#i4neol"
+    const-string v2, "C165@6240L26,165@6219L280,171@6541L19,171@6520L280,177@6842L104,177@6821L366:LogcatActivity.kt#i4neol"
 
     invoke-static {v8, v2}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -2389,11 +2389,11 @@
 
     if-nez v1, :cond_3
 
-    const v1, 0x33f14fce
+    const v1, 0x33f15313
 
     invoke-interface {v8, v1}, Landroidx/compose/runtime/Composer;->startReplaceGroup(I)V
 
-    const-string v1, "158@5897L21,158@5876L273"
+    const-string v1, "158@5897L21,158@5876L300"
 
     invoke-static {v8, v1}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -2458,7 +2458,7 @@
     goto :goto_1
 
     :cond_3
-    const v1, 0x33f604cf
+    const v1, 0x33f66d6f
 
     .line 165
     invoke-interface {v8, v1}, Landroidx/compose/runtime/Composer;->startReplaceGroup(I)V
@@ -2466,7 +2466,7 @@
     invoke-interface {v8}, Landroidx/compose/runtime/Composer;->endReplaceGroup()V
 
     :goto_1
-    const v1, 0x4bffb2ed    # 3.351497E7f
+    const v1, 0x4bffb64d    # 3.3516698E7f
 
     .line 166
     invoke-static {v8, v1, v11}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -2530,7 +2530,7 @@
 
     invoke-static/range {v1 .. v10}, Landroidx/compose/material3/IconButtonKt;->IconButton(Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;ZLandroidx/compose/material3/IconButtonColors;Landroidx/compose/foundation/interaction/MutableInteractionSource;Landroidx/compose/ui/graphics/Shape;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
 
-    const v1, 0x4bffd866    # 3.3534156E7f
+    const v1, 0x4bffdbe6    # 3.3535948E7f
 
     .line 172
     invoke-static {v8, v1, v11}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -2594,7 +2594,7 @@
 
     invoke-static/range {v1 .. v10}, Landroidx/compose/material3/IconButtonKt;->IconButton(Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;ZLandroidx/compose/material3/IconButtonColors;Landroidx/compose/foundation/interaction/MutableInteractionSource;Landroidx/compose/ui/graphics/Shape;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
 
-    const p1, 0x4bfffe3b    # 3.3553526E7f
+    const p1, 0x4c0001db    # 3.3556332E7f
 
     .line 178
     invoke-static {v8, p1, v11}, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer;ILjava/lang/String;)V
@@ -2764,7 +2764,7 @@
 .method static final LogcatScreen$lambda$9(Lcom/v2ray/ang/ui/logcat/LogcatViewModel;Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
     .locals 13
 
-    const-string v2, "C189@7277L54,189@7246L294:LogcatActivity.kt#i4neol"
+    const-string v2, "C189@7307L54,189@7276L285:LogcatActivity.kt#i4neol"
 
     invoke-static {p1, v2}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 

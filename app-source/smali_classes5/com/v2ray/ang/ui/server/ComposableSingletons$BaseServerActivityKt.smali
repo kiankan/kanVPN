@@ -258,7 +258,7 @@
 .method static final lambda__1366397797$lambda$0(Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
     .locals 11
 
-    const-string v0, "C462@18801L42,463@18881L45,461@18759L201:BaseServerActivity.kt#eymktg"
+    const-string v0, "C462@18801L42,463@18881L35,461@18759L191:BaseServerActivity.kt#eymktg"
 
     invoke-static {p0, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -309,7 +309,7 @@
     move-result-object v3
 
     .line 464
-    sget p1, Lcom/v2ray/ang/R$string;->menu_item_del_config:I
+    sget p1, Lcom/v2ray/ang/R$string;->acc_delete:I
 
     invoke-static {p1, p0, v2}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
 
@@ -355,7 +355,7 @@
 .method static final lambda__440390570$lambda$0(Landroidx/compose/runtime/Composer;I)Lkotlin/Unit;
     .locals 11
 
-    const-string v0, "C469@19143L40,470@19217L46,468@19105L188:BaseServerActivity.kt#eymktg"
+    const-string v0, "C469@19133L40,470@19207L33,468@19095L175:BaseServerActivity.kt#eymktg"
 
     invoke-static {p0, v0}, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer;Ljava/lang/String;)V
 
@@ -406,7 +406,7 @@
     move-result-object v3
 
     .line 471
-    sget p1, Lcom/v2ray/ang/R$string;->menu_item_save_config:I
+    sget p1, Lcom/v2ray/ang/R$string;->acc_save:I
 
     invoke-static {p1, p0, v2}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
 

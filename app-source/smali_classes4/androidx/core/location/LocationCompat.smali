@@ -502,7 +502,7 @@
 
     .line 219
     :cond_1
-    const-string v1, "speedAccuracy"
+    const-string/jumbo v1, "speedAccuracy"
 
     invoke-virtual {p0, v1, v0}, Landroid/os/Bundle;->getFloat(Ljava/lang/String;F)F
 
@@ -654,7 +654,7 @@
 
     .line 197
     :cond_0
-    const-string v0, "speedAccuracy"
+    const-string/jumbo v0, "speedAccuracy"
 
     invoke-static {p0, v0}, Landroidx/core/location/LocationCompat;->containsExtra(Landroid/location/Location;Ljava/lang/String;)Z
 
@@ -913,7 +913,7 @@
 
     .line 255
     :cond_3
-    const-string v0, "speedAccuracy"
+    const-string/jumbo v0, "speedAccuracy"
 
     invoke-static {p0, v0}, Landroidx/core/location/LocationCompat;->removeExtra(Landroid/location/Location;Ljava/lang/String;)V
 
@@ -1152,7 +1152,7 @@
 
     move-result-object p0
 
-    const-string v0, "speedAccuracy"
+    const-string/jumbo v0, "speedAccuracy"
 
     invoke-virtual {p0, v0, p1}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
 

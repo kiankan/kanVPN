@@ -495,13 +495,13 @@
 
     const/16 v18, 0x0
 
-    const-string v15, "state"
+    const-string/jumbo v15, "state"
 
     const-string v16, "INTEGER"
 
     invoke-direct/range {v14 .. v20}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
 
-    const-string v2, "state"
+    const-string/jumbo v2, "state"
 
     invoke-interface {v1, v2, v14}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -918,13 +918,13 @@
     const/16 v18, 0x0
 
     .line 197
-    const-string v15, "stop_reason"
+    const-string/jumbo v15, "stop_reason"
 
     const-string v16, "INTEGER"
 
     invoke-direct/range {v14 .. v20}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
 
-    const-string v7, "stop_reason"
+    const-string/jumbo v7, "stop_reason"
 
     invoke-interface {v1, v7, v14}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1268,7 +1268,7 @@
 
     const/16 v19, 0x1
 
-    const-string v14, "tag"
+    const-string/jumbo v14, "tag"
 
     const-string v15, "TEXT"
 
@@ -1278,7 +1278,7 @@
 
     invoke-direct/range {v13 .. v19}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
 
-    const-string v2, "tag"
+    const-string/jumbo v2, "tag"
 
     invoke-interface {v1, v2, v13}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1452,7 +1452,7 @@
 
     const/16 v21, 0x1
 
-    const-string v16, "system_id"
+    const-string/jumbo v16, "system_id"
 
     const-string v17, "INTEGER"
 
@@ -1462,7 +1462,7 @@
 
     invoke-direct/range {v15 .. v21}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
 
-    const-string v2, "system_id"
+    const-string/jumbo v2, "system_id"
 
     invoke-interface {v1, v2, v15}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

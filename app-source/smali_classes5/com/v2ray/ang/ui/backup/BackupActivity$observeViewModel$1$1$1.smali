@@ -68,12 +68,12 @@
         }
     .end annotation
 
-    .line 69
+    .line 71
     instance-of p2, p1, Lcom/v2ray/ang/ui/backup/BackupViewModel$BackupViewModelEvent$ShareFile;
 
     if-eqz p2, :cond_0
 
-    .line 70
+    .line 72
     iget-object p0, p0, Lcom/v2ray/ang/ui/backup/BackupActivity$observeViewModel$1$1$1;->this$0:Lcom/v2ray/ang/ui/backup/BackupActivity;
 
     check-cast p1, Lcom/v2ray/ang/ui/backup/BackupViewModel$BackupViewModelEvent$ShareFile;
@@ -86,13 +86,13 @@
 
     goto :goto_0
 
-    .line 73
+    .line 75
     :cond_0
     instance-of p2, p1, Lcom/v2ray/ang/ui/backup/BackupViewModel$BackupViewModelEvent$ExportLocal;
 
     if-eqz p2, :cond_1
 
-    .line 74
+    .line 76
     iget-object p0, p0, Lcom/v2ray/ang/ui/backup/BackupActivity$observeViewModel$1$1$1;->this$0:Lcom/v2ray/ang/ui/backup/BackupActivity;
 
     check-cast p1, Lcom/v2ray/ang/ui/backup/BackupViewModel$BackupViewModelEvent$ExportLocal;
@@ -109,13 +109,13 @@
 
     goto :goto_0
 
-    .line 77
+    .line 79
     :cond_1
     instance-of p1, p1, Lcom/v2ray/ang/ui/backup/BackupViewModel$BackupViewModelEvent$RestoreSuccess;
 
     if-eqz p1, :cond_2
 
-    .line 78
+    .line 80
     sget-object p1, Lcom/v2ray/ang/handler/SettingsManager;->INSTANCE:Lcom/v2ray/ang/handler/SettingsManager;
 
     iget-object p0, p0, Lcom/v2ray/ang/ui/backup/BackupActivity$observeViewModel$1$1$1;->this$0:Lcom/v2ray/ang/ui/backup/BackupActivity;
@@ -124,7 +124,7 @@
 
     invoke-virtual {p1, p0}, Lcom/v2ray/ang/handler/SettingsManager;->initApp(Landroid/content/Context;)V
 
-    .line 83
+    .line 85
     :cond_2
     :goto_0
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -135,7 +135,7 @@
 .method public bridge synthetic emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
     .locals 0
 
-    .line 67
+    .line 69
     check-cast p1, Lcom/v2ray/ang/ui/base/ViewModelEvent;
 
     invoke-virtual {p0, p1, p2}, Lcom/v2ray/ang/ui/backup/BackupActivity$observeViewModel$1$1$1;->emit(Lcom/v2ray/ang/ui/base/ViewModelEvent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;

@@ -31,7 +31,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nMainViewModel.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$removeServerAndRefresh$1\n+ 2 Mutex.kt\nkotlinx/coroutines/sync/MutexKt\n*L\n1#1,784:1\n117#2,10:785\n*S KotlinDebug\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$removeServerAndRefresh$1\n*L\n644#1:785,10\n*E\n"
+    value = "SMAP\nMainViewModel.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$removeServerAndRefresh$1\n+ 2 Mutex.kt\nkotlinx/coroutines/sync/MutexKt\n*L\n1#1,782:1\n117#2,10:783\n*S KotlinDebug\n*F\n+ 1 MainViewModel.kt\ncom/v2ray/ang/ui/main/MainViewModel$removeServerAndRefresh$1\n*L\n642#1:783,10\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -59,16 +59,16 @@
         0x0
     }
     l = {
-        0x315,
-        0x285
+        0x313,
+        0x283
     }
     m = "invokeSuspend"
     n = {
         "$this$withLock_u24default$iv"
     }
     nl = {
-        0x316,
-        0x286
+        0x314,
+        0x284
     }
     s = {
         "L$0"
@@ -194,7 +194,7 @@
 
     move-result-object v0
 
-    .line 642
+    .line 640
     iget v1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$removeServerAndRefresh$1;->label:I
 
     const/4 v2, 0x2
@@ -238,7 +238,7 @@
     :cond_2
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 643
+    .line 641
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$removeServerAndRefresh$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {p1}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getDataSource$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lcom/v2ray/ang/ui/main/MainDataSource;
@@ -249,7 +249,7 @@
 
     invoke-interface {p1, v1}, Lcom/v2ray/ang/ui/main/MainDataSource;->removeServer(Ljava/lang/String;)V
 
-    .line 644
+    .line 642
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$removeServerAndRefresh$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-static {p1}, Lcom/v2ray/ang/ui/main/MainViewModel;->access$getCacheMutex$p(Lcom/v2ray/ang/ui/main/MainViewModel;)Lkotlinx/coroutines/sync/Mutex;
@@ -258,7 +258,7 @@
 
     iget-object v1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$removeServerAndRefresh$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
-    .line 789
+    .line 787
     move-object p1, p0
 
     check-cast p1, Lkotlin/coroutines/Continuation;
@@ -277,7 +277,7 @@
 
     goto :goto_1
 
-    .line 644
+    .line 642
     :cond_3
     :goto_0
     :try_start_0
@@ -291,10 +291,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 793
+    .line 791
     invoke-interface {v5, v4}, Lkotlinx/coroutines/sync/Mutex;->unlock(Ljava/lang/Object;)V
 
-    .line 645
+    .line 643
     iget-object p1, p0, Lcom/v2ray/ang/ui/main/MainViewModel$removeServerAndRefresh$1;->this$0:Lcom/v2ray/ang/ui/main/MainViewModel;
 
     invoke-virtual {p1, v3}, Lcom/v2ray/ang/ui/main/MainViewModel;->setupGroupTab(Z)Lkotlinx/coroutines/Job;
@@ -320,7 +320,7 @@
     :goto_1
     return-object v0
 
-    .line 646
+    .line 644
     :cond_4
     :goto_2
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -330,7 +330,7 @@
     :catchall_0
     move-exception p0
 
-    .line 793
+    .line 791
     invoke-interface {v5, v4}, Lkotlinx/coroutines/sync/Mutex;->unlock(Ljava/lang/Object;)V
 
     throw p0
