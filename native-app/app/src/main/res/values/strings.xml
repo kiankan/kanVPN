@@ -24,4 +24,46 @@
     <string name="ping_testing">…</string>
     <string name="ping_failed">timeout</string>
     <string name="ping_format">%1$d ms</string>
+
+    <string name="action_search">جستجو</string>
+    <string name="action_add">افزودن</string>
+    <string name="action_test_all">تست همه پینگ‌ها</string>
+    <string name="action_remove_invalid">حذف کانفیگ‌های نامعتبر</string>
+    <string name="hint_search">جستجو بر اساس نام یا سرور…</string>
+
+    <string name="nav_subscription">تنظیمات گروه اشتراک</string>
+    <string name="nav_per_app">تنظیمات به تفکیک برنامه</string>
+    <string name="nav_routing">تنظیمات مسیریابی</string>
+    <string name="nav_geo">فایل‌های منبع جغرافیایی</string>
+    <string name="nav_settings">تنظیمات</string>
+    <string name="nav_section_tools">ابزارها</string>
+    <string name="nav_logcat">Logcat</string>
+    <string name="nav_check_update">بررسی به‌روزرسانی</string>
+    <string name="nav_backup">پشتیبان‌گیری و بازیابی</string>
+    <string name="nav_about">درباره</string>
+    <string name="coming_soon">این بخش هنوز آماده نیست — به‌زودی</string>
+
+    <string name="popup_scan">اسکن QR</string>
+    <string name="popup_paste">افزودن از کلیپ‌بورد</string>
+    <string name="popup_manual">افزودن دستی</string>
+    <string name="popup_import_file">افزودن از فایل محلی</string>
+
+    <string name="backup_title">پشتیبان‌گیری و بازیابی</string>
+    <string name="backup_export">خروجی گرفتن (Export)</string>
+    <string name="backup_import">بازیابی از فایل (Import)</string>
+    <string name="backup_export_done">فایل پشتیبان ذخیره شد</string>
+    <string name="backup_import_done">%1$d کانفیگ اضافه شد</string>
+    <string name="backup_failed">عملیات ناموفق بود</string>
+
+    <string name="clipboard_added">کانفیگ از کلیپ‌بورد اضافه شد</string>
+    <string name="clipboard_empty">کلیپ‌بورد خالی یا نامعتبر است</string>
+    <string name="file_import_done">%1$d کانفیگ از فایل اضافه شد</string>
+    <string name="remove_invalid_done">%1$d کانفیگ نامعتبر حذف شد</string>
+
+    <string name="about_body">kanVPN — کلاینت وی‌پی‌ان مبتنی بر Xray-core.\n\nنسخه %1$s\nhttps://github.com/kiankan/kanVPN</string>
+    <string name="btn_copy">کپی</string>
+    <string name="btn_close">بستن</string>
+    <string name="logcat_title">Logcat</string>
+    <string name="logcat_empty">چیزی ثبت نشده</string>
+    <string name="log_copied">لاگ کپی شد</string>
 </resources>

@@ -58,6 +58,7 @@ class KanVpnService : VpnService() {
                     stopSelf()
                     return START_NOT_STICKY
                 }
+                AppLog.add("Connect requested")
                 VpnStatusBus.update(VpnStatusBus.State.CONNECTING)
                 startForeground(NOTIFICATION_ID, buildNotification("Connecting…"))
                 startVpn(configJson)
@@ -78,6 +79,7 @@ class KanVpnService : VpnService() {
                 }
                 override fun onEmitStatus(l: Long, s: String?): Long {
                     Log.d(TAG, "core status: $s")
+                    if (!s.isNullOrBlank()) AppLog.add("core: $s")
                     return 0
                 }
             })
@@ -102,6 +104,7 @@ class KanVpnService : VpnService() {
             tunFd = builder.establish()
             val fd = tunFd
             if (fd == null) {
+                AppLog.add("ERROR: establish() returned null (VPN permission not granted?)")
                 Log.e(TAG, "VPN permission not granted / establish() failed")
                 stopVpn()
                 return
@@ -110,10 +113,12 @@ class KanVpnService : VpnService() {
             val tunnelConfig = buildTun2SocksConfig()
             val configFile = File(filesDir, "hev-socks5-tunnel.yaml")
             configFile.writeText(tunnelConfig)
-            TProxyService.TProxyStartService(configFile.absolutePath, fd.fd)
+            val tun2socksOk = TProxyService.TProxyStartService(configFile.absolutePath, fd.fd)
+            AppLog.add("tun2socks start: $tun2socksOk, xray outbound tag=${ConfigParser.PROXY_TAG}")
 
             isRunning = true
             startForeground(NOTIFICATION_ID, buildNotification("Connected"))
+            AppLog.add("VPN connected")
             VpnStatusBus.update(VpnStatusBus.State.CONNECTED)
             totalUploadBytes = 0
             totalDownloadBytes = 0
@@ -126,12 +131,14 @@ class KanVpnService : VpnService() {
             // an Exception-only catch here would let the service crash
             // instead of failing the connection cleanly.
             Log.e(TAG, "Failed to start VPN", e)
+            AppLog.add("ERROR: ${e.javaClass.simpleName}: ${e.message}")
             VpnStatusBus.update(VpnStatusBus.State.ERROR, e.message ?: e.javaClass.simpleName)
             stopVpn(resetStatus = false)
         }
     }
 
     private fun stopVpn(resetStatus: Boolean = true) {
+        AppLog.add("Disconnecting")
         statsHandler.removeCallbacks(statsPoller)
         TrafficBus.reset()
         try {
@@ -188,21 +195,19 @@ class KanVpnService : VpnService() {
     private fun pollStats() {
         val controller = coreController ?: return
         try {
-            // queryStats returns the cumulative counter for this tag/direction
-            // since the outbound was created (no reset flag on this binding),
-            // so speed is just the delta since the last poll.
-            val up = controller.queryStats(ConfigParser.PROXY_TAG, "uplink")
-            val down = controller.queryStats(ConfigParser.PROXY_TAG, "downlink")
-            val deltaUp = (up - totalUploadBytes).coerceAtLeast(0)
-            val deltaDown = (down - totalDownloadBytes).coerceAtLeast(0)
-            totalUploadBytes = up
-            totalDownloadBytes = down
+            // queryStats atomically reads AND resets the counter, so each
+            // call returns only the bytes seen since the previous call —
+            // it is already a delta, not a running total.
+            val deltaUp = controller.queryStats(ConfigParser.PROXY_TAG, "uplink").coerceAtLeast(0)
+            val deltaDown = controller.queryStats(ConfigParser.PROXY_TAG, "downlink").coerceAtLeast(0)
+            totalUploadBytes += deltaUp
+            totalDownloadBytes += deltaDown
             TrafficBus.update(
                 TrafficSnapshot(
                     uploadSpeedBps = (deltaUp * 1000 / STATS_INTERVAL_MS),
                     downloadSpeedBps = (deltaDown * 1000 / STATS_INTERVAL_MS),
-                    totalUploadBytes = up,
-                    totalDownloadBytes = down
+                    totalUploadBytes = totalUploadBytes,
+                    totalDownloadBytes = totalDownloadBytes
                 )
             )
         } catch (e: Exception) {

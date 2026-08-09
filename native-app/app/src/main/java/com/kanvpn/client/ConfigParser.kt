@@ -83,6 +83,12 @@ object ConfigParser {
                 }
             })
         }
+        if (network == "grpc") {
+            stream.put("grpcSettings", JSONObject().apply {
+                put("serviceName", params["serviceName"] ?: params["path"] ?: "")
+                put("multiMode", params["mode"] == "multi")
+            })
+        }
         if (security == "tls") {
             stream.put("tlsSettings", JSONObject().apply {
                 val sni = params["sni"] ?: params["peer"] ?: params["host"]
@@ -94,9 +100,57 @@ object ConfigParser {
                 if (!alpn.isNullOrBlank()) {
                     put("alpn", JSONArray(alpn.split(",")))
                 }
+                val fingerprint = params["fp"]
+                if (!fingerprint.isNullOrBlank()) put("fingerprint", fingerprint)
+            })
+        }
+        if (security == "reality") {
+            stream.put("realitySettings", JSONObject().apply {
+                val sni = params["sni"] ?: params["peer"] ?: params["host"]
+                if (!sni.isNullOrBlank()) put("serverName", sni)
+                put("fingerprint", params["fp"]?.ifBlank { "chrome" } ?: "chrome")
+                put("publicKey", params["pbk"] ?: "")
+                val shortId = params["sid"]
+                if (!shortId.isNullOrBlank()) put("shortId", shortId)
+                val spiderX = params["spx"]
+                if (!spiderX.isNullOrBlank()) put("spiderX", spiderX)
+                put("show", false)
             })
         }
         return stream
+    }
+
+    /** Lightweight (protocol, security, host, port) summary for list rows — no full Xray config build. */
+    data class Summary(val protocol: String, val security: String, val host: String, val port: Int)
+
+    fun summarize(link: String): Summary? {
+        val trimmed = link.trim()
+        return try {
+            when {
+                trimmed.startsWith("vless://") || trimmed.startsWith("trojan://") -> {
+                    val uri = URI(trimmed)
+                    val protocol = trimmed.substringBefore("://")
+                    val params = queryParams(uri)
+                    val security = params["security"]?.ifBlank { "none" }
+                        ?: if (protocol == "trojan") "tls" else "none"
+                    Summary(protocol, security, uri.host ?: "", if (uri.port > 0) uri.port else 443)
+                }
+                trimmed.startsWith("vmess://") -> {
+                    val decoded = String(Base64.decode(trimmed.removePrefix("vmess://"), Base64.DEFAULT))
+                    val json = JSONObject(decoded)
+                    val tls = json.optString("tls", "")
+                    Summary(
+                        "vmess",
+                        if (tls == "tls") "tls" else "none",
+                        json.optString("add", ""),
+                        json.optString("port", "443").toIntOrNull() ?: 443
+                    )
+                }
+                else -> null
+            }
+        } catch (e: Exception) {
+            null
+        }
     }
 
     private fun parseVless(link: String): JSONObject {

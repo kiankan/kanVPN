@@ -1,6 +1,8 @@
 package com.kanvpn.client
 
 import android.graphics.Color
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,6 +18,7 @@ class ConfigAdapter(
 
     /** ms per config id; null = not tested yet, -1 = last test failed. */
     private val pingResults = mutableMapOf<String, Int?>()
+    private val mainHandler = Handler(Looper.getMainLooper())
 
     private var items: List<SavedConfig> = emptyList()
     private var selectedId: String? = null
@@ -31,7 +34,7 @@ class ConfigAdapter(
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val dot: View = view.findViewById(R.id.selectedDot)
         val name: TextView = view.findViewById(R.id.configName)
-        val preview: TextView = view.findViewById(R.id.configPreview)
+        val host: TextView = view.findViewById(R.id.configHost)
         val protocolChip: TextView = view.findViewById(R.id.protocolChip)
         val ping: TextView = view.findViewById(R.id.pingText)
         val delete: ImageButton = view.findViewById(R.id.deleteButton)
@@ -45,12 +48,18 @@ class ConfigAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
-        val protocol = protocolOf(item.link)
+        val summary = ConfigParser.summarize(item.link)
 
         holder.name.text = item.name
-        holder.preview.text = previewOf(item.link)
-        holder.protocolChip.text = protocol.uppercase()
-        holder.protocolChip.setBackgroundColor(colorForProtocol(protocol))
+        holder.host.text = if (summary != null) "${summary.host}:${summary.port}" else previewOf(item.link)
+        val protocol = summary?.protocol ?: protocolOf(item.link)
+        val security = summary?.security?.takeIf { it != "none" }
+        holder.protocolChip.text = if (security != null) {
+            "${protocol.uppercase()} / $security"
+        } else {
+            protocol.uppercase()
+        }
+        holder.protocolChip.setTextColor(colorForProtocol(protocol))
         holder.dot.setBackgroundResource(
             if (item.id == selectedId) R.drawable.dot_selected else R.drawable.dot_unselected
         )
@@ -66,9 +75,24 @@ class ConfigAdapter(
     private fun bindPingText(holder: ViewHolder, id: String) {
         val context = holder.itemView.context
         when (val ms = pingResults[id]) {
-            null -> holder.ping.text = context.getString(R.string.ping_tap_test)
-            -1 -> holder.ping.text = context.getString(R.string.ping_failed)
-            else -> holder.ping.text = context.getString(R.string.ping_format, ms)
+            null -> {
+                holder.ping.text = context.getString(R.string.ping_tap_test)
+                holder.ping.setTextColor(Color.parseColor("#9e9e9e"))
+            }
+            -1 -> {
+                holder.ping.text = context.getString(R.string.ping_failed)
+                holder.ping.setTextColor(Color.parseColor("#e53935"))
+            }
+            else -> {
+                holder.ping.text = context.getString(R.string.ping_format, ms)
+                holder.ping.setTextColor(
+                    when {
+                        ms < 50 -> Color.parseColor("#e91e8c")
+                        ms < 150 -> Color.parseColor("#43a047")
+                        else -> Color.parseColor("#e53935")
+                    }
+                )
+            }
         }
     }
 
@@ -76,17 +100,8 @@ class ConfigAdapter(
         val context = holder.itemView.context
         holder.ping.text = context.getString(R.string.ping_testing)
         Thread {
-            val result: Int = try {
-                val configJson = ConfigParser.toXrayConfig(item.link).toString()
-                val delay = Libv2ray.measureOutboundDelay(
-                    configJson,
-                    "https://www.gstatic.com/generate_204"
-                )
-                delay.toInt()
-            } catch (e: Exception) {
-                -1
-            }
-            pingResults[item.id] = if (result < 0) -1 else result
+            val result = measurePing(item)
+            pingResults[item.id] = result
             holder.itemView.post {
                 // The item may have been recycled/rebound to something else
                 // by the time this runs; only touch it if it's still ours.
@@ -97,6 +112,29 @@ class ConfigAdapter(
                 }
             }
         }.start()
+    }
+
+    /** Kicks off a background ping test for every currently listed config. */
+    fun testAll() {
+        val snapshot = items
+        for (item in snapshot) {
+            Thread {
+                val result = measurePing(item)
+                pingResults[item.id] = result
+                mainHandler.post {
+                    val position = items.indexOfFirst { it.id == item.id }
+                    if (position != RecyclerView.NO_POSITION) notifyItemChanged(position)
+                }
+            }.start()
+        }
+    }
+
+    private fun measurePing(item: SavedConfig): Int = try {
+        val configJson = ConfigParser.toXrayConfig(item.link).toString()
+        val delay = Libv2ray.measureOutboundDelay(configJson, "https://www.gstatic.com/generate_204")
+        if (delay < 0) -1 else delay.toInt()
+    } catch (e: Exception) {
+        -1
     }
 
     private fun protocolOf(link: String): String = link.substringBefore("://", "link")

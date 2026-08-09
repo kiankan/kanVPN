@@ -67,4 +67,32 @@ object ConfigStore {
         val id = selectedId(context) ?: return null
         return list(context).firstOrNull { it.id == id }
     }
+
+    fun exportJson(context: Context): String {
+        val array = JSONArray()
+        for (c in list(context)) {
+            array.put(JSONObject().apply {
+                put("name", c.name)
+                put("link", c.link)
+            })
+        }
+        return array.toString(2)
+    }
+
+    /** Merges configs from a backup JSON array into the existing list. Returns how many were added. */
+    fun importJson(context: Context, json: String): Int {
+        val array = JSONArray(json)
+        val existingLinks = list(context).map { it.link }.toMutableSet()
+        var added = 0
+        for (i in 0 until array.length()) {
+            val obj = array.getJSONObject(i)
+            val link = obj.optString("link")
+            if (link.isBlank() || existingLinks.contains(link)) continue
+            val name = obj.optString("name").ifBlank { link.substringBefore("://") }
+            add(context, name, link)
+            existingLinks.add(link)
+            added++
+        }
+        return added
+    }
 }
