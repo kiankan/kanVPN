@@ -35,6 +35,10 @@ import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
 
+    companion object {
+        const val EXTRA_AUTO_CONNECT = "auto_connect"
+    }
+
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var toolbar: Toolbar
     private lateinit var statusText: TextView
@@ -146,6 +150,10 @@ class MainActivity : AppCompatActivity() {
 
         refreshList()
         renderStatus(VpnStatusBus.state)
+
+        if (intent.getBooleanExtra(EXTRA_AUTO_CONNECT, false)) {
+            connect()
+        }
     }
 
     override fun onStart() {
@@ -354,22 +362,44 @@ class MainActivity : AppCompatActivity() {
     // ---- Edit / share a single config ----------------------------------------------
 
     private fun showConfigActionsDialog(config: SavedConfig) {
-        val actions = arrayOf(
+        val groups = GroupStore.list(this)
+        val actions = mutableListOf(
             getString(R.string.config_edit),
-            getString(R.string.config_share),
-            getString(R.string.delete_config)
+            getString(R.string.config_duplicate),
+            getString(R.string.config_share)
         )
+        if (groups.isNotEmpty()) actions.add(getString(R.string.config_move))
+        actions.add(getString(R.string.delete_config))
+
         AlertDialog.Builder(this)
             .setTitle(config.name)
-            .setItems(actions) { _, which ->
-                when (which) {
-                    0 -> showEditConfigDialog(config)
-                    1 -> showShareQrDialog(config)
-                    2 -> {
+            .setItems(actions.toTypedArray()) { _, which ->
+                when (actions[which]) {
+                    getString(R.string.config_edit) -> showEditConfigDialog(config)
+                    getString(R.string.config_duplicate) -> {
+                        ConfigStore.add(this, getString(R.string.config_copy_name, config.name), config.link, config.groupId)
+                        refreshList()
+                    }
+                    getString(R.string.config_share) -> showShareQrDialog(config)
+                    getString(R.string.config_move) -> showMoveToGroupDialog(config, groups)
+                    getString(R.string.delete_config) -> {
                         ConfigStore.remove(this, config.id)
                         refreshList()
                     }
                 }
+            }
+            .setNegativeButton(R.string.btn_close, null)
+            .show()
+    }
+
+    private fun showMoveToGroupDialog(config: SavedConfig, groups: List<ConfigGroup>) {
+        val labels = (listOf(getString(R.string.tab_all)) + groups.map { it.name }).toTypedArray()
+        AlertDialog.Builder(this)
+            .setTitle(R.string.config_move)
+            .setItems(labels) { _, which ->
+                val newGroupId = if (which == 0) null else groups[which - 1].id
+                ConfigStore.moveToGroup(this, config.id, newGroupId)
+                refreshList()
             }
             .setNegativeButton(R.string.btn_close, null)
             .show()

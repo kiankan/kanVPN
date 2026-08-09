@@ -236,17 +236,37 @@ class KanVpnService : VpnService() {
             val deltaDown = controller.queryStats(ConfigParser.PROXY_TAG, "downlink").coerceAtLeast(0)
             totalUploadBytes += deltaUp
             totalDownloadBytes += deltaDown
+            val upSpeed = deltaUp * 1000 / STATS_INTERVAL_MS
+            val downSpeed = deltaDown * 1000 / STATS_INTERVAL_MS
             TrafficBus.update(
                 TrafficSnapshot(
-                    uploadSpeedBps = (deltaUp * 1000 / STATS_INTERVAL_MS),
-                    downloadSpeedBps = (deltaDown * 1000 / STATS_INTERVAL_MS),
+                    uploadSpeedBps = upSpeed,
+                    downloadSpeedBps = downSpeed,
                     totalUploadBytes = totalUploadBytes,
                     totalDownloadBytes = totalDownloadBytes
                 )
             )
+            updateNotification(getString(R.string.notif_traffic, formatBytes(upSpeed), formatBytes(downSpeed)))
         } catch (e: Exception) {
             Log.e(TAG, "Failed to query traffic stats", e)
         }
+    }
+
+    private fun formatBytes(bytes: Long): String {
+        if (bytes < 1024) return "$bytes B"
+        val units = arrayOf("KB", "MB", "GB", "TB")
+        var value = bytes / 1024.0
+        var unitIndex = 0
+        while (value >= 1024 && unitIndex < units.size - 1) {
+            value /= 1024.0
+            unitIndex++
+        }
+        return String.format("%.1f %s", value, units[unitIndex])
+    }
+
+    private fun updateNotification(status: String) {
+        val manager = getSystemService(NotificationManager::class.java)
+        manager.notify(NOTIFICATION_ID, buildNotification(status))
     }
 
     private fun buildTun2SocksConfig(): String {
@@ -278,11 +298,16 @@ class KanVpnService : VpnService() {
             this, 0, disconnectIntent,
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
+        val openAppPending = PendingIntent.getActivity(
+            this, 0, Intent(this, MainActivity::class.java),
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
         return NotificationCompat.Builder(this, CHANNEL_ID)
             .setContentTitle("kanVPN")
             .setContentText(status)
             .setSmallIcon(android.R.drawable.ic_lock_lock)
             .setOngoing(true)
+            .setContentIntent(openAppPending)
             .addAction(android.R.drawable.ic_menu_close_clear_cancel, getString(R.string.btn_disconnect), disconnectPending)
             .build()
     }

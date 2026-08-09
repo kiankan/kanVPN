@@ -56,6 +56,10 @@ object ConfigStore {
         save(context, list(context).map { if (it.id == id) it.copy(name = name, link = link) else it })
     }
 
+    fun moveToGroup(context: Context, id: String, groupId: String?) {
+        save(context, list(context).map { if (it.id == id) it.copy(groupId = groupId) else it })
+    }
+
     /** Rewrites the persisted order to match [orderedIds]; any ids missing from it keep their relative order at the end. */
     fun reorder(context: Context, orderedIds: List<String>) {
         val current = list(context)
