@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_subscription"
+            android:title="@string/nav_subscription"
+            android:icon="@android:drawable/ic_menu_upload" />
+        <item
+            android:id="@+id/nav_per_app"
+            android:title="@string/nav_per_app"
+            android:icon="@android:drawable/ic_menu_manage" />
+        <item
+            android:id="@+id/nav_routing"
+            android:title="@string/nav_routing"
+            android:icon="@android:drawable/ic_menu_directions" />
+        <item
+            android:id="@+id/nav_geo"
+            android:title="@string/nav_geo"
+            android:icon="@android:drawable/ic_menu_mapmode" />
+        <item
+            android:id="@+id/nav_settings"
+            android:title="@string/nav_settings"
+            android:icon="@android:drawable/ic_menu_preferences" />
+    </group>
+
+    <item android:title="@string/nav_section_tools">
+        <menu>
+            <item
+                android:id="@+id/nav_logcat"
+                android:title="@string/nav_logcat"
+                android:icon="@android:drawable/ic_menu_recent_history" />
+            <item
+                android:id="@+id/nav_check_update"
+                android:title="@string/nav_check_update"
+                android:icon="@android:drawable/ic_popup_sync" />
+            <item
+                android:id="@+id/nav_backup"
+                android:title="@string/nav_backup"
+                android:icon="@android:drawable/ic_menu_save" />
+            <item
+                android:id="@+id/nav_about"
+                android:title="@string/nav_about"
+                android:icon="@android:drawable/ic_menu_info_details" />
+        </menu>
+    </item>
+
+</menu>

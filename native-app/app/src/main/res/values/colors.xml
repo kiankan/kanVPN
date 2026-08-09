@@ -4,4 +4,13 @@
     <color name="white">#ffffff</color>
     <color name="status_green">#2e7d32</color>
     <color name="status_red">#c62828</color>
+
+    <color name="app_bg">#121212</color>
+    <color name="card_bg">#1e1e1e</color>
+    <color name="text_primary">#f2f2f2</color>
+    <color name="text_secondary">#9e9e9e</color>
+    <color name="ping_fast">#e91e8c</color>
+    <color name="ping_ok">#43a047</color>
+    <color name="ping_bad">#e53935</color>
+    <color name="divider">#2c2c2c</color>
 </resources>

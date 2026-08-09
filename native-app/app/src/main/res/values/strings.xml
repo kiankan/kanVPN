@@ -24,4 +24,122 @@
     <string name="ping_testing">…</string>
     <string name="ping_failed">timeout</string>
     <string name="ping_format">%1$d ms</string>
+
+    <string name="action_search">جستجو</string>
+    <string name="action_add">افزودن</string>
+    <string name="action_test_all">تست همه پینگ‌ها</string>
+    <string name="action_remove_invalid">حذف کانفیگ‌های نامعتبر</string>
+    <string name="hint_search">جستجو بر اساس نام یا سرور…</string>
+
+    <string name="nav_subscription">تنظیمات گروه اشتراک</string>
+    <string name="nav_per_app">تنظیمات به تفکیک برنامه</string>
+    <string name="nav_routing">تنظیمات مسیریابی</string>
+    <string name="nav_geo">فایل‌های منبع جغرافیایی</string>
+    <string name="nav_settings">تنظیمات</string>
+    <string name="nav_section_tools">ابزارها</string>
+    <string name="nav_logcat">Logcat</string>
+    <string name="nav_check_update">بررسی به‌روزرسانی</string>
+    <string name="nav_backup">پشتیبان‌گیری و بازیابی</string>
+    <string name="nav_about">درباره</string>
+    <string name="coming_soon">این بخش هنوز آماده نیست — به‌زودی</string>
+
+    <string name="popup_scan">اسکن QR</string>
+    <string name="popup_paste">افزودن از کلیپ‌بورد</string>
+    <string name="popup_manual">افزودن دستی</string>
+    <string name="popup_import_file">افزودن از فایل محلی</string>
+
+    <string name="backup_title">پشتیبان‌گیری و بازیابی</string>
+    <string name="backup_export">خروجی گرفتن (Export)</string>
+    <string name="backup_import">بازیابی از فایل (Import)</string>
+    <string name="backup_export_done">فایل پشتیبان ذخیره شد</string>
+    <string name="backup_import_done">%1$d کانفیگ اضافه شد</string>
+    <string name="backup_failed">عملیات ناموفق بود</string>
+
+    <string name="clipboard_added">کانفیگ از کلیپ‌بورد اضافه شد</string>
+    <string name="clipboard_empty">کلیپ‌بورد خالی یا نامعتبر است</string>
+    <string name="file_import_done">%1$d کانفیگ از فایل اضافه شد</string>
+    <string name="remove_invalid_done">%1$d کانفیگ نامعتبر حذف شد</string>
+    <string name="action_remove_duplicates">حذف کانفیگ‌های تکراری</string>
+    <string name="remove_duplicates_done">%1$d کانفیگ تکراری حذف شد</string>
+
+    <string name="about_body">kanVPN — کلاینت وی‌پی‌ان مبتنی بر Xray-core.\n\nنسخه %1$s\nhttps://github.com/kiankan/kanVPN</string>
+    <string name="btn_copy">کپی</string>
+    <string name="btn_close">بستن</string>
+    <string name="logcat_title">Logcat</string>
+    <string name="logcat_empty">چیزی ثبت نشده</string>
+    <string name="log_copied">لاگ کپی شد</string>
+
+    <string name="tab_all">همه</string>
+    <string name="btn_next">بعدی</string>
+
+    <string name="group_add_new">+ افزودن گروه</string>
+    <string name="group_default_name">گروه جدید</string>
+    <string name="group_name_hint">نام گروه</string>
+    <string name="group_url_hint">آدرس اشتراک (اختیاری)</string>
+    <string name="group_rename">تغییر نام</string>
+    <string name="group_refresh">به‌روزرسانی اشتراک</string>
+    <string name="group_delete">حذف گروه</string>
+    <string name="group_refreshing">در حال دریافت %1$s…</string>
+    <string name="group_refresh_failed">دریافت اشتراک ناموفق بود</string>
+    <string name="group_refresh_done">%1$d کانفیگ دریافت شد</string>
+
+    <string name="routing_global">همه‌ی ترافیک از پروکسی (Global)</string>
+    <string name="routing_bypass">دور زدن شبکه محلی و ایران/چین (Bypass LAN + CN)</string>
+
+    <string name="per_app_all">همه‌ی برنامه‌ها</string>
+    <string name="per_app_exclude">همه به‌جز برنامه‌های انتخابی</string>
+    <string name="per_app_only">فقط برنامه‌های انتخابی</string>
+    <string name="per_app_saved">تنظیمات ذخیره شد</string>
+
+    <string name="geo_update">به‌روزرسانی فایل‌ها</string>
+    <string name="geo_updating">در حال دانلود…</string>
+    <string name="geo_update_done">فایل‌های جغرافیایی به‌روزرسانی شدند</string>
+    <string name="geo_update_failed">به‌روزرسانی ناموفق بود</string>
+
+    <string name="action_sort_ping">مرتب‌سازی بر اساس پینگ</string>
+    <string name="config_edit">ویرایش</string>
+    <string name="config_duplicate">تکثیر</string>
+    <string name="config_copy_name">%1$s (کپی)</string>
+    <string name="config_move">انتقال به گروه</string>
+    <string name="config_share">اشتراک‌گذاری (QR)</string>
+    <string name="config_copy_link">کپی لینک</string>
+    <string name="link_copied">لینک کپی شد</string>
+    <string name="settings_autoconnect_boot">اتصال خودکار هنگام روشن شدن گوشی</string>
+    <string name="settings_dns_label">سرور DNS</string>
+    <string name="settings_dns_hint">مثلاً 1.1.1.1</string>
+    <string name="settings_mux">فعال‌سازی Mux (چندگانه‌سازی اتصال، برای reality/vision غیرفعال می‌ماند)</string>
+    <string name="notif_traffic">↑ %1$s/s  ↓ %2$s/s</string>
+    <string name="notif_reconnecting">در حال اتصال مجدد… (%1$d)</string>
+
+    <string name="action_sort_name">مرتب‌سازی بر اساس نام</string>
+    <string name="action_find_selected">یافتن پیکربندی انتخاب‌شده</string>
+    <string name="action_clear_usage">پاک کردن آمار مصرف</string>
+    <string name="usage_cleared">آمار مصرف پاک شد</string>
+
+    <string name="action_select_mode">انتخاب چندتایی</string>
+    <string name="action_delete_selected">حذف موارد انتخاب‌شده</string>
+    <string name="action_cancel_selection">لغو انتخاب</string>
+
+    <string name="confirm_delete_title">حذف کانفیگ؟</string>
+    <string name="confirm_delete_message">این کانفیگ حذف شود؟</string>
+    <string name="confirm_delete_selected_message">%1$d کانفیگ انتخاب‌شده حذف شود؟</string>
+    <string name="confirm_delete_invalid_message">%1$d کانفیگ نامعتبر حذف شود؟</string>
+    <string name="confirm_delete_duplicates_message">%1$d کانفیگ تکراری حذف شود؟</string>
+
+    <string name="config_favorite">افزودن به موردعلاقه‌ها</string>
+    <string name="action_connect_fastest">اتصال به سریع‌ترین سرور</string>
+    <string name="finding_fastest">در حال پیدا کردن سریع‌ترین سرور…</string>
+    <string name="no_reachable_server">هیچ سروری پاسخ نداد</string>
+    <string name="action_clear_group">حذف تمام کانفیگ‌های گروه فعلی</string>
+    <string name="confirm_clear_group_message">%1$d کانفیگ از این گروه حذف شود؟</string>
+
+    <string name="btn_share">اشتراک‌گذاری</string>
+    <string name="group_export">خروجی گرفتن کانفیگ‌ها</string>
+    <string name="group_export_done">کانفیگ‌ها در کلیپ‌بورد کپی شد</string>
+    <string name="group_export_empty">این گروه کانفیگی ندارد</string>
+    <string name="qr_decode_failed">کد QR در این تصویر پیدا نشد</string>
+    <string name="popup_scan_gallery">اسکن از گالری</string>
+
+    <string name="total_usage_label">مجموع مصرف همه‌ی سرورها: %1$s</string>
+    <string name="qr_share_image_hint">برای اشتراک‌گذاری تصویر QR، لمس طولانی کنید</string>
 </resources>

@@ -17,18 +17,47 @@ object ConfigParser {
 
     class ParseException(message: String) : Exception(message)
 
-    fun toXrayConfig(link: String): JSONObject {
+    fun toXrayConfig(
+        link: String,
+        routingMode: RoutingStore.Mode = RoutingStore.Mode.GLOBAL,
+        muxEnabled: Boolean = false
+    ): JSONObject {
         val trimmed = link.trim()
         val outbound = when {
             trimmed.startsWith("vless://") -> parseVless(trimmed)
             trimmed.startsWith("vmess://") -> parseVmess(trimmed)
             trimmed.startsWith("trojan://") -> parseTrojan(trimmed)
+            trimmed.startsWith("ss://") -> parseShadowsocks(trimmed)
+            trimmed.startsWith("socks://") -> parseSocksOrHttp(trimmed, "socks")
+            trimmed.startsWith("http://") -> parseSocksOrHttp(trimmed, "http")
             else -> throw ParseException("Unsupported link scheme")
         }
-        return buildRootConfig(outbound)
+        return buildRootConfig(outbound, routingMode, muxEnabled)
     }
 
-    private fun buildRootConfig(outbound: JSONObject): JSONObject {
+    /** Mux multiplexing is incompatible with XTLS vision flow, so it's silently skipped there. */
+    private fun outboundUsesVisionFlow(outbound: JSONObject): Boolean {
+        val vnext = outbound.optJSONObject("settings")?.optJSONArray("vnext") ?: return false
+        for (i in 0 until vnext.length()) {
+            val users = vnext.getJSONObject(i).optJSONArray("users") ?: continue
+            for (j in 0 until users.length()) {
+                if (users.getJSONObject(j).optString("flow").contains("vision")) return true
+            }
+        }
+        return false
+    }
+
+    private fun buildRootConfig(
+        outbound: JSONObject,
+        routingMode: RoutingStore.Mode,
+        muxEnabled: Boolean = false
+    ): JSONObject {
+        if (muxEnabled && !outboundUsesVisionFlow(outbound)) {
+            outbound.put("mux", JSONObject().apply {
+                put("enabled", true)
+                put("concurrency", 8)
+            })
+        }
         val inbound = JSONObject().apply {
             put("tag", "socks-in")
             put("listen", "127.0.0.1")
@@ -54,6 +83,23 @@ object ConfigParser {
             })
             put("inbounds", JSONArray().put(inbound))
             put("outbounds", JSONArray().put(outbound).put(direct))
+            if (routingMode == RoutingStore.Mode.BYPASS_LAN_CN) {
+                put("routing", JSONObject().apply {
+                    put("domainStrategy", "IPIfNonMatch")
+                    put("rules", JSONArray().apply {
+                        put(JSONObject().apply {
+                            put("type", "field")
+                            put("ip", JSONArray(listOf("geoip:private", "geoip:cn")))
+                            put("outboundTag", "direct")
+                        })
+                        put(JSONObject().apply {
+                            put("type", "field")
+                            put("domain", JSONArray(listOf("geosite:cn")))
+                            put("outboundTag", "direct")
+                        })
+                    })
+                })
+            }
         }
     }
 
@@ -83,6 +129,12 @@ object ConfigParser {
                 }
             })
         }
+        if (network == "grpc") {
+            stream.put("grpcSettings", JSONObject().apply {
+                put("serviceName", params["serviceName"] ?: params["path"] ?: "")
+                put("multiMode", params["mode"] == "multi")
+            })
+        }
         if (security == "tls") {
             stream.put("tlsSettings", JSONObject().apply {
                 val sni = params["sni"] ?: params["peer"] ?: params["host"]
@@ -94,9 +146,67 @@ object ConfigParser {
                 if (!alpn.isNullOrBlank()) {
                     put("alpn", JSONArray(alpn.split(",")))
                 }
+                val fingerprint = params["fp"]
+                if (!fingerprint.isNullOrBlank()) put("fingerprint", fingerprint)
+            })
+        }
+        if (security == "reality") {
+            stream.put("realitySettings", JSONObject().apply {
+                val sni = params["sni"] ?: params["peer"] ?: params["host"]
+                if (!sni.isNullOrBlank()) put("serverName", sni)
+                put("fingerprint", params["fp"]?.ifBlank { "chrome" } ?: "chrome")
+                put("publicKey", params["pbk"] ?: "")
+                val shortId = params["sid"]
+                if (!shortId.isNullOrBlank()) put("shortId", shortId)
+                val spiderX = params["spx"]
+                if (!spiderX.isNullOrBlank()) put("spiderX", spiderX)
+                put("show", false)
             })
         }
         return stream
+    }
+
+    /** Lightweight (protocol, security, host, port) summary for list rows — no full Xray config build. */
+    data class Summary(val protocol: String, val security: String, val host: String, val port: Int)
+
+    fun summarize(link: String): Summary? {
+        val trimmed = link.trim()
+        return try {
+            when {
+                trimmed.startsWith("vless://") || trimmed.startsWith("trojan://") -> {
+                    val uri = URI(trimmed)
+                    val protocol = trimmed.substringBefore("://")
+                    val params = queryParams(uri)
+                    val security = params["security"]?.ifBlank { "none" }
+                        ?: if (protocol == "trojan") "tls" else "none"
+                    Summary(protocol, security, uri.host ?: "", if (uri.port > 0) uri.port else 443)
+                }
+                trimmed.startsWith("socks://") || trimmed.startsWith("http://") -> {
+                    val uri = URI(trimmed)
+                    val protocol = trimmed.substringBefore("://")
+                    val defaultPort = if (protocol == "http") 8080 else 1080
+                    Summary(protocol, "none", uri.host ?: "", if (uri.port > 0) uri.port else defaultPort)
+                }
+                trimmed.startsWith("vmess://") -> {
+                    val decoded = String(Base64.decode(trimmed.removePrefix("vmess://"), Base64.DEFAULT))
+                    val json = JSONObject(decoded)
+                    val tls = json.optString("tls", "")
+                    Summary(
+                        "vmess",
+                        if (tls == "tls") "tls" else "none",
+                        json.optString("add", ""),
+                        json.optString("port", "443").toIntOrNull() ?: 443
+                    )
+                }
+                trimmed.startsWith("ss://") -> {
+                    val (_, _, host, port) = decodeShadowsocksLink(trimmed)
+                    Summary("shadowsocks", "none", host, port)
+                }
+                else -> null
+            }
+        } catch (e: Exception) {
+            null
+        }
     }
 
     private fun parseVless(link: String): JSONObject {
@@ -202,6 +312,121 @@ object ConfigParser {
             put("tag", PROXY_TAG)
             put("settings", JSONObject().put("vnext", JSONArray().put(vnext)))
             put("streamSettings", stream)
+        }
+    }
+
+    private data class ShadowsocksFields(val method: String, val password: String, val host: String, val port: Int)
+
+    /** Tries URL-safe-no-padding first (the common SIP002 encoding), then falls back to standard base64. */
+    private fun decodeSsBase64(value: String): String {
+        for (flag in listOf(Base64.URL_SAFE or Base64.NO_PADDING or Base64.NO_WRAP, Base64.NO_WRAP)) {
+            try {
+                return String(Base64.decode(value, flag))
+            } catch (e: Exception) {
+                // try the next flag combination
+            }
+        }
+        val padded = value + "=".repeat((4 - value.length % 4) % 4)
+        for (flag in listOf(Base64.URL_SAFE or Base64.NO_WRAP, Base64.NO_WRAP)) {
+            try {
+                return String(Base64.decode(padded, flag))
+            } catch (e: Exception) {
+                // try the next flag combination
+            }
+        }
+        throw ParseException("Could not decode Shadowsocks credentials")
+    }
+
+    /** Supports both SIP002 (ss://base64(method:pass)@host:port) and legacy (ss://base64(method:pass@host:port)). */
+    private fun decodeShadowsocksLink(link: String): ShadowsocksFields {
+        val withoutScheme = link.removePrefix("ss://")
+        val beforeHash = withoutScheme.substringBefore("#")
+        val beforeQuery = beforeHash.substringBefore("?")
+
+        val atIndex = beforeQuery.lastIndexOf('@')
+        if (atIndex >= 0) {
+            val decodedUserInfo = decodeSsBase64(beforeQuery.substring(0, atIndex))
+            val hostPort = beforeQuery.substring(atIndex + 1)
+            val sep = decodedUserInfo.indexOf(':')
+            if (sep < 0) throw ParseException("Invalid Shadowsocks credentials")
+            val hp = hostPort.split(":")
+            if (hp.size < 2) throw ParseException("Shadowsocks link is missing host:port")
+            return ShadowsocksFields(
+                decodedUserInfo.substring(0, sep),
+                decodedUserInfo.substring(sep + 1),
+                hp[0],
+                hp[1].toIntOrNull() ?: 443
+            )
+        }
+
+        val decoded = decodeSsBase64(beforeQuery)
+        val atIdx2 = decoded.lastIndexOf('@')
+        if (atIdx2 < 0) throw ParseException("Invalid Shadowsocks link")
+        val methodPass = decoded.substring(0, atIdx2)
+        val hostPort = decoded.substring(atIdx2 + 1)
+        val sep = methodPass.indexOf(':')
+        if (sep < 0) throw ParseException("Invalid Shadowsocks link")
+        val hp = hostPort.split(":")
+        if (hp.isEmpty()) throw ParseException("Shadowsocks link is missing host:port")
+        return ShadowsocksFields(
+            methodPass.substring(0, sep),
+            methodPass.substring(sep + 1),
+            hp[0],
+            hp.getOrNull(1)?.toIntOrNull() ?: 443
+        )
+    }
+
+    private fun parseShadowsocks(link: String): JSONObject {
+        val fields = decodeShadowsocksLink(link)
+        val server = JSONObject().apply {
+            put("address", fields.host)
+            put("port", fields.port)
+            put("method", fields.method)
+            put("password", fields.password)
+        }
+        return JSONObject().apply {
+            put("protocol", "shadowsocks")
+            put("tag", PROXY_TAG)
+            put("settings", JSONObject().put("servers", JSONArray().put(server)))
+            put("streamSettings", JSONObject().apply {
+                put("network", "tcp")
+                put("security", "none")
+            })
+        }
+    }
+
+    /** socks:// and http:// forward proxy links: scheme://[user:pass@]host:port[#tag]. */
+    private fun parseSocksOrHttp(link: String, protocol: String): JSONObject {
+        val uri = URI(link)
+        val host = uri.host ?: throw ParseException("$protocol link is missing a host")
+        val port = if (uri.port > 0) uri.port else if (protocol == "http") 8080 else 1080
+        val server = JSONObject().apply {
+            put("address", host)
+            put("port", port)
+            val userInfo = uri.userInfo
+            if (!userInfo.isNullOrBlank()) {
+                val decoded = try {
+                    String(Base64.decode(userInfo, Base64.DEFAULT))
+                } catch (e: Exception) {
+                    userInfo
+                }
+                val sep = decoded.indexOf(':')
+                if (sep >= 0) {
+                    put("users", JSONArray().put(JSONObject().apply {
+                        put("user", decoded.substring(0, sep))
+                        put("pass", decoded.substring(sep + 1))
+                    }))
+                }
+            }
+        }
+        return JSONObject().apply {
+            put("protocol", protocol)
+            put("tag", PROXY_TAG)
+            put("settings", JSONObject().put("servers", JSONArray().put(server)))
+            put("streamSettings", JSONObject().apply {
+                put("network", "tcp")
+                put("security", "none")
+            })
         }
     }
 }
