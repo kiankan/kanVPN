@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var toolbar: Toolbar
     private lateinit var statusText: TextView
+    private lateinit var serverNameText: TextView
     private lateinit var trafficText: TextView
     private lateinit var connectButton: ImageButton
     private lateinit var configList: RecyclerView
@@ -116,6 +117,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         statusText = findViewById(R.id.statusText)
+        serverNameText = findViewById(R.id.serverNameText)
         trafficText = findViewById(R.id.trafficText)
         connectButton = findViewById(R.id.connectButton)
         configList = findViewById(R.id.configList)
@@ -205,6 +207,10 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.action_sort_ping -> {
                 sortByPing()
+                true
+            }
+            R.id.action_remove_duplicates -> {
+                removeDuplicateConfigs()
                 true
             }
             else -> super.onOptionsItemSelected(item)
@@ -359,6 +365,15 @@ class MainActivity : AppCompatActivity() {
         refreshList()
     }
 
+    private fun removeDuplicateConfigs() {
+        val scoped = ConfigStore.list(this).filter { currentGroupFilter == null || it.groupId == currentGroupFilter }
+        val seenLinks = mutableSetOf<String>()
+        val duplicates = scoped.filterNot { seenLinks.add(it.link) }
+        duplicates.forEach { ConfigStore.remove(this, it.id) }
+        refreshList()
+        Toast.makeText(this, getString(R.string.remove_duplicates_done, duplicates.size), Toast.LENGTH_SHORT).show()
+    }
+
     // ---- Edit / share a single config ----------------------------------------------
 
     private fun showConfigActionsDialog(config: SavedConfig) {
@@ -481,13 +496,18 @@ class MainActivity : AppCompatActivity() {
     // ---- Settings -------------------------------------------------------------------
 
     private fun showSettingsDialog() {
-        val checked = booleanArrayOf(SettingsStore.autoConnectOnBoot(this))
-        val labels = arrayOf(getString(R.string.settings_autoconnect_boot))
+        val view = layoutInflater.inflate(R.layout.dialog_settings, null)
+        val autoConnectCheckbox = view.findViewById<android.widget.CheckBox>(R.id.autoConnectCheckbox)
+        val dnsInput = view.findViewById<EditText>(R.id.dnsInput)
+        autoConnectCheckbox.isChecked = SettingsStore.autoConnectOnBoot(this)
+        dnsInput.setText(SettingsStore.dnsServer(this))
+
         AlertDialog.Builder(this)
             .setTitle(R.string.nav_settings)
-            .setMultiChoiceItems(labels, checked) { _, which, isChecked -> checked[which] = isChecked }
+            .setView(view)
             .setPositiveButton(R.string.btn_save) { _, _ ->
-                SettingsStore.setAutoConnectOnBoot(this, checked[0])
+                SettingsStore.setAutoConnectOnBoot(this, autoConnectCheckbox.isChecked)
+                SettingsStore.setDnsServer(this, dnsInput.text.toString())
                 Toast.makeText(this, R.string.per_app_saved, Toast.LENGTH_SHORT).show()
             }
             .setNegativeButton(R.string.btn_cancel, null)
@@ -544,13 +564,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showGroupActionsDialog(group: ConfigGroup) {
-        val actions = mutableListOf<String>()
+        val actions = mutableListOf(getString(R.string.group_rename))
         if (group.subscriptionUrl != null) actions.add(getString(R.string.group_refresh))
         actions.add(getString(R.string.group_delete))
         AlertDialog.Builder(this)
             .setTitle(group.name)
             .setItems(actions.toTypedArray()) { _, which ->
                 when (actions[which]) {
+                    getString(R.string.group_rename) -> showRenameGroupDialog(group)
                     getString(R.string.group_refresh) -> refreshSubscription(group)
                     getString(R.string.group_delete) -> {
                         GroupStore.remove(this, group.id)
@@ -561,6 +582,23 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             .setNegativeButton(R.string.btn_close, null)
+            .show()
+    }
+
+    private fun showRenameGroupDialog(group: ConfigGroup) {
+        val input = EditText(this).apply {
+            setText(group.name)
+            setPadding(48, 32, 48, 32)
+        }
+        AlertDialog.Builder(this)
+            .setTitle(R.string.group_rename)
+            .setView(input)
+            .setPositiveButton(R.string.btn_save) { _, _ ->
+                val name = input.text.toString().trim().ifEmpty { group.name }
+                GroupStore.rename(this, group.id, name)
+                rebuildGroupTabs()
+            }
+            .setNegativeButton(R.string.btn_cancel, null)
             .show()
     }
 
@@ -895,6 +933,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun renderStatus(state: VpnStatusBus.State) {
         val tintColor: Int
+        var showServerName = false
         when (state) {
             VpnStatusBus.State.DISCONNECTED -> {
                 statusText.text = getString(R.string.status_disconnected)
@@ -905,11 +944,13 @@ class MainActivity : AppCompatActivity() {
                 statusText.text = getString(R.string.status_connecting)
                 trafficText.visibility = View.GONE
                 tintColor = android.graphics.Color.parseColor("#f9a825")
+                showServerName = true
             }
             VpnStatusBus.State.CONNECTED -> {
                 statusText.text = getString(R.string.status_connected)
                 trafficText.visibility = View.VISIBLE
                 tintColor = android.graphics.Color.parseColor("#2e7d32")
+                showServerName = true
             }
             VpnStatusBus.State.ERROR -> {
                 statusText.text = getString(
@@ -920,6 +961,13 @@ class MainActivity : AppCompatActivity() {
             }
         }
         connectButton.background.mutate().setTint(tintColor)
+        val selectedName = ConfigStore.selected(this)?.name
+        if (showServerName && !selectedName.isNullOrBlank()) {
+            serverNameText.text = selectedName
+            serverNameText.visibility = View.VISIBLE
+        } else {
+            serverNameText.visibility = View.GONE
+        }
     }
 
     private fun renderTraffic(snapshot: TrafficSnapshot) {

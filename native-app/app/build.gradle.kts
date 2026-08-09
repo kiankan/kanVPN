@@ -11,8 +11,8 @@ android {
         applicationId = "com.kanvpn.client"
         minSdk = 24
         targetSdk = 34
-        versionCode = 8
-        versionName = "0.0.8"
+        versionCode = 9
+        versionName = "0.0.9"
         ndk {
             abiFilters += listOf("arm64-v8a", "armeabi-v7a")
         }

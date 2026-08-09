@@ -59,6 +59,8 @@
     <string name="clipboard_empty">کلیپ‌بورد خالی یا نامعتبر است</string>
     <string name="file_import_done">%1$d کانفیگ از فایل اضافه شد</string>
     <string name="remove_invalid_done">%1$d کانفیگ نامعتبر حذف شد</string>
+    <string name="action_remove_duplicates">حذف کانفیگ‌های تکراری</string>
+    <string name="remove_duplicates_done">%1$d کانفیگ تکراری حذف شد</string>
 
     <string name="about_body">kanVPN — کلاینت وی‌پی‌ان مبتنی بر Xray-core.\n\nنسخه %1$s\nhttps://github.com/kiankan/kanVPN</string>
     <string name="btn_copy">کپی</string>
@@ -74,6 +76,7 @@
     <string name="group_default_name">گروه جدید</string>
     <string name="group_name_hint">نام گروه</string>
     <string name="group_url_hint">آدرس اشتراک (اختیاری)</string>
+    <string name="group_rename">تغییر نام</string>
     <string name="group_refresh">به‌روزرسانی اشتراک</string>
     <string name="group_delete">حذف گروه</string>
     <string name="group_refreshing">در حال دریافت %1$s…</string>
@@ -102,5 +105,8 @@
     <string name="config_copy_link">کپی لینک</string>
     <string name="link_copied">لینک کپی شد</string>
     <string name="settings_autoconnect_boot">اتصال خودکار هنگام روشن شدن گوشی</string>
+    <string name="settings_dns_label">سرور DNS</string>
+    <string name="settings_dns_hint">مثلاً 1.1.1.1</string>
     <string name="notif_traffic">↑ %1$s/s  ↓ %2$s/s</string>
+    <string name="notif_reconnecting">در حال اتصال مجدد… (%1$d)</string>
 </resources>

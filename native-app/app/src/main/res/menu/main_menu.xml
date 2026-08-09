@@ -30,4 +30,9 @@
         android:title="@string/action_sort_ping"
         app:showAsAction="never" />
 
+    <item
+        android:id="@+id/action_remove_duplicates"
+        android:title="@string/action_remove_duplicates"
+        app:showAsAction="never" />
+
 </menu>

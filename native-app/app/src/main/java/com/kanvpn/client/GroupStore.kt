@@ -55,6 +55,10 @@ object GroupStore {
         return group
     }
 
+    fun rename(context: Context, id: String, name: String) {
+        save(context, list(context).map { if (it.id == id) it.copy(name = name) else it })
+    }
+
     fun remove(context: Context, id: String) {
         save(context, list(context).filterNot { it.id == id })
         ConfigStore.removeByGroup(context, id)

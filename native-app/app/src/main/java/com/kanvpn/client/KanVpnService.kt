@@ -28,6 +28,8 @@ class KanVpnService : VpnService() {
         const val CHANNEL_ID = "kanvpn_status"
         const val NOTIFICATION_ID = 1
         const val STATS_INTERVAL_MS = 1000L
+        const val MAX_RECONNECT_ATTEMPTS = 3
+        const val RECONNECT_DELAY_MS = 2000L
 
         @Volatile
         var isRunning = false
@@ -36,6 +38,11 @@ class KanVpnService : VpnService() {
 
     private var tunFd: ParcelFileDescriptor? = null
     private var coreController: CoreController? = null
+
+    /** True right before we intentionally tear the tunnel down (user disconnect, fatal error). */
+    private var expectedStop = false
+    private var lastConfigJson: String? = null
+    private var reconnectAttempts = 0
 
     private val statsHandler = Handler(Looper.getMainLooper())
     private var totalUploadBytes = 0L
@@ -50,6 +57,8 @@ class KanVpnService : VpnService() {
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         when (intent?.action) {
             ACTION_DISCONNECT -> {
+                expectedStop = true
+                lastConfigJson = null
                 stopVpn()
                 return START_NOT_STICKY
             }
@@ -60,6 +69,9 @@ class KanVpnService : VpnService() {
                     return START_NOT_STICKY
                 }
                 AppLog.add("Connect requested")
+                lastConfigJson = configJson
+                reconnectAttempts = 0
+                expectedStop = false
                 VpnStatusBus.update(VpnStatusBus.State.CONNECTING)
                 startForeground(NOTIFICATION_ID, buildNotification("Connecting…"))
                 startVpn(configJson)
@@ -75,7 +87,12 @@ class KanVpnService : VpnService() {
             coreController = Libv2ray.newCoreController(object : CoreCallbackHandler {
                 override fun startup(): Long = 0
                 override fun shutdown(): Long {
-                    stopVpn()
+                    if (expectedStop) {
+                        stopVpn()
+                    } else {
+                        AppLog.add("Core stopped unexpectedly")
+                        attemptReconnect()
+                    }
                     return 0
                 }
                 override fun onEmitStatus(l: Long, s: String?): Long {
@@ -91,7 +108,7 @@ class KanVpnService : VpnService() {
                 .setMtu(1500)
                 .addAddress("172.19.0.1", 30)
                 .addRoute("0.0.0.0", 0)
-                .addDnsServer("1.1.1.1")
+                .addDnsServer(SettingsStore.dnsServer(this))
 
             applyPerAppRouting(builder)
 
@@ -111,6 +128,7 @@ class KanVpnService : VpnService() {
             AppLog.add("tun2socks start: $tun2socksOk, xray outbound tag=${ConfigParser.PROXY_TAG}")
 
             isRunning = true
+            reconnectAttempts = 0
             startForeground(NOTIFICATION_ID, buildNotification("Connected"))
             AppLog.add("VPN connected")
             VpnStatusBus.update(VpnStatusBus.State.CONNECTED)
@@ -127,8 +145,26 @@ class KanVpnService : VpnService() {
             Log.e(TAG, "Failed to start VPN", e)
             AppLog.add("ERROR: ${e.javaClass.simpleName}: ${e.message}")
             VpnStatusBus.update(VpnStatusBus.State.ERROR, e.message ?: e.javaClass.simpleName)
+            expectedStop = true
             stopVpn(resetStatus = false)
         }
+    }
+
+    /** Tries to re-establish the tunnel with the last known-good config after an unexpected core stop. */
+    private fun attemptReconnect() {
+        val configJson = lastConfigJson
+        if (configJson == null || reconnectAttempts >= MAX_RECONNECT_ATTEMPTS) {
+            AppLog.add("Giving up reconnecting after $reconnectAttempts attempt(s)")
+            expectedStop = true
+            stopVpn()
+            return
+        }
+        reconnectAttempts++
+        AppLog.add("Reconnecting (attempt $reconnectAttempts/$MAX_RECONNECT_ATTEMPTS)")
+        teardownTunnelOnly()
+        VpnStatusBus.update(VpnStatusBus.State.CONNECTING)
+        updateNotification(getString(R.string.notif_reconnecting, reconnectAttempts))
+        statsHandler.postDelayed({ startVpn(configJson) }, RECONNECT_DELAY_MS)
     }
 
     /**
@@ -171,10 +207,9 @@ class KanVpnService : VpnService() {
         }
     }
 
-    private fun stopVpn(resetStatus: Boolean = true) {
-        AppLog.add("Disconnecting")
+    /** Tears down the native tunnel pieces only — no status/foreground/service lifecycle changes. */
+    private fun teardownTunnelOnly() {
         statsHandler.removeCallbacks(statsPoller)
-        TrafficBus.reset()
         try {
             TProxyService.TProxyStopService()
         } catch (e: Exception) {
@@ -192,6 +227,12 @@ class KanVpnService : VpnService() {
             // ignore
         }
         tunFd = null
+    }
+
+    private fun stopVpn(resetStatus: Boolean = true) {
+        AppLog.add("Disconnecting")
+        teardownTunnelOnly()
+        TrafficBus.reset()
         isRunning = false
         if (resetStatus) {
             VpnStatusBus.update(VpnStatusBus.State.DISCONNECTED)
@@ -201,11 +242,13 @@ class KanVpnService : VpnService() {
     }
 
     override fun onDestroy() {
+        expectedStop = true
         stopVpn()
         super.onDestroy()
     }
 
     override fun onRevoke() {
+        expectedStop = true
         stopVpn()
         super.onRevoke()
     }
