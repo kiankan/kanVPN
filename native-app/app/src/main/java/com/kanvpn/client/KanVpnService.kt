@@ -92,14 +92,7 @@ class KanVpnService : VpnService() {
                 .addRoute("0.0.0.0", 0)
                 .addDnsServer("1.1.1.1")
 
-            try {
-                // Xray-core's own outbound connection to the remote server must
-                // bypass the tunnel, or it gets captured by our own TUN and
-                // loops forever with nothing ever reaching the real internet.
-                builder.addDisallowedApplication(packageName)
-            } catch (e: Exception) {
-                Log.e(TAG, "Failed to exclude self from VPN routes", e)
-            }
+            applyPerAppRouting(builder)
 
             tunFd = builder.establish()
             val fd = tunFd
@@ -134,6 +127,46 @@ class KanVpnService : VpnService() {
             AppLog.add("ERROR: ${e.javaClass.simpleName}: ${e.message}")
             VpnStatusBus.update(VpnStatusBus.State.ERROR, e.message ?: e.javaClass.simpleName)
             stopVpn(resetStatus = false)
+        }
+    }
+
+    /**
+     * Xray-core's own outbound connection to the remote server must always
+     * bypass the tunnel (or it loops back into our own TUN and nothing ever
+     * reaches the real internet), plus whatever per-app choice the user made.
+     * addAllowedApplication/addDisallowedApplication are mutually exclusive
+     * on VpnService.Builder, so ONLY_SELECTED must never also call the
+     * disallow path — self-exclusion there just falls out of never adding
+     * our own package to the allow-list.
+     */
+    private fun applyPerAppRouting(builder: Builder) {
+        val mode = AppRouteStore.mode(this)
+        val selected = AppRouteStore.packages(this)
+        if (mode == AppRouteStore.Mode.ONLY_SELECTED) {
+            for (pkg in selected) {
+                if (pkg == packageName) continue
+                try {
+                    builder.addAllowedApplication(pkg)
+                } catch (e: Exception) {
+                    Log.e(TAG, "Unknown package in allow-list: $pkg", e)
+                }
+            }
+            return
+        }
+        try {
+            builder.addDisallowedApplication(packageName)
+        } catch (e: Exception) {
+            Log.e(TAG, "Failed to exclude self from VPN routes", e)
+        }
+        if (mode == AppRouteStore.Mode.EXCLUDE_SELECTED) {
+            for (pkg in selected) {
+                if (pkg == packageName) continue
+                try {
+                    builder.addDisallowedApplication(pkg)
+                } catch (e: Exception) {
+                    Log.e(TAG, "Unknown package in exclude-list: $pkg", e)
+                }
+            }
         }
     }
 

@@ -23,7 +23,8 @@ object ConfigStore {
             SavedConfig(
                 id = obj.getString("id"),
                 name = obj.getString("name"),
-                link = obj.getString("link")
+                link = obj.getString("link"),
+                groupId = obj.optString("groupId").ifBlank { null }
             )
         }
     }
@@ -35,13 +36,14 @@ object ConfigStore {
                 put("id", c.id)
                 put("name", c.name)
                 put("link", c.link)
+                if (c.groupId != null) put("groupId", c.groupId)
             })
         }
         prefs(context).edit().putString(KEY_CONFIGS, array.toString()).apply()
     }
 
-    fun add(context: Context, name: String, link: String): SavedConfig {
-        val config = SavedConfig(id = UUID.randomUUID().toString(), name = name, link = link)
+    fun add(context: Context, name: String, link: String, groupId: String? = null): SavedConfig {
+        val config = SavedConfig(id = UUID.randomUUID().toString(), name = name, link = link, groupId = groupId)
         val configs = list(context) + config
         save(context, configs)
         if (selectedId(context) == null) {
@@ -54,6 +56,26 @@ object ConfigStore {
         save(context, list(context).filterNot { it.id == id })
         if (selectedId(context) == id) {
             setSelectedId(context, list(context).firstOrNull()?.id)
+        }
+    }
+
+    fun removeByGroup(context: Context, groupId: String) {
+        val remaining = list(context).filterNot { it.groupId == groupId }
+        save(context, remaining)
+        if (selectedId(context) != null && remaining.none { it.id == selectedId(context) }) {
+            setSelectedId(context, remaining.firstOrNull()?.id)
+        }
+    }
+
+    /** Replaces every config belonging to [groupId] with a freshly-fetched subscription's contents. */
+    fun replaceGroupConfigs(context: Context, groupId: String, links: List<Pair<String, String>>) {
+        val others = list(context).filterNot { it.groupId == groupId }
+        val fresh = links.map { (name, link) ->
+            SavedConfig(id = UUID.randomUUID().toString(), name = name, link = link, groupId = groupId)
+        }
+        save(context, others + fresh)
+        if (selectedId(context) != null && (others + fresh).none { it.id == selectedId(context) }) {
+            setSelectedId(context, (others + fresh).firstOrNull()?.id)
         }
     }
 

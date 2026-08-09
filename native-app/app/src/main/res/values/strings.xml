@@ -66,4 +66,30 @@
     <string name="logcat_title">Logcat</string>
     <string name="logcat_empty">چیزی ثبت نشده</string>
     <string name="log_copied">لاگ کپی شد</string>
+
+    <string name="tab_all">همه</string>
+    <string name="btn_next">بعدی</string>
+
+    <string name="group_add_new">+ افزودن گروه</string>
+    <string name="group_default_name">گروه جدید</string>
+    <string name="group_name_hint">نام گروه</string>
+    <string name="group_url_hint">آدرس اشتراک (اختیاری)</string>
+    <string name="group_refresh">به‌روزرسانی اشتراک</string>
+    <string name="group_delete">حذف گروه</string>
+    <string name="group_refreshing">در حال دریافت %1$s…</string>
+    <string name="group_refresh_failed">دریافت اشتراک ناموفق بود</string>
+    <string name="group_refresh_done">%1$d کانفیگ دریافت شد</string>
+
+    <string name="routing_global">همه‌ی ترافیک از پروکسی (Global)</string>
+    <string name="routing_bypass">دور زدن شبکه محلی و ایران/چین (Bypass LAN + CN)</string>
+
+    <string name="per_app_all">همه‌ی برنامه‌ها</string>
+    <string name="per_app_exclude">همه به‌جز برنامه‌های انتخابی</string>
+    <string name="per_app_only">فقط برنامه‌های انتخابی</string>
+    <string name="per_app_saved">تنظیمات ذخیره شد</string>
+
+    <string name="geo_update">به‌روزرسانی فایل‌ها</string>
+    <string name="geo_updating">در حال دانلود…</string>
+    <string name="geo_update_done">فایل‌های جغرافیایی به‌روزرسانی شدند</string>
+    <string name="geo_update_failed">به‌روزرسانی ناموفق بود</string>
 </resources>

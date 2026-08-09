@@ -17,7 +17,10 @@ object ConfigParser {
 
     class ParseException(message: String) : Exception(message)
 
-    fun toXrayConfig(link: String): JSONObject {
+    fun toXrayConfig(
+        link: String,
+        routingMode: RoutingStore.Mode = RoutingStore.Mode.GLOBAL
+    ): JSONObject {
         val trimmed = link.trim()
         val outbound = when {
             trimmed.startsWith("vless://") -> parseVless(trimmed)
@@ -25,10 +28,10 @@ object ConfigParser {
             trimmed.startsWith("trojan://") -> parseTrojan(trimmed)
             else -> throw ParseException("Unsupported link scheme")
         }
-        return buildRootConfig(outbound)
+        return buildRootConfig(outbound, routingMode)
     }
 
-    private fun buildRootConfig(outbound: JSONObject): JSONObject {
+    private fun buildRootConfig(outbound: JSONObject, routingMode: RoutingStore.Mode): JSONObject {
         val inbound = JSONObject().apply {
             put("tag", "socks-in")
             put("listen", "127.0.0.1")
@@ -54,6 +57,23 @@ object ConfigParser {
             })
             put("inbounds", JSONArray().put(inbound))
             put("outbounds", JSONArray().put(outbound).put(direct))
+            if (routingMode == RoutingStore.Mode.BYPASS_LAN_CN) {
+                put("routing", JSONObject().apply {
+                    put("domainStrategy", "IPIfNonMatch")
+                    put("rules", JSONArray().apply {
+                        put(JSONObject().apply {
+                            put("type", "field")
+                            put("ip", JSONArray(listOf("geoip:private", "geoip:cn")))
+                            put("outboundTag", "direct")
+                        })
+                        put(JSONObject().apply {
+                            put("type", "field")
+                            put("domain", JSONArray(listOf("geosite:cn")))
+                            put("outboundTag", "direct")
+                        })
+                    })
+                })
+            }
         }
     }
 

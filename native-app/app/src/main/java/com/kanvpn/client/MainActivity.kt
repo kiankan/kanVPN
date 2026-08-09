@@ -26,8 +26,12 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.navigation.NavigationView
+import com.google.android.material.tabs.TabLayout
 import com.journeyapps.barcodescanner.ScanContract
 import com.journeyapps.barcodescanner.ScanOptions
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
 
@@ -38,9 +42,12 @@ class MainActivity : AppCompatActivity() {
     private lateinit var connectButton: ImageButton
     private lateinit var configList: RecyclerView
     private lateinit var emptyText: TextView
+    private lateinit var groupTabs: TabLayout
     private lateinit var adapter: ConfigAdapter
 
     private var searchQuery: String = ""
+    /** null = the "all" tab. */
+    private var currentGroupFilter: String? = null
 
     /** Link field of whichever add-dialog is currently open, so the scan result lands in it. */
     private var pendingLinkTarget: EditText? = null
@@ -109,6 +116,7 @@ class MainActivity : AppCompatActivity() {
         connectButton = findViewById(R.id.connectButton)
         configList = findViewById(R.id.configList)
         emptyText = findViewById(R.id.emptyText)
+        groupTabs = findViewById(R.id.groupTabs)
 
         adapter = ConfigAdapter(
             onSelect = { config ->
@@ -124,6 +132,16 @@ class MainActivity : AppCompatActivity() {
         configList.adapter = adapter
 
         connectButton.setOnClickListener { onConnectButtonClicked() }
+
+        groupTabs.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            override fun onTabSelected(tab: TabLayout.Tab) {
+                currentGroupFilter = tab.tag as? String
+                refreshList()
+            }
+            override fun onTabUnselected(tab: TabLayout.Tab) {}
+            override fun onTabReselected(tab: TabLayout.Tab) {}
+        })
+        rebuildGroupTabs()
 
         refreshList()
         renderStatus(VpnStatusBus.state)
@@ -231,7 +249,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 val typedName = nameInput.text.toString().trim()
                 val name = typedName.ifEmpty { link.substringAfter("#", "").ifEmpty { link.substringBefore("://") } }
-                ConfigStore.add(this, name, link)
+                ConfigStore.add(this, name, link, currentGroupFilter)
                 refreshList()
             }
             .setNegativeButton(R.string.btn_cancel, null)
@@ -247,7 +265,7 @@ class MainActivity : AppCompatActivity() {
             return
         }
         val name = link.substringAfter("#", "").ifEmpty { link.substringBefore("://") }
-        ConfigStore.add(this, name, link)
+        ConfigStore.add(this, name, link, currentGroupFilter)
         refreshList()
     }
 
@@ -266,7 +284,7 @@ class MainActivity : AppCompatActivity() {
             return
         }
         val name = text.substringAfter("#", "").ifEmpty { text.substringBefore("://") }
-        ConfigStore.add(this, name, text)
+        ConfigStore.add(this, name, text, currentGroupFilter)
         refreshList()
         Toast.makeText(this, R.string.clipboard_added, Toast.LENGTH_SHORT).show()
     }
@@ -291,7 +309,7 @@ class MainActivity : AppCompatActivity() {
                 continue
             }
             val name = line.substringAfter("#", "").ifEmpty { line.substringBefore("://") }
-            ConfigStore.add(this, name, line)
+            ConfigStore.add(this, name, line, currentGroupFilter)
             added++
         }
         refreshList()
@@ -320,8 +338,226 @@ class MainActivity : AppCompatActivity() {
             R.id.nav_check_update -> openReleasesPage()
             R.id.nav_about -> showAboutDialog()
             R.id.nav_logcat -> showLogcatDialog()
+            R.id.nav_subscription -> showGroupManagerDialog()
+            R.id.nav_routing -> showRoutingDialog()
+            R.id.nav_per_app -> showPerAppDialog()
+            R.id.nav_geo -> showGeoDialog()
             else -> Toast.makeText(this, R.string.coming_soon, Toast.LENGTH_SHORT).show()
         }
+    }
+
+    // ---- Groups / subscriptions ----------------------------------------------------
+
+    private fun showGroupManagerDialog() {
+        val groups = GroupStore.list(this)
+        val labels = (groups.map { it.name } + getString(R.string.group_add_new)).toTypedArray()
+        AlertDialog.Builder(this)
+            .setTitle(R.string.nav_subscription)
+            .setItems(labels) { _, which ->
+                if (which == groups.size) showAddGroupDialog() else showGroupActionsDialog(groups[which])
+            }
+            .setNegativeButton(R.string.btn_close, null)
+            .show()
+    }
+
+    private fun showAddGroupDialog() {
+        val view = layoutInflater.inflate(R.layout.dialog_add_group, null)
+        val nameInput = view.findViewById<EditText>(R.id.groupNameInput)
+        val urlInput = view.findViewById<EditText>(R.id.groupUrlInput)
+        AlertDialog.Builder(this)
+            .setTitle(R.string.group_add_new)
+            .setView(view)
+            .setPositiveButton(R.string.btn_save) { _, _ ->
+                val name = nameInput.text.toString().trim().ifEmpty { getString(R.string.group_default_name) }
+                val url = urlInput.text.toString().trim().ifEmpty { null }
+                val group = GroupStore.add(this, name, url)
+                rebuildGroupTabs()
+                if (url != null) refreshSubscription(group)
+            }
+            .setNegativeButton(R.string.btn_cancel, null)
+            .show()
+    }
+
+    private fun showGroupActionsDialog(group: ConfigGroup) {
+        val actions = mutableListOf<String>()
+        if (group.subscriptionUrl != null) actions.add(getString(R.string.group_refresh))
+        actions.add(getString(R.string.group_delete))
+        AlertDialog.Builder(this)
+            .setTitle(group.name)
+            .setItems(actions.toTypedArray()) { _, which ->
+                when (actions[which]) {
+                    getString(R.string.group_refresh) -> refreshSubscription(group)
+                    getString(R.string.group_delete) -> {
+                        GroupStore.remove(this, group.id)
+                        if (currentGroupFilter == group.id) currentGroupFilter = null
+                        rebuildGroupTabs()
+                        refreshList()
+                    }
+                }
+            }
+            .setNegativeButton(R.string.btn_close, null)
+            .show()
+    }
+
+    private fun refreshSubscription(group: ConfigGroup) {
+        val url = group.subscriptionUrl ?: return
+        Toast.makeText(this, getString(R.string.group_refreshing, group.name), Toast.LENGTH_SHORT).show()
+        Thread {
+            val result = try {
+                GroupStore.fetchSubscriptionLinks(url)
+            } catch (e: Exception) {
+                null
+            }
+            runOnUiThread {
+                if (result.isNullOrEmpty()) {
+                    Toast.makeText(this, R.string.group_refresh_failed, Toast.LENGTH_SHORT).show()
+                    return@runOnUiThread
+                }
+                ConfigStore.replaceGroupConfigs(this, group.id, result)
+                refreshList()
+                Toast.makeText(this, getString(R.string.group_refresh_done, result.size), Toast.LENGTH_SHORT).show()
+            }
+        }.start()
+    }
+
+    // ---- Routing ----------------------------------------------------------------
+
+    private fun showRoutingDialog() {
+        val modes = arrayOf(getString(R.string.routing_global), getString(R.string.routing_bypass))
+        val current = if (RoutingStore.mode(this) == RoutingStore.Mode.BYPASS_LAN_CN) 1 else 0
+        AlertDialog.Builder(this)
+            .setTitle(R.string.nav_routing)
+            .setSingleChoiceItems(modes, current) { dialog, which ->
+                RoutingStore.setMode(
+                    this,
+                    if (which == 1) RoutingStore.Mode.BYPASS_LAN_CN else RoutingStore.Mode.GLOBAL
+                )
+                dialog.dismiss()
+            }
+            .setNegativeButton(R.string.btn_close, null)
+            .show()
+    }
+
+    // ---- Per-app proxy ------------------------------------------------------------
+
+    private fun showPerAppDialog() {
+        val pm = packageManager
+        val launcherIntent = Intent(Intent.ACTION_MAIN).addCategory(Intent.CATEGORY_LAUNCHER)
+        val packages = pm.queryIntentActivities(launcherIntent, 0)
+            .map { it.activityInfo.packageName }
+            .distinct()
+            .filter { it != packageName }
+            .sortedBy { pkg ->
+                try {
+                    pm.getApplicationLabel(pm.getApplicationInfo(pkg, 0)).toString().lowercase()
+                } catch (e: Exception) {
+                    pkg
+                }
+            }
+        val labels = packages.map { pkg ->
+            try {
+                pm.getApplicationLabel(pm.getApplicationInfo(pkg, 0)).toString()
+            } catch (e: Exception) {
+                pkg
+            }
+        }.toTypedArray()
+        val currentSelected = AppRouteStore.packages(this)
+        val checked = packages.map { currentSelected.contains(it) }.toBooleanArray()
+
+        val modeLabels = arrayOf(
+            getString(R.string.per_app_all),
+            getString(R.string.per_app_exclude),
+            getString(R.string.per_app_only)
+        )
+        var selectedMode = when (AppRouteStore.mode(this)) {
+            AppRouteStore.Mode.ALL_APPS -> 0
+            AppRouteStore.Mode.EXCLUDE_SELECTED -> 1
+            AppRouteStore.Mode.ONLY_SELECTED -> 2
+        }
+        AlertDialog.Builder(this)
+            .setTitle(R.string.nav_per_app)
+            .setSingleChoiceItems(modeLabels, selectedMode) { _, which -> selectedMode = which }
+            .setPositiveButton(R.string.btn_next) { _, _ ->
+                if (selectedMode == 0) {
+                    AppRouteStore.save(this, AppRouteStore.Mode.ALL_APPS, emptySet())
+                    Toast.makeText(this, R.string.per_app_saved, Toast.LENGTH_SHORT).show()
+                } else {
+                    val mode = if (selectedMode == 1) AppRouteStore.Mode.EXCLUDE_SELECTED else AppRouteStore.Mode.ONLY_SELECTED
+                    showAppPickerDialog(packages, labels, checked, mode)
+                }
+            }
+            .setNegativeButton(R.string.btn_cancel, null)
+            .show()
+    }
+
+    private fun showAppPickerDialog(
+        packages: List<String>,
+        labels: Array<String>,
+        checked: BooleanArray,
+        mode: AppRouteStore.Mode
+    ) {
+        val selected = checked.copyOf()
+        AlertDialog.Builder(this)
+            .setTitle(R.string.nav_per_app)
+            .setMultiChoiceItems(labels, selected) { _, which, isChecked -> selected[which] = isChecked }
+            .setPositiveButton(R.string.btn_save) { _, _ ->
+                val pkgs = packages.indices.filter { selected[it] }.map { packages[it] }.toSet()
+                AppRouteStore.save(this, mode, pkgs)
+                Toast.makeText(this, R.string.per_app_saved, Toast.LENGTH_SHORT).show()
+            }
+            .setNegativeButton(R.string.btn_cancel, null)
+            .show()
+    }
+
+    // ---- Geo source files -----------------------------------------------------------
+
+    private fun showGeoDialog() {
+        val df = SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.US)
+        val lines = GeoFileStore.info(this).joinToString("\n\n") { f ->
+            val sizeKb = f.sizeBytes / 1024
+            val date = if (f.updatedAt > 0) df.format(Date(f.updatedAt)) else "-"
+            "${f.name}\n${sizeKb} KB · $date"
+        }
+        AlertDialog.Builder(this)
+            .setTitle(R.string.nav_geo)
+            .setMessage(lines)
+            .setPositiveButton(R.string.geo_update) { _, _ -> showGeoUpdateDialog() }
+            .setNegativeButton(R.string.btn_close, null)
+            .show()
+    }
+
+    private fun showGeoUpdateDialog() {
+        val view = layoutInflater.inflate(R.layout.dialog_geo_update, null)
+        val geoipUrlInput = view.findViewById<EditText>(R.id.geoipUrlInput)
+        val geositeUrlInput = view.findViewById<EditText>(R.id.geositeUrlInput)
+        geoipUrlInput.setText("https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat")
+        geositeUrlInput.setText("https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat")
+        AlertDialog.Builder(this)
+            .setTitle(R.string.geo_update)
+            .setView(view)
+            .setPositiveButton(R.string.btn_save) { _, _ ->
+                val geoipUrl = geoipUrlInput.text.toString().trim()
+                val geositeUrl = geositeUrlInput.text.toString().trim()
+                Toast.makeText(this, R.string.geo_updating, Toast.LENGTH_SHORT).show()
+                Thread {
+                    val ok = try {
+                        if (geoipUrl.isNotEmpty()) GeoFileStore.update(this, "geoip.dat", geoipUrl)
+                        if (geositeUrl.isNotEmpty()) GeoFileStore.update(this, "geosite.dat", geositeUrl)
+                        true
+                    } catch (e: Exception) {
+                        false
+                    }
+                    runOnUiThread {
+                        Toast.makeText(
+                            this,
+                            if (ok) R.string.geo_update_done else R.string.geo_update_failed,
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }.start()
+            }
+            .setNegativeButton(R.string.btn_cancel, null)
+            .show()
     }
 
     private fun showBackupDialog() {
@@ -414,16 +650,32 @@ class MainActivity : AppCompatActivity() {
 
     private fun refreshList() {
         val all = ConfigStore.list(this)
+        val groupFiltered = if (currentGroupFilter == null) all else all.filter { it.groupId == currentGroupFilter }
         val filtered = if (searchQuery.isBlank()) {
-            all
+            groupFiltered
         } else {
             val q = searchQuery.trim().lowercase()
-            all.filter { config ->
+            groupFiltered.filter { config ->
                 config.name.lowercase().contains(q) || config.link.lowercase().contains(q)
             }
         }
         adapter.submit(filtered, ConfigStore.selectedId(this))
         emptyText.visibility = if (filtered.isEmpty()) View.VISIBLE else View.GONE
+    }
+
+    private fun rebuildGroupTabs() {
+        val groups = GroupStore.list(this)
+        if (currentGroupFilter != null && groups.none { it.id == currentGroupFilter }) {
+            currentGroupFilter = null
+        }
+        groupTabs.removeAllTabs()
+        groupTabs.addTab(groupTabs.newTab().setText(getString(R.string.tab_all)).setTag(null as String?), currentGroupFilter == null)
+        for (g in groups) {
+            groupTabs.addTab(
+                groupTabs.newTab().setText(g.name).setTag(g.id),
+                currentGroupFilter == g.id
+            )
+        }
     }
 
     private fun onConnectButtonClicked() {
@@ -440,7 +692,7 @@ class MainActivity : AppCompatActivity() {
             return
         }
         try {
-            ConfigParser.toXrayConfig(selected.link)
+            ConfigParser.toXrayConfig(selected.link, RoutingStore.mode(this))
         } catch (e: Exception) {
             Toast.makeText(this, R.string.err_invalid_config, Toast.LENGTH_SHORT).show()
             return
@@ -457,7 +709,7 @@ class MainActivity : AppCompatActivity() {
     private fun doConnect() {
         val selected = ConfigStore.selected(this) ?: return
         val configJson = try {
-            ConfigParser.toXrayConfig(selected.link).toString()
+            ConfigParser.toXrayConfig(selected.link, RoutingStore.mode(this)).toString()
         } catch (e: Exception) {
             Toast.makeText(this, R.string.err_invalid_config, Toast.LENGTH_SHORT).show()
             return
