@@ -24,7 +24,8 @@ object ConfigStore {
                 id = obj.getString("id"),
                 name = obj.getString("name"),
                 link = obj.getString("link"),
-                groupId = obj.optString("groupId").ifBlank { null }
+                groupId = obj.optString("groupId").ifBlank { null },
+                favorite = obj.optBoolean("favorite", false)
             )
         }
     }
@@ -37,6 +38,7 @@ object ConfigStore {
                 put("name", c.name)
                 put("link", c.link)
                 if (c.groupId != null) put("groupId", c.groupId)
+                if (c.favorite) put("favorite", true)
             })
         }
         prefs(context).edit().putString(KEY_CONFIGS, array.toString()).apply()
@@ -58,6 +60,10 @@ object ConfigStore {
 
     fun moveToGroup(context: Context, id: String, groupId: String?) {
         save(context, list(context).map { if (it.id == id) it.copy(groupId = groupId) else it })
+    }
+
+    fun toggleFavorite(context: Context, id: String) {
+        save(context, list(context).map { if (it.id == id) it.copy(favorite = !it.favorite) else it })
     }
 
     /** Rewrites the persisted order to match [orderedIds]; any ids missing from it keep their relative order at the end. */

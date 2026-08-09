@@ -76,6 +76,15 @@
     </LinearLayout>
 
     <ImageButton
+        android:id="@+id/favoriteButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="2dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/config_favorite"
+        android:src="@android:drawable/btn_star_big_off" />
+
+    <ImageButton
         android:id="@+id/deleteButton"
         android:layout_width="40dp"
         android:layout_height="40dp"

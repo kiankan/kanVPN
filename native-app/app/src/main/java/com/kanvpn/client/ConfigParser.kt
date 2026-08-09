@@ -28,6 +28,8 @@ object ConfigParser {
             trimmed.startsWith("vmess://") -> parseVmess(trimmed)
             trimmed.startsWith("trojan://") -> parseTrojan(trimmed)
             trimmed.startsWith("ss://") -> parseShadowsocks(trimmed)
+            trimmed.startsWith("socks://") -> parseSocksOrHttp(trimmed, "socks")
+            trimmed.startsWith("http://") -> parseSocksOrHttp(trimmed, "http")
             else -> throw ParseException("Unsupported link scheme")
         }
         return buildRootConfig(outbound, routingMode, muxEnabled)
@@ -178,6 +180,12 @@ object ConfigParser {
                     val security = params["security"]?.ifBlank { "none" }
                         ?: if (protocol == "trojan") "tls" else "none"
                     Summary(protocol, security, uri.host ?: "", if (uri.port > 0) uri.port else 443)
+                }
+                trimmed.startsWith("socks://") || trimmed.startsWith("http://") -> {
+                    val uri = URI(trimmed)
+                    val protocol = trimmed.substringBefore("://")
+                    val defaultPort = if (protocol == "http") 8080 else 1080
+                    Summary(protocol, "none", uri.host ?: "", if (uri.port > 0) uri.port else defaultPort)
                 }
                 trimmed.startsWith("vmess://") -> {
                     val decoded = String(Base64.decode(trimmed.removePrefix("vmess://"), Base64.DEFAULT))
@@ -378,6 +386,41 @@ object ConfigParser {
         }
         return JSONObject().apply {
             put("protocol", "shadowsocks")
+            put("tag", PROXY_TAG)
+            put("settings", JSONObject().put("servers", JSONArray().put(server)))
+            put("streamSettings", JSONObject().apply {
+                put("network", "tcp")
+                put("security", "none")
+            })
+        }
+    }
+
+    /** socks:// and http:// forward proxy links: scheme://[user:pass@]host:port[#tag]. */
+    private fun parseSocksOrHttp(link: String, protocol: String): JSONObject {
+        val uri = URI(link)
+        val host = uri.host ?: throw ParseException("$protocol link is missing a host")
+        val port = if (uri.port > 0) uri.port else if (protocol == "http") 8080 else 1080
+        val server = JSONObject().apply {
+            put("address", host)
+            put("port", port)
+            val userInfo = uri.userInfo
+            if (!userInfo.isNullOrBlank()) {
+                val decoded = try {
+                    String(Base64.decode(userInfo, Base64.DEFAULT))
+                } catch (e: Exception) {
+                    userInfo
+                }
+                val sep = decoded.indexOf(':')
+                if (sep >= 0) {
+                    put("users", JSONArray().put(JSONObject().apply {
+                        put("user", decoded.substring(0, sep))
+                        put("pass", decoded.substring(sep + 1))
+                    }))
+                }
+            }
+        }
+        return JSONObject().apply {
+            put("protocol", protocol)
             put("tag", PROXY_TAG)
             put("settings", JSONObject().put("servers", JSONArray().put(server)))
             put("streamSettings", JSONObject().apply {

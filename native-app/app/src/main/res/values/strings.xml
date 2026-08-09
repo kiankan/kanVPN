@@ -125,4 +125,21 @@
     <string name="confirm_delete_selected_message">%1$d کانفیگ انتخاب‌شده حذف شود؟</string>
     <string name="confirm_delete_invalid_message">%1$d کانفیگ نامعتبر حذف شود؟</string>
     <string name="confirm_delete_duplicates_message">%1$d کانفیگ تکراری حذف شود؟</string>
+
+    <string name="config_favorite">افزودن به موردعلاقه‌ها</string>
+    <string name="action_connect_fastest">اتصال به سریع‌ترین سرور</string>
+    <string name="finding_fastest">در حال پیدا کردن سریع‌ترین سرور…</string>
+    <string name="no_reachable_server">هیچ سروری پاسخ نداد</string>
+    <string name="action_clear_group">حذف تمام کانفیگ‌های گروه فعلی</string>
+    <string name="confirm_clear_group_message">%1$d کانفیگ از این گروه حذف شود؟</string>
+
+    <string name="btn_share">اشتراک‌گذاری</string>
+    <string name="group_export">خروجی گرفتن کانفیگ‌ها</string>
+    <string name="group_export_done">کانفیگ‌ها در کلیپ‌بورد کپی شد</string>
+    <string name="group_export_empty">این گروه کانفیگی ندارد</string>
+    <string name="qr_decode_failed">کد QR در این تصویر پیدا نشد</string>
+    <string name="popup_scan_gallery">اسکن از گالری</string>
+
+    <string name="total_usage_label">مجموع مصرف همه‌ی سرورها: %1$s</string>
+    <string name="qr_share_image_hint">برای اشتراک‌گذاری تصویر QR، لمس طولانی کنید</string>
 </resources>

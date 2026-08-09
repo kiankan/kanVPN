@@ -1,19 +1,24 @@
 package com.kanvpn.client
 
 import android.app.AlertDialog
+import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.graphics.Typeface
 import android.net.Uri
 import android.net.VpnService
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
+import android.view.HapticFeedbackConstants
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.EditText
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.PopupMenu
 import android.widget.TextView
 import android.widget.Toast
@@ -22,13 +27,21 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.FileProvider
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.tabs.TabLayout
+import com.google.zxing.BinaryBitmap
+import com.google.zxing.MultiFormatReader
+import com.google.zxing.RGBLuminanceSource
+import com.google.zxing.common.HybridBinarizer
 import com.journeyapps.barcodescanner.ScanContract
 import com.journeyapps.barcodescanner.ScanOptions
+import libv2ray.Libv2ray
+import java.io.File
+import java.io.FileOutputStream
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -71,6 +84,10 @@ class MainActivity : AppCompatActivity() {
     private val importFileLauncher = registerForActivityResult(
         ActivityResultContracts.OpenDocument()
     ) { uri -> uri?.let { importFromFile(it) } }
+
+    private val pickImageForQrLauncher = registerForActivityResult(
+        ActivityResultContracts.GetContent()
+    ) { uri -> uri?.let { decodeQrFromImage(it) } }
 
     private val restoreLauncher = registerForActivityResult(
         ActivityResultContracts.OpenDocument()
@@ -131,12 +148,19 @@ class MainActivity : AppCompatActivity() {
                 refreshList()
             },
             onDelete = { config -> confirmDeleteConfig(config) },
-            onLongPress = { config -> showConfigActionsDialog(config) }
+            onLongPress = { config -> showConfigActionsDialog(config) },
+            onToggleFavorite = { config ->
+                ConfigStore.toggleFavorite(this, config.id)
+                refreshList()
+            }
         )
         configList.layoutManager = LinearLayoutManager(this)
         configList.adapter = adapter
 
-        connectButton.setOnClickListener { onConnectButtonClicked() }
+        connectButton.setOnClickListener {
+            it.performHapticFeedback(HapticFeedbackConstants.CONTEXT_CLICK)
+            onConnectButtonClicked()
+        }
 
         groupTabs.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
@@ -155,6 +179,7 @@ class MainActivity : AppCompatActivity() {
             connect()
         }
         handleIncomingIntent(intent)
+        ConfigStore.selectedId(this)?.let { adapter.testSingle(it) }
     }
 
     override fun onNewIntent(intent: Intent) {
@@ -267,8 +292,71 @@ class MainActivity : AppCompatActivity() {
                 confirmDeleteSelected()
                 true
             }
+            R.id.action_connect_fastest -> {
+                connectToFastest()
+                true
+            }
+            R.id.action_clear_group -> {
+                clearCurrentGroupConfigs()
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    private fun connectToFastest() {
+        val visible = ConfigStore.list(this).let { all ->
+            if (currentGroupFilter == null) all else all.filter { it.groupId == currentGroupFilter }
+        }
+        if (visible.isEmpty()) {
+            Toast.makeText(this, R.string.no_reachable_server, Toast.LENGTH_SHORT).show()
+            return
+        }
+        Toast.makeText(this, R.string.finding_fastest, Toast.LENGTH_SHORT).show()
+        Thread {
+            var best: SavedConfig? = null
+            var bestPing = Int.MAX_VALUE
+            for (config in visible) {
+                val ping = try {
+                    val json = ConfigParser.toXrayConfig(config.link).toString()
+                    val delay = Libv2ray.measureOutboundDelay(json, "https://www.gstatic.com/generate_204")
+                    if (delay < 0) Int.MAX_VALUE else delay.toInt()
+                } catch (e: Exception) {
+                    Int.MAX_VALUE
+                }
+                if (ping < bestPing) {
+                    bestPing = ping
+                    best = config
+                }
+            }
+            val winner = best
+            runOnUiThread {
+                if (winner == null || bestPing == Int.MAX_VALUE) {
+                    Toast.makeText(this, R.string.no_reachable_server, Toast.LENGTH_SHORT).show()
+                } else {
+                    ConfigStore.setSelectedId(this, winner.id)
+                    refreshList()
+                    connect()
+                }
+            }
+        }.start()
+    }
+
+    private fun clearCurrentGroupConfigs() {
+        val scoped = ConfigStore.list(this).filter { currentGroupFilter == null || it.groupId == currentGroupFilter }
+        if (scoped.isEmpty()) {
+            Toast.makeText(this, getString(R.string.confirm_clear_group_message, 0), Toast.LENGTH_SHORT).show()
+            return
+        }
+        AlertDialog.Builder(this)
+            .setTitle(R.string.confirm_delete_title)
+            .setMessage(getString(R.string.confirm_clear_group_message, scoped.size))
+            .setPositiveButton(R.string.delete_config) { _, _ ->
+                scoped.forEach { ConfigStore.remove(this, it.id) }
+                refreshList()
+            }
+            .setNegativeButton(R.string.btn_cancel, null)
+            .show()
     }
 
     private fun sortByName() {
@@ -312,6 +400,7 @@ class MainActivity : AppCompatActivity() {
         popup.menu.add(0, 2, 1, R.string.popup_paste)
         popup.menu.add(0, 3, 2, R.string.popup_manual)
         popup.menu.add(0, 4, 3, R.string.popup_import_file)
+        popup.menu.add(0, 5, 4, R.string.popup_scan_gallery)
         popup.setOnMenuItemClickListener { item ->
             when (item.itemId) {
                 1 -> {
@@ -321,10 +410,28 @@ class MainActivity : AppCompatActivity() {
                 2 -> addFromClipboard()
                 3 -> showAddDialog()
                 4 -> importFileLauncher.launch(arrayOf("*/*"))
+                5 -> pickImageForQrLauncher.launch("image/*")
             }
             true
         }
         popup.show()
+    }
+
+    private fun decodeQrFromImage(uri: Uri) {
+        try {
+            val bitmap = contentResolver.openInputStream(uri)?.use { BitmapFactory.decodeStream(it) }
+                ?: throw IllegalStateException("Could not open image")
+            val width = bitmap.width
+            val height = bitmap.height
+            val pixels = IntArray(width * height)
+            bitmap.getPixels(pixels, 0, width, 0, 0, width, height)
+            val source = RGBLuminanceSource(width, height, pixels)
+            val binaryBitmap = BinaryBitmap(HybridBinarizer(source))
+            val result = MultiFormatReader().decode(binaryBitmap)
+            addLinkOrToast(result.text)
+        } catch (e: Exception) {
+            Toast.makeText(this, R.string.qr_decode_failed, Toast.LENGTH_SHORT).show()
+        }
     }
 
     // ---- Add / import flows -------------------------------------------------------
@@ -584,33 +691,78 @@ class MainActivity : AppCompatActivity() {
         } catch (e: Exception) {
             null
         }
-        val imageView = android.widget.ImageView(this).apply {
-            setPadding(48, 48, 48, 48)
+        val container = android.widget.LinearLayout(this).apply {
+            orientation = android.widget.LinearLayout.VERTICAL
+            setPadding(48, 32, 48, 16)
+        }
+        val imageView = ImageView(this).apply {
             adjustViewBounds = true
             if (bitmap != null) setImageBitmap(bitmap)
         }
+        container.addView(imageView)
+        if (bitmap != null) {
+            val hint = TextView(this).apply {
+                text = getString(R.string.qr_share_image_hint)
+                textSize = 11f
+                alpha = 0.7f
+                gravity = android.view.Gravity.CENTER
+                setPadding(0, 16, 0, 0)
+            }
+            container.addView(hint)
+            imageView.setOnLongClickListener {
+                shareQrImage(bitmap, config.name)
+                true
+            }
+        }
         AlertDialog.Builder(this)
             .setTitle(config.name)
-            .setView(imageView)
+            .setView(container)
             .setPositiveButton(R.string.config_copy_link) { _, _ ->
                 val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-                clipboard.setPrimaryClip(android.content.ClipData.newPlainText(config.name, config.link))
+                clipboard.setPrimaryClip(ClipData.newPlainText(config.name, config.link))
                 Toast.makeText(this, R.string.link_copied, Toast.LENGTH_SHORT).show()
             }
+            .setNeutralButton(R.string.btn_share) { _, _ -> shareText(config.link, config.name) }
             .setNegativeButton(R.string.btn_close, null)
             .show()
     }
 
-    private fun generateQrBitmap(text: String, size: Int): android.graphics.Bitmap {
+    private fun generateQrBitmap(text: String, size: Int): Bitmap {
         val writer = com.google.zxing.qrcode.QRCodeWriter()
         val matrix = writer.encode(text, com.google.zxing.BarcodeFormat.QR_CODE, size, size)
-        val bitmap = android.graphics.Bitmap.createBitmap(size, size, android.graphics.Bitmap.Config.RGB_565)
+        val bitmap = Bitmap.createBitmap(size, size, Bitmap.Config.RGB_565)
         for (x in 0 until size) {
             for (y in 0 until size) {
                 bitmap.setPixel(x, y, if (matrix.get(x, y)) android.graphics.Color.BLACK else android.graphics.Color.WHITE)
             }
         }
         return bitmap
+    }
+
+    private fun shareText(text: String, subject: String) {
+        val intent = Intent(Intent.ACTION_SEND).apply {
+            type = "text/plain"
+            putExtra(Intent.EXTRA_TEXT, text)
+            putExtra(Intent.EXTRA_SUBJECT, subject)
+        }
+        startActivity(Intent.createChooser(intent, getString(R.string.btn_share)))
+    }
+
+    private fun shareQrImage(bitmap: Bitmap, label: String) {
+        try {
+            val dir = File(cacheDir, "qr").apply { mkdirs() }
+            val file = File(dir, "kanvpn_qr_${System.currentTimeMillis()}.png")
+            FileOutputStream(file).use { out -> bitmap.compress(Bitmap.CompressFormat.PNG, 100, out) }
+            val uri = FileProvider.getUriForFile(this, "$packageName.fileprovider", file)
+            val intent = Intent(Intent.ACTION_SEND).apply {
+                type = "image/png"
+                putExtra(Intent.EXTRA_STREAM, uri)
+                addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            }
+            startActivity(Intent.createChooser(intent, label))
+        } catch (e: Exception) {
+            Toast.makeText(this, R.string.backup_failed, Toast.LENGTH_SHORT).show()
+        }
     }
 
     // ---- Settings -------------------------------------------------------------------
@@ -689,6 +841,7 @@ class MainActivity : AppCompatActivity() {
     private fun showGroupActionsDialog(group: ConfigGroup) {
         val actions = mutableListOf(getString(R.string.group_rename))
         if (group.subscriptionUrl != null) actions.add(getString(R.string.group_refresh))
+        actions.add(getString(R.string.group_export))
         actions.add(getString(R.string.group_delete))
         AlertDialog.Builder(this)
             .setTitle(group.name)
@@ -696,6 +849,7 @@ class MainActivity : AppCompatActivity() {
                 when (actions[which]) {
                     getString(R.string.group_rename) -> showRenameGroupDialog(group)
                     getString(R.string.group_refresh) -> refreshSubscription(group)
+                    getString(R.string.group_export) -> exportGroupConfigs(group)
                     getString(R.string.group_delete) -> {
                         GroupStore.remove(this, group.id)
                         if (currentGroupFilter == group.id) currentGroupFilter = null
@@ -706,6 +860,18 @@ class MainActivity : AppCompatActivity() {
             }
             .setNegativeButton(R.string.btn_close, null)
             .show()
+    }
+
+    private fun exportGroupConfigs(group: ConfigGroup) {
+        val links = ConfigStore.list(this).filter { it.groupId == group.id }.map { it.link }
+        if (links.isEmpty()) {
+            Toast.makeText(this, R.string.group_export_empty, Toast.LENGTH_SHORT).show()
+            return
+        }
+        val text = links.joinToString("\n")
+        val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+        clipboard.setPrimaryClip(ClipData.newPlainText(group.name, text))
+        Toast.makeText(this, R.string.group_export_done, Toast.LENGTH_SHORT).show()
     }
 
     private fun showRenameGroupDialog(group: ConfigGroup) {
@@ -887,13 +1053,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showBackupDialog() {
+        val options = arrayOf(
+            getString(R.string.backup_export),
+            getString(R.string.backup_import),
+            getString(R.string.btn_share)
+        )
         AlertDialog.Builder(this)
             .setTitle(R.string.backup_title)
-            .setItems(arrayOf(getString(R.string.backup_export), getString(R.string.backup_import))) { _, which ->
-                if (which == 0) {
-                    backupLauncher.launch("kanvpn-backup.json")
-                } else {
-                    restoreLauncher.launch(arrayOf("*/*"))
+            .setItems(options) { _, which ->
+                when (which) {
+                    0 -> backupLauncher.launch("kanvpn-backup.json")
+                    1 -> restoreLauncher.launch(arrayOf("*/*"))
+                    2 -> shareText(ConfigStore.exportJson(this), getString(R.string.backup_title))
                 }
             }
             .setNegativeButton(R.string.btn_cancel, null)
@@ -944,9 +1115,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showAboutDialog() {
+        val totalUsage = ConfigStore.list(this).sumOf { UsageStore.bytesFor(this, it.id) }
+        val body = getString(R.string.about_body, BuildConfig.VERSION_NAME) +
+            "\n\n" + getString(R.string.total_usage_label, formatBytes(totalUsage))
         AlertDialog.Builder(this)
             .setTitle(R.string.nav_about)
-            .setMessage(getString(R.string.about_body, BuildConfig.VERSION_NAME))
+            .setMessage(body)
             .setPositiveButton(R.string.btn_close, null)
             .show()
     }
@@ -965,9 +1139,10 @@ class MainActivity : AppCompatActivity() {
             .setView(android.widget.ScrollView(this).apply { addView(textView) })
             .setPositiveButton(R.string.btn_copy) { _, _ ->
                 val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-                clipboard.setPrimaryClip(android.content.ClipData.newPlainText("kanVPN log", dump))
+                clipboard.setPrimaryClip(ClipData.newPlainText("kanVPN log", dump))
                 Toast.makeText(this, R.string.log_copied, Toast.LENGTH_SHORT).show()
             }
+            .setNeutralButton(R.string.btn_share) { _, _ -> shareText(dump, getString(R.string.logcat_title)) }
             .setNegativeButton(R.string.btn_close, null)
             .show()
     }
@@ -985,7 +1160,9 @@ class MainActivity : AppCompatActivity() {
                 config.name.lowercase().contains(q) || config.link.lowercase().contains(q)
             }
         }
-        adapter.submit(filtered, ConfigStore.selectedId(this))
+        val sorted = filtered.sortedByDescending { it.favorite }
+        val subscriptionGroupIds = GroupStore.list(this).filter { it.subscriptionUrl != null }.map { it.id }.toSet()
+        adapter.submit(sorted, ConfigStore.selectedId(this), subscriptionGroupIds)
         emptyText.visibility = if (filtered.isEmpty()) View.VISIBLE else View.GONE
         updateGroupTabCounts()
     }

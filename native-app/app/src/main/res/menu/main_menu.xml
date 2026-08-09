@@ -67,4 +67,14 @@
         android:visible="false"
         app:showAsAction="never" />
 
+    <item
+        android:id="@+id/action_connect_fastest"
+        android:title="@string/action_connect_fastest"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_clear_group"
+        android:title="@string/action_clear_group"
+        app:showAsAction="never" />
+
 </menu>

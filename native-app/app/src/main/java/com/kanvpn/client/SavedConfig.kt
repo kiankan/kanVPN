@@ -5,5 +5,6 @@ data class SavedConfig(
     val name: String,
     val link: String,
     /** null/blank = ungrouped ("manual") config. */
-    val groupId: String? = null
+    val groupId: String? = null,
+    val favorite: Boolean = false
 )

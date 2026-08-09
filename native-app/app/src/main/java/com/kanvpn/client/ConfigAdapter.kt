@@ -14,7 +14,8 @@ import libv2ray.Libv2ray
 class ConfigAdapter(
     private val onSelect: (SavedConfig) -> Unit,
     private val onDelete: (SavedConfig) -> Unit,
-    private val onLongPress: (SavedConfig) -> Unit
+    private val onLongPress: (SavedConfig) -> Unit,
+    private val onToggleFavorite: (SavedConfig) -> Unit
 ) : RecyclerView.Adapter<ConfigAdapter.ViewHolder>() {
 
     /** ms per config id; null = not tested yet, -1 = last test failed. */
@@ -23,13 +24,15 @@ class ConfigAdapter(
 
     private var items: List<SavedConfig> = emptyList()
     private var selectedId: String? = null
+    private var subscriptionGroupIds: Set<String> = emptySet()
 
     private var selectionMode = false
     private val batchSelectedIds = mutableSetOf<String>()
 
-    fun submit(newItems: List<SavedConfig>, newSelectedId: String?) {
+    fun submit(newItems: List<SavedConfig>, newSelectedId: String?, subscriptionGroupIds: Set<String> = emptySet()) {
         items = newItems
         selectedId = newSelectedId
+        this.subscriptionGroupIds = subscriptionGroupIds
         val liveIds = newItems.map { it.id }.toSet()
         pingResults.keys.retainAll(liveIds)
         batchSelectedIds.retainAll(liveIds)
@@ -52,6 +55,7 @@ class ConfigAdapter(
         val host: TextView = view.findViewById(R.id.configHost)
         val protocolChip: TextView = view.findViewById(R.id.protocolChip)
         val ping: TextView = view.findViewById(R.id.pingText)
+        val favorite: ImageButton = view.findViewById(R.id.favoriteButton)
         val delete: ImageButton = view.findViewById(R.id.deleteButton)
     }
 
@@ -72,14 +76,18 @@ class ConfigAdapter(
         holder.host.text = if (usedBytes > 0) "${formatBytes(usedBytes)} • $hostText" else hostText
         val protocol = summary?.protocol ?: protocolOf(item.link)
         val security = summary?.security?.takeIf { it != "none" }
-        holder.protocolChip.text = if (security != null) {
-            "${protocol.uppercase()} / $security"
-        } else {
-            protocol.uppercase()
+        val isSubscription = item.groupId != null && subscriptionGroupIds.contains(item.groupId)
+        holder.protocolChip.text = buildString {
+            append(protocol.uppercase())
+            if (security != null) append(" / $security")
+            if (isSubscription) append(" · sub")
         }
         holder.protocolChip.setTextColor(colorForProtocol(protocol))
         holder.dot.setBackgroundResource(
             if (isMarked(item.id)) R.drawable.dot_selected else R.drawable.dot_unselected
+        )
+        holder.favorite.setImageResource(
+            if (item.favorite) android.R.drawable.btn_star_big_on else android.R.drawable.btn_star_big_off
         )
         bindPingText(holder, item.id)
 
@@ -96,6 +104,7 @@ class ConfigAdapter(
             true
         }
         holder.delete.setOnClickListener { onDelete(item) }
+        holder.favorite.setOnClickListener { onToggleFavorite(item) }
         holder.ping.setOnClickListener { testPing(holder, item) }
     }
 
@@ -159,6 +168,19 @@ class ConfigAdapter(
                 }
             }.start()
         }
+    }
+
+    /** Kicks off a background ping test for a single config id, if it's currently listed. */
+    fun testSingle(id: String) {
+        val item = items.firstOrNull { it.id == id } ?: return
+        Thread {
+            val result = measurePing(item)
+            pingResults[item.id] = result
+            mainHandler.post {
+                val position = items.indexOfFirst { it.id == item.id }
+                if (position != RecyclerView.NO_POSITION) notifyItemChanged(position)
+            }
+        }.start()
     }
 
     /** Snapshot of ms-per-config-id currently cached (null = untested, -1 = failed). */
