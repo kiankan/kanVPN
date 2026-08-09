@@ -107,6 +107,22 @@
     <string name="settings_autoconnect_boot">اتصال خودکار هنگام روشن شدن گوشی</string>
     <string name="settings_dns_label">سرور DNS</string>
     <string name="settings_dns_hint">مثلاً 1.1.1.1</string>
+    <string name="settings_mux">فعال‌سازی Mux (چندگانه‌سازی اتصال، برای reality/vision غیرفعال می‌ماند)</string>
     <string name="notif_traffic">↑ %1$s/s  ↓ %2$s/s</string>
     <string name="notif_reconnecting">در حال اتصال مجدد… (%1$d)</string>
+
+    <string name="action_sort_name">مرتب‌سازی بر اساس نام</string>
+    <string name="action_find_selected">یافتن پیکربندی انتخاب‌شده</string>
+    <string name="action_clear_usage">پاک کردن آمار مصرف</string>
+    <string name="usage_cleared">آمار مصرف پاک شد</string>
+
+    <string name="action_select_mode">انتخاب چندتایی</string>
+    <string name="action_delete_selected">حذف موارد انتخاب‌شده</string>
+    <string name="action_cancel_selection">لغو انتخاب</string>
+
+    <string name="confirm_delete_title">حذف کانفیگ؟</string>
+    <string name="confirm_delete_message">این کانفیگ حذف شود؟</string>
+    <string name="confirm_delete_selected_message">%1$d کانفیگ انتخاب‌شده حذف شود؟</string>
+    <string name="confirm_delete_invalid_message">%1$d کانفیگ نامعتبر حذف شود؟</string>
+    <string name="confirm_delete_duplicates_message">%1$d کانفیگ تکراری حذف شود؟</string>
 </resources>

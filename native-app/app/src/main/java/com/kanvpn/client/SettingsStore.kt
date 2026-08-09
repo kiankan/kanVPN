@@ -9,6 +9,7 @@ object SettingsStore {
     private const val PREFS = "kanvpn_settings"
     private const val KEY_AUTOCONNECT_BOOT = "autoconnect_boot"
     private const val KEY_DNS = "dns_server"
+    private const val KEY_MUX = "mux_enabled"
 
     private fun prefs(context: Context) =
         context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
@@ -25,5 +26,12 @@ object SettingsStore {
 
     fun setDnsServer(context: Context, dns: String) {
         prefs(context).edit().putString(KEY_DNS, dns.trim().ifBlank { DEFAULT_DNS }).apply()
+    }
+
+    fun muxEnabled(context: Context): Boolean =
+        prefs(context).getBoolean(KEY_MUX, false)
+
+    fun setMuxEnabled(context: Context, enabled: Boolean) {
+        prefs(context).edit().putBoolean(KEY_MUX, enabled).apply()
     }
 }

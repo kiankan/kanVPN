@@ -53,6 +53,7 @@ class MainActivity : AppCompatActivity() {
     private var searchQuery: String = ""
     /** null = the "all" tab. */
     private var currentGroupFilter: String? = null
+    private var selectionModeActive = false
 
     /** Link field of whichever add-dialog is currently open, so the scan result lands in it. */
     private var pendingLinkTarget: EditText? = null
@@ -129,10 +130,7 @@ class MainActivity : AppCompatActivity() {
                 ConfigStore.setSelectedId(this, config.id)
                 refreshList()
             },
-            onDelete = { config ->
-                ConfigStore.remove(this, config.id)
-                refreshList()
-            },
+            onDelete = { config -> confirmDeleteConfig(config) },
             onLongPress = { config -> showConfigActionsDialog(config) }
         )
         configList.layoutManager = LinearLayoutManager(this)
@@ -156,6 +154,25 @@ class MainActivity : AppCompatActivity() {
         if (intent.getBooleanExtra(EXTRA_AUTO_CONNECT, false)) {
             connect()
         }
+        handleIncomingIntent(intent)
+    }
+
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        setIntent(intent)
+        handleIncomingIntent(intent)
+    }
+
+    /** Handles a config link opened via its URI scheme (vless/vmess/trojan/ss) or shared as plain text. */
+    private fun handleIncomingIntent(intent: Intent?) {
+        val link = when (intent?.action) {
+            Intent.ACTION_VIEW -> intent.data?.toString()
+            Intent.ACTION_SEND -> intent.getStringExtra(Intent.EXTRA_TEXT)
+            else -> null
+        }?.trim() ?: return
+        val validScheme = listOf("vless://", "vmess://", "trojan://", "ss://").any { link.startsWith(it) }
+        if (!validScheme) return
+        addLinkOrToast(link)
     }
 
     override fun onStart() {
@@ -190,6 +207,13 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
+    override fun onPrepareOptionsMenu(menu: Menu): Boolean {
+        menu.findItem(R.id.action_select_mode)?.isVisible = !selectionModeActive
+        menu.findItem(R.id.action_delete_selected)?.isVisible = selectionModeActive
+        menu.findItem(R.id.action_cancel_selection)?.isVisible = selectionModeActive
+        return super.onPrepareOptionsMenu(menu)
+    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_add -> {
@@ -209,12 +233,77 @@ class MainActivity : AppCompatActivity() {
                 sortByPing()
                 true
             }
+            R.id.action_sort_name -> {
+                sortByName()
+                true
+            }
             R.id.action_remove_duplicates -> {
                 removeDuplicateConfigs()
                 true
             }
+            R.id.action_find_selected -> {
+                scrollToSelected()
+                true
+            }
+            R.id.action_clear_usage -> {
+                UsageStore.resetAll(this)
+                refreshList()
+                Toast.makeText(this, R.string.usage_cleared, Toast.LENGTH_SHORT).show()
+                true
+            }
+            R.id.action_select_mode -> {
+                selectionModeActive = true
+                adapter.setSelectionMode(true)
+                invalidateOptionsMenu()
+                true
+            }
+            R.id.action_cancel_selection -> {
+                selectionModeActive = false
+                adapter.setSelectionMode(false)
+                invalidateOptionsMenu()
+                true
+            }
+            R.id.action_delete_selected -> {
+                confirmDeleteSelected()
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    private fun sortByName() {
+        val visible = ConfigStore.list(this).let { all ->
+            if (currentGroupFilter == null) all else all.filter { it.groupId == currentGroupFilter }
+        }
+        val sorted = visible.sortedBy { it.name.lowercase() }
+        ConfigStore.reorder(this, sorted.map { it.id })
+        refreshList()
+    }
+
+    private fun scrollToSelected() {
+        val selectedId = ConfigStore.selectedId(this) ?: return
+        val position = adapter.positionOf(selectedId)
+        if (position >= 0) configList.scrollToPosition(position)
+    }
+
+    private fun confirmDeleteSelected() {
+        val ids = adapter.batchSelectedIds()
+        if (ids.isEmpty()) {
+            Toast.makeText(this, R.string.err_no_selection, Toast.LENGTH_SHORT).show()
+            return
+        }
+        AlertDialog.Builder(this)
+            .setTitle(R.string.confirm_delete_title)
+            .setMessage(getString(R.string.confirm_delete_selected_message, ids.size))
+            .setPositiveButton(R.string.delete_config) { _, _ ->
+                ids.forEach { ConfigStore.remove(this, it) }
+                selectionModeActive = false
+                adapter.setSelectionMode(false)
+                invalidateOptionsMenu()
+                refreshList()
+            }
+            .setNegativeButton(R.string.btn_cancel, null)
+            .show()
     }
 
     private fun showAddPopup(anchor: View) {
@@ -344,9 +433,20 @@ class MainActivity : AppCompatActivity() {
                 true
             }
         }
-        invalid.forEach { ConfigStore.remove(this, it.id) }
-        refreshList()
-        Toast.makeText(this, getString(R.string.remove_invalid_done, invalid.size), Toast.LENGTH_SHORT).show()
+        if (invalid.isEmpty()) {
+            Toast.makeText(this, getString(R.string.remove_invalid_done, 0), Toast.LENGTH_SHORT).show()
+            return
+        }
+        AlertDialog.Builder(this)
+            .setTitle(R.string.confirm_delete_title)
+            .setMessage(getString(R.string.confirm_delete_invalid_message, invalid.size))
+            .setPositiveButton(R.string.delete_config) { _, _ ->
+                invalid.forEach { ConfigStore.remove(this, it.id) }
+                refreshList()
+                Toast.makeText(this, getString(R.string.remove_invalid_done, invalid.size), Toast.LENGTH_SHORT).show()
+            }
+            .setNegativeButton(R.string.btn_cancel, null)
+            .show()
     }
 
     private fun sortByPing() {
@@ -369,9 +469,32 @@ class MainActivity : AppCompatActivity() {
         val scoped = ConfigStore.list(this).filter { currentGroupFilter == null || it.groupId == currentGroupFilter }
         val seenLinks = mutableSetOf<String>()
         val duplicates = scoped.filterNot { seenLinks.add(it.link) }
-        duplicates.forEach { ConfigStore.remove(this, it.id) }
-        refreshList()
-        Toast.makeText(this, getString(R.string.remove_duplicates_done, duplicates.size), Toast.LENGTH_SHORT).show()
+        if (duplicates.isEmpty()) {
+            Toast.makeText(this, getString(R.string.remove_duplicates_done, 0), Toast.LENGTH_SHORT).show()
+            return
+        }
+        AlertDialog.Builder(this)
+            .setTitle(R.string.confirm_delete_title)
+            .setMessage(getString(R.string.confirm_delete_duplicates_message, duplicates.size))
+            .setPositiveButton(R.string.delete_config) { _, _ ->
+                duplicates.forEach { ConfigStore.remove(this, it.id) }
+                refreshList()
+                Toast.makeText(this, getString(R.string.remove_duplicates_done, duplicates.size), Toast.LENGTH_SHORT).show()
+            }
+            .setNegativeButton(R.string.btn_cancel, null)
+            .show()
+    }
+
+    private fun confirmDeleteConfig(config: SavedConfig) {
+        AlertDialog.Builder(this)
+            .setTitle(R.string.confirm_delete_title)
+            .setMessage(R.string.confirm_delete_message)
+            .setPositiveButton(R.string.delete_config) { _, _ ->
+                ConfigStore.remove(this, config.id)
+                refreshList()
+            }
+            .setNegativeButton(R.string.btn_cancel, null)
+            .show()
     }
 
     // ---- Edit / share a single config ----------------------------------------------
@@ -397,10 +520,7 @@ class MainActivity : AppCompatActivity() {
                     }
                     getString(R.string.config_share) -> showShareQrDialog(config)
                     getString(R.string.config_move) -> showMoveToGroupDialog(config, groups)
-                    getString(R.string.delete_config) -> {
-                        ConfigStore.remove(this, config.id)
-                        refreshList()
-                    }
+                    getString(R.string.delete_config) -> confirmDeleteConfig(config)
                 }
             }
             .setNegativeButton(R.string.btn_close, null)
@@ -499,8 +619,10 @@ class MainActivity : AppCompatActivity() {
         val view = layoutInflater.inflate(R.layout.dialog_settings, null)
         val autoConnectCheckbox = view.findViewById<android.widget.CheckBox>(R.id.autoConnectCheckbox)
         val dnsInput = view.findViewById<EditText>(R.id.dnsInput)
+        val muxCheckbox = view.findViewById<android.widget.CheckBox>(R.id.muxCheckbox)
         autoConnectCheckbox.isChecked = SettingsStore.autoConnectOnBoot(this)
         dnsInput.setText(SettingsStore.dnsServer(this))
+        muxCheckbox.isChecked = SettingsStore.muxEnabled(this)
 
         AlertDialog.Builder(this)
             .setTitle(R.string.nav_settings)
@@ -508,6 +630,7 @@ class MainActivity : AppCompatActivity() {
             .setPositiveButton(R.string.btn_save) { _, _ ->
                 SettingsStore.setAutoConnectOnBoot(this, autoConnectCheckbox.isChecked)
                 SettingsStore.setDnsServer(this, dnsInput.text.toString())
+                SettingsStore.setMuxEnabled(this, muxCheckbox.isChecked)
                 Toast.makeText(this, R.string.per_app_saved, Toast.LENGTH_SHORT).show()
             }
             .setNegativeButton(R.string.btn_cancel, null)
@@ -864,20 +987,44 @@ class MainActivity : AppCompatActivity() {
         }
         adapter.submit(filtered, ConfigStore.selectedId(this))
         emptyText.visibility = if (filtered.isEmpty()) View.VISIBLE else View.GONE
+        updateGroupTabCounts()
     }
+
+    private fun tabLabel(name: String, count: Int) = "$name ($count)"
 
     private fun rebuildGroupTabs() {
         val groups = GroupStore.list(this)
+        val allConfigs = ConfigStore.list(this)
         if (currentGroupFilter != null && groups.none { it.id == currentGroupFilter }) {
             currentGroupFilter = null
         }
         groupTabs.removeAllTabs()
-        groupTabs.addTab(groupTabs.newTab().setText(getString(R.string.tab_all)).setTag(null as String?), currentGroupFilter == null)
+        groupTabs.addTab(
+            groupTabs.newTab().setText(tabLabel(getString(R.string.tab_all), allConfigs.size)).setTag(null as String?),
+            currentGroupFilter == null
+        )
         for (g in groups) {
+            val count = allConfigs.count { it.groupId == g.id }
             groupTabs.addTab(
-                groupTabs.newTab().setText(g.name).setTag(g.id),
+                groupTabs.newTab().setText(tabLabel(g.name, count)).setTag(g.id),
                 currentGroupFilter == g.id
             )
+        }
+    }
+
+    /** Cheap text-only refresh of each existing tab's "(N)" count — no structural rebuild, no scroll/flicker. */
+    private fun updateGroupTabCounts() {
+        val allConfigs = ConfigStore.list(this)
+        val groupsById = GroupStore.list(this).associateBy { it.id }
+        for (i in 0 until groupTabs.tabCount) {
+            val tab = groupTabs.getTabAt(i) ?: continue
+            val groupId = tab.tag as? String
+            if (groupId == null) {
+                tab.text = tabLabel(getString(R.string.tab_all), allConfigs.size)
+            } else {
+                val name = groupsById[groupId]?.name ?: continue
+                tab.text = tabLabel(name, allConfigs.count { it.groupId == groupId })
+            }
         }
     }
 
@@ -912,7 +1059,7 @@ class MainActivity : AppCompatActivity() {
     private fun doConnect() {
         val selected = ConfigStore.selected(this) ?: return
         val configJson = try {
-            ConfigParser.toXrayConfig(selected.link, RoutingStore.mode(this)).toString()
+            ConfigParser.toXrayConfig(selected.link, RoutingStore.mode(this), SettingsStore.muxEnabled(this)).toString()
         } catch (e: Exception) {
             Toast.makeText(this, R.string.err_invalid_config, Toast.LENGTH_SHORT).show()
             return
@@ -920,6 +1067,7 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, KanVpnService::class.java).apply {
             action = KanVpnService.ACTION_CONNECT
             putExtra(KanVpnService.EXTRA_CONFIG_JSON, configJson)
+            putExtra(KanVpnService.EXTRA_CONFIG_ID, selected.id)
         }
         startService(intent)
     }

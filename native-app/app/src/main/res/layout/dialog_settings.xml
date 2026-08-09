@@ -24,4 +24,11 @@
         android:hint="@string/settings_dns_hint"
         android:inputType="textUri" />
 
+    <CheckBox
+        android:id="@+id/muxCheckbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/settings_mux" />
+
 </LinearLayout>

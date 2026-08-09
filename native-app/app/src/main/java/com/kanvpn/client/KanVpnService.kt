@@ -25,6 +25,7 @@ class KanVpnService : VpnService() {
         const val ACTION_CONNECT = "com.kanvpn.client.CONNECT"
         const val ACTION_DISCONNECT = "com.kanvpn.client.DISCONNECT"
         const val EXTRA_CONFIG_JSON = "config_json"
+        const val EXTRA_CONFIG_ID = "config_id"
         const val CHANNEL_ID = "kanvpn_status"
         const val NOTIFICATION_ID = 1
         const val STATS_INTERVAL_MS = 1000L
@@ -43,6 +44,7 @@ class KanVpnService : VpnService() {
     private var expectedStop = false
     private var lastConfigJson: String? = null
     private var reconnectAttempts = 0
+    private var currentConfigId: String? = null
 
     private val statsHandler = Handler(Looper.getMainLooper())
     private var totalUploadBytes = 0L
@@ -70,6 +72,7 @@ class KanVpnService : VpnService() {
                 }
                 AppLog.add("Connect requested")
                 lastConfigJson = configJson
+                currentConfigId = intent.getStringExtra(EXTRA_CONFIG_ID)
                 reconnectAttempts = 0
                 expectedStop = false
                 VpnStatusBus.update(VpnStatusBus.State.CONNECTING)
@@ -279,6 +282,7 @@ class KanVpnService : VpnService() {
             val deltaDown = controller.queryStats(ConfigParser.PROXY_TAG, "downlink").coerceAtLeast(0)
             totalUploadBytes += deltaUp
             totalDownloadBytes += deltaDown
+            currentConfigId?.let { UsageStore.addBytes(this, it, deltaUp + deltaDown) }
             val upSpeed = deltaUp * 1000 / STATS_INTERVAL_MS
             val downSpeed = deltaDown * 1000 / STATS_INTERVAL_MS
             TrafficBus.update(

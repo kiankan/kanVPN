@@ -19,19 +19,43 @@ object ConfigParser {
 
     fun toXrayConfig(
         link: String,
-        routingMode: RoutingStore.Mode = RoutingStore.Mode.GLOBAL
+        routingMode: RoutingStore.Mode = RoutingStore.Mode.GLOBAL,
+        muxEnabled: Boolean = false
     ): JSONObject {
         val trimmed = link.trim()
         val outbound = when {
             trimmed.startsWith("vless://") -> parseVless(trimmed)
             trimmed.startsWith("vmess://") -> parseVmess(trimmed)
             trimmed.startsWith("trojan://") -> parseTrojan(trimmed)
+            trimmed.startsWith("ss://") -> parseShadowsocks(trimmed)
             else -> throw ParseException("Unsupported link scheme")
         }
-        return buildRootConfig(outbound, routingMode)
+        return buildRootConfig(outbound, routingMode, muxEnabled)
     }
 
-    private fun buildRootConfig(outbound: JSONObject, routingMode: RoutingStore.Mode): JSONObject {
+    /** Mux multiplexing is incompatible with XTLS vision flow, so it's silently skipped there. */
+    private fun outboundUsesVisionFlow(outbound: JSONObject): Boolean {
+        val vnext = outbound.optJSONObject("settings")?.optJSONArray("vnext") ?: return false
+        for (i in 0 until vnext.length()) {
+            val users = vnext.getJSONObject(i).optJSONArray("users") ?: continue
+            for (j in 0 until users.length()) {
+                if (users.getJSONObject(j).optString("flow").contains("vision")) return true
+            }
+        }
+        return false
+    }
+
+    private fun buildRootConfig(
+        outbound: JSONObject,
+        routingMode: RoutingStore.Mode,
+        muxEnabled: Boolean = false
+    ): JSONObject {
+        if (muxEnabled && !outboundUsesVisionFlow(outbound)) {
+            outbound.put("mux", JSONObject().apply {
+                put("enabled", true)
+                put("concurrency", 8)
+            })
+        }
         val inbound = JSONObject().apply {
             put("tag", "socks-in")
             put("listen", "127.0.0.1")
@@ -166,6 +190,10 @@ object ConfigParser {
                         json.optString("port", "443").toIntOrNull() ?: 443
                     )
                 }
+                trimmed.startsWith("ss://") -> {
+                    val (_, _, host, port) = decodeShadowsocksLink(trimmed)
+                    Summary("shadowsocks", "none", host, port)
+                }
                 else -> null
             }
         } catch (e: Exception) {
@@ -276,6 +304,86 @@ object ConfigParser {
             put("tag", PROXY_TAG)
             put("settings", JSONObject().put("vnext", JSONArray().put(vnext)))
             put("streamSettings", stream)
+        }
+    }
+
+    private data class ShadowsocksFields(val method: String, val password: String, val host: String, val port: Int)
+
+    /** Tries URL-safe-no-padding first (the common SIP002 encoding), then falls back to standard base64. */
+    private fun decodeSsBase64(value: String): String {
+        for (flag in listOf(Base64.URL_SAFE or Base64.NO_PADDING or Base64.NO_WRAP, Base64.NO_WRAP)) {
+            try {
+                return String(Base64.decode(value, flag))
+            } catch (e: Exception) {
+                // try the next flag combination
+            }
+        }
+        val padded = value + "=".repeat((4 - value.length % 4) % 4)
+        for (flag in listOf(Base64.URL_SAFE or Base64.NO_WRAP, Base64.NO_WRAP)) {
+            try {
+                return String(Base64.decode(padded, flag))
+            } catch (e: Exception) {
+                // try the next flag combination
+            }
+        }
+        throw ParseException("Could not decode Shadowsocks credentials")
+    }
+
+    /** Supports both SIP002 (ss://base64(method:pass)@host:port) and legacy (ss://base64(method:pass@host:port)). */
+    private fun decodeShadowsocksLink(link: String): ShadowsocksFields {
+        val withoutScheme = link.removePrefix("ss://")
+        val beforeHash = withoutScheme.substringBefore("#")
+        val beforeQuery = beforeHash.substringBefore("?")
+
+        val atIndex = beforeQuery.lastIndexOf('@')
+        if (atIndex >= 0) {
+            val decodedUserInfo = decodeSsBase64(beforeQuery.substring(0, atIndex))
+            val hostPort = beforeQuery.substring(atIndex + 1)
+            val sep = decodedUserInfo.indexOf(':')
+            if (sep < 0) throw ParseException("Invalid Shadowsocks credentials")
+            val hp = hostPort.split(":")
+            if (hp.size < 2) throw ParseException("Shadowsocks link is missing host:port")
+            return ShadowsocksFields(
+                decodedUserInfo.substring(0, sep),
+                decodedUserInfo.substring(sep + 1),
+                hp[0],
+                hp[1].toIntOrNull() ?: 443
+            )
+        }
+
+        val decoded = decodeSsBase64(beforeQuery)
+        val atIdx2 = decoded.lastIndexOf('@')
+        if (atIdx2 < 0) throw ParseException("Invalid Shadowsocks link")
+        val methodPass = decoded.substring(0, atIdx2)
+        val hostPort = decoded.substring(atIdx2 + 1)
+        val sep = methodPass.indexOf(':')
+        if (sep < 0) throw ParseException("Invalid Shadowsocks link")
+        val hp = hostPort.split(":")
+        if (hp.isEmpty()) throw ParseException("Shadowsocks link is missing host:port")
+        return ShadowsocksFields(
+            methodPass.substring(0, sep),
+            methodPass.substring(sep + 1),
+            hp[0],
+            hp.getOrNull(1)?.toIntOrNull() ?: 443
+        )
+    }
+
+    private fun parseShadowsocks(link: String): JSONObject {
+        val fields = decodeShadowsocksLink(link)
+        val server = JSONObject().apply {
+            put("address", fields.host)
+            put("port", fields.port)
+            put("method", fields.method)
+            put("password", fields.password)
+        }
+        return JSONObject().apply {
+            put("protocol", "shadowsocks")
+            put("tag", PROXY_TAG)
+            put("settings", JSONObject().put("servers", JSONArray().put(server)))
+            put("streamSettings", JSONObject().apply {
+                put("network", "tcp")
+                put("security", "none")
+            })
         }
     }
 }

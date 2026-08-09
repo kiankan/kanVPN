@@ -24,13 +24,27 @@ class ConfigAdapter(
     private var items: List<SavedConfig> = emptyList()
     private var selectedId: String? = null
 
+    private var selectionMode = false
+    private val batchSelectedIds = mutableSetOf<String>()
+
     fun submit(newItems: List<SavedConfig>, newSelectedId: String?) {
         items = newItems
         selectedId = newSelectedId
         val liveIds = newItems.map { it.id }.toSet()
         pingResults.keys.retainAll(liveIds)
+        batchSelectedIds.retainAll(liveIds)
         notifyDataSetChanged()
     }
+
+    fun setSelectionMode(enabled: Boolean) {
+        selectionMode = enabled
+        if (!enabled) batchSelectedIds.clear()
+        notifyDataSetChanged()
+    }
+
+    fun batchSelectedIds(): Set<String> = batchSelectedIds.toSet()
+
+    fun positionOf(id: String): Int = items.indexOfFirst { it.id == id }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val dot: View = view.findViewById(R.id.selectedDot)
@@ -50,9 +64,12 @@ class ConfigAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
         val summary = ConfigParser.summarize(item.link)
+        val context = holder.itemView.context
 
         holder.name.text = item.name
-        holder.host.text = if (summary != null) "${summary.host}:${summary.port}" else previewOf(item.link)
+        val hostText = if (summary != null) "${summary.host}:${summary.port}" else previewOf(item.link)
+        val usedBytes = UsageStore.bytesFor(context, item.id)
+        holder.host.text = if (usedBytes > 0) "${formatBytes(usedBytes)} • $hostText" else hostText
         val protocol = summary?.protocol ?: protocolOf(item.link)
         val security = summary?.security?.takeIf { it != "none" }
         holder.protocolChip.text = if (security != null) {
@@ -62,15 +79,28 @@ class ConfigAdapter(
         }
         holder.protocolChip.setTextColor(colorForProtocol(protocol))
         holder.dot.setBackgroundResource(
-            if (item.id == selectedId) R.drawable.dot_selected else R.drawable.dot_unselected
+            if (isMarked(item.id)) R.drawable.dot_selected else R.drawable.dot_unselected
         )
         bindPingText(holder, item.id)
 
-        holder.itemView.setOnClickListener { onSelect(item) }
-        holder.itemView.setOnLongClickListener { onLongPress(item); true }
+        holder.itemView.setOnClickListener {
+            if (selectionMode) {
+                if (!batchSelectedIds.add(item.id)) batchSelectedIds.remove(item.id)
+                notifyItemChanged(holder.bindingAdapterPosition)
+            } else {
+                onSelect(item)
+            }
+        }
+        holder.itemView.setOnLongClickListener {
+            if (!selectionMode) onLongPress(item)
+            true
+        }
         holder.delete.setOnClickListener { onDelete(item) }
         holder.ping.setOnClickListener { testPing(holder, item) }
     }
+
+    private fun isMarked(id: String): Boolean =
+        if (selectionMode) batchSelectedIds.contains(id) else id == selectedId
 
     override fun getItemCount(): Int = items.size
 
@@ -148,11 +178,24 @@ class ConfigAdapter(
         "vless" -> Color.parseColor("#7C4DFF")
         "vmess" -> Color.parseColor("#00897B")
         "trojan" -> Color.parseColor("#D32F2F")
+        "shadowsocks" -> Color.parseColor("#FB8C00")
         else -> Color.parseColor("#616161")
     }
 
     private fun previewOf(link: String): String {
         val afterScheme = link.substringAfter("://", "")
         return afterScheme.substringAfter("@", afterScheme).substringBefore("?").substringBefore("#")
+    }
+
+    private fun formatBytes(bytes: Long): String {
+        if (bytes < 1024) return "$bytes B"
+        val units = arrayOf("KB", "MB", "GB", "TB")
+        var value = bytes / 1024.0
+        var unitIndex = 0
+        while (value >= 1024 && unitIndex < units.size - 1) {
+            value /= 1024.0
+            unitIndex++
+        }
+        return String.format("%.1f %s", value, units[unitIndex])
     }
 }
