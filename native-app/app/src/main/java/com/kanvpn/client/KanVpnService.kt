@@ -76,6 +76,15 @@ class KanVpnService : VpnService() {
                 .addRoute("0.0.0.0", 0)
                 .addDnsServer("1.1.1.1")
 
+            try {
+                // Xray-core's own outbound connection to the remote server must
+                // bypass the tunnel, or it gets captured by our own TUN and
+                // loops forever with nothing ever reaching the real internet.
+                builder.addDisallowedApplication(packageName)
+            } catch (e: Exception) {
+                Log.e(TAG, "Failed to exclude self from VPN routes", e)
+            }
+
             tunFd = builder.establish()
             val fd = tunFd
             if (fd == null) {
@@ -91,7 +100,12 @@ class KanVpnService : VpnService() {
 
             isRunning = true
             startForeground(NOTIFICATION_ID, buildNotification("Connected"))
-        } catch (e: Exception) {
+        } catch (e: Throwable) {
+            // Catches Throwable, not just Exception: a bad/missing native
+            // symbol in libhev-socks5-tunnel.so surfaces as
+            // UnsatisfiedLinkError, which is an Error, not an Exception —
+            // an Exception-only catch here would let the service crash
+            // instead of failing the connection cleanly.
             Log.e(TAG, "Failed to start VPN", e)
             stopVpn()
         }
