@@ -6,6 +6,8 @@ import android.app.NotificationManager
 import android.content.Intent
 import android.net.VpnService
 import android.os.Build
+import android.os.Handler
+import android.os.Looper
 import android.os.ParcelFileDescriptor
 import android.util.Log
 import androidx.core.app.NotificationCompat
@@ -24,6 +26,7 @@ class KanVpnService : VpnService() {
         const val EXTRA_CONFIG_JSON = "config_json"
         const val CHANNEL_ID = "kanvpn_status"
         const val NOTIFICATION_ID = 1
+        const val STATS_INTERVAL_MS = 1000L
 
         @Volatile
         var isRunning = false
@@ -32,6 +35,16 @@ class KanVpnService : VpnService() {
 
     private var tunFd: ParcelFileDescriptor? = null
     private var coreController: CoreController? = null
+
+    private val statsHandler = Handler(Looper.getMainLooper())
+    private var totalUploadBytes = 0L
+    private var totalDownloadBytes = 0L
+    private val statsPoller = object : Runnable {
+        override fun run() {
+            pollStats()
+            statsHandler.postDelayed(this, STATS_INTERVAL_MS)
+        }
+    }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         when (intent?.action) {
@@ -102,6 +115,10 @@ class KanVpnService : VpnService() {
             isRunning = true
             startForeground(NOTIFICATION_ID, buildNotification("Connected"))
             VpnStatusBus.update(VpnStatusBus.State.CONNECTED)
+            totalUploadBytes = 0
+            totalDownloadBytes = 0
+            TrafficBus.reset()
+            statsHandler.postDelayed(statsPoller, STATS_INTERVAL_MS)
         } catch (e: Throwable) {
             // Catches Throwable, not just Exception: a bad/missing native
             // symbol in libhev-socks5-tunnel.so surfaces as
@@ -115,6 +132,8 @@ class KanVpnService : VpnService() {
     }
 
     private fun stopVpn(resetStatus: Boolean = true) {
+        statsHandler.removeCallbacks(statsPoller)
+        TrafficBus.reset()
         try {
             TProxyService.TProxyStopService()
         } catch (e: Exception) {
@@ -164,6 +183,31 @@ class KanVpnService : VpnService() {
             }
         }
         Libv2ray.initCoreEnv(assetDir.absolutePath, "")
+    }
+
+    private fun pollStats() {
+        val controller = coreController ?: return
+        try {
+            // queryStats returns the cumulative counter for this tag/direction
+            // since the outbound was created (no reset flag on this binding),
+            // so speed is just the delta since the last poll.
+            val up = controller.queryStats(ConfigParser.PROXY_TAG, "uplink")
+            val down = controller.queryStats(ConfigParser.PROXY_TAG, "downlink")
+            val deltaUp = (up - totalUploadBytes).coerceAtLeast(0)
+            val deltaDown = (down - totalDownloadBytes).coerceAtLeast(0)
+            totalUploadBytes = up
+            totalDownloadBytes = down
+            TrafficBus.update(
+                TrafficSnapshot(
+                    uploadSpeedBps = (deltaUp * 1000 / STATS_INTERVAL_MS),
+                    downloadSpeedBps = (deltaDown * 1000 / STATS_INTERVAL_MS),
+                    totalUploadBytes = up,
+                    totalDownloadBytes = down
+                )
+            )
+        } catch (e: Exception) {
+            Log.e(TAG, "Failed to query traffic stats", e)
+        }
     }
 
     private fun buildTun2SocksConfig(): String {

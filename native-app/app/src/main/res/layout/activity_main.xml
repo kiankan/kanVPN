@@ -25,6 +25,16 @@
             android:layout_marginTop="8dp"
             android:text="@string/status_disconnected"
             android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/trafficText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/traffic_placeholder"
+            android:textSize="13sp"
+            android:alpha="0.75"
+            android:visibility="gone" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView

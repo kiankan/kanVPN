@@ -17,6 +17,7 @@ import com.journeyapps.barcodescanner.ScanOptions
 class MainActivity : AppCompatActivity() {
 
     private lateinit var statusText: TextView
+    private lateinit var trafficText: TextView
     private lateinit var connectButton: Button
     private lateinit var configList: RecyclerView
     private lateinit var adapter: ConfigAdapter
@@ -42,12 +43,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private val statusListener: (VpnStatusBus.State) -> Unit = { renderStatus(it) }
+    private val trafficListener: (TrafficSnapshot) -> Unit = { renderTraffic(it) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         statusText = findViewById(R.id.statusText)
+        trafficText = findViewById(R.id.trafficText)
         connectButton = findViewById(R.id.connectButton)
         configList = findViewById(R.id.configList)
         val addButton = findViewById<Button>(R.id.addButton)
@@ -75,11 +78,14 @@ class MainActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         VpnStatusBus.addListener(statusListener)
+        TrafficBus.addListener(trafficListener)
         renderStatus(VpnStatusBus.state)
+        renderTraffic(TrafficBus.snapshot)
     }
 
     override fun onStop() {
         VpnStatusBus.removeListener(statusListener)
+        TrafficBus.removeListener(trafficListener)
         super.onStop()
     }
 
@@ -177,21 +183,47 @@ class MainActivity : AppCompatActivity() {
             VpnStatusBus.State.DISCONNECTED -> {
                 statusText.text = getString(R.string.status_disconnected)
                 connectButton.text = getString(R.string.btn_connect)
+                trafficText.visibility = TextView.GONE
             }
             VpnStatusBus.State.CONNECTING -> {
                 statusText.text = getString(R.string.status_connecting)
                 connectButton.text = getString(R.string.btn_disconnect)
+                trafficText.visibility = TextView.GONE
             }
             VpnStatusBus.State.CONNECTED -> {
                 statusText.text = getString(R.string.status_connected)
                 connectButton.text = getString(R.string.btn_disconnect)
+                trafficText.visibility = TextView.VISIBLE
             }
             VpnStatusBus.State.ERROR -> {
                 statusText.text = getString(
                     R.string.status_error, VpnStatusBus.errorMessage ?: "unknown"
                 )
                 connectButton.text = getString(R.string.btn_connect)
+                trafficText.visibility = TextView.GONE
             }
         }
+    }
+
+    private fun renderTraffic(snapshot: TrafficSnapshot) {
+        trafficText.text = getString(
+            R.string.traffic_format,
+            formatBytes(snapshot.uploadSpeedBps),
+            formatBytes(snapshot.downloadSpeedBps),
+            formatBytes(snapshot.totalUploadBytes),
+            formatBytes(snapshot.totalDownloadBytes)
+        )
+    }
+
+    private fun formatBytes(bytes: Long): String {
+        if (bytes < 1024) return "${bytes} B"
+        val units = arrayOf("KB", "MB", "GB", "TB")
+        var value = bytes / 1024.0
+        var unitIndex = 0
+        while (value >= 1024 && unitIndex < units.size - 1) {
+            value /= 1024.0
+            unitIndex++
+        }
+        return String.format("%.1f %s", value, units[unitIndex])
     }
 }

@@ -13,6 +13,7 @@ import java.net.URLDecoder
 object ConfigParser {
 
     const val SOCKS_PORT = 10808
+    const val PROXY_TAG = "proxy"
 
     class ParseException(message: String) : Exception(message)
 
@@ -44,6 +45,13 @@ object ConfigParser {
         }
         return JSONObject().apply {
             put("log", JSONObject().put("loglevel", "warning"))
+            put("stats", JSONObject())
+            put("policy", JSONObject().apply {
+                put("system", JSONObject().apply {
+                    put("statsOutboundUplink", true)
+                    put("statsOutboundDownlink", true)
+                })
+            })
             put("inbounds", JSONArray().put(inbound))
             put("outbounds", JSONArray().put(outbound).put(direct))
         }
@@ -111,7 +119,7 @@ object ConfigParser {
         }
         return JSONObject().apply {
             put("protocol", "vless")
-            put("tag", "proxy")
+            put("tag", PROXY_TAG)
             put("settings", JSONObject().put("vnext", JSONArray().put(vnext)))
             put("streamSettings", streamSettings(params))
         }
@@ -135,7 +143,7 @@ object ConfigParser {
         })
         return JSONObject().apply {
             put("protocol", "trojan")
-            put("tag", "proxy")
+            put("tag", PROXY_TAG)
             put("settings", JSONObject().put("servers", JSONArray().put(server)))
             put("streamSettings", stream)
         }
@@ -191,7 +199,7 @@ object ConfigParser {
         }
         return JSONObject().apply {
             put("protocol", "vmess")
-            put("tag", "proxy")
+            put("tag", PROXY_TAG)
             put("settings", JSONObject().put("vnext", JSONArray().put(vnext)))
             put("streamSettings", stream)
         }

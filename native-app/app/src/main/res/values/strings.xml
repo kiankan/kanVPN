@@ -18,4 +18,10 @@
     <string name="err_empty_config">Paste a config link first</string>
     <string name="err_invalid_config">Could not parse that config link</string>
     <string name="err_no_selection">Add or select a server first</string>
+    <string name="traffic_placeholder">↑ 0 B/s  ↓ 0 B/s</string>
+    <string name="traffic_format">↑ %1$s/s  ↓ %2$s/s   (Σ ↑%3$s ↓%4$s)</string>
+    <string name="ping_tap_test">test</string>
+    <string name="ping_testing">…</string>
+    <string name="ping_failed">timeout</string>
+    <string name="ping_format">%1$d ms</string>
 </resources>

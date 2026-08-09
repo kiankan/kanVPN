@@ -4,11 +4,15 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:gravity="center_vertical"
-    android:paddingStart="16dp"
-    android:paddingEnd="8dp"
-    android:paddingTop="14dp"
-    android:paddingBottom="14dp"
-    android:background="?attr/selectableItemBackground">
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginTop="6dp"
+    android:paddingStart="14dp"
+    android:paddingEnd="6dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp"
+    android:background="@drawable/bg_config_card"
+    android:foreground="?attr/selectableItemBackground">
 
     <View
         android:id="@+id/selectedDot"
@@ -28,15 +32,51 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end" />
 
-        <TextView
-            android:id="@+id/configPreview"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="13sp"
-            android:alpha="0.7" />
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:id="@+id/protocolChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_protocol_chip"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/configPreview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textSize="12sp"
+                android:alpha="0.7"
+                android:maxLines="1"
+                android:ellipsize="end" />
+        </LinearLayout>
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/pingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:padding="8dp"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:text="@string/ping_tap_test" />
 
     <ImageButton
         android:id="@+id/deleteButton"
