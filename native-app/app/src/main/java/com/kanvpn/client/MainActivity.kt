@@ -1,5 +1,6 @@
 package com.kanvpn.client
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.net.VpnService
 import android.os.Bundle
@@ -8,20 +9,25 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.journeyapps.barcodescanner.ScanContract
 import com.journeyapps.barcodescanner.ScanOptions
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var configInput: EditText
     private lateinit var statusText: TextView
     private lateinit var connectButton: Button
-    private var connected = false
+    private lateinit var configList: RecyclerView
+    private lateinit var adapter: ConfigAdapter
+
+    /** Link field of whichever add-dialog is currently open, so the scan result lands in it. */
+    private var pendingLinkTarget: EditText? = null
 
     private val scanLauncher = registerForActivityResult(ScanContract()) { result ->
         val contents = result.contents
         if (contents != null) {
-            configInput.setText(contents)
+            pendingLinkTarget?.setText(contents)
         }
     }
 
@@ -35,41 +41,104 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private val statusListener: (VpnStatusBus.State) -> Unit = { renderStatus(it) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        configInput = findViewById(R.id.configInput)
         statusText = findViewById(R.id.statusText)
         connectButton = findViewById(R.id.connectButton)
-        val scanButton = findViewById<Button>(R.id.scanButton)
+        configList = findViewById(R.id.configList)
+        val addButton = findViewById<Button>(R.id.addButton)
 
-        connected = KanVpnService.isRunning
-        renderState()
+        adapter = ConfigAdapter(
+            onSelect = { config ->
+                ConfigStore.setSelectedId(this, config.id)
+                refreshList()
+            },
+            onDelete = { config ->
+                ConfigStore.remove(this, config.id)
+                refreshList()
+            }
+        )
+        configList.layoutManager = LinearLayoutManager(this)
+        configList.adapter = adapter
 
+        addButton.setOnClickListener { showAddDialog() }
+        connectButton.setOnClickListener { onConnectButtonClicked() }
+
+        refreshList()
+        renderStatus(VpnStatusBus.state)
+    }
+
+    override fun onStart() {
+        super.onStart()
+        VpnStatusBus.addListener(statusListener)
+        renderStatus(VpnStatusBus.state)
+    }
+
+    override fun onStop() {
+        VpnStatusBus.removeListener(statusListener)
+        super.onStop()
+    }
+
+    private fun refreshList() {
+        adapter.submit(ConfigStore.list(this), ConfigStore.selectedId(this))
+    }
+
+    private fun showAddDialog() {
+        val view = layoutInflater.inflate(R.layout.dialog_add_config, null)
+        val nameInput = view.findViewById<EditText>(R.id.nameInput)
+        val linkInput = view.findViewById<EditText>(R.id.linkInput)
+        val scanButton = view.findViewById<Button>(R.id.scanButton)
+
+        pendingLinkTarget = linkInput
         scanButton.setOnClickListener {
             scanLauncher.launch(ScanOptions().setOrientationLocked(true))
         }
 
-        connectButton.setOnClickListener {
-            if (connected) {
-                disconnect()
-            } else {
-                connect()
+        AlertDialog.Builder(this)
+            .setTitle(R.string.dialog_add_title)
+            .setView(view)
+            .setPositiveButton(R.string.btn_save) { _, _ ->
+                val link = linkInput.text.toString().trim()
+                if (link.isEmpty()) {
+                    Toast.makeText(this, R.string.err_empty_config, Toast.LENGTH_SHORT).show()
+                    return@setPositiveButton
+                }
+                try {
+                    ConfigParser.toXrayConfig(link)
+                } catch (e: Exception) {
+                    Toast.makeText(this, R.string.err_invalid_config, Toast.LENGTH_SHORT).show()
+                    return@setPositiveButton
+                }
+                val typedName = nameInput.text.toString().trim()
+                val name = typedName.ifEmpty { link.substringAfter("#", "").ifEmpty { link.substringBefore("://") } }
+                ConfigStore.add(this, name, link)
+                refreshList()
             }
+            .setNegativeButton(R.string.btn_cancel, null)
+            .show()
+    }
+
+    private fun onConnectButtonClicked() {
+        when (VpnStatusBus.state) {
+            VpnStatusBus.State.CONNECTED, VpnStatusBus.State.CONNECTING -> disconnect()
+            else -> connect()
         }
     }
 
     private fun connect() {
-        val link = configInput.text.toString().trim()
-        if (link.isEmpty()) {
-            Toast.makeText(this, R.string.err_empty_config, Toast.LENGTH_SHORT).show()
+        val selected = ConfigStore.selected(this)
+        if (selected == null) {
+            Toast.makeText(this, R.string.err_no_selection, Toast.LENGTH_SHORT).show()
             return
         }
         try {
-            ConfigParser.toXrayConfig(link)
+            ConfigParser.toXrayConfig(selected.link)
         } catch (e: Exception) {
-            Toast.makeText(this, getString(R.string.err_invalid_config), Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.err_invalid_config, Toast.LENGTH_SHORT).show()
             return
         }
 
@@ -82,11 +151,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun doConnect() {
-        val link = configInput.text.toString().trim()
+        val selected = ConfigStore.selected(this) ?: return
         val configJson = try {
-            ConfigParser.toXrayConfig(link).toString()
+            ConfigParser.toXrayConfig(selected.link).toString()
         } catch (e: Exception) {
-            Toast.makeText(this, getString(R.string.err_invalid_config), Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.err_invalid_config, Toast.LENGTH_SHORT).show()
             return
         }
         val intent = Intent(this, KanVpnService::class.java).apply {
@@ -94,8 +163,6 @@ class MainActivity : AppCompatActivity() {
             putExtra(KanVpnService.EXTRA_CONFIG_JSON, configJson)
         }
         startService(intent)
-        connected = true
-        renderState()
     }
 
     private fun disconnect() {
@@ -103,16 +170,28 @@ class MainActivity : AppCompatActivity() {
             action = KanVpnService.ACTION_DISCONNECT
         }
         startService(intent)
-        connected = false
-        renderState()
     }
 
-    private fun renderState() {
-        statusText.text = getString(
-            if (connected) R.string.status_connected else R.string.status_disconnected
-        )
-        connectButton.text = getString(
-            if (connected) R.string.btn_disconnect else R.string.btn_connect
-        )
+    private fun renderStatus(state: VpnStatusBus.State) {
+        when (state) {
+            VpnStatusBus.State.DISCONNECTED -> {
+                statusText.text = getString(R.string.status_disconnected)
+                connectButton.text = getString(R.string.btn_connect)
+            }
+            VpnStatusBus.State.CONNECTING -> {
+                statusText.text = getString(R.string.status_connecting)
+                connectButton.text = getString(R.string.btn_disconnect)
+            }
+            VpnStatusBus.State.CONNECTED -> {
+                statusText.text = getString(R.string.status_connected)
+                connectButton.text = getString(R.string.btn_disconnect)
+            }
+            VpnStatusBus.State.ERROR -> {
+                statusText.text = getString(
+                    R.string.status_error, VpnStatusBus.errorMessage ?: "unknown"
+                )
+                connectButton.text = getString(R.string.btn_connect)
+            }
+        }
     }
 }

@@ -1,13 +1,21 @@
 <resources>
     <string name="app_name">kanVPN</string>
     <string name="hint_config">Paste VLESS / VMess / Trojan link</string>
+    <string name="hint_config_name">Name (optional)</string>
     <string name="btn_connect">Connect</string>
     <string name="btn_disconnect">Disconnect</string>
     <string name="btn_scan">Scan QR</string>
+    <string name="btn_add">Add</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="dialog_add_title">Add server</string>
+    <string name="delete_config">Delete</string>
     <string name="status_disconnected">Disconnected</string>
     <string name="status_connecting">Connecting…</string>
     <string name="status_connected">Connected</string>
     <string name="status_error">Error: %1$s</string>
+    <string name="empty_list">No servers yet — tap Add to paste or scan one</string>
     <string name="err_empty_config">Paste a config link first</string>
     <string name="err_invalid_config">Could not parse that config link</string>
+    <string name="err_no_selection">Add or select a server first</string>
 </resources>

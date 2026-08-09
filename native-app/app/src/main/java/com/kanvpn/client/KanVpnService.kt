@@ -45,6 +45,7 @@ class KanVpnService : VpnService() {
                     stopSelf()
                     return START_NOT_STICKY
                 }
+                VpnStatusBus.update(VpnStatusBus.State.CONNECTING)
                 startForeground(NOTIFICATION_ID, buildNotification("Connecting…"))
                 startVpn(configJson)
             }
@@ -100,6 +101,7 @@ class KanVpnService : VpnService() {
 
             isRunning = true
             startForeground(NOTIFICATION_ID, buildNotification("Connected"))
+            VpnStatusBus.update(VpnStatusBus.State.CONNECTED)
         } catch (e: Throwable) {
             // Catches Throwable, not just Exception: a bad/missing native
             // symbol in libhev-socks5-tunnel.so surfaces as
@@ -107,11 +109,12 @@ class KanVpnService : VpnService() {
             // an Exception-only catch here would let the service crash
             // instead of failing the connection cleanly.
             Log.e(TAG, "Failed to start VPN", e)
-            stopVpn()
+            VpnStatusBus.update(VpnStatusBus.State.ERROR, e.message ?: e.javaClass.simpleName)
+            stopVpn(resetStatus = false)
         }
     }
 
-    private fun stopVpn() {
+    private fun stopVpn(resetStatus: Boolean = true) {
         try {
             TProxyService.TProxyStopService()
         } catch (e: Exception) {
@@ -130,6 +133,9 @@ class KanVpnService : VpnService() {
         }
         tunFd = null
         isRunning = false
+        if (resetStatus) {
+            VpnStatusBus.update(VpnStatusBus.State.DISCONNECTED)
+        }
         stopForeground(STOP_FOREGROUND_REMOVE)
         stopSelf()
     }
