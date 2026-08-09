@@ -3,6 +3,7 @@ package com.kanvpn.client
 import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
+import android.app.PendingIntent
 import android.content.Intent
 import android.net.VpnService
 import android.os.Build
@@ -272,11 +273,17 @@ class KanVpnService : VpnService() {
             )
             manager.createNotificationChannel(channel)
         }
+        val disconnectIntent = Intent(this, KanVpnService::class.java).apply { action = ACTION_DISCONNECT }
+        val disconnectPending = PendingIntent.getService(
+            this, 0, disconnectIntent,
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
         return NotificationCompat.Builder(this, CHANNEL_ID)
             .setContentTitle("kanVPN")
             .setContentText(status)
             .setSmallIcon(android.R.drawable.ic_lock_lock)
             .setOngoing(true)
+            .addAction(android.R.drawable.ic_menu_close_clear_cancel, getString(R.string.btn_disconnect), disconnectPending)
             .build()
     }
 }

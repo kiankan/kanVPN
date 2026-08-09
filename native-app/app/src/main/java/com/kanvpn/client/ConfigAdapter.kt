@@ -13,7 +13,8 @@ import libv2ray.Libv2ray
 
 class ConfigAdapter(
     private val onSelect: (SavedConfig) -> Unit,
-    private val onDelete: (SavedConfig) -> Unit
+    private val onDelete: (SavedConfig) -> Unit,
+    private val onLongPress: (SavedConfig) -> Unit
 ) : RecyclerView.Adapter<ConfigAdapter.ViewHolder>() {
 
     /** ms per config id; null = not tested yet, -1 = last test failed. */
@@ -66,6 +67,7 @@ class ConfigAdapter(
         bindPingText(holder, item.id)
 
         holder.itemView.setOnClickListener { onSelect(item) }
+        holder.itemView.setOnLongClickListener { onLongPress(item); true }
         holder.delete.setOnClickListener { onDelete(item) }
         holder.ping.setOnClickListener { testPing(holder, item) }
     }
@@ -128,6 +130,9 @@ class ConfigAdapter(
             }.start()
         }
     }
+
+    /** Snapshot of ms-per-config-id currently cached (null = untested, -1 = failed). */
+    fun snapshotPings(): Map<String, Int?> = pingResults.toMap()
 
     private fun measurePing(item: SavedConfig): Int = try {
         val configJson = ConfigParser.toXrayConfig(item.link).toString()

@@ -92,4 +92,11 @@
     <string name="geo_updating">در حال دانلود…</string>
     <string name="geo_update_done">فایل‌های جغرافیایی به‌روزرسانی شدند</string>
     <string name="geo_update_failed">به‌روزرسانی ناموفق بود</string>
+
+    <string name="action_sort_ping">مرتب‌سازی بر اساس پینگ</string>
+    <string name="config_edit">ویرایش</string>
+    <string name="config_share">اشتراک‌گذاری (QR)</string>
+    <string name="config_copy_link">کپی لینک</string>
+    <string name="link_copied">لینک کپی شد</string>
+    <string name="settings_autoconnect_boot">اتصال خودکار هنگام روشن شدن گوشی</string>
 </resources>

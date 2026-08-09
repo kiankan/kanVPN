@@ -52,6 +52,19 @@ object ConfigStore {
         return config
     }
 
+    fun update(context: Context, id: String, name: String, link: String) {
+        save(context, list(context).map { if (it.id == id) it.copy(name = name, link = link) else it })
+    }
+
+    /** Rewrites the persisted order to match [orderedIds]; any ids missing from it keep their relative order at the end. */
+    fun reorder(context: Context, orderedIds: List<String>) {
+        val current = list(context)
+        val byId = current.associateBy { it.id }
+        val orderedSet = orderedIds.toSet()
+        val reordered = orderedIds.mapNotNull { byId[it] } + current.filterNot { orderedSet.contains(it.id) }
+        save(context, reordered)
+    }
+
     fun remove(context: Context, id: String) {
         save(context, list(context).filterNot { it.id == id })
         if (selectedId(context) == id) {

@@ -126,7 +126,8 @@ class MainActivity : AppCompatActivity() {
             onDelete = { config ->
                 ConfigStore.remove(this, config.id)
                 refreshList()
-            }
+            },
+            onLongPress = { config -> showConfigActionsDialog(config) }
         )
         configList.layoutManager = LinearLayoutManager(this)
         configList.adapter = adapter
@@ -192,6 +193,10 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.action_remove_invalid -> {
                 removeInvalidConfigs()
+                true
+            }
+            R.id.action_sort_ping -> {
+                sortByPing()
                 true
             }
             else -> super.onOptionsItemSelected(item)
@@ -330,6 +335,135 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(this, getString(R.string.remove_invalid_done, invalid.size), Toast.LENGTH_SHORT).show()
     }
 
+    private fun sortByPing() {
+        val pings = adapter.snapshotPings()
+        val visible = ConfigStore.list(this).let { all ->
+            if (currentGroupFilter == null) all else all.filter { it.groupId == currentGroupFilter }
+        }
+        val sorted = visible.sortedBy { config ->
+            when (val ms = pings[config.id]) {
+                null -> Int.MAX_VALUE - 1
+                -1 -> Int.MAX_VALUE
+                else -> ms
+            }
+        }
+        ConfigStore.reorder(this, sorted.map { it.id })
+        refreshList()
+    }
+
+    // ---- Edit / share a single config ----------------------------------------------
+
+    private fun showConfigActionsDialog(config: SavedConfig) {
+        val actions = arrayOf(
+            getString(R.string.config_edit),
+            getString(R.string.config_share),
+            getString(R.string.delete_config)
+        )
+        AlertDialog.Builder(this)
+            .setTitle(config.name)
+            .setItems(actions) { _, which ->
+                when (which) {
+                    0 -> showEditConfigDialog(config)
+                    1 -> showShareQrDialog(config)
+                    2 -> {
+                        ConfigStore.remove(this, config.id)
+                        refreshList()
+                    }
+                }
+            }
+            .setNegativeButton(R.string.btn_close, null)
+            .show()
+    }
+
+    private fun showEditConfigDialog(config: SavedConfig) {
+        val view = layoutInflater.inflate(R.layout.dialog_add_config, null)
+        val nameInput = view.findViewById<EditText>(R.id.nameInput)
+        val linkInput = view.findViewById<EditText>(R.id.linkInput)
+        val scanButton = view.findViewById<android.widget.Button>(R.id.scanButton)
+        nameInput.setText(config.name)
+        linkInput.setText(config.link)
+
+        pendingLinkTarget = linkInput
+        scanButton.setOnClickListener {
+            scanLauncher.launch(ScanOptions().setOrientationLocked(true))
+        }
+
+        AlertDialog.Builder(this)
+            .setTitle(R.string.config_edit)
+            .setView(view)
+            .setPositiveButton(R.string.btn_save) { _, _ ->
+                val link = linkInput.text.toString().trim()
+                if (link.isEmpty()) {
+                    Toast.makeText(this, R.string.err_empty_config, Toast.LENGTH_SHORT).show()
+                    return@setPositiveButton
+                }
+                try {
+                    ConfigParser.toXrayConfig(link)
+                } catch (e: Exception) {
+                    Toast.makeText(this, R.string.err_invalid_config, Toast.LENGTH_SHORT).show()
+                    return@setPositiveButton
+                }
+                val typedName = nameInput.text.toString().trim()
+                val name = typedName.ifEmpty { link.substringAfter("#", "").ifEmpty { link.substringBefore("://") } }
+                ConfigStore.update(this, config.id, name, link)
+                refreshList()
+            }
+            .setNegativeButton(R.string.btn_cancel, null)
+            .setOnDismissListener { pendingLinkTarget = null }
+            .show()
+    }
+
+    private fun showShareQrDialog(config: SavedConfig) {
+        val bitmap = try {
+            generateQrBitmap(config.link, 720)
+        } catch (e: Exception) {
+            null
+        }
+        val imageView = android.widget.ImageView(this).apply {
+            setPadding(48, 48, 48, 48)
+            adjustViewBounds = true
+            if (bitmap != null) setImageBitmap(bitmap)
+        }
+        AlertDialog.Builder(this)
+            .setTitle(config.name)
+            .setView(imageView)
+            .setPositiveButton(R.string.config_copy_link) { _, _ ->
+                val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+                clipboard.setPrimaryClip(android.content.ClipData.newPlainText(config.name, config.link))
+                Toast.makeText(this, R.string.link_copied, Toast.LENGTH_SHORT).show()
+            }
+            .setNegativeButton(R.string.btn_close, null)
+            .show()
+    }
+
+    private fun generateQrBitmap(text: String, size: Int): android.graphics.Bitmap {
+        val writer = com.google.zxing.qrcode.QRCodeWriter()
+        val matrix = writer.encode(text, com.google.zxing.BarcodeFormat.QR_CODE, size, size)
+        val bitmap = android.graphics.Bitmap.createBitmap(size, size, android.graphics.Bitmap.Config.RGB_565)
+        for (x in 0 until size) {
+            for (y in 0 until size) {
+                bitmap.setPixel(x, y, if (matrix.get(x, y)) android.graphics.Color.BLACK else android.graphics.Color.WHITE)
+            }
+        }
+        return bitmap
+    }
+
+    // ---- Settings -------------------------------------------------------------------
+
+    private fun showSettingsDialog() {
+        val checked = booleanArrayOf(SettingsStore.autoConnectOnBoot(this))
+        val labels = arrayOf(getString(R.string.settings_autoconnect_boot))
+        AlertDialog.Builder(this)
+            .setTitle(R.string.nav_settings)
+            .setMultiChoiceItems(labels, checked) { _, which, isChecked -> checked[which] = isChecked }
+            .setPositiveButton(R.string.btn_save) { _, _ ->
+                SettingsStore.setAutoConnectOnBoot(this, checked[0])
+                Toast.makeText(this, R.string.per_app_saved, Toast.LENGTH_SHORT).show()
+            }
+            .setNegativeButton(R.string.btn_cancel, null)
+            .show()
+    }
+
     // ---- Drawer -------------------------------------------------------------------
 
     private fun onDrawerItemSelected(item: MenuItem) {
@@ -342,6 +476,7 @@ class MainActivity : AppCompatActivity() {
             R.id.nav_routing -> showRoutingDialog()
             R.id.nav_per_app -> showPerAppDialog()
             R.id.nav_geo -> showGeoDialog()
+            R.id.nav_settings -> showSettingsDialog()
             else -> Toast.makeText(this, R.string.coming_soon, Toast.LENGTH_SHORT).show()
         }
     }

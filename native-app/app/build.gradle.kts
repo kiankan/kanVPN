@@ -11,8 +11,8 @@ android {
         applicationId = "com.kanvpn.client"
         minSdk = 24
         targetSdk = 34
-        versionCode = 6
-        versionName = "0.0.6"
+        versionCode = 7
+        versionName = "0.0.7"
         ndk {
             abiFilters += listOf("arm64-v8a", "armeabi-v7a")
         }
@@ -59,4 +59,5 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation("com.journeyapps:zxing-android-embedded:4.3.0")
+    implementation("com.google.zxing:core:3.4.1")
 }

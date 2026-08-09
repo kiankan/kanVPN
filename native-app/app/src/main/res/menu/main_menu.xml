@@ -25,4 +25,9 @@
         android:title="@string/action_remove_invalid"
         app:showAsAction="never" />
 
+    <item
+        android:id="@+id/action_sort_ping"
+        android:title="@string/action_sort_ping"
+        app:showAsAction="never" />
+
 </menu>
